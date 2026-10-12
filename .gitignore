@@ -1,0 +1,13 @@
+.venv/
+.cache/
+logs/
+checkpoints/
+third_party/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.env
+*.log
+ESCALATION.md
+results/eval_*_raw*

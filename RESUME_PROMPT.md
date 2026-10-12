@@ -1,0 +1,5 @@
+Paste everything below the line whenever Claude Code is sitting idle and there is no DONE.md or BLOCKED.md in the project folder (for example after a usage-limit pause, a laptop restart, or if it simply stopped between phases). If you had to restart the terminal, first run `cd /mnt/c/Users/Griff/Projects/peg-insertion && claude --continue`.
+
+---
+
+Resume the peg-insertion project. Re-read CLAUDE.md, PLAN.md, the last 60 lines of PROGRESS.md, and DECISIONS.md. Then run `ls logs/*/pid 2>/dev/null` and check each pid with `kill -0 $(cat <pidfile>)` to see whether a training run is still alive; if one is, poll it with `sleep 270 && tail -n 40 logs/<run>/train.log` until it finishes, then continue the plan from there. If no run is alive, check PROGRESS.md for any run marked STARTED but not FINISHED whose logs/<run>/final_metrics.json is missing; that run was killed and must be relaunched with the same command. Otherwise continue from the last PROGRESS.md entry. Do not redo finished phases. Keep working autonomously without asking me for approval until Phase 8 is complete and DONE.md exists, or a big-issue condition from CLAUDE.md requires BLOCKED.md.
