@@ -303,7 +303,9 @@ class PegInsertion(mjx_env.MjxEnv):
         depth=depth,
         xy_err=xy_err,
     )
+    # Merge (don't replace): wrappers add their own keys, e.g. 'reward'.
     metrics = {
+        **state.metrics,
         'success': newly.astype(float),
         'insert_reward': terms['insert'],
         'reach_reward': terms['reach'],

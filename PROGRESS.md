@@ -28,3 +28,4 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - `tests/test_scripted.py` passes (>=95% at 2 mm, >=90% at 1 mm). CSV: results/scripted_baseline.csv.
 - Videos: results/videos/scripted_2mm.mp4, scripted_0.5mm.mp4 (osmesa, ~0.3 s/frame incl. overview inset, 101 frames in ~30 s).
 - Next: Phase 4 training pipeline (train.py/evaluate.py/render.py/plot.py drafted), dry run.
+- STARTED dry_2mm 2026-10-12 04:52 (dry run)

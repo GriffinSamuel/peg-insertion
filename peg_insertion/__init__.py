@@ -5,7 +5,11 @@ Importing this package registers two environments with Playground:
   PegInsertionForce  the same task with wrist force/torque observations
 """
 
-from mujoco_playground._src.manipulation import register_environment
+from peg_insertion import jax_compat
+
+jax_compat.install()
+
+from mujoco_playground._src.manipulation import register_environment  # noqa: E402
 
 from peg_insertion.env import PegInsertion, default_config, domain_randomize, force_config
 
