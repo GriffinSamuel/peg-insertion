@@ -67,7 +67,7 @@ warnings.filterwarnings('ignore', category=UserWarning, module='absl')
 _RUN_NAME = flags.DEFINE_string('run_name', None, 'Run name (logs/<run_name>).')
 _CLEARANCE_MM = flags.DEFINE_float('clearance_mm', 2.0, 'Hole clearance (mm).')
 _USE_FORCE_OBS = flags.DEFINE_boolean('use_force_obs', False, 'Add wrist F/T obs.')
-_IMPL = flags.DEFINE_enum('impl', 'jax', ['jax', 'warp'], 'MJX implementation')
+_IMPL = flags.DEFINE_enum('impl', 'warp', ['jax', 'warp'], 'MJX implementation (warp ~4x faster here)')
 _ENV_OVERRIDES = flags.DEFINE_string(
     'env_overrides', None, 'JSON dict of extra env config overrides.'
 )

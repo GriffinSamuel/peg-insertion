@@ -1,6 +1,7 @@
 """Environment tests: geometry, shapes, stability, randomization, force sensor."""
 
 import functools
+import os
 
 import jax
 import jax.numpy as jp
@@ -14,6 +15,7 @@ from peg_insertion.env import PegInsertion, default_config, domain_randomize
 from mujoco_playground import wrapper
 
 CLEARANCES_MM = (2.0, 1.0, 0.5)
+IMPL = os.environ.get('PEG_IMPL', 'jax')  # run the suite with PEG_IMPL=warp too
 
 
 def _mj_model(clearance_mm):
@@ -23,13 +25,14 @@ def _mj_model(clearance_mm):
 
 @pytest.fixture(scope='module')
 def env():
-  return PegInsertion()
+  return PegInsertion(config_overrides={'impl': IMPL})
 
 
 @pytest.fixture(scope='module')
 def force_env():
   cfg = default_config()
   cfg.use_force_obs = True
+  cfg.impl = IMPL
   return PegInsertion(cfg)
 
 

@@ -11,3 +11,5 @@ One line per decision not settled by PLAN.md, with the reason.
 - 2026-10-12: Hole-position observation bias applied to x,y only (z bias does not change the lateral alignment problem the experiment is about).
 - 2026-10-12: Scripted controller drives the commanded setpoint (plus a slow 0.2-gain xy integral on measured error while descending), not the measured tip: integrating measured error with the servo's 3-step lag caused a limit cycle.
 - 2026-10-12: Torque observation normalised by 2 N*m (force by 20 N per PLAN).
+- 2026-10-12: Added `peg_insertion/jax_compat.py`: Brax 0.14.2 (latest) calls `jax.device_put_replicated`, removed in JAX 0.11 (which Blackwell needs). Shim uses JAX's documented drop-in (stack + shard over devices). Single GPU, so behaviour is identical.
+- 2026-10-12: Training uses MJX `impl=warp` (installed `mujoco-warp==3.15.0`, matching mujoco 3.15). Benchmark at 1024 envs: JAX ~2.5k steps/s steady, Warp ~11k steps/s (4.4x, > the 1.3x bar in PLAN 4.6). Full test suite passes under both (`PEG_IMPL=warp pytest tests/` 12 passed, scripted 0.5 mm 100%). Eval/render use the same impl as training.

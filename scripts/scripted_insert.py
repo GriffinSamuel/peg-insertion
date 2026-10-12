@@ -32,9 +32,10 @@ DESCENT_PER_STEP = 0.001
 XY_GAIN = 0.2
 
 
-def make_env(clearance_mm: float) -> PegInsertion:
+def make_env(clearance_mm: float, impl: str | None = None) -> PegInsertion:
   cfg = default_config()
   cfg.clearance_mm = clearance_mm
+  cfg.impl = impl or os.environ.get('PEG_IMPL', cfg.impl)
   return PegInsertion(cfg)
 
 

@@ -160,7 +160,7 @@ def main():
   policy, net_cfg = rollout.load_policy(run_dir)
   c = args.clearance_mm if args.clearance_mm is not None else net_cfg['clearance_mm']
   extra = {k: v for k, v in net_cfg.get('env_overrides', {}).items()
-           if k not in ('clearance_mm', 'use_force_obs', 'naconmax', 'impl')}
+           if k not in ('clearance_mm', 'use_force_obs', 'naconmax')}
   env = rollout.make_env(c, net_cfg['use_force_obs'], **extra)
   out = args.out or ROOT / 'results' / 'videos' / f'{args.run}.mp4'
   sensing = 'position + force' if net_cfg['use_force_obs'] else 'position only'

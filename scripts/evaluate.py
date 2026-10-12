@@ -78,7 +78,7 @@ def main():
   trained_c = float(net_cfg['clearance_mm'])
   c = trained_c if args.clearance_mm is None else args.clearance_mm
   extra = {k: v for k, v in net_cfg.get('env_overrides', {}).items()
-           if k not in ('clearance_mm', 'use_force_obs', 'naconmax', 'impl')}
+           if k not in ('clearance_mm', 'use_force_obs', 'naconmax')}
   if args.obs_hole_bias_std is not None:
     extra['obs_hole_bias_std'] = args.obs_hole_bias_std
   env = rollout.make_env(c, net_cfg['use_force_obs'], naconmax=20 * 256, **extra)

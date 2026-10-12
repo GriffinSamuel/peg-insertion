@@ -15,6 +15,7 @@ def ppo_config() -> config_dict.ConfigDict:
   cfg.num_timesteps = 10_000_000
   cfg.episode_length = 200
   cfg.num_evals = 10
+  cfg.num_eval_envs = 128
   cfg.network_factory.policy_hidden_layer_sizes = (256, 256)
   cfg.network_factory.value_hidden_layer_sizes = (256, 256, 256)
   # Kept from the base: num_envs=1024, batch_size=256, unroll_length=10,

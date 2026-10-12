@@ -29,3 +29,10 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - Videos: results/videos/scripted_2mm.mp4, scripted_0.5mm.mp4 (osmesa, ~0.3 s/frame incl. overview inset, 101 frames in ~30 s).
 - Next: Phase 4 training pipeline (train.py/evaluate.py/render.py/plot.py drafted), dry run.
 - STARTED dry_2mm 2026-10-12 04:52 (dry run)
+- STARTED pos_2mm_s0 2026-10-12 05:36 (Phase 4.5 baseline, warp, 10M steps)
+
+## 2026-10-12 05:50 PDT — Phase 4 in progress
+- train.py (derived from Playground's train_jax_ppo.py), train.sh, eval.sh, evaluate.py, render.py, plot.py, sweep.sh written.
+- Fixed: JAX 0.11 removed `jax.device_put_replicated` (Brax still uses it) -> compat shim; env step now merges wrapper metrics.
+- Dry run (`dry_2mm`, 50k steps, 256 envs) passed end to end: compile+train 2.1 min, final_metrics.json + video written.
+- Throughput benchmark (0.5M steps, 1024 envs): JAX ~2.5k steps/s, Warp ~11k steps/s -> using Warp (tests pass under both). VRAM ~0.7 GB.
