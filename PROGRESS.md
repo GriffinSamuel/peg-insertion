@@ -139,3 +139,9 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - Generalisation: pos_2mm policies (s0/s1/s2) tested without retraining: 1 mm 76.8/59.8/83.8%, 0.5 mm 31.6/25.2/47.2% -> a 2 mm-trained policy beats position-only policies trained AT 0.5 mm (17% mean); suggests a clearance curriculum.
 - Validity: 0 through-wall episodes in all 26 x 500 evals; no NaN episodes. Mean steps to insert grow with tightness (pos 102 -> 134; force 95 -> 150). Mean peak contact force 41-101 N.
 - Per-run wall time ~5.4 min (incl. ~20 s JIT), ~68k env steps/s. Files: results/summary.csv, summary_by_condition.csv, results_table.md, success_vs_clearance.png, learning_curves.png, videos/ (26 runs + 2 scripted), insertion.gif, policies/.
+
+## 2026-10-12 13:48 PDT — Phase 7 done (documentation)
+- README.md (results table, extra checks, hardware, reproduce, limitations, AI-assistance statement), WRITEUP.md (one paragraph, no dashes), INTERVIEW_NOTES.md (16 Q&A + AI-use note), RESUME_BULLETS.md (3 bullets), LICENSE (Apache-2.0) + NOTICE, results/environment.md (versions, nvidia-smi, import time, per-run wall-time/SPS table, uv pip freeze), results/insertion.gif (force_0.5mm_s0, one episode, 0.47 MB).
+- Final pytest: 12 passed (JAX backend, 5.3 min); earlier also 12 passed under Warp.
+- DECISIONS.md reviewed; one unverified claim about Isaac Lab Factory's reward softened.
+- Repo working tree results/ = 37 MB (superseded runs' params/videos moved to gitignored logs/archive_results/).
