@@ -90,6 +90,11 @@ _NUM_MINIBATCHES = flags.DEFINE_integer('num_minibatches', None, 'Minibatches')
 _NUM_UPDATES_PER_BATCH = flags.DEFINE_integer(
     'num_updates_per_batch', None, 'Updates per batch'
 )
+_LR_SCHEDULE = flags.DEFINE_enum(
+    'learning_rate_schedule', None, ['NONE', 'ADAPTIVE_KL'],
+    'Brax PPO learning-rate schedule (ADAPTIVE_KL adapts LR to a target KL).'
+)
+_DESIRED_KL = flags.DEFINE_float('desired_kl', None, 'Target KL for ADAPTIVE_KL.')
 _FINAL_EVAL_EPISODES = flags.DEFINE_integer(
     'final_eval_episodes', 256, 'Episodes for the final success rate.'
 )
@@ -108,6 +113,8 @@ _PPO_OVERRIDES = {
     'unroll_length': _UNROLL_LENGTH,
     'num_minibatches': _NUM_MINIBATCHES,
     'num_updates_per_batch': _NUM_UPDATES_PER_BATCH,
+    'learning_rate_schedule': _LR_SCHEDULE,
+    'desired_kl': _DESIRED_KL,
 }
 
 
@@ -177,6 +184,9 @@ def main(argv):
 
   def progress(num_steps, metrics):
     times.append(time.monotonic())
+    with open(logdir / 'metrics.jsonl', 'a') as f:
+      f.write(json.dumps({'step': int(num_steps), **{
+          k: float(v) for k, v in metrics.items()}}) + '\n')
     with open(curve_path, 'a') as f:
       f.write(
           f"{num_steps},{(times[-1] - times[0]) / 60:.2f},"

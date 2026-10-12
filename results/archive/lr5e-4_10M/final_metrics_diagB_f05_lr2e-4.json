@@ -1,0 +1,21 @@
+{
+  "run": "diagB_f05_lr2e-4",
+  "clearance_mm": 0.5,
+  "use_force_obs": true,
+  "seed": 0,
+  "episodes": 256,
+  "successes": 241,
+  "success_rate": 0.94140625,
+  "ci_lo": 0.9055869414654005,
+  "ci_hi": 0.9641737127177634,
+  "steps_mean": 123.06224060058594,
+  "steps_median": 118.0,
+  "peak_force_mean": 108.3963623046875,
+  "final_xy_err_mean_mm": 0.5948491096496582,
+  "final_depth_mean_mm": 28.254337310791016,
+  "wall_time_s": 958.1,
+  "jit_time_s": 15.5,
+  "sps": 21222.0,
+  "num_envs": 1024,
+  "num_timesteps": 20000000
+}

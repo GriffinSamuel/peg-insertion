@@ -1,0 +1,40 @@
+{
+  "run": "pos_1mm_s0",
+  "policy_run": "pos_1mm_s0",
+  "clearance_mm": 1.0,
+  "trained_clearance_mm": 1.0,
+  "use_force_obs": false,
+  "obs_hole_bias_std": 0.00075,
+  "episodes": 500,
+  "successes": 486,
+  "success_rate": 0.972,
+  "ci_lo": 0.9535531794154484,
+  "ci_hi": 0.9832491806913788,
+  "steps_mean": 104.97119140625,
+  "steps_median": 103.0,
+  "peak_force_mean": 106.62065887451172,
+  "final_xy_err_mean_mm": 1.2658023834228516,
+  "final_depth_mean_mm": 29.211381912231445,
+  "final_xy_err_hist_mm": {
+    "edges": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      100.0
+    ],
+    "counts": [
+      0,
+      0,
+      11,
+      479,
+      8,
+      2,
+      0
+    ]
+  },
+  "eval_seconds": 25.0
+}

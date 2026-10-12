@@ -1,0 +1,21 @@
+{
+  "run": "diagA_f05_seed1",
+  "clearance_mm": 0.5,
+  "use_force_obs": true,
+  "seed": 1,
+  "episodes": 256,
+  "successes": 254,
+  "success_rate": 0.9921875,
+  "ci_lo": 0.9719666598432031,
+  "ci_hi": 0.9978549545557232,
+  "steps_mean": 108.18898010253906,
+  "steps_median": 104.0,
+  "peak_force_mean": 105.77520751953125,
+  "final_xy_err_mean_mm": 0.6098610162734985,
+  "final_depth_mean_mm": 29.74143409729004,
+  "wall_time_s": 974.0,
+  "jit_time_s": 32.8,
+  "sps": 21255.7,
+  "num_envs": 1024,
+  "num_timesteps": 20000000
+}

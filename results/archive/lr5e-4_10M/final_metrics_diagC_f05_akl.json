@@ -1,0 +1,21 @@
+{
+  "run": "diagC_f05_akl",
+  "clearance_mm": 0.5,
+  "use_force_obs": true,
+  "seed": 0,
+  "episodes": 256,
+  "successes": 0,
+  "success_rate": 0.0,
+  "ci_lo": 0.0,
+  "ci_hi": 0.014784391721725852,
+  "steps_mean": NaN,
+  "steps_median": NaN,
+  "peak_force_mean": 50.184234619140625,
+  "final_xy_err_mean_mm": 12.39580249786377,
+  "final_depth_mean_mm": 0.0004342655302025378,
+  "wall_time_s": 961.0,
+  "jit_time_s": 15.2,
+  "sps": 21172.0,
+  "num_envs": 1024,
+  "num_timesteps": 20000000
+}
