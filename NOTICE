@@ -1,0 +1,13 @@
+peg-insertion
+Copyright 2026 Griffin
+
+This project is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+scripts/train.py is derived from MuJoCo Playground's learning/train_jax_ppo.py
+(Copyright 2026 Google LLC, Apache License 2.0); its original header is kept
+and the modifications are listed at the top of the file.
+
+The environment builds on MuJoCo Playground (https://github.com/google-deepmind/mujoco_playground)
+and the Franka Emika Panda model from MuJoCo Menagerie
+(https://github.com/google-deepmind/mujoco_menagerie), both Apache License 2.0.
+Neither is redistributed in this repository; they are downloaded at setup time.

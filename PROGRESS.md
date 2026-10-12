@@ -56,3 +56,17 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - Diagnosing with single-knob runs on force@0.5mm, 20M steps, run in parallel: A = same config seed 1; B = learning_rate 2e-4; C = ADAPTIVE_KL lr schedule (desired KL 0.01). Any fix will be applied to ALL conditions and all runs redone.
 - STARTED diagA_f05_seed1, diagB_f05_lr2e-4, diagC_f05_akl 2026-10-12 06:19
 - Diagnostics finished 2026-10-12 06:40: A seed1@5e-4 0.992 (stable), B seed0@2e-4 0.941 final (0.94-1.0 from 2M on), C ADAPTIVE_KL 0.000. Adopted lr 2e-4 + 20M steps for all conditions; pytest (warp) 12 passed; dry run OK. Launching full sweep.
+- STARTED pos_2mm_s0 (sweep) 2026-10-12 06:41
+- FINISHED pos_2mm_s0 success=0.988 wall=5.1min sps=70866.0 2026-10-12 06:47
+- STARTED pos_1mm_s0 (sweep) 2026-10-12 06:52
+- FINISHED pos_1mm_s0 success=0.000 wall=5.1min sps=70694.6 2026-10-12 06:59
+- STARTED pos_0.5mm_s0 (sweep) 2026-10-12 07:03
+- ABORTED pos_0.5mm_s0 2026-10-12 07:05 (sweep stopped on purpose: reward fix, all runs will be redone)
+
+## 2026-10-12 07:05 PDT — Instability diagnosis, fix attempt 2 (reward)
+- lr 2e-4 sweep: pos_2mm_s0 0.988, but pos_1mm_s0 oscillated 0-0.83 during training and ended at 0.000 (deterministic eval also 0).
+- Ruled out: observation-normalizer blow-up (stats sane); physics terminations/NaNs under Warp (0 of 256 episodes).
+- Rollout of the failed 1 mm policy: it descends with ~2 mm lateral error, lands on the wall rim and slides outward. The reward had no mm-scale gradient (align = 20 mm-wide Gaussian, reach flat within 2 mm), so precision was only rewarded by actually falling in.
+- Fix attempt 2: align term linear over 5 mm (was 20 mm Gaussian), same for all conditions. Testing seed 0 of pos 2/1/0.5 mm and force 0.5 mm in parallel (rw_* runs, 20M steps). If instability persists -> T1 escalation to fable-debugger.
+- STARTED rw_pos_2mm, rw_pos_1mm, rw_pos_0.5mm, rw_force_0.5mm 2026-10-12 07:05
+- FINISHED rw_* reward-fix check 2026-10-12 07:28: pos2 0.996, pos1 0.957, pos0.5 0.844, force0.5 0.980 (256-ep final eval each); stable. Final config = lr 2e-4, 20M steps, align margin 5 mm linear.

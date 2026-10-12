@@ -1,0 +1,40 @@
+{
+  "run": "pos_2mm_s0",
+  "policy_run": "pos_2mm_s0",
+  "clearance_mm": 2.0,
+  "trained_clearance_mm": 2.0,
+  "use_force_obs": false,
+  "obs_hole_bias_std": 0.00075,
+  "episodes": 500,
+  "successes": 497,
+  "success_rate": 0.994,
+  "ci_lo": 0.9825094361891064,
+  "ci_hi": 0.9979574407023611,
+  "steps_mean": 99.2957763671875,
+  "steps_median": 99.0,
+  "peak_force_mean": 109.09355926513672,
+  "final_xy_err_mean_mm": 2.6308557987213135,
+  "final_depth_mean_mm": 29.828161239624023,
+  "final_xy_err_hist_mm": {
+    "edges": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      100.0
+    ],
+    "counts": [
+      0,
+      0,
+      0,
+      1,
+      499,
+      0,
+      0
+    ]
+  },
+  "eval_seconds": 24.9
+}

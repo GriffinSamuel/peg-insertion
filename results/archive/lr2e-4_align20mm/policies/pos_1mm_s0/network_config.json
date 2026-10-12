@@ -1,0 +1,22 @@
+{
+  "obs_size": 10,
+  "act_size": 3,
+  "policy_hidden_layer_sizes": [
+    256,
+    256
+  ],
+  "value_hidden_layer_sizes": [
+    256,
+    256,
+    256
+  ],
+  "normalize_observations": true,
+  "clearance_mm": 1.0,
+  "use_force_obs": false,
+  "env_overrides": {
+    "impl": "warp",
+    "clearance_mm": 1.0,
+    "use_force_obs": false,
+    "naconmax": 20480
+  }
+}

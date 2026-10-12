@@ -54,6 +54,7 @@ def default_config() -> config_dict.ConfigDict:
       start_height=0.05,  # tip starts this far above the hole entrance
       start_xy_noise=0.01,  # and this far off-centre (uniform +-)
       max_servo_error=0.003,  # anti-windup: target never leads the tip by more (m)
+      align_margin=0.005,  # m: width of the linear xy-alignment reward
       force_clip=20.0,  # N, for normalising the force observation
       torque_clip=2.0,  # N*m, for normalising the torque observation
       reward_config=config_dict.create(
@@ -322,8 +323,12 @@ class PegInsertion(mjx_env.MjxEnv):
         jp.linalg.norm(rel), bounds=(0.0, 0.002), margin=0.08, sigmoid='linear'
     )
     near_entrance = rel[2] < 0.01  # within 1 cm above the entrance (or inside)
+    # Sharp at millimetre scale (linear over 5 mm). A 20 mm-wide Gaussian was
+    # ~flat for errors < 2 mm, so the only precision signal was falling into
+    # the hole, which is rare at 1 mm / 0.5 mm clearance (see DECISIONS.md).
     align = reward_util.tolerance(
-        xy_err, bounds=(0.0, self._clearance * 0.5), margin=0.02
+        xy_err, bounds=(0.0, self._clearance * 0.5),
+        margin=self._config.align_margin, sigmoid='linear',
     ) * near_entrance
     insert = jp.clip(depth / self._hd, 0.0, 1.0) * in_hole
     return {

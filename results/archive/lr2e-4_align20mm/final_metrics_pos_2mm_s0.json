@@ -1,0 +1,21 @@
+{
+  "run": "pos_2mm_s0",
+  "clearance_mm": 2.0,
+  "use_force_obs": false,
+  "seed": 0,
+  "episodes": 256,
+  "successes": 253,
+  "success_rate": 0.98828125,
+  "ci_lo": 0.9661178322810585,
+  "ci_hi": 0.9960067851781936,
+  "steps_mean": 99.21739196777344,
+  "steps_median": 99.0,
+  "peak_force_mean": 113.66242980957031,
+  "final_xy_err_mean_mm": 2.6520392894744873,
+  "final_depth_mean_mm": 29.654769897460938,
+  "wall_time_s": 303.2,
+  "jit_time_s": 20.8,
+  "sps": 70866.0,
+  "num_envs": 1024,
+  "num_timesteps": 20000000
+}
