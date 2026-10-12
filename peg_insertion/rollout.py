@@ -24,6 +24,13 @@ from brax.envs.wrappers import training as brax_training
 from peg_insertion.env import PegInsertion, default_config, domain_randomize
 
 INFO_KEYS = ('succeeded', 'first_success_step', 'peak_force', 'xy_err', 'depth')
+# Physical-validity check computed outside the env: the largest per-axis
+# lateral offset of the tip while it is > 2 mm below the hole entrance. Inside
+# the hole this can never exceed the clearance (plus contact compliance), so a
+# larger value would mean the peg passed through a wall (e.g. dropped contacts).
+DEEP_Z = 0.002
+WALL_TOL = 0.0005
+EXTRA_KEYS = ('max_lateral_when_deep',)
 
 
 def make_env(clearance_mm: float, use_force_obs: bool, **overrides) -> PegInsertion:
@@ -81,34 +88,42 @@ def rollout_stats(
 ) -> Dict[str, np.ndarray]:
   """Runs n_episodes full episodes; returns final-step info arrays."""
   episode_length = episode_length or env._config.episode_length
-  out: Dict[str, list] = {k: [] for k in INFO_KEYS}
+  out: Dict[str, list] = {k: [] for k in INFO_KEYS + EXTRA_KEYS}
   done_episodes, chunk = 0, 0
   while done_episodes < n_episodes:
     n = min(batch, n_episodes - done_episodes)
     key = jax.random.PRNGKey(seed * 100_003 + chunk)
     k_rand, k_reset, k_act = jax.random.split(key, 3)
     wenv = _wrap(env, n, k_rand, randomize)
-    info = _run(wenv, policy, n, episode_length, k_reset, k_act)
-    for k in INFO_KEYS:
+    info = _run(wenv, policy, n, episode_length, k_reset, k_act,
+                env._tip_site, env._entrance_site)
+    for k in INFO_KEYS + EXTRA_KEYS:
       out[k].append(np.array(info[k]))
     done_episodes += n
     chunk += 1
-  return {k: np.concatenate(v) for k, v in out.items()}
+  stats = {k: np.concatenate(v) for k, v in out.items()}
+  stats['clearance'] = np.full(stats['succeeded'].shape, env.clearance)
+  return stats
 
 
-def _run(wenv, policy, n, episode_length, k_reset, k_act):
+def _run(wenv, policy, n, episode_length, k_reset, k_act, tip_site, ent_site):
   @jax.jit
   def run(k_reset, k_act):
     state = wenv.reset(jax.random.split(k_reset, n))
 
     def body(carry, _):
-      state, key = carry
+      state, key, max_lat = carry
       key, sub = jax.random.split(key)
       action, _ = policy(state.obs, sub)
-      return (wenv.step(state, action), key), None
+      state = wenv.step(state, action)
+      rel = state.data.site_xpos[:, tip_site] - state.data.site_xpos[:, ent_site]
+      lateral = jp.max(jp.abs(rel[:, :2]), axis=-1)
+      max_lat = jp.maximum(max_lat, jp.where(rel[:, 2] < -DEEP_Z, lateral, 0.0))
+      return (state, key, max_lat), None
 
-    (state, _), _ = jax.lax.scan(body, (state, k_act), None, length=episode_length)
-    return {k: state.info[k] for k in INFO_KEYS}
+    (state, _, max_lat), _ = jax.lax.scan(
+        body, (state, k_act, jp.zeros(n)), None, length=episode_length)
+    return {**{k: state.info[k] for k in INFO_KEYS}, 'max_lateral_when_deep': max_lat}
 
   return run(k_reset, k_act)
 
@@ -130,6 +145,8 @@ def summarize(stats: Dict[str, np.ndarray]) -> Dict[str, Any]:
   k = int(succ.sum())
   lo, hi = wilson_ci(k, n)
   steps = stats['first_success_step'][succ]
+  through_wall = stats['max_lateral_when_deep'] > stats['clearance'] + WALL_TOL
+  nan_eps = int(np.isnan(stats['peak_force']).sum())
   return {
       'episodes': n,
       'successes': k,
@@ -138,7 +155,11 @@ def summarize(stats: Dict[str, np.ndarray]) -> Dict[str, Any]:
       'ci_hi': hi,
       'steps_mean': float(steps.mean()) if k else float('nan'),
       'steps_median': float(np.median(steps)) if k else float('nan'),
-      'peak_force_mean': float(stats['peak_force'].mean()),
-      'final_xy_err_mean_mm': float(stats['xy_err'].mean() * 1000),
-      'final_depth_mean_mm': float(stats['depth'].mean() * 1000),
+      'peak_force_mean': float(np.nanmean(stats['peak_force'])),
+      'final_xy_err_mean_mm': float(np.nanmean(stats['xy_err']) * 1000),
+      'final_depth_mean_mm': float(np.nanmean(stats['depth']) * 1000),
+      'still_inserted_at_end': float(np.mean(stats['depth'] >= 0.024)),
+      'through_wall_episodes': int(through_wall.sum()),
+      'max_lateral_when_deep_mm': float(np.max(stats['max_lateral_when_deep']) * 1000),
+      'nan_episodes': nan_eps,
   }

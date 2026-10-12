@@ -70,3 +70,6 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - Fix attempt 2: align term linear over 5 mm (was 20 mm Gaussian), same for all conditions. Testing seed 0 of pos 2/1/0.5 mm and force 0.5 mm in parallel (rw_* runs, 20M steps). If instability persists -> T1 escalation to fable-debugger.
 - STARTED rw_pos_2mm, rw_pos_1mm, rw_pos_0.5mm, rw_force_0.5mm 2026-10-12 07:05
 - FINISHED rw_* reward-fix check 2026-10-12 07:28: pos2 0.996, pos1 0.957, pos0.5 0.844, force0.5 0.980 (256-ep final eval each); stable. Final config = lr 2e-4, 20M steps, align margin 5 mm linear.
+- STARTED pos_2mm_s0 (sweep) 2026-10-12 07:31
+- FINISHED pos_2mm_s0 success=0.992 wall=4.8min sps=73990.7 2026-10-12 07:37
+- STARTED pos_1mm_s0 (sweep) 2026-10-12 07:42

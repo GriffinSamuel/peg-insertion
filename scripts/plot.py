@@ -22,7 +22,6 @@ import matplotlib.ticker  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
-from peg_insertion.rollout import wilson_ci  # noqa: E402
 
 RESULTS = ROOT / 'results'
 # Validated categorical slots 1-2 (blue, orange) from the reference palette.
@@ -43,7 +42,6 @@ def _style(ax):
 
 def success_vs_clearance(df: pd.DataFrame) -> Path:
   main = df[df['kind'] == 'main'].copy()
-  main['successes'] = (main['success'] * main['episodes']).round().astype(int)
   fig, ax = plt.subplots(figsize=(7, 4.6), dpi=150)
   _style(ax)
   for force in (False, True):
@@ -52,17 +50,18 @@ def success_vs_clearance(df: pd.DataFrame) -> Path:
       continue
     rows = []
     for c, g in sub.groupby('clearance_mm'):
-      k, n = int(g['successes'].sum()), int(g['episodes'].sum())
-      lo, hi = wilson_ci(k, n)
-      rows.append((c, k / n, lo, hi, len(g)))
-      ax.scatter([c] * len(g), g['success'] * 100, s=22, color=COLORS[force],
+      # Seeds are the unit of replication: mean of per-seed success rates,
+      # bar = min..max across seeds (per-run Wilson CIs are in summary.csv).
+      rates = g['success'].to_numpy()
+      rows.append((c, rates.mean(), rates.min(), rates.max(), len(g)))
+      ax.scatter([c] * len(g), rates * 100, s=22, color=COLORS[force],
                  alpha=0.35, edgecolors='none', zorder=2)
     rows.sort()
     c, p, lo, hi, nseeds = map(np.array, zip(*rows))
     ax.errorbar(c, p * 100, yerr=[(p - lo) * 100, (hi - p) * 100],
                 color=COLORS[force], linewidth=2, marker='o', markersize=8,
                 markeredgecolor='white', markeredgewidth=1.5, capsize=4,
-                label=f'{LABELS[force]}', zorder=3)
+                label=f'{LABELS[force]} (n={int(nseeds.max())} seeds)', zorder=3)
     # direct label on the tightest clearance point
     i = int(np.argmin(c))
     ax.annotate(f'{p[i] * 100:.0f}%', (c[i], p[i] * 100), textcoords='offset points',
@@ -78,7 +77,8 @@ def success_vs_clearance(df: pd.DataFrame) -> Path:
   ax.set_xlabel('hole clearance per side (mm)  -> tighter', color=INK)
   ax.set_ylabel('insertion success (%)', color=INK)
   ax.set_title('Learned peg insertion vs. hole clearance\n'
-               '(mean over seeds, 95% Wilson CI; faint dots = individual seeds)',
+               '(mean over seeds of 500-episode evals; bar = min-max across seeds;'
+               ' dots = seeds)',
                color=INK, fontsize=10, loc='left')
   ax.legend(frameon=False, loc='lower left', labelcolor=INK)
   fig.tight_layout()
@@ -107,7 +107,8 @@ def learning_curves(df: pd.DataFrame) -> Path | None:
               linewidth=2, alpha=0.9)
     ax.set_title(f'{c:g} mm clearance', color=INK, fontsize=10)
     ax.set_xlabel('env steps (millions)', color=INK)
-  axes[0][0].set_ylabel('eval success during training (%)', color=INK)
+  axes[0][0].set_ylabel('in-training eval success (%)\n(stochastic policy, 128 episodes)',
+                        color=INK)
   handles = [plt.Line2D([], [], color=COLORS[f], linewidth=2, label=LABELS[f])
              for f in (False, True)]
   fig.legend(handles=handles, frameon=False, loc='upper center', ncol=2, labelcolor=INK)

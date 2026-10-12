@@ -235,8 +235,8 @@ def main(argv):
       'policy_hidden_layer_sizes': list(network_kwargs['policy_hidden_layer_sizes']),
       'value_hidden_layer_sizes': list(network_kwargs['value_hidden_layer_sizes']),
       'normalize_observations': bool(ppo_params.normalize_observations),
-      'clearance_mm': _CLEARANCE_MM.value,
-      'use_force_obs': _USE_FORCE_OBS.value,
+      'clearance_mm': float(env._config.clearance_mm),
+      'use_force_obs': bool(env._config.use_force_obs),
       'env_overrides': env_overrides,
   }
   rollout.save_policy(logdir, params, network_config)
@@ -251,8 +251,9 @@ def main(argv):
   summary = rollout.summarize(stats)
   final = {
       'run': run,
-      'clearance_mm': _CLEARANCE_MM.value,
-      'use_force_obs': _USE_FORCE_OBS.value,
+      # labels from the env's actual config (env_overrides could change them)
+      'clearance_mm': float(env._config.clearance_mm),
+      'use_force_obs': bool(env._config.use_force_obs),
       'seed': _SEED.value,
       **summary,
       'wall_time_s': round(wall, 1),

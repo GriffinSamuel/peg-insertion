@@ -31,7 +31,8 @@ SUMMARY = ROOT / 'results' / 'summary.csv'
 COLUMNS = [
     'run', 'kind', 'clearance_mm', 'trained_clearance_mm', 'force_obs', 'seed',
     'obs_hole_bias_std', 'episodes', 'success', 'ci_lo', 'ci_hi', 'steps_mean',
-    'peak_force_mean', 'final_xy_err_mean_mm', 'wall_time_s', 'sps', 'num_envs',
+    'peak_force_mean', 'final_xy_err_mean_mm', 'still_inserted_at_end',
+    'through_wall_episodes', 'wall_time_s', 'sps', 'num_envs',
     'num_timesteps',
 ]
 
@@ -72,6 +73,9 @@ def main():
   parser.add_argument('--seed', type=int, default=123)
   parser.add_argument('--no_summary', action='store_true')
   args = parser.parse_args()
+  if (args.clearance_mm is not None or args.obs_hole_bias_std is not None) and not args.tag:
+    parser.error('--clearance_mm / --obs_hole_bias_std overrides need a --tag '
+                 '(otherwise they would overwrite the main result row)')
 
   run_dir = find_run_dir(args.run)
   policy, net_cfg = rollout.load_policy(run_dir)
@@ -123,6 +127,8 @@ def main():
         'steps_mean': summary['steps_mean'],
         'peak_force_mean': summary['peak_force_mean'],
         'final_xy_err_mean_mm': summary['final_xy_err_mean_mm'],
+        'still_inserted_at_end': summary['still_inserted_at_end'],
+        'through_wall_episodes': summary['through_wall_episodes'],
         'wall_time_s': fm.get('wall_time_s', np.nan), 'sps': fm.get('sps', np.nan),
         'num_envs': fm.get('num_envs', np.nan),
         'num_timesteps': fm.get('num_timesteps', np.nan),
