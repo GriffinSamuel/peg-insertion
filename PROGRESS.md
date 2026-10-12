@@ -107,3 +107,35 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - STARTED force_1mm_s1 (sweep) 2026-10-12 10:19
 - FINISHED force_1mm_s1 success=0.016 wall=5.5min sps=67290.6 2026-10-12 10:26
 - 2026-10-12 10:31 Main sweep (16 runs) DONE. final_metrics success: pos_2mm 0.992/0.973/1.000, pos_1mm 0.977/0.961/0.000, pos_0.5mm 0.000/0.828/0.000, force_0.5mm 1.000/0.000/0.609, force_2mm 0.992/0.957, force_1mm 0.996/0.016. Launching 10 extra replicate runs (seeds 3-4 core, s2 force 2/1 mm).
+- STARTED pos_2mm_s3 (sweep) 2026-10-12 10:34
+- 2026-10-12 10:35 Failure-mode rollouts (deterministic, 256 eps): pos_1mm_s2 (0%) hovers at the entrance ~4.5 mm off-centre, never pushes in; force_0.5mm_s1 (0%) hovers 8-10 mm ABOVE the hole and never touches it; pos_0.5mm_s1 (80%) descends slowly and searches, mean final depth 21 mm. No terminations/NaNs. Failed seeds are 'hover near the hole' local optima.
+- FINISHED pos_2mm_s3 success=0.957 wall=5.7min sps=65131.6 2026-10-12 10:41
+- STARTED pos_1mm_s3 (sweep) 2026-10-12 10:45
+- FINISHED pos_1mm_s3 success=0.500 wall=5.5min sps=66810.4 2026-10-12 10:52
+- STARTED pos_0.5mm_s3 (sweep) 2026-10-12 10:57
+- FINISHED pos_0.5mm_s3 success=0.051 wall=5.5min sps=66895.4 2026-10-12 11:04
+- STARTED force_0.5mm_s3 (sweep) 2026-10-12 11:08
+- FINISHED force_0.5mm_s3 success=0.992 wall=5.6min sps=65929.3 2026-10-12 11:15
+- STARTED pos_2mm_s4 (sweep) 2026-10-12 11:19
+- FINISHED pos_2mm_s4 success=1.000 wall=5.5min sps=67494.9 2026-10-12 11:26
+- STARTED pos_1mm_s4 (sweep) 2026-10-12 11:30
+- FINISHED pos_1mm_s4 success=0.000 wall=5.5min sps=67316.5 2026-10-12 11:37
+- STARTED pos_0.5mm_s4 (sweep) 2026-10-12 11:42
+- FINISHED pos_0.5mm_s4 success=0.016 wall=5.6min sps=66726.1 2026-10-12 11:49
+- STARTED force_0.5mm_s4 (sweep) 2026-10-12 11:53
+- FINISHED force_0.5mm_s4 success=0.820 wall=5.6min sps=65825.4 2026-10-12 12:00
+- STARTED force_2mm_s2 (sweep) 2026-10-12 12:04
+- FINISHED force_2mm_s2 success=1.000 wall=5.8min sps=63411.9 2026-10-12 12:12
+- STARTED force_1mm_s2 (sweep) 2026-10-12 12:16
+- FINISHED force_1mm_s2 success=0.992 wall=5.7min sps=65417.5 2026-10-12 12:24
+- 2026-10-12 12:29 Extra replicates DONE: pos_2mm s3/s4 0.957/1.000, pos_1mm s3/s4 0.500/0.000, pos_0.5mm s3/s4 0.051/0.016, force_0.5mm s3/s4 0.992/0.820, force_2mm_s2 1.000, force_1mm_s2 0.992 (final_metrics, 256 ep). Running postprocess (re-eval all with final evaluate.py, generalisation + no-bias diagnostic rows, plots).
+
+## 2026-10-12 13:40 PDT — Phase 6 done (experiment complete)
+- 26 runs, final config (warp, 1024 envs, 20M steps, lr 2e-4, align 5 mm), each evaluated on 500 fresh episodes (deterministic policy, DR on). Mean of per-seed success:
+  - position only: 2 mm 98.8% (5 seeds: 100/98/100/97/100), 1 mm 48.0% (96/96/0/48/0), 0.5 mm 17.0% (0/79/0/5/2)
+  - position + force: 2 mm 97.9% (3 seeds: 99/95/100), 1 mm 66.3% (99/0/99), 0.5 mm 68.8% (5 seeds: 98/0/63/98/85)
+  - 0.5 mm force vs position: +51.8 points, exact one-sided permutation test over seeds p = 0.044 (5 vs 5); 4/5 force seeds vs 1/5 position seeds learned to insert (>=50%).
+- No-bias diagnostic (0.5 mm policies evaluated with a perfect hole estimate): failed seeds stay at 0% (pos s0/s2/s3/s4, force s1) -> those are training failures ("hover near the hole" local optima), not bias. Successful seeds improve: pos s1 79 -> 100%, force s2 63 -> 94%, s4 85 -> 96%.
+- Generalisation: pos_2mm policies (s0/s1/s2) tested without retraining: 1 mm 76.8/59.8/83.8%, 0.5 mm 31.6/25.2/47.2% -> a 2 mm-trained policy beats position-only policies trained AT 0.5 mm (17% mean); suggests a clearance curriculum.
+- Validity: 0 through-wall episodes in all 26 x 500 evals; no NaN episodes. Mean steps to insert grow with tightness (pos 102 -> 134; force 95 -> 150). Mean peak contact force 41-101 N.
+- Per-run wall time ~5.4 min (incl. ~20 s JIT), ~68k env steps/s. Files: results/summary.csv, summary_by_condition.csv, results_table.md, success_vs_clearance.png, learning_curves.png, videos/ (26 runs + 2 scripted), insertion.gif, policies/.

@@ -1,0 +1,44 @@
+{
+  "run": "pos_0.5mm_s0_nobias",
+  "policy_run": "pos_0.5mm_s0",
+  "clearance_mm": 0.5,
+  "trained_clearance_mm": 0.5,
+  "use_force_obs": false,
+  "obs_hole_bias_std": 0.0,
+  "episodes": 500,
+  "successes": 0,
+  "success_rate": 0.0,
+  "ci_lo": 0.0,
+  "ci_hi": 0.007624618530903363,
+  "steps_mean": NaN,
+  "steps_median": NaN,
+  "peak_force_mean": 40.027976989746094,
+  "final_xy_err_mean_mm": 5.060451030731201,
+  "final_depth_mean_mm": 0.01693997159600258,
+  "still_inserted_at_end": 0.0,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.0,
+  "nan_episodes": 0,
+  "final_xy_err_hist_mm": {
+    "edges": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      100.0
+    ],
+    "counts": [
+      0,
+      0,
+      0,
+      0,
+      265,
+      235,
+      0
+    ]
+  },
+  "eval_seconds": 26.0
+}

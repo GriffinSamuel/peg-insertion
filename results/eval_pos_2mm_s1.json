@@ -6,18 +6,18 @@
   "use_force_obs": false,
   "obs_hole_bias_std": 0.00075,
   "episodes": 500,
-  "successes": 490,
-  "success_rate": 0.98,
-  "ci_lo": 0.9635794314459021,
-  "ci_hi": 0.9891009347644306,
-  "steps_mean": 97.37346649169922,
+  "successes": 488,
+  "success_rate": 0.976,
+  "ci_lo": 0.9585225403081018,
+  "ci_hi": 0.9862188228504781,
+  "steps_mean": 97.14958953857422,
   "steps_median": 96.0,
-  "peak_force_mean": 74.0352554321289,
-  "final_xy_err_mean_mm": 2.7668960094451904,
-  "final_depth_mean_mm": 29.362308502197266,
-  "still_inserted_at_end": 0.98,
+  "peak_force_mean": 74.44522857666016,
+  "final_xy_err_mean_mm": 2.7782163619995117,
+  "final_depth_mean_mm": 29.240671157836914,
+  "still_inserted_at_end": 0.976,
   "through_wall_episodes": 0,
-  "max_lateral_when_deep_mm": 2.1771490573883057,
+  "max_lateral_when_deep_mm": 2.1480917930603027,
   "nan_episodes": 0,
   "final_xy_err_hist_mm": {
     "edges": [
@@ -40,5 +40,5 @@
       0
     ]
   },
-  "eval_seconds": 25.5
+  "eval_seconds": 20.3
 }

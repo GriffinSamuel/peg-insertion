@@ -12,8 +12,8 @@
   "ci_hi": 0.007624618530903363,
   "steps_mean": NaN,
   "steps_median": NaN,
-  "peak_force_mean": 0.4986638128757477,
-  "final_xy_err_mean_mm": 9.097410202026367,
+  "peak_force_mean": 0.49866554141044617,
+  "final_xy_err_mean_mm": 9.09679889678955,
   "final_depth_mean_mm": 0.0,
   "still_inserted_at_end": 0.0,
   "through_wall_episodes": 0,
@@ -35,10 +35,10 @@
       0,
       0,
       0,
-      14,
+      15,
       337,
-      149
+      148
     ]
   },
-  "eval_seconds": 23.2
+  "eval_seconds": 19.2
 }

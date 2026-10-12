@@ -12,12 +12,12 @@
   "ci_hi": 0.9989023924587627,
   "steps_mean": 97.25100708007812,
   "steps_median": 97.0,
-  "peak_force_mean": 80.61168670654297,
-  "final_xy_err_mean_mm": 2.0411722660064697,
-  "final_depth_mean_mm": 28.40159034729004,
-  "still_inserted_at_end": 0.98,
+  "peak_force_mean": 80.2403564453125,
+  "final_xy_err_mean_mm": 2.0443429946899414,
+  "final_depth_mean_mm": 28.38271141052246,
+  "still_inserted_at_end": 0.982,
   "through_wall_episodes": 0,
-  "max_lateral_when_deep_mm": 2.2173523902893066,
+  "max_lateral_when_deep_mm": 2.218574285507202,
   "nan_episodes": 0,
   "final_xy_err_hist_mm": {
     "edges": [
@@ -34,11 +34,11 @@
       0,
       0,
       0,
-      304,
-      196,
+      295,
+      205,
       0,
       0
     ]
   },
-  "eval_seconds": 20.7
+  "eval_seconds": 19.5
 }

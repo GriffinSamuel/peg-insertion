@@ -28,6 +28,12 @@ RESULTS = ROOT / 'results'
 COLORS = {False: '#2a78d6', True: '#eb6834'}
 LABELS = {False: 'position only', True: 'position + wrist force'}
 INK, MUTED, GRID = '#0b0b0b', '#52514e', '#e4e3df'
+DODGE = {False: 1.035, True: 0.965}
+
+
+def _seed_label(nseeds) -> str:
+  lo, hi = int(min(nseeds)), int(max(nseeds))
+  return f'{hi} seeds' if lo == hi else f'{lo}-{hi} seeds per point'
 
 
 def _style(ax):
@@ -54,14 +60,15 @@ def success_vs_clearance(df: pd.DataFrame) -> Path:
       # bar = min..max across seeds (per-run Wilson CIs are in summary.csv).
       rates = g['success'].to_numpy()
       rows.append((c, rates.mean(), rates.min(), rates.max(), len(g)))
-      ax.scatter([c] * len(g), rates * 100, s=22, color=COLORS[force],
+      ax.scatter([c * DODGE[force]] * len(g), rates * 100, s=22, color=COLORS[force],
                  alpha=0.35, edgecolors='none', zorder=2)
     rows.sort()
     c, p, lo, hi, nseeds = map(np.array, zip(*rows))
+    c = c * DODGE[force]  # small horizontal offset so the two series' bars don't overlap
     ax.errorbar(c, p * 100, yerr=[(p - lo) * 100, (hi - p) * 100],
                 color=COLORS[force], linewidth=2, marker='o', markersize=8,
                 markeredgecolor='white', markeredgewidth=1.5, capsize=4,
-                label=f'{LABELS[force]} (n={int(nseeds.max())} seeds)', zorder=3)
+                label=f'{LABELS[force]} ({_seed_label(nseeds)})', zorder=3)
     # direct label on the tightest clearance point
     i = int(np.argmin(c))
     ax.annotate(f'{p[i] * 100:.0f}%', (c[i], p[i] * 100), textcoords='offset points',
