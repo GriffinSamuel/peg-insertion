@@ -20,3 +20,11 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - `pytest tests/` -> 12 passed in 7.3 min (hole width = pw + 2c to 1e-6 for 2/1/0.5 mm; peg below hand, |tip-TCP| = 50 mm; obs 10/16; 50 random steps no NaN; full_reset re-samples the hole on each auto-reset; |F| = 0.49 N free, > 2 N pressed).
 - Scene preview: results/scene_preview.png. Generated XMLs: peg_insertion/assets/scene_c{2.0,1.0,0.5}.xml.
 - Next: Phase 3 scripted baseline CSV + video (scripted tests already pass: 100% centred at 2/1/0.5 mm).
+
+## 2026-10-12 04:55 PDT — Phase 3 done (scripted physics sanity)
+- `scripts/scripted_insert.py` (true hole position; approach 3 cm above, descend 1 mm/step), 20 episodes per row, hole randomized:
+  - centred: 100% success at 2.0 / 1.0 / 0.5 mm, success at step ~100, peak |F| ~44 N.
+  - 1.5 mm off-centre: 100% at 2.0 mm (offset < clearance), 0% at 1.0 and 0.5 mm (peg lands on the wall rim and jams, peak ~65 N), as expected.
+- `tests/test_scripted.py` passes (>=95% at 2 mm, >=90% at 1 mm). CSV: results/scripted_baseline.csv.
+- Videos: results/videos/scripted_2mm.mp4, scripted_0.5mm.mp4 (osmesa, ~0.3 s/frame incl. overview inset, 101 frames in ~30 s).
+- Next: Phase 4 training pipeline (train.py/evaluate.py/render.py/plot.py drafted), dry run.

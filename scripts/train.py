@@ -172,9 +172,18 @@ def main(argv):
     writer = tensorboardX.SummaryWriter(str(logdir))
 
   times = [time.monotonic()]
+  curve_path = logdir / 'progress.csv'
+  curve_path.write_text('step,minutes,eval_reward,eval_success,eval_insert_reward\n')
 
   def progress(num_steps, metrics):
     times.append(time.monotonic())
+    with open(curve_path, 'a') as f:
+      f.write(
+          f"{num_steps},{(times[-1] - times[0]) / 60:.2f},"
+          f"{metrics.get('eval/episode_reward', float('nan')):.4f},"
+          f"{metrics.get('eval/episode_success', float('nan')):.4f},"
+          f"{metrics.get('eval/episode_insert_reward', float('nan')):.4f}\n"
+      )
     if writer is not None:
       for key, value in metrics.items():
         writer.add_scalar(key, value, num_steps)
@@ -248,6 +257,8 @@ def main(argv):
   results = ROOT / 'results'
   (results / 'policies' / run).mkdir(parents=True, exist_ok=True)
   shutil.copy(logdir / 'final_metrics.json', results / f'final_metrics_{run}.json')
+  (results / 'curves').mkdir(parents=True, exist_ok=True)
+  shutil.copy(curve_path, results / 'curves' / f'{run}.csv')
   for name in ('params.pkl', 'network_config.json'):
     shutil.copy(logdir / name, results / 'policies' / run / name)
 

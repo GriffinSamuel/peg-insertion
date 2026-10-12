@@ -136,7 +136,7 @@ def build_xml(
   <worldbody>
     <light pos="0.5 0 1.5" dir="0 0 -1" directional="true"/>
     <camera name="overview" pos="0.95 -0.5 0.45" xyaxes="0.707 0.707 0 -0.212 0.212 0.707"/>
-    <camera name="closeup" pos="{hx} -0.22 0.12" xyaxes="1 0 0 0 0.09 0.22"/>
+    <camera name="closeup" pos="{hx} -0.30 0.14" xyaxes="1 0 0 0 0.11 0.3"/>
     <geom name="table" type="box" size="0.5 0.5 0.02" pos="0.4 0 -0.02" material="tablemat"
      contype="0" conaffinity="0" group="1"/>
     <body name="hole_block" mocap="true" pos="{hx} {hy} 0">{hole_walls_xml(clearance_m, peg_width, hole_depth)}
