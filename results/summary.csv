@@ -1,0 +1,2 @@
+run,kind,clearance_mm,trained_clearance_mm,force_obs,seed,obs_hole_bias_std,episodes,success,ci_lo,ci_hi,steps_mean,peak_force_mean,final_xy_err_mean_mm,wall_time_s,sps,num_envs,num_timesteps
+pos_2mm_s0,main,2.0,2.0,False,0,0.00075,500,0.994,0.9825094361891064,0.9979574407023611,115.6116714477539,63.24544143676758,2.538069009780884,174.2,64722.2,1024,10000000

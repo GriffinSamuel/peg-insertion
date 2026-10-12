@@ -36,3 +36,10 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - Fixed: JAX 0.11 removed `jax.device_put_replicated` (Brax still uses it) -> compat shim; env step now merges wrapper metrics.
 - Dry run (`dry_2mm`, 50k steps, 256 envs) passed end to end: compile+train 2.1 min, final_metrics.json + video written.
 - Throughput benchmark (0.5M steps, 1024 envs): JAX ~2.5k steps/s, Warp ~11k steps/s -> using Warp (tests pass under both). VRAM ~0.7 GB.
+- FINISHED pos_2mm_s0 2026-10-12 05:42 success=0.992 (254/256) wall=2.9min sps=64.7k
+
+## 2026-10-12 06:05 PDT — Phase 4 + 5 done
+- Baseline `pos_2mm_s0` (warp, 1024 envs, 10M steps, PLAN 4.2 PPO config, no retries needed): final_metrics success 0.992 (254/256); 500-episode eval 0.994 (CI 0.983-0.998), mean 116 steps to success, mean peak |F| 63 N. Wall time 2.9 min (JIT 20 s with warm cache), ~65k steps/s.
+- Learning curve is non-monotonic (eval success 0.52 at 1.1M, dips to 0.02-0.15, then 0.97-0.99 from 7.9M).
+- Phase 5 tools validated on it: results/eval_pos_2mm_s0.json, results/videos/pos_2mm_s0.mp4 (3 episodes, 70 s render), results/success_vs_clearance.png, results/learning_curves.png, results/summary.csv.
+- Runs take ~3 min, so Phase 6 will use 3 seeds for every condition (PLAN: "3 if each run < 30 min").

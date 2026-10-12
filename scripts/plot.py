@@ -18,6 +18,7 @@ os.environ.setdefault('MPLCONFIGDIR', str(ROOT / '.cache' / 'mpl'))
 import matplotlib  # noqa: E402
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.ticker  # noqa: E402
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
@@ -69,6 +70,8 @@ def success_vs_clearance(df: pd.DataFrame) -> Path:
   ax.set_xscale('log')
   ax.set_xticks([2.0, 1.0, 0.5])
   ax.set_xticklabels(['2.0', '1.0', '0.5'])
+  ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+  ax.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
   ax.invert_xaxis()  # tighter holes to the right
   ax.set_xlim(2.6, 0.38)
   ax.set_ylim(-3, 103)
