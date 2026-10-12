@@ -1,0 +1,9 @@
+[project]
+name = "peg-insertion"
+version = "0.1.0"
+description = "RL peg insertion vs. hole clearance with MuJoCo Playground (MJX + Brax PPO)"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
