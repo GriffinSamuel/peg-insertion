@@ -1,0 +1,3 @@
+# DONE
+
+The autonomous run finished on 2026-10-12. Private repository: https://github.com/GriffinSamuel/peg-insertion. Headline numbers, each the mean over seeds of 500-episode evaluations: with position sensing only, a simulated Franka Panda's learned peg-insertion success fell from 98.8% at 2 mm clearance to 48.0% at 1 mm and 17.0% at 0.5 mm; with a wrist force/torque sensor added, success at 0.5 mm was 68.8% (5 vs 5 seeds, permutation p = 0.044), mostly because 4 of 5 force-sensing training runs learned to insert against 1 of 5 position-only runs. 26 final training runs of 20M steps took about 5.5 minutes each on the RTX 5070 Laptop GPU. See README.md for results, PROGRESS.md for the full log and DECISIONS.md for every design choice.

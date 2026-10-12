@@ -145,3 +145,12 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - Final pytest: 12 passed (JAX backend, 5.3 min); earlier also 12 passed under Warp.
 - DECISIONS.md reviewed; one unverified claim about Isaac Lab Factory's reward softened.
 - Repo working tree results/ = 37 MB (superseded runs' params/videos moved to gitignored logs/archive_results/).
+
+## 2026-10-12 13:50 PDT — Phase 8 done (GitHub)
+- Private repo: https://github.com/GriffinSamuel/peg-insertion (pushed; verified with `gh repo view` = PRIVATE and `git log origin/main`). .venv, .cache, logs, checkpoints, third_party not committed; results/ (charts, GIF, summary.csv, final_metrics_*, 26 policies, 28 videos) committed, 37 MB.
+- Summary:
+  1. Position-only success: 98.8% (2 mm) -> 48.0% (1 mm) -> 17.0% (0.5 mm), mean of 5 seeds x 500 episodes.
+  2. With wrist force: 97.9% (2 mm) / 66.3% (1 mm) / 68.8% (0.5 mm); +52 points at 0.5 mm, permutation p = 0.044.
+  3. Force mainly makes learning reliable: 4/5 force vs 1/5 position seeds learned to insert at 0.5 mm; failed seeds hover near the hole.
+  4. 2 mm-trained policies transfer to 0.5 mm at 25-47%, better than position-only training at 0.5 mm (curriculum is the obvious next step).
+  5. Each 20M-step run took ~5.5 min at ~68k steps/s on the RTX 5070 Laptop GPU (Warp backend); no through-wall or NaN episodes in 13,000 evals.
