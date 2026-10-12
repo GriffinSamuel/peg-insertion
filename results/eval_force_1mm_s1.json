@@ -1,0 +1,44 @@
+{
+  "run": "force_1mm_s1",
+  "policy_run": "force_1mm_s1",
+  "clearance_mm": 1.0,
+  "trained_clearance_mm": 1.0,
+  "use_force_obs": true,
+  "obs_hole_bias_std": 0.00075,
+  "episodes": 500,
+  "successes": 2,
+  "success_rate": 0.004,
+  "ci_lo": 0.0010976075412372681,
+  "ci_hi": 0.014466014041418871,
+  "steps_mean": 182.0,
+  "steps_median": 182.0,
+  "peak_force_mean": 73.16584014892578,
+  "final_xy_err_mean_mm": 10.33160400390625,
+  "final_depth_mean_mm": 0.18630754947662354,
+  "still_inserted_at_end": 0.004,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 1.0358867645263672,
+  "nan_episodes": 0,
+  "final_xy_err_hist_mm": {
+    "edges": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      5.0,
+      10.0,
+      100.0
+    ],
+    "counts": [
+      0,
+      0,
+      0,
+      5,
+      41,
+      196,
+      258
+    ]
+  },
+  "eval_seconds": 23.5
+}

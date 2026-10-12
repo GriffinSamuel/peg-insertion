@@ -21,6 +21,13 @@ RUNS=(
   "pos_2mm_s2 2.0 false 2"     "pos_1mm_s2 1.0 false 2"
   "pos_0.5mm_s2 0.5 false 2"   "force_0.5mm_s2 0.5 true 2"
   "force_2mm_s1 2.0 true 1"    "force_1mm_s1 1.0 true 1"
+  # extra replicates (DECISIONS 2026-10-12): 5 seeds for the 4 core conditions,
+  # 3 seeds for force@2mm and force@1mm
+  "pos_2mm_s3 2.0 false 3"     "pos_1mm_s3 1.0 false 3"
+  "pos_0.5mm_s3 0.5 false 3"   "force_0.5mm_s3 0.5 true 3"
+  "pos_2mm_s4 2.0 false 4"     "pos_1mm_s4 1.0 false 4"
+  "pos_0.5mm_s4 0.5 false 4"   "force_0.5mm_s4 0.5 true 4"
+  "force_2mm_s2 2.0 true 2"    "force_1mm_s2 1.0 true 2"
 )
 if [[ -n "${SWEEP_ONLY:-}" ]]; then  # e.g. SWEEP_ONLY="pos_2mm_s0 pos_1mm_s0"
   FILTERED=()

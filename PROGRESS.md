@@ -73,3 +73,37 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
 - STARTED pos_2mm_s0 (sweep) 2026-10-12 07:31
 - FINISHED pos_2mm_s0 success=0.992 wall=4.8min sps=73990.7 2026-10-12 07:37
 - STARTED pos_1mm_s0 (sweep) 2026-10-12 07:42
+- FINISHED pos_1mm_s0 success=0.977 wall=4.9min sps=72743.0 2026-10-12 07:48
+- STARTED pos_0.5mm_s0 (sweep) 2026-10-12 07:53
+- FINISHED pos_0.5mm_s0 success=0.000 wall=4.8min sps=74886.0 2026-10-12 07:59
+- STARTED force_0.5mm_s0 (sweep) 2026-10-12 08:03
+- FINISHED force_0.5mm_s0 success=1.000 wall=4.8min sps=75349.2 2026-10-12 08:10
+- STARTED pos_2mm_s1 (sweep) 2026-10-12 08:14
+- FINISHED pos_2mm_s1 success=0.973 wall=5.7min sps=65399.7 2026-10-12 08:21
+- STARTED pos_1mm_s1 (sweep) 2026-10-12 08:26
+- FINISHED pos_1mm_s1 success=0.961 wall=5.6min sps=65495.6 2026-10-12 08:33
+- STARTED pos_0.5mm_s1 (sweep) 2026-10-12 08:37
+- FINISHED pos_0.5mm_s1 success=0.828 wall=5.6min sps=66178.0 2026-10-12 08:44
+- STARTED force_0.5mm_s1 (sweep) 2026-10-12 08:48
+- FINISHED force_0.5mm_s1 success=0.000 wall=5.3min sps=70428.0 2026-10-12 08:55
+
+## 2026-10-12 08:56 PDT — Phase 6 sweep (final config) progress
+- pos_2mm s0/s1 0.992/0.973; pos_1mm s0/s1 0.977/0.961; pos_0.5mm s0/s1 0.000/0.828; force_0.5mm s0/s1 1.000/0.000 (256-ep final_metrics; 500-ep evals in summary.csv).
+- 0.5 mm is seed-dependent for both conditions; adding seeds 3-4 for the 0.5 mm pair after the sweep (DECISIONS).
+- STARTED force_2mm_s0 (sweep) 2026-10-12 08:59
+- FINISHED force_2mm_s0 success=0.992 wall=5.7min sps=65336.6 2026-10-12 09:07
+- STARTED force_1mm_s0 (sweep) 2026-10-12 09:11
+- FINISHED force_1mm_s0 success=0.996 wall=5.6min sps=65635.2 2026-10-12 09:18
+- STARTED pos_2mm_s2 (sweep) 2026-10-12 09:23
+- FINISHED pos_2mm_s2 success=1.000 wall=5.5min sps=67752.7 2026-10-12 09:30
+- STARTED pos_1mm_s2 (sweep) 2026-10-12 09:34
+- FINISHED pos_1mm_s2 success=0.000 wall=5.4min sps=69002.5 2026-10-12 09:41
+- STARTED pos_0.5mm_s2 (sweep) 2026-10-12 09:45
+- FINISHED pos_0.5mm_s2 success=0.000 wall=5.3min sps=70503.9 2026-10-12 09:52
+- STARTED force_0.5mm_s2 (sweep) 2026-10-12 09:56
+- FINISHED force_0.5mm_s2 success=0.609 wall=5.5min sps=66603.0 2026-10-12 10:03
+- STARTED force_2mm_s1 (sweep) 2026-10-12 10:08
+- FINISHED force_2mm_s1 success=0.957 wall=5.6min sps=65941.3 2026-10-12 10:15
+- STARTED force_1mm_s1 (sweep) 2026-10-12 10:19
+- FINISHED force_1mm_s1 success=0.016 wall=5.5min sps=67290.6 2026-10-12 10:26
+- 2026-10-12 10:31 Main sweep (16 runs) DONE. final_metrics success: pos_2mm 0.992/0.973/1.000, pos_1mm 0.977/0.961/0.000, pos_0.5mm 0.000/0.828/0.000, force_0.5mm 1.000/0.000/0.609, force_2mm 0.992/0.957, force_1mm 0.996/0.016. Launching 10 extra replicate runs (seeds 3-4 core, s2 force 2/1 mm).
