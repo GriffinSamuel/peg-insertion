@@ -53,7 +53,7 @@ def default_config() -> config_dict.ConfigDict:
       obs_noise_std=0.0002,  # metres: per-step white noise on positions
       start_height=0.05,  # tip starts this far above the hole entrance
       start_xy_noise=0.01,  # and this far off-centre (uniform +-)
-      max_servo_error=0.005,  # anti-windup: target never leads the tip by more
+      max_servo_error=0.003,  # anti-windup: target never leads the tip by more (m)
       force_clip=20.0,  # N, for normalising the force observation
       torque_clip=2.0,  # N*m, for normalising the torque observation
       reward_config=config_dict.create(

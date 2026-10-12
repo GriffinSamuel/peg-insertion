@@ -27,8 +27,9 @@ from peg_insertion.env import PegInsertion, default_config
 
 ROOT = Path(__file__).resolve().parent.parent
 APPROACH_HEIGHT = 0.03
-ALIGN_TOL = 0.0003
+ALIGN_TOL = 0.0005
 DESCENT_PER_STEP = 0.001
+XY_GAIN = 0.2
 
 
 def make_env(clearance_mm: float) -> PegInsertion:
@@ -38,19 +39,24 @@ def make_env(clearance_mm: float) -> PegInsertion:
 
 
 def scripted_action(env: PegInsertion, state, descending, offset_xy):
-  """Closed-loop action on the true tip position. Returns (action, descending)."""
+  """Setpoint controller: moves the commanded tip target (not the measured
+  tip) toward the goal; the arm's position servos do the tracking.
+  Returns (action, descending)."""
   scale = env._config.action_scale
+  cmd = state.info['current_pos']
   tip = state.data.site_xpos[env._tip_site]
   entrance = state.data.site_xpos[env._entrance_site]
   goal_xy = entrance[:2] + offset_xy
-  xy_err = goal_xy - tip[:2]
   approach_z = entrance[2] + APPROACH_HEIGHT
-  at_approach = (jp.linalg.norm(xy_err) < ALIGN_TOL) & (
+  at_approach = (jp.linalg.norm(goal_xy - tip[:2]) < ALIGN_TOL) & (
       jp.abs(tip[2] - approach_z) < 0.002
   )
   descending = descending | at_approach
-  z_err = jp.where(descending, -DESCENT_PER_STEP, approach_z - tip[2])
-  action = jp.concatenate([xy_err, z_err[None]]) / scale
+  z_step = jp.where(descending, -DESCENT_PER_STEP, approach_z - cmd[2])
+  # While descending, slowly integrate the measured xy error so the servo's
+  # tracking lag does not push the peg into a wall.
+  xy_step = jp.where(descending, XY_GAIN * (goal_xy - tip[:2]), goal_xy - cmd[:2])
+  action = jp.concatenate([xy_step, z_step[None]]) / scale
   return jp.clip(action, -1.0, 1.0), descending
 
 
