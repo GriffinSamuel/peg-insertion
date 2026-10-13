@@ -11,3 +11,7 @@ __pycache__/
 *.log
 ESCALATION.md
 results/eval_*_raw*
+DAY0_PROMPT.md
+SETUP_PROGRESS.md
+START_PROMPT.md
+RESUME_PROMPT.md
