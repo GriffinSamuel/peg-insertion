@@ -154,3 +154,10 @@ Deadline: 2026-10-19 (start 2026-10-12 + 7 days; checked for trigger T7)
   3. Force mainly makes learning reliable: 4/5 force vs 1/5 position seeds learned to insert at 0.5 mm; failed seeds hover near the hole.
   4. 2 mm-trained policies transfer to 0.5 mm at 25-47%, better than position-only training at 0.5 mm (curriculum is the obvious next step).
   5. Each 20M-step run took ~5.5 min at ~68k steps/s on the RTX 5070 Laptop GPU (Warp backend); no through-wall or NaN episodes in 13,000 evals.
+
+## 2026-10-13 18:45 PDT — Video rendering redone (visual only)
+- Why: old videos (640x480) had semi-transparent hole walls, so the peg looked like it clipped into a solid block; the low close-up camera was dominated by the wrist; white-on-white table with a heavy shadow.
+- New: 1280x720; opaque orange walls + dark visual-only hole floor; three-quarter main view (40 deg down, fovy 25); cutaway inset (second pass, near wall hidden); blue-grey checker table, flat neutral background, dimmer tilted key light; overlay kept + insertion-depth bar (0-30 mm). All visual changes are in a render-only XML variant (scripts/render_scene.py); its geometry is checked to equal the training scene. Env, training, policies and results numbers unchanged.
+- Re-rendered all 26 runs + 2 scripted videos (scripts/render_all.sh, 3 in parallel, ~100 s per 303-frame video, ~24 min total). New: results/videos/compare_0.5mm.mp4 (pos_0.5mm_s0 | force_0.5mm_s0, same episodes); results/insertion.gif remade from force_0.5mm_s0 episode 1 (720x405, 1.48 MB).
+- Pass-through check: render.py logs the deepest peg/wall contact overlap per video; max over all 28 videos = 0.22 mm (contact compliance, < 1 px at this zoom, within the 0.5 mm validity tolerance). Sampled frames from 0.5/1/2 mm, scripted, compare and GIF viewed by eye: the peg never appears to pass through an opaque wall.
+- pytest: 12 passed.

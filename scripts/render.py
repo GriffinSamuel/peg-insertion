@@ -1,7 +1,10 @@
 """Render rollout videos (osmesa software rendering, works on WSL2).
 
-Each frame shows the close-up camera at the hole with a small overview inset
-and a text overlay (clearance, step, success).
+Each 1280x720 frame shows a three-quarter view of the hole from above and in
+front, a cutaway inset (same instant, side view with the near wall hidden) so
+the peg can be seen inside the cavity, a text overlay and a depth bar.
+Visual changes live in a render-only model (scripts/render_scene.py); the
+training scene and physics are untouched.
 
 Usage:
   python scripts/render.py --run pos_2mm_s0              # trained policy
@@ -9,6 +12,7 @@ Usage:
 """
 
 import argparse
+import functools
 import os
 import sys
 import time
@@ -24,11 +28,28 @@ import jax.numpy as jp  # noqa: E402
 import mediapy  # noqa: E402
 import mujoco  # noqa: E402
 import numpy as np  # noqa: E402
-from PIL import Image, ImageDraw  # noqa: E402
+from PIL import Image, ImageDraw, ImageFont  # noqa: E402
 
-WIDTH, HEIGHT = 640, 480
-INSET_W, INSET_H = 224, 168
+import render_scene  # noqa: E402
+
+WIDTH, HEIGHT = render_scene.WIDTH, render_scene.HEIGHT
+INSET_W, INSET_H = 448, 336
+MARGIN = 16
 RENDER_EVERY = 2  # ctrl_dt 0.02 s -> 25 fps real time
+HOLE_DEPTH_MM = 30.0
+# Main view: three-quarter, from the front-right of the robot, 40 deg down.
+MAIN_CAM = dict(azimuth=145.0, elevation=-40.0, distance=0.70, lookat_dz=0.005)
+# Cutaway: level side view from -y with the near wall (wall_ny) hidden.
+CUT_CAM = dict(azimuth=90.0, elevation=-6.0, distance=0.22, lookat_dz=0.0)
+_FONT_PATHS = ('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',)
+
+
+@functools.lru_cache(maxsize=None)
+def _font(size: int):
+  for path in _FONT_PATHS:
+    if os.path.exists(path):
+      return ImageFont.truetype(path, size)
+  return ImageFont.load_default(size=size)
 
 
 def collect(env, act_fn, init_carry, episodes: int, seed: int):
@@ -64,41 +85,115 @@ def collect(env, act_fn, init_carry, episodes: int, seed: int):
   return [jax.tree.map(np.array, episode(k)) for k in keys]
 
 
-def _overlay(img: np.ndarray, lines) -> np.ndarray:
+def _free_camera(lookat, azimuth, elevation, distance, lookat_dz):
+  cam = mujoco.MjvCamera()
+  cam.type = mujoco.mjtCamera.mjCAMERA_FREE
+  cam.lookat[:] = np.asarray(lookat) + np.array([0.0, 0.0, lookat_dz])
+  cam.azimuth, cam.elevation, cam.distance = azimuth, elevation, distance
+  return cam
+
+
+def _scene_option(show_near_wall: bool) -> mujoco.MjvOption:
+  opt = mujoco.MjvOption()
+  opt.sitegroup[:] = 0  # hide debug sites (hole entrance/bottom markers)
+  opt.geomgroup[render_scene.NEAR_WALL_GROUP] = int(show_near_wall)
+  return opt
+
+
+def _render_rect(renderer, d, cam, opt, w: int, h: int) -> np.ndarray:
+  """Renders into the lower-left w x h of the one osmesa buffer.
+
+  A second osmesa context in the same process renders garbage, so the inset
+  reuses the main renderer's context with a smaller viewport.
+  """
+  renderer.update_scene(d, camera=cam, scene_option=opt)
+  rect = mujoco.MjrRect(0, 0, w, h)
+  mujoco.mjr_render(rect, renderer.scene, renderer._mjr_context)  # pylint: disable=protected-access
+  out = np.empty((h, w, 3), dtype=np.uint8)
+  mujoco.mjr_readPixels(out, None, rect, renderer._mjr_context)  # pylint: disable=protected-access
+  return np.flipud(out)
+
+
+def _overlay(img: np.ndarray, lines, depth_mm: float) -> np.ndarray:
   pil = Image.fromarray(img)
-  draw = ImageDraw.Draw(pil)
-  draw.rectangle([0, 0, 300, 18 * len(lines) + 8], fill=(0, 0, 0))
+  draw = ImageDraw.Draw(pil, 'RGBA')
+  font = _font(22)
+  box_h = 30 * len(lines) + 14
+  draw.rectangle([MARGIN, MARGIN, MARGIN + 520, MARGIN + box_h], fill=(0, 0, 0, 170))
   for i, (text, color) in enumerate(lines):
-    draw.text((8, 4 + 18 * i), text, fill=color)
+    draw.text((MARGIN + 12, MARGIN + 8 + 30 * i), text, fill=color, font=font)
+  _depth_bar(draw, depth_mm)
+  _inset_frame(draw)
   return np.array(pil)
 
 
+def _depth_bar(draw, depth_mm: float) -> None:
+  """Vertical bar: insertion depth vs the 30 mm hole depth."""
+  x0, y0, bw, bh = MARGIN + 6, MARGIN + 190, 34, 300
+  font = _font(18)
+  draw.rectangle([x0 - 6, y0 - 34, x0 + bw + 118, y0 + bh + 40], fill=(0, 0, 0, 170))
+  draw.text((x0, y0 - 28), 'insertion depth', fill=(255, 255, 255), font=font)
+  draw.rectangle([x0, y0, x0 + bw, y0 + bh], fill=(40, 40, 46), outline=(220, 220, 220))
+  frac = float(np.clip(depth_mm / HOLE_DEPTH_MM, 0.0, 1.0))
+  if frac > 0:
+    draw.rectangle([x0 + 2, y0 + int(bh * (1 - frac)), x0 + bw - 2, y0 + bh - 1],
+                   fill=(80, 200, 255))
+  for mm in (0, 10, 20, 30):
+    y = y0 + int(bh * (1 - mm / HOLE_DEPTH_MM))
+    draw.line([x0 + bw, y, x0 + bw + 8, y], fill=(220, 220, 220), width=2)
+    draw.text((x0 + bw + 12, y - 10), f'{mm} mm', fill=(220, 220, 220), font=font)
+  draw.text((x0, y0 + bh + 10), f'{max(depth_mm, 0.0):4.1f} / 30 mm',
+            fill=(255, 255, 255), font=font)
+
+
+def _inset_frame(draw) -> None:
+  x1, y1 = WIDTH - MARGIN, HEIGHT - MARGIN
+  x0, y0 = x1 - INSET_W, y1 - INSET_H
+  draw.rectangle([x0 - 3, y0 - 3, x1 + 2, y1 + 2], outline=(255, 255, 255), width=3)
+  draw.rectangle([x0, y0, x0 + 232, y0 + 28], fill=(0, 0, 0, 170))
+  draw.text((x0 + 8, y0 + 4), 'cutaway: near wall hidden', fill=(255, 255, 255), font=_font(17))
+
+
+def _max_penetration(m, d) -> float:
+  """Deepest peg/wall overlap (m) among this frame's contacts, 0 if none."""
+  worst = 0.0
+  for i in range(d.ncon):
+    c = d.contact[i]
+    names = {m.geom(c.geom1).name, m.geom(c.geom2).name}
+    if 'peg_geom' in names and names & {'wall_px', 'wall_nx', 'wall_py', 'wall_ny'}:
+      worst = max(worst, -c.dist)
+  return worst
+
+
 def frames_for(env, episodes, title: str):
-  m = env.mj_model
+  m = render_scene.build_render_model(env)
   d = mujoco.MjData(m)
-  # One renderer only: a second osmesa context in the same process renders
-  # garbage, so the overview inset is rendered full size and downscaled.
   renderer = mujoco.Renderer(m, HEIGHT, WIDTH)
-  frames = []
+  main_opt, cut_opt = _scene_option(True), _scene_option(False)
+  tip, entrance = m.site('peg_tip').id, m.site('hole_entrance').id
+  frames, worst_pen = [], 0.0
   for ep_i, ep in enumerate(episodes):
     n = ep['qpos'].shape[0]
     for t in range(0, n, RENDER_EVERY):
       d.qpos[:] = ep['qpos'][t]
       d.mocap_pos[:] = ep['mocap_pos'][t]
       mujoco.mj_forward(m, d)
-      renderer.update_scene(d, camera='closeup')
-      img = renderer.render().copy()
-      renderer.update_scene(d, camera='overview')
-      small = np.array(Image.fromarray(renderer.render()).resize((INSET_W, INSET_H)))
-      img[HEIGHT - INSET_H - 6:HEIGHT - 6, WIDTH - INSET_W - 6:WIDTH - 6] = small
+      worst_pen = max(worst_pen, _max_penetration(m, d))
+      hole = d.site_xpos[entrance].copy()
+      img = _render_rect(renderer, d, _free_camera(hole, **MAIN_CAM), main_opt, WIDTH, HEIGHT)
+      inset = _render_rect(renderer, d, _free_camera(hole, **CUT_CAM), cut_opt, INSET_W, INSET_H)
+      img = img.copy()
+      img[HEIGHT - MARGIN - INSET_H:HEIGHT - MARGIN, WIDTH - MARGIN - INSET_W:WIDTH - MARGIN] = inset
+      depth_mm = (hole[2] - d.site_xpos[tip][2]) * 1000.0
       ok = ep['succeeded'][t] > 0.5
       img = _overlay(img, [
           (f'{title}', (255, 255, 255)),
           (f'clearance {env.clearance * 1000:.1f} mm   episode {ep_i + 1}', (255, 255, 255)),
           (f'step {t:3d}   |F| {ep["force"][t]:5.1f} N', (255, 255, 255)),
           ('INSERTED' if ok else 'not inserted', (80, 255, 80) if ok else (255, 180, 80)),
-      ])
+      ], depth_mm)
       frames.append(img)
+  print(f'max peg/wall penetration over all frames: {worst_pen * 1000:.3f} mm', flush=True)
   return frames
 
 

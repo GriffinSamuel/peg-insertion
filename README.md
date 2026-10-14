@@ -3,7 +3,7 @@
 A simulated Franka Panda arm learns, with reinforcement learning, to insert a held square peg into a square hole. The experiment measures how success falls as the gap shrinks from 2 mm to 0.5 mm, and whether a wrist force sensor brings it back.
 
 <p align="center">
-  <img src="results/insertion.gif" alt="Learned policy inserting the peg at 0.5 mm clearance with force sensing" width="480"><br>
+  <img src="results/insertion.gif" alt="Learned policy inserting the peg at 0.5 mm clearance with force sensing; inset shows a cutaway of the hole" width="640"><br>
   <img src="results/success_vs_clearance.png" alt="Success rate vs hole clearance" width="560">
 </p>
 
@@ -56,7 +56,7 @@ Each number is the mean over random seeds of the success rate on 500 fresh evalu
 
 ![Learning curves](results/learning_curves.png)
 
-In-training evaluations (above) use the stochastic exploration policy, which at 0.5 mm can block insertion on its own, so the headline numbers come from the deterministic 500-episode evaluations. Videos of every run: [results/videos/](results/videos/).
+In-training evaluations (above) use the stochastic exploration policy, which at 0.5 mm can block insertion on its own, so the headline numbers come from the deterministic 500-episode evaluations. Videos of every run: [results/videos/](results/videos/). Each video shows a three-quarter view of the hole, a cutaway inset with the near wall hidden (so the peg can be seen inside the hole), the contact force and a depth bar. [compare_0.5mm.mp4](results/videos/compare_0.5mm.mp4) plays a position-only and a force-sensing policy side by side on the same 0.5 mm episodes.
 
 ## Reproduce
 
@@ -75,15 +75,16 @@ In-training evaluations (above) use the stochastic exploration policy, which at 
    ```
    A single run: `bash scripts/train.sh pos_0.5mm_s0 --clearance_mm 0.5 --seed 0` (add `--use_force_obs` for the force condition).
 5. Trained policies are in `results/policies/<run>/` (`params.pkl` + `network_config.json`), so you can evaluate or render without retraining:
-   `python scripts/evaluate.py --run force_0.5mm_s0` · `python scripts/render.py --run force_0.5mm_s0`
+   `python scripts/evaluate.py --run force_0.5mm_s0` · `python scripts/render.py --run force_0.5mm_s0` (all videos, GIF and comparison: `bash scripts/render_all.sh`)
 
 ## Project structure
 
 ```
 peg_insertion/        the task: xml_builder.py (scene), env.py (MJX env, reward, randomization),
                       configs.py (PPO settings), rollout.py (evaluation), jax_compat.py
-scripts/              train.py (from Playground's trainer), evaluate.py, render.py, plot.py,
-                      scripted_insert.py, sweep.sh, train.sh, env.sh; dev/ = one-off probes
+scripts/              train.py (from Playground's trainer), evaluate.py, plot.py, scripted_insert.py,
+                      render.py + render_scene.py (videos; render-only scene look), make_media.py (GIF,
+                      comparison), render_all.sh, sweep.sh, train.sh, env.sh; dev/ = one-off probes
 tests/                pytest: geometry, shapes, stability, randomization, force sensor, scripted insertion
 results/              summary.csv, charts, videos, policies, per-run metrics, archive/ (superseded runs)
 PROGRESS.md           dated log of everything that was done;  DECISIONS.md: every choice + reason
@@ -94,7 +95,7 @@ PROGRESS.md           dated log of everything that was done;  DECISIONS.md: ever
 - Laptop: Intel Core Ultra 9 285H, 32 GB RAM, **NVIDIA GeForce RTX 5070 Laptop GPU (8 GB, Blackwell)**, Windows + WSL2 Ubuntu 24.04.
 - Software: JAX 0.11.2 (CUDA 12), MuJoCo / MJX 3.15.0 with the Warp backend (mujoco-warp 3.15.0), Brax 0.14.2. Details and `pip freeze`: [results/environment.md](results/environment.md).
 - One training run (20M environment steps, 1024 parallel environments): **about 5.5 minutes** (4.8 to 5.8 min) at **about 68,000 environment steps per second**, using under 1 GB of GPU memory. All 26 runs of the final experiment (520M steps) took 2.4 GPU-hours; evaluation and video rendering roughly doubled the wall time.
-- Rendering uses software OpenGL (osmesa) because GPU rendering does not work under WSL2: about 0.3 s per frame.
+- Rendering uses software OpenGL (osmesa) because GPU rendering does not work under WSL2: about 0.35 s per 1280x720 frame (main view plus cutaway inset), roughly 25 minutes for all 28 videos with 3 in parallel. The render-only scene changes only colours, lighting and cameras; geometry is checked to be identical to the training scene.
 
 ## Limitations and next steps
 
