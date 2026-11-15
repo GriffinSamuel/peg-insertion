@@ -1,0 +1,14 @@
+{
+  "tests_passed": true,
+  "ten_episode_trial_passed": true,
+  "budget_guard_passed": true,
+  "symmetric_sampling_passed": true,
+  "single_source_sampling_passed": true,
+  "normalization_and_action_scale_passed": true,
+  "outputs_2_3_5_start_zero": true,
+  "test_data_guard_passed": true,
+  "trace_metadata_passed": true,
+  "practice_episodes": 10,
+  "settings_tried": 0,
+  "seconds": 95.6994222559997
+}

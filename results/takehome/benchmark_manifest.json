@@ -1,0 +1,64 @@
+{
+  "setting": "main_aim_40_fill_160_learner",
+  "episodes_per_run": 200,
+  "test_seed": 123,
+  "setting_count": 1,
+  "headline_designations": {
+    "0": "solo/seed_0",
+    "1": "parallel2/seed_1",
+    "2": "parallel2/seed_2",
+    "3": "parallel4/seed_3",
+    "4": "parallel4/seed_4"
+  },
+  "groups": [
+    {
+      "name": "solo",
+      "processes": [
+        [
+          0
+        ]
+      ]
+    },
+    {
+      "name": "parallel2",
+      "processes": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "name": "parallel4",
+      "processes": [
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          0
+        ],
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "name": "one_process_two_seeds",
+      "processes": [
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "total_experiments": 9,
+  "total_practice_episodes": 1800,
+  "timing_only_repeat_runs": 4,
+  "selection_rule": "Use designated first run per seed; never replace it using results of timing repeats."
+}

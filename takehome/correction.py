@@ -84,6 +84,7 @@ class AimCorrectedEnv(PegInsertion):
         state = super().reset(rng)
         guess = jp.zeros(2)
         info = {**state.info, "aim_guess": guess,
+                "old_action": jp.zeros(3), "executed_action": jp.zeros(3),
                 "learner_terminated": jp.array(False),
                 "learner_truncated": jp.array(False)}
         return state.replace(
@@ -98,6 +99,7 @@ class AimCorrectedEnv(PegInsertion):
         corrected = corrected_observation(raw_obs, guess)
         # Deterministic policy ignores this key; preserve simulator RNG stream.
         robot_action, _ = self.frozen_policy(corrected, jax.random.PRNGKey(0))
+        old_action, _ = self.frozen_policy({"state": raw_obs}, jax.random.PRNGKey(0))
         nxt = super().step(state, robot_action)
         ended = state.info["learner_terminated"] | state.info["learner_truncated"]
         reward, terminated, truncated = learner_outcome(
@@ -106,6 +108,7 @@ class AimCorrectedEnv(PegInsertion):
         terminated = state.info["learner_terminated"] | terminated
         truncated = state.info["learner_truncated"] | truncated
         info = {**nxt.info, "aim_guess": guess,
+                "old_action": old_action, "executed_action": robot_action,
                 "learner_terminated": terminated, "learner_truncated": truncated}
         return nxt.replace(
             obs={"state": jp.concatenate([nxt.obs["state"], guess])},

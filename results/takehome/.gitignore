@@ -2,6 +2,7 @@
 !*.log
 preflight_cache/
 cache/
+mplconfig/
 *_test_tmp/
 pytest_tmp*/
 *.pid

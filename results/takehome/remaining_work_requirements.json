@@ -1,0 +1,549 @@
+{
+  "facts": [
+    {
+      "goal": 6,
+      "quantity": "comparison methods shown",
+      "value": 6,
+      "arithmetic": "2 baselines + 3 learners + 1 labelled reference = 6",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 134,
+          "exact_quote": "Hand back: one table and one chart showing: original policy (floor), no-camera-bias test (ceiling), aim corrector only (the Goal 5 result, reused), movement corrector only (small capped corrections to hand movements, same scorekeeper recipe, same 200 episodes), both together (one learner outputs the aim nudge and the movement correction, one scorekeeper, same 200 episodes), and a clearly labelled reference that cheats on information: a network trained on the same 200 practice episodes per seed, but using the true camera error as labels. It goes through the same episode counter, so it cheats on what it is told, not on how much practice it gets."
+        }
+      ]
+    },
+    {
+      "goal": 6,
+      "quantity": "learner methods in the three-way comparison",
+      "value": 3,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 135,
+          "exact_quote": "Done when: every learner used test seed 123 and practice seeds 0 to 4 (the floor and ceiling have no learning, so one run each), the combined learner starts from zero correction so it begins identical to the original policy, the cheating reference is labelled as such everywhere it appears, and the report says which of the three learners did best and what each part added."
+        }
+      ]
+    },
+    {
+      "goal": 6,
+      "quantity": "practice seeds per learner",
+      "value": 5,
+      "arithmetic": "0 through 4 inclusive = 5",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 135,
+          "exact_quote": "Done when: every learner used test seed 123 and practice seeds 0 to 4 (the floor and ceiling have no learning, so one run each), the combined learner starts from zero correction so it begins identical to the original policy, the cheating reference is labelled as such everywhere it appears, and the report says which of the three learners did best and what each part added."
+        }
+      ]
+    },
+    {
+      "goal": 6,
+      "quantity": "development test episodes per test seed",
+      "value": 500,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 41,
+          "exact_quote": "- Development test: test seed 123, 500 test episodes. Used for every result in Goals 5, 6 and 7 rounds 1 and 2, and for all choosing."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 135,
+          "exact_quote": "Done when: every learner used test seed 123 and practice seeds 0 to 4 (the floor and ceiling have no learning, so one run each), the combined learner starts from zero correction so it begins identical to the original policy, the cheating reference is labelled as such everywhere it appears, and the report says which of the three learners did best and what each part added."
+        }
+      ]
+    },
+    {
+      "goal": 6,
+      "quantity": "no-learning baseline runs",
+      "value": 2,
+      "arithmetic": "floor + ceiling = 2",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 135,
+          "exact_quote": "Done when: every learner used test seed 123 and practice seeds 0 to 4 (the floor and ceiling have no learning, so one run each), the combined learner starts from zero correction so it begins identical to the original policy, the cheating reference is labelled as such everywhere it appears, and the report says which of the three learners did best and what each part added."
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "listed fill-up share values",
+      "value": 6,
+      "arithmetic": "six listed values: 0, 10, 20, 40, 80, 120",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 151,
+          "exact_quote": "- fill-up share: 0, 10, 20, 40, 80, 120 of the 200 episodes"
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "settings cap across rounds 1 and 2",
+      "value": 45,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 149,
+          "exact_quote": "- limit: at most 45 settings in total across rounds 1 and 2, unless Griffin changes this at the check-in"
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "rounds",
+      "value": 3,
+      "arithmetic": "screening + combining + confirmation = 3",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 167,
+          "exact_quote": "Search in three rounds, not every combination: (1) screening, each trick on by itself; (2) combining, only the few tricks that clearly beat the seed-to-seed spread; (3) confirmation, the single best setting on new seeds."
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "screening practice seeds",
+      "value": 3,
+      "arithmetic": "0 through 2 inclusive = 3",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "combining practice seeds",
+      "value": 5,
+      "arithmetic": "0 through 4 inclusive = 5",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "selected setting confirmation practice seeds",
+      "value": 5,
+      "arithmetic": "100 through 104 inclusive = 5",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 44,
+          "exact_quote": "- Confirmation: practice seeds 100 to 104 and test seed 456 with 500 test episodes. Nothing may be run on these before the final method is chosen and written down. Measure the floor and ceiling again on test seed 456 so the headline has its own reference lines."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 175,
+          "exact_quote": "- the chosen setting is then run on the confirmation seeds (practice 100 to 104, test seed 456), and that result is reported as the headline even if it is lower than the exploration result"
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "selected setting confirmation test episodes",
+      "value": 500,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 44,
+          "exact_quote": "- Confirmation: practice seeds 100 to 104 and test seed 456 with 500 test episodes. Nothing may be run on these before the final method is chosen and written down. Measure the floor and ceiling again on test seed 456 so the headline has its own reference lines."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 175,
+          "exact_quote": "- the chosen setting is then run on the confirmation seeds (practice 100 to 104, test seed 456), and that result is reported as the headline even if it is lower than the exploration result"
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "Goal 6 plain-setting learner comparison on confirmation seeds",
+      "value": 3,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 176,
+          "exact_quote": "- the three Goal 6 learners at their plain settings are also run on the confirmation seeds, with the floor and ceiling measured on test seed 456, and the report says plainly that the final method had the benefit of tuning and the others did not, with the number of settings tried shown next to each method"
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "confirmation floor and ceiling test seed",
+      "value": 456,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 44,
+          "exact_quote": "- Confirmation: practice seeds 100 to 104 and test seed 456 with 500 test episodes. Nothing may be run on these before the final method is chosen and written down. Measure the floor and ceiling again on test seed 456 so the headline has its own reference lines."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 176,
+          "exact_quote": "- the three Goal 6 learners at their plain settings are also run on the confirmation seeds, with the floor and ceiling measured on test seed 456, and the report says plainly that the final method had the benefit of tuning and the others did not, with the number of settings tried shown next to each method"
+        }
+      ]
+    },
+    {
+      "goal": 8,
+      "quantity": "additional practice episodes",
+      "value": 0,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 181,
+          "exact_quote": "Important detail: the scorekeeper's raw rating is not a chance of success, because wins that come later are counted for less and a time-out is not treated as a failure. So for this goal produce an honest \"chance of success in this episode\" reading: either convert the rating, or fit a small separate yes or no predictor on the same memory bank (no extra practice episodes) that also knows how many steps are left. Say in the report which you did and why. Also show the raw rating against outcomes for comparison."
+        }
+      ]
+    },
+    {
+      "goal": 9,
+      "quantity": "named failure types",
+      "value": 4,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 188,
+          "exact_quote": "Hand back: counts of each failure type before and after (never touched the hole, stuck on the rim, ran out of time, corrected the wrong way), and a few videos per type showing the running guess next to the true error."
+        }
+      ]
+    },
+    {
+      "goal": 9,
+      "quantity": "failure categories including other",
+      "value": 5,
+      "arithmetic": "4 named types + 1 other type = 5",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 189,
+          "exact_quote": "Done when: each failure type is defined by a rule that can be checked from the recorded episode, the rules are applied in a fixed order so every failed test episode lands in exactly one type, there is an \"other\" type for anything left over, and the counts add up. Videos come from a new script in `takehome/` that reuses the existing video code without editing it."
+        }
+      ]
+    },
+    {
+      "goal": 10,
+      "quantity": "policies",
+      "value": 3,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 194,
+          "exact_quote": "Hand back: the final method, unchanged, run on `force_0.5mm_s4`, on the position-only policy `pos_0.5mm_s1`, and on `force_0.5mm_s1`, which hovers and never inserts (0 percent with and without the camera error). Load policies through `peg_insertion/rollout.py` directly; do not run `scripts/evaluate.py`, because it writes into the existing results. Measure each policy's own floor and ceiling first. Position-only policies take 10 numbers instead of 16, so the wrapper must handle both."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 195,
+          "exact_quote": "Done when: all three are reported, including the ones expected to do poorly, with a sentence on why each behaved as it did."
+        }
+      ]
+    },
+    {
+      "goal": 10,
+      "quantity": "practice seeds per policy",
+      "value": 3,
+      "arithmetic": "0 through 2 inclusive = 3",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        }
+      ]
+    },
+    {
+      "goal": 10,
+      "quantity": "policy-by-practice-seed combinations",
+      "value": 9,
+      "arithmetic": "3 policies × 3 practice seeds = 9",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 194,
+          "exact_quote": "Hand back: the final method, unchanged, run on `force_0.5mm_s4`, on the position-only policy `pos_0.5mm_s1`, and on `force_0.5mm_s1`, which hovers and never inserts (0 percent with and without the camera error). Load policies through `peg_insertion/rollout.py` directly; do not run `scripts/evaluate.py`, because it writes into the existing results. Measure each policy's own floor and ceiling first. Position-only policies take 10 numbers instead of 16, so the wrapper must handle both."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "camera problem types",
+      "value": 7,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        },
+        {
+          "source": "TAKEHOME_PLAN.md",
+          "line_number": 135,
+          "exact_quote": "Camera problems to try:"
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "camera conditions",
+      "value": 8,
+      "arithmetic": "7 problem types + 1 additional size for the bigger offset = 8",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "table result categories per condition",
+      "value": 4,
+      "arithmetic": "floor + test-only + retrain + ceiling = 4",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "condition-by-table-category cells",
+      "value": 32,
+      "arithmetic": "8 conditions × 4 categories = 32",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "practice seeds",
+      "value": 3,
+      "arithmetic": "0 through 2 inclusive = 3",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "fresh retrain experiments across conditions and seeds",
+      "value": 24,
+      "arithmetic": "8 conditions × 3 practice seeds = 24 experiments",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 43,
+          "exact_quote": "- Practice seeds: 0 to 4 for anything reported. Goal 7 round 1 (screening) uses seeds 0 to 2 to save time; round 2 uses 0 to 4. Goals 10 and 11 use seeds 0 to 2."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 201,
+          "exact_quote": "Done when: the new errors live only in `takehome/` code, each retrain used its own 200 episodes, and the height error is included even though it is expected to fail."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "practice episodes across those retrains",
+      "value": 4800,
+      "arithmetic": "24 retrain experiments × 200 episodes each = 4,800",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 201,
+          "exact_quote": "Done when: the new errors live only in `takehome/` code, each retrain used its own 200 episodes, and the height error is included even though it is expected to fail."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "cheat test requirement",
+      "value": "one per problem type",
+      "arithmetic": "7 named problem types; whether larger-offset sizes each get separate cheat tests is unspecified",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        }
+      ]
+    },
+    {
+      "goal": 13,
+      "quantity": "fresh confirmation-seed reruns",
+      "value": 1,
+      "arithmetic": null,
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 215,
+          "exact_quote": "- one fresh rerun of the final method on one confirmation practice seed lands within one spread of the reported result"
+        }
+      ]
+    }
+  ],
+  "unspecified_counts": [
+    {
+      "goal": 6,
+      "quantity": "number of episodes for non-confirmation Goals 6 tests",
+      "status": "unspecified",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 134,
+          "exact_quote": "Hand back: one table and one chart showing: original policy (floor), no-camera-bias test (ceiling), aim corrector only (the Goal 5 result, reused), movement corrector only (small capped corrections to hand movements, same scorekeeper recipe, same 200 episodes), both together (one learner outputs the aim nudge and the movement correction, one scorekeeper, same 200 episodes), and a clearly labelled reference that cheats on information: a network trained on the same 200 practice episodes per seed, but using the true camera error as labels. It goes through the same episode counter, so it cheats on what it is told, not on how much practice it gets."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 135,
+          "exact_quote": "Done when: every learner used test seed 123 and practice seeds 0 to 4 (the floor and ceiling have no learning, so one run each), the combined learner starts from zero correction so it begins identical to the original policy, the cheating reference is labelled as such everywhere it appears, and the report says which of the three learners did best and what each part added."
+        }
+      ]
+    },
+    {
+      "goal": 7,
+      "quantity": "exact number of settings tried, and exact round 1 and round 2 setting counts",
+      "status": "unspecified (total cap is 45 across rounds 1 and 2)",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 149,
+          "exact_quote": "- limit: at most 45 settings in total across rounds 1 and 2, unless Griffin changes this at the check-in"
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 172,
+          "exact_quote": "- the total number of settings tried is stated"
+        }
+      ]
+    },
+    {
+      "goal": 8,
+      "quantity": "number of test episodes and seeds",
+      "status": "unspecified",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 182,
+          "exact_quote": "Hand back: a chart of predicted chance of success against actual success, a list of confident-but-failed moments, and the step where confidence drops in failed episodes."
+        },
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 183,
+          "exact_quote": "Done when: the chart is built only from test episodes, and the report says in one sentence whether the scorekeeper is overconfident, underconfident, or about right."
+        }
+      ]
+    },
+    {
+      "goal": 9,
+      "quantity": "number of videos per failure type",
+      "status": "unspecified (described as a few)",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 188,
+          "exact_quote": "Hand back: counts of each failure type before and after (never touched the hole, stuck on the rim, ran out of time, corrected the wrong way), and a few videos per type showing the running guess next to the true error."
+        }
+      ]
+    },
+    {
+      "goal": 10,
+      "quantity": "number of test episodes per policy/condition",
+      "status": "unspecified",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 194,
+          "exact_quote": "Hand back: the final method, unchanged, run on `force_0.5mm_s4`, on the position-only policy `pos_0.5mm_s1`, and on `force_0.5mm_s1`, which hovers and never inserts (0 percent with and without the camera error). Load policies through `peg_insertion/rollout.py` directly; do not run `scripts/evaluate.py`, because it writes into the existing results. Measure each policy's own floor and ceiling first. Position-only policies take 10 numbers instead of 16, so the wrapper must handle both."
+        }
+      ]
+    },
+    {
+      "goal": 11,
+      "quantity": "number of test episodes per camera condition",
+      "status": "unspecified",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 200,
+          "exact_quote": "Hand back: one table and one chart covering the seven problems in the plan (eight conditions, because the bigger offset has two sizes), each with floor, test-only, retrain, and ceiling. Floor is the old policy under that problem. Ceiling is the Goal 1 ceiling test (no constant offset and none of the added problem). Test-only uses the already trained final method from seeds 0 to 2 with nothing changed. For each problem, write down the exact formula and numbers used before running it. Where the offset is bigger, scale the cap on the running guess and the size of each nudge up by the same factor, in both the test-only and retrain runs, and log the values. For each problem also run the cheat test (true error fed in as the guess): it shows the best any aim corrector could do there, so a problem the aim idea cannot fix in principle is told apart from one the learner failed to learn. Build each problem by extending the environment class inside `takehome/`, since the height error and the late reading have to change the reading where it is made."
+        }
+      ]
+    },
+    {
+      "goal": 12,
+      "quantity": "number of figures/commands",
+      "status": "unspecified (one command per figure)",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 206,
+          "exact_quote": "Hand back: `TAKEHOME_REPORT.md` at the top of the project, in plain language with no em dashes, with the question, the idea, the method, all results with every seed, the charts, failure cases, every algorithm choice and its reason, the number of settings tried, every PLAN GAP entry, the limits, the budget assumption, how AI assistance was used, and one command to rebuild each figure."
+        }
+      ]
+    },
+    {
+      "goal": 13,
+      "quantity": "number of old and new tests to run",
+      "status": "unspecified",
+      "sources": [
+        {
+          "source": "CODEX_GOALS.md",
+          "line_number": 213,
+          "exact_quote": "- all old and new tests pass"
+        }
+      ]
+    }
+  ]
+}

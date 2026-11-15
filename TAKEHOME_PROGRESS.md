@@ -1,5 +1,9 @@
 # Take-home progress
 
+## Current status: Goal 4 passed, Goal 5 next (2026-11-15)
+
+The revised instructions are active and the old sampling pause is resolved. Goals 1–4 pass. Full Goal 4 report follows the historical entries below. Goal 5 will use the fixed benchmark_manifest.json schedule, one main setting, designated practice seeds 0–4, and the prescribed 40/160 split and tests. Stop at the Goal 5 check-in. Practice used so far: 10 in a code trial; learning settings tried: 0.
+
 ## Current status after revised instructions, 2026-11-15
 
 Re-read AGENTS.md, CODEX_GOALS.md and TAKEHOME_PLAN.md in full. Griffin resolved the sampling question: exactly half fill-up and half learner data when both exist; otherwise use the nonempty source. The historical pause below is resolved. Goals 1–3 remain passed under the revised checks. Goal 4 now builds only the main learner, its configurable output dimension and the explicitly listed basic settings, replay metadata and test traces. Later tricks are deferred until their respective goals.
@@ -143,3 +147,40 @@ The first three goals passed. A budget guard now prevents an experiment from col
 
 ### 8. Questions before the next phase
 May the required zero-fill-up and critic-pretraining cases sample only from the available source, while using exactly 50/50 whenever both sources exist? Alternatively, should strict 50/50 remain mandatory and those incompatible experiments be removed? Resume Goal 4 after Griffin answers; do not skip to Goal 5.
+
+## 2026-11-15: Goal 4 complete under the revised requirements
+
+### 1. What I did (short list)
+- Built the main deterministic actor-critic, a layer-normalized critic ensemble, exact symmetric replay sampling with the approved single-source exceptions, and a persistent budget guard.
+- Added collection in ten-episode batches, complete replay provenance, a separate test trace runner, checkpoint saving, and resume support after completed batches.
+- Reused checkpoint normalization and the existing rollout's environment wrapping, randomization, seed partition, summary and physical-validity checks.
+- Ran 11 contract tests and one ten-episode code trial in one process; reviewed the helper's standalone Goal 5 plotting script before use.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+11 tests passed in 49.97 seconds. The code trial used practice seed 999, exactly 10 learner episodes, zero fill-up, 1837 valid transitions and 7348 critic updates. Its separate eight-episode test at seed 123 scored 0/8, with finite simulation/model values and no through-wall episodes. Trial execution took 43.68 seconds in the already-started process; all checks and the trial took 116.29 seconds including process startup. This is a code test, not an experimental setting, and its poor result is retained without tuning the main configuration.
+
+### 3. Checks: each check from the goal, marked pass or fail
+- PASS: ten-episode end-to-end run finished with exit code 0 and no invalid simulation/model numbers.
+- PASS: budget guard rejects episode 201, persists reservations, and rejects test-labelled or unreserved data.
+- PASS: source scripts/env.sh && python -B takehome/train.py --policy force_0.5mm_s2 --seeds 0 starts the full 200-episode experiment.
+- PASS: compiled sampler returns exactly 64 fill-up and 64 learner transitions when both exist; all 128 come from the available source otherwise.
+- PASS: critic receives normalized physical corrections; original sensor scaling exactly matches the frozen policy's checkpoint statistics.
+- PASS: fill-up count, updates per step, ensemble size and aim caps are command-line settings; 2/3/5-output networks all initialize to exactly zero. Movement environment adapters and other later tricks are deferred to their prescribed goals.
+- PASS: ten-episode trial is marked code_test=true and setting_counted=false.
+- PASS: replay records success/timeout separately, episode and step IDs, source, old and executed actions, and true error; true error is excluded from training inputs.
+- PASS: separate test traces contain running guess, true error, Q rating and force at every step, with explicit test_only=true and learned_from=false labels.
+
+### 4. Surprises or problems
+The tiny code-test learner scored 0/8. No success target applies to this check, and this observation was not used to select different hyperparameters. Mean insertion time for zero successes is undefined and is serialized as null, not treated as an invalid simulation value. No fix attempt or fallback was required. The helper assigned to launch checks had not created the log, so the lead launched the reviewed command and retained the helper for monitoring.
+
+### 5. Decisions I logged
+PLAN GAP entries fix architecture, update ratio, learning rate, discount and target averaging, exploration noise, scaling, code-trial seed/split/test size, fill-up-end curve point, deferred adapters, and the nine-run timing schedule before full experiments. Raw Q is explicitly not called a success probability. Four timing repeats supplement the five designated main runs; each has an independent 200-episode ledger and cannot replace a headline run based on its score.
+
+### 6. Practice episodes used, and settings tried so far
+10 practice episodes in the code trial; 0 reported learning settings tried. Cumulative full test-only episodes: 2024, plus 16 reset-only probes. Goal 5 will add 1800 practice episodes across nine separate 200-episode experiments of one setting, including four timing repeats.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+The learner can now collect practice, reuse that experience, update its networks, and save the result. The counter and data checks keep tests out of learning and prevent a run from exceeding its budget. The small code trial worked mechanically but performed poorly. That does not predict the outcome of the full 40-fill-up/160-learner experiment. We will report every full run with the settings fixed now.
+
+### 8. Questions before the next phase
+No BLOCKING issue. Commit and push Goal 4, then run Goal 5 and stop at its check-in.
