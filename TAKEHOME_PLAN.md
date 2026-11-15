@@ -1,6 +1,6 @@
 # Take-home plan: improve a peg insertion checkpoint in 200 episodes
 
-Written 2026-11-15 for the General Instinct take-home. This file is the plan for a coding agent (Codex) to follow, one phase at a time. It is written in plain language on purpose. Nothing in it has been run yet, so every expected result below is a guess to be tested.
+Written 2026-11-15 for the General Instinct take-home. This file is the plan for a coding agent (Codex) to follow, one phase at a time. It is written in plain language on purpose. It explains what and why. The exact numbers, seeds, definitions and the stopping rule are in `CODEX_GOALS.md`, and that file wins wherever the two differ.
 
 ## The assignment in one paragraph
 
@@ -13,11 +13,11 @@ The robot sees the hole through a camera reading that is slightly wrong. An earl
 ## Ground rules for the agent
 
 1. Work on a new git branch called `takehome`. Do not change the existing environment code, trained policies, or anything already in `results/`.
-2. Put all new code in a new folder `takehome/` and all new outputs in `results/takehome/`.
+2. Put all new code in a new folder `takehome/` and all new outputs in `results/takehome/`. The three log files (`TAKEHOME_DECISIONS.md`, `TAKEHOME_PROGRESS.md`, `TAKEHOME_REPORT.md`) sit at the top of the project. Commit and push to the `takehome` branch after every goal.
 3. Every choice that is not written here goes into a new file `TAKEHOME_DECISIONS.md` as one line with the reason, the same way `DECISIONS.md` works.
 4. Keep a dated log of what was done in `TAKEHOME_PROGRESS.md`.
 5. Count every practice episode. The total used for learning, including episodes where the old policy runs just to fill the memory bank, must never pass 200 per experiment. Test episodes that are not learned from do not count, and the write-up must say so.
-6. There is one planned check-in with Griffin, after Phase 5. Everywhere else, check your own work, use the written fallbacks, and halt only on a tripwire. The autopilot rules are at the top of `CODEX_GOALS.md`.
+6. There is one planned check-in with Griffin, after Phase 5. Everywhere else, check your own work and keep going. The single stopping rule is at the top of `CODEX_GOALS.md`.
 7. Use the existing setup: run inside WSL, start with `source scripts/env.sh`, and reuse `peg_insertion/rollout.py` for loading policies and running test episodes.
 
 ## Phase 0: before any code (Griffin does this)
@@ -29,7 +29,7 @@ The robot sees the hole through a camera reading that is slightly wrong. An earl
 
 1. Test the original policy on 500 fresh episodes with a fixed test seed. This is the floor.
 2. Test it again with the camera error switched off. This is the ceiling.
-3. Save both numbers. Every later result should land between them.
+3. Save both numbers. Every later aim-only result should land between them. Learners that also correct the movement can honestly go above the ceiling.
 
 ## Phase 2: build the aim-corrected environment
 
@@ -41,7 +41,7 @@ The robot sees the hole through a camera reading that is slightly wrong. An earl
 
 ## Phase 3: prove the mechanism before any learning
 
-1. Zero test: with the nudge always zero, the wrapper must give the same success rate as the original policy.
+1. Zero test: with the nudge always zero, the wrapper must give the same success rate as the original policy, within 3 points.
 2. Cheat test: feed the true camera error as the guess. Success should rise to about the ceiling.
 3. If the cheat test does not reach near the ceiling, the idea does not work as designed. Record it, switch the main method to the movement corrector, and continue. If the zero test fails, halt.
 
@@ -51,7 +51,7 @@ The robot sees the hole through a camera reading that is slightly wrong. An earl
 2. The scorekeeper: several small copies with layer normalisation, trained to predict the chance of success.
 3. The aim corrector: a small network trained to pick nudges the scorekeeper rates highly.
 4. A learning loop that studies the memory bank many times for each new step collected.
-5. Built in from the start: each study batch is half fill-up data and half new data; the correction numbers are rescaled before the scorekeeper sees them so small corrections are not drowned out; the old policy's own input scaling is reused.
+5. Built in from the start: whenever both fill-up data and new data exist, each study batch is half of each (when only one kind exists, the batch comes entirely from that kind); the correction numbers are rescaled before the scorekeeper sees them so small corrections are not drowned out; the old policy's own input scaling is reused.
 6. A short test that the whole loop runs end to end on a tiny budget.
 
 ## Phase 5: run the main experiment
@@ -121,7 +121,7 @@ After Round 2, choose the best setting by the fixed rule (highest average on the
 
 1. Sort failures into types: never touched the hole, stuck on the rim, ran out of time, corrected the wrong way.
 2. Count each type before and after.
-3. Render a few videos of each type with the existing video script, showing the running guess next to the true error.
+3. Render a few videos of each type with a new script in `takehome/` that reuses the existing video code, showing the running guess next to the true error.
 
 ## Phase 10: check it is not a one-off
 

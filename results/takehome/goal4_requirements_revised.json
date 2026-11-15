@@ -1,0 +1,59 @@
+{
+  "source": "CODEX_GOALS.md",
+  "source_sha256": "08390837b3b75734a6eb499715e0f34ff53bdc09e346593b9983dcf25a9a79dc",
+  "supersedes": "goal4_switch_requirements.json",
+  "requirements": [
+    {
+      "line": 98,
+      "text": "## Goal 4: build the learner"
+    },
+    {
+      "line": 100,
+      "text": "Achieve: a memory bank, a scorekeeper (several copies, layer normalisation), a corrector network, and a learning loop that studies the memory bank many times per new step. Build the learner so the number of outputs is a setting (2 for aim only, 3 for movement only, 5 for both), because Goal 6 needs all three."
+    },
+    {
+      "line": 101,
+      "text": "Hand back: code and tests in `takehome/`."
+    },
+    {
+      "line": 102,
+      "text": "Done when:"
+    },
+    {
+      "line": 103,
+      "text": "- a 10-episode trial run finishes with no errors and no invalid numbers"
+    },
+    {
+      "line": 104,
+      "text": "- the episode counter refuses to collect episode 201"
+    },
+    {
+      "line": 105,
+      "text": "- one command starts a full 200-episode experiment from a named policy and seed"
+    },
+    {
+      "line": 106,
+      "text": "- whenever both fill-up data and new data exist, each study batch is half of each; when only one kind exists (the zero-fill-up experiment, or briefing the scorekeeper before any new data), the batch comes entirely from the kind that exists"
+    },
+    {
+      "line": 107,
+      "text": "- the correction numbers are rescaled before the scorekeeper sees them, and the old policy's input scaling is reused"
+    },
+    {
+      "line": 108,
+      "text": "- these settings can be changed without editing code: number of fill-up episodes, how many times the memory bank is studied per new step, number of scorekeeper copies, and the aim caps. Every other item in Goals 6 and 7 is built later, when it is first needed, each behind its own setting and with its own short test. Do not build them now."
+    },
+    {
+      "line": 109,
+      "text": "- the 10-episode trial run is a code test, not an experiment: it does not count as a setting tried"
+    },
+    {
+      "line": 110,
+      "text": "- the memory bank records, for every step: whether the episode ended by success or by running out of time (kept separate), the episode number and step number, whether it was a fill-up or learner episode, the old policy's own action, and the true camera error. The true camera error is stored for analysis and for the experiments that are explicitly allowed to use it, and is never shown to the learner otherwise"
+    },
+    {
+      "line": 111,
+      "text": "- a test-episode runner in `takehome/` records step-by-step traces (the running guess, the true error, the scorekeeper's rating, contact force), because the existing one only returns end-of-episode numbers"
+    }
+  ]
+}

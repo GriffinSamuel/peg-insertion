@@ -1,0 +1,269 @@
+{
+  "requirements": [
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 76,
+      "exact_phrase": "- every trick listed in Goal 7 can be switched on or off with a setting, without editing code"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 99,
+      "exact_phrase": "- fill-up share: 0, 10, 20, 40, 80, 120 of the 200 episodes"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 100,
+      "exact_phrase": "- aim and movement together: joint (one learner, one scorekeeper), side by side (two learners, two scorekeepers, same time), one after the other (aim then movement, and movement then aim)"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 101,
+      "exact_phrase": "- scorekeeper briefed first or not"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 102,
+      "exact_phrase": "- scorekeeper sees true camera error in training or not"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 103,
+      "exact_phrase": "- several scorekeepers or one"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 104,
+      "exact_phrase": "- how many times the memory bank is studied per new step"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 105,
+      "exact_phrase": "- size caps on the aim nudge and the movement correction"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 106,
+      "exact_phrase": "- a final decider: each step, rate several options with the scorekeeper (no correction, aim only, movement only, both, a few small variations) and act on the best, versus acting on the learner output directly; use only a scorekeeper that does not need the true camera error"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 107,
+      "exact_phrase": "- hand over near the hole (old policy alone on the approach, learner active only near the hole)"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 108,
+      "exact_phrase": "- looser cap in contact, tighter in free space"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 109,
+      "exact_phrase": "- movement cap sized by the old policy's own uncertainty"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 110,
+      "exact_phrase": "- scorekeeper trained as a yes or no predictor of success"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 111,
+      "exact_phrase": "- looking several steps ahead when crediting moves"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 112,
+      "exact_phrase": "- a floor on the scorekeeper's ratings from real outcomes"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 113,
+      "exact_phrase": "- a penalty for pushing too hard, with peak force reported"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 114,
+      "exact_phrase": "- fill-up episodes from sibling policies"
+    },
+    {
+      "source": "CODEX_GOALS.md",
+      "line_number": 115,
+      "exact_phrase": "Search in three rounds, not every combination: (1) screening, each trick on by itself; (2) combining, only the few tricks that clearly beat the seed-to-seed spread; (3) confirmation, the single best setting on new seeds."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 50,
+      "exact_phrase": "1. A memory bank that stores every step: situation, nudge, reward, next situation, and whether it ended."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 51,
+      "exact_phrase": "2. The scorekeeper: several small copies with layer normalisation, trained to predict the chance of success."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 52,
+      "exact_phrase": "3. The aim corrector: a small network trained to pick nudges the scorekeeper rates highly."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 53,
+      "exact_phrase": "4. A learning loop that studies the memory bank many times for each new step collected."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 54,
+      "exact_phrase": "5. Built in from the start: each study batch is half fill-up data and half new data; the correction numbers are rescaled before the scorekeeper sees them so small corrections are not drowned out; the old policy's own input scaling is reused."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 55,
+      "exact_phrase": "6. A short test that the whole loop runs end to end on a tiny budget."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 83,
+      "exact_phrase": "Things to explore, changing one at a time from the main experiment:"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 84,
+      "exact_phrase": "1. Fill-up share: 0, 10, 20, 40, 80 and 120 of the 200 episodes spent filling the memory bank."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 85,
+      "exact_phrase": "2. How the aim part and the movement part work together:"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 86,
+      "exact_phrase": "   - joint: one learner outputs both, one scorekeeper rates both"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 87,
+      "exact_phrase": "   - side by side: two learners, each with its own scorekeeper, learning at the same time"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 88,
+      "exact_phrase": "   - one after the other: aim first for part of the budget and then movement, and the reverse order"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 89,
+      "exact_phrase": "3. Scorekeeper briefed on the old policy's outcomes first, versus not."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 90,
+      "exact_phrase": "4. Scorekeeper allowed to see the true camera error during training, versus not."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 91,
+      "exact_phrase": "5. Several scorekeeper copies versus one."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 92,
+      "exact_phrase": "6. How many times the memory bank is studied per new step."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 93,
+      "exact_phrase": "7. The size caps on the aim nudge and on the movement correction."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 94,
+      "exact_phrase": "8. A final decider: at each step, line up several options (no correction, aim only, movement only, both, and a few small variations), let the scorekeeper rate each one, and act on the best rated. Compare with acting on the learner's output directly. The decider only works with a scorekeeper that does not need the true camera error, because that is not available when the robot is really running."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 95,
+      "exact_phrase": ""
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 96,
+      "exact_phrase": "More tricks borrowed from the papers, each switched on by itself first:"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 97,
+      "exact_phrase": "9. Hand over near the hole: the old policy does the approach alone and the learner only switches on close to the hole."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 98,
+      "exact_phrase": "10. Looser cap in contact, tighter cap in free space."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 99,
+      "exact_phrase": "11. Movement cap sized by the old policy's own uncertainty."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 100,
+      "exact_phrase": "12. Scorekeeper trained as a yes or no predictor of success."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 101,
+      "exact_phrase": "13. Looking several steps ahead when crediting moves."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 102,
+      "exact_phrase": "14. A floor on the scorekeeper's ratings taken from real outcomes."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 103,
+      "exact_phrase": "15. A penalty for pushing too hard, with peak force reported."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 104,
+      "exact_phrase": "16. Fill-up episodes from sibling policies instead of one."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 105,
+      "exact_phrase": ""
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 106,
+      "exact_phrase": "How to search without trying every combination (there are far too many):"
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 107,
+      "exact_phrase": "- Round 1, screening: switch each trick on by itself and compare with the main experiment."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 108,
+      "exact_phrase": "- Round 2, combining: take only the few tricks that clearly helped (beyond the seed-to-seed spread) and try their combinations."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 109,
+      "exact_phrase": "- Round 3, confirmation: the single best setting, on new seeds and a new test seed."
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 110,
+      "exact_phrase": ""
+    },
+    {
+      "source": "TAKEHOME_PLAN.md",
+      "line_number": 111,
+      "exact_phrase": "After Round 2, choose the best setting by the fixed rule (highest average on the development test, and the simpler setting when two are within the seed-to-seed spread), write the choice down, then do the confirmation run."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Generated caches, scratch ledgers, process IDs and compilation products.
+preflight_cache/
+cache/
+*_test_tmp/
+pytest_tmp*/
+*.pid
+*.lock
+*.tmp
+__pycache__/
+*.py[cod]
+*.so
+*.o
+# Larger artifacts must be added here explicitly before staging; keep <50 MB.

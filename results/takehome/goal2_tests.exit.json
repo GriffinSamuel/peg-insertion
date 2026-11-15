@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "takehome/test_correction.py"
+  ],
+  "started_utc": "2026-11-15T22:43:03.355716+00:00",
+  "finished_utc": "2026-11-15T22:43:48.431341+00:00",
+  "seconds": 45.07565279000028,
+  "exit_code": 0
+}
