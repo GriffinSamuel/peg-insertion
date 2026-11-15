@@ -1,4 +1,5 @@
 # Generated caches, scratch ledgers, process IDs and compilation products.
+!*.log
 preflight_cache/
 cache/
 *_test_tmp/

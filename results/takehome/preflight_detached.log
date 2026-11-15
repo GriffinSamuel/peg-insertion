@@ -1,0 +1,5 @@
+START detached GPU check
+pid=2327 ppid=9 sid=2327
+[CudaDevice(id=0)]
+SLEEP 30 seconds
+DONE slept 30 seconds; GPU check passed
