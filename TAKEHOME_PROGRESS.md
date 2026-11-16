@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goal 5 complete, planned check-in (2026-11-15)
+## Current status: continuation approved, repeatability investigation before Goal 6 (2026-11-15)
 
-The revised instructions are active and the old sampling pause is resolved. Goals 1–5 pass. The five designated runs average 65.16% success with 7.74 percentage points of sample standard deviation, compared with the 61.4% floor and 94.4% ceiling. The small average gain does not establish reliable improvement. All nine benchmark runs finished and are retained. Practice used: 1810 episodes across separate bounded experiments, including the ten-episode code trial; learning settings tried: 1. Stop here under CODEX_GOALS.md's planned Goal 5 check-in. No Goal 6 work or confirmation run has started. Read TAKEHOME_REPORT.md for the complete check-in, including timing estimates and proposed cuts.
+Griffin approved Goals 6–13 with no cuts and up to 30 minutes investigating repeatability first (started 2026-11-16 00:28 UTC; deadline 00:58 UTC). Tests, seeds and per-experiment budgets stay fixed. If no safe repeatability fix is established within that time, record the evidence and continue. The previous Goal 5 stop below is resolved. Goals 1–5 pass, with main mean 65.16%, spread 7.74 points, floor 61.4% and ceiling 94.4%. Practice used: 1810; settings tried: 1. Full traces and binary model artifacts now remain local only under Griffin's revised storage instruction; existing files are untracked without deletion, and new curve points retain summaries instead of full traces.
 
 ## Current status after revised instructions, 2026-11-15
 

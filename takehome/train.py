@@ -126,8 +126,13 @@ class ExperimentRunner:
             if (not cfg.code_test and end >= cfg.fill_episodes and end % 20 == 0) or end == cfg.total_episodes:
                 t0 = time.perf_counter()
                 episodes = 8 if cfg.code_test else (500 if end == 200 else 256)
-                summary, stats, _ = self.episodes.test(
-                    state, episodes=episodes, seed=123, output=output / f"test_{end:04d}_traces.npz")
+                # Keep full traces only for the final 500-test evaluation.
+                # Later analysis goals may explicitly request additional traces.
+                trace_path = output / f"test_{end:04d}_traces.npz" if episodes == 500 else None
+                summary, stats, test_trace = self.episodes.test(
+                    state, episodes=episodes, seed=123, output=trace_path)
+                summary['trace_shapes'] = {key: list(test_trace[key].shape)
+                    for key in ('guess', 'true_bias', 'q', 'force')}
                 if not np.isfinite(summary["steps_mean"]):
                     # With zero successes, mean insertion time is undefined, not
                     # a numerical failure. Serialize it as null, never NaN.

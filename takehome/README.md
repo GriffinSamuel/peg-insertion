@@ -39,8 +39,12 @@ and rejects test-labelled or unreserved episodes. When both sources exist, a
 transitions. With only one source, all 128 come from that source.
 
 The complete per-step practice records are in `practice_*.npz`; replay contains
-only valid learner transitions. Each test has an end-of-episode archive and a
-step-by-step trace, explicitly labelled test-only. The test runner reuses the
+only valid learner transitions. Each test retains a small summary and a local
+end-of-episode archive. Full step-by-step test traces are saved only for the final
+500-episode test, unless a later analysis explicitly needs another trace.
+All tests are labelled test-only. NPZ arrays, model checkpoints and videos stay
+on disk and are ignored by git; small summaries, tables, charts, logs and code
+are committed. The test runner reuses the
 existing rollout's environment wrappers, seed splitting, statistics and physical
 validity measurement. It accepts network parameters as dynamic arguments so
 repeated curve points reuse compiled functions. Every curve checkpoint saves

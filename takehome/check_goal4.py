@@ -25,11 +25,19 @@ def main():
     assert result["frozen_policy_unchanged"]
     assert not result["test_data_learned_from"]
     assert not result["setting_counted"]
-    with np.load(ROOT / "results/takehome/goal4_trial/seed_999/test_0010_traces.npz") as trace:
-        assert bool(trace["test_only"]) and not bool(trace["learned_from"])
-        assert trace["guess"].shape == (200, 8, 2)
-        assert trace["true_bias"].shape == (200, 8, 2)
-        assert trace["q"].shape == trace["force"].shape == (200, 8)
+    # New runs retain shape metadata instead of writing the short test trace.
+    # Existing completed trials remain readable without rerunning any episode.
+    if 'trace_shapes' in result['final']:
+        assert result['final']['test_only'] and not result['final']['learned_from']
+        shapes = result['final']['trace_shapes']
+        assert shapes['guess'] == shapes['true_bias'] == [200, 8, 2]
+        assert shapes['q'] == shapes['force'] == [200, 8]
+    else:
+        with np.load(ROOT / "results/takehome/goal4_trial/seed_999/test_0010_traces.npz") as trace:
+            assert bool(trace["test_only"]) and not bool(trace["learned_from"])
+            assert trace["guess"].shape == (200, 8, 2)
+            assert trace["true_bias"].shape == (200, 8, 2)
+            assert trace["q"].shape == trace["force"].shape == (200, 8)
     write_json(ROOT / "results/takehome/goal4_checks.json", {
         "tests_passed": True, "ten_episode_trial_passed": True,
         "budget_guard_passed": True, "symmetric_sampling_passed": True,

@@ -12,4 +12,9 @@ __pycache__/
 *.py[cod]
 *.so
 *.o
+# Full traces, replay arrays, model checkpoints and videos stay on disk only.
+*.npz
+*.npy
+*.pkl
+*.mp4
 # Larger artifacts must be added here explicitly before staging; keep <50 MB.
