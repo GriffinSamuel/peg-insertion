@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "source_summary": "results/takehome/goal8/summary.json",
+  "plotter_log": "results/takehome/goal8_plot.log",
+  "plotter_exit_code": 0,
+  "seed_count": 5,
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "checkpoints": [
+    40,
+    60,
+    80,
+    100,
+    120,
+    140,
+    160,
+    180,
+    200
+  ],
+  "per_seed_record_count": 45,
+  "pooled_checkpoint_count": 9,
+  "intermediate_traces_valid": 40,
+  "expected_intermediate_traces": 40,
+  "final_confirmation_traces_valid": 5,
+  "expected_final_confirmation_traces": 5,
+  "new_intermediate_test_episodes": 10240,
+  "new_final_test_episodes": 0,
+  "reused_final_test_episodes": 2500,
+  "probability_models_checked": 45,
+  "model_convergence_by_checkpoint": {
+    "40": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "60": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "80": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "100": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "120": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "140": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "160": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "180": {
+      "converged": 5,
+      "not_converged": 0
+    },
+    "200": {
+      "converged": 5,
+      "not_converged": 0
+    }
+  },
+  "final_convergence_and_event_counts_by_seed": [
+    {
+      "seed": 100,
+      "model_converged": true,
+      "confident_failed_moment_count": 120,
+      "failed_confidence_drop_count": 120,
+      "test_seed": 456,
+      "test_episodes": 500,
+      "trace_path": "results/takehome/goal7/confirmation/movement/seed_100/test_0200_traces.npz"
+    },
+    {
+      "seed": 101,
+      "model_converged": true,
+      "confident_failed_moment_count": 75,
+      "failed_confidence_drop_count": 98,
+      "test_seed": 456,
+      "test_episodes": 500,
+      "trace_path": "results/takehome/goal7/confirmation/movement/seed_101/test_0200_traces.npz"
+    },
+    {
+      "seed": 102,
+      "model_converged": true,
+      "confident_failed_moment_count": 80,
+      "failed_confidence_drop_count": 80,
+      "test_seed": 456,
+      "test_episodes": 500,
+      "trace_path": "results/takehome/goal7/confirmation/movement/seed_102/test_0200_traces.npz"
+    },
+    {
+      "seed": 103,
+      "model_converged": true,
+      "confident_failed_moment_count": 23,
+      "failed_confidence_drop_count": 140,
+      "test_seed": 456,
+      "test_episodes": 500,
+      "trace_path": "results/takehome/goal7/confirmation/movement/seed_103/test_0200_traces.npz"
+    },
+    {
+      "seed": 104,
+      "model_converged": true,
+      "confident_failed_moment_count": 57,
+      "failed_confidence_drop_count": 57,
+      "test_seed": 456,
+      "test_episodes": 500,
+      "trace_path": "results/takehome/goal7/confirmation/movement/seed_104/test_0200_traces.npz"
+    }
+  ],
+  "final_convergence_and_event_counts_pooled": {
+    "confident_failed_moment_count": 355,
+    "failed_confidence_drop_count": 495,
+    "model_converged_count": 5,
+    "seed_count": 5
+  },
+  "event_count_pooled_by_checkpoint": {
+    "40": {
+      "confident_failed_moments": 88,
+      "failed_confidence_drops": 497
+    },
+    "60": {
+      "confident_failed_moments": 129,
+      "failed_confidence_drops": 295
+    },
+    "80": {
+      "confident_failed_moments": 154,
+      "failed_confidence_drops": 329
+    },
+    "100": {
+      "confident_failed_moments": 163,
+      "failed_confidence_drops": 400
+    },
+    "120": {
+      "confident_failed_moments": 236,
+      "failed_confidence_drops": 398
+    },
+    "140": {
+      "confident_failed_moments": 239,
+      "failed_confidence_drops": 369
+    },
+    "160": {
+      "confident_failed_moments": 233,
+      "failed_confidence_drops": 347
+    },
+    "180": {
+      "confident_failed_moments": 246,
+      "failed_confidence_drops": 351
+    },
+    "200": {
+      "confident_failed_moments": 355,
+      "failed_confidence_drops": 495
+    }
+  },
+  "plotter_outputs": [
+    "reliability_final.png",
+    "raw_q_final.png",
+    "calibration_over_training.png",
+    "confident_failed.csv",
+    "confidence_drops.csv"
+  ],
+  "no_simulations_run_by_auditor": true
+}

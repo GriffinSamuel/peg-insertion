@@ -19,6 +19,12 @@ TRACE_KEYS = ("obs", "guess", "next_guess", "true_bias", "q", "force", "success"
 
 
 class EpisodeRunner:
+    trace_keys = TRACE_KEYS
+
+    def extra_trace(self, state, nxt):
+        """Analysis subclasses may record poses without changing control."""
+        return {}
+
     def __init__(self, env, learner):
         self.env = env
         self.learner = learner
@@ -68,6 +74,7 @@ class EpisodeRunner:
                 "q": q, "valid": valid, "depth": nxt.info["depth"],
                 "xy_err": nxt.info["xy_err"], "tip_height": rel[:, 2],
             }
+            trace.update(self.extra_trace(state, nxt))
             return (nxt, key, max_lat), trace
 
         (final, _, max_lat), trace = jax.lax.scan(
@@ -99,11 +106,11 @@ class EpisodeRunner:
             stats, trace = jax.device_get((stats, trace))
             self.check_finite(stats, trace)
             chunks.append(stats)
-            traces.append({k: trace[k] for k in TRACE_KEYS})
+            traces.append({k: trace[k] for k in self.trace_keys})
             done += n
             chunk += 1
         stats = {k: np.concatenate([c[k] for c in chunks]) for k in chunks[0]}
-        trace = {k: np.concatenate([c[k] for c in traces], axis=1) for k in TRACE_KEYS}
+        trace = {k: np.concatenate([c[k] for c in traces], axis=1) for k in self.trace_keys}
         if output is not None:
             np.savez_compressed(output, **trace, test_only=np.array(True),
                                 learned_from=np.array(False), test_seed=np.array(seed),

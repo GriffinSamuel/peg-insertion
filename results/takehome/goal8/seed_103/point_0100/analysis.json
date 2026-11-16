@@ -1,0 +1,1057 @@
+{
+  "bins": [
+    {
+      "bin": 0,
+      "count": 136,
+      "predicted": 0.08686605598283827,
+      "observed": 0.0
+    },
+    {
+      "bin": 1,
+      "count": 2871,
+      "predicted": 0.15234831898379603,
+      "observed": 0.02055033089515848
+    },
+    {
+      "bin": 2,
+      "count": 3477,
+      "predicted": 0.2520706210816336,
+      "observed": 0.21599079666379062
+    },
+    {
+      "bin": 3,
+      "count": 5316,
+      "predicted": 0.35338848438069803,
+      "observed": 0.4642588412340105
+    },
+    {
+      "bin": 4,
+      "count": 8317,
+      "predicted": 0.45473729121583073,
+      "observed": 0.5290369123482025
+    },
+    {
+      "bin": 5,
+      "count": 15188,
+      "predicted": 0.5532765172087615,
+      "observed": 0.550566236502502
+    },
+    {
+      "bin": 6,
+      "count": 9157,
+      "predicted": 0.6257706512158492,
+      "observed": 0.5939718248334608
+    },
+    {
+      "bin": 7,
+      "count": 305,
+      "predicted": 0.7491345123260175,
+      "observed": 0.8885245901639345
+    },
+    {
+      "bin": 8,
+      "count": 371,
+      "predicted": 0.8541885108256293,
+      "observed": 0.8867924528301887
+    },
+    {
+      "bin": 9,
+      "count": 2374,
+      "predicted": 0.9820255303551064,
+      "observed": 0.9406065711878686
+    }
+  ],
+  "rows": 47512,
+  "mean_predicted": 0.5050594115237372,
+  "observed": 0.5117023067856542,
+  "signed_bias": -0.00664289526191697,
+  "brier_score": 0.2181696362381935,
+  "expected_calibration_error": 0.04647828684847212,
+  "average_assessment": "about right on average",
+  "raw_q_bins": [
+    {
+      "bin": 0,
+      "count": 4752,
+      "raw_q": 0.03243061527609825,
+      "observed": 0.5389309764309764
+    },
+    {
+      "bin": 1,
+      "count": 4751,
+      "raw_q": 0.04557858407497406,
+      "observed": 0.5356766996421806
+    },
+    {
+      "bin": 2,
+      "count": 4751,
+      "raw_q": 0.06569789350032806,
+      "observed": 0.5525152599452747
+    },
+    {
+      "bin": 3,
+      "count": 4751,
+      "raw_q": 0.09704352170228958,
+      "observed": 0.5377815196800674
+    },
+    {
+      "bin": 4,
+      "count": 4751,
+      "raw_q": 0.1404304951429367,
+      "observed": 0.5030519890549358
+    },
+    {
+      "bin": 5,
+      "count": 4751,
+      "raw_q": 0.19628190994262695,
+      "observed": 0.5095769311723848
+    },
+    {
+      "bin": 6,
+      "count": 4751,
+      "raw_q": 0.23910342156887054,
+      "observed": 0.4298042517364765
+    },
+    {
+      "bin": 7,
+      "count": 4751,
+      "raw_q": 0.26583176851272583,
+      "observed": 0.31277625762997263
+    },
+    {
+      "bin": 8,
+      "count": 4751,
+      "raw_q": 0.3244071900844574,
+      "observed": 0.36602820458850766
+    },
+    {
+      "bin": 9,
+      "count": 4752,
+      "raw_q": 0.7826955914497375,
+      "observed": 0.8308080808080808
+    }
+  ],
+  "confident_failed_moments": [
+    {
+      "episode_id": 16,
+      "step": 199,
+      "predicted": 0.9762182383807202,
+      "raw_q": 0.8295944333076477,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0007954613538458943,
+        0.0017880238592624664
+      ],
+      "force_n": 0.47564178705215454
+    },
+    {
+      "episode_id": 42,
+      "step": 199,
+      "predicted": 0.9977655031467856,
+      "raw_q": 0.9639478921890259,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0009276584023609757,
+        3.467550050118007e-05
+      ],
+      "force_n": 37.943145751953125
+    },
+    {
+      "episode_id": 43,
+      "step": 199,
+      "predicted": 0.9880632155999185,
+      "raw_q": 0.9075130224227905,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0005945374723523855,
+        0.0007334701367653906
+      ],
+      "force_n": 0.672741711139679
+    },
+    {
+      "episode_id": 66,
+      "step": 199,
+      "predicted": 0.9994015987569741,
+      "raw_q": 0.9848644137382507,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0008070936892181635,
+        0.00015337200602516532
+      ],
+      "force_n": 0.5332526564598083
+    },
+    {
+      "episode_id": 71,
+      "step": 199,
+      "predicted": 0.9200064800755755,
+      "raw_q": 0.8664934635162354,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.000749443075619638,
+        0.00011245054338360205
+      ],
+      "force_n": 23.47202491760254
+    },
+    {
+      "episode_id": 92,
+      "step": 199,
+      "predicted": 0.8945585289336455,
+      "raw_q": 0.809720516204834,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0006516544963233173,
+        -0.00021370334434323013
+      ],
+      "force_n": 0.4994896948337555
+    },
+    {
+      "episode_id": 106,
+      "step": 198,
+      "predicted": 0.9991449914155839,
+      "raw_q": 0.9601273536682129,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.00010669830226106569,
+        -0.0012468484928831458
+      ],
+      "force_n": 61.38312911987305
+    },
+    {
+      "episode_id": 122,
+      "step": 198,
+      "predicted": 0.9965999810382059,
+      "raw_q": 0.9409769773483276,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.001235493109561503,
+        2.4801451218081638e-05
+      ],
+      "force_n": 0.6103060245513916
+    },
+    {
+      "episode_id": 143,
+      "step": 198,
+      "predicted": 0.9988937793076368,
+      "raw_q": 0.9364327192306519,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.00014433712931349874,
+        -0.00033056142274290323
+      ],
+      "force_n": 45.22460174560547
+    },
+    {
+      "episode_id": 157,
+      "step": 199,
+      "predicted": 0.8368892206879612,
+      "raw_q": 0.8337701559066772,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0007895397138781846,
+        0.0008424535626545548
+      ],
+      "force_n": 0.5111815333366394
+    },
+    {
+      "episode_id": 159,
+      "step": 198,
+      "predicted": 0.812344201439587,
+      "raw_q": 0.8261739611625671,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0013418470043689013,
+        0.0008536760578863323
+      ],
+      "force_n": 0.6045260429382324
+    },
+    {
+      "episode_id": 174,
+      "step": 199,
+      "predicted": 0.9995446162373494,
+      "raw_q": 0.9714637398719788,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.000749255355913192,
+        0.0017189570935443044
+      ],
+      "force_n": 0.5633134841918945
+    },
+    {
+      "episode_id": 180,
+      "step": 196,
+      "predicted": 0.9891022042885225,
+      "raw_q": 0.8849372863769531,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.00023996771778911352,
+        0.0007071691798046231
+      ],
+      "force_n": 0.5474386811256409
+    },
+    {
+      "episode_id": 212,
+      "step": 199,
+      "predicted": 0.9995633442694717,
+      "raw_q": 0.9797556400299072,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0004969831206835806,
+        0.00031869980739429593
+      ],
+      "force_n": 0.5877094268798828
+    },
+    {
+      "episode_id": 215,
+      "step": 199,
+      "predicted": 0.9884286265641018,
+      "raw_q": 0.8965227603912354,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        3.757458762265742e-05,
+        -8.267767407232895e-05
+      ],
+      "force_n": 0.643959641456604
+    },
+    {
+      "episode_id": 216,
+      "step": 199,
+      "predicted": 0.9969339060777722,
+      "raw_q": 0.9439191222190857,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.000902826723176986,
+        -4.068734051543288e-05
+      ],
+      "force_n": 0.5125132203102112
+    },
+    {
+      "episode_id": 225,
+      "step": 198,
+      "predicted": 0.9819809887326708,
+      "raw_q": 0.8939362168312073,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0009946157224476337,
+        0.0005384463001973927
+      ],
+      "force_n": 0.6113361716270447
+    },
+    {
+      "episode_id": 231,
+      "step": 199,
+      "predicted": 0.8666531425866835,
+      "raw_q": 0.8162201046943665,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        0.0005884093116037548,
+        0.0005760942003689706
+      ],
+      "force_n": 0.5516715049743652
+    },
+    {
+      "episode_id": 232,
+      "step": 198,
+      "predicted": 0.9773203515136643,
+      "raw_q": 0.8957042098045349,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0008386577828787267,
+        -0.0002828995347954333
+      ],
+      "force_n": 35.527557373046875
+    },
+    {
+      "episode_id": 237,
+      "step": 199,
+      "predicted": 0.9959504957182971,
+      "raw_q": 0.9500300288200378,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0001710925280349329,
+        -2.9945099413453136e-06
+      ],
+      "force_n": 0.5843880772590637
+    },
+    {
+      "episode_id": 240,
+      "step": 198,
+      "predicted": 0.995376000740262,
+      "raw_q": 0.9216368794441223,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0011808978160843253,
+        0.00047553895274177194
+      ],
+      "force_n": 52.23817825317383
+    },
+    {
+      "episode_id": 250,
+      "step": 199,
+      "predicted": 0.9244083890225214,
+      "raw_q": 0.86644446849823,
+      "guess_m": [
+        0.0,
+        0.0
+      ],
+      "true_bias_m": [
+        -0.0007105296826921403,
+        0.0010206529404968023
+      ],
+      "force_n": 0.6115637421607971
+    }
+  ],
+  "failed_confidence_drops": [
+    {
+      "episode_id": 1,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 2,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 3,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 4,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 12,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 13,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 16,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 17,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 22,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 23,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 26,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 27,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 29,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 31,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 35,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 38,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 42,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 43,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 45,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 47,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 49,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 51,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 54,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 57,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 63,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 64,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 66,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 67,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 70,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 71,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 73,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 75,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 76,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 78,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 80,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 82,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 83,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 84,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 85,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 88,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 89,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 90,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 92,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 94,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 95,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 97,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 98,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 102,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 106,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 107,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 109,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 116,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 118,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 121,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 122,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 123,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 125,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 127,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 131,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 132,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 138,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 143,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 144,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 147,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 149,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 150,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 154,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 156,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 157,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 159,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 160,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 161,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 163,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 166,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 171,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 173,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 174,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 175,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 177,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 179,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 180,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 182,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 185,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 186,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 190,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 193,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 194,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 196,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 198,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 203,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 204,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 206,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 207,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 210,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 212,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 213,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 214,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 215,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 216,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 217,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 218,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 220,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 222,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 224,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 225,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 228,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 229,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 231,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 232,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 233,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 234,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 237,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 240,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 249,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 250,
+      "step": null,
+      "drop": null
+    },
+    {
+      "episode_id": 253,
+      "step": null,
+      "drop": null
+    }
+  ],
+  "failed_episodes": 116,
+  "test_seed": 123,
+  "seed": 103,
+  "practice_episodes": 100,
+  "trace_path": "results/takehome/goal8/seed_103/point_0100/test_traces.npz",
+  "probability_model": "results/takehome/goal8/seed_103/point_0100/probability_model.json",
+  "test_episodes": 256,
+  "predictor_uses_raw_q": false,
+  "predictor_uses_true_bias": false,
+  "raw_q_uses_privileged_bias": false
+}

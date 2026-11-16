@@ -1,0 +1,22 @@
+{
+  "episodes": 256,
+  "successes": 190,
+  "success_rate": 0.7421875,
+  "ci_lo": 0.6852989013222897,
+  "ci_hi": 0.7919149089374995,
+  "steps_mean": 158.36842346191406,
+  "steps_median": 154.0,
+  "peak_force_mean": 93.00303649902344,
+  "final_xy_err_mean_mm": 0.7745072841644287,
+  "final_depth_mean_mm": 22.521995544433594,
+  "still_inserted_at_end": 0.7421875,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6790757179260254,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 123,
+  "practice_episodes": 140,
+  "reason": "Goal8 confidence over training requires traces",
+  "ceiling_verification": null
+}

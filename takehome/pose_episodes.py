@@ -1,8 +1,4 @@
-"""Goal 9 pose recording, enabled by EpisodeRunner's later analysis hook.
-
-This module is prepared during screening. The base-runner hook must be added
-after the training suite has finished, before this recorder is used.
-"""
+"""Record Goal 9 simulator poses for rendering without replaying physics."""
 from takehome.episodes import EpisodeRunner, TRACE_KEYS
 
 

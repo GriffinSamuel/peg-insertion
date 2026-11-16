@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "takehome/test_pose_episodes.py",
+    "-q",
+    "-o",
+    "cache_dir=results/takehome/pytest_cache",
+    "--basetemp=results/takehome/goal9_pose_test_tmp"
+  ],
+  "started_utc": "2026-11-16T02:26:45.606496+00:00",
+  "finished_utc": "2026-11-16T02:27:16.829133+00:00",
+  "seconds": 31.222665476998372,
+  "exit_code": 0
+}

@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goals 1-7 complete; Goal 8 next (2026-11-15)
+## Current status: Goals 1-8 complete; Goal 9 next (2026-11-15)
 
-Final method is unchanged plain movement correction. Confirmation headline80.20% ±6.52 percentage points across practice seeds100-104, final500 tests at456; original policy60.8%, no-bias92.6%. All Goal7 checks pass. Total28 settings and22,210 practice episodes. Continue Goals8-13 with no cuts, commit/push after each goal, and stop only for the written stopping rule. Full binary artifacts stay local and ignored. The authorized repeatability investigation found no safe full fix, so the limitation remains explicit.
+Final movement method and80.20% confirmation headline remain unchanged. Goal8 predictor is underconfident on average by5.23pp; all45 own-practice fits and test-only provenance checks passed. Next collect failure categories and illustrative pose repeats, then render videos. Pose recording passed its four-episode integration test. Total28 settings,22,210 practice episodes,295,470 full test-only episodes. Continue through Goal13 with no cuts; binaries stay local. Repeatability remains a documented limitation.
 
 ## Historical status after revised instructions, 2026-11-15
 
@@ -309,3 +309,41 @@ Correcting hand movements was the strongest approach. On the fresh test it succe
 ### 8. Questions before the next phase
 
 None requiring a pause. Continue to Goal8 under the approved no-cuts instruction.
+
+
+## 2026-11-15: Goal 8 complete
+
+### 1. What I did (short list)
+
+- Fitted45 separate episode-success predictors from the existing counted practice, across five seeds and nine checkpoints.
+- Reused the final confirmation traces, collected only the intermediate traces needed for this analysis, and plotted probability reliability, raw ratings and training history.
+- Listed every confident failed moment and every failed-episode confidence drop, keeping null where no drop met the rule.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Final pooled prediction69.54%, observed74.77% across392,329 valid steps from2,500 tests at seed456, practice seeds100-104. Signed error−5.23 percentage points: underconfident on average. Ten-bin expected calibration error6.32pp; Brier score0.15235. There were495 failed episodes,355 with a predicted chance≥80% at some moment, and15 with a≥25pp fall between adjacent five-step averages. Analysis took90.83 seconds; all45 fits converged.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: charts use separate test episodes only, with per-seed and pooled results; audit has zero failures.
+- PASS: report states the predictor is underconfident on average and distinguishes raw Q from episode probability.
+
+### 4. Surprises or problems
+
+Average underconfidence coexists with confident failed moments. Most failed episodes have no large confidence drop. Step-weighting makes74.77% different from the80.20% episode headline; these are not interchangeable. Raw Q versus outcome is not monotonic after pooling times and states.
+
+### 5. Decisions I logged
+
+Used the predeclared small predictor with remaining time, ten bins, fixed thresholds and own-practice-only fitting. No tuning or new practice. The intermediate full traces are the explicit Goal8 exception to final-only trace storage, and stay local. Installed and tested the passive Goal9 pose hook only after Goal7 training finished; removed temporary fixtures from git while keeping them local.
+
+### 6. Practice episodes used, and settings tried so far
+
+Zero new practice,22,210 cumulative practice,28 settings. Goal8 added10,240 intermediate test-only episodes;2,500 final tests were reused without double counting. The four pose integration tests bring the cumulative full test-only count to295,470, plus182 reset-only probes.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The learner's raw rating cannot be read as a percentage. A separate predictor trained on the same practice gives a more meaningful probability, but it still makes confident mistakes. Overall it predicts success less often than success actually occurs. It rarely gives a sharp warning before a failure. These plots describe its limits without changing the learner.
+
+### 8. Questions before the next phase
+
+None requiring a pause. Continue to failure analysis.

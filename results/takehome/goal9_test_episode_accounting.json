@@ -1,0 +1,10 @@
+{
+  "executed": true,
+  "full_test_episodes": 4,
+  "reset_only_probes": 0,
+  "practice_episodes": 0,
+  "tests_passed": 1,
+  "purpose": "Pose-recording integration: finite poses, zero initial correction, frozen old weights, unchanged test-only provenance.",
+  "evidence": "results/takehome/goal9_pose_contract.exit.json",
+  "log": "results/takehome/goal9_pose_contract.log"
+}

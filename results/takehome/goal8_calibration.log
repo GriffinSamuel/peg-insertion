@@ -1,0 +1,91 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 5070 Laptop GPU" (8 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/preflight_cache/warp/1.18.0
+Module mujoco.mjx.warp.ffi 4443472 load on device 'cuda:0' took 10.19 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.smooth 7937da7 load on device 'cuda:0' took 26.33 ms  (cached)
+Module _nxn_broadphase__locals__kernel_5424cb63 5424cb6 load on device 'cuda:0' took 10.77 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_1a0e5f50 1a0e5f5 load on device 'cuda:0' took 14.88 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_c55bc0f0 c55bc0f load on device 'cuda:0' took 14.02 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.constraint 8d4d513 load on device 'cuda:0' took 9.02 ms  (cached)
+Module _equality_joint__locals__kernel_3e8fee42 3e8fee4 load on device 'cuda:0' took 9.98 ms  (cached)
+Module _friction_dof__locals__kernel_f5f6cb7e f5f6cb7 load on device 'cuda:0' took 9.65 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_3fb01e2e 3fb01e2 load on device 'cuda:0' took 9.85 ms  (cached)
+Module _efc_contact_init__locals__kernel_3a7c064e 3a7c064 load on device 'cuda:0' took 11.97 ms  (cached)
+Module _efc_contact_jac_dense__locals__kernel_b0c1fdf8 5fcbd59 load on device 'cuda:0' took 8.38 ms  (cached)
+Module _efc_contact_update__locals__kernel_12dd33e9 12dd33e load on device 'cuda:0' took 7.92 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.sensor 087b897 load on device 'cuda:0' took 12.58 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.forward 0b590b4 load on device 'cuda:0' took 20.18 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.passive 03341d7 load on device 'cuda:0' took 16.36 ms  (cached)
+Module _qfrc_passive_kernel__locals__kernel_976399dd 976399d load on device 'cuda:0' took 8.59 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.forward 10b70aa load on device 'cuda:0' took 11.65 ms  (cached)
+Module _qfrc_smooth__locals__kernel_8b823980 8b82398 load on device 'cuda:0' took 8.99 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.support 770ef7d load on device 'cuda:0' took 9.38 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_5c841c33 59ea685 load on device 'cuda:0' took 135.70 ms  (cached)
+Module _solve_init_dof__locals__kernel_021c7a0e 021c7a0 load on device 'cuda:0' took 21.85 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.solver d3b14d2 load on device 'cuda:0' took 12.14 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_70ea9525 70ea952 load on device 'cuda:0' took 10.39 ms  (cached)
+Module mul_m_kernel__locals___mul_m_f3de1cc7 f3de1cc load on device 'cuda:0' took 9.08 ms  (cached)
+Module _update_constraint_efc__locals__kernel_0539aa50 0539aa5 load on device 'cuda:0' took 8.04 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_bd7ca2ec bd7ca2e load on device 'cuda:0' took 7.29 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_b20934d7 b20934d load on device 'cuda:0' took 5.99 ms  (cached)
+Module _update_gradient_grad__locals__kernel_c876081d c876081 load on device 'cuda:0' took 5.81 ms  (cached)
+Module _update_gradient_JTDAJ_dense_tiled__locals__kernel_dd848d52 89686a5 load on device 'cuda:0' took 6.44 ms  (cached)
+Module _update_gradient_cholesky__locals__kernel_e4b47356 613d3bb load on device 'cuda:0' took 132.89 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_770be55f 00ab14c load on device 'cuda:0' took 4.27 ms  (cached)
+Module _update_constraint_efc__locals__kernel_e953547e e953547 load on device 'cuda:0' took 5.45 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_d92a3413 d92a341 load on device 'cuda:0' took 5.02 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_e9f8c963 e9f8c96 load on device 'cuda:0' took 4.60 ms  (cached)
+Module _update_gradient_grad__locals__kernel_87959044 8795904 load on device 'cuda:0' took 4.06 ms  (cached)
+Module _update_gradient_cholesky__locals__kernel_472e9ed5 a4e6cbe load on device 'cuda:0' took 256.19 ms  (cached)
+Module _solve_done__locals__kernel_ee21dcc3 ee21dcc load on device 'cuda:0' took 60.33 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.derivative 02a5c73 load on device 'cuda:0' took 9.99 ms  (cached)
+Module _next_time_builder__locals___next_time_bc454e15 bc454e1 load on device 'cuda:0' took 11.30 ms  (cached)
+{"seed": 100, "practice": 40, "assessment": "about right on average", "mean_predicted": 0.5457773737837501, "observed": 0.553130236755038}
+{"seed": 100, "practice": 60, "assessment": "about right on average", "mean_predicted": 0.6728465231789162, "observed": 0.663147906535405}
+{"seed": 100, "practice": 80, "assessment": "underconfident", "mean_predicted": 0.786671756556258, "observed": 0.8186182982128568}
+{"seed": 100, "practice": 100, "assessment": "underconfident", "mean_predicted": 0.6813222105663637, "observed": 0.7676903777354458}
+{"seed": 100, "practice": 120, "assessment": "underconfident", "mean_predicted": 0.6843630559675449, "observed": 0.7159090909090909}
+{"seed": 100, "practice": 140, "assessment": "overconfident", "mean_predicted": 0.6871308808973345, "observed": 0.654751766520128}
+{"seed": 100, "practice": 160, "assessment": "about right on average", "mean_predicted": 0.7128237725622124, "observed": 0.7291875626880642}
+{"seed": 100, "practice": 180, "assessment": "about right on average", "mean_predicted": 0.7138702433641049, "observed": 0.6839887640449438}
+{"seed": 100, "practice": 200, "assessment": "about right on average", "mean_predicted": 0.7120545879025943, "observed": 0.6964023680615291}
+{"seed": 101, "practice": 40, "assessment": "overconfident", "mean_predicted": 0.6050295962770033, "observed": 0.5470330665861393}
+{"seed": 101, "practice": 60, "assessment": "underconfident", "mean_predicted": 0.5799078766642619, "observed": 0.8201993218945854}
+{"seed": 101, "practice": 80, "assessment": "underconfident", "mean_predicted": 0.5817049648496239, "observed": 0.7152207039544353}
+{"seed": 101, "practice": 100, "assessment": "overconfident", "mean_predicted": 0.5125373218015824, "observed": 0.44496645761860015}
+{"seed": 101, "practice": 120, "assessment": "overconfident", "mean_predicted": 0.5659033062450091, "observed": 0.5264724452060973}
+{"seed": 101, "practice": 140, "assessment": "about right on average", "mean_predicted": 0.6027204919485498, "observed": 0.594893777379999}
+{"seed": 101, "practice": 160, "assessment": "about right on average", "mean_predicted": 0.6756307996442349, "observed": 0.7034254362117542}
+{"seed": 101, "practice": 180, "assessment": "about right on average", "mean_predicted": 0.6460719052644369, "observed": 0.618131673856163}
+{"seed": 101, "practice": 200, "assessment": "underconfident", "mean_predicted": 0.6884303642107458, "observed": 0.752609590164969}
+{"seed": 102, "practice": 40, "assessment": "about right on average", "mean_predicted": 0.5742237101996317, "observed": 0.5944779982743744}
+{"seed": 102, "practice": 60, "assessment": "underconfident", "mean_predicted": 0.5487341900435919, "observed": 0.7778985421638352}
+{"seed": 102, "practice": 80, "assessment": "underconfident", "mean_predicted": 0.6341948642060281, "observed": 0.7904296192804751}
+{"seed": 102, "practice": 100, "assessment": "underconfident", "mean_predicted": 0.6166313315543402, "observed": 0.7653573607395936}
+{"seed": 102, "practice": 120, "assessment": "about right on average", "mean_predicted": 0.6246010708606168, "observed": 0.5978665763630207}
+{"seed": 102, "practice": 140, "assessment": "about right on average", "mean_predicted": 0.6526098257527353, "observed": 0.6752754746390146}
+{"seed": 102, "practice": 160, "assessment": "underconfident", "mean_predicted": 0.6403192710567528, "observed": 0.6789654548742992}
+{"seed": 102, "practice": 180, "assessment": "underconfident", "mean_predicted": 0.6590389880696045, "observed": 0.7108593638906006}
+{"seed": 102, "practice": 200, "assessment": "underconfident", "mean_predicted": 0.6918008074866012, "observed": 0.7904607244820451}
+{"seed": 103, "practice": 40, "assessment": "about right on average", "mean_predicted": 0.5680348854412761, "observed": 0.5855638059057158}
+{"seed": 103, "practice": 60, "assessment": "overconfident", "mean_predicted": 0.5415871198936045, "observed": 0.4972191323692992}
+{"seed": 103, "practice": 80, "assessment": "overconfident", "mean_predicted": 0.4717744494491816, "observed": 0.44161887241640513}
+{"seed": 103, "practice": 100, "assessment": "about right on average", "mean_predicted": 0.5050594115237372, "observed": 0.5117023067856542}
+{"seed": 103, "practice": 120, "assessment": "underconfident", "mean_predicted": 0.5490416174343322, "observed": 0.6358895981300009}
+{"seed": 103, "practice": 140, "assessment": "underconfident", "mean_predicted": 0.5795704747309299, "observed": 0.695079695079695}
+{"seed": 103, "practice": 160, "assessment": "about right on average", "mean_predicted": 0.5774312025178993, "observed": 0.6061141821274311}
+{"seed": 103, "practice": 180, "assessment": "about right on average", "mean_predicted": 0.5965979751820832, "observed": 0.6121883656509696}
+{"seed": 103, "practice": 200, "assessment": "underconfident", "mean_predicted": 0.6216156969544122, "observed": 0.6652639632746749}
+{"seed": 104, "practice": 40, "assessment": "underconfident", "mean_predicted": 0.5433627898142342, "observed": 0.5759503256095714}
+{"seed": 104, "practice": 60, "assessment": "underconfident", "mean_predicted": 0.7093074297837249, "observed": 0.8558898799910553}
+{"seed": 104, "practice": 80, "assessment": "overconfident", "mean_predicted": 0.7081302608409129, "observed": 0.6751121348042187}
+{"seed": 104, "practice": 100, "assessment": "overconfident", "mean_predicted": 0.7694566238318662, "observed": 0.7049918484589706}
+{"seed": 104, "practice": 120, "assessment": "overconfident", "mean_predicted": 0.7573874346826219, "observed": 0.708519625521824}
+{"seed": 104, "practice": 140, "assessment": "overconfident", "mean_predicted": 0.7542620068732017, "observed": 0.675976302744529}
+{"seed": 104, "practice": 160, "assessment": "overconfident", "mean_predicted": 0.732994641220417, "observed": 0.6426674392776087}
+{"seed": 104, "practice": 180, "assessment": "about right on average", "mean_predicted": 0.7249891488718844, "observed": 0.6991167621081239}
+{"seed": 104, "practice": 200, "assessment": "underconfident", "mean_predicted": 0.7721061944983663, "observed": 0.8460374912214359}

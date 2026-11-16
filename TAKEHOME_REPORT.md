@@ -180,3 +180,18 @@ Movement improved over the original policy by19.40 percentage points. Aim-only's
 ![Confirmation curves](results/takehome/goal7/confirmation/confirmation_learning_curves.png)
 
 Sources: [all confirmation seeds](results/takehome/goal7/confirmation/confirmation_summary.json), [confirmation references](results/takehome/confirmation_baseline.json), [checks](results/takehome/goal7_checks.json). Rebuild both figures with `source scripts/env.sh && python -B takehome/plot_confirmation.py`. Intermediate curve tests use256 episodes at seed123, while the final point and original-policy reference use500 at seed456, as logged under PLAN GAP.
+
+
+## Goal 8: confidence is underconfident on average
+
+The separate episode-success predictor is **underconfident on average by5.23 percentage points** at the end of training. It predicts69.54% versus74.77% observed across392,329 valid test steps from2,500 original confirmation episodes. This is a step-weighted measure: longer failures contribute more steps, so74.77% is not the headline episode success rate80.20%. All45 small logistic-regression fits converged, using only each run's own counted practice up to that checkpoint, normal observations, proposed correction and remaining time. No test data or true camera error trained the predictor.
+
+The average absolute prediction gap across ten probability bins is6.32 points. The Brier score, the mean squared probability error where zero is perfect, is0.15235. Of495 failed final episodes,355 contained at least one prediction of80% or higher;15 contained the predeclared sharp drop (at least25 points between adjacent five-step averages). These are counts of selected moments, not an alarm precision estimate. Missing drops remain explicitly null. Raw Q is shown separately because discounted, bootstrapped return is not an episode probability; its relationship with eventual outcomes is not monotonic in these pooled observations.
+
+![Probability reliability](results/takehome/goal8/reliability_final.png)
+
+![Raw ratings](results/takehome/goal8/raw_q_final.png)
+
+![Confidence over training](results/takehome/goal8/calibration_over_training.png)
+
+Sources: [all seeds and checkpoints](results/takehome/goal8/summary.json), [confident failed moments](results/takehome/goal8/confident_failed.csv), [confidence drops](results/takehome/goal8/confidence_drops.csv). Rebuild all three figures with `source scripts/env.sh && python -B takehome/plot_calibration.py`. The intermediate traces are the explicitly needed Goal8 exception to final-only full traces; they remain local. Intermediate diagnostics use256 tests at123, final diagnostics reuse500 at456 per seed.

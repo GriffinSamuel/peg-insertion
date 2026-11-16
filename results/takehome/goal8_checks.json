@@ -1,0 +1,34 @@
+{
+  "goal": 8,
+  "completed_utc": "2026-11-16T02:30:31.405202+00:00",
+  "all_goal_checks_pass": true,
+  "checks": [
+    {
+      "check": "Calibration charts use test episodes only, with each seed and pooled results",
+      "passed": true
+    },
+    {
+      "check": "Report states the separate episode predictor is underconfident on average; raw Q is not a probability",
+      "passed": true
+    }
+  ],
+  "data_audit": "results/takehome/goal8_data_audit.json",
+  "visual_review_passed": true,
+  "predictor_fits": 45,
+  "all_fits_converged": true,
+  "practice_episodes_added": 0,
+  "new_test_episodes": 10240,
+  "final_test_episodes_reused": 2500,
+  "final_valid_test_steps": 392329,
+  "final_mean_prediction": 0.6953930978605768,
+  "final_observed_step_weighted_rate": 0.7476607643075073,
+  "final_signed_bias": -0.05226766644693048,
+  "final_expected_calibration_error": 0.0631863609533153,
+  "final_brier_score": 0.1523541109786156,
+  "final_failed_episodes": 495,
+  "confident_failed_episodes": 355,
+  "failed_episodes_with_predeclared_drop": 15,
+  "settings_tried": 28,
+  "practice_episodes_total": 22210,
+  "full_test_episodes_total": 295470
+}
