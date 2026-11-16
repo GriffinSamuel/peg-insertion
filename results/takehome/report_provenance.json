@@ -35,13 +35,13 @@
     "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160.json": "fe11d6ca35ba662651664788345b7e742fb819438ab8d755dc939c9dc898c506",
     "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160.json": "63142b98b6079a84a7ab7ca2e741244f803c931e82ae6ce76eeaa8a84e1b5c46",
     "results/takehome/figure_rebuild_commands.json": "8b177072426e82854cd581fbe567693534017d4742adf9dfb2ca721e5f7e9e21",
-    "results/takehome/goal13_checks.json": "7b4df7f9a725e2ef804a2769d2a6c50d6074025e0a64acc25934c525b8df24e9",
+    "results/takehome/goal13_checks.json": "88e8482f3ba77d6eb7b5c8a5339295264605b873e6a42b1a9561c9b8e8efe073",
     "results/takehome/goal13/rerun_comparison.json": "37e47a3dd828bf8093e72f7fc92800c1766c62e62f62d39d907f24a7c0a9632d"
   },
   "decision_bullets": 82,
   "plan_gap_entries": 51,
   "has_em_dash": false,
-  "report_sha256": "dbc1d54132ca376578a1c73626ca4614e8e02baada149d452dc6616bbce8d2ee",
+  "report_sha256": "67988e647df70a052f13a20979445f1193673c8f3dd4878e3b3430ca5d250f20",
   "generated_from": "takehome/write_report.py",
   "number_policy": "Tables derive from raw summaries; prose measurements link to result files; all parameter choices are recorded in protocol and the complete decision inventory."
 }

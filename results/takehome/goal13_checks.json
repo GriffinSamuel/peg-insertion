@@ -1,9 +1,7 @@
 {
   "goal": 13,
-  "all_goal_checks_pass": false,
-  "pending_checks": [
-    "Commit and push final validation artifacts, then verify remote commit."
-  ],
+  "all_goal_checks_pass": true,
+  "pending_checks": [],
   "all_original_and_new_tests_pass": true,
   "pytest_tests_passed": 70,
   "pytest_seconds": 327.06,
@@ -16,5 +14,10 @@
   "repository_audit": "results/takehome/goal13_repository_audit.json",
   "test_accounting": "results/takehome/goal13_test_episode_accounting.json",
   "fresh_audit": "results/takehome/goal13/fresh_audit.json",
-  "report_paragraph": "All 70 original and new tests passed in 327.06 seconds, with one dependency deprecation warning. The original code, tests, policies and results are unchanged relative to main outside results/takehome. The fresh run used its own 200 practice episodes and passed its budget, provenance and finite-number audit. Its final success rate is within the reported seed spread; exact trajectory repeatability remains a limitation. Final publication verification is pending. [Test log](results/takehome/goal13_tests.log); [test episode accounting](results/takehome/goal13_test_episode_accounting.json); [repository audit](results/takehome/goal13_repository_audit.json); [fresh-run audit](results/takehome/goal13/fresh_audit.json)."
+  "report_paragraph": "All 70 original and new tests passed in 327.06 seconds, with one dependency deprecation warning. The original code, tests, policies and results are unchanged relative to main outside results/takehome. The fresh run used its own 200 practice episodes and passed its budget, provenance and finite-number audit. Its final success rate is within the reported seed spread; exact trajectory repeatability remains a limitation. The validation artifacts were committed and pushed to origin takehome, with matching local and remote commit hashes and a clean worktree verified. The final handoff record is saved on the same branch. [Test log](results/takehome/goal13_tests.log); [test episode accounting](results/takehome/goal13_test_episode_accounting.json); [repository audit](results/takehome/goal13_repository_audit.json); [fresh-run audit](results/takehome/goal13/fresh_audit.json).",
+  "publication_verified": true,
+  "verified_validation_commit": "1e21ec78fd89d6f5a252ed3e5cf18d6b25495367",
+  "verified_remote": "origin takehome",
+  "publication_verified_utc": "2026-11-16T03:19:37.318410+00:00",
+  "verification_note": "Validation artifacts were committed and pushed; local and remote hashes matched with a clean worktree. The final report and handoff record are committed afterward and the final HEAD is checked again."
 }

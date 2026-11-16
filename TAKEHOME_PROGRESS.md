@@ -1,8 +1,10 @@
 # Take-home progress
 
-## Current status: Goal 13 running; fresh rerun passed, full tests pending (2026-11-15)
+## Current status: Goals 1-13 complete (2026-11-15)
 
-The complete report passed its mechanical audit and lead review:59 result rows,82 decision entries,51 plan gaps,14 figures and35 source hashes. The fresh seed100/test456 run finished in85.34seconds with378/500 successes, its own200-episode ledger and a clean audit; its4.60-point difference from the80.20% confirmation mean is within the6.52-point spread. Original confirmation hashes are unchanged. The original/new test suite is running detached under goal13_tests; wait for its actual exit before counting tests or claiming completion, then check protected files, accounting, report and git push. No tuning or result replacement. The headline remains80.20%;28 settings; full traces and binaries remain local. Repeatability remains an explicit limitation.
+All70 original/new tests passed. Fresh final-method practice seed100/test456 scored378/500 (75.6%), within the6.52-point sample spread around the80.20% confirmation mean; its own200-episode budget and frozen-reference audit passed. Original code, tests, policies and results are unchanged outside results/takehome. Validation artifacts were committed/pushed and local/remote commit equality verified; final handoff is saved on takehome. Final totals:29010 practice episodes in146 ledgers,409690 full test-only episodes,191 reset-only probes,28 searched settings. Full traces, replay, checkpoints and videos remain local and ignored. No experiments remain running. Exact trajectory repeatability remains the measured limitation described below.
+
+Read TAKEHOME_REPORT.md first, then results/takehome/repeatability_findings.md and the dated phase reports. Final fallback and open-question lists are at the end of this log. No further tuning or result replacement was performed.
 
 ## Historical status after revised instructions, 2026-11-15
 
@@ -516,3 +518,68 @@ The report tells the full story, including what did not work. Small movement cor
 ### 8. Questions before the next phase
 
 None requiring a pause. Run Goal13 without further tuning.
+
+
+## 2026-11-15: Goal 13 complete
+
+### 1. What I did (short list)
+
+- Ran all original and new tests unchanged in one detached command.
+- Ran one fresh final-method experiment at the predeclared confirmation practice seed100/test456, starting in an empty directory with its own200-episode ledger.
+- Audited the fresh run, protected git paths, ignored binaries, complete accounting and final report; committed and pushed validation artifacts and verified matching remote/local commits.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+All70 tests passed in327.06seconds (331.98seconds including detached-process startup/shutdown), with one dependency deprecation warning. The fresh run took85.34seconds and scored378/500 (75.6%) at test456. Its4.60-point distance from the80.20% five-seed confirmation mean is below the6.52-point sample spread. Its original seed100 confirmation result was380/500 and remains unchanged. All result, budget and model hashes guarding that original confirmation match; the independent fresh audit has zero failures. Protected paths have an empty diff against main. No local-only binary artifact is tracked by git, and no eligible new file exceeds50MB.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: all original and new tests passed.
+- PASS: git diff main shows no changes to peg_insertion/, scripts/, tests/, original policies or original results outside results/takehome/.
+- PASS: one fresh run is within one spread of the reported result, without changing its seed, test, budget or selected recipe.
+- PASS: validation artifacts committed and pushed to origin takehome, with exact local/remote commit equality and clean status checked; final handoff record saved on that same branch.
+- PASS: this final summary lists what to read, every continuation/availability fallback and open questions.
+
+### 4. Surprises or problems
+
+The fresh run is statistically consistent with the original confirmation spread but is not bit-for-bit identical. That does not erase the pre-learning simulator repeatability limitation. There was no experimental or unit-test failure in Goal13, no score replacement and no new fallback needed. The only test warning concerns an existing dependency's maintenance status.
+
+### 5. Decisions I logged
+
+No new experimental decisions. Used the seed100 rerun fixed before confirmation and retained its independent score. The original continuation decision and all82 entries/51 PLAN GAPs remain in the report.
+
+### 6. Practice episodes used, and settings tried so far
+
+Added200 practice episodes. Added2548 fresh-run test episodes (eight256-test curve points plus500 final) and88 full test episodes from the unit/integration suite, for2636 new full tests. Added9 reset-only probes; shorter physics probes are separately itemized. Final totals:29010 practice episodes in146 completed ledgers,409690 full test-only episodes,191 reset-only probes and28 searched settings. The three policy and eight camera contexts reused the final recipe without tuning.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The project is complete, and the final checks passed. Small movement corrections raised the confirmation average from60.8% to80.2%. One independent repeat landed inside the variation already reported. Large camera errors, an unsuccessful starting policy and exact repeatability remain limits. The report keeps those limits and all bad runs visible.
+
+### 8. Questions before the next phase
+
+No next automated phase or blocking question. Read the report and make sure you can explain it before submitting.
+
+### Final handoff: what to read first
+
+Read TAKEHOME_REPORT.md for the headline, method, all seeds, plots, limits, reproducibility commands and AI-assistance statement. Read results/takehome/repeatability_findings.md for the26m51s diagnosis and why production settings were left unchanged. This progress log and TAKEHOME_DECISIONS.md preserve the full history. Local videos are indexed by results/takehome/goal9/video_manifest.json; full videos, traces and model/replay files are intentionally absent from git.
+
+### Final handoff: fallbacks and exceptions actually used
+
+- Continued after the time-boxed repeatability investigation under Griffin's explicit instruction, retaining the unresolved limitation. No complete safe determinism fix was established, and no test, seed or budget was changed.
+- Applied the authorized single-buffer sampling exceptions: exact64/64 whenever both sources exist, otherwise128 from the available source.
+- No Goal7 single-change trick qualified for combination under the predeclared spread rule, so round2 had zero jobs. No required exploration family was cut for time; the mechanism fallback and the fallback forcing plain aim were not used.
+- Used the written identical-zero-results exemption only for the hovering policy whose own floor and ceiling are both zero.
+- For four movement results above the no-bias reference, ran the required500 tests at seed789 and reviewed physical trajectories instead of treating those scores as a stop. No extra score selected or replaced a result.
+- Used the single available video example for the rare after failure type and no invented videos for zero-case types. Separate pose repeats are disclosed and never replace headline scores.
+- Used the allowed separate episode-probability predictor for Goal8 because raw Q is not an episode-success probability; it learns only from counted practice. Necessary intermediate analysis traces use the explicit later-goal exception and remain local.
+- Corrected one synthetic failure-rule fixture and one display-label assumption in an audit, preserving experimental thresholds and data. The camera chart legend was repaired before reporting. These were implementation/presentation repairs, not altered tests or results.
+
+### Final handoff: open questions
+
+- Why does learned aim correction often collapse early when a true-error oracle works well?
+- Which remaining simulator operations prevent exact repetition during contact, including before learning?
+- Does the movement gain hold with more independent seeds and on real hardware?
+- Can a probability predictor trained on changing practice behavior provide useful early failure warnings?
+
+These questions remain unanswered; the current work does not claim real-robot safety or performance. Every measured result and all chosen defaults are retained for review.

@@ -76,8 +76,8 @@
       "checked": true,
       "sources_listed": 37,
       "sources_checked": 37,
-      "report_sha256": "dbc1d54132ca376578a1c73626ca4614e8e02baada149d452dc6616bbce8d2ee",
-      "expected_report_sha256": "dbc1d54132ca376578a1c73626ca4614e8e02baada149d452dc6616bbce8d2ee"
+      "report_sha256": "67988e647df70a052f13a20979445f1193673c8f3dd4878e3b3430ca5d250f20",
+      "expected_report_sha256": "67988e647df70a052f13a20979445f1193673c8f3dd4878e3b3430ca5d250f20"
     },
     "embedded_png_rebuilds": {
       "count": 14,
