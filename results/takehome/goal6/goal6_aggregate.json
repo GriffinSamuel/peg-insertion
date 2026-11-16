@@ -1,0 +1,255 @@
+{
+  "test_seed": 123,
+  "test_episodes_per_result": 500,
+  "baseline": {
+    "floor": {
+      "label": "Original policy (floor)",
+      "success_rate": 0.614,
+      "successes": 307,
+      "test_episodes": 500
+    },
+    "ceiling": {
+      "label": "No-camera-bias test (ceiling)",
+      "success_rate": 0.944,
+      "successes": 472,
+      "test_episodes": 500
+    }
+  },
+  "methods": [
+    {
+      "name": "aim",
+      "label": "Aim only",
+      "cheats_on_information": false,
+      "seed_count": 5,
+      "final_success_rate": {
+        "mean": 0.6516,
+        "sample_std_ddof_1": 0.07737441437581287,
+        "min": 0.556,
+        "max": 0.732,
+        "per_seed": {
+          "0": 0.73,
+          "1": 0.556,
+          "2": 0.63,
+          "3": 0.61,
+          "4": 0.732
+        }
+      },
+      "learning_curve": {
+        "practice_episodes": [
+          0,
+          40,
+          60,
+          80,
+          100,
+          120,
+          140,
+          160,
+          180,
+          200
+        ],
+        "mean_success_rate": [
+          0.614,
+          0.62265625,
+          0.13984375,
+          0.47578125,
+          0.4796875,
+          0.6390625,
+          0.6765625,
+          0.65546875,
+          0.64375,
+          0.6516
+        ],
+        "sample_std_ddof_1": [
+          0.0,
+          0.017599813009482514,
+          0.22943026092672747,
+          0.24115202025900592,
+          0.2588078560392946,
+          0.08697877682048363,
+          0.06426938773023087,
+          0.05887951150442741,
+          0.07490431722057982,
+          0.07737441437581287
+        ]
+      }
+    },
+    {
+      "name": "movement",
+      "label": "Movement only",
+      "cheats_on_information": false,
+      "seed_count": 5,
+      "final_success_rate": {
+        "mean": 0.8336,
+        "sample_std_ddof_1": 0.02994661917479165,
+        "min": 0.786,
+        "max": 0.856,
+        "per_seed": {
+          "0": 0.85,
+          "1": 0.822,
+          "2": 0.854,
+          "3": 0.856,
+          "4": 0.786
+        }
+      },
+      "learning_curve": {
+        "practice_episodes": [
+          0,
+          40,
+          60,
+          80,
+          100,
+          120,
+          140,
+          160,
+          180,
+          200
+        ],
+        "mean_success_rate": [
+          0.614,
+          0.61796875,
+          0.64140625,
+          0.821875,
+          0.76484375,
+          0.62890625,
+          0.75625,
+          0.8265625,
+          0.825,
+          0.8336
+        ],
+        "sample_std_ddof_1": [
+          0.0,
+          0.018611139452455617,
+          0.1944002131457004,
+          0.0536025184153576,
+          0.15392310345540644,
+          0.3348342166456689,
+          0.07642685688372249,
+          0.07486356405259002,
+          0.0367893271186597,
+          0.02994661917479165
+        ]
+      }
+    },
+    {
+      "name": "combined",
+      "label": "Aim and movement",
+      "cheats_on_information": false,
+      "seed_count": 5,
+      "final_success_rate": {
+        "mean": 0.786,
+        "sample_std_ddof_1": 0.04597825573029059,
+        "min": 0.726,
+        "max": 0.842,
+        "per_seed": {
+          "0": 0.842,
+          "1": 0.756,
+          "2": 0.726,
+          "3": 0.814,
+          "4": 0.792
+        }
+      },
+      "learning_curve": {
+        "practice_episodes": [
+          0,
+          40,
+          60,
+          80,
+          100,
+          120,
+          140,
+          160,
+          180,
+          200
+        ],
+        "mean_success_rate": [
+          0.614,
+          0.61328125,
+          0.00078125,
+          0.17578125,
+          0.33359375,
+          0.5,
+          0.6578125,
+          0.75,
+          0.765625,
+          0.786
+        ],
+        "sample_std_ddof_1": [
+          0.0,
+          0.008286407592029853,
+          0.0017469281074217107,
+          0.17169735137371805,
+          0.3115537431379717,
+          0.3263647913773501,
+          0.1128967072323469,
+          0.14130154099754627,
+          0.08747732686155739,
+          0.04597825573029059
+        ]
+      }
+    },
+    {
+      "name": "supervised_cheating_reference",
+      "label": "Supervised reference (cheats: true labels)",
+      "cheats_on_information": true,
+      "seed_count": 5,
+      "final_success_rate": {
+        "mean": 0.6616,
+        "sample_std_ddof_1": 0.020513410247932906,
+        "min": 0.65,
+        "max": 0.698,
+        "per_seed": {
+          "0": 0.65,
+          "1": 0.698,
+          "2": 0.656,
+          "3": 0.654,
+          "4": 0.65
+        }
+      },
+      "learning_curve": {
+        "practice_episodes": [
+          0,
+          40,
+          60,
+          80,
+          100,
+          120,
+          140,
+          160,
+          180,
+          200
+        ],
+        "mean_success_rate": [
+          0.614,
+          0.61640625,
+          0.6234375,
+          0.62734375,
+          0.64609375,
+          0.63515625,
+          0.65703125,
+          0.67578125,
+          0.65,
+          0.6616
+        ],
+        "sample_std_ddof_1": [
+          0.0,
+          0.015963138079455118,
+          0.022541465697271106,
+          0.03649783945874399,
+          0.040745015032516554,
+          0.029697777826169083,
+          0.022507594204512395,
+          0.015378921628929319,
+          0.026435819243263485,
+          0.020513410247932906
+        ]
+      }
+    }
+  ],
+  "paths": {
+    "manifest": "results/takehome/goal6_manifest.json",
+    "baseline": "results/takehome/baseline.json",
+    "csv": "results/takehome/goal6/goal6_per_seed.csv",
+    "comparison_plot": "results/takehome/goal6/comparison.png",
+    "learning_curves_plot": "results/takehome/goal6/learning_curves.png"
+  }
+}

@@ -58,9 +58,10 @@ class Replay:
         self.episode_ids.update(episode_ids)
         return n
 
-    def training_arrays(self):
-        # True bias and all other analysis-only metadata never reach the learner.
-        return {k: self.arrays[k] for k in TRAIN_KEYS}
+    def training_arrays(self, *, supervised_reference=False):
+        # The only Goal 6 exception is the explicitly labelled cheating reference.
+        keys = TRAIN_KEYS + (('true_bias',) if supervised_reference else ())
+        return {k: self.arrays[k] for k in keys}
 
     def save(self, path):
         np.savez_compressed(path, **{k: v[:self.count] for k, v in self.arrays.items()})

@@ -1,0 +1,10 @@
+{
+  "practice_episodes_added": 3000,
+  "practice_episodes_total": 4810,
+  "settings_tried_total": 4,
+  "new_full_test_episodes": 38224,
+  "full_test_episodes_total": 64830,
+  "reset_only_probes_total": 174,
+  "new_contract_tests": 15,
+  "prepared_goal7_synthetic_contract_tests": 14
+}

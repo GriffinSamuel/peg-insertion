@@ -1,4 +1,4 @@
-"""Only the main learner and the basic settings required by Goal 4."""
+"""Explicit settings, extended only as each project goal needs them."""
 from dataclasses import asdict, dataclass
 import math
 
@@ -18,6 +18,8 @@ class TrainConfig:
     target_rate: float = 0.005
     step_cap: float = 0.0001
     guess_cap: float = 0.003
+    movement_cap: float = 0.0002
+    supervised_reference: bool = False
     fill_noise: float = 0.5
     learner_noise: float = 0.2
     code_test: bool = False
@@ -35,10 +37,24 @@ class TrainConfig:
             raise ValueError("Batch size must be positive and even for exactly 50/50 sampling")
         if not 0 < self.step_cap <= self.guess_cap:
             raise ValueError("Require 0 < step cap <= guess cap")
+        if self.movement_cap <= 0:
+            raise ValueError("Movement cap must be positive")
+        if self.supervised_reference and self.outputs != 2:
+            raise ValueError("The supervised cheating reference predicts two bias values")
         if not all(math.isfinite(x) for x in (
             self.step_cap, self.guess_cap, self.learning_rate, self.discount,
-            self.target_rate, self.fill_noise, self.learner_noise)):
+            self.target_rate, self.fill_noise, self.learner_noise, self.movement_cap)):
             raise ValueError("Settings must be finite")
 
     def to_dict(self):
         return asdict(self)
+
+
+def action_scales(outputs, step_cap, movement_cap):
+    if outputs == 2:
+        return (step_cap, step_cap)
+    if outputs == 3:
+        return (movement_cap,) * 3
+    if outputs == 5:
+        return (step_cap, step_cap) + (movement_cap,) * 3
+    raise ValueError('Output count must be 2, 3 or 5')

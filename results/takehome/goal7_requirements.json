@@ -1,0 +1,77 @@
+{
+  "source": "CODEX_GOALS.md",
+  "sections": ["Definitions used in every goal", "Choosing the best setting without a human", "Goal 7: exploration round, then one confirmation run"],
+  "base_methods": {
+    "main_experiment": {
+      "name": "aim corrector only (Goal 5)",
+      "use_for": "all aim-part and scorekeeper items, one change from the main experiment",
+      "fixed_recipe": "40 fill-up episodes plus 160 learner episodes; 200 practice episodes total",
+      "source": "CODEX_GOALS.md, Definitions used in every goal; Goal 7"
+    },
+    "movement_experiment": {
+      "name": "Goal 6 both-together learner",
+      "use_for": "items marked (movement), one change from the Goal 6 both-together learner",
+      "source": "CODEX_GOALS.md, Goal 7"
+    },
+    "reuse": "The 40-fill-up main experiment setting is reused, not rerun as a new Goal 7 setting.",
+    "source": "CODEX_GOALS.md, Goal 7"
+  },
+  "exploration_items": [
+    {"id": 1, "trick": "fill-up share", "base": "main_experiment", "variants": [0, 10, 20, 40, 80, 120], "unit": "episodes out of 200", "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 2, "trick": "aim and movement together", "base": "movement_experiment", "variants": ["joint: one learner and one scorekeeper", "side by side: two learners and two scorekeepers at the same time", "one after the other: aim then movement", "one after the other: movement then aim"], "unspecified": ["learner-episode split for the sequential variants is half each, per notes; exact sequence scheduling details otherwise unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 3, "trick": "scorekeeper briefed first", "base": "main_experiment", "variants": ["briefed", "not briefed"], "constraints": ["briefing uses only that experiment's own fill-up episodes", "cannot combine with zero fill-up"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 4, "trick": "scorekeeper sees true camera error during training", "base": "main_experiment", "variants": ["on", "off (main setting)"], "constraints": ["when true camera error is on, final decider is not used"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 5, "trick": "scorekeeper copies", "base": "main_experiment", "variants": ["one", "several"], "unspecified": ["number of several copies unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 6, "trick": "memory-bank study frequency per new step", "base": "main_experiment", "variants": "unspecified numeric values", "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 7, "trick": "correction size caps", "base": "main_experiment for aim; movement_experiment for movement cap", "variants": "unspecified numeric cap values", "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 8, "trick": "final decider versus direct learner action", "base": "movement_experiment", "variants": ["scorekeeper rates options and acts on best", "act on learner output directly"], "constraints": ["options include no correction, aim only, movement only, both, and a few small variations", "only use a scorekeeper that does not need true camera error"], "unspecified": ["exact small variations and their numerical values unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 9, "trick": "hand over near the hole", "base": "main_experiment", "variants": ["old policy alone on approach; learner active near hole", "ordinary handoff"], "unspecified": ["handoff distance/threshold unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 10, "trick": "contact-dependent movement cap", "base": "movement_experiment", "variants": ["looser cap in contact, tighter in free space", "ordinary cap"], "unspecified": ["cap values and contact classification rule unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 11, "trick": "movement cap sized by old policy uncertainty", "base": "movement_experiment", "variants": ["uncertainty-sized cap", "ordinary cap"], "unspecified": ["uncertainty measure and numerical mapping unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 12, "trick": "yes-or-no scorekeeper", "base": "main_experiment", "variants": ["classification-style loss", "ordinary squared-error loss (main setting)"], "constraints": ["classification-style loss replaces squared-error loss"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 13, "trick": "look several steps ahead when crediting moves", "base": "main_experiment", "variants": ["multi-step credit", "ordinary credit"], "unspecified": ["lookahead step count and formula unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 14, "trick": "floor on scorekeeper ratings from real outcomes", "base": "main_experiment", "variants": ["rating floor", "no added rating floor"], "unspecified": ["floor value and formula unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 15, "trick": "penalty for pushing too hard", "base": "movement_experiment", "variants": ["force penalty", "no force penalty"], "constraints": ["changes learner reward only; success test does not change", "do not combine with yes-or-no loss", "report peak force"], "unspecified": ["penalty weight and force threshold/formula unspecified"], "source": "CODEX_GOALS.md, Goal 7"},
+    {"id": 16, "trick": "sibling-policy fill-up episodes", "base": "main_experiment", "variants": ["shared among other qualifying force_0.5mm policies", "single policy fill-up"], "constraints": ["sibling policies must succeed at least sometimes", "run through same wrapper", "fill-up episodes count toward 200"], "unspecified": ["which qualifying policies and exact sharing allocation unspecified"], "source": "CODEX_GOALS.md, Goal 7"}
+  ],
+  "search_and_comparison": {
+    "rounds": ["round 1: screen each trick by itself", "round 2: combine only tricks that clearly helped beyond seed-to-seed spread", "round 3: confirmation of one best setting on new seeds"],
+    "incompatibilities": [
+      "scorekeeper briefing cannot combine with zero fill-up",
+      "true-camera-error training cannot combine with final decider",
+      "force penalty cannot combine with yes-or-no scorekeeper loss",
+      "round 2 combinations that cannot work together are skipped and reason logged"
+    ],
+    "setting_limit": "At most 45 settings total across Goal 7 rounds 1 and 2, unless Griffin changes the limit at the Goal 5 check-in.",
+    "setting_count_scope": "Running count of distinct settings covers Goals 5, 6, and 7; Goals 10 and 11 are listed separately.",
+    "source": "CODEX_GOALS.md, Definitions used in every goal; Goal 7"
+  },
+  "seeds_and_budget": {
+    "development_test": {"seed": 123, "episodes": 500, "use": "all choosing in Goal 7"},
+    "round_1_practice_seeds": [0, 1, 2],
+    "round_2_practice_seeds": [0, 1, 2, 3, 4],
+    "confirmation_practice_seeds": [100, 101, 102, 103, 104],
+    "confirmation_test": {"seed": 456, "episodes": 500},
+    "practice_budget": "Each setting/experiment gets its own maximum 200 learned-from practice episodes; fill-up episodes count. Do not use confirmation seeds before the choice is written down.",
+    "outcome_point": "Use the result at episode 200, never the best point along the learning curve.",
+    "source": "CODEX_GOALS.md, Definitions used in every goal; Goal 7"
+  },
+  "selection_rule": [
+    "Choose highest average success on development test seed 123.",
+    "Among settings within one spread of the top average, choose the setting with fewest changes from the main experiment; if still tied, choose the higher average.",
+    "If no round 1 change beats the main experiment by more than one spread, skip round 2 and confirm the main experiment.",
+    "Mark differences smaller than seed-to-seed spread as not a real difference.",
+    "Write the selected setting and reason before any confirmation run."
+  ],
+  "confirmation_comparisons": {
+    "required": ["chosen setting on practice seeds 100-104 and test seed 456", "plain-setting movement-only Goal 6 learner on the same confirmation seeds", "plain-setting both-together Goal 6 learner on the same confirmation seeds", "plain-setting aim-only Goal 5 learner on the same confirmation seeds", "floor and ceiling measured on test seed 456"],
+    "reporting": ["confirmation result is the headline even if lower than exploration", "state that final method had tuning and the other three learners did not", "show settings tried next to each method"],
+    "ambiguity": "The 'three Goal 6 learners' wording includes aim-only, movement-only, and both-together, although aim-only originates in Goal 5; interpreted as the three learner types in the Goal 6 comparison and cross-referenced to Goal 5 for aim-only.",
+    "source": "CODEX_GOALS.md, Goal 6; Goal 7"
+  },
+  "exact_ambiguities_for_lead": [
+    "Goal 7 says at most 45 settings across rounds 1 and 2, while the global definition counts settings across Goals 5, 6, and 7; the text does not say whether the 45 cap includes the reused baseline or Goal 5/6 settings.",
+    "Numeric values are unspecified for several qualitative changes (and many parameter sweeps); the goals require sensible choices to be logged, while no values are supplied here.",
+    "Goal 7 says 'three Goal 6 learners' at confirmation, but Goal 6's list has aim-only reused from Goal 5 plus movement-only and both-together; treated as the three compared learner types."
+  ]
+}

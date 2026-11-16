@@ -1,6 +1,6 @@
 # Goal 5 check-in, 2026-11-15
 
-Goals 1 through 5 are complete. This preserves the interim Goal 5 check-in, not the Goal 12 final write-up. Griffin subsequently approved continuation through Goal 13 with no cuts. A 26m51s repeatability investigation identified variability in the original GPU simulator but no validated full-run fix; see [the findings](results/takehome/repeatability_findings.md). Execution stays unchanged and the limitation is carried forward. Binary traces and checkpoints now remain on disk only; new full test traces are saved only at final 500-episode tests unless later analysis needs them.
+Goals 1 through 6 are complete. This interim report preserves the Goal 5 check-in and adds Goal 6; it is not yet the Goal 12 final write-up. Griffin subsequently approved continuation through Goal 13 with no cuts. A 26m51s repeatability investigation identified variability in the original GPU simulator but no validated full-run fix; see [the findings](results/takehome/repeatability_findings.md). Execution stays unchanged and the limitation is carried forward. Binary traces and checkpoints now remain on disk only; new full test traces are saved only at final 500-episode tests unless later analysis needs them.
 
 The main learner's average success is 65.16%, compared with 61.4% for the original policy. The measured gain is 3.76 percentage points, smaller than the 7.74-point spread across practice seeds. This is a small average improvement with mixed runs, not evidence of reliable improvement. The no-camera-bias ceiling is 94.4%, so most of the available improvement remains unrealized.
 
@@ -124,3 +124,24 @@ The account usage allowance is not visible: the runtime reports `rate_limits: nu
 The lead designed and reviewed the learner, interpreted results, wrote this report and made every experimental choice. Two gpt-6-luna/low helpers handled narrow plotting and data-audit tasks in separate files; their outputs were reviewed. No fallback or success-driven tuning was used through Goal 5. PLAN GAP choices remain listed in TAKEHOME_DECISIONS.md.
 
 **Check-in resolved:** Griffin approved continuation through Goal 13 with no cuts. Repeatability remains a documented limitation after the bounded investigation; tests, seeds and reported results are unchanged. See TAKEHOME_PROGRESS.md for the current phase.
+
+## Goal 6: same-budget comparisons
+
+Original-policy floor: 307/500 (61.4%). No-camera-bias ceiling: 472/500 (94.4%). Both use test seed 123 with no learning.
+
+| Method | Seed 0 | Seed 1 | Seed 2 | Seed 3 | Seed 4 | Mean | Sample spread |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Aim only | 365/500 | 278/500 | 315/500 | 305/500 | 366/500 | 65.16% | 7.74 points |
+| Movement only | 425/500 | 411/500 | 427/500 | 428/500 | 393/500 | 83.36% | 2.99 points |
+| Aim and movement | 421/500 | 378/500 | 363/500 | 407/500 | 396/500 | 78.60% | 4.60 points |
+| Supervised reference (cheats: true labels) | 325/500 | 349/500 | 328/500 | 327/500 | 325/500 | 66.16% | 2.05 points |
+
+Each learned result uses its own 200 practice episodes and 500 test-only episodes at seed 123. Aim-only results are reused from Goal 5.
+
+![Goal 6 comparison](results/takehome/goal6/comparison.png)
+
+![Goal 6 learning curves](results/takehome/goal6/learning_curves.png)
+
+Movement-only has the highest mean among the three learners. It is 21.96 percentage points above the old-policy floor. Adding movement to aim raises the mean 13.44 points; adding aim to movement lowers it 4.76 points. The supervised reference (cheats: true labels) is not competitive with movement and is not a theoretical upper bound. Every learned run gets 40 fill-up and 160 learner episodes; the final test is separate.
+
+Four settings have now been tried, with 4810 total practice episodes across separate experiments. These are development results; the final method and independent confirmation headline have not been chosen. Tables and source paths: [comparison](results/takehome/goal6/comparison.md), [all seeds](results/takehome/goal6/goal6_per_seed.csv), [aggregate](results/takehome/goal6/goal6_aggregate.json), [audit](results/takehome/goal6_audit.json), [counts](results/takehome/goal6_counts.json). Rebuild both figures with `source scripts/env.sh && python -B takehome/plot_goal6.py`.

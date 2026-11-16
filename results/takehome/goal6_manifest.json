@@ -1,0 +1,147 @@
+{
+  "baseline": "results/takehome/baseline.json",
+  "methods": [
+    {
+      "name": "aim",
+      "label": "Aim only",
+      "cheats_on_information": false,
+      "results": [
+        "results/takehome/benchmark/solo/seed_0/result.json",
+        "results/takehome/benchmark/parallel2/seed_1/result.json",
+        "results/takehome/benchmark/parallel2/seed_2/result.json",
+        "results/takehome/benchmark/parallel4/seed_3/result.json",
+        "results/takehome/benchmark/parallel4/seed_4/result.json"
+      ]
+    },
+    {
+      "name": "movement",
+      "label": "Movement only",
+      "cheats_on_information": false,
+      "results": [
+        "results/takehome/goal6/movement/seed_0/result.json",
+        "results/takehome/goal6/movement/seed_1/result.json",
+        "results/takehome/goal6/movement/seed_2/result.json",
+        "results/takehome/goal6/movement/seed_3/result.json",
+        "results/takehome/goal6/movement/seed_4/result.json"
+      ]
+    },
+    {
+      "name": "combined",
+      "label": "Aim and movement",
+      "cheats_on_information": false,
+      "results": [
+        "results/takehome/goal6/combined/seed_0/result.json",
+        "results/takehome/goal6/combined/seed_1/result.json",
+        "results/takehome/goal6/combined/seed_2/result.json",
+        "results/takehome/goal6/combined/seed_3/result.json",
+        "results/takehome/goal6/combined/seed_4/result.json"
+      ]
+    },
+    {
+      "name": "supervised_cheating_reference",
+      "label": "Supervised reference (cheats: true labels)",
+      "cheats_on_information": true,
+      "results": [
+        "results/takehome/goal6/supervised_cheating_reference/seed_0/result.json",
+        "results/takehome/goal6/supervised_cheating_reference/seed_1/result.json",
+        "results/takehome/goal6/supervised_cheating_reference/seed_2/result.json",
+        "results/takehome/goal6/supervised_cheating_reference/seed_3/result.json",
+        "results/takehome/goal6/supervised_cheating_reference/seed_4/result.json"
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "name": "movement_0",
+      "args": [
+        "takehome/train.py",
+        "--output",
+        "results/takehome/goal6/movement",
+        "--outputs",
+        "3",
+        "--seeds",
+        "0",
+        "1"
+      ],
+      "log": "results/takehome/goal6/movement_0.log"
+    },
+    {
+      "name": "movement_1",
+      "args": [
+        "takehome/train.py",
+        "--output",
+        "results/takehome/goal6/movement",
+        "--outputs",
+        "3",
+        "--seeds",
+        "2",
+        "3",
+        "4"
+      ],
+      "log": "results/takehome/goal6/movement_1.log"
+    },
+    {
+      "name": "combined_0",
+      "args": [
+        "takehome/train.py",
+        "--output",
+        "results/takehome/goal6/combined",
+        "--outputs",
+        "5",
+        "--seeds",
+        "0",
+        "1"
+      ],
+      "log": "results/takehome/goal6/combined_0.log"
+    },
+    {
+      "name": "combined_1",
+      "args": [
+        "takehome/train.py",
+        "--output",
+        "results/takehome/goal6/combined",
+        "--outputs",
+        "5",
+        "--seeds",
+        "2",
+        "3",
+        "4"
+      ],
+      "log": "results/takehome/goal6/combined_1.log"
+    },
+    {
+      "name": "supervised_cheating_reference_0",
+      "args": [
+        "takehome/train.py",
+        "--output",
+        "results/takehome/goal6/supervised_cheating_reference",
+        "--outputs",
+        "2",
+        "--seeds",
+        "0",
+        "1",
+        "--supervised-reference"
+      ],
+      "log": "results/takehome/goal6/supervised_cheating_reference_0.log"
+    },
+    {
+      "name": "supervised_cheating_reference_1",
+      "args": [
+        "takehome/train.py",
+        "--output",
+        "results/takehome/goal6/supervised_cheating_reference",
+        "--outputs",
+        "2",
+        "--seeds",
+        "2",
+        "3",
+        "4",
+        "--supervised-reference"
+      ],
+      "log": "results/takehome/goal6/supervised_cheating_reference_1.log"
+    }
+  ],
+  "suite_summary": "results/takehome/goal6/suite.json",
+  "predeclared_extra_test_seed": 789,
+  "zero_contract_test": "results/takehome/goal6_contracts.exit.json"
+}

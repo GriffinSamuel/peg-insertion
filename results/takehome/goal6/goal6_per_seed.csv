@@ -1,0 +1,21 @@
+method_name,label,cheats_on_information,seed,practice_episodes,test_episodes,test_seed,successes,success_rate,result_path
+aim,Aim only,False,0,200,500,123,365,0.73,results/takehome/benchmark/solo/seed_0/result.json
+aim,Aim only,False,1,200,500,123,278,0.556,results/takehome/benchmark/parallel2/seed_1/result.json
+aim,Aim only,False,2,200,500,123,315,0.63,results/takehome/benchmark/parallel2/seed_2/result.json
+aim,Aim only,False,3,200,500,123,305,0.61,results/takehome/benchmark/parallel4/seed_3/result.json
+aim,Aim only,False,4,200,500,123,366,0.732,results/takehome/benchmark/parallel4/seed_4/result.json
+combined,Aim and movement,False,0,200,500,123,421,0.842,results/takehome/goal6/combined/seed_0/result.json
+combined,Aim and movement,False,1,200,500,123,378,0.756,results/takehome/goal6/combined/seed_1/result.json
+combined,Aim and movement,False,2,200,500,123,363,0.726,results/takehome/goal6/combined/seed_2/result.json
+combined,Aim and movement,False,3,200,500,123,407,0.814,results/takehome/goal6/combined/seed_3/result.json
+combined,Aim and movement,False,4,200,500,123,396,0.792,results/takehome/goal6/combined/seed_4/result.json
+movement,Movement only,False,0,200,500,123,425,0.85,results/takehome/goal6/movement/seed_0/result.json
+movement,Movement only,False,1,200,500,123,411,0.822,results/takehome/goal6/movement/seed_1/result.json
+movement,Movement only,False,2,200,500,123,427,0.854,results/takehome/goal6/movement/seed_2/result.json
+movement,Movement only,False,3,200,500,123,428,0.856,results/takehome/goal6/movement/seed_3/result.json
+movement,Movement only,False,4,200,500,123,393,0.786,results/takehome/goal6/movement/seed_4/result.json
+supervised_cheating_reference,Supervised reference (cheats: true labels),True,0,200,500,123,325,0.65,results/takehome/goal6/supervised_cheating_reference/seed_0/result.json
+supervised_cheating_reference,Supervised reference (cheats: true labels),True,1,200,500,123,349,0.698,results/takehome/goal6/supervised_cheating_reference/seed_1/result.json
+supervised_cheating_reference,Supervised reference (cheats: true labels),True,2,200,500,123,328,0.656,results/takehome/goal6/supervised_cheating_reference/seed_2/result.json
+supervised_cheating_reference,Supervised reference (cheats: true labels),True,3,200,500,123,327,0.654,results/takehome/goal6/supervised_cheating_reference/seed_3/result.json
+supervised_cheating_reference,Supervised reference (cheats: true labels),True,4,200,500,123,325,0.65,results/takehome/goal6/supervised_cheating_reference/seed_4/result.json

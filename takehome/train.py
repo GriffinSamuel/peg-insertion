@@ -45,11 +45,10 @@ class ExperimentRunner:
     def __init__(self, config):
         if not any(d.platform == "gpu" for d in jax.devices()):
             raise RuntimeError("Tripwire: GPU not visible")
-        if config.outputs != 2:
-            raise ValueError("3/5-output networks are available; movement environment adapters belong to Goal 6")
         self.config = config
         self.env = AimCorrectedEnv(ROOT / "results/policies" / config.policy,
-                                   AimConfig(config.step_cap, config.guess_cap))
+                                   AimConfig(config.step_cap, config.guess_cap),
+                                   outputs=config.outputs, movement_cap=config.movement_cap)
         self.learner = Learner(config, self.env)
         self.episodes = EpisodeRunner(self.env, self.learner)
 
@@ -113,7 +112,8 @@ class ExperimentRunner:
             if source == "online":
                 t0 = time.perf_counter()
                 state, metrics = self.learner.train_block(
-                    state, replay.training_arrays(), replay.fill_count, replay.count,
+                    state, replay.training_arrays(supervised_reference=cfg.supervised_reference),
+                    replay.fill_count, replay.count,
                     n * cfg.updates_per_step)
                 metrics = jax.device_get(metrics)
                 validate_state(state)
@@ -142,8 +142,22 @@ class ExperimentRunner:
                 np.savez_compressed(output / f"test_{end:04d}_episodes.npz", **stats)
                 curve.append(point)
                 ceiling = baseline["conditions"]["no_camera_bias"]["success_rate"]
-                if ceiling > 0.5 and summary["success_rate"] > ceiling + 0.05:
+                if cfg.outputs == 2 and ceiling > 0.5 and summary["success_rate"] > ceiling + 0.05:
                     raise RuntimeError("Tripwire: aim-only learner exceeds ceiling by more than five points")
+                if cfg.outputs != 2 and summary['success_rate'] > ceiling:
+                    extra, extra_stats, extra_trace = self.episodes.test(
+                        state, episodes=500, seed=789,
+                        output=output / f'extra_ceiling_{end:04d}_traces.npz')
+                    if not np.isfinite(extra['steps_mean']):
+                        extra['steps_mean'] = extra['steps_median'] = None
+                    examples = np.flatnonzero(extra_stats['succeeded'] > .5)[:5]
+                    extra['inspected_episode_ids'] = examples.tolist()
+                    extra['max_lateral_when_deep_examples_m'] = extra_stats[
+                        'max_lateral_when_deep'][examples].tolist()
+                    extra['max_abs_control_examples'] = [float(np.max(np.abs(
+                        extra_trace['executed_action'][:, i]))) for i in examples]
+                    extra['used_for_selection'] = False
+                    write_json(output / f'extra_ceiling_{end:04d}.json', extra)
                 save_checkpoint(output / f"model_{end:04d}.pkl",
                                 {"config": cfg.to_dict(), "state": jax.device_get(state)})
                 test_seconds = time.perf_counter() - t0
@@ -162,7 +176,9 @@ class ExperimentRunner:
         unchanged = policy_digest(self.env.frozen_policy) == before
         if not unchanged:
             raise RuntimeError("Frozen policy parameters changed")
+        method = 'supervised_cheating_reference' if cfg.supervised_reference else {2:'aim',3:'movement',5:'combined'}[cfg.outputs]
         result = {"seed": seed, "config": cfg.to_dict(), "curve": curve,
+                  "method": method, "cheats_on_information": cfg.supervised_reference,
                   "final": curve[-1], "practice_episodes": ledger.used,
                   "fill_episodes": cfg.fill_episodes,
                   "learner_episodes": cfg.total_episodes - cfg.fill_episodes,
@@ -189,6 +205,8 @@ def main():
     parser.add_argument("--outputs", type=int, choices=(2, 3, 5), default=2)
     parser.add_argument("--step-cap", type=float, default=0.0001)
     parser.add_argument("--guess-cap", type=float, default=0.003)
+    parser.add_argument("--movement-cap", type=float, default=0.0002)
+    parser.add_argument("--supervised-reference", action="store_true")
     parser.add_argument("--code-test", action="store_true")
     args = parser.parse_args()
     if any(seed in range(100, 105) for seed in args.seeds):
@@ -196,7 +214,8 @@ def main():
     config = TrainConfig(policy=args.policy, outputs=args.outputs,
         fill_episodes=args.fill_episodes, total_episodes=10 if args.code_test else 200,
         updates_per_step=args.updates_per_step, ensemble=args.ensemble,
-        step_cap=args.step_cap, guess_cap=args.guess_cap, code_test=args.code_test)
+        step_cap=args.step_cap, guess_cap=args.guess_cap, movement_cap=args.movement_cap,
+        supervised_reference=args.supervised_reference, code_test=args.code_test)
     todo = [s for s in args.seeds if not (args.output / f"seed_{s}" / "result.json").exists()]
     if not todo:
         print("All requested results already exist; no episodes collected.")

@@ -15,7 +15,7 @@ from peg_insertion import rollout
 
 TRACE_KEYS = ("obs", "guess", "next_guess", "true_bias", "q", "force", "success",
               "terminated", "truncated", "valid", "step", "old_action",
-              "executed_action", "depth", "xy_err", "tip_height", "action")
+              "executed_action", "depth", "xy_err", "tip_height", "action", "movement")
 
 
 class EpisodeRunner:
@@ -55,6 +55,7 @@ class EpisodeRunner:
                 "source": jp.full((n,), source, dtype=jp.int32),
                 "old_action": nxt.info["old_action"],
                 "executed_action": nxt.info["executed_action"],
+                "movement": nxt.info['movement_correction'],
                 "true_bias": state.info["bias"][:,:2],
                 "guess": state.info["aim_guess"], "next_guess": nxt.info["aim_guess"],
                 "force": jp.linalg.norm(nxt.data.sensordata[:, env._force_slice], axis=-1),

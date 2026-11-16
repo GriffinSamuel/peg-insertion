@@ -33,6 +33,18 @@ def corrected_observation(observation, guess):
     return {"state": observation.at[..., :2].add(-guess)}
 
 
+def split_controls(action, outputs):
+    if outputs == 2:
+        return action, jp.zeros(3, dtype=action.dtype)
+    if outputs == 3:
+        return jp.zeros(2, dtype=action.dtype), action
+    return action[:2], action[2:]
+
+
+def add_movement_correction(robot_action, movement, movement_cap, robot_scale):
+    return jp.clip(robot_action + jp.clip(movement, -1, 1) * movement_cap / robot_scale, -1, 1)
+
+
 def learner_outcome(was_ended, was_success, success, env_failure, at_limit):
     """First-success reward, true termination and separate time truncation."""
     newly = (~was_ended) & (~was_success) & success
@@ -62,9 +74,12 @@ class AimCorrectedEnv(PegInsertion):
     collection must discard transitions whose incoming state is already ended.
     """
 
-    def __init__(self, policy_dir: Path, aim: AimConfig = AimConfig(), **overrides):
+    def __init__(self, policy_dir: Path, aim: AimConfig = AimConfig(), *,
+                 outputs=2, movement_cap=0.0002, **overrides):
         self.frozen_policy, net_cfg = rollout.load_policy(Path(policy_dir))
         self.aim = aim
+        self.outputs = outputs
+        self.movement_cap = movement_cap
         self.base_obs_size = net_cfg["obs_size"]
         cfg = default_config()
         for k, v in net_cfg.get("env_overrides", {}).items():
@@ -78,20 +93,24 @@ class AimCorrectedEnv(PegInsertion):
 
     @property
     def action_size(self):
-        return 2
+        return self.outputs
 
     def reset(self, rng):
         state = super().reset(rng)
         guess = jp.zeros(2)
         info = {**state.info, "aim_guess": guess,
                 "old_action": jp.zeros(3), "executed_action": jp.zeros(3),
+                "movement_correction": jp.zeros(3),
                 "learner_terminated": jp.array(False),
                 "learner_truncated": jp.array(False)}
         return state.replace(
             obs={"state": jp.concatenate([state.obs["state"], guess])}, info=info)
 
     def next_guess(self, state, action):
-        return advance_guess(state.info["aim_guess"], action, self.aim)
+        if self.outputs == 3:
+            return state.info['aim_guess']
+        aim_action, _ = split_controls(action, self.outputs)
+        return advance_guess(state.info["aim_guess"], aim_action, self.aim)
 
     def step(self, state, action):
         guess = self.next_guess(state, action)
@@ -100,6 +119,13 @@ class AimCorrectedEnv(PegInsertion):
         # Deterministic policy ignores this key; preserve simulator RNG stream.
         robot_action, _ = self.frozen_policy(corrected, jax.random.PRNGKey(0))
         old_action, _ = self.frozen_policy({"state": raw_obs}, jax.random.PRNGKey(0))
+        movement_correction = jp.zeros(3)
+        if self.outputs != 2:
+            _, movement = split_controls(action, self.outputs)
+            executed = add_movement_correction(robot_action, movement,
+                                               self.movement_cap, self._config.action_scale)
+            movement_correction = (executed - robot_action) * self._config.action_scale
+            robot_action = executed
         nxt = super().step(state, robot_action)
         ended = state.info["learner_terminated"] | state.info["learner_truncated"]
         reward, terminated, truncated = learner_outcome(
@@ -109,6 +135,7 @@ class AimCorrectedEnv(PegInsertion):
         truncated = state.info["learner_truncated"] | truncated
         info = {**nxt.info, "aim_guess": guess,
                 "old_action": old_action, "executed_action": robot_action,
+                "movement_correction": movement_correction,
                 "learner_terminated": terminated, "learner_truncated": truncated}
         return nxt.replace(
             obs={"state": jp.concatenate([nxt.obs["state"], guess])},

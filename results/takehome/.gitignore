@@ -18,3 +18,5 @@ __pycache__/
 *.pkl
 *.mp4
 # Larger artifacts must be added here explicitly before staging; keep <50 MB.
+*_pytest_tmp/
+pytest_cache/

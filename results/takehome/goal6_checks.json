@@ -1,0 +1,9 @@
+{
+  "all_goal_checks_pass": true,
+  "audit": "results/takehome/goal6_audit.json",
+  "contract_exit": "results/takehome/goal6_contracts.exit.json",
+  "source_hashes_checked_separately": true,
+  "chart_review_pass": true,
+  "settings_tried": 4,
+  "practice_episodes": 4810
+}

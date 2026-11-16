@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: repeatability investigation complete, Goal 6 next (2026-11-15)
+## Current status: Goal 6 complete; Goal 7 integration next (2026-11-15)
 
-Griffin approved Goals 6–13 with no cuts. The repeatability investigation ended at 2026-11-16 00:54:53 UTC after 26m51s: variation exists in the original GPU simulator; tested deterministic modes fix resets but not full contact trajectories. No safe full-run fix was established, so production execution stays unchanged and this limitation is carried forward as explicitly authorized. The Goal 5 stop is resolved. Goals 1–5 pass; practice used 1810, settings tried 1. Diagnostic testing added 1650 full test-only episodes and 150 reset-only probes, bringing cumulative counts to 26606 and 166 respectively. Full traces and binary artifacts remain local only; storage changes were pushed in bfe68cb. Proceed to Goal 6 without another check-in.
+Griffin approved Goals 6-13 with no cuts. Goals 1-6 are complete. Movement-only led Goal 6 at 83.36% versus aim-only 65.16%, joint 78.60%, and the supervised cheating reference 66.16%. All 15 new runs and the artifact audit passed. Cumulative practice is 4810 episodes across independent experiments; four settings tried; 64,830 full test-only episodes and 174 reset-only probes. Goal 7 design and isolated code were prepared while the GPU ran; 14 synthetic unit checks pass, but integration checks must pass before screening. No confirmation seed has been used. Repeatability remains a documented simulator limitation after the authorized 26m51s investigation; production settings are unchanged. Full traces/checkpoints remain local and ignored by git. Continue through Goal 13 without another check-in unless a written tripwire fires.
 
 ## Current status after revised instructions, 2026-11-15
 
@@ -222,3 +222,43 @@ Correcting the camera reading helped some runs and hurt others. The average rose
 
 ### 8. Questions before the next phase
 BLOCKING: planned Goal 5 check-in under CODEX_GOALS.md's When to stop rule, not a failed goal. Read TAKEHOME_REPORT.md and decide whether to continue as written or apply cuts. The likely remaining laptop-awake estimate is 8.1 hours with the fastest measured setup and helpers; the conservative worst-case allowance is 32.5 hours. Account usage allowance is unavailable (rate_limits is null); no percentage used can be inferred from cumulative token counters. Commit and push this completed goal, then wait for Griffin; do not begin Goal 6.
+
+## 2026-11-15: Goal 6 complete, equal-budget comparisons
+
+### 1. What I did (short list)
+- Added bounded movement-only and joint aim/movement controls, with correctly scaled critic inputs and exactly zero initial outputs.
+- Added a clearly labelled supervised reference that cheats on information by learning true camera-bias labels from its own counted practice episodes.
+- Completed 15 new full experiments, reused the five designated Goal 5 aim results, and reviewed separate helper charts and audits.
+- Prepared the Goal 7 design and isolated feature code during detached runs; 14 synthetic feature contracts passed, with integration checks still required before screening.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+| Method | Seed 0 | Seed 1 | Seed 2 | Seed 3 | Seed 4 | Mean | Sample spread |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Aim only | 365/500 | 278/500 | 315/500 | 305/500 | 366/500 | 65.16% | 7.74 points |
+| Movement only | 425/500 | 411/500 | 427/500 | 428/500 | 393/500 | 83.36% | 2.99 points |
+| Aim and movement | 421/500 | 378/500 | 363/500 | 407/500 | 396/500 | 78.60% | 4.60 points |
+| Supervised reference (cheats: true labels) | 325/500 | 349/500 | 328/500 | 327/500 | 325/500 | 66.16% | 2.05 points |
+
+Every row uses practice seeds 0 to 4 and a separate final 500-episode test at seed 123. Original floor 61.4%; no-camera-bias ceiling 94.4%. Movement-only did best among the three eligible learners: +21.96 percentage points over the floor and +18.20 over aim-only. Adding movement to aim increased the mean by 13.44 points; adding aim to movement decreased it by 4.76 points under this budget and recipe. The supervised reference (cheats: true labels) averaged 66.16%; learning bias from ordinary observations remains difficult even with labelled targets, and this trained reference is not an upper bound on what any supervised learner could achieve. All 15 new runs finished in 693.38 seconds including process startup, about 11.6 minutes.
+
+### 3. Checks: each check from the goal, marked pass or fail
+- PASS: all four learned methods include practice seeds 0 to 4, final 500 tests at seed 123, and exactly 200 own practice episodes per run; floor and ceiling are reused no-learning references.
+- PASS: combined network outputs start exactly zero; zero movement leaves the old action unchanged, and zero aim leaves its reading unchanged. The 15 Goal 6 contract checks passed.
+- PASS: the supervised reference (cheats: true labels) is explicitly labelled in its configuration/results, comparison table and plots; it uses the same budget counter.
+- PASS: the report identifies movement-only as best and states what adding each component changed.
+- PASS: the artifact audit reports zero failures across all20 learned results, including finite arrays, frozen policies, exact ledgers, separate tests, distinct seed outcome arrays, no through-wall episodes and the final-trace-only storage rule for new runs. Charts were reviewed; shared legends sit outside curves to keep failures visible.
+
+### 4. Surprises or problems
+The joint learner performed worse than movement alone. True-label supervision did not approach the true-error oracle; access to labels during training is not the same as being given the actual error while acting. No ceiling exception, invalid numerical result, budget overrun, or learned test episode occurred. A shared JAX cache lookup warning was nonfatal; all six worker jobs exited zero. The previously diagnosed simulator nondeterminism remains a limitation and results were not replaced.
+
+### 5. Decisions I logged
+Movement correction cap is 0.2 mm per axis per step with original actuator clipping; supervised labels train a direct bias estimate converted to bounded aim nudges. The manifest fixes all new seeds and preserves the five old designated runs. A seed-789 extra test is predeclared for movement-capable ceiling exceedances but was not needed. Goal 7 numeric choices, compatibility restrictions and conservative comparison rules were written before screening; all named tricks remain included.
+
+### 6. Practice episodes used, and settings tried so far
+3000 new practice episodes across 15 independent 200-episode experiments; cumulative practice 4810. Four distinct settings tried, including the supervised cheating reference; no Goal 7 setting has yet collected practice. Goal 6 added 38,220 experimental test episodes and four contract-test episodes, for 64,830 complete test-only episodes cumulatively, plus 174 reset-only probes. The 14 prepared Goal 7 unit tests used synthetic data and collected no episodes. Full final traces, practice replay and model checkpoints remain local and ignored by git.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+Small corrections to the robot's movement worked better than corrections to its camera reading in these runs. Combining both helped compared with aim alone but did worse than movement alone. The learner trained with true-error labels also struggled to infer the error from what it could observe. These are development results, so they are not the final headline chosen after tuning. The next goal tests every planned variation, then checks the chosen method on untouched confirmation seeds.
+
+### 8. Questions before the next phase
+No blocking issue or new question. Commit and push Goal 6, finish Goal 7 integration checks, and continue through Goal 13 under the approved no-cuts instruction.

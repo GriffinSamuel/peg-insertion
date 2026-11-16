@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "name": "movement_0",
+      "exit_code": 0,
+      "seconds": 368.1607887099999
+    },
+    {
+      "name": "combined_0",
+      "exit_code": 0,
+      "seconds": 405.1635401609983
+    },
+    {
+      "name": "movement_1",
+      "exit_code": 0,
+      "seconds": 502.1939015120006
+    },
+    {
+      "name": "combined_1",
+      "exit_code": 0,
+      "seconds": 537.188107205
+    },
+    {
+      "name": "supervised_cheating_reference_0",
+      "exit_code": 0,
+      "seconds": 268.08882927300147
+    },
+    {
+      "name": "supervised_cheating_reference_1",
+      "exit_code": 0,
+      "seconds": 287.07749867700113
+    }
+  ],
+  "seconds": 693.2924638410004,
+  "finished_utc": "2026-11-16T01:12:50.705328+00:00",
+  "passed": true
+}

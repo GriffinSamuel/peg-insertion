@@ -1,8 +1,8 @@
 """Deterministic off-policy actor-critic with layer-normalized Q ensemble.
 
 The Q output is a discounted return, not a calibrated success probability.
-Only observation, proposed action, reward, next observation and termination
-enter gradient updates. Simulator bias is deliberately absent from this API.
+Ordinary training uses only observation, action, reward, next observation and
+termination. True-bias labels are admitted only by the explicit cheating flag.
 """
 import inspect
 
@@ -12,6 +12,7 @@ from flax import linen as nn, struct
 import jax
 import jax.numpy as jp
 import optax
+from takehome.config import action_scales
 
 
 class Actor(nn.Module):
@@ -70,9 +71,7 @@ class Learner:
         self.critic_net = Critic(config.hidden)
         self.optimizer = optax.chain(optax.clip_by_global_norm(10.0),
                                     optax.adam(config.learning_rate))
-        # Other output dimensions are network-ready; their environment adapters
-        # are intentionally deferred to Goal 6.
-        self.action_scale = jp.full((config.outputs,), config.step_cap)
+        self.action_scale = jp.array(action_scales(config.outputs, config.step_cap, config.movement_cap))
         self.train_block = jax.jit(self._train_block)
 
     def encode(self, obs):
@@ -81,7 +80,13 @@ class Learner:
         return jp.concatenate([base, obs[..., self.base_size:] / self.config.guess_cap], axis=-1)
 
     def act(self, params, obs):
-        return self.actor_net.apply(params, self.encode(obs))
+        output = self.actor_net.apply(params, self.encode(obs))
+        if self.config.supervised_reference:
+            # The cheating reference predicts bias directly; turn that estimate
+            # into the same bounded incremental correction used by the others.
+            return jp.clip((output * self.config.guess_cap - obs[..., -2:]) /
+                           self.config.step_cap, -1, 1)
+        return output
 
     def q_values(self, params, obs, physical_action):
         x = jp.concatenate([self.encode(obs), physical_action / self.action_scale], axis=-1)
@@ -126,6 +131,9 @@ class Learner:
                 actor, actor_opt, target_actor = operand
 
                 def actor_loss(p):
+                    if cfg.supervised_reference:
+                        prediction = self.actor_net.apply(p, self.encode(batch['obs']))
+                        return jp.mean((prediction - batch['true_bias'] / cfg.guess_cap) ** 2)
                     action = self.act(p, batch["obs"]) * self.action_scale
                     return -jp.mean(self.q_values(critics, batch["obs"], action))
 
