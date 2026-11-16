@@ -1,0 +1,5 @@
+max peg/wall penetration over all frames: 0.034 mm
+{
+  "video": "results/takehome/goal9/videos/after_100_wrong_way_correction_2.mp4",
+  "metadata": "results/takehome/goal9/videos/after_100_wrong_way_correction_2.json"
+}

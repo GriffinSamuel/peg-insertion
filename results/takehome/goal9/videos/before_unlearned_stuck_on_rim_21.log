@@ -1,0 +1,5 @@
+max peg/wall penetration over all frames: 0.047 mm
+{
+  "video": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_21.mp4",
+  "metadata": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_21.json"
+}

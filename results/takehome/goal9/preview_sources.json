@@ -1,0 +1,80 @@
+[
+  {
+    "group": "before",
+    "video": "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_31.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 31
+  },
+  {
+    "group": "before",
+    "video": "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_81.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 81
+  },
+  {
+    "group": "before",
+    "video": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_21.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 21
+  },
+  {
+    "group": "before",
+    "video": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_69.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 69
+  },
+  {
+    "group": "before",
+    "video": "results/takehome/goal9/videos/before_unlearned_timeout_2.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 2
+  },
+  {
+    "group": "before",
+    "video": "results/takehome/goal9/videos/before_unlearned_timeout_9.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 9
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_100_wrong_way_correction_2.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 2
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_100_wrong_way_correction_11.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 11
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_100_stuck_on_rim_61.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 61
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_100_stuck_on_rim_280.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 280
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_100_timeout_100.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 100
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_100_timeout_115.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 115
+  },
+  {
+    "group": "after",
+    "video": "results/takehome/goal9/videos/after_103_never_near_hole_contact_493.mp4",
+    "time_seconds": 3.8,
+    "source_episode": 493
+  }
+]

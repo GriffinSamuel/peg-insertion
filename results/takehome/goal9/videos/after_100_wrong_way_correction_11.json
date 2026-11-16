@@ -1,0 +1,22 @@
+{
+  "trace": "results/takehome/goal9/after_seed_100_poses.npz",
+  "source_episode_index_zero_based": 11,
+  "policy_name_for_render_geometry": "force_0.5mm_s2",
+  "network_config": "results/policies/force_0.5mm_s2/network_config.json",
+  "title": "after: wrong_way_correction",
+  "output": "results/takehome/goal9/videos/after_100_wrong_way_correction_11.mp4",
+  "fps": 25.0,
+  "rendered_frame_count": 100,
+  "recorded_illustrative_repeat": true,
+  "new_physics_simulated": false,
+  "observed_final_success_in_trace": false,
+  "outcome_note": "This records the selected trace's final success flag; it does not assert identity with a separately scored episode.",
+  "environment_geometry_and_timing": {
+    "clearance_mm": 0.5,
+    "ctrl_dt": 0.02,
+    "sim_dt": 0.005,
+    "peg_width": 0.02,
+    "peg_len": 0.06,
+    "hole_depth": 0.03
+  }
+}

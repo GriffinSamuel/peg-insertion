@@ -1,0 +1,14 @@
+{
+  "video_count": 13,
+  "passed": true,
+  "output": "results/takehome/goal9/video_audit.json"
+}
+{
+  "csv": "results/takehome/goal9/failure_counts.csv",
+  "chart": "results/takehome/goal9/failure_counts.png",
+  "category_count": 6,
+  "csv_rows": 42,
+  "before_episodes": 500,
+  "after_pooled_episodes": 2500
+}
+{"previewed_videos": 13, "new_simulator_episodes": 0}

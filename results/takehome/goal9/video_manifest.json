@@ -1,0 +1,407 @@
+{
+  "jobs": [
+    {
+      "name": "before_unlearned_never_near_hole_contact_31",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/before_traces.npz",
+        "--episode",
+        "31",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "before: never_near_hole_contact",
+        "--output",
+        "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_31.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_31.log"
+    },
+    {
+      "name": "before_unlearned_never_near_hole_contact_81",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/before_traces.npz",
+        "--episode",
+        "81",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "before: never_near_hole_contact",
+        "--output",
+        "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_81.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_81.log"
+    },
+    {
+      "name": "before_unlearned_stuck_on_rim_21",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/before_traces.npz",
+        "--episode",
+        "21",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "before: stuck_on_rim",
+        "--output",
+        "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_21.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_21.log"
+    },
+    {
+      "name": "before_unlearned_stuck_on_rim_69",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/before_traces.npz",
+        "--episode",
+        "69",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "before: stuck_on_rim",
+        "--output",
+        "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_69.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_69.log"
+    },
+    {
+      "name": "before_unlearned_timeout_2",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/before_traces.npz",
+        "--episode",
+        "2",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "before: timeout",
+        "--output",
+        "results/takehome/goal9/videos/before_unlearned_timeout_2.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/before_unlearned_timeout_2.log"
+    },
+    {
+      "name": "before_unlearned_timeout_9",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/before_traces.npz",
+        "--episode",
+        "9",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "before: timeout",
+        "--output",
+        "results/takehome/goal9/videos/before_unlearned_timeout_9.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/before_unlearned_timeout_9.log"
+    },
+    {
+      "name": "after_100_wrong_way_correction_2",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_100_poses.npz",
+        "--episode",
+        "2",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: wrong_way_correction",
+        "--output",
+        "results/takehome/goal9/videos/after_100_wrong_way_correction_2.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_100_wrong_way_correction_2.log"
+    },
+    {
+      "name": "after_100_wrong_way_correction_11",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_100_poses.npz",
+        "--episode",
+        "11",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: wrong_way_correction",
+        "--output",
+        "results/takehome/goal9/videos/after_100_wrong_way_correction_11.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_100_wrong_way_correction_11.log"
+    },
+    {
+      "name": "after_100_stuck_on_rim_61",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_100_poses.npz",
+        "--episode",
+        "61",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: stuck_on_rim",
+        "--output",
+        "results/takehome/goal9/videos/after_100_stuck_on_rim_61.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_100_stuck_on_rim_61.log"
+    },
+    {
+      "name": "after_100_stuck_on_rim_280",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_100_poses.npz",
+        "--episode",
+        "280",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: stuck_on_rim",
+        "--output",
+        "results/takehome/goal9/videos/after_100_stuck_on_rim_280.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_100_stuck_on_rim_280.log"
+    },
+    {
+      "name": "after_100_timeout_100",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_100_poses.npz",
+        "--episode",
+        "100",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: timeout",
+        "--output",
+        "results/takehome/goal9/videos/after_100_timeout_100.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_100_timeout_100.log"
+    },
+    {
+      "name": "after_100_timeout_115",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_100_poses.npz",
+        "--episode",
+        "115",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: timeout",
+        "--output",
+        "results/takehome/goal9/videos/after_100_timeout_115.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_100_timeout_115.log"
+    },
+    {
+      "name": "after_103_never_near_hole_contact_493",
+      "args": [
+        "takehome/render_failure.py",
+        "--trace",
+        "results/takehome/goal9/after_seed_103_poses.npz",
+        "--episode",
+        "493",
+        "--policy",
+        "force_0.5mm_s2",
+        "--title",
+        "after: never_near_hole_contact",
+        "--output",
+        "results/takehome/goal9/videos/after_103_never_near_hole_contact_493.mp4"
+      ],
+      "log": "results/takehome/goal9/videos/after_103_never_near_hole_contact_493.log"
+    }
+  ],
+  "examples": [
+    {
+      "group": "before",
+      "practice_seed": "unlearned",
+      "type": "never_near_hole_contact",
+      "episode_id": 31,
+      "trace_path": "results/takehome/goal9/before_traces.npz",
+      "video": "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_31.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "before",
+      "practice_seed": "unlearned",
+      "type": "never_near_hole_contact",
+      "episode_id": 81,
+      "trace_path": "results/takehome/goal9/before_traces.npz",
+      "video": "results/takehome/goal9/videos/before_unlearned_never_near_hole_contact_81.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "before",
+      "practice_seed": "unlearned",
+      "type": "stuck_on_rim",
+      "episode_id": 21,
+      "trace_path": "results/takehome/goal9/before_traces.npz",
+      "video": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_21.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "before",
+      "practice_seed": "unlearned",
+      "type": "stuck_on_rim",
+      "episode_id": 69,
+      "trace_path": "results/takehome/goal9/before_traces.npz",
+      "video": "results/takehome/goal9/videos/before_unlearned_stuck_on_rim_69.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "before",
+      "practice_seed": "unlearned",
+      "type": "timeout",
+      "episode_id": 2,
+      "trace_path": "results/takehome/goal9/before_traces.npz",
+      "video": "results/takehome/goal9/videos/before_unlearned_timeout_2.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "before",
+      "practice_seed": "unlearned",
+      "type": "timeout",
+      "episode_id": 9,
+      "trace_path": "results/takehome/goal9/before_traces.npz",
+      "video": "results/takehome/goal9/videos/before_unlearned_timeout_9.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 100,
+      "type": "wrong_way_correction",
+      "episode_id": 2,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz",
+      "video": "results/takehome/goal9/videos/after_100_wrong_way_correction_2.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 100,
+      "type": "wrong_way_correction",
+      "episode_id": 11,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz",
+      "video": "results/takehome/goal9/videos/after_100_wrong_way_correction_11.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 100,
+      "type": "stuck_on_rim",
+      "episode_id": 61,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz",
+      "video": "results/takehome/goal9/videos/after_100_stuck_on_rim_61.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 100,
+      "type": "stuck_on_rim",
+      "episode_id": 280,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz",
+      "video": "results/takehome/goal9/videos/after_100_stuck_on_rim_280.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 100,
+      "type": "timeout",
+      "episode_id": 100,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz",
+      "video": "results/takehome/goal9/videos/after_100_timeout_100.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 100,
+      "type": "timeout",
+      "episode_id": 115,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz",
+      "video": "results/takehome/goal9/videos/after_100_timeout_115.mp4",
+      "illustrative_repeat": true
+    },
+    {
+      "group": "after",
+      "practice_seed": 103,
+      "type": "never_near_hole_contact",
+      "episode_id": 493,
+      "trace_path": "results/takehome/goal9/after_seed_103_poses.npz",
+      "video": "results/takehome/goal9/videos/after_103_never_near_hole_contact_493.mp4",
+      "illustrative_repeat": true
+    }
+  ],
+  "pose_repeat_summaries": [
+    {
+      "seed": 100,
+      "episodes": 500,
+      "counts": {
+        "never_near_hole_contact": 0,
+        "wrong_way_correction": 94,
+        "stuck_on_rim": 5,
+        "timeout": 19,
+        "other": 0
+      },
+      "successes": 382,
+      "trace_path": "results/takehome/goal9/after_seed_100_poses.npz"
+    },
+    {
+      "seed": 101,
+      "episodes": 500,
+      "counts": {
+        "never_near_hole_contact": 0,
+        "wrong_way_correction": 24,
+        "stuck_on_rim": 17,
+        "timeout": 68,
+        "other": 0
+      },
+      "successes": 391,
+      "trace_path": "results/takehome/goal9/after_seed_101_poses.npz"
+    },
+    {
+      "seed": 102,
+      "episodes": 500,
+      "counts": {
+        "never_near_hole_contact": 0,
+        "wrong_way_correction": 31,
+        "stuck_on_rim": 8,
+        "timeout": 42,
+        "other": 0
+      },
+      "successes": 419,
+      "trace_path": "results/takehome/goal9/after_seed_102_poses.npz"
+    },
+    {
+      "seed": 103,
+      "episodes": 500,
+      "counts": {
+        "never_near_hole_contact": 1,
+        "wrong_way_correction": 57,
+        "stuck_on_rim": 10,
+        "timeout": 83,
+        "other": 0
+      },
+      "successes": 349,
+      "trace_path": "results/takehome/goal9/after_seed_103_poses.npz"
+    }
+  ],
+  "missing_after_examples": {
+    "never_near_hole_contact": 0,
+    "wrong_way_correction": 0,
+    "stuck_on_rim": 0,
+    "timeout": 0,
+    "other": 0
+  },
+  "repeatability_limitation": "Illustrative repeats may differ from scored episodes",
+  "suite_summary": "results/takehome/goal9/video_suite.json"
+}

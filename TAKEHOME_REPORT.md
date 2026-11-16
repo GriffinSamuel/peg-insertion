@@ -195,3 +195,30 @@ The average absolute prediction gap across ten probability bins is6.32 points. T
 ![Confidence over training](results/takehome/goal8/calibration_over_training.png)
 
 Sources: [all seeds and checkpoints](results/takehome/goal8/summary.json), [confident failed moments](results/takehome/goal8/confident_failed.csv), [confidence drops](results/takehome/goal8/confidence_drops.csv). Rebuild all three figures with `source scripts/env.sh && python -B takehome/plot_calibration.py`. The intermediate traces are the explicitly needed Goal8 exception to final-only full traces; they remain local. Intermediate diagnostics use256 tests at123, final diagnostics reuse500 at456 per seed.
+
+
+## Goal 9: remaining failure patterns
+
+The original-policy traced repeat had303 successes and197 failures in500 tests at seed456. This is separate from the304-success headline reference. The final method's original confirmation traces contain2,005 successes and495 failures in2,500 tests, allfive seeds pooled. The fixed rule order is near-hole contact missing, wrong-way correction, stuck on rim, residual timeout, then other. An episode matches the first applicable rule, so categories are exclusive and the timeout row excludes failures already assigned another label.
+
+| Operational label | Before | After, pooled |
+|---|---:|---:|
+| never near hole contact | 7/500 (1.40%) | 1/2500 (0.04%) |
+| wrong way correction | 0/500 (0.00%) | 216/2500 (8.64%) |
+| stuck on rim | 22/500 (4.40%) | 68/2500 (2.72%) |
+| timeout | 168/500 (33.60%) | 210/2500 (8.40%) |
+| other | 0/500 (0.00%) | 0/2500 (0.00%) |
+
+Every count is retained, including zero in other. Wrong-way means excess aim-estimation error or accumulated outward movement command by the fixed threshold. It does not prove that the correction caused the failure, and the old policy has no correction to meet that rule. The outward direction calculation retains camera white noise. Rules, their exact thresholds, allfive seed counts and per-episode evidence are in [failures.json](results/takehome/goal9/failures.json).
+
+The video manifest selects13 examples: six before and seven after, including the one available near-hole-contact failure after learning. There are no examples to invent for categories with zero cases. Videos come from labelled pose-recorded repeats at the same fixed seed456, with every repeat's result retained: before303/500; after practice seeds100,101,102,103 score382,391,419,349/500. These scores never replace the original confirmation results. The final movement-only method keeps its camera-error guess at zero, which is correctly visible beside the true error in the overlay. [Video manifest](results/takehome/goal9/video_manifest.json).
+
+All13 local videos passed metadata, decoded-frame, frame-rate and duration checks. The lead reviewed every ending preview and sampled the approach/contact/end of two examples. The near-contact label is a force-and-distance proxy; it does not mean the peg never approached the hole.
+
+![Failure counts](results/takehome/goal9/failure_counts.png)
+
+![Before examples](results/takehome/goal9/before_examples.png)
+
+![After examples](results/takehome/goal9/after_examples.png)
+
+Rebuild counts with `source scripts/env.sh && python -B takehome/plot_failures.py`; rebuild both preview sheets from the local videos with `source scripts/env.sh && python -B takehome/video_contact_sheet.py`. The temporal review sheet is reproducible with `source scripts/env.sh && python -B takehome/video_motion_review.py`. Videos and full traces remain local; their source manifests and small previews are committed.

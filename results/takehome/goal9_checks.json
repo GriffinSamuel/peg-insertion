@@ -1,0 +1,50 @@
+{
+  "goal": 9,
+  "completed_utc": "2026-11-16T02:36:04.492477+00:00",
+  "all_goal_checks_pass": true,
+  "checks": [
+    {
+      "check": "Each failure type has a recorded-trajectory rule",
+      "passed": true
+    },
+    {
+      "check": "Fixed rule order makes each failed episode enter exactly one category",
+      "passed": true
+    },
+    {
+      "check": "Other category is included and all counts sum correctly",
+      "passed": true
+    }
+  ],
+  "video_count": 13,
+  "video_audit": "results/takehome/goal9/video_audit.json",
+  "visual_review_passed": true,
+  "visual_review": "Reviewed all13 ending previews and two representative videos at0,1,2,3.8 seconds. Overlays readable; failed insertions remain near the rim or shallow; no gross wall passage visible. The near-contact label is the declared force/distance proxy, not a claim that the peg never approached the hole.",
+  "before_episodes": 500,
+  "before_successes": 303,
+  "before_failures": 197,
+  "after_episodes": 2500,
+  "after_successes": 2005,
+  "after_failures": 495,
+  "before_counts": {
+    "never_near_hole_contact": 7,
+    "wrong_way_correction": 0,
+    "stuck_on_rim": 22,
+    "timeout": 168,
+    "other": 0
+  },
+  "after_counts": {
+    "never_near_hole_contact": 1,
+    "wrong_way_correction": 216,
+    "stuck_on_rim": 68,
+    "timeout": 210,
+    "other": 0
+  },
+  "original_confirmation_reused": true,
+  "illustrative_repeats_do_not_replace_scores": true,
+  "new_test_episodes": 2500,
+  "practice_episodes_added": 0,
+  "practice_episodes_total": 22210,
+  "settings_tried": 28,
+  "full_test_episodes_total": 297970
+}

@@ -1,0 +1,5 @@
+max peg/wall penetration over all frames: 0.102 mm
+{
+  "video": "results/takehome/goal9/videos/after_100_timeout_100.mp4",
+  "metadata": "results/takehome/goal9/videos/after_100_timeout_100.json"
+}

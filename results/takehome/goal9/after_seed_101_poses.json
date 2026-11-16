@@ -1,0 +1,22 @@
+{
+  "episodes": 500,
+  "successes": 391,
+  "success_rate": 0.782,
+  "ci_lo": 0.7437328590676937,
+  "ci_hi": 0.8159668560808768,
+  "steps_mean": 147.26853942871094,
+  "steps_median": 146.0,
+  "peak_force_mean": 92.31851196289062,
+  "final_xy_err_mean_mm": 0.7062652111053467,
+  "final_depth_mean_mm": 23.958566665649414,
+  "still_inserted_at_end": 0.782,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6877779960632324,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 456,
+  "illustrative_repeat": true,
+  "not_used_to_replace_headline": true,
+  "ceiling_verification": null
+}

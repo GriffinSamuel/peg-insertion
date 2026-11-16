@@ -1,0 +1,72 @@
+{
+  "jobs": [
+    {
+      "name": "before_unlearned_never_near_hole_contact_31",
+      "exit_code": 0,
+      "seconds": 44.05271028400057
+    },
+    {
+      "name": "before_unlearned_never_near_hole_contact_81",
+      "exit_code": 0,
+      "seconds": 44.05084984399946
+    },
+    {
+      "name": "before_unlearned_stuck_on_rim_21",
+      "exit_code": 0,
+      "seconds": 44.03138274699995
+    },
+    {
+      "name": "before_unlearned_stuck_on_rim_69",
+      "exit_code": 0,
+      "seconds": 44.02627085200038
+    },
+    {
+      "name": "before_unlearned_timeout_2",
+      "exit_code": 0,
+      "seconds": 34.05853793300048
+    },
+    {
+      "name": "after_100_wrong_way_correction_11",
+      "exit_code": 0,
+      "seconds": 34.04266086000098
+    },
+    {
+      "name": "before_unlearned_timeout_9",
+      "exit_code": 0,
+      "seconds": 38.107063420000486
+    },
+    {
+      "name": "after_100_wrong_way_correction_2",
+      "exit_code": 0,
+      "seconds": 38.102838685999814
+    },
+    {
+      "name": "after_100_stuck_on_rim_61",
+      "exit_code": 0,
+      "seconds": 34.09258337600113
+    },
+    {
+      "name": "after_100_stuck_on_rim_280",
+      "exit_code": 0,
+      "seconds": 34.083656639000765
+    },
+    {
+      "name": "after_100_timeout_100",
+      "exit_code": 0,
+      "seconds": 35.09228722999978
+    },
+    {
+      "name": "after_100_timeout_115",
+      "exit_code": 0,
+      "seconds": 35.086002979000114
+    },
+    {
+      "name": "after_103_never_near_hole_contact_493",
+      "exit_code": 0,
+      "seconds": 28.0161427740004
+    }
+  ],
+  "seconds": 142.3114017249991,
+  "finished_utc": "2026-11-16T02:34:22.674627+00:00",
+  "passed": true
+}

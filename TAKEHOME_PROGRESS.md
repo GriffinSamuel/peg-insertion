@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goals 1-8 complete; Goal 9 next (2026-11-15)
+## Current status: Goals 1-9 complete; Goal 10 next (2026-11-15)
 
-Final movement method and80.20% confirmation headline remain unchanged. Goal8 predictor is underconfident on average by5.23pp; all45 own-practice fits and test-only provenance checks passed. Next collect failure categories and illustrative pose repeats, then render videos. Pose recording passed its four-episode integration test. Total28 settings,22,210 practice episodes,295,470 full test-only episodes. Continue through Goal13 with no cuts; binaries stay local. Repeatability remains a documented limitation.
+Final movement method and80.20% confirmation headline remain unchanged. Failure categories cover all495 final-method failures and197 before-repeat failures, with every seed shown. All13 illustrative videos passed audits and visual review. Next measure the three other policies' own references, then train the unchanged recipe on seeds0-2. Total28 settings,22,210 practice episodes and297,970 full test-only episodes. Continue through Goal13 with no cuts; binaries remain local and repeatability remains a documented limitation.
 
 ## Historical status after revised instructions, 2026-11-15
 
@@ -347,3 +347,43 @@ The learner's raw rating cannot be read as a percentage. A separate predictor tr
 ### 8. Questions before the next phase
 
 None requiring a pause. Continue to failure analysis.
+
+
+## 2026-11-15: Goal 9 complete
+
+### 1. What I did (short list)
+
+- Applied the predeclared ordered failure rules to all original confirmation traces and a separate500-test before repeat.
+- Recorded labelled illustrative pose repeats and rendered13 videos through the existing rendering functions.
+- Audited every video and reviewed all ending previews plus temporal samples; produced per-seed/pooled failure tables and chart.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Before repeat303/500 successes; failures: never-contact7, wrong-way0, rim22, residual timeout168, other0. After, across practice seeds100-104 and2,500 tests at456: successes2,005; failures1,216,68,210,0 in the same order. Each category's all-seed counts are in failures.json. Four separate pose repeats at practice seeds100-103 scored382,391,419,349/500; all remain labelled illustrative and do not replace scored tests. Pose analysis took54.03s; rendering142.39s.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: every category is defined from recorded quantities with fixed thresholds.
+- PASS: fixed order assigns each failure exactly once.
+- PASS: other is included and counts sum to197 before and495 after failures.
+- PASS: all13 videos reuse existing rendering code through takehome-only scripts; overlays, metadata,100 frames,25fps and4s duration checked.
+
+### 4. Surprises or problems
+
+The before traced repeat differs from the headline by one success, consistent with the known reproducibility limitation. Wrong-way labels do not prove causation and cannot occur without a correction; the remaining timeout category excludes earlier pattern matches. Near-contact is a joint5mm/3mm/5N proxy, not literal absence of approach. Only one after episode belonged to that rare category, so one example is shown; zero-case categories have no invented videos.
+
+### 5. Decisions I logged
+
+The fixed rule order, noisy outward-direction approximation, labelled pose-repeat policy, small preview artifacts and temporal review samples are all logged. No rules were changed after seeing counts.
+
+### 6. Practice episodes used, and settings tried so far
+
+Zero new practice,22,210 total,28 settings. Goal9 added2,500 test-only episodes (500 before plus four500-test pose repeats), bringing full test-only total to297,970;182 reset-only probes remain separate. Original2,500 final tests were reused without recounting.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The final method fails less often overall. The remaining failures include shallow contact, outward correction commands and failures to finish in time. These labels describe patterns, not proven causes. The videos show what those patterns look like with the true camera error visible. Repeated video runs are kept separate from the headline scores.
+
+### 8. Questions before the next phase
+
+None requiring a pause. Continue to the three-policy transfer check.
