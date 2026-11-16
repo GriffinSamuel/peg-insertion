@@ -1,0 +1,935 @@
+{
+  "inventory_kind": "read-only structural inventory; no experiments run and no settings selected",
+  "original_setting_count": 24,
+  "settings": [
+    {
+      "index": 1,
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "fill_episodes": 0
+      },
+      "design_definition": "Fill share values 0, 10, 20, 80, 120; reuse 40.",
+      "design_numeric_values": [
+        0
+      ],
+      "design_numeric_units_or_meaning": "fill episodes",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 4
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      }
+    },
+    {
+      "index": 2,
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "fill_episodes": 10
+      },
+      "design_definition": "Fill share values 0, 10, 20, 80, 120; reuse 40.",
+      "design_numeric_values": [
+        10
+      ],
+      "design_numeric_units_or_meaning": "fill episodes",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 20
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      }
+    },
+    {
+      "index": 3,
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "fill_episodes": 20
+      },
+      "design_definition": "Fill share values 0, 10, 20, 80, 120; reuse 40.",
+      "design_numeric_values": [
+        20
+      ],
+      "design_numeric_units_or_meaning": "fill episodes",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 36
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      }
+    },
+    {
+      "index": 4,
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "fill_episodes": 80
+      },
+      "design_definition": "Fill share values 0, 10, 20, 80, 120; reuse 40.",
+      "design_numeric_values": [
+        80
+      ],
+      "design_numeric_units_or_meaning": "fill episodes",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 52
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      }
+    },
+    {
+      "index": 5,
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "fill_episodes": 120
+      },
+      "design_definition": "Fill share values 0, 10, 20, 80, 120; reuse 40.",
+      "design_numeric_values": [
+        120
+      ],
+      "design_numeric_units_or_meaning": "fill episodes",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 68
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      }
+    },
+    {
+      "index": 6,
+      "name": "side_by_side",
+      "label": "side by side",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "design_definition": "Independent aim/movement actors and critic ensembles; simultaneous; reuse joint.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 84
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      }
+    },
+    {
+      "index": 7,
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "design_definition": "Independent aim/movement actors and critic ensembles; aim then movement; reuse joint.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 101
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      }
+    },
+    {
+      "index": 8,
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "design_definition": "Independent aim/movement actors and critic ensembles; movement then aim; reuse joint.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 118
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      }
+    },
+    {
+      "index": 9,
+      "name": "briefing",
+      "label": "Critic briefing on own fill",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "briefing": true
+      },
+      "design_definition": "Four critic updates per valid own fill transition; actor frozen.",
+      "design_numeric_values": [
+        4
+      ],
+      "design_numeric_units_or_meaning": "critic updates per valid own fill transition",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 135
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 11
+      }
+    },
+    {
+      "index": 10,
+      "name": "privileged_critic",
+      "label": "True bias to critic during training",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "privileged_critic": true
+      },
+      "design_definition": "True XY bias divided by guess cap appended to critic input during training and labelled diagnostic recording only; never actor input.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 151
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 12
+      }
+    },
+    {
+      "index": 11,
+      "name": "one_critic",
+      "label": "One critic",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "ensemble": 1
+      },
+      "design_definition": "One critic copy; reuse four.",
+      "design_numeric_values": [
+        1,
+        4
+      ],
+      "design_numeric_units_or_meaning": "critic copies in variant, reused critic copies",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 167
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 13
+      }
+    },
+    {
+      "index": 12,
+      "name": "one_update",
+      "label": "One update per new step",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "updates_per_step": 1
+      },
+      "design_definition": "One critic update per valid new step, actor every update; reuse four.",
+      "design_numeric_values": [
+        1,
+        4
+      ],
+      "design_numeric_units_or_meaning": "critic updates per valid new step, actor updated each update (1=yes)",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 183
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 14
+      }
+    },
+    {
+      "index": 13,
+      "name": "aim_cap_50um",
+      "label": "Aim cap 0.05 mm",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "step_cap": 5e-05
+      },
+      "design_definition": "0.05 mm per-step aim cap; reuse 0.1 mm; guess cap stays 3 mm.",
+      "design_numeric_values": [
+        0.05,
+        0.1,
+        3
+      ],
+      "design_numeric_units_or_meaning": "mm aim cap, reuse mm aim cap, mm guess cap",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 199
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      }
+    },
+    {
+      "index": 14,
+      "name": "aim_cap_200um",
+      "label": "Aim cap 0.2 mm",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "step_cap": 0.0002
+      },
+      "design_definition": "0.2 mm per-step aim cap; reuse 0.1 mm; guess cap stays 3 mm.",
+      "design_numeric_values": [
+        0.2,
+        0.1,
+        3
+      ],
+      "design_numeric_units_or_meaning": "mm aim cap, reuse mm aim cap, mm guess cap",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 215
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      }
+    },
+    {
+      "index": 15,
+      "name": "movement_cap_400um",
+      "label": "Movement cap 0.4 mm",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "movement_cap": 0.0004
+      },
+      "design_definition": "0.4 mm per-step movement cap; reuse 0.2 mm.",
+      "design_numeric_values": [
+        0.4,
+        0.2
+      ],
+      "design_numeric_units_or_meaning": "mm movement cap, reuse mm movement cap",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "coordination mode requires outputs=5",
+        "movement_only_outputs3": "the switch is structurally compatible with outputs=3 after the manifest outputs=5 override is removed"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 231
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 16
+      }
+    },
+    {
+      "index": 16,
+      "name": "final_decider",
+      "label": "Final critic decider",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "final_decider": true
+      },
+      "design_definition": "Rates: zero, aim only, movement only, both, half both, 1.5 times both clipped, half aim plus movement, aim plus half movement.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 248
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 17
+      }
+    },
+    {
+      "index": 17,
+      "name": "near_hole",
+      "label": "Hand over near hole",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "near_hole": true
+      },
+      "design_definition": "Active when observed absolute height <15 mm and observed XY distance <10 mm; otherwise zero correction.",
+      "design_numeric_values": [
+        15,
+        10
+      ],
+      "design_numeric_units_or_meaning": "absolute height threshold mm, XY distance threshold mm",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 265
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 18
+      }
+    },
+    {
+      "index": 18,
+      "name": "contact_cap",
+      "label": "Contact-dependent movement cap",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "contact_cap": true
+      },
+      "design_definition": "Nominal cap times 0.5 below 5 N sensor force, times 2 at or above 5 N.",
+      "design_numeric_values": [
+        0.5,
+        5,
+        2
+      ],
+      "design_numeric_units_or_meaning": "cap multiplier below 5 N threshold, force threshold N, multiplier at/above threshold",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 281
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 19
+      }
+    },
+    {
+      "index": 19,
+      "name": "uncertainty_cap",
+      "label": "Old-policy uncertainty cap",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "uncertainty_cap": true
+      },
+      "design_definition": "Each axis nominal cap times clip(2 times frozen-policy pre-tanh action standard deviation, 0.5, 2); no sampling.",
+      "design_numeric_values": [
+        2,
+        0.5,
+        2
+      ],
+      "design_numeric_units_or_meaning": "standard deviation multiplier, lower clip bound, upper clip bound",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 298
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 20
+      }
+    },
+    {
+      "index": 20,
+      "name": "classification",
+      "label": "Classification critic loss",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "classification": true
+      },
+      "design_definition": "Sigmoid critic output with binary cross entropy and same discounted target; raw Q is not a finite-episode probability.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 315
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 21
+      }
+    },
+    {
+      "index": 21,
+      "name": "three_step",
+      "label": "Three-step credit",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "n_step": 3
+      },
+      "design_definition": "Three-step discounted return plus bootstrap, cut at success or time limit; bootstrap retained at time limit.",
+      "design_numeric_values": [
+        3
+      ],
+      "design_numeric_units_or_meaning": "steps",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 331
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 22
+      }
+    },
+    {
+      "index": 22,
+      "name": "return_floor",
+      "label": "Observed return floor",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "return_floor": true
+      },
+      "design_definition": "Bellman target at least discounted observed return to end of its own practice episode.",
+      "design_numeric_values": [],
+      "design_numeric_units_or_meaning": "not numerically parameterized in design row",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 347
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 23
+      }
+    },
+    {
+      "index": 23,
+      "name": "force_penalty",
+      "label": "Force penalty (peak force reported)",
+      "base": "combined",
+      "exact_manifest_overrides": {
+        "outputs": 5,
+        "force_penalty": true
+      },
+      "design_definition": "Subtract 0.001 times max(force minus 15 N, 0) times 0.02 seconds per valid step; unchanged success test; report peak force.",
+      "design_numeric_values": [
+        0.001,
+        15,
+        0.02
+      ],
+      "design_numeric_units_or_meaning": "penalty coefficient, force threshold N, timestep seconds",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": 5,
+        "existing_VariantConfig_constraint": "requires outputs=5 for this switch",
+        "movement_only_outputs3": "not accepted by the existing guard"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 363
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 24
+      }
+    },
+    {
+      "index": 24,
+      "name": "sibling_fill",
+      "label": "Sibling-policy fill-up",
+      "base": "aim",
+      "exact_manifest_overrides": {
+        "sibling_fill": true
+      },
+      "design_definition": "40 own counted fill episodes round-robin over force_0.5mm_s0, s3, s4, allocated 20, 10, 10; recorded original successes are nonzero.",
+      "design_numeric_values": [
+        40,
+        20,
+        10,
+        10
+      ],
+      "design_numeric_units_or_meaning": "own fill total, force_0.5mm_s0 count, s3 count, s4 count",
+      "output3_structural_assessment": {
+        "manifest_declared_outputs": "inherited from base config",
+        "existing_VariantConfig_constraint": "no outputs=5 guard for this switch",
+        "movement_only_outputs3": "accepted by TrainConfig/VariantConfig output-count validation, subject to other listed constraints"
+      },
+      "manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 380
+      },
+      "design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 25
+      }
+    }
+  ],
+  "output_dimension_structural_rules": [
+    {
+      "fact": "TrainConfig accepts output counts 2, 3, or 5.",
+      "source": {
+        "path": "takehome/config.py",
+        "lines": "27-29"
+      }
+    },
+    {
+      "fact": "Three outputs scale all three action dimensions by movement_cap.",
+      "source": {
+        "path": "takehome/config.py",
+        "lines": "53-60"
+      }
+    },
+    {
+      "fact": "VariantConfig rejects outputs other than 5 when coordination is non-joint or final_decider, contact_cap, uncertainty_cap, or force_penalty is enabled.",
+      "source": {
+        "path": "takehome/variants.py",
+        "lines": "35-37"
+      }
+    },
+    {
+      "fact": "The three coordination modes instantiate separate 2-output aim and 3-output movement learners, then concatenate to a 5-output action.",
+      "source": {
+        "path": "takehome/coordination.py",
+        "lines": "29-39"
+      }
+    }
+  ],
+  "movement_only_adaptation_mechanics": [
+    {
+      "switch": "final_decider",
+      "current_code_mechanics": [
+        "decider_candidates splits a five-output action at index 2 into aim and movement parts and emits eight candidate vectors.",
+        "VariantLearner.choose scores the candidates with critics and returns the highest-scoring candidate."
+      ],
+      "movement_only_structural_requirements": [
+        "A three-output action has no two-value aim prefix; the candidate construction and scaling would need to operate on the three movement dimensions.",
+        "The plan lists eight combined/aim/movement rate options but does not define a numeric movement-only candidate list; movement-only rates are unspecified in source."
+      ],
+      "source_refs": [
+        {
+          "path": "takehome/variants.py",
+          "lines": "58-62"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "163-171"
+        },
+        {
+          "path": "takehome/goal7_design.md",
+          "line": 17
+        },
+        {
+          "path": "takehome/config.py",
+          "lines": "53-60"
+        }
+      ]
+    },
+    {
+      "switch": "contact_cap",
+      "current_code_mechanics": [
+        "VariantEnv.movement_limit creates a length-three cap vector.",
+        "It multiplies that vector by 0.5 when force norm is below 5 N and by 2 when force norm is at least 5 N."
+      ],
+      "movement_only_structural_requirements": [
+        "A movement-only actor already has three action scales; the cap must remain dimensionally aligned to its three movement outputs.",
+        "Existing VariantConfig validation requires five outputs for contact_cap; outputs=3 adaptation would require changing that guard."
+      ],
+      "source_refs": [
+        {
+          "path": "takehome/variants.py",
+          "lines": "81-89"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "35-37"
+        },
+        {
+          "path": "takehome/config.py",
+          "lines": "53-60"
+        },
+        {
+          "path": "takehome/goal7_design.md",
+          "line": 19
+        }
+      ]
+    },
+    {
+      "switch": "uncertainty_cap",
+      "current_code_mechanics": [
+        "VariantEnv obtains scale from the frozen policy action distribution using the corrected observation.",
+        "It multiplies each axis cap by clip(2*std,0.5,2); this path uses the distribution scale and does not sample an action."
+      ],
+      "movement_only_structural_requirements": [
+        "For movement-only output, uncertainty scale and cap must correspond to the three movement action dimensions.",
+        "Existing VariantConfig validation requires five outputs for uncertainty_cap; outputs=3 adaptation would require changing that guard."
+      ],
+      "source_refs": [
+        {
+          "path": "takehome/variants.py",
+          "lines": "89-93"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "35-37"
+        },
+        {
+          "path": "takehome/config.py",
+          "lines": "53-60"
+        },
+        {
+          "path": "takehome/goal7_design.md",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "switch": "force_penalty",
+      "current_code_mechanics": [
+        "The plan defines a per-valid-step reward subtraction using force above 15 N times a 0.02 s step.",
+        "The existing config has a five-output guard for force_penalty."
+      ],
+      "movement_only_structural_requirements": [
+        "The movement-only action dimension must remain three while force values and valid-step reward rows remain aligned.",
+        "The success test remains unchanged and peak force must be reported per plan.",
+        "Existing VariantConfig validation requires five outputs; outputs=3 adaptation would require changing that guard."
+      ],
+      "source_refs": [
+        {
+          "path": "takehome/goal7_design.md",
+          "line": 24
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "35-37"
+        },
+        {
+          "path": "takehome/config.py",
+          "lines": "53-60"
+        }
+      ]
+    },
+    {
+      "switch": "sibling_fill",
+      "current_code_mechanics": [
+        "During fill source, EpisodeCollection selects force_0.5mm_s0, force_0.5mm_s3, force_0.5mm_s4 by batch_index modulo 3.",
+        "Each sibling gets an EpisodeRunner using the parent learner; runner checks sibling frozen-policy digests after run."
+      ],
+      "movement_only_structural_requirements": [
+        "This is fill-source routing and frozen-policy integrity, not an action-output cap; outputs3 is not rejected by a sibling_fill-specific guard.",
+        "Design allocation is 20/10/10 over 40 own counted fill episodes; existing routing is modulo 3."
+      ],
+      "source_refs": [
+        {
+          "path": "takehome/variant_runner.py",
+          "lines": "19-29"
+        },
+        {
+          "path": "takehome/variant_runner.py",
+          "lines": "71-80"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "35-37"
+        },
+        {
+          "path": "takehome/goal7_design.md",
+          "line": 25
+        }
+      ]
+    }
+  ],
+  "reusable_runners_and_classes": [
+    {
+      "path": "takehome/variant_runner.py",
+      "class": "EpisodeCollection",
+      "line": 12,
+      "use": "training episode source routing, including sibling fill"
+    },
+    {
+      "path": "takehome/variant_runner.py",
+      "class": "VariantExperimentRunner",
+      "line": 35,
+      "use": "variant experiment orchestration"
+    },
+    {
+      "path": "takehome/variants.py",
+      "class": "VariantEnv",
+      "line": 65,
+      "use": "variant movement limits and observation-dependent mechanics"
+    },
+    {
+      "path": "takehome/variants.py",
+      "class": "VariantLearner",
+      "line": 146,
+      "use": "critic/action selection and variant learning"
+    },
+    {
+      "path": "takehome/coordination.py",
+      "class": "CoordinatedLearner",
+      "line": 29,
+      "use": "separate aim/movement learners and five-output composition"
+    },
+    {
+      "path": "takehome/episodes.py",
+      "class": "EpisodeRunner",
+      "line": 21,
+      "use": "episode collection and tests"
+    },
+    {
+      "path": "takehome/train.py",
+      "class": "ExperimentRunner",
+      "line": 43,
+      "use": "base training orchestration"
+    }
+  ],
+  "relevant_existing_test_files": [
+    {
+      "path": "takehome/test_variants.py",
+      "reusable_test_functions": [
+        "test_incompatible_combinations_rejected",
+        "test_main_equivalence_and_briefing_freezes_actor",
+        "test_privileged_critic_never_changes_actor_input",
+        "test_decider_candidates_are_bounded_and_zero_initially",
+        "test_classification_loss_is_bounded_and_finite",
+        "test_nstep_return_floor_and_force_penalty_do_not_cross_episodes",
+        "test_coordination_has_separate_states_and_freezes_inactive_part",
+        "test_handover_and_dynamic_caps_use_available_sensors"
+      ],
+      "source_lines": "36-136"
+    },
+    {
+      "path": "takehome/test_variant_integration.py",
+      "reusable_test_functions": [
+        "test_feature_rollouts_are_finite_and_never_learned",
+        "test_sibling_selection_is_fresh_own_fill_not_old_results"
+      ],
+      "source_lines": "14-49"
+    },
+    {
+      "path": "takehome/test_goal6.py",
+      "reusable_test_functions": [
+        "test_movement_cap_and_zero_control",
+        "test_mixed_units_and_zero_init",
+        "test_supervised_reference_uses_labels_only_when_explicit"
+      ],
+      "source_lines": "14-54"
+    },
+    {
+      "path": "takehome/test_learner.py",
+      "reusable_test_functions": [
+        "test_all_output_dimensions_start_exactly_zero",
+        "test_actual_compiled_sampler_has_exact_mix_and_empty_source_fallbacks",
+        "test_checkpoint_normalization_and_physical_action_rescaling",
+        "test_replay_rejects_test_data_and_excludes_true_bias_from_training"
+      ],
+      "source_lines": "25-76"
+    },
+    {
+      "path": "takehome/test_selection.py",
+      "reusable_test_functions": [
+        "test_choose_simplest_within_top_spread_and_break_tie_by_mean",
+        "test_skip_rule_confirms_main_and_main_wins_near_ties",
+        "test_combining_rejects_conflicting_values_and_information_leaks"
+      ],
+      "source_lines": "9-29"
+    }
+  ]
+}

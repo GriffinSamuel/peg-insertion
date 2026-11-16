@@ -1,0 +1,15 @@
+START B_heat_normal 117003 SEEDS [0, 1, 2]
+START B_aim_one_sided 117004 SEEDS [0, 1, 2]
+START B_heat_fixed 117005 SEEDS [0, 1, 2]
+START B_movement_fixed 117006 SEEDS [0, 1, 2]
+FINISH {"name": "B_heat_normal", "exit_code": 0, "seconds": 512.1369004709995}
+{"completed_rows": 9, "new_settings_attempted": 12, "promotions": []}
+START B_aim_fixed 124353 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "B_movement_fixed", "exit_code": 0, "seconds": 549.4230112790028}
+{"completed_rows": 11, "new_settings_attempted": 12, "promotions": ["B_aim_one_sided", "B_movement_fixed"]}
+FINISH {"name": "B_aim_one_sided", "exit_code": 0, "seconds": 551.5364048819974}
+{"completed_rows": 11, "new_settings_attempted": 12, "promotions": ["B_aim_one_sided", "B_movement_fixed"]}
+FINISH {"name": "B_heat_fixed", "exit_code": 0, "seconds": 564.6508420120008}
+{"completed_rows": 12, "new_settings_attempted": 12, "promotions": ["B_aim_one_sided", "B_movement_fixed"]}
+FINISH {"name": "B_aim_fixed", "exit_code": 1, "seconds": 201.569636911001}
+{"completed_rows": 12, "new_settings_attempted": 12, "promotions": ["B_aim_one_sided", "B_movement_fixed"]}

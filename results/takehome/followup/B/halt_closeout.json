@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "halt_active": true,
+  "experiments_running": [],
+  "fresh_choice_exists": false,
+  "branch": "takehome",
+  "protected_files_checked": 9071,
+  "original_report_exact_bytes_preserved": true,
+  "original_code_policies_results_diff_empty": true,
+  "preexisting_takehome_code_diff_empty": true,
+  "scoreboard_rows": 15,
+  "attempted_settings": 12,
+  "full_test_suite_run_after_halt": false,
+  "new_followup_python_syntax": "passed",
+  "chart_visually_reviewed": true,
+  "totals": {
+    "old_study_practice_episodes_from_protocol": 29010,
+    "followup_reserved_practice_episodes": 7580,
+    "whole_project_practice_episodes": 36590,
+    "old_study_full_test_episodes_from_protocol": 409690,
+    "followup_full_test_episodes": 110584,
+    "whole_project_full_test_episodes": 520274,
+    "old_study_reset_only_probes_from_protocol": 191,
+    "followup_reset_only_probes": 0,
+    "whole_project_reset_only_probes": 191
+  },
+  "limitation": "Phase B interrupted; later phases and fresh-seed comparison have not run."
+}

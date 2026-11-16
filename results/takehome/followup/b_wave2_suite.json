@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "name": "B_fast",
+      "exit_code": 0,
+      "seconds": 532.1348202560039
+    },
+    {
+      "name": "B_within_grid",
+      "exit_code": 0,
+      "seconds": 533.4206878780024
+    },
+    {
+      "name": "B_constant",
+      "exit_code": 0,
+      "seconds": 536.9387675089965
+    },
+    {
+      "name": "B_aim_fixed",
+      "exit_code": 0,
+      "seconds": 571.6833211699995
+    }
+  ],
+  "tripwire": false,
+  "seconds": 572.1820824329989
+}

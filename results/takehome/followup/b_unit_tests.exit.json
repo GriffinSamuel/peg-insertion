@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_tests.py",
+    "takehome/test_followup.py"
+  ],
+  "started_utc": "2026-11-16T07:32:27.828426+00:00",
+  "finished_utc": "2026-11-16T07:32:47.911919+00:00",
+  "seconds": 20.083519164996687,
+  "exit_code": 0
+}

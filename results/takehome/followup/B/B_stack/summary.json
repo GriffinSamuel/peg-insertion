@@ -1,0 +1,29 @@
+{
+  "record": {
+    "phase": "B",
+    "name": "B_stack",
+    "description": "Combine compatible changes that helped independently.",
+    "base": "aim",
+    "base_result": "s0 365/500 (73.0%); s1 278/500 (55.6%); s2 315/500 (63.0%); mean 63.87% \u00b1 8.73pp",
+    "seeds": [],
+    "mean_percent": null,
+    "spread_pp": null,
+    "delta_pp": null,
+    "verdict": "DID NOT RUN",
+    "aim_start_mm": null,
+    "aim_success_mm": null,
+    "steps_to_insert": null,
+    "peak_force_n": null,
+    "practice_episodes": 0,
+    "hand_search": false,
+    "hidden_information": false,
+    "camera_condition": "normal",
+    "reason": "No compatible normal-camera changes qualified as HELPED on five seeds, so there is no permitted stack.",
+    "base_mean_percent": 63.86666666666667,
+    "base_spread_pp": 8.732315462312005
+  },
+  "per_seed": [],
+  "paired_error_reduction_mm": null,
+  "working_aim": false,
+  "extend": false
+}

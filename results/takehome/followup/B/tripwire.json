@@ -1,0 +1,27 @@
+{
+  "setting": "B_aim_fixed",
+  "practice_seed": 4,
+  "camera_condition": "fixed",
+  "test_seed": 123,
+  "practice_episodes_charged": 160,
+  "latest_saved_checkpoint_practice_episodes": 150,
+  "stopped_test_practice_point": 160,
+  "curve_successes": 256,
+  "curve_test_episodes": 256,
+  "curve_success_percent": 100.0,
+  "ceiling_successes": 470,
+  "ceiling_test_episodes": 500,
+  "ceiling_success_percent": 94.0,
+  "gap_pp": 6.0,
+  "tripwire_threshold_pp": 5.0,
+  "ceiling_first_256_successes": 241,
+  "fixed_true_bias_xy_m": [
+    -0.0002601474989205599,
+    -0.00012851424980908632
+  ],
+  "stored_practice_160_exists": true,
+  "final_500_test_run": false,
+  "reason": "CODEX_GOALS.md When to stop: aim-only learner exceeds same-context measured ceiling by more than5 points",
+  "action": "All experiments halted; no retry, threshold change, fresh seed use, or later phase launch.",
+  "log": "logs/b_wave3_B_aim_fixed.log"
+}

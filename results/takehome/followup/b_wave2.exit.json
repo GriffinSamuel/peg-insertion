@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "b_wave2",
+    "--settings",
+    "B_fast",
+    "B_constant",
+    "B_within_grid",
+    "B_aim_fixed",
+    "--seeds",
+    "0",
+    "1",
+    "2"
+  ],
+  "started_utc": "2026-11-16T07:50:51.883242+00:00",
+  "finished_utc": "2026-11-16T08:00:24.683724+00:00",
+  "seconds": 572.8005355109999,
+  "exit_code": 0
+}

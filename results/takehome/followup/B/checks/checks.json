@@ -1,0 +1,29 @@
+{
+  "gpu": [
+    "cuda:0"
+  ],
+  "zero": {
+    "episodes": 500,
+    "successes": 303,
+    "success_rate": 0.606,
+    "ci_lo": 0.5625170013722456,
+    "ci_hi": 0.6478665794992029,
+    "steps_mean": 167.46534729003906,
+    "steps_median": 166.0,
+    "peak_force_mean": 83.1802978515625,
+    "final_xy_err_mean_mm": 0.7650395035743713,
+    "final_depth_mean_mm": 19.257617950439453,
+    "still_inserted_at_end": 0.606,
+    "through_wall_episodes": 0,
+    "max_lateral_when_deep_mm": 0.6892085075378418,
+    "nan_episodes": 0,
+    "test_only": true,
+    "learned_from": false,
+    "test_seed": 123
+  },
+  "zero_tolerance_passed": true,
+  "code_test_practice_episodes": 10,
+  "code_test_successes": 1,
+  "frozen_policy_unchanged": true,
+  "test_data_learned_from": false
+}

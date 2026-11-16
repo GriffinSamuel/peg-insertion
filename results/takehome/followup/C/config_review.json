@@ -1,0 +1,146 @@
+{
+  "checks": [
+    {
+      "name": "C_fill_0",
+      "single_changed_field": {
+        "fill_episodes": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "C_fill_10",
+      "single_changed_field": {
+        "fill_episodes": 10
+      },
+      "passed": true
+    },
+    {
+      "name": "C_fill_20",
+      "single_changed_field": {
+        "fill_episodes": 20
+      },
+      "passed": true
+    },
+    {
+      "name": "C_fill_80",
+      "single_changed_field": {
+        "fill_episodes": 80
+      },
+      "passed": true
+    },
+    {
+      "name": "C_fill_120",
+      "single_changed_field": {
+        "fill_episodes": 120
+      },
+      "passed": true
+    },
+    {
+      "name": "C_briefing",
+      "single_changed_field": {
+        "briefing": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_privileged_critic",
+      "single_changed_field": {
+        "privileged_critic": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_one_critic",
+      "single_changed_field": {
+        "ensemble": 1
+      },
+      "passed": true
+    },
+    {
+      "name": "C_one_update",
+      "single_changed_field": {
+        "updates_per_step": 1
+      },
+      "passed": true
+    },
+    {
+      "name": "C_movement_cap_400um",
+      "single_changed_field": {
+        "movement_cap": 0.0004
+      },
+      "passed": true
+    },
+    {
+      "name": "C_final_decider",
+      "single_changed_field": {
+        "final_decider": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_near_hole",
+      "single_changed_field": {
+        "near_hole": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_contact_cap",
+      "single_changed_field": {
+        "contact_cap": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_uncertainty_cap",
+      "single_changed_field": {
+        "uncertainty_cap": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_classification",
+      "single_changed_field": {
+        "classification": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_three_step",
+      "single_changed_field": {
+        "n_step": 3
+      },
+      "passed": true
+    },
+    {
+      "name": "C_return_floor",
+      "single_changed_field": {
+        "return_floor": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_force_penalty",
+      "single_changed_field": {
+        "force_penalty": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_sibling_fill",
+      "single_changed_field": {
+        "sibling_fill": true
+      },
+      "passed": true
+    },
+    {
+      "name": "C_movement_cap_100um",
+      "single_changed_field": {
+        "movement_cap": 0.0001
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "new_episodes": 0
+}

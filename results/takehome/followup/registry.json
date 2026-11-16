@@ -1,0 +1,346 @@
+{
+  "max_new_settings": 90,
+  "original_settings": 28,
+  "phase": "B",
+  "settings": [
+    {
+      "name": "B_gate",
+      "phase": "B",
+      "description": "Keep the guess zero until contact, then change it only while depth stalls.",
+      "overrides": {
+        "drift_gate": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_pullback",
+      "phase": "B",
+      "description": "Pull the running guess 1% toward zero each step.",
+      "overrides": {
+        "pullback": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_memory",
+      "phase": "B",
+      "description": "Give actor and critic a 20-reading mean and change summary.",
+      "overrides": {
+        "memory": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_labels",
+      "phase": "B",
+      "description": "Train toward approximate camera-error labels from own successful practice.",
+      "overrides": {
+        "success_labels": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_fast",
+      "phase": "B",
+      "description": "Double the aim nudge limit after contact.",
+      "overrides": {
+        "fast_contact": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_constant",
+      "phase": "B",
+      "description": "Try one constant random offset in each fill-up episode.",
+      "overrides": {
+        "constant_fill": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_heat_normal",
+      "phase": "B",
+      "description": "Start at the most successful offset from an own-practice heat map.",
+      "overrides": {
+        "constant_fill": true,
+        "heatmap": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_aim_one_sided",
+      "phase": "B",
+      "description": "Run plain aim with one-sided camera bias.",
+      "overrides": {
+        "camera_condition": "one-sided"
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "one-sided",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_aim_fixed",
+      "phase": "B",
+      "description": "Run plain aim with one fixed camera bias per run.",
+      "overrides": {
+        "camera_condition": "fixed"
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "failed",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "Seed4 halted after160 charged practice episodes: curve test256/256 (100%) exceeded own470/500 (94%) ceiling by6 points. Seeds0\u20133 completed; mean/spread shown are partial, not a five-seed result.",
+      "counted": true
+    },
+    {
+      "name": "B_heat_one_sided",
+      "phase": "B",
+      "description": "Use the across-episode heat map with one-sided camera bias.",
+      "overrides": {
+        "constant_fill": true,
+        "heatmap": true,
+        "camera_condition": "one-sided"
+      },
+      "base": "B_aim_one_sided",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "one-sided",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "Not launched because the mandatory ceiling tripwire halted PhaseB; pending user direction.",
+      "counted": false
+    },
+    {
+      "name": "B_heat_fixed",
+      "phase": "B",
+      "description": "Use the across-episode heat map with one fixed camera bias per run.",
+      "overrides": {
+        "constant_fill": true,
+        "heatmap": true,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_within_grid",
+      "phase": "B",
+      "description": "Rule out stalled offsets within an episode and search nearby untried cells.",
+      "overrides": {
+        "within_grid": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": true,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "B_qmap",
+      "phase": "B",
+      "description": "Combine memory and constant-offset fill, then visualize the critic map.",
+      "overrides": {
+        "memory": true,
+        "constant_fill": true
+      },
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": true,
+      "changes": 1,
+      "reason": "Prerequisites did not HELP: memory was NO REAL DIFFERENCE and constant fill was UNSTABLE, so the optional combination is not permitted.",
+      "counted": false
+    },
+    {
+      "name": "B_stack",
+      "phase": "B",
+      "description": "Combine compatible changes that helped independently.",
+      "overrides": {},
+      "base": "aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": true,
+      "changes": 1,
+      "reason": "No compatible normal-camera changes qualified as HELPED on five seeds, so there is no permitted stack.",
+      "counted": false
+    },
+    {
+      "name": "B_movement_fixed",
+      "phase": "B",
+      "description": "Run plain movement with one fixed camera bias per run.",
+      "overrides": {
+        "outputs": 3,
+        "camera_condition": "fixed"
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    }
+  ],
+  "status": "halted_tripwire",
+  "halted_at": "B_aim_fixed/seed_4/160"
+}

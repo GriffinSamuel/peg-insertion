@@ -110,7 +110,7 @@ def _seed_display(seeds: list[dict[str, int]]) -> str:
 def _csv_value(field: str, record: dict[str, Any]) -> str:
     value = record.get(field)
     if field == "seeds":
-        return json.dumps(value, sort_keys=True, separators=(",", ":"))
+        return _seed_display(value)
     if field in ("hand_search", "hidden_information"):
         return "yes" if value else "no"
     return "" if value is None else str(value)
@@ -144,12 +144,23 @@ def render_markdown(summary: str, records: list[dict[str, Any]]) -> str:
         "Base mean (%)", "Base spread (pp)",
     ]
     keys = list(FIELDS) + ["base_mean_percent", "base_spread_pp"]
+    decimal_places = {
+        "mean_percent": 2, "spread_pp": 2, "delta_pp": 2,
+        "base_mean_percent": 2, "base_spread_pp": 2,
+        "aim_start_mm": 3, "aim_success_mm": 3,
+        "steps_to_insert": 1, "peak_force_n": 1,
+    }
     rows = ["# Follow-up scoreboard", "", summary, "", "| " + " | ".join(headers) + " |",
             "| " + " | ".join("---" for _ in headers) + " |"]
     for record in records:
         values = []
         for key in keys:
-            value = _seed_display(record[key]) if key == "seeds" else _display(record[key])
+            if key == "seeds":
+                value = _seed_display(record[key])
+            elif key in decimal_places and record[key] is not None:
+                value = f"{record[key]:.{decimal_places[key]}f}"
+            else:
+                value = _display(record[key])
             values.append(value.replace("|", "\\|").replace("\n", " "))
         rows.append("| " + " | ".join(values) + " |")
     return "\n".join(rows) + "\n"
@@ -158,7 +169,7 @@ def render_markdown(summary: str, records: list[dict[str, Any]]) -> str:
 def render_csv(records: list[dict[str, Any]]) -> str:
     from io import StringIO
     buffer = StringIO(newline="")
-    writer = csv.DictWriter(buffer, fieldnames=CSV_FIELDS, extrasaction="ignore")
+    writer = csv.DictWriter(buffer, fieldnames=CSV_FIELDS, extrasaction="ignore", lineterminator="\n")
     writer.writeheader()
     for record in records:
         writer.writerow({field: _csv_value(field, record) for field in CSV_FIELDS})
@@ -178,6 +189,8 @@ def plot_phase(phase: str, records: list[dict[str, Any]], output_root: Path) -> 
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
+    from matplotlib.lines import Line2D
+    import textwrap
 
     selected = [record for record in records if record["phase"] == phase]
     if not selected:
@@ -185,31 +198,47 @@ def plot_phase(phase: str, records: list[dict[str, Any]], output_root: Path) -> 
     fig_height = max(3.5, 0.55 * len(selected) + 1.8)
     fig, ax = plt.subplots(figsize=(10, fig_height))
     positions = list(range(len(selected)))
-    ax.set_yticks(positions, [record["name"] for record in selected])
+    ax.set_yticks(positions, [record["name"] + (" (partial; stopped)"
+        if record["verdict"]=="DID NOT RUN" and record["mean_percent"] is not None else "") for record in selected])
     ax.invert_yaxis()
     for y, record in zip(positions, selected):
         mean = record.get("mean_percent")
         spread = record.get("spread_pp")
         if mean is None:
-            ax.text(0.01, y, f"{record['verdict']}: {record.get('reason') or 'no run data'}",
-                    transform=ax.get_yaxis_transform(), va="center", fontsize=8)
+            reason = record.get("reason") or "no run data"
+            wrapped = textwrap.fill(f"{record['verdict']}: {reason}", width=60)
+            ax.text(0.01, y, wrapped, transform=ax.get_yaxis_transform(),
+                    va="center", fontsize=8)
         else:
-            ax.errorbar(mean, y, xerr=spread if spread is not None else 0,
-                        fmt="s", color="black", capsize=3, label="Learner mean ± spread" if y == 0 else None)
-        for item in record["seeds"]:
+            ax.errorbar(mean, y - 0.10, xerr=spread if spread is not None else 0,
+                        fmt="s", color="black", capsize=3)
+        seeds = record["seeds"]
+        count = len(seeds)
+        offsets = ([0.0] if count == 1 else
+                   [(-0.22 + 0.44 * index / (count - 1)) for index in range(count)])
+        for item, offset in zip(seeds, offsets):
             pct = 100 * item["successes"] / item["episodes"]
-            ax.plot(pct, y, "o", color="tab:blue", markersize=4,
-                    label="Seed result" if y == 0 else None)
+            ax.plot(pct, y + offset, "o", color="tab:blue", markersize=4)
         base_mean = record.get("base_mean_percent")
         base_spread = record.get("base_spread_pp")
         if base_mean is not None:
-            ax.errorbar(base_mean, y, xerr=base_spread if base_spread is not None else 0,
-                        fmt="|", color="tab:orange", capsize=3,
-                        label="Base mean ± spread" if y == 0 else None)
+            ax.errorbar(base_mean, y + 0.10,
+                        xerr=base_spread if base_spread is not None else 0,
+                        fmt="|", color="tab:orange", capsize=3)
     ax.set_xlabel("Success rate (%)")
-    ax.set_title(f"Phase {phase}: supplied results and seed values")
+    ax.set_title(f"Phase {phase}: final results from completed seeds")
+    ax.set_xlim(0, 100)
+    ax.margins(y=0.08)
     ax.grid(axis="x", alpha=0.25)
-    ax.legend(loc="best")
+    handles = [
+        Line2D([], [], marker="s", color="black", linestyle="none",
+               label="Learner mean ± spread"),
+        Line2D([], [], marker="o", color="tab:blue", linestyle="none",
+               label="Individual seed result"),
+        Line2D([], [], marker="|", color="tab:orange", linestyle="none",
+               label="Base mean ± spread"),
+    ]
+    ax.legend(handles=handles, loc="best")
     fig.tight_layout()
     folder = output_root / f"phase_{_phase_slug(phase)}"
     destination = folder / "scoreboard.png"

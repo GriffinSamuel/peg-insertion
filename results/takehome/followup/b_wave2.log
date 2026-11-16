@@ -1,0 +1,12 @@
+START B_fast 109933
+START B_constant 109934
+START B_within_grid 109935
+START B_aim_fixed 109936
+FINISH {"name": "B_fast", "exit_code": 0, "seconds": 532.1348202560039}
+{"completed_rows": 6, "new_settings_attempted": 8, "promotions": []}
+FINISH {"name": "B_within_grid", "exit_code": 0, "seconds": 533.4206878780024}
+{"completed_rows": 6, "new_settings_attempted": 8, "promotions": []}
+FINISH {"name": "B_constant", "exit_code": 0, "seconds": 536.9387675089965}
+{"completed_rows": 7, "new_settings_attempted": 8, "promotions": []}
+FINISH {"name": "B_aim_fixed", "exit_code": 0, "seconds": 571.6833211699995}
+{"completed_rows": 8, "new_settings_attempted": 8, "promotions": ["B_aim_fixed"]}

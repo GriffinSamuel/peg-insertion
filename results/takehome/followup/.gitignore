@@ -11,3 +11,6 @@ __pycache__/
 *.pkl
 *.mp4
 !*.log
+# Keep small detached-job logs despite the repository's generic logs/ ignore.
+!logs/
+!logs/*.log

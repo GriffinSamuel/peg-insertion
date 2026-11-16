@@ -1,0 +1,29 @@
+{
+  "record": {
+    "phase": "B",
+    "name": "B_heat_one_sided",
+    "description": "Use the across-episode heat map with one-sided camera bias.",
+    "base": "B_aim_one_sided",
+    "base_result": "s0 416/500 (83.2%); s1 419/500 (83.8%); s2 368/500 (73.6%); mean 80.20% \u00b1 5.72pp",
+    "seeds": [],
+    "mean_percent": null,
+    "spread_pp": null,
+    "delta_pp": null,
+    "verdict": "DID NOT RUN",
+    "aim_start_mm": null,
+    "aim_success_mm": null,
+    "steps_to_insert": null,
+    "peak_force_n": null,
+    "practice_episodes": 0,
+    "hand_search": false,
+    "hidden_information": false,
+    "camera_condition": "one-sided",
+    "reason": "Not launched because the mandatory ceiling tripwire halted PhaseB; pending user direction.",
+    "base_mean_percent": 80.2,
+    "base_spread_pp": 5.723635208501677
+  },
+  "per_seed": [],
+  "paired_error_reduction_mm": null,
+  "working_aim": false,
+  "extend": false
+}

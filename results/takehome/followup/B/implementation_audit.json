@@ -1,0 +1,209 @@
+{
+  "audit": "Read-only structural audit of current Phase B follow-up implementation contracts",
+  "scope": [
+    "takehome/followup_config.py",
+    "takehome/followup_env.py",
+    "takehome/followup_episodes.py",
+    "takehome/followup_learner.py",
+    "takehome/followup_runner.py",
+    "takehome/followup_job.py",
+    "takehome/followup_suite.py",
+    "takehome/budget.py",
+    "takehome/replay.py",
+    "takehome/config.py",
+    "takehome/learner.py",
+    "takehome/variants.py",
+    "peg_insertion/env.py",
+    "results/takehome/followup/registry.json"
+  ],
+  "checks": [
+    {
+      "contract": "Practice episodes are durably reserved before simulation, and a normal experiment cannot exceed 200 practice episodes.",
+      "status": "pass",
+      "evidence": [
+        {
+          "path": "takehome/config.py",
+          "lines": "7-12, 25-32",
+          "finding": "TrainConfig defaults total_episodes to 200 and accepts exactly 200 for normal runs (10 for code tests)."
+        },
+        {
+          "path": "takehome/budget.py",
+          "lines": "8-25, 48-61",
+          "finding": "EpisodeBudget rejects limits above 200, refuses changed limits, and persists each reservation before returning IDs."
+        },
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "119-120, 145-160",
+          "finding": "Runner creates the ledger before collection; it reserves the next ten IDs before calling episodes.practice, and reuses already-reserved saved batches after interruption."
+        }
+      ],
+      "note": "Reserved ledger entries remain consumed if a run stops after reservation; the run resumes saved data or refuses to recollect a spent batch."
+    },
+    {
+      "contract": "Test data is not inserted into replay or counted in heat-map ratings.",
+      "status": "pass",
+      "evidence": [
+        {
+          "path": "takehome/followup_episodes.py",
+          "lines": "109-134",
+          "finding": "Test runs return summaries and traces through a separate method and do not call Replay.add."
+        },
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "68-84, 149-162, 175-182",
+          "finding": "Heat-map updates read the practice Replay after practice insertion; tests are run separately and never passed to after_collect or Replay.add."
+        },
+        {
+          "path": "takehome/replay.py",
+          "lines": "30-36",
+          "finding": "Every insertion calls require_practice and checks required practice provenance."
+        },
+        {
+          "path": "takehome/budget.py",
+          "lines": "48-72",
+          "finding": "Only fill/online sources with reserved IDs and test_only=false can satisfy require_practice."
+        }
+      ]
+    },
+    {
+      "contract": "Success labels use the run\u2019s own practice next_obs and do not read true_bias.",
+      "status": "pass",
+      "evidence": [
+        {
+          "path": "takehome/followup_learner.py",
+          "lines": "18-33",
+          "finding": "success_targets scans only replay episode IDs, orders each episode by step, selects its first success, and uses next_obs[first,:2] as the label; the function does not access true_bias."
+        },
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "86-93",
+          "finding": "Labels are built only during an update from that run\u2019s Replay."
+        },
+        {
+          "path": "takehome/followup_episodes.py",
+          "lines": "109-134",
+          "finding": "Test execution is a separate runner path and exposes no replay insertion path."
+        }
+      ]
+    },
+    {
+      "contract": "Fixed camera bias remains constant within each run, and Phase B does not pass hidden bias to actor or critic.",
+      "status": "pass_for_registered_phase_b_settings",
+      "evidence": [
+        {
+          "path": "takehome/followup_env.py",
+          "lines": "23-40",
+          "finding": "A fixed XY bias is generated once when the environment is constructed from fixed_bias_seed and applied to the observation bias on reset/step observation construction."
+        },
+        {
+          "path": "takehome/followup_job.py",
+          "lines": "24-33",
+          "finding": "For fixed-camera jobs the config is replaced with fixed_bias_seed=practice seed; a different config creates a new runner/environment for that seed."
+        },
+        {
+          "path": "peg_insertion/env.py",
+          "lines": "185-240, 243-317",
+          "finding": "Reset and step pass their info mapping through _get_obs and return that info mapping in state, so FollowupEnv\u2019s bias override persists in state info during the run."
+        },
+        {
+          "path": "takehome/followup_episodes.py",
+          "lines": "61-65, 70-84",
+          "finding": "True bias is passed to Q only behind privileged_critic; otherwise the critic receives observation/action only. Bias is retained in traces/replay for analysis."
+        },
+        {
+          "path": "takehome/followup_config.py",
+          "lines": "10, 56-58",
+          "finding": "privileged_critic defaults false; Phase B switches are rejected when combined with privileged_critic."
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "96-101, 151-160, 173-185",
+          "finding": "Training data includes true_bias only under privileged_critic, and critic concatenates it only under the same flag."
+        },
+        {
+          "path": "results/takehome/followup/registry.json",
+          "pointer": "settings where phase == B",
+          "finding": "Current Phase B entries have hidden_information=false and no privileged_critic override=true."
+        }
+      ],
+      "configuration_guard_note": "FollowupConfig does not forbid privileged_critic for a plain Phase B configuration with no Phase B switch. Current Phase B registry entries do not enable it; this remains a possible configuration mistake if a future entry is added."
+    },
+    {
+      "contract": "Fresh choosing seeds 200\u2013204 with test seed 1001 are blocked until a written choice exists.",
+      "status": "pass",
+      "evidence": [
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "95-104",
+          "finding": "Runner rejects fresh seed/test pairs before G/choice.json and requires the paired 200\u2013204/1001 pair; otherwise choosing is restricted to practice 0\u20134/test123."
+        },
+        {
+          "path": "takehome/followup_reference.py",
+          "lines": "20-25",
+          "finding": "Fresh seed-1001 reference measurement is independently blocked until G/choice.json exists."
+        },
+        {
+          "path": "takehome/followup_job.py",
+          "lines": "24-33",
+          "finding": "Job measures references before constructing/running a learner, but the reference function has its own seed-1001 gate and runner.run applies the paired-seed gate."
+        }
+      ]
+    },
+    {
+      "contract": "Full time-series test traces are saved only for final 500-episode tests or required ceiling verification.",
+      "status": "pass_at_runner_call_sites",
+      "evidence": [
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "175-182",
+          "finding": "Curve checks use 256 episodes (or 8 in code tests); the trace output path is set only when the evaluation has 500 episodes, which is the normal final check."
+        },
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "193-209",
+          "finding": "Additional 500-episode traces are written only when a movement/combined method exceeds the no-camera-bias ceiling, with the verification summary marked used_for_selection=false."
+        },
+        {
+          "path": "takehome/followup_episodes.py",
+          "lines": "109-134",
+          "finding": "The generic test helper accepts an optional output path; the production runner call sites control when a full trace path is supplied."
+        }
+      ],
+      "scope_note": "The full-trace restriction is enforced by FollowupRunner call sites rather than inside the general FollowupEpisodes.test API."
+    },
+    {
+      "contract": "Initial learned actor outputs and the starting guess are zero before learning.",
+      "status": "pass",
+      "evidence": [
+        {
+          "path": "takehome/learner.py",
+          "lines": "18-27",
+          "finding": "Actor\u2019s final Dense layer has zero kernel and bias initializers, so its initial output is zero."
+        },
+        {
+          "path": "takehome/followup_learner.py",
+          "lines": "54-62, 64-71",
+          "finding": "Follow-up actor is initialized through that zero-output actor; FollowupState starts with a zero two-dimensional guess, and the success-label head\u2019s initial direct prediction is also zero."
+        },
+        {
+          "path": "takehome/followup_episodes.py",
+          "lines": "49-60",
+          "finding": "During fill-up the policy mean action is explicitly replaced by zeros before the configured exploration noise is added; constant-fill offsets are separately flagged."
+        }
+      ],
+      "note": "Fill-up can contain configured exploration noise or the explicitly configured constant offset; those are not learned actor outputs."
+    }
+  ],
+  "existing_test_log": {
+    "path": "results/takehome/followup/b_control_reporting_tests.log",
+    "evidence_line": "8",
+    "result": "37 passed, 1 warning in 22.11s",
+    "warning": "The log reports a JAXopt deprecation warning."
+  },
+  "uncertainties_or_code_gaps": [
+    "The reusable config permits privileged_critic=true for a plain Phase B configuration with no Phase B trick switch; current registry entries set hidden_information=false and do not enable the flag.",
+    "Full-trace exclusivity is a runner-call-site convention; direct callers of FollowupEpisodes.test can supply an output path for other test sizes."
+  ],
+  "experiments_run_for_audit": false,
+  "source_files_changed": false
+}

@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: follow-up Phase A complete; Phase B next (2026-11-16)
+## Current status: follow-up Phase B HALTED on a mandatory tripwire (2026-11-16)
 
-Original Goals 1-13 remain complete and frozen. Follow-up is separate work under FOLLOWUP_PLAN.md, with no planned check-in. Phase A spent no new episodes. Read TAKEHOME_FOLLOWUP_REPORT.md and results/takehome/followup/scoreboard.md for current findings. Preserve every original result and original report text.
+Original Goals 1-13 remain complete and frozen. Follow-up Phase A is complete. Phase B stopped when fixed-camera plain aim, practice seed 4, reached 256/256 (100%) after 160 charged practice episodes against its measured 470/500 (94%) ceiling. The six-point gap fires the aim-only tripwire in CODEX_GOALS.md. All experiment workers stopped; no retry or Phase C-G experiment is authorized while this halt is pending. Fresh seeds remain unused. The latest interrupted-phase report below supersedes all historical continuation instructions. Read TAKEHOME_FOLLOWUP_REPORT.md and results/takehome/followup/scoreboard.md. Preserve the original 80.2% result and all original files.
 
 ## Original-study completion (2026-11-15)
 
@@ -620,3 +620,59 @@ The old aim learner often inserts without correctly identifying the camera error
 
 ### 8. Questions before the next phase
 None. Continue to Phase B under the existing stopping rule.
+
+## 2026-11-16: Follow-up Phase B checkpoint after first four settings
+
+The first four settings completed all three development seeds, with200 practice and500 final test episodes per run. B_gate:297,309,294/500,60.00%±1.59points; B_pullback:307,301,282,59.33%±2.61; B_memory:364,313,308,65.67%±6.20; B_labels:266,204,236,47.07%±6.20. The first three verdicts are NO REAL DIFFERENCE against their matched old aim seeds; labels are HURT. No setting qualifies for extension yet. Labels improve paired success-time guess error by0.308mm, while memory worsens it by1.004mm; improved guesses on the successful subset alone did not improve overall insertion.
+
+Verification: zero correction303/500 versus frozen307/500 floor passed the3-point tolerance. Two separately counted10-episode code trials passed (the first used the incremental-label implementation draft, the second the final direct-prediction implementation). Expanded37 synthetic control, provenance, verdict and reporting tests passed. A complete hash/mtime check passed for all9071 protected files, with no original-report append yet. First-wave12 runs used2400 practice episodes, plus20 in code trials; all four jobs finished normally in570–580seconds including three seeds and startup. Warm per-run times170–177seconds with four jobs together match the estimated aggregate throughput.
+
+Resume from the running detached b_wave2 suite: B_fast, B_constant, B_within_grid and B_aim_fixed, seeds0–2. Fixed-camera references are measured before each fixed learner. The next wave should run B_heat_normal, B_aim_one_sided, B_heat_fixed and B_movement_fixed after this wave finishes, then B_heat_one_sided after its matched plain-aim base exists. Recollect summaries with python -B -m takehome.followup_collect after each wave; extend eligible settings and any newly required matched bases to0–4. Memory failed its isolated HELPED condition, so the optional memory+constant-fill Q-map stack cannot be launched. Keep all failures/skips in the scoreboard and finish/report/commit/push Phase B before launching C. C's predeclared20 applicable settings and five inapplicable rows are written in followup_c_design.md and followup_c_manifest.py but have not run.
+
+## 2026-11-16: Follow-up Phase B interrupted by the mandatory ceiling tripwire
+
+This report supersedes the historical resume instructions above. Phase B is not complete. No further experiment may start without Griffin's direction under the stopping rule.
+
+### 1. What I did (short list)
+
+- Tested isolated Phase B changes with four detached GPU jobs at a time and cheaper helpers handling routine runs, tables, charts and audits.
+- Finished 37 experiments across 12 attempted settings; retained the partially completed fixed-camera aim run and all failures/skips.
+- Stopped all experiment work when the aim-only ceiling tripwire fired. Saved the exact test, reference, traceback, consumed budget and halt state.
+- Reviewed the 16 already-recorded physical verification tests, finished the partial report and scoreboard, and verified preservation before saving this interrupted-phase checkpoint to git.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Every completed run used 200 practice episodes and a final 500-episode test at seed 123. Three-seed normal-camera results were: gate 60.00% ± 1.59 points, pullback 59.33% ± 2.61, memory 65.67% ± 6.20, labels 47.07% ± 6.20, faster contact nudges 68.20% ± 2.42, constant-offset fill 52.53% ± 18.14, global heat map 58.87% ± 7.10, and within-episode grid search 65.53% ± 3.58. Labels HURT; constant fill was UNSTABLE; the other normal-camera changes were NO REAL DIFFERENCE. Label training improved paired success-time guess error by 0.308 mm despite reducing success. No normal-camera change qualified as HELPED or as a working aim corrector.
+
+On three seeds, one-sided plain aim was PROMISING at 80.20% ± 5.72 against its 69.40% floor; fixed-camera movement was PROMISING at 90.13% ± 6.29 against its matched 62.80% floor. Fixed-camera heat map was NO REAL DIFFERENCE at 92.40% ± 4.13 against matched plain aim's 89.47% ± 4.43. These different camera conditions cannot replace the normal-camera headline. Fixed plain aim completed seeds 0 to 3 with 457, 422, 463 and 425 successes out of 500; its partial mean was 88.35% ± 4.25. Seed 4 then scored 256/256 at the 160-practice curve point against its own measured 470/500 ceiling, triggering the mandatory stop. Its final 500-episode test did not run.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: completed experiments respected their 200-episode counters; the interrupted run consumed 160, and no test data was learned from.
+- PASS: the zero-correction check was 303/500 versus the preserved 307/500 floor; both 10-episode code trials finished, with their different implementation versions disclosed.
+- PASS: 37 synthetic tests and the recorded structural/data-origin checks passed; frozen base-policy audits passed.
+- PASS: all 15 scoreboard rows are retained with allowed verdicts, every completed seed, aim-error metrics where applicable, and explicit failed/skipped reasons. The report embeds the full table and the reviewed chart marks the interrupted row partial.
+- PASS: the 16 already-required movement verification tests at seed 789 had no wall-passing or invalid-number flags, and all were excluded from selection.
+- PASS: after the halt, all 9,071 protected files passed hashes and timestamps; the original report remains byte-for-byte unchanged. Large trace/model/video artifacts are ignored.
+- PASS: fresh seeds are unused; no Phase C-G experiment ran; all experiment workers stopped and new job launchers refuse the active halt state.
+- FAIL: Phase B could not finish because the explicit aim-only ceiling tripwire fired. Required pending tests and five-seed extensions remain incomplete. The later phases and final full test suite are not claimed complete.
+
+### 4. Surprises or problems
+
+Fixed-camera plain aim at seed 4 exceeded the measured ceiling by six percentage points, beyond the fixed five-point threshold. The saved ceiling's first 256 episodes had 241 successes, so that prefix also differs from the triggering 256/256 test. The trigger recorded no wall-passing or invalid-number flags, but the cause remains unresolved. No retry, seed change, larger test, threshold change or silent reinterpretation was made. The budget records 160 practice episodes, while the last complete checkpoint is at 150; the already-collected batch through 160 is saved and must not be recollected if resumption is later authorized.
+
+### 5. Decisions I logged
+
+Logged the exact stopping rule and preserved the partial setting as DID NOT RUN with its four completed final results clearly separated from the triggering curve result. Retained all spent episodes and the original selection criteria. No new experimental choice was made after the tripwire. The existing PLAN GAP readings, fixed numerical defaults and prepared but unrun Phase C inventory remain documented.
+
+### 6. Practice episodes used, and settings tried so far
+
+Follow-up: 7,580 charged practice episodes, comprising 37 completed 200-episode runs, one partial 160-episode run and two 10-episode code trials; 110,584 full test-only episodes, including 8,000 required physical verification episodes; 12 attempted settings and 0 new reset-only probes. Whole project: 36,590 practice episodes, 520,274 full test-only episodes, 191 reset-only probes and 40 settings. The three unlaunched scoreboard rows consume no practice and do not count as attempted settings. The accounting audit has zero validation errors.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The old aim learner often succeeds without finding the camera error, and none of the completed normal-camera changes has fixed that convincingly. Labels improved the guess on successful episodes but made insertion worse. Two easier camera conditions look promising, but their confirmation is unfinished. One fixed-camera aim result was suspiciously high under the rule you set, so all experiments stopped. The original 80.2% result is unchanged, and there is no fresh-seed follow-up result yet.
+
+### 8. Questions before the next phase
+
+BLOCKING: Griffin's direction is required because the aim-only ceiling tripwire in CODEX_GOALS.md fired. Do not launch or retry experiments, clear the halt, use fresh seeds, or continue to Phase C automatically. This is the plan's explicit stopping case, not a planned check-in. Read TAKEHOME_FOLLOWUP_REPORT.md and results/takehome/followup/B/tripwire.json first.

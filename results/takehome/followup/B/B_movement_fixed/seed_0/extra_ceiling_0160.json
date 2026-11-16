@@ -1,0 +1,41 @@
+{
+  "episodes": 500,
+  "successes": 471,
+  "success_rate": 0.942,
+  "ci_lo": 0.9179433020026042,
+  "ci_hi": 0.9593165352160771,
+  "steps_mean": 141.8301544189453,
+  "steps_median": 141.0,
+  "peak_force_mean": 94.01444244384766,
+  "final_xy_err_mean_mm": 0.5313618779182434,
+  "final_depth_mean_mm": 28.383617401123047,
+  "still_inserted_at_end": 0.942,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.7110238075256348,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 789,
+  "inspected_episode_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "max_lateral_when_deep_examples_m": [
+    0.0005513131618499756,
+    0.0006666183471679688,
+    0.0005366206169128418,
+    0.0005483925342559814,
+    0.0005514025688171387
+  ],
+  "max_abs_control_examples": [
+    1.0,
+    1.0,
+    1.0,
+    0.991382360458374,
+    1.0
+  ],
+  "used_for_selection": false
+}

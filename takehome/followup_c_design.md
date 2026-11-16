@@ -1,0 +1,11 @@
+# Phase C, fixed movement-only adaptations
+
+Use the old plain movement seeds0–4 as the base. Screen0–2/test123500, extend any gain larger than both matched sample spreads to0–4. Each attempted setting changes exactly one named trick. Original values come from goal7_design.md and goal7_manifest.py; no follow-up result selects a new numeric value.
+
+Attempt20 settings: fill0,10,20,80,120; critic briefing; privileged critic; one critic; one update; movement cap0.4mm; final critic decider; near-hole gate; contact-dependent movement cap; old-policy uncertainty cap; classification critic; three-step credit; return floor; force penalty; sibling-policy fill; and the newly requested movement cap0.1mm. Reuse fill40 through the existing plain movement base.
+
+List the other five original tricks as DID NOT RUN with reasons, uncounted because they are structurally inapplicable: two aim-only nudge caps, side-by-side aim/movement critics, aim-then-movement and movement-then-aim. A movement-only controller has no aim component to resize, train independently, or put in order.
+
+The final-decider candidate magnitudes are unchanged: zero, actor, half actor, and clipped1.5-times actor. These are the four unique candidates left after removing duplicate aim-only branches from the original eight combined candidates. The near-hole thresholds remain observed height15mm and sideways distance10mm. Contact cap remains half below5N and twice above. Uncertainty scaling remains clip(2*original pre-tanh standard deviation,0.5,2). Force cost remains0.001*max(force-15N,0)*0.02 in practice reward only. Sibling fill uses s0,s3,s4,s0 for the four ten-episode batches, never external saved experience; verify all frozen sibling policies too. The hidden-bias critic is explicitly flagged as hidden information and is ineligible for the final choice, even if it helps. The actor never receives the hidden input directly.
+
+Do not launch this phase before Phase B is reported, committed and pushed. Do not silently turn a movement-only setting into a combined learner to get past the original VariantConfig guard; the new FollowupConfig and adapters implement the meaningful movement-only operation explicitly. Review and run adapter tests before launch.

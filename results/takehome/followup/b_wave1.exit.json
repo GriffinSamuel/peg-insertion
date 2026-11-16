@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "b_wave1",
+    "--settings",
+    "B_gate",
+    "B_pullback",
+    "B_memory",
+    "B_labels",
+    "--seeds",
+    "0",
+    "1",
+    "2"
+  ],
+  "started_utc": "2026-11-16T07:36:05.079073+00:00",
+  "finished_utc": "2026-11-16T07:45:45.473096+00:00",
+  "seconds": 580.394072875999,
+  "exit_code": 0
+}

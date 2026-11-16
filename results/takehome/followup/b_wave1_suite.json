@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "name": "B_gate",
+      "exit_code": 0,
+      "seconds": 570.1441980529999
+    },
+    {
+      "name": "B_pullback",
+      "exit_code": 0,
+      "seconds": 576.8529191330017
+    },
+    {
+      "name": "B_memory",
+      "exit_code": 0,
+      "seconds": 577.1792371569973
+    },
+    {
+      "name": "B_labels",
+      "exit_code": 0,
+      "seconds": 579.5222777160016
+    }
+  ],
+  "tripwire": false,
+  "seconds": 579.8091587809977
+}
