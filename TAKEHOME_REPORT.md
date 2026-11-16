@@ -222,3 +222,24 @@ All13 local videos passed metadata, decoded-frame, frame-rate and duration check
 ![After examples](results/takehome/goal9/after_examples.png)
 
 Rebuild counts with `source scripts/env.sh && python -B takehome/plot_failures.py`; rebuild both preview sheets from the local videos with `source scripts/env.sh && python -B takehome/video_contact_sheet.py`. The temporal review sheet is reproducible with `source scripts/env.sh && python -B takehome/video_motion_review.py`. Videos and full traces remain local; their source manifests and small previews are committed.
+
+
+## Goal 10: the same recipe on other policies
+
+| Policy | Seed 0 | Seed 1 | Seed 2 | Seeds | Mean ± sample SD | Own floor | Own ceiling |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| force_0.5mm_s4 | 464/500 (92.8%) | 442/500 (88.4%) | 459/500 (91.8%) | 3 | 91.0% ± 2.3% | 84.0% | 97.6% |
+| pos_0.5mm_s1 | 408/500 (81.6%) | 403/500 (80.6%) | 444/500 (88.8%) | 3 | 83.7% ± 4.5% | 80.4% | 100.0% |
+| force_0.5mm_s1 | 0/500 (0.0%) | 0/500 (0.0%) | 0/500 (0.0%) | 3 | 0.0% ± 0.0% | 0.0% | 0.0% |
+
+On force_0.5mm_s4, the unchanged recipe averaged 91.00% with a 2.31-point sample spread, against its own 84.0% floor and 97.6% no-bias reference. The 7.00-point gain exceeds the seed spread. This supports a gain on another already competent policy, with room still below its reference.
+
+On pos_0.5mm_s1, the recipe averaged 83.67% with a 4.47-point spread, against an 80.4% floor and 100% no-bias reference. Its 3.27-point gain is smaller than the spread, so improvement is unproven. The position-only checkpoint did not start poorly, contrary to the plan's expectation; this experiment does not isolate the effect of removing force sensing because the checkpoints differ.
+
+On the hovering force_0.5mm_s1 policy, all three final tests scored 0/500, matching both zero-success references. None of its three 200-episode practice runs produced a success, and mean final insertion depth remained zero. Removing camera bias alone did not help this checkpoint, and this sparse-reward, bounded movement recipe learned no successful behavior from the available practice. The written identical-outcome exemption applies because both references are zero.
+
+Each reference used 500 tests at seed 123 before training; each learner had its own 200-episode budget. These are fresh learners with the same recipe, not transfer of the starting policy's learned weights. All nine runs passed their audit. [Results](results/takehome/goal10/transfer_summary.json); [practice outcomes](results/takehome/goal10/practice_outcomes.json).
+
+![Other policies](results/takehome/goal10/transfer.png)
+
+Rebuild with `source scripts/env.sh && python -B takehome/plot_transfer.py`.

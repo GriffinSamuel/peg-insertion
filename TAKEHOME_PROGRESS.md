@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goals 1-9 complete; Goal 10 next (2026-11-15)
+## Current status: Goals 1-10 complete; Goal 11 next (2026-11-15)
 
-Final movement method and80.20% confirmation headline remain unchanged. Failure categories cover all495 final-method failures and197 before-repeat failures, with every seed shown. All13 illustrative videos passed audits and visual review. Next measure the three other policies' own references, then train the unchanged recipe on seeds0-2. Total28 settings,22,210 practice episodes and297,970 full test-only episodes. Continue through Goal13 with no cuts; binaries remain local and repeatability remains a documented limitation.
+The final movement method remains unchanged. Other-policy results are 91.00% for force_s4, 83.67% for position_s1 and 0% for the hovering force_s1. All nine own-budget runs passed their audit. Next run all eight predeclared camera conditions, each with original-policy and cheating-oracle references, transfer tests and three fresh learners. Total 28 settings, 24,010 practice episodes and 323,902 full test-only episodes. Continue through Goal 13 with no cuts. Binary artifacts stay local; repeatability remains a documented limitation.
 
 ## Historical status after revised instructions, 2026-11-15
 
@@ -387,3 +387,42 @@ The final method fails less often overall. The remaining failures include shallo
 ### 8. Questions before the next phase
 
 None requiring a pause. Continue to the three-policy transfer check.
+
+
+## 2026-11-15: Goal 10 complete
+
+### 1. What I did (short list)
+
+- Measured all three policies' own floor and no-bias reference before training.
+- Reused the selected movement recipe unchanged for three independent practice seeds per policy.
+- Audited all nine runs, read their counted practice outcomes, and plotted every seed against its own references.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+All final tests: 500 episodes at seed 123, practice seeds 0, 1, 2. force_s4 scored 464, 442, 459 successes, mean 91.00% ±2.31pp sample SD, versus references 420/500 and 488/500. position_s1 scored 408, 403, 444, mean 83.67% ±4.47pp, versus 402/500 and 500/500. Hovering force_s1 scored 0, 0, 0, with both references zero and no successful episodes in any of its three 200-episode practice runs. References took 48.61 seconds; training suite 431.10 seconds.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: all three policies reported, including the zero result, with a sentence explaining the evidence for each.
+- PASS: references completed first; all nine algorithm configurations match confirmation except policy and evaluation context.
+- PASS: position-only 10-input compatibility, frozen old weights, separate tests and each 200-episode ledger verified; full audit has zero failures.
+
+### 4. Surprises or problems
+
+The position-only policy already had an 80.4% floor, contrary to the expectation it would do poorly. Its observed gain is below its seed spread. The second force policy's seven-point gain is above its spread. The hovering checkpoint still cannot insert even without camera bias; with no practice success, this sparse-reward recipe did not discover a successful behavior. Its identical zero outcomes meet the explicit zero-floor-and-ceiling exemption.
+
+### 5. Decisions I logged
+
+No new algorithm choices or settings. Kept the final recipe unchanged and retained every result; policy-specific references and the required input-size handling were already specified. Plot bounds allow the zero and 100% markers to remain fully visible.
+
+### 6. Practice episodes used, and settings tried so far
+
+Added 1,800 practice episodes and 25,932 test-only episodes. Cumulative 24,010 practice episodes in 121 complete ledgers, 323,902 full test-only episodes and 182 reset-only probes. The search count remains 28; these are three new policy contexts, not tuned settings.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The method helped another force-sensing policy. The position-only policy already worked fairly well, and its small average gain is not clear beyond run-to-run variation. The hovering policy never found a successful insertion. Correcting a useful policy is easier here than teaching an unsuccessful one the whole task. These results limit the claim without hiding the failures.
+
+### 8. Questions before the next phase
+
+None requiring a pause. Continue to all eight camera conditions.

@@ -1,0 +1,23 @@
+{
+  "goal": 10,
+  "completed_utc": "2026-11-16T02:46:27.851065+00:00",
+  "all_goal_checks_pass": true,
+  "checks": [
+    {
+      "check": "All three policies reported, including poor results, with an evidence-based explanation for each",
+      "passed": true
+    }
+  ],
+  "audit": "results/takehome/goal10_audit.json",
+  "interpretation": "results/takehome/goal10_interpretation.json",
+  "references_completed_before_training": true,
+  "all9_algorithm_configs_unchanged": true,
+  "position_input_contract_passed": true,
+  "hover_zero_outcome_exemption_applied": true,
+  "visual_review_passed": true,
+  "practice_episodes_added": 1800,
+  "practice_episodes_total": 24010,
+  "full_test_episodes_total": 323902,
+  "settings_tried": 28,
+  "new_tuned_settings": 0
+}

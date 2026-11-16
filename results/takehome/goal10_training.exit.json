@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/run_suite.py",
+    "--manifest",
+    "results/takehome/goal10_manifest.json"
+  ],
+  "started_utc": "2026-11-16T02:37:30.418928+00:00",
+  "finished_utc": "2026-11-16T02:44:41.627285+00:00",
+  "seconds": 431.20838186699984,
+  "exit_code": 0
+}

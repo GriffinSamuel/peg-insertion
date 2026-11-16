@@ -238,7 +238,8 @@ def write_chart(summary, output_path):
 
     ax.set_xticks(centers, POLICIES)
     ax.set_ylabel("Test success rate (%)")
-    ax.set_ylim(0, 100)
+    ax.set_ylim(-2, 102)
+    ax.set_yticks(range(0, 101, 20))
     ax.set_title("Goal 10 transfer results at 200 practice episodes")
     ax.grid(axis="y", alpha=0.25)
     handles, labels = ax.get_legend_handles_labels()

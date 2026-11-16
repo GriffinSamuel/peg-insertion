@@ -1,0 +1,4623 @@
+{
+  "timestamp_utc": "2026-11-16T02:45:39.974864+00:00",
+  "full_test_episodes_total": 323902,
+  "full_tests_before_goal7": 64842,
+  "new_full_test_episodes": 259060,
+  "reset_only_probes_total": 182,
+  "base_source": "results/takehome/goal7_pre_screen_checks.json",
+  "measurements": [
+    {
+      "path": "results/takehome/confirmation_baseline_no_camera_bias.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/confirmation_baseline_normal.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/baseline_no_camera_bias.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/baseline_normal.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/baseline_no_camera_bias.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/baseline_normal.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/baseline_no_camera_bias.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/baseline_normal.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_101/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_102/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_103/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/aim/seed_104/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_100/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_101/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_102/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_103/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/combined/seed_104/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_100/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_101/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_102/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_103/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/movement/seed_104/test_0200.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/briefing/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/classification/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/contact_cap/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_0/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_10/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_120/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0020.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_20/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/fill_80/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/final_decider/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/force_penalty/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/near_hole/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_critic/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/one_update/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/return_floor/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/sibling_fill/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/side_by_side/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/three_step/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/test_0200.json",
+      "episodes": 500,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0040/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0060/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0080/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0100/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0120/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0140/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0160/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_100/point_0180/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0040/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0060/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0080/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0100/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0120/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0140/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0160/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_101/point_0180/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0040/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0060/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0080/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0100/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0120/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0140/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0160/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_102/point_0180/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0040/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0060/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0080/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0100/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0120/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0140/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0160/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_103/point_0180/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0040/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0060/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0080/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0100/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0120/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0140/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0160/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal8/seed_104/point_0180/test_summary.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal9/after_seed_100_poses.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal9/after_seed_101_poses.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal9/after_seed_102_poses.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal9/after_seed_103_poses.json",
+      "episodes": 500,
+      "seed": 456
+    },
+    {
+      "path": "results/takehome/goal9/before_traces.json",
+      "episodes": 500,
+      "seed": 456
+    }
+  ],
+  "additional_contract_commands": [
+    {
+      "path": "results/takehome/goal10_test_episode_accounting.json",
+      "executed": true,
+      "full_test_episodes": 4,
+      "reset_only_probes": 0,
+      "practice_episodes": 0,
+      "tests_passed": 1,
+      "purpose": "Position-only frozen policy accepts selected movement wrapper: 10 original inputs, 12 learner inputs, zero initial action, finite test rollout and frozen weights.",
+      "evidence": "results/takehome/goal10_position_contract.exit.json",
+      "log": "results/takehome/goal10_position_contract.log"
+    },
+    {
+      "path": "results/takehome/goal11_test_episode_accounting.json",
+      "executed": true,
+      "full_test_episodes": 8,
+      "reset_only_probes": 0,
+      "practice_episodes": 0,
+      "command_log": "results/takehome/goal11_episode_contracts.log",
+      "exit_record": "results/takehome/goal11_episode_contracts.exit.json",
+      "tests": 2,
+      "passed": true
+    },
+    {
+      "path": "results/takehome/goal9_test_episode_accounting.json",
+      "executed": true,
+      "full_test_episodes": 4,
+      "reset_only_probes": 0,
+      "practice_episodes": 0,
+      "tests_passed": 1,
+      "purpose": "Pose-recording integration: finite poses, zero initial correction, frozen old weights, unchanged test-only provenance.",
+      "evidence": "results/takehome/goal9_pose_contract.exit.json",
+      "log": "results/takehome/goal9_pose_contract.log"
+    }
+  ],
+  "practice": {
+    "timestamp_utc": "2026-11-16T02:45:42.366492+00:00",
+    "practice_episodes_reserved": 24010,
+    "experiment_ledgers": 121,
+    "completed_experiments": 121,
+    "settings_tried": 28,
+    "setting_names": [
+      "aim",
+      "aim_cap_200um",
+      "aim_cap_50um",
+      "aim_then_move",
+      "briefing",
+      "classification",
+      "combined",
+      "contact_cap",
+      "fill_0",
+      "fill_10",
+      "fill_120",
+      "fill_20",
+      "fill_80",
+      "final_decider",
+      "force_penalty",
+      "move_then_aim",
+      "movement",
+      "movement_cap_400um",
+      "near_hole",
+      "one_critic",
+      "one_update",
+      "privileged_critic",
+      "return_floor",
+      "sibling_fill",
+      "side_by_side",
+      "supervised_cheating_reference",
+      "three_step",
+      "uncertainty_cap"
+    ]
+  },
+  "counting_rule": "Unique measurement JSONs; copied baselines, curve copies and reused traces are not new tests."
+}

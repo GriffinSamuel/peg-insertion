@@ -1,0 +1,256 @@
+{
+  "artifacts": [
+    {
+      "script": "takehome/plot_goal5.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_goal5.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/benchmark_manifest.json",
+        "results/takehome/baseline.json",
+        "results/takehome/benchmark/<designated-group>/seed_<0-4>/result.json"
+      ],
+      "input_material": "Committed small JSON only; no trace/video binary is needed by the plotter.",
+      "outputs": [
+        "results/takehome/goal5_learning_curves.png",
+        "results/takehome/goal5_per_seed.csv",
+        "results/takehome/goal5_aggregate.json"
+      ]
+    },
+    {
+      "script": "takehome/plot_goal6.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_goal6.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal6_manifest.json",
+        "results/takehome/baseline.json",
+        "the result.json files listed by the manifest (five seeds for each method)"
+      ],
+      "input_material": "Committed small JSON only; the plotting script reads result summaries and baseline, not traces.",
+      "outputs": [
+        "results/takehome/goal6/goal6_per_seed.csv",
+        "results/takehome/goal6/goal6_aggregate.json",
+        "results/takehome/goal6/comparison.png",
+        "results/takehome/goal6/learning_curves.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_exploration.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_exploration.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal7_summary.json"
+      ],
+      "input_material": "Committed small JSON summary; no traces/videos are needed to rebuild the table/figure.",
+      "outputs": [
+        "results/takehome/goal7/exploration.csv",
+        "results/takehome/goal7/force.csv",
+        "results/takehome/goal7/exploration.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_confirmation.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_confirmation.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal7_confirmation_manifest.json",
+        "results/takehome/goal7_choice.json",
+        "results/takehome/confirmation_baseline.json",
+        "results/takehome/goal7/confirmation/{aim,movement,combined}/seed_{100-104}/result.json"
+      ],
+      "input_material": "Committed small JSON manifests, choice, baseline, and result curves; no NPZ traces are read by the plotter.",
+      "outputs": [
+        "results/takehome/goal7/confirmation/confirmation.csv",
+        "results/takehome/goal7/confirmation/confirmation_summary.json",
+        "results/takehome/goal7/confirmation/confirmation.png",
+        "results/takehome/goal7/confirmation/confirmation_learning_curves.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_calibration.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_calibration.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal8/summary.json"
+      ],
+      "input_material": "Committed small JSON summary; upstream calibration analysis uses local test trace NPZ files, but plot rebuild itself does not.",
+      "outputs": [
+        "results/takehome/goal8/confident_failed.csv",
+        "results/takehome/goal8/confidence_drops.csv",
+        "results/takehome/goal8/reliability_final.png",
+        "results/takehome/goal8/raw_q_final.png",
+        "results/takehome/goal8/calibration_over_training.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_failures.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_failures.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal9/failures.json"
+      ],
+      "input_material": "Committed small JSON summary; plot rebuild does not read binary traces.",
+      "outputs": [
+        "results/takehome/goal9/failure_counts.csv",
+        "results/takehome/goal9/failure_counts.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_transfer.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_transfer.py",
+      "state": "pending_goal10_results_not_failed",
+      "inputs": [
+        "results/takehome/goal10_manifest.json",
+        "results/takehome/goal10/<policy>/baseline.json for all three policies",
+        "results/takehome/goal10/<policy>/trained/seed_{0,1,2}/result.json"
+      ],
+      "input_material": "Manifest and later summaries are small JSON; the plotter does not read binary traces. Goal 10 result JSONs/baselines are pending.",
+      "outputs": [
+        "results/takehome/goal10/transfer.csv",
+        "results/takehome/goal10/transfer_summary.json",
+        "results/takehome/goal10/transfer.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_camera.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_camera.py",
+      "state": "pending_goal11_results_not_failed",
+      "inputs": [
+        "results/takehome/baseline.json",
+        "results/takehome/goal11/<condition>/result.json for eight camera conditions",
+        "results/takehome/goal11/<condition>/trained/seed_{0,1,2}/result.json"
+      ],
+      "input_material": "Goal 11 manifest/results are pending. Camera plotter uses small JSON measurement files; no traces are read by this plotter.",
+      "outputs": [
+        "results/takehome/goal11/camera_summary.csv",
+        "results/takehome/goal11/camera_summary.json",
+        "results/takehome/goal11/camera_comparison.png"
+      ]
+    },
+    {
+      "script": "takehome/video_contact_sheet.py",
+      "command": "source scripts/env.sh && python -B takehome/video_contact_sheet.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal9/video_manifest.json",
+        "results/takehome/goal9/videos/<manifest-listed>.mp4",
+        "adjacent results/takehome/goal9/videos/<manifest-listed>.json metadata"
+      ],
+      "input_material": "The manifest and metadata are small JSON; rebuilding the previews requires local MP4 binaries. The already rendered videos derive from local NPZ traces, but the contact-sheet rebuild does not reread NPZ.",
+      "outputs": [
+        "results/takehome/goal9/before_examples.png",
+        "results/takehome/goal9/after_examples.png",
+        "results/takehome/goal9/preview_sources.json"
+      ]
+    },
+    {
+      "script": "takehome/video_motion_review.py",
+      "command": "source scripts/env.sh && python -B takehome/video_motion_review.py",
+      "state": "ready",
+      "inputs": [
+        "results/takehome/goal9/motion_review_sources.json",
+        "results/takehome/goal9/videos/<listed>.mp4"
+      ],
+      "input_material": "The source list is small JSON; rebuilding the motion sheet requires local MP4 binaries and does not reread NPZ traces.",
+      "outputs": [
+        "results/takehome/goal9/motion_review.png"
+      ]
+    }
+  ],
+  "report_png_coverage": {
+    "report": "TAKEHOME_REPORT.md",
+    "embedded_pngs": [
+      {
+        "path": "results/takehome/goal5_learning_curves.png",
+        "script": "takehome/plot_goal5.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal6/comparison.png",
+        "script": "takehome/plot_goal6.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal6/learning_curves.png",
+        "script": "takehome/plot_goal6.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal7/exploration.png",
+        "script": "takehome/plot_exploration.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal7/confirmation/confirmation.png",
+        "script": "takehome/plot_confirmation.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal7/confirmation/confirmation_learning_curves.png",
+        "script": "takehome/plot_confirmation.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal8/reliability_final.png",
+        "script": "takehome/plot_calibration.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal8/raw_q_final.png",
+        "script": "takehome/plot_calibration.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal8/calibration_over_training.png",
+        "script": "takehome/plot_calibration.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal9/failure_counts.png",
+        "script": "takehome/plot_failures.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal9/before_examples.png",
+        "script": "takehome/video_contact_sheet.py",
+        "covered": true,
+        "exists": true
+      },
+      {
+        "path": "results/takehome/goal9/after_examples.png",
+        "script": "takehome/video_contact_sheet.py",
+        "covered": true,
+        "exists": true
+      }
+    ],
+    "embedded_png_count": 12,
+    "all_embedded_pngs_covered": true
+  },
+  "uncovered_png_outputs": [
+    {
+      "path": "results/takehome/goal10/transfer.png",
+      "script": "takehome/plot_transfer.py",
+      "note": "not embedded in current TAKEHOME_REPORT.md; output awaits future Goal10/11 results"
+    },
+    {
+      "path": "results/takehome/goal11/camera_comparison.png",
+      "script": "takehome/plot_camera.py",
+      "note": "not embedded in current TAKEHOME_REPORT.md; output awaits future Goal10/11 results"
+    },
+    {
+      "path": "results/takehome/goal9/motion_review.png",
+      "script": "takehome/video_motion_review.py",
+      "note": "not embedded in current TAKEHOME_REPORT.md"
+    }
+  ],
+  "generation_note": "Commands are run from project root. Goal10 and Goal11 inputs/outputs marked pending are not failures."
+}

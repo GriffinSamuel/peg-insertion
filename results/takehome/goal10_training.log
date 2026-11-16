@@ -1,0 +1,6 @@
+START force_0.5mm_s4 69038
+START pos_0.5mm_s1 69039
+START force_0.5mm_s1 69040
+FINISH {"name": "pos_0.5mm_s1", "exit_code": 0, "seconds": 398.0998308199996}
+FINISH {"name": "force_0.5mm_s4", "exit_code": 0, "seconds": 416.11204735700085}
+FINISH {"name": "force_0.5mm_s1", "exit_code": 0, "seconds": 431.09746524}

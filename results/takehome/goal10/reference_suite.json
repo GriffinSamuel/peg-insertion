@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "name": "force_0.5mm_s1",
+      "exit_code": 0,
+      "seconds": 42.011820062998595
+    },
+    {
+      "name": "pos_0.5mm_s1",
+      "exit_code": 0,
+      "seconds": 44.02286540800196
+    },
+    {
+      "name": "force_0.5mm_s4",
+      "exit_code": 0,
+      "seconds": 48.03384013599862
+    }
+  ],
+  "seconds": 48.6095166840023,
+  "finished_utc": "2026-11-16T02:36:59.785056+00:00",
+  "passed": true
+}

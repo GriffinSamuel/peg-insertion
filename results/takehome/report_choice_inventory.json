@@ -1,8 +1,8 @@
 {
   "source_file": "TAKEHOME_DECISIONS.md",
-  "inventory_rule": "Every nonblank line whose trimmed text begins with a bullet marker was copied verbatim, with its source line number.",
-  "nonblank_bullet_entry_count": 77,
-  "plan_gap_entry_count": 50,
+  "inventory_rule": "Every nonblank line whose trimmed text begins with a bullet marker is copied verbatim with its source line number.",
+  "nonblank_bullet_entry_count": 79,
+  "plan_gap_entry_count": 51,
   "entries": [
     {
       "line_number": 3,
@@ -419,28 +419,28 @@
     {
       "line_number": 64,
       "plan_gap": true,
-      "topic": "goal9_failure_analysis",
+      "topic": "goal9_failure_analysis_and_video_review",
       "exact_text": "- PLAN GAP 2026-11-15: Fix Goal 9 failure order and rules before classifying results: never near-hole contact (5 mm XY,3 mm height,5 N force), wrong-way correction (>0.25 mm excess aim error or >1 mm summed outward movement command near the hole), stuck rim (20 of last40 steps in contact and <1 mm depth range), timeout, then other; these are operational patterns, not proven causes.",
       "evidence_source_paths_in_entry": []
     },
     {
       "line_number": 65,
       "plan_gap": true,
-      "topic": "goal9_failure_analysis",
+      "topic": "goal9_failure_analysis_and_video_review",
       "exact_text": "- PLAN GAP 2026-11-15: Goal 9 outward-command direction uses recorded camera XY minus true bias and still contains white noise; disclose that approximation instead of claiming an exact counterfactual cause of failure.",
       "evidence_source_paths_in_entry": []
     },
     {
       "line_number": 66,
       "plan_gap": true,
-      "topic": "goal9_failure_analysis",
+      "topic": "goal9_failure_analysis_and_video_review",
       "exact_text": "- PLAN GAP 2026-11-15: Because old baseline summaries lack full traces and GPU repeats differ, Goal 9 will collect a labelled500-episode before trace at fixed confirmation test seed456 and illustrative pose-recorded repeats for videos; retain all measured outcomes and never substitute rerendered scores for the original headline tests.",
       "evidence_source_paths_in_entry": []
     },
     {
       "line_number": 67,
       "plan_gap": false,
-      "topic": "goal9_failure_analysis",
+      "topic": "goal9_failure_analysis_and_video_review",
       "exact_text": "- 2026-11-15: The synthetic Goal 9 partition test initially used too little recent depth change to represent a timeout rather than a stuck rim; corrected that invented fixture once, keeping all failure thresholds and experimental tests unchanged, and the ordering/exhaustiveness check passed.",
       "evidence_source_paths_in_entry": []
     },
@@ -550,79 +550,20 @@
       "topic": "goal7_implementation_and_selection",
       "exact_text": "- 2026-11-15: Apply the existing ceiling-exceedance rule to later calibration repeats, illustrative pose repeats and camera transfer tests as well as training curves; reuse a prior seed789 verification of the exact same saved model when available, otherwise add the predeclared500 test-only episodes and physical evidence. This closes a diagnostic coverage gap without changing any learner, test, seed or budget.",
       "evidence_source_paths_in_entry": []
-    }
-  ],
-  "reviewed_evidence_jsons": [
-    {
-      "path": "results/takehome/method_sources.json",
-      "top_level_keys": [
-        "checked_utc",
-        "sources"
-      ],
-      "source_titles": [
-        "Randomized Ensembled Double Q-Learning: Learning Fast Without a Model",
-        "Efficient Online Reinforcement Learning with Offline Data"
-      ]
     },
     {
-      "path": "results/takehome/environment.json",
-      "top_level_keys": [
-        "recorded_utc",
-        "python",
-        "python_executable",
-        "platform",
-        "gpu_name_memory_driver",
-        "packages",
-        "execution",
-        "protected_source_base",
-        "reproducibility_limitation_source"
-      ],
-      "reproducibility_limitation_source": "results/takehome/repeatability_findings.md"
+      "line_number": 83,
+      "plan_gap": false,
+      "topic": "goal9_failure_analysis_and_video_review",
+      "exact_text": "- 2026-11-15: After all Goal7 training finished and its87 core hashes were audited, add a passive trace-extension hook for Goal9 pose recording; the default hook returns no fields and changes no control or physics. Keep pytest scratch directories local and ignored, including the synthetic ceiling-helper fixtures.",
+      "evidence_source_paths_in_entry": []
     },
     {
-      "path": "results/takehome/protocol.json",
-      "top_level_keys": [
-        "main_config",
-        "episode_length_steps",
-        "control_interval_seconds",
-        "practice_batch_episodes",
-        "full_test_episodes",
-        "intermediate_test_episodes",
-        "development_test_seed",
-        "confirmation_test_seed",
-        "development_practice_seeds",
-        "screening_and_transfer_practice_seeds",
-        "confirmation_practice_seeds",
-        "final_rerun_practice_seed",
-        "extra_ceiling_check_test_seed",
-        "sampler",
-        "gradient_clip_global_norm",
-        "main_actor_update_every_critic_updates",
-        "target_critic_subset_size",
-        "actor_hidden_layers",
-        "critic_hidden_layers",
-        "calibration",
-        "failure_rules",
-        "sources",
-        "success_rule",
-        "camera_nominal_bias_std_m",
-        "camera_white_noise_std_m",
-        "old_policy_action_scale_m"
-      ],
-      "protocol_seed_and_budget_keys": [
-        "main_config",
-        "episode_length_steps",
-        "practice_batch_episodes",
-        "full_test_episodes",
-        "intermediate_test_episodes",
-        "development_test_seed",
-        "confirmation_test_seed",
-        "development_practice_seeds",
-        "screening_and_transfer_practice_seeds",
-        "confirmation_practice_seeds",
-        "final_rerun_practice_seed",
-        "extra_ceiling_check_test_seed"
-      ]
+      "line_number": 84,
+      "plan_gap": true,
+      "topic": "goal9_failure_analysis_and_video_review",
+      "exact_text": "- PLAN GAP 2026-11-15: Review representative before-rim and after-outward-command videos at0,1,2 and3.8 seconds to inspect approach, contact and ending; save the frame-source manifest and a rebuild command, without new simulation or outcome substitution.",
+      "evidence_source_paths_in_entry": []
     }
   ],
   "topic_groups_line_numbers": {
@@ -697,11 +638,13 @@
       63,
       75
     ],
-    "goal9_failure_analysis": [
+    "goal9_failure_analysis_and_video_review": [
       64,
       65,
       66,
-      67
+      67,
+      83,
+      84
     ],
     "goal11_camera_conditions": [
       68,
@@ -723,5 +666,78 @@
       81,
       82
     ]
-  }
+  },
+  "reviewed_evidence_jsons": [
+    {
+      "path": "results/takehome/method_sources.json",
+      "top_level_keys": [
+        "checked_utc",
+        "sources"
+      ],
+      "source_titles": [
+        "Randomized Ensembled Double Q-Learning: Learning Fast Without a Model",
+        "Efficient Online Reinforcement Learning with Offline Data"
+      ]
+    },
+    {
+      "path": "results/takehome/environment.json",
+      "top_level_keys": [
+        "recorded_utc",
+        "python",
+        "python_executable",
+        "platform",
+        "gpu_name_memory_driver",
+        "packages",
+        "execution",
+        "protected_source_base",
+        "reproducibility_limitation_source"
+      ],
+      "reproducibility_limitation_source": "results/takehome/repeatability_findings.md"
+    },
+    {
+      "path": "results/takehome/protocol.json",
+      "top_level_keys": [
+        "main_config",
+        "episode_length_steps",
+        "control_interval_seconds",
+        "practice_batch_episodes",
+        "full_test_episodes",
+        "intermediate_test_episodes",
+        "development_test_seed",
+        "confirmation_test_seed",
+        "development_practice_seeds",
+        "screening_and_transfer_practice_seeds",
+        "confirmation_practice_seeds",
+        "final_rerun_practice_seed",
+        "extra_ceiling_check_test_seed",
+        "sampler",
+        "gradient_clip_global_norm",
+        "main_actor_update_every_critic_updates",
+        "target_critic_subset_size",
+        "actor_hidden_layers",
+        "critic_hidden_layers",
+        "calibration",
+        "failure_rules",
+        "sources",
+        "success_rule",
+        "camera_nominal_bias_std_m",
+        "camera_white_noise_std_m",
+        "old_policy_action_scale_m"
+      ],
+      "protocol_seed_and_budget_keys": [
+        "main_config",
+        "episode_length_steps",
+        "practice_batch_episodes",
+        "full_test_episodes",
+        "intermediate_test_episodes",
+        "development_test_seed",
+        "confirmation_test_seed",
+        "development_practice_seeds",
+        "screening_and_transfer_practice_seeds",
+        "confirmation_practice_seeds",
+        "final_rerun_practice_seed",
+        "extra_ceiling_check_test_seed"
+      ]
+    }
+  ]
 }

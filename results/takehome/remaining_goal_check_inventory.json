@@ -1,0 +1,698 @@
+{
+  "source_file": "CODEX_GOALS.md",
+  "goals": [
+    10,
+    11,
+    12,
+    13
+  ],
+  "criteria_extraction": "Exact text after each Done when marker; Goal 13 retains each source bullet marker.",
+  "goals_inventory": [
+    {
+      "goal": 10,
+      "header": "## Goal 10: check it is not a one-off",
+      "source_file": "CODEX_GOALS.md",
+      "done_when": [
+        {
+          "source_line": 195,
+          "exact_text": "all three are reported, including the ones expected to do poorly, with a sentence on why each behaved as it did."
+        }
+      ],
+      "expected_evidence": [
+        {
+          "path": "takehome/make_transfer_manifest.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 10 workflow script"
+        },
+        {
+          "path": "takehome/reference.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 10 workflow script"
+        },
+        {
+          "path": "takehome/train_variants.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 10 workflow script"
+        },
+        {
+          "path": "takehome/plot_transfer.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 10 workflow script"
+        },
+        {
+          "path": "results/takehome/goal10_reference_manifest.json",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Policy-reference or transfer run manifest/suite"
+        },
+        {
+          "path": "results/takehome/goal10_manifest.json",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Policy-reference or transfer run manifest/suite"
+        },
+        {
+          "path": "results/takehome/goal10/reference_suite.json",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Policy-reference or transfer run manifest/suite"
+        },
+        {
+          "path": "results/takehome/goal10/training_suite.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Policy-reference or transfer run manifest/suite"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s4/baseline.json",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Policy-specific floor and ceiling"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/pos_0.5mm_s1/baseline.json",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Policy-specific floor and ceiling"
+        },
+        {
+          "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s1/baseline.json",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Policy-specific floor and ceiling"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Final-method transfer run"
+        },
+        {
+          "path": "results/takehome/goal10/transfer.csv",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Goal 10 comparison table or chart"
+        },
+        {
+          "path": "results/takehome/goal10/transfer_summary.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Goal 10 comparison table or chart"
+        },
+        {
+          "path": "results/takehome/goal10/transfer.png",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Goal 10 comparison table or chart"
+        },
+        {
+          "path": "TAKEHOME_REPORT.md",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Goal 10 explanation for all policies",
+          "requirement_coverage": "pending",
+          "coverage_note": "The file exists; the requested Goal section or final traceability review is not established by file existence alone."
+        }
+      ],
+      "unresolved_evidence_pending": [
+        "results/takehome/goal10/training_suite.json",
+        "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/result.json",
+        "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/result.json",
+        "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/result.json",
+        "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/result.json",
+        "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/result.json",
+        "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/result.json",
+        "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/result.json",
+        "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/result.json",
+        "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/result.json",
+        "results/takehome/goal10/transfer.csv",
+        "results/takehome/goal10/transfer_summary.json",
+        "results/takehome/goal10/transfer.png",
+        "TAKEHOME_REPORT.md"
+      ]
+    },
+    {
+      "goal": 11,
+      "header": "## Goal 11: different camera problems",
+      "source_file": "CODEX_GOALS.md",
+      "done_when": [
+        {
+          "source_line": 201,
+          "exact_text": "the new errors live only in `takehome/` code, each retrain used its own 200 episodes, and the height error is included even though it is expected to fail."
+        }
+      ],
+      "expected_evidence": [
+        {
+          "path": "takehome/make_camera_manifest.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 11 workflow or condition implementation"
+        },
+        {
+          "path": "takehome/run_camera.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 11 workflow or condition implementation"
+        },
+        {
+          "path": "takehome/camera.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 11 workflow or condition implementation"
+        },
+        {
+          "path": "takehome/plot_camera.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Goal 11 workflow or condition implementation"
+        },
+        {
+          "path": "results/takehome/goal11_manifest.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Predeclared conditions or suite record"
+        },
+        {
+          "path": "results/takehome/goal11/suite.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Predeclared conditions or suite record"
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/drift/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/drift/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/drift/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/drift/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/drift/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/jitter/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/jitter/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/jitter/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/jitter/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/jitter/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/rotation/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/rotation/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/rotation/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/rotation/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/rotation/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/delay/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/delay/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/delay/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/delay/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/delay/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/height/declaration.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition formula and numeric parameters declared before condition run"
+        },
+        {
+          "path": "results/takehome/goal11/height/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Condition floor, oracle, ceiling, transfer, and retraining summary"
+        },
+        {
+          "path": "results/takehome/goal11/height/trained/seed_0/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/height/trained/seed_1/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/height/trained/seed_2/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Own-budget retraining result"
+        },
+        {
+          "path": "results/takehome/goal11/camera_summary.csv",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Goal 11 comparison table or chart"
+        },
+        {
+          "path": "results/takehome/goal11/camera_summary.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Goal 11 comparison table or chart"
+        },
+        {
+          "path": "results/takehome/goal11/camera_comparison.png",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Goal 11 comparison table or chart"
+        },
+        {
+          "path": "results/takehome/goal11_formula_contracts.log",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Formula checks"
+        },
+        {
+          "path": "TAKEHOME_REPORT.md",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Goal 11 findings and formula descriptions",
+          "requirement_coverage": "pending",
+          "coverage_note": "The file exists; the requested Goal section or final traceability review is not established by file existence alone."
+        }
+      ],
+      "unresolved_evidence_pending": [
+        "results/takehome/goal11_manifest.json",
+        "results/takehome/goal11/suite.json",
+        "results/takehome/goal11/bias_2x/declaration.json",
+        "results/takehome/goal11/bias_2x/result.json",
+        "results/takehome/goal11/bias_2x/trained/seed_0/result.json",
+        "results/takehome/goal11/bias_2x/trained/seed_1/result.json",
+        "results/takehome/goal11/bias_2x/trained/seed_2/result.json",
+        "results/takehome/goal11/bias_4x/declaration.json",
+        "results/takehome/goal11/bias_4x/result.json",
+        "results/takehome/goal11/bias_4x/trained/seed_0/result.json",
+        "results/takehome/goal11/bias_4x/trained/seed_1/result.json",
+        "results/takehome/goal11/bias_4x/trained/seed_2/result.json",
+        "results/takehome/goal11/one_sided/declaration.json",
+        "results/takehome/goal11/one_sided/result.json",
+        "results/takehome/goal11/one_sided/trained/seed_0/result.json",
+        "results/takehome/goal11/one_sided/trained/seed_1/result.json",
+        "results/takehome/goal11/one_sided/trained/seed_2/result.json",
+        "results/takehome/goal11/drift/declaration.json",
+        "results/takehome/goal11/drift/result.json",
+        "results/takehome/goal11/drift/trained/seed_0/result.json",
+        "results/takehome/goal11/drift/trained/seed_1/result.json",
+        "results/takehome/goal11/drift/trained/seed_2/result.json",
+        "results/takehome/goal11/jitter/declaration.json",
+        "results/takehome/goal11/jitter/result.json",
+        "results/takehome/goal11/jitter/trained/seed_0/result.json",
+        "results/takehome/goal11/jitter/trained/seed_1/result.json",
+        "results/takehome/goal11/jitter/trained/seed_2/result.json",
+        "results/takehome/goal11/rotation/declaration.json",
+        "results/takehome/goal11/rotation/result.json",
+        "results/takehome/goal11/rotation/trained/seed_0/result.json",
+        "results/takehome/goal11/rotation/trained/seed_1/result.json",
+        "results/takehome/goal11/rotation/trained/seed_2/result.json",
+        "results/takehome/goal11/delay/declaration.json",
+        "results/takehome/goal11/delay/result.json",
+        "results/takehome/goal11/delay/trained/seed_0/result.json",
+        "results/takehome/goal11/delay/trained/seed_1/result.json",
+        "results/takehome/goal11/delay/trained/seed_2/result.json",
+        "results/takehome/goal11/height/declaration.json",
+        "results/takehome/goal11/height/result.json",
+        "results/takehome/goal11/height/trained/seed_0/result.json",
+        "results/takehome/goal11/height/trained/seed_1/result.json",
+        "results/takehome/goal11/height/trained/seed_2/result.json",
+        "results/takehome/goal11/camera_summary.csv",
+        "results/takehome/goal11/camera_summary.json",
+        "results/takehome/goal11/camera_comparison.png",
+        "TAKEHOME_REPORT.md"
+      ]
+    },
+    {
+      "goal": 12,
+      "header": "## Goal 12: write-up",
+      "source_file": "CODEX_GOALS.md",
+      "done_when": [
+        {
+          "source_line": 207,
+          "exact_text": "every number in the report can be traced to a file in `results/takehome/`, and nothing is claimed that the results do not show."
+        }
+      ],
+      "expected_evidence": [
+        {
+          "path": "TAKEHOME_REPORT.md",
+          "kind": "file",
+          "status": "present",
+          "purpose": "Report or report-rebuild source",
+          "requirement_coverage": "pending",
+          "coverage_note": "The file exists; the requested Goal section or final traceability review is not established by file existence alone."
+        },
+        {
+          "path": "takehome/report_tables.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Report or report-rebuild source"
+        },
+        {
+          "path": "takehome/reproduce.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Report or report-rebuild source"
+        },
+        {
+          "path": "results/takehome/goal12_checks.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Report traceability and completeness check"
+        },
+        {
+          "path": "results/takehome/*.json, *.csv, *.png, and other referenced artifacts",
+          "kind": "referenced evidence set",
+          "status": "pending_review",
+          "purpose": "Source path for every report number and figure; verify each citation individually."
+        }
+      ],
+      "unresolved_evidence_pending": [
+        "TAKEHOME_REPORT.md",
+        "results/takehome/goal12_checks.json",
+        "results/takehome/*.json, *.csv, *.png, and other referenced artifacts"
+      ]
+    },
+    {
+      "goal": 13,
+      "header": "## Goal 13: final checks",
+      "source_file": "CODEX_GOALS.md",
+      "done_when": [
+        {
+          "source_line": 213,
+          "exact_text": "- all old and new tests pass"
+        },
+        {
+          "source_line": 214,
+          "exact_text": "- `git diff main -- peg_insertion scripts tests results` shows no changes outside `results/takehome/`"
+        },
+        {
+          "source_line": 215,
+          "exact_text": "- one fresh rerun of the final method on one confirmation practice seed lands within one spread of the reported result"
+        },
+        {
+          "source_line": 216,
+          "exact_text": "- everything is committed and pushed to `origin takehome`"
+        },
+        {
+          "source_line": 217,
+          "exact_text": "- a final summary is written for Griffin listing what to read first, every fallback that was used, and every question left open"
+        }
+      ],
+      "expected_evidence": [
+        {
+          "path": "takehome/run_tests.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Run original and takehome tests with authorized cache paths"
+        },
+        {
+          "path": "Final original/new test-run result (output destination not specified in CODEX_GOALS.md)",
+          "kind": "test_run_result",
+          "status": "pending",
+          "purpose": "Evidence that all old and new tests pass."
+        },
+        {
+          "path": "git diff main -- peg_insertion scripts tests results",
+          "kind": "command_output",
+          "status": "pending_review",
+          "purpose": "Verify only results/takehome changes in protected-path diff; no saved artifact path is specified in CODEX_GOALS.md."
+        },
+        {
+          "path": "takehome/run_final_rerun.py",
+          "kind": "script",
+          "status": "present",
+          "purpose": "Fresh final-method confirmation rerun"
+        },
+        {
+          "path": "results/takehome/goal13/fresh/seed_100/result.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Fresh rerun result and comparison"
+        },
+        {
+          "path": "results/takehome/goal13/fresh/seed_100/budget.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Fresh rerun result and comparison"
+        },
+        {
+          "path": "results/takehome/goal13/rerun_comparison.json",
+          "kind": "file",
+          "status": "pending",
+          "purpose": "Fresh rerun result and comparison"
+        },
+        {
+          "path": "git log / origin takehome",
+          "kind": "git_state",
+          "status": "pending_review",
+          "purpose": "Verify commit and push; no file path is specified in CODEX_GOALS.md."
+        },
+        {
+          "path": "TAKEHOME_REPORT.md or TAKEHOME_PROGRESS.md",
+          "kind": "summary_document",
+          "status": "pending_review",
+          "purpose": "Final summary listing first reads, fallbacks, and open questions; exact destination is not specified in CODEX_GOALS.md."
+        }
+      ],
+      "unresolved_evidence_pending": [
+        "Final original/new test-run result (output destination not specified in CODEX_GOALS.md)",
+        "git diff main -- peg_insertion scripts tests results",
+        "results/takehome/goal13/fresh/seed_100/result.json",
+        "results/takehome/goal13/fresh/seed_100/budget.json",
+        "results/takehome/goal13/rerun_comparison.json",
+        "git log / origin takehome",
+        "TAKEHOME_REPORT.md or TAKEHOME_PROGRESS.md"
+      ]
+    }
+  ]
+}

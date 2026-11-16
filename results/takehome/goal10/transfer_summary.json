@@ -1,0 +1,124 @@
+{
+  "policies": [
+    {
+      "policy": "force_0.5mm_s4",
+      "practice_episodes": 200,
+      "test_episodes": 500,
+      "test_seed": 123,
+      "seeds": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 464,
+          "success_rate": 0.928,
+          "result_path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 442,
+          "success_rate": 0.884,
+          "result_path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 459,
+          "success_rate": 0.918,
+          "result_path": "results/takehome/goal10/force_0.5mm_s4/trained/seed_2/result.json"
+        }
+      ],
+      "mean_success_rate": 0.91,
+      "sample_std_success_rate": 0.02306512518934161,
+      "floor_success_rate": 0.84,
+      "ceiling_success_rate": 0.976,
+      "baseline_path": "results/takehome/goal10/force_0.5mm_s4/baseline.json"
+    },
+    {
+      "policy": "pos_0.5mm_s1",
+      "practice_episodes": 200,
+      "test_episodes": 500,
+      "test_seed": 123,
+      "seeds": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 408,
+          "success_rate": 0.816,
+          "result_path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 403,
+          "success_rate": 0.806,
+          "result_path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 444,
+          "success_rate": 0.888,
+          "result_path": "results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/result.json"
+        }
+      ],
+      "mean_success_rate": 0.8366666666666667,
+      "sample_std_success_rate": 0.044736264186153646,
+      "floor_success_rate": 0.804,
+      "ceiling_success_rate": 1.0,
+      "baseline_path": "results/takehome/goal10/pos_0.5mm_s1/baseline.json"
+    },
+    {
+      "policy": "force_0.5mm_s1",
+      "practice_episodes": 200,
+      "test_episodes": 500,
+      "test_seed": 123,
+      "seeds": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 0,
+          "success_rate": 0.0,
+          "result_path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 0,
+          "success_rate": 0.0,
+          "result_path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 123,
+          "successes": 0,
+          "success_rate": 0.0,
+          "result_path": "results/takehome/goal10/force_0.5mm_s1/trained/seed_2/result.json"
+        }
+      ],
+      "mean_success_rate": 0.0,
+      "sample_std_success_rate": 0.0,
+      "floor_success_rate": 0.0,
+      "ceiling_success_rate": 0.0,
+      "baseline_path": "results/takehome/goal10/force_0.5mm_s1/baseline.json"
+    }
+  ]
+}

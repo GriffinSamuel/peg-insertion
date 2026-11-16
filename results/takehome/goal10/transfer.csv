@@ -1,0 +1,10 @@
+policy,seed,practice_episodes,test_episodes,test_seed,successes,success_rate,mean_success_rate,sample_std_success_rate,floor_success_rate,ceiling_success_rate,result_path,baseline_path
+force_0.5mm_s4,0,200,500,123,464,0.928,0.91,0.02306512518934161,0.84,0.976,results/takehome/goal10/force_0.5mm_s4/trained/seed_0/result.json,results/takehome/goal10/force_0.5mm_s4/baseline.json
+force_0.5mm_s4,1,200,500,123,442,0.884,0.91,0.02306512518934161,0.84,0.976,results/takehome/goal10/force_0.5mm_s4/trained/seed_1/result.json,results/takehome/goal10/force_0.5mm_s4/baseline.json
+force_0.5mm_s4,2,200,500,123,459,0.918,0.91,0.02306512518934161,0.84,0.976,results/takehome/goal10/force_0.5mm_s4/trained/seed_2/result.json,results/takehome/goal10/force_0.5mm_s4/baseline.json
+pos_0.5mm_s1,0,200,500,123,408,0.816,0.8366666666666667,0.044736264186153646,0.804,1.0,results/takehome/goal10/pos_0.5mm_s1/trained/seed_0/result.json,results/takehome/goal10/pos_0.5mm_s1/baseline.json
+pos_0.5mm_s1,1,200,500,123,403,0.806,0.8366666666666667,0.044736264186153646,0.804,1.0,results/takehome/goal10/pos_0.5mm_s1/trained/seed_1/result.json,results/takehome/goal10/pos_0.5mm_s1/baseline.json
+pos_0.5mm_s1,2,200,500,123,444,0.888,0.8366666666666667,0.044736264186153646,0.804,1.0,results/takehome/goal10/pos_0.5mm_s1/trained/seed_2/result.json,results/takehome/goal10/pos_0.5mm_s1/baseline.json
+force_0.5mm_s1,0,200,500,123,0,0.0,0.0,0.0,0.0,0.0,results/takehome/goal10/force_0.5mm_s1/trained/seed_0/result.json,results/takehome/goal10/force_0.5mm_s1/baseline.json
+force_0.5mm_s1,1,200,500,123,0,0.0,0.0,0.0,0.0,0.0,results/takehome/goal10/force_0.5mm_s1/trained/seed_1/result.json,results/takehome/goal10/force_0.5mm_s1/baseline.json
+force_0.5mm_s1,2,200,500,123,0,0.0,0.0,0.0,0.0,0.0,results/takehome/goal10/force_0.5mm_s1/trained/seed_2/result.json,results/takehome/goal10/force_0.5mm_s1/baseline.json

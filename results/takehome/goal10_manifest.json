@@ -1,0 +1,112 @@
+{
+  "settings": [
+    {
+      "name": "force_0.5mm_s4",
+      "label": "Final method on force_0.5mm_s4",
+      "overrides": {
+        "outputs": 3,
+        "policy": "force_0.5mm_s4",
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal10/force_0.5mm_s4/baseline.json"
+      },
+      "base": "movement",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "transfer",
+      "output": "results/takehome/goal10/force_0.5mm_s4/trained"
+    },
+    {
+      "name": "pos_0.5mm_s1",
+      "label": "Final method on pos_0.5mm_s1",
+      "overrides": {
+        "outputs": 3,
+        "policy": "pos_0.5mm_s1",
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal10/pos_0.5mm_s1/baseline.json"
+      },
+      "base": "movement",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "transfer",
+      "output": "results/takehome/goal10/pos_0.5mm_s1/trained"
+    },
+    {
+      "name": "force_0.5mm_s1",
+      "label": "Final method on force_0.5mm_s1",
+      "overrides": {
+        "outputs": 3,
+        "policy": "force_0.5mm_s1",
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal10/force_0.5mm_s1/baseline.json"
+      },
+      "base": "movement",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "transfer",
+      "output": "results/takehome/goal10/force_0.5mm_s1/trained"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "force_0.5mm_s4",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal10_manifest.json",
+        "--setting",
+        "force_0.5mm_s4"
+      ],
+      "log": "results/takehome/goal10/logs/force_0.5mm_s4.log",
+      "requires": [
+        "results/takehome/goal10/force_0.5mm_s4/baseline.json"
+      ]
+    },
+    {
+      "name": "pos_0.5mm_s1",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal10_manifest.json",
+        "--setting",
+        "pos_0.5mm_s1"
+      ],
+      "log": "results/takehome/goal10/logs/pos_0.5mm_s1.log",
+      "requires": [
+        "results/takehome/goal10/pos_0.5mm_s1/baseline.json"
+      ]
+    },
+    {
+      "name": "force_0.5mm_s1",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal10_manifest.json",
+        "--setting",
+        "force_0.5mm_s1"
+      ],
+      "log": "results/takehome/goal10/logs/force_0.5mm_s1.log",
+      "requires": [
+        "results/takehome/goal10/force_0.5mm_s1/baseline.json"
+      ]
+    }
+  ],
+  "test_seed": 123,
+  "final_test_episodes": 500,
+  "suite_summary": "results/takehome/goal10/training_suite.json",
+  "choice": "results/takehome/goal7_choice.json",
+  "reference_manifest": "results/takehome/goal10_reference_manifest.json",
+  "execution_order": "Run all policy reference jobs successfully before training jobs.",
+  "practice_episodes_per_seed": 200
+}

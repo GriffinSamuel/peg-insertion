@@ -1,0 +1,13 @@
+{
+  "paragraphs": [
+    "On force_0.5mm_s4, the unchanged recipe averaged 91.00% with a 2.31-point sample spread, against its own 84.0% floor and 97.6% no-bias reference. The 7.00-point gain exceeds the seed spread. This supports a gain on another already competent policy, with room still below its reference.",
+    "On pos_0.5mm_s1, the recipe averaged 83.67% with a 4.47-point spread, against an 80.4% floor and 100% no-bias reference. Its 3.27-point gain is smaller than the spread, so improvement is unproven. The position-only checkpoint did not start poorly, contrary to the plan's expectation; this experiment does not isolate the effect of removing force sensing because the checkpoints differ.",
+    "On the hovering force_0.5mm_s1 policy, all three final tests scored 0/500, matching both zero-success references. None of its three 200-episode practice runs produced a success, and mean final insertion depth remained zero. Removing camera bias alone did not help this checkpoint, and this sparse-reward, bounded movement recipe learned no successful behavior from the available practice. The written identical-outcome exemption applies because both references are zero."
+  ],
+  "sources": [
+    "results/takehome/goal10/transfer_summary.json",
+    "results/takehome/goal10/practice_outcomes.json"
+  ],
+  "threshold": "Difference exceeds own sample SD across three seeds; descriptive rule, not formal significance",
+  "algorithm_tuning_after_goal7": false
+}

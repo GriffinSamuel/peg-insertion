@@ -1,0 +1,48 @@
+{
+  "jobs": [
+    {
+      "name": "force_0.5mm_s4",
+      "args": [
+        "takehome/reference.py",
+        "--policy",
+        "force_0.5mm_s4",
+        "--test-seed",
+        "123",
+        "--output",
+        "results/takehome/goal10/force_0.5mm_s4/baseline.json"
+      ],
+      "log": "results/takehome/goal10/logs/reference_force_0.5mm_s4.log"
+    },
+    {
+      "name": "pos_0.5mm_s1",
+      "args": [
+        "takehome/reference.py",
+        "--policy",
+        "pos_0.5mm_s1",
+        "--test-seed",
+        "123",
+        "--output",
+        "results/takehome/goal10/pos_0.5mm_s1/baseline.json"
+      ],
+      "log": "results/takehome/goal10/logs/reference_pos_0.5mm_s1.log"
+    },
+    {
+      "name": "force_0.5mm_s1",
+      "args": [
+        "takehome/reference.py",
+        "--policy",
+        "force_0.5mm_s1",
+        "--test-seed",
+        "123",
+        "--output",
+        "results/takehome/goal10/force_0.5mm_s1/baseline.json"
+      ],
+      "log": "results/takehome/goal10/logs/reference_force_0.5mm_s1.log"
+    }
+  ],
+  "test_seed": 123,
+  "episodes_per_condition": 500,
+  "practice_episodes": 0,
+  "suite_summary": "results/takehome/goal10/reference_suite.json",
+  "must_run_before": "results/takehome/goal10_manifest.json"
+}
