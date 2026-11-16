@@ -1,0 +1,175 @@
+{
+  "passed": true,
+  "failure_count": 0,
+  "failures": [],
+  "checks": {
+    "report_exists": true,
+    "no_em_dash": true,
+    "local_markdown_targets": {
+      "count": 56,
+      "missing": []
+    },
+    "report_table_rows": {
+      "sections": 7,
+      "rows_expected": 59,
+      "rows_found": 59,
+      "section_results": {
+        "goal6": {
+          "expected_rows": 4,
+          "found_rows": 4,
+          "missing_rows": []
+        },
+        "goal7": {
+          "expected_rows": 28,
+          "found_rows": 28,
+          "missing_rows": []
+        },
+        "confirmation": {
+          "expected_rows": 3,
+          "found_rows": 3,
+          "missing_rows": []
+        },
+        "transfer": {
+          "expected_rows": 3,
+          "found_rows": 3,
+          "missing_rows": []
+        },
+        "camera": {
+          "expected_rows": 8,
+          "found_rows": 8,
+          "missing_rows": []
+        },
+        "calibration": {
+          "expected_rows": 6,
+          "found_rows": 6,
+          "missing_rows": []
+        },
+        "failures": {
+          "expected_rows": 7,
+          "found_rows": 7,
+          "missing_rows": []
+        }
+      }
+    },
+    "confirmation_consistency": {
+      "checked": true,
+      "final_method": "movement",
+      "mean": 0.802,
+      "std": 0.0651766829472013,
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "total_settings_tried": 28,
+      "final_method_settings_tried": 28
+    },
+    "decision_bullets": {
+      "current_count": 82,
+      "plan_gap_count": 51,
+      "missing_count": 0,
+      "missing": []
+    },
+    "provenance": {
+      "checked": true,
+      "sources_listed": 35,
+      "sources_checked": 35,
+      "report_sha256": "3ffb7f10339607b3d2fdebb59f35540307c53753de38241d93843cff70fdb96a",
+      "expected_report_sha256": "3ffb7f10339607b3d2fdebb59f35540307c53753de38241d93843cff70fdb96a"
+    },
+    "embedded_png_rebuilds": {
+      "count": 14,
+      "items": [
+        {
+          "target": "results/takehome/goal5_learning_curves.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_goal5.py",
+          "script": "takehome/plot_goal5.py"
+        },
+        {
+          "target": "results/takehome/goal6/comparison.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_goal6.py",
+          "script": "takehome/plot_goal6.py"
+        },
+        {
+          "target": "results/takehome/goal6/learning_curves.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_goal6.py",
+          "script": "takehome/plot_goal6.py"
+        },
+        {
+          "target": "results/takehome/goal7/exploration.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_exploration.py",
+          "script": "takehome/plot_exploration.py"
+        },
+        {
+          "target": "results/takehome/goal7/confirmation/confirmation.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_confirmation.py",
+          "script": "takehome/plot_confirmation.py"
+        },
+        {
+          "target": "results/takehome/goal7/confirmation/confirmation_learning_curves.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_confirmation.py",
+          "script": "takehome/plot_confirmation.py"
+        },
+        {
+          "target": "results/takehome/goal8/reliability_final.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_calibration.py",
+          "script": "takehome/plot_calibration.py"
+        },
+        {
+          "target": "results/takehome/goal8/raw_q_final.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_calibration.py",
+          "script": "takehome/plot_calibration.py"
+        },
+        {
+          "target": "results/takehome/goal8/calibration_over_training.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_calibration.py",
+          "script": "takehome/plot_calibration.py"
+        },
+        {
+          "target": "results/takehome/goal9/failure_counts.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_failures.py",
+          "script": "takehome/plot_failures.py"
+        },
+        {
+          "target": "results/takehome/goal9/before_examples.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/video_contact_sheet.py",
+          "script": "takehome/video_contact_sheet.py"
+        },
+        {
+          "target": "results/takehome/goal9/after_examples.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/video_contact_sheet.py",
+          "script": "takehome/video_contact_sheet.py"
+        },
+        {
+          "target": "results/takehome/goal10/transfer.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_transfer.py",
+          "script": "takehome/plot_transfer.py"
+        },
+        {
+          "target": "results/takehome/goal11/camera_comparison.png",
+          "exists": true,
+          "command": "source scripts/env.sh && python -B takehome/plot_camera.py",
+          "script": "takehome/plot_camera.py"
+        }
+      ],
+      "missing_commands": [],
+      "missing_scripts": []
+    }
+  },
+  "scope_note": "Mechanical checks do not validate prose interpretation or causal claims."
+}

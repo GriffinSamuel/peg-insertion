@@ -276,8 +276,7 @@
           }
         ],
         "all_condition_result_files_exist": true
-      },
-      "intended_report_coverage": "results/takehome/goal11/camera_comparison.png exists and is intended for inclusion in the final report; TAKEHOME_REPORT.md has not yet been refreshed to embed it."
+      }
     },
     {
       "script": "takehome/video_contact_sheet.py",
@@ -439,17 +438,18 @@
         "script": "takehome/plot_transfer.py",
         "covered": true,
         "exists": true
+      },
+      {
+        "path": "results/takehome/goal11/camera_comparison.png",
+        "script": "takehome/plot_camera.py",
+        "covered": true,
+        "exists": true
       }
     ],
-    "embedded_png_count": 13,
+    "embedded_png_count": 14,
     "all_embedded_pngs_covered": true
   },
   "uncovered_png_outputs": [
-    {
-      "path": "results/takehome/goal11/camera_comparison.png",
-      "script": "takehome/plot_camera.py",
-      "note": "not embedded in current TAKEHOME_REPORT.md; output awaits Goal 11 inputs"
-    },
     {
       "path": "results/takehome/goal9/motion_review.png",
       "script": "takehome/video_motion_review.py",
@@ -471,14 +471,5 @@
       "note": "not embedded in current TAKEHOME_REPORT.md"
     }
   ],
-  "generation_note": "Commands are run from project root. Goal 10 inputs and Goal 11 camera summary/chart are ready. The camera comparison PNG is intended for the final report; the current report has not yet been refreshed to embed it. Ceiling review plots require local NPZ traces; video previews require local MP4s.",
-  "intended_report_pngs": [
-    {
-      "path": "results/takehome/goal11/camera_comparison.png",
-      "script": "takehome/plot_camera.py",
-      "status": "generated_intended_for_final_report",
-      "exists": true,
-      "embedded_in_current_report": false
-    }
-  ]
+  "generation_note": "All statistical summary figures and all14 embedded report PNGs are ready. Statistical plots rebuild from committed JSON; physical-inspection charts require local NPZ traces and video previews require local MP4s."
 }

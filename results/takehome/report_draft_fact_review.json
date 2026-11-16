@@ -582,5 +582,10 @@
       "results/takehome/goal11/camera_summary.json"
     ]
   },
-  "future_phase_note": "Goal11 check/interpretation/camera summary and camera figure are designated pending. Goal13 reads are conditional and designated future. No Goal12 JSON read was found in write_report.py."
+  "future_phase_note": "Goal11 check/interpretation/camera summary and camera figure are designated pending. Goal13 reads are conditional and designated future. No Goal12 JSON read was found in write_report.py.",
+  "final_input_resolution": {
+    "episode_accounting.json": "now exists from executed accounting",
+    "goal11_interpretation.json": "now exists from lead review",
+    "goal11_checks.json": "all checks passed"
+  }
 }

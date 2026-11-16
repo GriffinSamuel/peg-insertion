@@ -1,7 +1,7 @@
 {
   "source_file": "TAKEHOME_DECISIONS.md",
   "inventory_rule": "Every nonblank line whose trimmed text begins with a bullet marker is copied verbatim with its source line number.",
-  "nonblank_bullet_entry_count": 81,
+  "nonblank_bullet_entry_count": 82,
   "plan_gap_entry_count": 51,
   "entries": [
     {
@@ -578,6 +578,13 @@
       "topic": "later_goal_protocol_and_analysis",
       "exact_text": "- 2026-11-15: For the required ceiling-exceedance inspection, plot depth, true radial error and executed-command bounds for the firstthree recorded successful verification episodes; keep this diagnostic out of selection and preserve the independent seed789 score.",
       "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 87,
+      "plan_gap": false,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- 2026-11-15: Goal11 audit initially rejected all24 point-zero records solely because their camera-specific display label differed from the generic label; compare the label with the declared baseline label (default original_policy), keep every numerical/provenance check unchanged, preserve the first audit, and rerun once. The corrected audit passes with zero failures; no experiment, seed, budget or success rule changed.",
+      "evidence_source_paths_in_entry": []
     }
   ],
   "topic_groups_line_numbers": {
@@ -667,7 +674,8 @@
       71,
       72,
       73,
-      74
+      74,
+      87
     ],
     "testing_and_goal13_artifacts": [
       76,

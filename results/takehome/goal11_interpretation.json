@@ -43,7 +43,7 @@
       "formula_and_caps": "r + b + epsilon + [0,0,2mm]; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
     }
   ],
-  "formula_symbols": "r is the true tip-to-hole vector; b is the per-episode XY Gaussian bias with normal standard deviation0.75mm; epsilon is original0.2mm per-step position noise; eta is independent added jitter.",
+  "formula_symbols": "r is the true tip-to-hole vector; b is the per-episode XY Gaussian bias with normal standard deviation 0.75 mm; epsilon is the original 0.2 mm per-step position noise; eta is independent added jitter. Proprioception means the robot's current body and joint readings.",
   "sources": [
     "results/takehome/goal11/camera_summary.json",
     "results/takehome/goal11/practice_outcomes.json",

@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goals 1-11 complete; Goal 12 write-up next (2026-11-15)
+## Current status: Goals 1-12 complete; Goal 13 validation next (2026-11-15)
 
-All eight camera conditions finished, audits passed after one label-only repair, and all four ceiling checks were reviewed. Build the final report from the complete summaries, audit its numbers and links, commit/push Goal12, then run all original/new tests and the fresh seed100/test456 experiment. The unchanged headline is80.20%;28 settings; all binary artifacts remain local. Repeatability remains a logged limitation under the approved continuation.
+The complete report passed its mechanical audit and lead review:59 result rows,82 decision entries,51 plan gaps,14 figures and35 source hashes. Goal13 will run the unchanged original/new tests and one fresh seed100/test456 final-method run in its own200-episode ledger, then check protected files, accounting, report and git push. No tuning or result replacement. The headline remains80.20%;28 settings; full traces and binaries remain local. Repeatability remains an explicit limitation.
 
 ## Historical status after revised instructions, 2026-11-15
 
@@ -477,3 +477,42 @@ The method helps under several camera errors but does not solve them all. Very l
 ### 8. Questions before the next phase
 
 None requiring a pause. Continue to the complete write-up and final validation.
+
+
+## 2026-11-15: Goal 12 complete
+
+### 1. What I did (short list)
+
+- Rebuilt the complete report from audited summaries, including method/control flow, every seed, every setting, calibration, failure cases, policy and camera limits.
+- Included all decisions and PLAN GAP entries, the budget assumption, AI assistance, reproducibility limitations and one-command figure rebuilds.
+- Reviewed all prose claims and mechanically checked source hashes, table rows, links and figure commands.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Headline remains80.20% ±6.52 percentage points across confirmation practice seeds100-104, each tested on500 episodes at seed456, against60.8% original policy. All59 generated rows appear, all56 local links resolve, all14 figures have rebuild scripts, and35 result-source hashes match. All82 decisions and51 PLAN GAPs are present. No em dashes.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: every reported measurement or parameter is traceable to small result files, protocol or decision inventory.
+- PASS: lead review found no claim beyond the recorded evidence; causal explanations remain qualified, bad results retained and descriptive spread distinguished from a significance test.
+- PASS: full mechanical report audit has zero failures; final Goal13 checks are explicitly pending rather than claimed early.
+
+### 4. Surprises or problems
+
+No new experimental issue. Updated stale figure-inventory wording after the final camera chart became available and clarified technical vocabulary. Historical log entries are retained as history, including superseded pauses and earlier cumulative counts.
+
+### 5. Decisions I logged
+
+No new algorithm or experimental choices. The report includes every existing decision, including the Goal11 audit-label repair and the storage policy.
+
+### 6. Practice episodes used, and settings tried so far
+
+No new episodes. Totals remain28810 practice episodes,407054 full test-only episodes,182 reset-only probes and28 settings.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The report tells the full story, including what did not work. Small movement corrections improved the starting policy more than the learned aim correction. Confidence estimates and transfer results have clear limits. The search advantage and all practice spent are visible. Final tests and one independent repeat are the only remaining work.
+
+### 8. Questions before the next phase
+
+None requiring a pause. Run Goal13 without further tuning.

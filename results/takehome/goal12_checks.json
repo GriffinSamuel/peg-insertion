@@ -1,0 +1,15 @@
+{
+  "goal": 12,
+  "all_goal_checks_pass": true,
+  "all_report_numbers_traceable_to_saved_results": true,
+  "lead_review_no_unsupported_claims": true,
+  "plain_language_and_no_em_dashes": true,
+  "every_seed_and_setting_reported": true,
+  "decision_entries": 82,
+  "plan_gap_entries": 51,
+  "embedded_figures": 14,
+  "result_table_rows": 59,
+  "source_hashes_verified": 35,
+  "report_audit": "results/takehome/report_audit.json",
+  "final_validation_explicitly_pending_goal13": true
+}
