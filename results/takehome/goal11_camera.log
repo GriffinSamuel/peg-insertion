@@ -1,0 +1,16 @@
+START bias_2x 72955
+START bias_4x 72956
+START one_sided 72957
+START drift 72958
+FINISH {"name": "one_sided", "exit_code": 0, "seconds": 529.1380771059994}
+START jitter 81007
+FINISH {"name": "drift", "exit_code": 0, "seconds": 568.1572269669996}
+START rotation 81444
+FINISH {"name": "bias_2x", "exit_code": 0, "seconds": 588.2047734650005}
+START delay 81969
+FINISH {"name": "bias_4x", "exit_code": 0, "seconds": 599.2152496469971}
+START height 82396
+FINISH {"name": "jitter", "exit_code": 0, "seconds": 521.1767752230007}
+FINISH {"name": "rotation", "exit_code": 0, "seconds": 539.1532022930005}
+FINISH {"name": "height", "exit_code": 0, "seconds": 522.1350464110001}
+FINISH {"name": "delay", "exit_code": 0, "seconds": 538.1549631039998}

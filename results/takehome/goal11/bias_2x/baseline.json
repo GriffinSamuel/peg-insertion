@@ -1,0 +1,53 @@
+{
+  "policy": "force_0.5mm_s2",
+  "test_seed": 123,
+  "practice_episodes": 0,
+  "conditions": {
+    "normal": {
+      "episodes": 500,
+      "successes": 153,
+      "success_rate": 0.306,
+      "ci_lo": 0.26721278242267577,
+      "ci_hi": 0.3477455695673147,
+      "steps_mean": 171.686279296875,
+      "steps_median": 173.0,
+      "peak_force_mean": 72.79594421386719,
+      "final_xy_err_mean_mm": 1.615234136581421,
+      "final_depth_mean_mm": 9.98933219909668,
+      "still_inserted_at_end": 0.306,
+      "through_wall_episodes": 0,
+      "max_lateral_when_deep_mm": 0.7111132144927979,
+      "nan_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 123,
+      "practice_episodes_added": 0,
+      "cheats_on_information": false,
+      "label": "Original policy under camera problem"
+    },
+    "no_camera_bias": {
+      "episodes": 500,
+      "successes": 472,
+      "success_rate": 0.944,
+      "ci_lo": 0.9202547013596158,
+      "ci_hi": 0.9609746373849419,
+      "steps_mean": 158.6567840576172,
+      "steps_median": 157.0,
+      "peak_force_mean": 94.77877807617188,
+      "final_xy_err_mean_mm": 0.5108426809310913,
+      "final_depth_mean_mm": 28.71047019958496,
+      "still_inserted_at_end": 0.944,
+      "through_wall_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6655752658843994,
+      "nan_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 123,
+      "obs_hole_bias_std": 0.0,
+      "obs_noise_std": 0.0002,
+      "all_stats_finite": true,
+      "eval_seconds": 8.945502087000023
+    }
+  },
+  "ceiling_source": "Goal1: no constant bias and none of the added problem"
+}

@@ -1,0 +1,331 @@
+{
+  "declaration": {
+    "problem": "bias_4x",
+    "formula": "r + 4*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times4",
+    "config": {
+      "policy": "force_0.5mm_s2",
+      "outputs": 3,
+      "fill_episodes": 40,
+      "total_episodes": 200,
+      "updates_per_step": 4,
+      "ensemble": 4,
+      "hidden": 64,
+      "batch_size": 128,
+      "learning_rate": 0.0003,
+      "discount": 0.99,
+      "target_rate": 0.005,
+      "step_cap": 0.0004,
+      "guess_cap": 0.012,
+      "movement_cap": 0.0002,
+      "supervised_reference": false,
+      "fill_noise": 0.5,
+      "learner_noise": 0.2,
+      "code_test": false,
+      "coordination": "joint",
+      "briefing": false,
+      "privileged_critic": false,
+      "final_decider": false,
+      "near_hole": false,
+      "contact_cap": false,
+      "uncertainty_cap": false,
+      "classification": false,
+      "n_step": 1,
+      "return_floor": false,
+      "force_penalty": false,
+      "sibling_fill": false,
+      "test_seed": 123,
+      "baseline_path": "results/takehome/goal11/bias_4x/baseline.json",
+      "camera_problem": "bias_4x"
+    },
+    "cap_multiplier": 4.0,
+    "step_cap_m": 0.0004,
+    "guess_cap_m": 0.012,
+    "final_method": "movement",
+    "test_seed": 123,
+    "practice_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "floor": {
+    "episodes": 500,
+    "successes": 42,
+    "success_rate": 0.084,
+    "ci_lo": 0.06274379952220428,
+    "ci_hi": 0.11159988309550732,
+    "steps_mean": 170.92857360839844,
+    "steps_median": 168.0,
+    "peak_force_mean": 68.17929077148438,
+    "final_xy_err_mean_mm": 3.596928358078003,
+    "final_depth_mean_mm": 2.776132583618164,
+    "still_inserted_at_end": 0.084,
+    "through_wall_episodes": 0,
+    "max_lateral_when_deep_mm": 0.6474852561950684,
+    "nan_episodes": 0,
+    "test_only": true,
+    "learned_from": false,
+    "test_seed": 123,
+    "practice_episodes_added": 0,
+    "cheats_on_information": false,
+    "label": "Original policy under camera problem"
+  },
+  "oracle": {
+    "episodes": 500,
+    "successes": 470,
+    "success_rate": 0.94,
+    "ci_lo": 0.9156384216937552,
+    "ci_hi": 0.9576519139990498,
+    "steps_mean": 158.6765899658203,
+    "steps_median": 157.0,
+    "peak_force_mean": 97.35092163085938,
+    "final_xy_err_mean_mm": 0.5097323656082153,
+    "final_depth_mean_mm": 28.7392635345459,
+    "still_inserted_at_end": 0.94,
+    "through_wall_episodes": 0,
+    "max_lateral_when_deep_mm": 0.6670951843261719,
+    "nan_episodes": 0,
+    "test_only": true,
+    "learned_from": false,
+    "test_seed": 123,
+    "practice_episodes_added": 0,
+    "cheats_on_information": true,
+    "label": "True-error oracle (cheats: actual XY error)"
+  },
+  "ceiling": {
+    "episodes": 500,
+    "successes": 472,
+    "success_rate": 0.944,
+    "ci_lo": 0.9202547013596158,
+    "ci_hi": 0.9609746373849419,
+    "steps_mean": 158.6567840576172,
+    "steps_median": 157.0,
+    "peak_force_mean": 94.77877807617188,
+    "final_xy_err_mean_mm": 0.5108426809310913,
+    "final_depth_mean_mm": 28.71047019958496,
+    "still_inserted_at_end": 0.944,
+    "through_wall_episodes": 0,
+    "max_lateral_when_deep_mm": 0.6655752658843994,
+    "nan_episodes": 0,
+    "test_only": true,
+    "learned_from": false,
+    "test_seed": 123,
+    "obs_hole_bias_std": 0.0,
+    "obs_noise_std": 0.0002,
+    "all_stats_finite": true,
+    "eval_seconds": 8.945502087000023
+  },
+  "transfer": [
+    {
+      "episodes": 500,
+      "successes": 103,
+      "success_rate": 0.206,
+      "ci_lo": 0.17285607517585092,
+      "ci_hi": 0.24362720052032025,
+      "steps_mean": 153.05825805664062,
+      "steps_median": 154.0,
+      "peak_force_mean": 76.76353454589844,
+      "final_xy_err_mean_mm": 3.2989044189453125,
+      "final_depth_mean_mm": 6.512640953063965,
+      "still_inserted_at_end": 0.206,
+      "through_wall_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6452202796936035,
+      "nan_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 123,
+      "seed": 0,
+      "practice_episodes_added": 0,
+      "trained_source": "results/takehome/goal6/movement/seed_0/result.json",
+      "scaled_step_cap_m": 0.0004,
+      "scaled_guess_cap_m": 0.012,
+      "ceiling_verification": null
+    },
+    {
+      "episodes": 500,
+      "successes": 77,
+      "success_rate": 0.154,
+      "ci_lo": 0.12501019573842537,
+      "ci_hi": 0.18826604028495975,
+      "steps_mean": 145.93505859375,
+      "steps_median": 142.0,
+      "peak_force_mean": 68.87493133544922,
+      "final_xy_err_mean_mm": 3.5200839042663574,
+      "final_depth_mean_mm": 4.7808427810668945,
+      "still_inserted_at_end": 0.154,
+      "through_wall_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6766319274902344,
+      "nan_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 123,
+      "seed": 1,
+      "practice_episodes_added": 0,
+      "trained_source": "results/takehome/goal6/movement/seed_1/result.json",
+      "scaled_step_cap_m": 0.0004,
+      "scaled_guess_cap_m": 0.012,
+      "ceiling_verification": null
+    },
+    {
+      "episodes": 500,
+      "successes": 106,
+      "success_rate": 0.212,
+      "ci_lo": 0.1784389298803022,
+      "ci_hi": 0.24995285039349813,
+      "steps_mean": 149.0660400390625,
+      "steps_median": 142.0,
+      "peak_force_mean": 70.36164855957031,
+      "final_xy_err_mean_mm": 3.2789299488067627,
+      "final_depth_mean_mm": 6.5369768142700195,
+      "still_inserted_at_end": 0.212,
+      "through_wall_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6651878356933594,
+      "nan_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 123,
+      "seed": 2,
+      "practice_episodes_added": 0,
+      "trained_source": "results/takehome/goal6/movement/seed_2/result.json",
+      "scaled_step_cap_m": 0.0004,
+      "scaled_guess_cap_m": 0.012,
+      "ceiling_verification": null
+    }
+  ],
+  "retrained": [
+    {
+      "seed": 0,
+      "final": {
+        "practice_episodes": 200,
+        "episodes": 500,
+        "successes": 68,
+        "success_rate": 0.136,
+        "ci_lo": 0.10871499179718816,
+        "ci_hi": 0.1688357304933095,
+        "steps_mean": 164.26470947265625,
+        "steps_median": 162.5,
+        "peak_force_mean": 71.68392181396484,
+        "final_xy_err_mean_mm": 3.528676986694336,
+        "final_depth_mean_mm": 4.336137294769287,
+        "still_inserted_at_end": 0.136,
+        "through_wall_episodes": 0,
+        "max_lateral_when_deep_mm": 0.6466507911682129,
+        "nan_episodes": 0,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 123,
+        "trace_shapes": {
+          "guess": [
+            200,
+            500,
+            2
+          ],
+          "true_bias": [
+            200,
+            500,
+            2
+          ],
+          "q": [
+            200,
+            500
+          ],
+          "force": [
+            200,
+            500
+          ]
+        }
+      },
+      "result_path": "results/takehome/goal11/bias_4x/trained/seed_0/result.json"
+    },
+    {
+      "seed": 1,
+      "final": {
+        "practice_episodes": 200,
+        "episodes": 500,
+        "successes": 49,
+        "success_rate": 0.098,
+        "ci_lo": 0.07492354740061163,
+        "ci_hi": 0.1272066458982347,
+        "steps_mean": 173.36734008789062,
+        "steps_median": 174.0,
+        "peak_force_mean": 72.40365600585938,
+        "final_xy_err_mean_mm": 3.5671253204345703,
+        "final_depth_mean_mm": 3.4103708267211914,
+        "still_inserted_at_end": 0.098,
+        "through_wall_episodes": 0,
+        "max_lateral_when_deep_mm": 0.6784200668334961,
+        "nan_episodes": 0,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 123,
+        "trace_shapes": {
+          "guess": [
+            200,
+            500,
+            2
+          ],
+          "true_bias": [
+            200,
+            500,
+            2
+          ],
+          "q": [
+            200,
+            500
+          ],
+          "force": [
+            200,
+            500
+          ]
+        }
+      },
+      "result_path": "results/takehome/goal11/bias_4x/trained/seed_1/result.json"
+    },
+    {
+      "seed": 2,
+      "final": {
+        "practice_episodes": 200,
+        "episodes": 500,
+        "successes": 88,
+        "success_rate": 0.176,
+        "ci_lo": 0.14512588004549448,
+        "ci_hi": 0.21181487276253086,
+        "steps_mean": 143.64772033691406,
+        "steps_median": 139.0,
+        "peak_force_mean": 71.12621307373047,
+        "final_xy_err_mean_mm": 3.5006532669067383,
+        "final_depth_mean_mm": 5.36732816696167,
+        "still_inserted_at_end": 0.176,
+        "through_wall_episodes": 0,
+        "max_lateral_when_deep_mm": 0.6822943687438965,
+        "nan_episodes": 0,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 123,
+        "trace_shapes": {
+          "guess": [
+            200,
+            500,
+            2
+          ],
+          "true_bias": [
+            200,
+            500,
+            2
+          ],
+          "q": [
+            200,
+            500
+          ],
+          "force": [
+            200,
+            500
+          ]
+        }
+      },
+      "result_path": "results/takehome/goal11/bias_4x/trained/seed_2/result.json"
+    }
+  ],
+  "practice_episodes_added": 600,
+  "settings_counted_in_goal7": false
+}

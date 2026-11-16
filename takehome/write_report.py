@@ -84,8 +84,29 @@ Whenever both fill-up and learner data exist, each 128-step study batch contains
 
 The aim learner adds a capped XY nudge to a running guess and subtracts that guess from the camera reading. Its nudge cap is 0.1 mm per axis and its guess cap is 3 mm per axis. The movement learner adds up to 0.2 mm per axis to the old policy's movement command before the original action bounds are applied. The original action scale is 2 mm. Combined control has two aim outputs and three movement outputs. The final method uses only the three movement outputs, so its camera guess stays zero.
 
+The selected movement method has this control flow. Dashed arrows are learning updates, not extra information available during testing.
+
+```mermaid
+flowchart LR
+    O[Normal sensor reading] --> F[Frozen old policy]
+    O --> A[Movement learner]
+    F --> S[Add correction and clip to original action bounds]
+    A --> S
+    S --> E[Unchanged simulator]
+    E --> O
+    E -->|Practice steps only| R[Counted replay buffer]
+    R -.-> Q[Critic ensemble]
+    Q -.-> A
+```
+
 Reward is one at the first original-environment success and zero otherwise. Success ends the learner's episode. A time limit is stored separately and retains the critic's continuation target. The memory bank retains episode and step IDs, fill/learner source, old policy action, termination and truncation, and true camera bias for analysis. That true bias is excluded from normal actor and critic inputs. Only the explicitly labelled privileged-critic and supervised-reference experiments may use it. Tests never train either the learner or the later confidence predictor.''')
     add(source('protocol.json', 'Method parameters')+'; '+source('method_sources.json', 'Primary paper references'))
+    add(tables.table(['Method','Learned outputs','Information available','Practice budget'],[
+        ['Aim only','Two XY nudges to the running camera-error guess','Normal sensors and own guess','40 fill + 160 learner episodes'],
+        ['Movement only (selected)','Three XYZ additions to the old movement command','Normal sensors; aim guess stays zero','40 fill + 160 learner episodes'],
+        ['Combined','Two aim nudges and three movement additions','Normal sensors and own guess','40 fill + 160 learner episodes'],
+        ['Supervised reference (cheats on information)','Two aim nudges trained against the true error','True camera-error labels during learning','Same counted 200 episodes'],
+    ]))
 
     add('## Starting line and mechanism checks')
     rows=[]
@@ -150,6 +171,7 @@ Thirteen illustrative videos cover every type that occurred: six before and seve
     add('''The unchanged final method was tested under eight predeclared conditions. Transfer reuses normal-condition models from practice seeds 0-2 with no new learning. Retrain starts fresh under that condition with 200 own practice episodes per seed. The floor is the original policy under the new problem; the ceiling reuses Goal 1's no-bias, no-added-problem test. Each true-error oracle cheats on information and corrects the actual XY error at that moment; it cannot directly repair a Z error. Every displayed final score uses 500 tests at seed 123.
 
 For larger offsets, the aim nudge and guess caps scale with the offset in both transfer and retrain, as required. The final movement-only method does not use those aim outputs; its 0.2 mm movement cap stays unchanged. Height error remains included with all three movement outputs. The expectation that height must fail applied to aim-only control and is not imposed on the selected method.''')
+    add(camera_analysis['formula_symbols'])
     add(tables.table(['Condition','Predeclared formula and caps'],[[r['problem'],r['formula_and_caps']] for r in camera_analysis['declarations']]))
     add(tables.table(['Condition','Floor','Ceiling','Oracle (cheats)',*[f'Transfer s{s}' for s in range(3)],'Transfer mean ± SD',*[f'Retrain s{s}' for s in range(3)],'Retrain mean ± SD'],tables.camera_table(data['camera'])))
     add('\n\n'.join(camera_analysis['paragraphs']))
@@ -188,6 +210,7 @@ The result is simulation-only, uses one laptop GPU, and has few practice seeds. 
     if extras:
         add('Every independent ceiling-exceedance check is retained below. These extra seed-789 tests and physical diagnostics verify a movement-capable result; they do not replace or select a score.')
         add(tables.table(['Check file','Successes / tests','Test seed','Flagged wall-passage episodes','Used for selection'],extras))
+        add(source('ceiling_reviews/summary.json','Recorded-trajectory physical reviews')+'. Rebuild the inspection charts from local traces with `source scripts/env.sh && python -B takehome/plot_ceiling_checks.py`.')
     else:
         add('No independent ceiling-exceedance check was required in the recorded runs.')
     add('All phase reports, preflight results and passed/failed implementation checks remain in [TAKEHOME_PROGRESS.md](TAKEHOME_PROGRESS.md). The synthetic failure-rule fixture was corrected once to represent its intended timeout; no experimental rule or outcome changed. No exploration family was dropped for time.')
@@ -212,6 +235,7 @@ Reusing that output directory resumes or skips the same run; choose a new direct
         add(f"Fresh practice seed {rerun['practice_seed']} scored {rerun['successes']}/500 ({100*rerun['success_rate']:.2f}%), compared with confirmation mean {100*rerun['confirmation_mean']:.2f}% and spread {100*rerun['confirmation_sample_spread']:.2f} points. Within one spread: **{'yes' if rerun['within_one_spread'] else 'no'}**. The original confirmation files were unchanged. "+source('goal13/rerun_comparison.json'))
     else:
         add('Goal 13 validation is pending. The report does not yet claim that the final full test suite or fresh rerun has passed.')
+    add('''The continuation fallback used was Griffin's explicit instruction to log unresolved repeatability and carry on. The written search eligibility rule left no qualifying combinations, so round 2 had no jobs; no exploration family was cut for time. The hovering policy's identical zero outcomes used the explicit zero-floor-and-ceiling exemption. Movement results above the no-bias reference used the required extra test and physical inspection. The mechanism-check fallback was not needed. Goal 9 showed the one available example of its rare failure type and no examples for types with zero cases, with those limits reported rather than inventing footage. The exact 50/50 sampling rule uses its authorized single-buffer exceptions when the other buffer is empty.''')
     add('''Open questions are why aim-only learning collapses early despite a strong true-error oracle, which simulator operations still prevent exact repetition, whether the movement gain survives more independent seeds and real hardware, and whether an episode-probability model can give useful early failure warnings. These are not answered by the present experiments. No further tuning was done after selection.
 
 AI assistance was used throughout. The lead Codex agent designed the learner and protocol implementation, diagnosed problems, interpreted results, reviewed helper code and wrote this report. Cheaper helper agents performed narrow routine implementation, experiment execution, aggregation, plotting, rendering and audits. They did not choose the winner, change seeds or budgets, or edit the decision log. Griffin supplied and revised the plan, resolved the sampling exceptions and authorized continuation with the repeatability limitation. Griffin should review and be able to explain the report before submitting it.''')

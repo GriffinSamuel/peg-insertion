@@ -1,0 +1,19 @@
+{
+  "all_goal_checks_pass": true,
+  "goal": 11,
+  "new_errors_only_in_takehome": true,
+  "all24_own_200_episode_ledgers": true,
+  "height_included": true,
+  "all_eight_conditions_reported": true,
+  "formula_and_caps_declared_before_testing": true,
+  "final_recipe_unchanged": true,
+  "all_seed_results_reported": true,
+  "full_audit": "results/takehome/goal11_audit.json",
+  "context_audit": "results/takehome/goal11_context_audit.json",
+  "all_four_physical_checks_reviewed": true,
+  "camera_chart_visually_reviewed": true,
+  "audit_repair": "One display-label comparison fixed to match the declared baseline; first failed audit retained; all numerical contracts unchanged.",
+  "plot_repair": "Use labelled bar containers in legend instead of unlabelled rectangle patches; regenerated and visually reviewed.",
+  "suite_seconds": 1127.463537568001,
+  "counts": "results/takehome/goal11_counts.json"
+}

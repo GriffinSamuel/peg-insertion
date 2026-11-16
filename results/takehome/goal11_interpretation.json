@@ -1,0 +1,53 @@
+{
+  "paragraphs": [
+    "The selected movement method partly handled every specified condition, but it did not restore the no-bias reference across all of them. All retrain means exceeded their own floors by more than their own sample spread under the predeclared descriptive rule. This is not a formal significance test, and the three-seed comparisons retain substantial uncertainty.",
+    "At twice the normal constant bias, transfer scored 48.47% and retraining 40.13% against a 30.6% floor. At four times the bias, transfer scored 19.07% and retraining 13.67% against 8.4%. The true-error oracle scored 94.0% in both cases, so good aim remains possible in principle, but the unchanged movement recipe could not recover it within 200 practice episodes. The larger aim caps are unused by the selected movement-only actor; its movement cap was not tuned upward.",
+    "The one-sided offset was handled best: retraining reached 90.93% against a 68.0% floor and 94.4% no-added-error reference. Transfer averaged 87.60%, with much larger variation across its three models. The 3.33-point retraining advantage is below that variation and is not established by the spread rule. The positive improvement over the floor does not mean all errors were eliminated.",
+    "Slow drift was partly handled: transfer averaged 61.00% and retraining 66.13%, compared with the 29.0% floor. The 93.8% true-error oracle leaves a large remaining gap. The 5.13-point retraining advantage is below its 9.47-point spread, so these runs do not establish a benefit from retraining over using the normal-error learner.",
+    "Extra jitter was partly handled, with 84.87% transfer and 75.80% retraining against 67.8% for the original policy. Retraining did worse than transfer by more than either seed spread in this sample. These measurements do not identify why learning under the jitter was weaker. Rotation was also partly handled: 85.73% transfer and 85.80% retraining against 65.4%, with no clear difference between those two learned results.",
+    "The 60 ms delayed geometry was partly handled by transfer at 81.53% against a 47.8% floor. Retraining averaged 67.53%, with a 17.46-point spread and one seed exactly back at the floor. The difference from transfer is smaller than that spread. The XY true-error oracle reached 87.0%; it still receives delayed vertical geometry, unlike the 94.4% no-added-error reference, so this diagnostic does not remove the whole delayed-reading problem.",
+    "The +2 mm height error did not cause the predicted failure: the original policy already scored 74.6%, transfer 86.20%, retraining 80.93%, and the XY true-error oracle 97.6%. This particular error direction is therefore not an unfixable case in these measurements. The selected method also has a vertical movement output, unlike the original aim-only proposal. The transfer-versus-retrain difference is below the larger spread, and the tests do not establish why this height shift helped the original checkpoint.",
+    "Four one-sided movement results exceeded the no-bias reference during transfer or learning-curve evaluation. Their independent 500-episode seed-789 checks scored 477, 481, 473 and 478 successes. Each had zero flagged wall-passage or invalid-number episodes. Three complete successful trajectories per check were visually reviewed for depth, lateral error and bounded commands, with no gross physical anomaly seen. These additional tests never selected or replaced a reported result."
+  ],
+  "declarations": [
+    {
+      "problem": "bias_2x",
+      "formula_and_caps": "r + 2*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times2; aim nudge cap 0.2 mm/axis; guess cap 6 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "bias_4x",
+      "formula_and_caps": "r + 4*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times4; aim nudge cap 0.4 mm/axis; guess cap 12 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "one_sided",
+      "formula_and_caps": "r_xy + abs(b_xy) + epsilon_xy; Z unchanged; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "drift",
+      "formula_and_caps": "r_xy + b_xy + (step/200)*[1mm,-1mm] + epsilon_xy; Z unchanged; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "jitter",
+      "formula_and_caps": "r_xy + b_xy + epsilon_xy + eta_xy, eta ~ N(0,(0.6mm)^2 I); Z unchanged; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "rotation",
+      "formula_and_caps": "R(10 degrees)*r_xy + b_xy + epsilon_xy; Z unchanged; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "delay",
+      "formula_and_caps": "r(max(step-3,0)) + b + epsilon; 60ms geometry delay, present proprioception; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
+    },
+    {
+      "problem": "height",
+      "formula_and_caps": "r + b + epsilon + [0,0,2mm]; aim nudge cap 0.1 mm/axis; guess cap 3 mm/axis; movement cap 0.2 mm/axis"
+    }
+  ],
+  "formula_symbols": "r is the true tip-to-hole vector; b is the per-episode XY Gaussian bias with normal standard deviation0.75mm; epsilon is original0.2mm per-step position noise; eta is independent added jitter.",
+  "sources": [
+    "results/takehome/goal11/camera_summary.json",
+    "results/takehome/goal11/practice_outcomes.json",
+    "results/takehome/ceiling_reviews/summary.json"
+  ],
+  "lead_interpretation": true
+}

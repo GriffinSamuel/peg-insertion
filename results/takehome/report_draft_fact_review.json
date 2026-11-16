@@ -1,0 +1,586 @@
+{
+  "reviewed_source": "takehome/write_report.py",
+  "source_was_executed": false,
+  "mismatches": [
+    {
+      "kind": "missing_nonfuture_json_read",
+      "path": "results/takehome/episode_accounting.json",
+      "exact_report_sentence": "Across the study so far, the ledger contains **{accounting['practice']['practice_episodes_reserved']:,} practice episodes** in {accounting['practice']['experiment_ledgers']} experiment ledgers and **{accounting['full_test_episodes_total']:,} full test-only episodes**.",
+      "source_evidence": [
+        "takehome/write_report.py reads episode_accounting.json at line 41 and formats its counts at line 162.",
+        "results/takehome/episode_accounting.json is absent.",
+        "Per-goal files results/takehome/goal9_test_episode_accounting.json, goal10_test_episode_accounting.json and goal11_test_episode_accounting.json exist, but do not satisfy the aggregate input path."
+      ],
+      "required_action": "Create the aggregate input at the path the report reads, or update the report source to a current real path before report generation."
+    }
+  ],
+  "validated_numerical_groups": [
+    {
+      "group": "baseline_and_mechanism",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/baseline.json",
+        "results/takehome/mechanism_check.json"
+      ],
+      "values": {
+        "baseline_normal": "307/500 (61.4%), test seed 123",
+        "baseline_no_camera_bias": "472/500 (94.4%), test seed 123",
+        "zero_correction": "302/500 (60.4%), test seed 123",
+        "true_error_oracle": "471/500 (94.2%), test seed 123",
+        "mechanism_tolerances_pass": {
+          "zero_within_3_points": true,
+          "oracle_within_5_points": true
+        }
+      }
+    },
+    {
+      "group": "goal5_and_goal6",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/goal5_aggregate.json",
+        "results/takehome/goal6/goal6_aggregate.json"
+      ],
+      "values": {
+        "goal5_aim_mean": "65.16%",
+        "goal5_aim_sample_sd_points": "7.74",
+        "goal6_method_means_and_sample_sd_points": {
+          "aim": {
+            "mean_percent": "65.16",
+            "sample_sd_points": "7.74"
+          },
+          "movement": {
+            "mean_percent": "83.36",
+            "sample_sd_points": "2.99"
+          },
+          "combined": {
+            "mean_percent": "78.60",
+            "sample_sd_points": "4.60"
+          },
+          "supervised_cheating_reference": {
+            "mean_percent": "66.16",
+            "sample_sd_points": "2.05"
+          }
+        },
+        "all_counts_test_seed": 123,
+        "final_tests_per_seed": 500
+      }
+    },
+    {
+      "group": "goal7_settings_and_selection",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_checks.json",
+        "results/takehome/goal7/force_penalty_comparison.json"
+      ],
+      "values": {
+        "settings_tried": 28,
+        "summary_settings": 28,
+        "screening_settings": 24,
+        "round2_settings": 0,
+        "selected": "movement",
+        "highest_mean_setting": "movement",
+        "highest_mean_percent": "83.36",
+        "highest_sample_sd_points": "2.99",
+        "within_one_spread": [
+          "movement"
+        ],
+        "all_goal_checks_pass": true,
+        "force_penalty_vs_combined": {
+          "combined_mean_peak_force_N": "91.79",
+          "force_penalty_mean_peak_force_N": "88.16",
+          "combined_mean_success_percent": "77.47",
+          "force_penalty_mean_success_percent": "67.47"
+        }
+      }
+    },
+    {
+      "group": "confirmation",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/goal7/confirmation/confirmation_summary.json",
+        "results/takehome/confirmation_baseline.json"
+      ],
+      "values": {
+        "selected_method": "movement",
+        "selected_mean_percent": "80.20",
+        "selected_sample_sd_points": "6.52",
+        "selected_seed_range_percent": [
+          "72.0",
+          "88.6"
+        ],
+        "floor_percent": "60.8",
+        "ceiling_percent": "92.6",
+        "aim_gain_over_floor_points": "1.96",
+        "aim_sample_sd_points": "3.71",
+        "combined_gain_over_floor_points": "6.88",
+        "combined_sample_sd_points": "12.47",
+        "all_practice_seeds": [
+          100,
+          101,
+          102,
+          103,
+          104
+        ],
+        "final_test_seed": 456,
+        "final_test_episodes": 500
+      }
+    },
+    {
+      "group": "calibration",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/goal8/summary.json",
+        "results/takehome/goal8_checks.json"
+      ],
+      "values": {
+        "predictor_fits": 45,
+        "all_fits_converged": true,
+        "practice_episodes_added": 0,
+        "episode_tests_reused": 2500,
+        "valid_step_count": 392329,
+        "mean_prediction_percent": "69.54",
+        "observed_valid_step_rate_percent": "74.77",
+        "underconfidence_points": "5.23",
+        "ece_points": "6.32",
+        "brier_score": 0.15235,
+        "failed_episodes": 495,
+        "confident_failed_moments": 355,
+        "failed_episodes_with_drop": 15,
+        "step_weighting": "valid trace steps"
+      }
+    },
+    {
+      "group": "failures_and_pose_repeats",
+      "status": "matches_numeric_counts_visual_review_not_machine_verifiable",
+      "evidence": [
+        "results/takehome/goal9/failures.json",
+        "results/takehome/goal9/video_manifest.json",
+        "results/takehome/goal9/video_audit.json",
+        "results/takehome/goal9/motion_review_sources.json",
+        "results/takehome/goal9/after_seed_100_poses.json",
+        "results/takehome/goal9/after_seed_101_poses.json",
+        "results/takehome/goal9/after_seed_102_poses.json",
+        "results/takehome/goal9/after_seed_103_poses.json"
+      ],
+      "values": {
+        "before_repeat": "303/500 at test seed 456",
+        "after_pooled": "2005/2500",
+        "after_seed_successes": {
+          "100": 380,
+          "101": 402,
+          "102": 420,
+          "103": 360,
+          "104": 443
+        },
+        "illustrative_video_count": 13,
+        "before_video_count": 6,
+        "after_video_count": 7,
+        "after_rare_near_contact_count": 1,
+        "logged_missing_after": {
+          "never_near_hole_contact": 0,
+          "wrong_way_correction": 0,
+          "stuck_on_rim": 0,
+          "timeout": 0,
+          "other": 0
+        },
+        "all_video_audit_checks_pass": true,
+        "pose_repeat_successes": {
+          "100": 382,
+          "101": 391,
+          "102": 419,
+          "103": 349
+        },
+        "motion_review_frame_source_count": 8,
+        "pose_through_wall_episodes": {
+          "after_seed_100_poses": 0,
+          "after_seed_101_poses": 0,
+          "after_seed_102_poses": 0,
+          "after_seed_103_poses": 0
+        }
+      },
+      "non_numeric_report_claims": [
+        "The visual assertions about previews reviewed and no gross wall passage require a human review of the existing contact/motion sheets; video metadata audit alone does not verify appearance."
+      ]
+    },
+    {
+      "group": "timing_repeats",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/benchmark_timings.json",
+        "results/takehome/benchmark/"
+      ],
+      "values": {
+        "per_process_count_seconds_per_experiment": {
+          "1": 116.03,
+          "2": 66.02,
+          "4": 58.01
+        },
+        "one_process_two_seeds_seconds_per_experiment": 78.01,
+        "largest_measured_throughput_group": "parallel4",
+        "claim": "four concurrent GPU processes had highest observed experiments/second among these measured groups"
+      }
+    },
+    {
+      "group": "practice_cap_and_method_hyperparameters",
+      "status": "matches",
+      "evidence": [
+        "results/takehome/protocol.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "takehome/config.py",
+        "takehome/learner.py",
+        "takehome/correction.py",
+        "takehome/episodes.py",
+        "peg_insertion/env.py"
+      ],
+      "values": {
+        "main_protocol_config": {
+          "policy": "force_0.5mm_s2",
+          "outputs": 2,
+          "fill_episodes": 40,
+          "total_episodes": 200,
+          "updates_per_step": 4,
+          "ensemble": 4,
+          "hidden": 64,
+          "batch_size": 128,
+          "learning_rate": 0.0003,
+          "discount": 0.99,
+          "target_rate": 0.005,
+          "step_cap": 0.0001,
+          "guess_cap": 0.003,
+          "movement_cap": 0.0002,
+          "supervised_reference": false,
+          "fill_noise": 0.5,
+          "learner_noise": 0.2,
+          "code_test": false
+        },
+        "final_confirmation_config": {
+          "policy": "force_0.5mm_s2",
+          "outputs": 3,
+          "fill_episodes": 40,
+          "total_episodes": 200,
+          "updates_per_step": 4,
+          "ensemble": 4,
+          "hidden": 64,
+          "batch_size": 128,
+          "learning_rate": 0.0003,
+          "discount": 0.99,
+          "target_rate": 0.005,
+          "step_cap": 0.0001,
+          "guess_cap": 0.003,
+          "movement_cap": 0.0002,
+          "supervised_reference": false,
+          "fill_noise": 0.5,
+          "learner_noise": 0.2,
+          "code_test": false,
+          "coordination": "joint",
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false,
+          "test_seed": 456,
+          "baseline_path": "results/takehome/confirmation_baseline.json"
+        },
+        "episode_limit_and_batch": {
+          "practice_episodes": 200,
+          "batch_episodes": 10,
+          "episode_length_steps": 200,
+          "control_interval_seconds": 0.02
+        },
+        "critic_actor_architecture": {
+          "actor_hidden_layers": 2,
+          "critic_hidden_layers": 2,
+          "hidden_width": 64,
+          "critics": 4,
+          "critic_layer_norm_in_source": "takehome/learner.py:35-36"
+        },
+        "optimization": {
+          "learning_rate": 0.0003,
+          "discount": 0.99,
+          "target_rate": 0.005,
+          "updates_per_step": 4,
+          "gradient_clip_global_norm": 10.0,
+          "target_critic_subset_size": 2,
+          "batch_size": 128
+        },
+        "control_caps_m": {
+          "aim_step_cap": 0.0001,
+          "guess_cap": 0.003,
+          "movement_cap": 0.0002
+        },
+        "final_output_count": 3,
+        "original_policy_action_scale_m": 0.002,
+        "success_rule": {
+          "ever_reached_depth_m": 0.024,
+          "depth_fraction_of_hole": 0.8,
+          "hole_depth_m": 0.03,
+          "radial_in_hole_threshold_m": 0.0105,
+          "learner_reward": "one at first original-environment success only",
+          "source": "peg_insertion/env.py reached_depth and in_hole; frozen policy force_0.5mm_s2"
+        }
+      }
+    }
+  ],
+  "image_paths": [
+    {
+      "path": "results/takehome/goal5_learning_curves.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal6/comparison.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal6/learning_curves.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal7/exploration.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/confirmation.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/confirmation_learning_curves.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal8/reliability_final.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal8/raw_q_final.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal8/calibration_over_training.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal9/failure_counts.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal9/before_examples.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal9/after_examples.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal10/transfer.png",
+      "status": "exists"
+    },
+    {
+      "path": "results/takehome/goal11/camera_comparison.png",
+      "status": "pending_goal11"
+    }
+  ],
+  "image_path_check": {
+    "all_exist_or_pending_goal11": true,
+    "pending_goal11_paths": [
+      "results/takehome/goal11/camera_comparison.png"
+    ]
+  },
+  "json_read_paths": [
+    {
+      "path": "results/takehome/goal7_choice.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/protocol.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/episode_accounting.json",
+      "exists": false,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/repeatability_conclusion.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal7/force_penalty_comparison.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal8_checks.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal9/video_manifest.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal9_checks.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal10_interpretation.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal11_interpretation.json",
+      "exists": false,
+      "future_designated": true,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/figure_rebuild_inventory.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/report_choice_inventory.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/environment.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/method_sources.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal4_trial/seed_999/result.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/baseline.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/mechanism_check.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/benchmark_timings.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal13_checks.json",
+      "exists": false,
+      "future_designated": true,
+      "conditional_future_read": true
+    },
+    {
+      "path": "results/takehome/goal13/rerun_comparison.json",
+      "exists": false,
+      "future_designated": true,
+      "conditional_future_read": true
+    },
+    {
+      "path": "results/takehome/goal11_checks.json",
+      "exists": false,
+      "future_designated": true,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/figure_rebuild_commands.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal6/goal6_aggregate.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal7_summary.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal7/confirmation/confirmation_summary.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal10/transfer_summary.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal11/camera_summary.json",
+      "exists": false,
+      "future_designated": true,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal8/summary.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    },
+    {
+      "path": "results/takehome/goal9/failures.json",
+      "exists": true,
+      "future_designated": false,
+      "conditional_future_read": false
+    }
+  ],
+  "json_read_path_check": {
+    "missing_nonfuture_paths": [
+      "results/takehome/episode_accounting.json"
+    ],
+    "future_missing_paths": [
+      "results/takehome/goal11_interpretation.json",
+      "results/takehome/goal13_checks.json",
+      "results/takehome/goal13/rerun_comparison.json",
+      "results/takehome/goal11_checks.json",
+      "results/takehome/goal11/camera_summary.json"
+    ]
+  },
+  "future_phase_note": "Goal11 check/interpretation/camera summary and camera figure are designated pending. Goal13 reads are conditional and designated future. No Goal12 JSON read was found in write_report.py."
+}

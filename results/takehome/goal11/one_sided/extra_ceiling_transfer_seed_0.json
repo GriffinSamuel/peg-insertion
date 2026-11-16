@@ -1,0 +1,42 @@
+{
+  "episodes": 500,
+  "successes": 477,
+  "success_rate": 0.954,
+  "ci_lo": 0.9319217297737272,
+  "ci_hi": 0.9691551166002124,
+  "steps_mean": 142.86582946777344,
+  "steps_median": 142.0,
+  "peak_force_mean": 102.35557556152344,
+  "final_xy_err_mean_mm": 0.5491794347763062,
+  "final_depth_mean_mm": 28.856693267822266,
+  "still_inserted_at_end": 0.954,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6988048553466797,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 789,
+  "used_for_selection": false,
+  "inspected_episode_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "max_lateral_when_deep_examples_m": [
+    0.0005730688571929932,
+    0.0005682110786437988,
+    0.000648796558380127,
+    0.0005349218845367432,
+    0.0005387961864471436
+  ],
+  "max_abs_control_examples": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "reason": "Movement-capable evaluation exceeded its fixed ceiling reference"
+}

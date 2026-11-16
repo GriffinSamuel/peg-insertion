@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goals 1-10 complete; Goal 11 next (2026-11-15)
+## Current status: Goals 1-11 complete; Goal 12 write-up next (2026-11-15)
 
-The final movement method remains unchanged. Other-policy results are 91.00% for force_s4, 83.67% for position_s1 and 0% for the hovering force_s1. All nine own-budget runs passed their audit. Next run all eight predeclared camera conditions, each with original-policy and cheating-oracle references, transfer tests and three fresh learners. Total 28 settings, 24,010 practice episodes and 323,902 full test-only episodes. Continue through Goal 13 with no cuts. Binary artifacts stay local; repeatability remains a documented limitation.
+All eight camera conditions finished, audits passed after one label-only repair, and all four ceiling checks were reviewed. Build the final report from the complete summaries, audit its numbers and links, commit/push Goal12, then run all original/new tests and the fresh seed100/test456 experiment. The unchanged headline is80.20%;28 settings; all binary artifacts remain local. Repeatability remains a logged limitation under the approved continuation.
 
 ## Historical status after revised instructions, 2026-11-15
 
@@ -426,3 +426,54 @@ The method helped another force-sensing policy. The position-only policy already
 ### 8. Questions before the next phase
 
 None requiring a pause. Continue to all eight camera conditions.
+
+
+## 2026-11-15: Goal 11 complete
+
+### 1. What I did (short list)
+
+- Ran all eight predeclared camera conditions, with floor, true-error oracle, transfer and three fresh200-episode learners each.
+- Audited all24 independent budgets and test provenance, collected practice outcomes and plotted all seeds.
+- Reviewed four independent seed789 checks and three recorded trajectories from each.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Every final measurement has500 tests at seed123; learning seeds0,1,2. The no-added-error reference remains472/500. Suite runtime1127.46seconds.
+
+- bias_2x: floor 153/500; transfer [244, 235, 248]; retrain [172, 239, 191]; retrain mean 40.13% ±6.91pp; oracle 470/500.
+- bias_4x: floor 42/500; transfer [103, 77, 106]; retrain [68, 49, 88]; retrain mean 13.67% ±3.90pp; oracle 470/500.
+- one_sided: floor 340/500; transfer [475, 385, 454]; retrain [446, 468, 450]; retrain mean 90.93% ±2.34pp; oracle 471/500.
+- drift: floor 145/500; transfer [352, 270, 293]; retrain [359, 276, 357]; retrain mean 66.13% ±9.47pp; oracle 469/500.
+- jitter: floor 339/500; transfer [424, 418, 431]; retrain [394, 358, 385]; retrain mean 75.80% ±3.75pp; oracle 470/500.
+- rotation: floor 327/500; transfer [434, 418, 434]; retrain [449, 416, 422]; retrain mean 85.80% ±3.52pp; oracle 470/500.
+- delay: floor 239/500; transfer [420, 379, 424]; retrain [405, 369, 239]; retrain mean 67.53% ±17.46pp; oracle 435/500.
+- height: floor 373/500; transfer [465, 414, 414]; retrain [375, 410, 429]; retrain mean 80.93% ±5.48pp; oracle 488/500.
+
+The four extra789 tests scored477,481,473,478/500, with zero wall or invalid-number flags. No extra score was used for selection.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: every added error is implemented only in takehome code.
+- PASS: all24 retrains use exactly their own200 episodes, with tests excluded from learning.
+- PASS: height error is included, unchanged final recipe retained, all eight formulas and larger-error caps declared first.
+- PASS: all scores, every seed, the table and chart are retained; full and context audits have zero remaining failures.
+
+### 4. Surprises or problems
+
+Four-times bias remains mostly unsuccessful despite a strong true-error oracle. Retraining is not consistently better than transfer, and delayed-reading retraining has large spread. Height error did not cause the expected failure. One audit assumed the generic display label; corrected once to match its declared baseline without changing any data or numeric check, and preserved its initial failure. The camera chart's legend used unlabelled patches; corrected to labelled bar containers and visually reviewed.
+
+### 5. Decisions I logged
+
+Logged the audit-label correction. The unchanged3D movement recipe for height, exact camera formulas, scaled aim caps and extra-seed physical checks were already declared. No new tuning choices.
+
+### 6. Practice episodes used, and settings tried so far
+
+Added4800 practice episodes and83152 test-only episodes, including2000 additional ceiling-verification tests. Totals:28810 practice episodes in145 completed ledgers,407054 full test-only episodes,182 reset-only probes;28 searched settings. Eight camera contexts are listed separately from tuning.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+The method helps under several camera errors but does not solve them all. Very large offsets remain a clear limit. A one-sided offset is much easier. Retraining from scratch under a new error can be worse than keeping the original learner. The unexpected height result is reported as measured.
+
+### 8. Questions before the next phase
+
+None requiring a pause. Continue to the complete write-up and final validation.

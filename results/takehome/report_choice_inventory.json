@@ -1,7 +1,7 @@
 {
   "source_file": "TAKEHOME_DECISIONS.md",
   "inventory_rule": "Every nonblank line whose trimmed text begins with a bullet marker is copied verbatim with its source line number.",
-  "nonblank_bullet_entry_count": 79,
+  "nonblank_bullet_entry_count": 81,
   "plan_gap_entry_count": 51,
   "entries": [
     {
@@ -564,6 +564,20 @@
       "topic": "goal9_failure_analysis_and_video_review",
       "exact_text": "- PLAN GAP 2026-11-15: Review representative before-rim and after-outward-command videos at0,1,2 and3.8 seconds to inspect approach, contact and ending; save the frame-source manifest and a rebuild command, without new simulation or outcome substitution.",
       "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 85,
+      "plan_gap": false,
+      "topic": "later_goal_protocol_and_analysis",
+      "exact_text": "- 2026-11-15: Give zero and perfect-result markers a small plotting margin beyond0 and100 percent so every seed stays visible; use percentage labels without changing any measured rate.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 86,
+      "plan_gap": false,
+      "topic": "later_goal_protocol_and_analysis",
+      "exact_text": "- 2026-11-15: For the required ceiling-exceedance inspection, plot depth, true radial error and executed-command bounds for the firstthree recorded successful verification episodes; keep this diagnostic out of selection and preserve the independent seed789 score.",
+      "evidence_source_paths_in_entry": []
     }
   ],
   "topic_groups_line_numbers": {
@@ -665,6 +679,10 @@
       80,
       81,
       82
+    ],
+    "later_goal_protocol_and_analysis": [
+      85,
+      86
     ]
   },
   "reviewed_evidence_jsons": [

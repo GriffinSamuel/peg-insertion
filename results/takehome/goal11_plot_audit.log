@@ -1,0 +1,6 @@
+{
+  "conditions": 8,
+  "csv": "results/takehome/goal11/camera_summary.csv",
+  "json": "results/takehome/goal11/camera_summary.json",
+  "chart": "results/takehome/goal11/camera_comparison.png"
+}

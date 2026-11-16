@@ -97,13 +97,13 @@
     {
       "script": "takehome/plot_transfer.py",
       "command": "source scripts/env.sh && python -B takehome/plot_transfer.py",
-      "state": "pending_goal10_results_not_failed",
+      "state": "ready",
       "inputs": [
         "results/takehome/goal10_manifest.json",
         "results/takehome/goal10/<policy>/baseline.json for all three policies",
         "results/takehome/goal10/<policy>/trained/seed_{0,1,2}/result.json"
       ],
-      "input_material": "Manifest and later summaries are small JSON; the plotter does not read binary traces. Goal 10 result JSONs/baselines are pending.",
+      "input_material": "All current manifest, policy baselines, and result JSON inputs are present and tracked as result artifacts; no binary traces are read by the plotter.",
       "outputs": [
         "results/takehome/goal10/transfer.csv",
         "results/takehome/goal10/transfer_summary.json",
@@ -113,18 +113,171 @@
     {
       "script": "takehome/plot_camera.py",
       "command": "source scripts/env.sh && python -B takehome/plot_camera.py",
-      "state": "pending_goal11_results_not_failed",
+      "state": "ready",
       "inputs": [
         "results/takehome/baseline.json",
         "results/takehome/goal11/<condition>/result.json for eight camera conditions",
         "results/takehome/goal11/<condition>/trained/seed_{0,1,2}/result.json"
       ],
-      "input_material": "Goal 11 manifest/results are pending. Camera plotter uses small JSON measurement files; no traces are read by this plotter.",
+      "input_material": "Goal 11 summary, eight condition result JSONs and 24 retrained result JSONs are present; plot rebuild uses JSON measurements only and does not read traces.",
       "outputs": [
         "results/takehome/goal11/camera_summary.csv",
         "results/takehome/goal11/camera_summary.json",
         "results/takehome/goal11/camera_comparison.png"
-      ]
+      ],
+      "currently_discovered_inputs": {
+        "summary": {
+          "path": "results/takehome/goal11/camera_summary.json",
+          "exists": true
+        },
+        "chart": {
+          "path": "results/takehome/goal11/camera_comparison.png",
+          "exists": true
+        },
+        "condition_count": 8,
+        "conditions": [
+          "bias_2x",
+          "bias_4x",
+          "one_sided",
+          "drift",
+          "jitter",
+          "rotation",
+          "delay",
+          "height"
+        ],
+        "condition_result_files": [
+          {
+            "path": "results/takehome/goal11/bias_2x/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_2x/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_2x/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_2x/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_4x/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_4x/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_4x/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/bias_4x/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/one_sided/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/one_sided/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/one_sided/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/one_sided/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/drift/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/drift/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/drift/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/drift/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/jitter/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/jitter/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/jitter/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/jitter/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/rotation/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/rotation/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/rotation/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/rotation/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/delay/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/delay/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/delay/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/delay/trained/seed_2/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/height/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/height/trained/seed_0/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/height/trained/seed_1/result.json",
+            "exists": true
+          },
+          {
+            "path": "results/takehome/goal11/height/trained/seed_2/result.json",
+            "exists": true
+          }
+        ],
+        "all_condition_result_files_exist": true
+      },
+      "intended_report_coverage": "results/takehome/goal11/camera_comparison.png exists and is intended for inclusion in the final report; TAKEHOME_REPORT.md has not yet been refreshed to embed it."
     },
     {
       "script": "takehome/video_contact_sheet.py",
@@ -153,6 +306,56 @@
       "input_material": "The source list is small JSON; rebuilding the motion sheet requires local MP4 binaries and does not reread NPZ traces.",
       "outputs": [
         "results/takehome/goal9/motion_review.png"
+      ]
+    },
+    {
+      "script": "takehome/plot_ceiling_checks.py",
+      "command": "source scripts/env.sh && python -B takehome/plot_ceiling_checks.py",
+      "state": "ready_local_npz_dependent",
+      "inputs": [
+        "results/takehome/{goal7,goal8,goal9,goal10,goal11,goal13}/**/extra_ceiling*.json",
+        "for each included test_only JSON, adjacent .npz or sibling *_traces.npz selected by script"
+      ],
+      "input_material": "Requires small extra_ceiling JSON summaries plus local binary NPZ traces. The NPZ traces are opened to inspect depth, radial error and action traces; these are physical-inspection charts, not JSON-only summary plots.",
+      "outputs": [
+        "results/takehome/ceiling_reviews/*.png",
+        "results/takehome/ceiling_reviews/summary.json"
+      ],
+      "currently_discovered_png_outputs": [
+        "results/takehome/ceiling_reviews/goal11_one_sided_extra_ceiling_transfer_seed_0.png",
+        "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0140.png",
+        "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0160.png",
+        "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_2_extra_ceiling_0160.png"
+      ],
+      "currently_discovered_inputs": [
+        {
+          "json_summary": "results/takehome/goal11/one_sided/extra_ceiling_transfer_seed_0.json",
+          "local_npz_trace": "results/takehome/goal11/one_sided/extra_ceiling_transfer_seed_0.npz",
+          "local_npz_exists": true,
+          "chart_output": "results/takehome/ceiling_reviews/goal11_one_sided_extra_ceiling_transfer_seed_0.png",
+          "chart_exists": true
+        },
+        {
+          "json_summary": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0140.json",
+          "local_npz_trace": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0140_traces.npz",
+          "local_npz_exists": true,
+          "chart_output": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0140.png",
+          "chart_exists": true
+        },
+        {
+          "json_summary": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160.json",
+          "local_npz_trace": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160_traces.npz",
+          "local_npz_exists": true,
+          "chart_output": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0160.png",
+          "chart_exists": true
+        },
+        {
+          "json_summary": "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160.json",
+          "local_npz_trace": "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160_traces.npz",
+          "local_npz_exists": true,
+          "chart_output": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_2_extra_ceiling_0160.png",
+          "chart_exists": true
+        }
       ]
     }
   ],
@@ -230,27 +433,52 @@
         "script": "takehome/video_contact_sheet.py",
         "covered": true,
         "exists": true
+      },
+      {
+        "path": "results/takehome/goal10/transfer.png",
+        "script": "takehome/plot_transfer.py",
+        "covered": true,
+        "exists": true
       }
     ],
-    "embedded_png_count": 12,
+    "embedded_png_count": 13,
     "all_embedded_pngs_covered": true
   },
   "uncovered_png_outputs": [
     {
-      "path": "results/takehome/goal10/transfer.png",
-      "script": "takehome/plot_transfer.py",
-      "note": "not embedded in current TAKEHOME_REPORT.md; output awaits future Goal10/11 results"
-    },
-    {
       "path": "results/takehome/goal11/camera_comparison.png",
       "script": "takehome/plot_camera.py",
-      "note": "not embedded in current TAKEHOME_REPORT.md; output awaits future Goal10/11 results"
+      "note": "not embedded in current TAKEHOME_REPORT.md; output awaits Goal 11 inputs"
     },
     {
       "path": "results/takehome/goal9/motion_review.png",
       "script": "takehome/video_motion_review.py",
       "note": "not embedded in current TAKEHOME_REPORT.md"
+    },
+    {
+      "path": "results/takehome/ceiling_reviews/goal11_one_sided_extra_ceiling_transfer_seed_0.png",
+      "script": "takehome/plot_ceiling_checks.py",
+      "note": "not embedded in current TAKEHOME_REPORT.md"
+    },
+    {
+      "path": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0140.png",
+      "script": "takehome/plot_ceiling_checks.py",
+      "note": "not embedded in current TAKEHOME_REPORT.md"
+    },
+    {
+      "path": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0160.png",
+      "script": "takehome/plot_ceiling_checks.py",
+      "note": "not embedded in current TAKEHOME_REPORT.md"
     }
   ],
-  "generation_note": "Commands are run from project root. Goal10 and Goal11 inputs/outputs marked pending are not failures."
+  "generation_note": "Commands are run from project root. Goal 10 inputs and Goal 11 camera summary/chart are ready. The camera comparison PNG is intended for the final report; the current report has not yet been refreshed to embed it. Ceiling review plots require local NPZ traces; video previews require local MP4s.",
+  "intended_report_pngs": [
+    {
+      "path": "results/takehome/goal11/camera_comparison.png",
+      "script": "takehome/plot_camera.py",
+      "status": "generated_intended_for_final_report",
+      "exists": true,
+      "embedded_in_current_report": false
+    }
+  ]
 }

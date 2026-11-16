@@ -243,3 +243,35 @@ Each reference used 500 tests at seed 123 before training; each learner had its 
 ![Other policies](results/takehome/goal10/transfer.png)
 
 Rebuild with `source scripts/env.sh && python -B takehome/plot_transfer.py`.
+
+
+## Goal 11 camera results
+
+| Condition | Floor | Ceiling | Oracle (cheats) | Transfer s0 | Transfer s1 | Transfer s2 | Transfer mean ± SD | Retrain s0 | Retrain s1 | Retrain s2 | Retrain mean ± SD |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| bias_2x | Policy floor: 153/500 (30.6%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 470/500 (94.0%) | 244/500 (48.8%) | 235/500 (47.0%) | 248/500 (49.6%) | 48.5% ± 1.3% | 172/500 (34.4%) | 239/500 (47.8%) | 191/500 (38.2%) | 40.1% ± 6.9% |
+| bias_4x | Policy floor: 42/500 (8.4%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 470/500 (94.0%) | 103/500 (20.6%) | 77/500 (15.4%) | 106/500 (21.2%) | 19.1% ± 3.2% | 68/500 (13.6%) | 49/500 (9.8%) | 88/500 (17.6%) | 13.7% ± 3.9% |
+| one_sided | Policy floor: 340/500 (68.0%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 471/500 (94.2%) | 475/500 (95.0%) | 385/500 (77.0%) | 454/500 (90.8%) | 87.6% ± 9.4% | 446/500 (89.2%) | 468/500 (93.6%) | 450/500 (90.0%) | 90.9% ± 2.3% |
+| drift | Policy floor: 145/500 (29.0%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 469/500 (93.8%) | 352/500 (70.4%) | 270/500 (54.0%) | 293/500 (58.6%) | 61.0% ± 8.5% | 359/500 (71.8%) | 276/500 (55.2%) | 357/500 (71.4%) | 66.1% ± 9.5% |
+| jitter | Policy floor: 339/500 (67.8%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 470/500 (94.0%) | 424/500 (84.8%) | 418/500 (83.6%) | 431/500 (86.2%) | 84.9% ± 1.3% | 394/500 (78.8%) | 358/500 (71.6%) | 385/500 (77.0%) | 75.8% ± 3.7% |
+| rotation | Policy floor: 327/500 (65.4%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 470/500 (94.0%) | 434/500 (86.8%) | 418/500 (83.6%) | 434/500 (86.8%) | 85.7% ± 1.8% | 449/500 (89.8%) | 416/500 (83.2%) | 422/500 (84.4%) | 85.8% ± 3.5% |
+| delay | Policy floor: 239/500 (47.8%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 435/500 (87.0%) | 420/500 (84.0%) | 379/500 (75.8%) | 424/500 (84.8%) | 81.5% ± 5.0% | 405/500 (81.0%) | 369/500 (73.8%) | 239/500 (47.8%) | 67.5% ± 17.5% |
+| height | Policy floor: 373/500 (74.6%) | No-bias ceiling: 472/500 (94.4%) | Oracle (cheats: true error): 488/500 (97.6%) | 465/500 (93.0%) | 414/500 (82.8%) | 414/500 (82.8%) | 86.2% ± 5.9% | 375/500 (75.0%) | 410/500 (82.0%) | 429/500 (85.8%) | 80.9% ± 5.5% |
+
+The selected movement method partly handled every specified condition, but it did not restore the no-bias reference across all of them. All retrain means exceeded their own floors by more than their own sample spread under the predeclared descriptive rule. This is not a formal significance test, and the three-seed comparisons retain substantial uncertainty.
+
+At twice the normal constant bias, transfer scored 48.47% and retraining 40.13% against a 30.6% floor. At four times the bias, transfer scored 19.07% and retraining 13.67% against 8.4%. The true-error oracle scored 94.0% in both cases, so good aim remains possible in principle, but the unchanged movement recipe could not recover it within 200 practice episodes. The larger aim caps are unused by the selected movement-only actor; its movement cap was not tuned upward.
+
+The one-sided offset was handled best: retraining reached 90.93% against a 68.0% floor and 94.4% no-added-error reference. Transfer averaged 87.60%, with much larger variation across its three models. The 3.33-point retraining advantage is below that variation and is not established by the spread rule. The positive improvement over the floor does not mean all errors were eliminated.
+
+Slow drift was partly handled: transfer averaged 61.00% and retraining 66.13%, compared with the 29.0% floor. The 93.8% true-error oracle leaves a large remaining gap. The 5.13-point retraining advantage is below its 9.47-point spread, so these runs do not establish a benefit from retraining over using the normal-error learner.
+
+Extra jitter was partly handled, with 84.87% transfer and 75.80% retraining against 67.8% for the original policy. Retraining did worse than transfer by more than either seed spread in this sample. These measurements do not identify why learning under the jitter was weaker. Rotation was also partly handled: 85.73% transfer and 85.80% retraining against 65.4%, with no clear difference between those two learned results.
+
+The 60 ms delayed geometry was partly handled by transfer at 81.53% against a 47.8% floor. Retraining averaged 67.53%, with a 17.46-point spread and one seed exactly back at the floor. The difference from transfer is smaller than that spread. The XY true-error oracle reached 87.0%; it still receives delayed vertical geometry, unlike the 94.4% no-added-error reference, so this diagnostic does not remove the whole delayed-reading problem.
+
+The +2 mm height error did not cause the predicted failure: the original policy already scored 74.6%, transfer 86.20%, retraining 80.93%, and the XY true-error oracle 97.6%. This particular error direction is therefore not an unfixable case in these measurements. The selected method also has a vertical movement output, unlike the original aim-only proposal. The transfer-versus-retrain difference is below the larger spread, and the tests do not establish why this height shift helped the original checkpoint.
+
+Four one-sided movement results exceeded the no-bias reference during transfer or learning-curve evaluation. Their independent 500-episode seed-789 checks scored 477, 481, 473 and 478 successes. Each had zero flagged wall-passage or invalid-number episodes. Three complete successful trajectories per check were visually reviewed for depth, lateral error and bounded commands, with no gross physical anomaly seen. These additional tests never selected or replaced a reported result.
+
+![Camera conditions](results/takehome/goal11/camera_comparison.png)

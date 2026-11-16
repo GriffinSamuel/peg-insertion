@@ -1,0 +1,235 @@
+{
+  "jobs": [
+    {
+      "name": "bias_2x",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "bias_2x"
+      ],
+      "log": "results/takehome/goal11/logs/bias_2x.log"
+    },
+    {
+      "name": "bias_4x",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "bias_4x"
+      ],
+      "log": "results/takehome/goal11/logs/bias_4x.log"
+    },
+    {
+      "name": "one_sided",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "one_sided"
+      ],
+      "log": "results/takehome/goal11/logs/one_sided.log"
+    },
+    {
+      "name": "drift",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "drift"
+      ],
+      "log": "results/takehome/goal11/logs/drift.log"
+    },
+    {
+      "name": "jitter",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "jitter"
+      ],
+      "log": "results/takehome/goal11/logs/jitter.log"
+    },
+    {
+      "name": "rotation",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "rotation"
+      ],
+      "log": "results/takehome/goal11/logs/rotation.log"
+    },
+    {
+      "name": "delay",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "delay"
+      ],
+      "log": "results/takehome/goal11/logs/delay.log"
+    },
+    {
+      "name": "height",
+      "args": [
+        "takehome/run_camera.py",
+        "--problem",
+        "height"
+      ],
+      "log": "results/takehome/goal11/logs/height.log"
+    }
+  ],
+  "settings": [
+    {
+      "name": "bias_2x",
+      "label": "Final method under bias_2x",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "bias_2x",
+        "step_cap": 0.0002,
+        "guess_cap": 0.006,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/bias_2x/baseline.json"
+      },
+      "output": "results/takehome/goal11/bias_2x/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "bias_4x",
+      "label": "Final method under bias_4x",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "bias_4x",
+        "step_cap": 0.0004,
+        "guess_cap": 0.012,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/bias_4x/baseline.json"
+      },
+      "output": "results/takehome/goal11/bias_4x/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "one_sided",
+      "label": "Final method under one_sided",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "one_sided",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/one_sided/baseline.json"
+      },
+      "output": "results/takehome/goal11/one_sided/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "drift",
+      "label": "Final method under drift",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "drift",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/drift/baseline.json"
+      },
+      "output": "results/takehome/goal11/drift/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "jitter",
+      "label": "Final method under jitter",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "jitter",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/jitter/baseline.json"
+      },
+      "output": "results/takehome/goal11/jitter/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "rotation",
+      "label": "Final method under rotation",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "rotation",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/rotation/baseline.json"
+      },
+      "output": "results/takehome/goal11/rotation/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "delay",
+      "label": "Final method under delay",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "delay",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/delay/baseline.json"
+      },
+      "output": "results/takehome/goal11/delay/trained",
+      "round": "camera conditions, no further tuning"
+    },
+    {
+      "name": "height",
+      "label": "Final method under height",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "height",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/height/baseline.json"
+      },
+      "output": "results/takehome/goal11/height/trained",
+      "round": "camera conditions, no further tuning"
+    }
+  ],
+  "suite_summary": "results/takehome/goal11/suite.json",
+  "practice_episodes_per_condition": 600,
+  "total_new_practice_episodes": 4800,
+  "new_tuned_settings": 0,
+  "choice": "results/takehome/goal7_choice.json"
+}

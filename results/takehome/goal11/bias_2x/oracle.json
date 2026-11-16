@@ -1,0 +1,22 @@
+{
+  "episodes": 500,
+  "successes": 470,
+  "success_rate": 0.94,
+  "ci_lo": 0.9156384216937552,
+  "ci_hi": 0.9576519139990498,
+  "steps_mean": 158.61915588378906,
+  "steps_median": 157.0,
+  "peak_force_mean": 96.38487243652344,
+  "final_xy_err_mean_mm": 0.5122911930084229,
+  "final_depth_mean_mm": 28.7550106048584,
+  "still_inserted_at_end": 0.94,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6698966026306152,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 123,
+  "practice_episodes_added": 0,
+  "cheats_on_information": true,
+  "label": "True-error oracle (cheats: actual XY error)"
+}

@@ -1,0 +1,47 @@
+{
+  "jobs": [
+    {
+      "name": "one_sided",
+      "exit_code": 0,
+      "seconds": 529.1380771059994
+    },
+    {
+      "name": "drift",
+      "exit_code": 0,
+      "seconds": 568.1572269669996
+    },
+    {
+      "name": "bias_2x",
+      "exit_code": 0,
+      "seconds": 588.2047734650005
+    },
+    {
+      "name": "bias_4x",
+      "exit_code": 0,
+      "seconds": 599.2152496469971
+    },
+    {
+      "name": "jitter",
+      "exit_code": 0,
+      "seconds": 521.1767752230007
+    },
+    {
+      "name": "rotation",
+      "exit_code": 0,
+      "seconds": 539.1532022930005
+    },
+    {
+      "name": "height",
+      "exit_code": 0,
+      "seconds": 522.1350464110001
+    },
+    {
+      "name": "delay",
+      "exit_code": 0,
+      "seconds": 538.1549631039998
+    }
+  ],
+  "seconds": 1127.3764854010005,
+  "finished_utc": "2026-11-16T03:05:22.812647+00:00",
+  "passed": true
+}

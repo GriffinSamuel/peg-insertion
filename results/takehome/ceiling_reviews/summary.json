@@ -1,0 +1,139 @@
+{
+  "checks": [
+    {
+      "source": "results/takehome/goal11/one_sided/extra_ceiling_transfer_seed_0.json",
+      "trace": "results/takehome/goal11/one_sided/extra_ceiling_transfer_seed_0.npz",
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_extra_ceiling_transfer_seed_0.png",
+      "episode_ids": [
+        0,
+        1,
+        2
+      ],
+      "successes": 477,
+      "test_episodes": 500,
+      "test_seed": 789,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6988048553466797,
+      "example_max_depth_mm": [
+        30.073957443237305,
+        30.074079513549805,
+        30.058393478393555
+      ],
+      "example_max_abs_action": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false,
+      "visual_review_required": true
+    },
+    {
+      "source": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0140.json",
+      "trace": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0140_traces.npz",
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0140.png",
+      "episode_ids": [
+        0,
+        1,
+        2
+      ],
+      "successes": 481,
+      "test_episodes": 500,
+      "test_seed": 789,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "max_lateral_when_deep_mm": 0.7094144821166992,
+      "example_max_depth_mm": [
+        30.060836791992188,
+        30.059091567993164,
+        30.046945571899414
+      ],
+      "example_max_abs_action": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false,
+      "visual_review_required": true
+    },
+    {
+      "source": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160.json",
+      "trace": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160_traces.npz",
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0160.png",
+      "episode_ids": [
+        0,
+        1,
+        2
+      ],
+      "successes": 473,
+      "test_episodes": 500,
+      "test_seed": 789,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6838440895080566,
+      "example_max_depth_mm": [
+        30.12335205078125,
+        30.13266372680664,
+        30.09618377685547
+      ],
+      "example_max_abs_action": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false,
+      "visual_review_required": true
+    },
+    {
+      "source": "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160.json",
+      "trace": "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160_traces.npz",
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_2_extra_ceiling_0160.png",
+      "episode_ids": [
+        0,
+        1,
+        2
+      ],
+      "successes": 478,
+      "test_episodes": 500,
+      "test_seed": 789,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "max_lateral_when_deep_mm": 0.7076859474182129,
+      "example_max_depth_mm": [
+        30.10428810119629,
+        30.034494400024414,
+        30.102252960205078
+      ],
+      "example_max_abs_action": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false,
+      "visual_review_required": true
+    }
+  ],
+  "new_episodes": 0,
+  "lead_visual_review": [
+    {
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_extra_ceiling_transfer_seed_0.png",
+      "passed": true,
+      "observation": "Reviewed three full recorded successful trajectories: insertion follows decreasing lateral error and stays around hole depth; executed actions respect original bounds; saved rollout has zero wall-passage and invalid-number episodes."
+    },
+    {
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0140.png",
+      "passed": true,
+      "observation": "Reviewed three full recorded successful trajectories: insertion follows decreasing lateral error and stays around hole depth; executed actions respect original bounds; saved rollout has zero wall-passage and invalid-number episodes."
+    },
+    {
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_1_extra_ceiling_0160.png",
+      "passed": true,
+      "observation": "Reviewed three full recorded successful trajectories: insertion follows decreasing lateral error and stays around hole depth; executed actions respect original bounds; saved rollout has zero wall-passage and invalid-number episodes."
+    },
+    {
+      "chart": "results/takehome/ceiling_reviews/goal11_one_sided_trained_seed_2_extra_ceiling_0160.png",
+      "passed": true,
+      "observation": "Reviewed three successful trajectories. Lateral error settles near0.5mm before deep insertion; depth rises smoothly to approximately30mm, and executed commands stay within normalized bound1. No visible wall passage in these recorded trajectories; saved diagnostics flag zero wall or invalid-number episodes."
+    }
+  ]
+}

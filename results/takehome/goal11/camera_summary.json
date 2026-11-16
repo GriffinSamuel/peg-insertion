@@ -1,0 +1,898 @@
+{
+  "conditions": [
+    {
+      "problem": "bias_2x",
+      "formula": "r + 2*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times2",
+      "floor": {
+        "successes": 153,
+        "episodes": 500,
+        "success_rate": 0.306,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          244,
+          235,
+          248
+        ],
+        "rates": [
+          0.488,
+          0.47,
+          0.496
+        ],
+        "mean": 0.48466666666666663,
+        "sample_sd_ddof1": 0.013316656236958798
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 244,
+          "episodes": 500,
+          "success_rate": 0.488,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 235,
+          "episodes": 500,
+          "success_rate": 0.47,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 248,
+          "episodes": 500,
+          "success_rate": 0.496,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          172,
+          239,
+          191
+        ],
+        "rates": [
+          0.344,
+          0.478,
+          0.382
+        ],
+        "mean": 0.4013333333333333,
+        "sample_sd_ddof1": 0.06906036007242745
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 172,
+          "episodes": 500,
+          "success_rate": 0.344,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 239,
+          "episodes": 500,
+          "success_rate": 0.478,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 191,
+          "episodes": 500,
+          "success_rate": 0.382,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 470,
+        "episodes": 500,
+        "success_rate": 0.94,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "bias_4x",
+      "formula": "r + 4*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times4",
+      "floor": {
+        "successes": 42,
+        "episodes": 500,
+        "success_rate": 0.084,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          103,
+          77,
+          106
+        ],
+        "rates": [
+          0.206,
+          0.154,
+          0.212
+        ],
+        "mean": 0.19066666666666665,
+        "sample_sd_ddof1": 0.031895663237081824
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 103,
+          "episodes": 500,
+          "success_rate": 0.206,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 77,
+          "episodes": 500,
+          "success_rate": 0.154,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 106,
+          "episodes": 500,
+          "success_rate": 0.212,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          68,
+          49,
+          88
+        ],
+        "rates": [
+          0.136,
+          0.098,
+          0.176
+        ],
+        "mean": 0.1366666666666667,
+        "sample_sd_ddof1": 0.03900427327016019
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 68,
+          "episodes": 500,
+          "success_rate": 0.136,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 49,
+          "episodes": 500,
+          "success_rate": 0.098,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 88,
+          "episodes": 500,
+          "success_rate": 0.176,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 470,
+        "episodes": 500,
+        "success_rate": 0.94,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "one_sided",
+      "formula": "r_xy + abs(b_xy) + epsilon_xy; Z unchanged",
+      "floor": {
+        "successes": 340,
+        "episodes": 500,
+        "success_rate": 0.68,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          475,
+          385,
+          454
+        ],
+        "rates": [
+          0.95,
+          0.77,
+          0.908
+        ],
+        "mean": 0.876,
+        "sample_sd_ddof1": 0.0941700589359484
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 475,
+          "episodes": 500,
+          "success_rate": 0.95,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 385,
+          "episodes": 500,
+          "success_rate": 0.77,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 454,
+          "episodes": 500,
+          "success_rate": 0.908,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          446,
+          468,
+          450
+        ],
+        "rates": [
+          0.892,
+          0.936,
+          0.9
+        ],
+        "mean": 0.9093333333333334,
+        "sample_sd_ddof1": 0.02343786110832928
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 446,
+          "episodes": 500,
+          "success_rate": 0.892,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 468,
+          "episodes": 500,
+          "success_rate": 0.936,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 450,
+          "episodes": 500,
+          "success_rate": 0.9,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 471,
+        "episodes": 500,
+        "success_rate": 0.942,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "drift",
+      "formula": "r_xy + b_xy + (step/200)*[1mm,-1mm] + epsilon_xy; Z unchanged",
+      "floor": {
+        "successes": 145,
+        "episodes": 500,
+        "success_rate": 0.29,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          352,
+          270,
+          293
+        ],
+        "rates": [
+          0.704,
+          0.54,
+          0.586
+        ],
+        "mean": 0.61,
+        "sample_sd_ddof1": 0.08459314393022636
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 352,
+          "episodes": 500,
+          "success_rate": 0.704,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 270,
+          "episodes": 500,
+          "success_rate": 0.54,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 293,
+          "episodes": 500,
+          "success_rate": 0.586,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          359,
+          276,
+          357
+        ],
+        "rates": [
+          0.718,
+          0.552,
+          0.714
+        ],
+        "mean": 0.6613333333333333,
+        "sample_sd_ddof1": 0.09470656436242066
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 359,
+          "episodes": 500,
+          "success_rate": 0.718,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 276,
+          "episodes": 500,
+          "success_rate": 0.552,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 357,
+          "episodes": 500,
+          "success_rate": 0.714,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 469,
+        "episodes": 500,
+        "success_rate": 0.938,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "jitter",
+      "formula": "r_xy + b_xy + epsilon_xy + eta_xy, eta ~ N(0,(0.6mm)^2 I); Z unchanged",
+      "floor": {
+        "successes": 339,
+        "episodes": 500,
+        "success_rate": 0.678,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          424,
+          418,
+          431
+        ],
+        "rates": [
+          0.848,
+          0.836,
+          0.862
+        ],
+        "mean": 0.8486666666666666,
+        "sample_sd_ddof1": 0.013012814197295434
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 424,
+          "episodes": 500,
+          "success_rate": 0.848,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 418,
+          "episodes": 500,
+          "success_rate": 0.836,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 431,
+          "episodes": 500,
+          "success_rate": 0.862,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          394,
+          358,
+          385
+        ],
+        "rates": [
+          0.788,
+          0.716,
+          0.77
+        ],
+        "mean": 0.758,
+        "sample_sd_ddof1": 0.03746998799039042
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 394,
+          "episodes": 500,
+          "success_rate": 0.788,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 358,
+          "episodes": 500,
+          "success_rate": 0.716,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 385,
+          "episodes": 500,
+          "success_rate": 0.77,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 470,
+        "episodes": 500,
+        "success_rate": 0.94,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "rotation",
+      "formula": "R(10 degrees)*r_xy + b_xy + epsilon_xy; Z unchanged",
+      "floor": {
+        "successes": 327,
+        "episodes": 500,
+        "success_rate": 0.654,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          434,
+          418,
+          434
+        ],
+        "rates": [
+          0.868,
+          0.836,
+          0.868
+        ],
+        "mean": 0.8573333333333334,
+        "sample_sd_ddof1": 0.018475208614068043
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 434,
+          "episodes": 500,
+          "success_rate": 0.868,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 418,
+          "episodes": 500,
+          "success_rate": 0.836,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 434,
+          "episodes": 500,
+          "success_rate": 0.868,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          449,
+          416,
+          422
+        ],
+        "rates": [
+          0.898,
+          0.832,
+          0.844
+        ],
+        "mean": 0.858,
+        "sample_sd_ddof1": 0.03515679166249392
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 449,
+          "episodes": 500,
+          "success_rate": 0.898,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 416,
+          "episodes": 500,
+          "success_rate": 0.832,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 422,
+          "episodes": 500,
+          "success_rate": 0.844,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 470,
+        "episodes": 500,
+        "success_rate": 0.94,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "delay",
+      "formula": "r(max(step-3,0)) + b + epsilon; 60ms geometry delay, present proprioception",
+      "floor": {
+        "successes": 239,
+        "episodes": 500,
+        "success_rate": 0.478,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          420,
+          379,
+          424
+        ],
+        "rates": [
+          0.84,
+          0.758,
+          0.848
+        ],
+        "mean": 0.8153333333333332,
+        "sample_sd_ddof1": 0.049812983581927026
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 420,
+          "episodes": 500,
+          "success_rate": 0.84,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 379,
+          "episodes": 500,
+          "success_rate": 0.758,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 424,
+          "episodes": 500,
+          "success_rate": 0.848,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          405,
+          369,
+          239
+        ],
+        "rates": [
+          0.81,
+          0.738,
+          0.478
+        ],
+        "mean": 0.6753333333333332,
+        "sample_sd_ddof1": 0.17464630924624014
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 405,
+          "episodes": 500,
+          "success_rate": 0.81,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 369,
+          "episodes": 500,
+          "success_rate": 0.738,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 239,
+          "episodes": 500,
+          "success_rate": 0.478,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 435,
+        "episodes": 500,
+        "success_rate": 0.87,
+        "test_seed": 123
+      }
+    },
+    {
+      "problem": "height",
+      "formula": "r + b + epsilon + [0,0,2mm]",
+      "floor": {
+        "successes": 373,
+        "episodes": 500,
+        "success_rate": 0.746,
+        "test_seed": 123
+      },
+      "test_only": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          465,
+          414,
+          414
+        ],
+        "rates": [
+          0.93,
+          0.828,
+          0.828
+        ],
+        "mean": 0.862,
+        "sample_sd_ddof1": 0.05888972745734188
+      },
+      "test_only_by_seed": [
+        {
+          "successes": 465,
+          "episodes": 500,
+          "success_rate": 0.93,
+          "test_seed": 123,
+          "seed": 0
+        },
+        {
+          "successes": 414,
+          "episodes": 500,
+          "success_rate": 0.828,
+          "test_seed": 123,
+          "seed": 1
+        },
+        {
+          "successes": 414,
+          "episodes": 500,
+          "success_rate": 0.828,
+          "test_seed": 123,
+          "seed": 2
+        }
+      ],
+      "retrained": {
+        "seeds": [
+          0,
+          1,
+          2
+        ],
+        "raw_successes": [
+          375,
+          410,
+          429
+        ],
+        "rates": [
+          0.75,
+          0.82,
+          0.858
+        ],
+        "mean": 0.8093333333333333,
+        "sample_sd_ddof1": 0.054784426010804674
+      },
+      "retrained_by_seed": [
+        {
+          "successes": 375,
+          "episodes": 500,
+          "success_rate": 0.75,
+          "test_seed": 123,
+          "seed": 0,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 410,
+          "episodes": 500,
+          "success_rate": 0.82,
+          "test_seed": 123,
+          "seed": 1,
+          "practice_episodes": 200
+        },
+        {
+          "successes": 429,
+          "episodes": 500,
+          "success_rate": 0.858,
+          "test_seed": 123,
+          "seed": 2,
+          "practice_episodes": 200
+        }
+      ],
+      "ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "success_rate": 0.944,
+        "test_seed": 123
+      },
+      "oracle_cheating": {
+        "successes": 488,
+        "episodes": 500,
+        "success_rate": 0.976,
+        "test_seed": 123
+      }
+    }
+  ],
+  "condition_count": 8,
+  "test_seed": 123,
+  "test_episodes_per_measurement": 500,
+  "practice_episodes_per_retrain_seed": 200,
+  "retrain_seeds": [
+    0,
+    1,
+    2
+  ],
+  "transfer_seeds": [
+    0,
+    1,
+    2
+  ],
+  "all_conditions_included": true,
+  "comparison_columns": [
+    "floor",
+    "test_only",
+    "retrained",
+    "ceiling",
+    "oracle_cheating"
+  ]
+}

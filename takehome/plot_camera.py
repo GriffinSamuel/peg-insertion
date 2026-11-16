@@ -177,7 +177,7 @@ def make_chart(rows, output):
         errors = [row[key].get(sd_key, 0.0) for row in rows]
         bars = ax.bar(centers + (index - 2) * width, values, width, yerr=errors,
                       capsize=2, label=label)
-        bar_handles.append(bars[0])
+        bar_handles.append(bars)
     seed_markers = ("o", "s", "^")
     seed_colors = ("#202020", "#555555", "#888888")
     for index, key in ((1, "test_only"), (2, "retrained")):
@@ -189,7 +189,10 @@ def make_chart(rows, output):
                        edgecolors="white", linewidths=0.45, zorder=4,
                        label=f"Practice seed {seed_index}" if index == 1 else None)
     ax.set_xticks(centers, labels, rotation=25, ha="right")
-    ax.set_ylim(0, 1)
+    ax.set_ylim(-.02, 1.02)
+    ax.set_yticks(np.linspace(0, 1, 6))
+    from matplotlib.ticker import PercentFormatter
+    ax.yaxis.set_major_formatter(PercentFormatter(1.))
     ax.set_ylabel("Success rate (500 test episodes, seed 123)")
     ax.set_title("Goal 11 camera conditions: references, transfer, and retraining")
     ax.grid(axis="y", alpha=0.25)

@@ -1,0 +1,973 @@
+{
+  "suite_exit_code": 0,
+  "suite_job_count": 8,
+  "suite_passed": true,
+  "general_audit": {
+    "path": "results/takehome/goal11_audit.json",
+    "passed": true,
+    "failure_count": 0,
+    "failure_check_counts": {}
+  },
+  "context_checks_passed": true,
+  "context_failure_count": 0,
+  "context_failures": [],
+  "checks": {
+    "suite_exit_zero_8_jobs": true,
+    "manifest_and_results_cover_8_conditions": true,
+    "formula_definitions_match_conditions": true,
+    "plotter_exit_zero_and_outputs": true,
+    "declared_selected_source_available": true,
+    "bias_2x_declaration_formula": true,
+    "bias_2x_manifest_config": true,
+    "bias_2x_three_transfer_seeds": true,
+    "bias_2x_floor_500_testonly_123": true,
+    "bias_2x_oracle_500_testonly_123": true,
+    "bias_2x_transfer_seed_0_500_testonly_123": true,
+    "bias_2x_transfer_seed_1_500_testonly_123": true,
+    "bias_2x_transfer_seed_2_500_testonly_123": true,
+    "bias_2x_goal1_ceiling_reused": true,
+    "bias_2x_ceiling_source_label": true,
+    "bias_2x_cap_context": true,
+    "bias_2x_seed_0_own_200_budget": true,
+    "bias_2x_seed_0_final_test": true,
+    "bias_2x_seed_0_cap_context": true,
+    "bias_2x_seed_1_own_200_budget": true,
+    "bias_2x_seed_1_final_test": true,
+    "bias_2x_seed_1_cap_context": true,
+    "bias_2x_seed_2_own_200_budget": true,
+    "bias_2x_seed_2_final_test": true,
+    "bias_2x_seed_2_cap_context": true,
+    "bias_2x_three_training_seeds": true,
+    "bias_4x_declaration_formula": true,
+    "bias_4x_manifest_config": true,
+    "bias_4x_three_transfer_seeds": true,
+    "bias_4x_floor_500_testonly_123": true,
+    "bias_4x_oracle_500_testonly_123": true,
+    "bias_4x_transfer_seed_0_500_testonly_123": true,
+    "bias_4x_transfer_seed_1_500_testonly_123": true,
+    "bias_4x_transfer_seed_2_500_testonly_123": true,
+    "bias_4x_goal1_ceiling_reused": true,
+    "bias_4x_ceiling_source_label": true,
+    "bias_4x_cap_context": true,
+    "bias_4x_seed_0_own_200_budget": true,
+    "bias_4x_seed_0_final_test": true,
+    "bias_4x_seed_0_cap_context": true,
+    "bias_4x_seed_1_own_200_budget": true,
+    "bias_4x_seed_1_final_test": true,
+    "bias_4x_seed_1_cap_context": true,
+    "bias_4x_seed_2_own_200_budget": true,
+    "bias_4x_seed_2_final_test": true,
+    "bias_4x_seed_2_cap_context": true,
+    "bias_4x_three_training_seeds": true,
+    "delay_declaration_formula": true,
+    "delay_manifest_config": true,
+    "delay_three_transfer_seeds": true,
+    "delay_floor_500_testonly_123": true,
+    "delay_oracle_500_testonly_123": true,
+    "delay_transfer_seed_0_500_testonly_123": true,
+    "delay_transfer_seed_1_500_testonly_123": true,
+    "delay_transfer_seed_2_500_testonly_123": true,
+    "delay_goal1_ceiling_reused": true,
+    "delay_ceiling_source_label": true,
+    "delay_cap_context": true,
+    "delay_seed_0_own_200_budget": true,
+    "delay_seed_0_final_test": true,
+    "delay_seed_1_own_200_budget": true,
+    "delay_seed_1_final_test": true,
+    "delay_seed_2_own_200_budget": true,
+    "delay_seed_2_final_test": true,
+    "delay_three_training_seeds": true,
+    "drift_declaration_formula": true,
+    "drift_manifest_config": true,
+    "drift_three_transfer_seeds": true,
+    "drift_floor_500_testonly_123": true,
+    "drift_oracle_500_testonly_123": true,
+    "drift_transfer_seed_0_500_testonly_123": true,
+    "drift_transfer_seed_1_500_testonly_123": true,
+    "drift_transfer_seed_2_500_testonly_123": true,
+    "drift_goal1_ceiling_reused": true,
+    "drift_ceiling_source_label": true,
+    "drift_cap_context": true,
+    "drift_seed_0_own_200_budget": true,
+    "drift_seed_0_final_test": true,
+    "drift_seed_1_own_200_budget": true,
+    "drift_seed_1_final_test": true,
+    "drift_seed_2_own_200_budget": true,
+    "drift_seed_2_final_test": true,
+    "drift_three_training_seeds": true,
+    "height_declaration_formula": true,
+    "height_manifest_config": true,
+    "height_three_transfer_seeds": true,
+    "height_floor_500_testonly_123": true,
+    "height_oracle_500_testonly_123": true,
+    "height_transfer_seed_0_500_testonly_123": true,
+    "height_transfer_seed_1_500_testonly_123": true,
+    "height_transfer_seed_2_500_testonly_123": true,
+    "height_goal1_ceiling_reused": true,
+    "height_ceiling_source_label": true,
+    "height_cap_context": true,
+    "height_seed_0_own_200_budget": true,
+    "height_seed_0_final_test": true,
+    "height_seed_1_own_200_budget": true,
+    "height_seed_1_final_test": true,
+    "height_seed_2_own_200_budget": true,
+    "height_seed_2_final_test": true,
+    "height_three_training_seeds": true,
+    "jitter_declaration_formula": true,
+    "jitter_manifest_config": true,
+    "jitter_three_transfer_seeds": true,
+    "jitter_floor_500_testonly_123": true,
+    "jitter_oracle_500_testonly_123": true,
+    "jitter_transfer_seed_0_500_testonly_123": true,
+    "jitter_transfer_seed_1_500_testonly_123": true,
+    "jitter_transfer_seed_2_500_testonly_123": true,
+    "jitter_goal1_ceiling_reused": true,
+    "jitter_ceiling_source_label": true,
+    "jitter_cap_context": true,
+    "jitter_seed_0_own_200_budget": true,
+    "jitter_seed_0_final_test": true,
+    "jitter_seed_1_own_200_budget": true,
+    "jitter_seed_1_final_test": true,
+    "jitter_seed_2_own_200_budget": true,
+    "jitter_seed_2_final_test": true,
+    "jitter_three_training_seeds": true,
+    "one_sided_declaration_formula": true,
+    "one_sided_manifest_config": true,
+    "one_sided_three_transfer_seeds": true,
+    "one_sided_floor_500_testonly_123": true,
+    "one_sided_oracle_500_testonly_123": true,
+    "one_sided_transfer_seed_0_500_testonly_123": true,
+    "one_sided_transfer_seed_1_500_testonly_123": true,
+    "one_sided_transfer_seed_2_500_testonly_123": true,
+    "one_sided_goal1_ceiling_reused": true,
+    "one_sided_ceiling_source_label": true,
+    "one_sided_cap_context": true,
+    "one_sided_seed_0_own_200_budget": true,
+    "one_sided_seed_0_final_test": true,
+    "one_sided_seed_1_own_200_budget": true,
+    "one_sided_seed_1_final_test": true,
+    "one_sided_seed_2_own_200_budget": true,
+    "one_sided_seed_2_final_test": true,
+    "one_sided_three_training_seeds": true,
+    "rotation_declaration_formula": true,
+    "rotation_manifest_config": true,
+    "rotation_three_transfer_seeds": true,
+    "rotation_floor_500_testonly_123": true,
+    "rotation_oracle_500_testonly_123": true,
+    "rotation_transfer_seed_0_500_testonly_123": true,
+    "rotation_transfer_seed_1_500_testonly_123": true,
+    "rotation_transfer_seed_2_500_testonly_123": true,
+    "rotation_goal1_ceiling_reused": true,
+    "rotation_ceiling_source_label": true,
+    "rotation_cap_context": true,
+    "rotation_seed_0_own_200_budget": true,
+    "rotation_seed_0_final_test": true,
+    "rotation_seed_1_own_200_budget": true,
+    "rotation_seed_1_final_test": true,
+    "rotation_seed_2_own_200_budget": true,
+    "rotation_seed_2_final_test": true,
+    "rotation_three_training_seeds": true
+  },
+  "condition_count": 8,
+  "trained_run_count": 24,
+  "conditions": [
+    {
+      "condition": "bias_2x",
+      "formula": "r + 2*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times2",
+      "step_cap": 0.0002,
+      "guess_cap": 0.006,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 153,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.306
+      },
+      "oracle": {
+        "successes": 470,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.94
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 244,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.488
+        },
+        {
+          "seed": 1,
+          "successes": 235,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.47
+        },
+        {
+          "seed": 2,
+          "successes": 248,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.496
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 172,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.344
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 239,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.478
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 191,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.382
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "bias_4x",
+      "formula": "r + 4*b + epsilon; b_xy ~ N(0,0.75mm); nudge/guess caps times4",
+      "step_cap": 0.0004,
+      "guess_cap": 0.012,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 42,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.084
+      },
+      "oracle": {
+        "successes": 470,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.94
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 103,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.206
+        },
+        {
+          "seed": 1,
+          "successes": 77,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.154
+        },
+        {
+          "seed": 2,
+          "successes": 106,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.212
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 68,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.136
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 49,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.098
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 88,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.176
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "delay",
+      "formula": "r(max(step-3,0)) + b + epsilon; 60ms geometry delay, present proprioception",
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 239,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.478
+      },
+      "oracle": {
+        "successes": 435,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.87
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 420,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.84
+        },
+        {
+          "seed": 1,
+          "successes": 379,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.758
+        },
+        {
+          "seed": 2,
+          "successes": 424,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.848
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 405,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.81
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 369,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.738
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 239,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.478
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "drift",
+      "formula": "r_xy + b_xy + (step/200)*[1mm,-1mm] + epsilon_xy; Z unchanged",
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 145,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.29
+      },
+      "oracle": {
+        "successes": 469,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.938
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 352,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.704
+        },
+        {
+          "seed": 1,
+          "successes": 270,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.54
+        },
+        {
+          "seed": 2,
+          "successes": 293,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.586
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 359,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.718
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 276,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.552
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 357,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.714
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "height",
+      "formula": "r + b + epsilon + [0,0,2mm]",
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 373,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.746
+      },
+      "oracle": {
+        "successes": 488,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.976
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 465,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.93
+        },
+        {
+          "seed": 1,
+          "successes": 414,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.828
+        },
+        {
+          "seed": 2,
+          "successes": 414,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.828
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 375,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.75
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 410,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.82
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 429,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.858
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "jitter",
+      "formula": "r_xy + b_xy + epsilon_xy + eta_xy, eta ~ N(0,(0.6mm)^2 I); Z unchanged",
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 339,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.678
+      },
+      "oracle": {
+        "successes": 470,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.94
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 424,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.848
+        },
+        {
+          "seed": 1,
+          "successes": 418,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.836
+        },
+        {
+          "seed": 2,
+          "successes": 431,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.862
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 394,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.788
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 358,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.716
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 385,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.77
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "one_sided",
+      "formula": "r_xy + abs(b_xy) + epsilon_xy; Z unchanged",
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 340,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.68
+      },
+      "oracle": {
+        "successes": 471,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.942
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 475,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.95
+        },
+        {
+          "seed": 1,
+          "successes": 385,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.77
+        },
+        {
+          "seed": 2,
+          "successes": 454,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.908
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 446,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.892
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 468,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.936
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 450,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.9
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    },
+    {
+      "condition": "rotation",
+      "formula": "R(10 degrees)*r_xy + b_xy + epsilon_xy; Z unchanged",
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "floor": {
+        "successes": 327,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.654
+      },
+      "oracle": {
+        "successes": 470,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.94
+      },
+      "goal1_ceiling": {
+        "successes": 472,
+        "episodes": 500,
+        "test_seed": 123,
+        "success_rate": 0.944
+      },
+      "transfer": [
+        {
+          "seed": 0,
+          "successes": 434,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.868
+        },
+        {
+          "seed": 1,
+          "successes": 418,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.836
+        },
+        {
+          "seed": 2,
+          "successes": 434,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.868
+        }
+      ],
+      "trained": [
+        {
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 449,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.898
+        },
+        {
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 416,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.832
+        },
+        {
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "learner_episodes": 160,
+          "successes": 422,
+          "episodes": 500,
+          "test_seed": 123,
+          "success_rate": 0.844
+        }
+      ],
+      "goal1_ceiling_source": "Goal1: no constant bias and none of the added problem"
+    }
+  ],
+  "extra_ceiling_records": [
+    {
+      "path": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0140.json",
+      "condition": "one_sided",
+      "training_seed": 1,
+      "successes": 481,
+      "episodes": 500,
+      "test_seed": 789,
+      "test_only": true,
+      "learned_from": false,
+      "used_for_selection": false,
+      "through_wall_episodes": 0,
+      "inspected_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006226897239685059,
+        0.0006305277347564697,
+        0.0006001591682434082,
+        0.000555574893951416,
+        0.000610053539276123
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed_contract": true
+    },
+    {
+      "path": "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160.json",
+      "condition": "one_sided",
+      "training_seed": 1,
+      "successes": 473,
+      "episodes": 500,
+      "test_seed": 789,
+      "test_only": true,
+      "learned_from": false,
+      "used_for_selection": false,
+      "through_wall_episodes": 0,
+      "inspected_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005352795124053955,
+        0.0005362033843994141,
+        0.0005737543106079102,
+        0.0005102157592773438,
+        0.0005682706832885742
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed_contract": true
+    },
+    {
+      "path": "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160.json",
+      "condition": "one_sided",
+      "training_seed": 2,
+      "successes": 478,
+      "episodes": 500,
+      "test_seed": 789,
+      "test_only": true,
+      "learned_from": false,
+      "used_for_selection": false,
+      "through_wall_episodes": 0,
+      "inspected_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005344748497009277,
+        0.0005894084461033344,
+        0.0004754066467285156,
+        0.0005612373352050781,
+        0.0005665123462677002
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed_contract": true
+    },
+    {
+      "path": "results/takehome/goal11/one_sided/extra_ceiling_transfer_seed_0.json",
+      "condition": "one_sided",
+      "record_type": "transfer_extra_ceiling",
+      "training_seed": null,
+      "source_practice_seed": 0,
+      "successes": 477,
+      "episodes": 500,
+      "test_seed": 789,
+      "test_only": true,
+      "learned_from": false,
+      "used_for_selection": false,
+      "through_wall_episodes": 0,
+      "inspected_episode_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005730688571929932,
+        0.0005682110786437988,
+        0.000648796558380127,
+        0.0005349218845367432,
+        0.0005387961864471436
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "passed_contract": true
+    }
+  ],
+  "extra_ceiling_record_count": 4,
+  "plotter": {
+    "log": "results/takehome/goal11_plot_audit.log",
+    "exit_code": 0,
+    "outputs": [
+      "results/takehome/goal11/camera_summary.csv",
+      "results/takehome/goal11/camera_summary.json",
+      "results/takehome/goal11/camera_comparison.png"
+    ]
+  }
+}

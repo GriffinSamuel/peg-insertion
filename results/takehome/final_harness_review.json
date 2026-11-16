@@ -1,0 +1,185 @@
+{
+  "id": "goal13_fresh_rerun",
+  "program": "takehome/run_final_rerun.py",
+  "status": "prepared_not_executed_goal12_gate_pending",
+  "gate": {
+    "path": "results/takehome/goal12_checks.json",
+    "currently_exists": false,
+    "required_value": "all_goal_checks_pass=true"
+  },
+  "invocation": "source scripts/env.sh && python -B takehome/run_final_rerun.py",
+  "configured_experiment": {
+    "selected_method": "movement",
+    "practice_seed": 100,
+    "test_seed": 456,
+    "practice_episodes": 200,
+    "final_test_episodes": 500,
+    "intermediate_test_episodes": 256,
+    "intermediate_test_seed": 123,
+    "baseline_path": "results/takehome/confirmation_baseline.json",
+    "output_directory": "results/takehome/goal13/fresh/seed_100",
+    "original_confirmation_directory": "results/takehome/goal7/confirmation/movement/seed_100",
+    "variant_config": {
+      "policy": "force_0.5mm_s2",
+      "outputs": 3,
+      "fill_episodes": 40,
+      "total_episodes": 200,
+      "updates_per_step": 4,
+      "ensemble": 4,
+      "hidden": 64,
+      "batch_size": 128,
+      "learning_rate": 0.0003,
+      "discount": 0.99,
+      "target_rate": 0.005,
+      "step_cap": 0.0001,
+      "guess_cap": 0.003,
+      "movement_cap": 0.0002,
+      "supervised_reference": false,
+      "fill_noise": 0.5,
+      "learner_noise": 0.2,
+      "code_test": false,
+      "coordination": "joint",
+      "briefing": false,
+      "privileged_critic": false,
+      "final_decider": false,
+      "near_hole": false,
+      "contact_cap": false,
+      "uncertainty_cap": false,
+      "classification": false,
+      "n_step": 1,
+      "return_floor": false,
+      "force_penalty": false,
+      "sibling_fill": false,
+      "test_seed": 456,
+      "baseline_path": "results/takehome/confirmation_baseline.json"
+    },
+    "independent_budget_ledger": "results/takehome/goal13/fresh/seed_100/budget.json"
+  },
+  "isolation_checks": {
+    "fresh_output_exists_before_run": false,
+    "budget_ledger_exists_before_run": false,
+    "original_confirmation_unchanged_guard": "run_final_rerun hashes result.json, budget.json, and model_0200.pkl before and after runner.run(); it writes outputs under goal13/fresh/seed_100.",
+    "protected_original_hashes_at_review_time": {
+      "result.json": "4b5a12da1d91dad64005849413f4528ddb6c6bdd292443be7fd4348c322f76a2",
+      "budget.json": "a88feba4a77c3bd6dc307dcd4bae1b4bd416ec7ec6b92913b26fe3c786f40815",
+      "model_0200.pkl": "70fa6edbd5c5dbd6e0300e79035c437f0487f5963c79c9d70efeefaab2c57d84"
+    },
+    "protected_file_set": [
+      "result.json",
+      "budget.json",
+      "model_0200.pkl"
+    ],
+    "hash_guard_scope_note": "Other original files are not included in the hash comparison; the runner receives a distinct fresh output directory.",
+    "resume_behavior": "Existing output skip/resume behavior is intentional under the project resumability rule; the fresh destination is absent at review time, establishing fresh lineage for the planned run."
+  },
+  "audit_after_run": {
+    "manifest_path": "results/takehome/goal13/fresh_audit_manifest.json",
+    "manifest_shape": {
+      "settings": [
+        {
+          "name": "goal13_fresh_seed100",
+          "label": "Fresh final-method rerun",
+          "overrides": {
+            "policy": "force_0.5mm_s2",
+            "outputs": 3,
+            "fill_episodes": 40,
+            "total_episodes": 200,
+            "updates_per_step": 4,
+            "ensemble": 4,
+            "hidden": 64,
+            "batch_size": 128,
+            "learning_rate": 0.0003,
+            "discount": 0.99,
+            "target_rate": 0.005,
+            "step_cap": 0.0001,
+            "guess_cap": 0.003,
+            "movement_cap": 0.0002,
+            "supervised_reference": false,
+            "fill_noise": 0.5,
+            "learner_noise": 0.2,
+            "code_test": false,
+            "coordination": "joint",
+            "briefing": false,
+            "privileged_critic": false,
+            "final_decider": false,
+            "near_hole": false,
+            "contact_cap": false,
+            "uncertainty_cap": false,
+            "classification": false,
+            "n_step": 1,
+            "return_floor": false,
+            "force_penalty": false,
+            "sibling_fill": false,
+            "test_seed": 456,
+            "baseline_path": "results/takehome/confirmation_baseline.json"
+          },
+          "seeds": [
+            100
+          ],
+          "output": "results/takehome/goal13/fresh"
+        }
+      ]
+    },
+    "command": "source scripts/env.sh && python -B takehome/audit_experiments.py --manifest results/takehome/goal13/fresh_audit_manifest.json --output results/takehome/goal13/fresh_audit.json",
+    "expected_result_path": "results/takehome/goal13/fresh/seed_100/result.json",
+    "checks_supplied_by_auditor": [
+      "config overrides match",
+      "practice exactly 200",
+      "final test 500 at configured seed456 and test-only provenance",
+      "budget ledger limit200 with 200 sequential IDs and fill/online split matching config",
+      "final model/replay/final trace exist",
+      "curve point0/final/intermediates satisfy seed/count/provenance contracts",
+      "finite results/traces and trace success count matches JSON"
+    ]
+  },
+  "test_harness": {
+    "program": "takehome/run_tests.py",
+    "invocation": "source scripts/env.sh && python -B takehome/run_tests.py",
+    "default_pytest_arguments": [
+      "tests",
+      "takehome",
+      "-q"
+    ],
+    "pytest_cache": "results/takehome/pytest_cache",
+    "basetemp": "results/takehome/final_test_tmp",
+    "inventory_path": "results/takehome/final_test_episode_inventory.json",
+    "inventory_status": "anticipated_not_executed",
+    "anticipated_test_invocations": 70,
+    "sum_inventory_test_invocations": 70,
+    "anticipated_full_test_episodes": 88,
+    "sum_inventory_full_test_episodes": 88,
+    "reset_only_probe_states": 9,
+    "accounting_matches_inventory": true,
+    "note": "Inventory values are anticipated source-based counts, not executed test results."
+  },
+  "separate_experiment_accounting": {
+    "goal13_rerun_final_test_episodes": 500,
+    "goal13_rerun_intermediate_test_episodes": 2048,
+    "goal13_rerun_intermediate_test_basis": "8 intermediate curve points at practice episodes 40 through 180, each with 256 test episodes",
+    "goal13_rerun_total_fresh_test_episodes": 2548,
+    "zero_point_reference": "reused reference; excluded from fresh rerun test total",
+    "goal13_rerun_practice_episodes": 200,
+    "included_in_pytest_inventory_88_episode_total": false,
+    "count_as_new_goal13_experiment_test_measurement_after_run": true
+  },
+  "bugs_or_gaps": [
+    {
+      "kind": "fresh_lineage_depends_on_current_destination_state",
+      "evidence": [
+        "takehome/run_final_rerun.py delegates to runner.run, whose existing-result skip/resume behavior is intentional.",
+        "results/takehome/goal13/fresh/seed_100/result.json and budget.json are absent at review time."
+      ],
+      "impact": "Fresh lineage is established by the currently absent destination; retain that evidence when the run begins.",
+      "current_destination_state": "result.json and budget.json do not exist at review time."
+    },
+    {
+      "kind": "postrun_result_contract_not_asserted_in_rerun_script",
+      "evidence": [
+        "takehome/run_final_rerun.py sets payload final_test_episodes=500 as a literal and reads result final success fields, but does not assert result practice_episodes=200, final episodes=500 or final test_seed=456 before writing rerun_comparison.json.",
+        "takehome/audit_experiments.py provides these checks when run with the one-entry manifest above."
+      ],
+      "impact": "The audit command verifies the persisted result contract and episode counts after the rerun."
+    }
+  ],
+  "existing_data_modified_by_this_review": false
+}

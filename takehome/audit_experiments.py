@@ -169,7 +169,7 @@ def audit_run(spec, seed, result_path, result, failures, baseline_cache):
     baseline = baseline_cache.get(baseline_path) or {}
     baseline_normal = baseline.get("conditions", {}).get("normal", {})
     check("point0_baseline_contract", point0.get("practice_episodes") == 0
-          and point0.get("label") == "original_policy"
+          and point0.get("label") == baseline_normal.get("label", "original_policy")
           and point0.get("episodes") == 500
           and point0.get("test_seed", test_seed) == test_seed
           and point0.get("test_only") is True and point0.get("learned_from") is False

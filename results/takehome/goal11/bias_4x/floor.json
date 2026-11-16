@@ -1,0 +1,22 @@
+{
+  "episodes": 500,
+  "successes": 42,
+  "success_rate": 0.084,
+  "ci_lo": 0.06274379952220428,
+  "ci_hi": 0.11159988309550732,
+  "steps_mean": 170.92857360839844,
+  "steps_median": 168.0,
+  "peak_force_mean": 68.17929077148438,
+  "final_xy_err_mean_mm": 3.596928358078003,
+  "final_depth_mean_mm": 2.776132583618164,
+  "still_inserted_at_end": 0.084,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6474852561950684,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 123,
+  "practice_episodes_added": 0,
+  "cheats_on_information": false,
+  "label": "Original policy under camera problem"
+}

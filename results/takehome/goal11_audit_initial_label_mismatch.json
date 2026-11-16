@@ -1,0 +1,1442 @@
+{
+  "manifest": "results/takehome/goal11_manifest.json",
+  "setting_count": 8,
+  "settings": [
+    {
+      "name": "bias_2x",
+      "label": "Final method under bias_2x",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "bias_2x",
+        "step_cap": 0.0002,
+        "guess_cap": 0.006,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/bias_2x/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/bias_2x/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/bias_2x/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 172,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/bias_2x/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/bias_2x/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/bias_2x/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/bias_2x/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 239,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/bias_2x/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/bias_2x/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/bias_2x/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/bias_2x/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/bias_2x/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 191,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/bias_2x/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/bias_2x/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/bias_2x/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/bias_2x/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "bias_4x",
+      "label": "Final method under bias_4x",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "bias_4x",
+        "step_cap": 0.0004,
+        "guess_cap": 0.012,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/bias_4x/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/bias_4x/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/bias_4x/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 68,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/bias_4x/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/bias_4x/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/bias_4x/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/bias_4x/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 49,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/bias_4x/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/bias_4x/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/bias_4x/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/bias_4x/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/bias_4x/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 88,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/bias_4x/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/bias_4x/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/bias_4x/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/bias_4x/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "one_sided",
+      "label": "Final method under one_sided",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "one_sided",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/one_sided/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/one_sided/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/one_sided/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 446,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/one_sided/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/one_sided/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/one_sided/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/one_sided/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 468,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/one_sided/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/one_sided/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/one_sided/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/one_sided/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/one_sided/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 450,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/one_sided/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/one_sided/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/one_sided/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/one_sided/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "drift",
+      "label": "Final method under drift",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "drift",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/drift/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/drift/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/drift/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 359,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/drift/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/drift/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/drift/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/drift/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/drift/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 276,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/drift/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/drift/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/drift/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/drift/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/drift/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 357,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/drift/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/drift/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/drift/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/drift/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "jitter",
+      "label": "Final method under jitter",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "jitter",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/jitter/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/jitter/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/jitter/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 394,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/jitter/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/jitter/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/jitter/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/jitter/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/jitter/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 358,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/jitter/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/jitter/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/jitter/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/jitter/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/jitter/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 385,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/jitter/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/jitter/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/jitter/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/jitter/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "rotation",
+      "label": "Final method under rotation",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "rotation",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/rotation/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/rotation/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/rotation/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 449,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/rotation/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/rotation/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/rotation/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/rotation/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/rotation/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 416,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/rotation/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/rotation/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/rotation/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/rotation/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/rotation/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 422,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/rotation/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/rotation/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/rotation/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/rotation/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "delay",
+      "label": "Final method under delay",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "delay",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/delay/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/delay/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/delay/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 405,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/delay/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/delay/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/delay/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/delay/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/delay/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 369,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/delay/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/delay/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/delay/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/delay/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/delay/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 239,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/delay/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/delay/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/delay/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/delay/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "height",
+      "label": "Final method under height",
+      "overrides": {
+        "outputs": 3,
+        "camera_problem": "height",
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/goal11/height/baseline.json"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal11/height/trained",
+      "runs": [
+        {
+          "path": "results/takehome/goal11/height/trained/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 375,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/height/trained/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/height/trained/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal11/height/trained/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal11/height/trained/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/height/trained/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 410,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/height/trained/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/height/trained/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal11/height/trained/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal11/height/trained/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal11/height/trained/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 429,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": false,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal11/height/trained/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal11/height/trained/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal11/height/trained/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal11/height/trained/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    }
+  ],
+  "failure_count": 24,
+  "failures": [
+    {
+      "setting": "bias_2x",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/bias_2x/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 153, 'success_rate': 0.306, 'ci_lo': 0.26721278242267577, 'ci_hi': 0.3477455695673147, 'steps_mean': 171.686279296875, 'steps_median': 173.0, 'peak_force_mean': 72.79594421386719, 'final_xy_err_mean_mm': 1.615234136581421, 'final_depth_mean_mm': 9.98933219909668, 'still_inserted_at_end': 0.306, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.7111132144927979, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 153, 'success_rate': 0.306, 'ci_lo': 0.26721278242267577, 'ci_hi': 0.3477455695673147, 'steps_mean': 171.686279296875, 'steps_median': 173.0, 'peak_force_mean': 72.79594421386719, 'final_xy_err_mean_mm': 1.615234136581421, 'final_depth_mean_mm': 9.98933219909668, 'still_inserted_at_end': 0.306, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.7111132144927979, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "bias_2x",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/bias_2x/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 153, 'success_rate': 0.306, 'ci_lo': 0.26721278242267577, 'ci_hi': 0.3477455695673147, 'steps_mean': 171.686279296875, 'steps_median': 173.0, 'peak_force_mean': 72.79594421386719, 'final_xy_err_mean_mm': 1.615234136581421, 'final_depth_mean_mm': 9.98933219909668, 'still_inserted_at_end': 0.306, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.7111132144927979, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 153, 'success_rate': 0.306, 'ci_lo': 0.26721278242267577, 'ci_hi': 0.3477455695673147, 'steps_mean': 171.686279296875, 'steps_median': 173.0, 'peak_force_mean': 72.79594421386719, 'final_xy_err_mean_mm': 1.615234136581421, 'final_depth_mean_mm': 9.98933219909668, 'still_inserted_at_end': 0.306, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.7111132144927979, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "bias_2x",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/bias_2x/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 153, 'success_rate': 0.306, 'ci_lo': 0.26721278242267577, 'ci_hi': 0.3477455695673147, 'steps_mean': 171.686279296875, 'steps_median': 173.0, 'peak_force_mean': 72.79594421386719, 'final_xy_err_mean_mm': 1.615234136581421, 'final_depth_mean_mm': 9.98933219909668, 'still_inserted_at_end': 0.306, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.7111132144927979, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 153, 'success_rate': 0.306, 'ci_lo': 0.26721278242267577, 'ci_hi': 0.3477455695673147, 'steps_mean': 171.686279296875, 'steps_median': 173.0, 'peak_force_mean': 72.79594421386719, 'final_xy_err_mean_mm': 1.615234136581421, 'final_depth_mean_mm': 9.98933219909668, 'still_inserted_at_end': 0.306, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.7111132144927979, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "bias_4x",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/bias_4x/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 42, 'success_rate': 0.084, 'ci_lo': 0.06274379952220428, 'ci_hi': 0.11159988309550732, 'steps_mean': 170.92857360839844, 'steps_median': 168.0, 'peak_force_mean': 68.17929077148438, 'final_xy_err_mean_mm': 3.596928358078003, 'final_depth_mean_mm': 2.776132583618164, 'still_inserted_at_end': 0.084, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6474852561950684, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 42, 'success_rate': 0.084, 'ci_lo': 0.06274379952220428, 'ci_hi': 0.11159988309550732, 'steps_mean': 170.92857360839844, 'steps_median': 168.0, 'peak_force_mean': 68.17929077148438, 'final_xy_err_mean_mm': 3.596928358078003, 'final_depth_mean_mm': 2.776132583618164, 'still_inserted_at_end': 0.084, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6474852561950684, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "bias_4x",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/bias_4x/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 42, 'success_rate': 0.084, 'ci_lo': 0.06274379952220428, 'ci_hi': 0.11159988309550732, 'steps_mean': 170.92857360839844, 'steps_median': 168.0, 'peak_force_mean': 68.17929077148438, 'final_xy_err_mean_mm': 3.596928358078003, 'final_depth_mean_mm': 2.776132583618164, 'still_inserted_at_end': 0.084, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6474852561950684, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 42, 'success_rate': 0.084, 'ci_lo': 0.06274379952220428, 'ci_hi': 0.11159988309550732, 'steps_mean': 170.92857360839844, 'steps_median': 168.0, 'peak_force_mean': 68.17929077148438, 'final_xy_err_mean_mm': 3.596928358078003, 'final_depth_mean_mm': 2.776132583618164, 'still_inserted_at_end': 0.084, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6474852561950684, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "bias_4x",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/bias_4x/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 42, 'success_rate': 0.084, 'ci_lo': 0.06274379952220428, 'ci_hi': 0.11159988309550732, 'steps_mean': 170.92857360839844, 'steps_median': 168.0, 'peak_force_mean': 68.17929077148438, 'final_xy_err_mean_mm': 3.596928358078003, 'final_depth_mean_mm': 2.776132583618164, 'still_inserted_at_end': 0.084, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6474852561950684, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 42, 'success_rate': 0.084, 'ci_lo': 0.06274379952220428, 'ci_hi': 0.11159988309550732, 'steps_mean': 170.92857360839844, 'steps_median': 168.0, 'peak_force_mean': 68.17929077148438, 'final_xy_err_mean_mm': 3.596928358078003, 'final_depth_mean_mm': 2.776132583618164, 'still_inserted_at_end': 0.084, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6474852561950684, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "one_sided",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/one_sided/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 340, 'success_rate': 0.68, 'ci_lo': 0.6378721940483771, 'ci_hi': 0.7193829432804977, 'steps_mean': 168.7205810546875, 'steps_median': 168.0, 'peak_force_mean': 82.87638092041016, 'final_xy_err_mean_mm': 0.7351233959197998, 'final_depth_mean_mm': 21.042827606201172, 'still_inserted_at_end': 0.68, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6662607192993164, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 340, 'success_rate': 0.68, 'ci_lo': 0.6378721940483771, 'ci_hi': 0.7193829432804977, 'steps_mean': 168.7205810546875, 'steps_median': 168.0, 'peak_force_mean': 82.87638092041016, 'final_xy_err_mean_mm': 0.7351233959197998, 'final_depth_mean_mm': 21.042827606201172, 'still_inserted_at_end': 0.68, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6662607192993164, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "one_sided",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/one_sided/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 340, 'success_rate': 0.68, 'ci_lo': 0.6378721940483771, 'ci_hi': 0.7193829432804977, 'steps_mean': 168.7205810546875, 'steps_median': 168.0, 'peak_force_mean': 82.87638092041016, 'final_xy_err_mean_mm': 0.7351233959197998, 'final_depth_mean_mm': 21.042827606201172, 'still_inserted_at_end': 0.68, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6662607192993164, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 340, 'success_rate': 0.68, 'ci_lo': 0.6378721940483771, 'ci_hi': 0.7193829432804977, 'steps_mean': 168.7205810546875, 'steps_median': 168.0, 'peak_force_mean': 82.87638092041016, 'final_xy_err_mean_mm': 0.7351233959197998, 'final_depth_mean_mm': 21.042827606201172, 'still_inserted_at_end': 0.68, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6662607192993164, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "one_sided",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/one_sided/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 340, 'success_rate': 0.68, 'ci_lo': 0.6378721940483771, 'ci_hi': 0.7193829432804977, 'steps_mean': 168.7205810546875, 'steps_median': 168.0, 'peak_force_mean': 82.87638092041016, 'final_xy_err_mean_mm': 0.7351233959197998, 'final_depth_mean_mm': 21.042827606201172, 'still_inserted_at_end': 0.68, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6662607192993164, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 340, 'success_rate': 0.68, 'ci_lo': 0.6378721940483771, 'ci_hi': 0.7193829432804977, 'steps_mean': 168.7205810546875, 'steps_median': 168.0, 'peak_force_mean': 82.87638092041016, 'final_xy_err_mean_mm': 0.7351233959197998, 'final_depth_mean_mm': 21.042827606201172, 'still_inserted_at_end': 0.68, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6662607192993164, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "drift",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/drift/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 145, 'success_rate': 0.29, 'ci_lo': 0.2519467539894188, 'ci_hi': 0.3312555857935606, 'steps_mean': 167.54483032226562, 'steps_median': 167.0, 'peak_force_mean': 72.1860122680664, 'final_xy_err_mean_mm': 1.5862741470336914, 'final_depth_mean_mm': 8.915130615234375, 'still_inserted_at_end': 0.29, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6524324417114258, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 145, 'success_rate': 0.29, 'ci_lo': 0.2519467539894188, 'ci_hi': 0.3312555857935606, 'steps_mean': 167.54483032226562, 'steps_median': 167.0, 'peak_force_mean': 72.1860122680664, 'final_xy_err_mean_mm': 1.5862741470336914, 'final_depth_mean_mm': 8.915130615234375, 'still_inserted_at_end': 0.29, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6524324417114258, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "drift",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/drift/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 145, 'success_rate': 0.29, 'ci_lo': 0.2519467539894188, 'ci_hi': 0.3312555857935606, 'steps_mean': 167.54483032226562, 'steps_median': 167.0, 'peak_force_mean': 72.1860122680664, 'final_xy_err_mean_mm': 1.5862741470336914, 'final_depth_mean_mm': 8.915130615234375, 'still_inserted_at_end': 0.29, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6524324417114258, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 145, 'success_rate': 0.29, 'ci_lo': 0.2519467539894188, 'ci_hi': 0.3312555857935606, 'steps_mean': 167.54483032226562, 'steps_median': 167.0, 'peak_force_mean': 72.1860122680664, 'final_xy_err_mean_mm': 1.5862741470336914, 'final_depth_mean_mm': 8.915130615234375, 'still_inserted_at_end': 0.29, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6524324417114258, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "drift",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/drift/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 145, 'success_rate': 0.29, 'ci_lo': 0.2519467539894188, 'ci_hi': 0.3312555857935606, 'steps_mean': 167.54483032226562, 'steps_median': 167.0, 'peak_force_mean': 72.1860122680664, 'final_xy_err_mean_mm': 1.5862741470336914, 'final_depth_mean_mm': 8.915130615234375, 'still_inserted_at_end': 0.29, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6524324417114258, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 145, 'success_rate': 0.29, 'ci_lo': 0.2519467539894188, 'ci_hi': 0.3312555857935606, 'steps_mean': 167.54483032226562, 'steps_median': 167.0, 'peak_force_mean': 72.1860122680664, 'final_xy_err_mean_mm': 1.5862741470336914, 'final_depth_mean_mm': 8.915130615234375, 'still_inserted_at_end': 0.29, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6524324417114258, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "jitter",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/jitter/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 339, 'success_rate': 0.678, 'ci_lo': 0.6358210325113282, 'ci_hi': 0.7174646032916704, 'steps_mean': 166.3333282470703, 'steps_median': 165.0, 'peak_force_mean': 86.7795181274414, 'final_xy_err_mean_mm': 0.7564016580581665, 'final_depth_mean_mm': 21.180896759033203, 'still_inserted_at_end': 0.678, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6617903709411621, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 339, 'success_rate': 0.678, 'ci_lo': 0.6358210325113282, 'ci_hi': 0.7174646032916704, 'steps_mean': 166.3333282470703, 'steps_median': 165.0, 'peak_force_mean': 86.7795181274414, 'final_xy_err_mean_mm': 0.7564016580581665, 'final_depth_mean_mm': 21.180896759033203, 'still_inserted_at_end': 0.678, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6617903709411621, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "jitter",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/jitter/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 339, 'success_rate': 0.678, 'ci_lo': 0.6358210325113282, 'ci_hi': 0.7174646032916704, 'steps_mean': 166.3333282470703, 'steps_median': 165.0, 'peak_force_mean': 86.7795181274414, 'final_xy_err_mean_mm': 0.7564016580581665, 'final_depth_mean_mm': 21.180896759033203, 'still_inserted_at_end': 0.678, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6617903709411621, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 339, 'success_rate': 0.678, 'ci_lo': 0.6358210325113282, 'ci_hi': 0.7174646032916704, 'steps_mean': 166.3333282470703, 'steps_median': 165.0, 'peak_force_mean': 86.7795181274414, 'final_xy_err_mean_mm': 0.7564016580581665, 'final_depth_mean_mm': 21.180896759033203, 'still_inserted_at_end': 0.678, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6617903709411621, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "jitter",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/jitter/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 339, 'success_rate': 0.678, 'ci_lo': 0.6358210325113282, 'ci_hi': 0.7174646032916704, 'steps_mean': 166.3333282470703, 'steps_median': 165.0, 'peak_force_mean': 86.7795181274414, 'final_xy_err_mean_mm': 0.7564016580581665, 'final_depth_mean_mm': 21.180896759033203, 'still_inserted_at_end': 0.678, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6617903709411621, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 339, 'success_rate': 0.678, 'ci_lo': 0.6358210325113282, 'ci_hi': 0.7174646032916704, 'steps_mean': 166.3333282470703, 'steps_median': 165.0, 'peak_force_mean': 86.7795181274414, 'final_xy_err_mean_mm': 0.7564016580581665, 'final_depth_mean_mm': 21.180896759033203, 'still_inserted_at_end': 0.678, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6617903709411621, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "rotation",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/rotation/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 327, 'success_rate': 0.654, 'ci_lo': 0.6112721337613813, 'ci_hi': 0.6943794837311004, 'steps_mean': 170.3272247314453, 'steps_median': 169.0, 'peak_force_mean': 86.0304183959961, 'final_xy_err_mean_mm': 0.7590866088867188, 'final_depth_mean_mm': 20.38915252685547, 'still_inserted_at_end': 0.654, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6713271141052246, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 327, 'success_rate': 0.654, 'ci_lo': 0.6112721337613813, 'ci_hi': 0.6943794837311004, 'steps_mean': 170.3272247314453, 'steps_median': 169.0, 'peak_force_mean': 86.0304183959961, 'final_xy_err_mean_mm': 0.7590866088867188, 'final_depth_mean_mm': 20.38915252685547, 'still_inserted_at_end': 0.654, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6713271141052246, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "rotation",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/rotation/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 327, 'success_rate': 0.654, 'ci_lo': 0.6112721337613813, 'ci_hi': 0.6943794837311004, 'steps_mean': 170.3272247314453, 'steps_median': 169.0, 'peak_force_mean': 86.0304183959961, 'final_xy_err_mean_mm': 0.7590866088867188, 'final_depth_mean_mm': 20.38915252685547, 'still_inserted_at_end': 0.654, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6713271141052246, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 327, 'success_rate': 0.654, 'ci_lo': 0.6112721337613813, 'ci_hi': 0.6943794837311004, 'steps_mean': 170.3272247314453, 'steps_median': 169.0, 'peak_force_mean': 86.0304183959961, 'final_xy_err_mean_mm': 0.7590866088867188, 'final_depth_mean_mm': 20.38915252685547, 'still_inserted_at_end': 0.654, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6713271141052246, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "rotation",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/rotation/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 327, 'success_rate': 0.654, 'ci_lo': 0.6112721337613813, 'ci_hi': 0.6943794837311004, 'steps_mean': 170.3272247314453, 'steps_median': 169.0, 'peak_force_mean': 86.0304183959961, 'final_xy_err_mean_mm': 0.7590866088867188, 'final_depth_mean_mm': 20.38915252685547, 'still_inserted_at_end': 0.654, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6713271141052246, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 327, 'success_rate': 0.654, 'ci_lo': 0.6112721337613813, 'ci_hi': 0.6943794837311004, 'steps_mean': 170.3272247314453, 'steps_median': 169.0, 'peak_force_mean': 86.0304183959961, 'final_xy_err_mean_mm': 0.7590866088867188, 'final_depth_mean_mm': 20.38915252685547, 'still_inserted_at_end': 0.654, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6713271141052246, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "delay",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/delay/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 239, 'success_rate': 0.478, 'ci_lo': 0.43455017112738104, 'ci_hi': 0.5217853120879786, 'steps_mean': 167.75314331054688, 'steps_median': 167.0, 'peak_force_mean': 66.0514144897461, 'final_xy_err_mean_mm': 0.8800035715103149, 'final_depth_mean_mm': 15.077251434326172, 'still_inserted_at_end': 0.478, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6534457206726074, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 239, 'success_rate': 0.478, 'ci_lo': 0.43455017112738104, 'ci_hi': 0.5217853120879786, 'steps_mean': 167.75314331054688, 'steps_median': 167.0, 'peak_force_mean': 66.0514144897461, 'final_xy_err_mean_mm': 0.8800035715103149, 'final_depth_mean_mm': 15.077251434326172, 'still_inserted_at_end': 0.478, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6534457206726074, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "delay",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/delay/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 239, 'success_rate': 0.478, 'ci_lo': 0.43455017112738104, 'ci_hi': 0.5217853120879786, 'steps_mean': 167.75314331054688, 'steps_median': 167.0, 'peak_force_mean': 66.0514144897461, 'final_xy_err_mean_mm': 0.8800035715103149, 'final_depth_mean_mm': 15.077251434326172, 'still_inserted_at_end': 0.478, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6534457206726074, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 239, 'success_rate': 0.478, 'ci_lo': 0.43455017112738104, 'ci_hi': 0.5217853120879786, 'steps_mean': 167.75314331054688, 'steps_median': 167.0, 'peak_force_mean': 66.0514144897461, 'final_xy_err_mean_mm': 0.8800035715103149, 'final_depth_mean_mm': 15.077251434326172, 'still_inserted_at_end': 0.478, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6534457206726074, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "delay",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/delay/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 239, 'success_rate': 0.478, 'ci_lo': 0.43455017112738104, 'ci_hi': 0.5217853120879786, 'steps_mean': 167.75314331054688, 'steps_median': 167.0, 'peak_force_mean': 66.0514144897461, 'final_xy_err_mean_mm': 0.8800035715103149, 'final_depth_mean_mm': 15.077251434326172, 'still_inserted_at_end': 0.478, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6534457206726074, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 239, 'success_rate': 0.478, 'ci_lo': 0.43455017112738104, 'ci_hi': 0.5217853120879786, 'steps_mean': 167.75314331054688, 'steps_median': 167.0, 'peak_force_mean': 66.0514144897461, 'final_xy_err_mean_mm': 0.8800035715103149, 'final_depth_mean_mm': 15.077251434326172, 'still_inserted_at_end': 0.478, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.6534457206726074, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "height",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/height/trained/seed_0/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 373, 'success_rate': 0.746, 'ci_lo': 0.7060683153605514, 'ci_hi': 0.7821803723222442, 'steps_mean': 153.14744567871094, 'steps_median': 150.0, 'peak_force_mean': 89.04096221923828, 'final_xy_err_mean_mm': 0.7816531658172607, 'final_depth_mean_mm': 22.756013870239258, 'still_inserted_at_end': 0.746, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.661015510559082, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 373, 'success_rate': 0.746, 'ci_lo': 0.7060683153605514, 'ci_hi': 0.7821803723222442, 'steps_mean': 153.14744567871094, 'steps_median': 150.0, 'peak_force_mean': 89.04096221923828, 'final_xy_err_mean_mm': 0.7816531658172607, 'final_depth_mean_mm': 22.756013870239258, 'still_inserted_at_end': 0.746, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.661015510559082, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "height",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/height/trained/seed_1/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 373, 'success_rate': 0.746, 'ci_lo': 0.7060683153605514, 'ci_hi': 0.7821803723222442, 'steps_mean': 153.14744567871094, 'steps_median': 150.0, 'peak_force_mean': 89.04096221923828, 'final_xy_err_mean_mm': 0.7816531658172607, 'final_depth_mean_mm': 22.756013870239258, 'still_inserted_at_end': 0.746, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.661015510559082, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 373, 'success_rate': 0.746, 'ci_lo': 0.7060683153605514, 'ci_hi': 0.7821803723222442, 'steps_mean': 153.14744567871094, 'steps_median': 150.0, 'peak_force_mean': 89.04096221923828, 'final_xy_err_mean_mm': 0.7816531658172607, 'final_depth_mean_mm': 22.756013870239258, 'still_inserted_at_end': 0.746, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.661015510559082, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    },
+    {
+      "setting": "height",
+      "path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/goal11/height/trained/seed_2/result.json",
+      "check": "point0_baseline_contract",
+      "detail": "{'point0': {'practice_episodes': 0, 'label': 'Original policy under camera problem', 'episodes': 500, 'successes': 373, 'success_rate': 0.746, 'ci_lo': 0.7060683153605514, 'ci_hi': 0.7821803723222442, 'steps_mean': 153.14744567871094, 'steps_median': 150.0, 'peak_force_mean': 89.04096221923828, 'final_xy_err_mean_mm': 0.7816531658172607, 'final_depth_mean_mm': 22.756013870239258, 'still_inserted_at_end': 0.746, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.661015510559082, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False}, 'baseline_normal': {'episodes': 500, 'successes': 373, 'success_rate': 0.746, 'ci_lo': 0.7060683153605514, 'ci_hi': 0.7821803723222442, 'steps_mean': 153.14744567871094, 'steps_median': 150.0, 'peak_force_mean': 89.04096221923828, 'final_xy_err_mean_mm': 0.7816531658172607, 'final_depth_mean_mm': 22.756013870239258, 'still_inserted_at_end': 0.746, 'through_wall_episodes': 0, 'max_lateral_when_deep_mm': 0.661015510559082, 'nan_episodes': 0, 'test_only': True, 'learned_from': False, 'test_seed': 123, 'practice_episodes_added': 0, 'cheats_on_information': False, 'label': 'Original policy under camera problem'}}"
+    }
+  ],
+  "passed": false
+}
