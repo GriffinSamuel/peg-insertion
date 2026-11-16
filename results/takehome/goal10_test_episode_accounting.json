@@ -1,0 +1,10 @@
+{
+  "executed": true,
+  "full_test_episodes": 4,
+  "reset_only_probes": 0,
+  "practice_episodes": 0,
+  "tests_passed": 1,
+  "purpose": "Position-only frozen policy accepts selected movement wrapper: 10 original inputs, 12 learner inputs, zero initial action, finite test rollout and frozen weights.",
+  "evidence": "results/takehome/goal10_position_contract.exit.json",
+  "log": "results/takehome/goal10_position_contract.log"
+}

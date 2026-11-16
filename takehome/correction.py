@@ -112,6 +112,9 @@ class AimCorrectedEnv(PegInsertion):
         aim_action, _ = split_controls(action, self.outputs)
         return advance_guess(state.info["aim_guess"], aim_action, self.aim)
 
+    def movement_limit(self, state, corrected):
+        return self.movement_cap
+
     def step(self, state, action):
         guess = self.next_guess(state, action)
         raw_obs = state.obs["state"][:self.base_obs_size]
@@ -123,7 +126,7 @@ class AimCorrectedEnv(PegInsertion):
         if self.outputs != 2:
             _, movement = split_controls(action, self.outputs)
             executed = add_movement_correction(robot_action, movement,
-                                               self.movement_cap, self._config.action_scale)
+                                               self.movement_limit(state, corrected), self._config.action_scale)
             movement_correction = (executed - robot_action) * self._config.action_scale
             robot_action = executed
         nxt = super().step(state, robot_action)

@@ -1,0 +1,90 @@
+{
+  "selected": {
+    "name": "movement",
+    "label": "Movement only",
+    "round": "plain comparison (reused)",
+    "base": "aim",
+    "changes_from_main": 1,
+    "eligible": true,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "results": [
+      {
+        "seed": 0,
+        "successes": 425,
+        "episodes": 500,
+        "success_rate": 0.85,
+        "peak_force_mean": 98.42928314208984,
+        "result_path": "results/takehome/goal6/movement/seed_0/result.json"
+      },
+      {
+        "seed": 1,
+        "successes": 411,
+        "episodes": 500,
+        "success_rate": 0.822,
+        "peak_force_mean": 92.79454803466797,
+        "result_path": "results/takehome/goal6/movement/seed_1/result.json"
+      },
+      {
+        "seed": 2,
+        "successes": 427,
+        "episodes": 500,
+        "success_rate": 0.854,
+        "peak_force_mean": 94.97856140136719,
+        "result_path": "results/takehome/goal6/movement/seed_2/result.json"
+      },
+      {
+        "seed": 3,
+        "successes": 428,
+        "episodes": 500,
+        "success_rate": 0.856,
+        "peak_force_mean": 96.60432434082031,
+        "result_path": "results/takehome/goal6/movement/seed_3/result.json"
+      },
+      {
+        "seed": 4,
+        "successes": 393,
+        "episodes": 500,
+        "success_rate": 0.786,
+        "peak_force_mean": 91.65235900878906,
+        "result_path": "results/takehome/goal6/movement/seed_4/result.json"
+      }
+    ],
+    "overrides": {
+      "outputs": 3
+    },
+    "output": "results/takehome/goal6/movement",
+    "mean": 0.8336,
+    "std": 0.02994661917479165,
+    "matched_base_mean": 0.6516,
+    "matched_base_std": 0.07737441437581287,
+    "gain_over_base": 0.18200000000000005,
+    "clear_gain_over_base": true,
+    "clear_gain_over_main": true,
+    "difference_below_spread_is_unproven": false,
+    "difference_status": "gain beyond spread"
+  },
+  "highest_mean_setting": "movement",
+  "highest_mean": 0.8336,
+  "highest_mean_spread": 0.02994661917479165,
+  "within_one_spread": [
+    "movement"
+  ],
+  "reason": "Fewest changes within one sample spread of the highest development mean; higher mean breaks ties.",
+  "total_settings_tried": 28,
+  "written_utc": "2026-11-16T02:12:40.762418+00:00",
+  "confirmation_previously_unused": true,
+  "confirmation_practice_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "confirmation_test_seed": 456
+}

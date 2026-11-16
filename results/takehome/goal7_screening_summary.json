@@ -1,0 +1,1546 @@
+{
+  "settings": [
+    {
+      "name": "aim",
+      "label": "Aim only",
+      "round": "plain comparison (reused)",
+      "base": "aim",
+      "changes_from_main": 0,
+      "eligible": true,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "results": [
+        {
+          "seed": 0,
+          "successes": 365,
+          "episodes": 500,
+          "success_rate": 0.73,
+          "peak_force_mean": 88.25930786132812,
+          "result_path": "results/takehome/benchmark/solo/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 278,
+          "episodes": 500,
+          "success_rate": 0.556,
+          "peak_force_mean": 81.70462799072266,
+          "result_path": "results/takehome/benchmark/parallel2/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 315,
+          "episodes": 500,
+          "success_rate": 0.63,
+          "peak_force_mean": 86.6933822631836,
+          "result_path": "results/takehome/benchmark/parallel2/seed_2/result.json"
+        },
+        {
+          "seed": 3,
+          "successes": 305,
+          "episodes": 500,
+          "success_rate": 0.61,
+          "peak_force_mean": 84.07827758789062,
+          "result_path": "results/takehome/benchmark/parallel4/seed_3/result.json"
+        },
+        {
+          "seed": 4,
+          "successes": 366,
+          "episodes": 500,
+          "success_rate": 0.732,
+          "peak_force_mean": 87.39733123779297,
+          "result_path": "results/takehome/benchmark/parallel4/seed_4/result.json"
+        }
+      ],
+      "overrides": {
+        "outputs": 2
+      },
+      "output": "results/takehome/benchmark/solo",
+      "mean": 0.6516,
+      "std": 0.07737441437581287,
+      "matched_base_mean": 0.6516,
+      "matched_base_std": 0.07737441437581287,
+      "gain_over_base": 0.0,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "movement",
+      "label": "Movement only",
+      "round": "plain comparison (reused)",
+      "base": "aim",
+      "changes_from_main": 1,
+      "eligible": true,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "results": [
+        {
+          "seed": 0,
+          "successes": 425,
+          "episodes": 500,
+          "success_rate": 0.85,
+          "peak_force_mean": 98.42928314208984,
+          "result_path": "results/takehome/goal6/movement/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 411,
+          "episodes": 500,
+          "success_rate": 0.822,
+          "peak_force_mean": 92.79454803466797,
+          "result_path": "results/takehome/goal6/movement/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 427,
+          "episodes": 500,
+          "success_rate": 0.854,
+          "peak_force_mean": 94.97856140136719,
+          "result_path": "results/takehome/goal6/movement/seed_2/result.json"
+        },
+        {
+          "seed": 3,
+          "successes": 428,
+          "episodes": 500,
+          "success_rate": 0.856,
+          "peak_force_mean": 96.60432434082031,
+          "result_path": "results/takehome/goal6/movement/seed_3/result.json"
+        },
+        {
+          "seed": 4,
+          "successes": 393,
+          "episodes": 500,
+          "success_rate": 0.786,
+          "peak_force_mean": 91.65235900878906,
+          "result_path": "results/takehome/goal6/movement/seed_4/result.json"
+        }
+      ],
+      "overrides": {
+        "outputs": 3
+      },
+      "output": "results/takehome/goal6/movement",
+      "mean": 0.8336,
+      "std": 0.02994661917479165,
+      "matched_base_mean": 0.6516,
+      "matched_base_std": 0.07737441437581287,
+      "gain_over_base": 0.18200000000000005,
+      "clear_gain_over_base": true,
+      "clear_gain_over_main": true,
+      "difference_below_spread_is_unproven": false,
+      "difference_status": "gain beyond spread"
+    },
+    {
+      "name": "combined",
+      "label": "Aim and movement",
+      "round": "plain comparison (reused)",
+      "base": "aim",
+      "changes_from_main": 1,
+      "eligible": true,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "results": [
+        {
+          "seed": 0,
+          "successes": 421,
+          "episodes": 500,
+          "success_rate": 0.842,
+          "peak_force_mean": 96.19654846191406,
+          "result_path": "results/takehome/goal6/combined/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 378,
+          "episodes": 500,
+          "success_rate": 0.756,
+          "peak_force_mean": 94.80397033691406,
+          "result_path": "results/takehome/goal6/combined/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 363,
+          "episodes": 500,
+          "success_rate": 0.726,
+          "peak_force_mean": 84.370361328125,
+          "result_path": "results/takehome/goal6/combined/seed_2/result.json"
+        },
+        {
+          "seed": 3,
+          "successes": 407,
+          "episodes": 500,
+          "success_rate": 0.814,
+          "peak_force_mean": 95.82219696044922,
+          "result_path": "results/takehome/goal6/combined/seed_3/result.json"
+        },
+        {
+          "seed": 4,
+          "successes": 396,
+          "episodes": 500,
+          "success_rate": 0.792,
+          "peak_force_mean": 95.1175308227539,
+          "result_path": "results/takehome/goal6/combined/seed_4/result.json"
+        }
+      ],
+      "overrides": {
+        "outputs": 5
+      },
+      "output": "results/takehome/goal6/combined",
+      "mean": 0.786,
+      "std": 0.04597825573029059,
+      "matched_base_mean": 0.6516,
+      "matched_base_std": 0.07737441437581287,
+      "gain_over_base": 0.13440000000000007,
+      "clear_gain_over_base": true,
+      "clear_gain_over_main": true,
+      "difference_below_spread_is_unproven": false,
+      "difference_status": "gain beyond spread"
+    },
+    {
+      "name": "supervised_cheating_reference",
+      "label": "Supervised reference (cheats: true labels)",
+      "round": "plain comparison (reused)",
+      "base": "aim",
+      "changes_from_main": 1,
+      "eligible": false,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "results": [
+        {
+          "seed": 0,
+          "successes": 325,
+          "episodes": 500,
+          "success_rate": 0.65,
+          "peak_force_mean": 83.8243637084961,
+          "result_path": "results/takehome/goal6/supervised_cheating_reference/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 349,
+          "episodes": 500,
+          "success_rate": 0.698,
+          "peak_force_mean": 88.7106704711914,
+          "result_path": "results/takehome/goal6/supervised_cheating_reference/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 328,
+          "episodes": 500,
+          "success_rate": 0.656,
+          "peak_force_mean": 84.1245346069336,
+          "result_path": "results/takehome/goal6/supervised_cheating_reference/seed_2/result.json"
+        },
+        {
+          "seed": 3,
+          "successes": 327,
+          "episodes": 500,
+          "success_rate": 0.654,
+          "peak_force_mean": 85.71553039550781,
+          "result_path": "results/takehome/goal6/supervised_cheating_reference/seed_3/result.json"
+        },
+        {
+          "seed": 4,
+          "successes": 325,
+          "episodes": 500,
+          "success_rate": 0.65,
+          "peak_force_mean": 84.53762817382812,
+          "result_path": "results/takehome/goal6/supervised_cheating_reference/seed_4/result.json"
+        }
+      ],
+      "overrides": {
+        "outputs": 2,
+        "supervised_reference": true
+      },
+      "output": "results/takehome/goal6/supervised_cheating_reference",
+      "mean": 0.6616,
+      "std": 0.020513410247932906,
+      "matched_base_mean": 0.6516,
+      "matched_base_std": 0.07737441437581287,
+      "gain_over_base": 0.010000000000000009,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "overrides": {
+        "fill_episodes": 0
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_0",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 306,
+          "episodes": 500,
+          "success_rate": 0.612,
+          "peak_force_mean": 83.33496856689453,
+          "result_path": "results/takehome/goal7/screening/fill_0/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 313,
+          "episodes": 500,
+          "success_rate": 0.626,
+          "peak_force_mean": 86.48140716552734,
+          "result_path": "results/takehome/goal7/screening/fill_0/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 316,
+          "episodes": 500,
+          "success_rate": 0.632,
+          "peak_force_mean": 83.2505111694336,
+          "result_path": "results/takehome/goal7/screening/fill_0/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6233333333333333,
+      "std": 0.010263202878893778,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": -0.015333333333333421,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "overrides": {
+        "fill_episodes": 10
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_10",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 319,
+          "episodes": 500,
+          "success_rate": 0.638,
+          "peak_force_mean": 86.14926147460938,
+          "result_path": "results/takehome/goal7/screening/fill_10/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 303,
+          "episodes": 500,
+          "success_rate": 0.606,
+          "peak_force_mean": 83.3243408203125,
+          "result_path": "results/takehome/goal7/screening/fill_10/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 350,
+          "episodes": 500,
+          "success_rate": 0.7,
+          "peak_force_mean": 89.73037719726562,
+          "result_path": "results/takehome/goal7/screening/fill_10/seed_2/result.json"
+        }
+      ],
+      "mean": 0.648,
+      "std": 0.047791212581394064,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.009333333333333305,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "overrides": {
+        "fill_episodes": 20
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_20",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 362,
+          "episodes": 500,
+          "success_rate": 0.724,
+          "peak_force_mean": 87.91999816894531,
+          "result_path": "results/takehome/goal7/screening/fill_20/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 308,
+          "episodes": 500,
+          "success_rate": 0.616,
+          "peak_force_mean": 80.13288879394531,
+          "result_path": "results/takehome/goal7/screening/fill_20/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 307,
+          "episodes": 500,
+          "success_rate": 0.614,
+          "peak_force_mean": 81.71611022949219,
+          "result_path": "results/takehome/goal7/screening/fill_20/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6513333333333333,
+      "std": 0.06293912402737531,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.012666666666666604,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "overrides": {
+        "fill_episodes": 80
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_80",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 243,
+          "episodes": 500,
+          "success_rate": 0.486,
+          "peak_force_mean": 81.76373291015625,
+          "result_path": "results/takehome/goal7/screening/fill_80/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 332,
+          "episodes": 500,
+          "success_rate": 0.664,
+          "peak_force_mean": 86.52381896972656,
+          "result_path": "results/takehome/goal7/screening/fill_80/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 375,
+          "episodes": 500,
+          "success_rate": 0.75,
+          "peak_force_mean": 88.22747039794922,
+          "result_path": "results/takehome/goal7/screening/fill_80/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6333333333333333,
+      "std": 0.13464521281253686,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": -0.005333333333333412,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "overrides": {
+        "fill_episodes": 120
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_120",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 306,
+          "episodes": 500,
+          "success_rate": 0.612,
+          "peak_force_mean": 84.35111236572266,
+          "result_path": "results/takehome/goal7/screening/fill_120/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 326,
+          "episodes": 500,
+          "success_rate": 0.652,
+          "peak_force_mean": 84.95053100585938,
+          "result_path": "results/takehome/goal7/screening/fill_120/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 82,
+          "episodes": 500,
+          "success_rate": 0.164,
+          "peak_force_mean": 70.28004455566406,
+          "result_path": "results/takehome/goal7/screening/fill_120/seed_2/result.json"
+        }
+      ],
+      "mean": 0.476,
+      "std": 0.2709391075500176,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": -0.16266666666666674,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "side_by_side",
+      "label": "side by side",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/side_by_side",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 222,
+          "episodes": 500,
+          "success_rate": 0.444,
+          "peak_force_mean": 72.51541900634766,
+          "result_path": "results/takehome/goal7/screening/side_by_side/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 331,
+          "episodes": 500,
+          "success_rate": 0.662,
+          "peak_force_mean": 86.31725311279297,
+          "result_path": "results/takehome/goal7/screening/side_by_side/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 390,
+          "episodes": 500,
+          "success_rate": 0.78,
+          "peak_force_mean": 96.60298919677734,
+          "result_path": "results/takehome/goal7/screening/side_by_side/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6286666666666667,
+      "std": 0.17046211700355401,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": -0.1459999999999999,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_then_move",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 264,
+          "episodes": 500,
+          "success_rate": 0.528,
+          "peak_force_mean": 82.8004150390625,
+          "result_path": "results/takehome/goal7/screening/aim_then_move/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 420,
+          "episodes": 500,
+          "success_rate": 0.84,
+          "peak_force_mean": 94.5152359008789,
+          "result_path": "results/takehome/goal7/screening/aim_then_move/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 466,
+          "episodes": 500,
+          "success_rate": 0.932,
+          "peak_force_mean": 100.55020141601562,
+          "result_path": "results/takehome/goal7/screening/aim_then_move/seed_2/result.json"
+        }
+      ],
+      "mean": 0.7666666666666667,
+      "std": 0.21174827822991463,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": -0.007999999999999896,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/move_then_aim",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 373,
+          "episodes": 500,
+          "success_rate": 0.746,
+          "peak_force_mean": 85.94393920898438,
+          "result_path": "results/takehome/goal7/screening/move_then_aim/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 358,
+          "episodes": 500,
+          "success_rate": 0.716,
+          "peak_force_mean": 95.77947998046875,
+          "result_path": "results/takehome/goal7/screening/move_then_aim/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 440,
+          "episodes": 500,
+          "success_rate": 0.88,
+          "peak_force_mean": 102.67559814453125,
+          "result_path": "results/takehome/goal7/screening/move_then_aim/seed_2/result.json"
+        }
+      ],
+      "mean": 0.7806666666666666,
+      "std": 0.08732315462312007,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": 0.006000000000000005,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": true,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "briefing",
+      "label": "Critic briefing on own fill",
+      "overrides": {
+        "briefing": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/briefing",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 293,
+          "episodes": 500,
+          "success_rate": 0.586,
+          "peak_force_mean": 83.65989685058594,
+          "result_path": "results/takehome/goal7/screening/briefing/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 344,
+          "episodes": 500,
+          "success_rate": 0.688,
+          "peak_force_mean": 84.47200012207031,
+          "result_path": "results/takehome/goal7/screening/briefing/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 356,
+          "episodes": 500,
+          "success_rate": 0.712,
+          "peak_force_mean": 87.75346374511719,
+          "result_path": "results/takehome/goal7/screening/briefing/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6619999999999999,
+      "std": 0.06690291473471092,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.023333333333333206,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "privileged_critic",
+      "label": "True bias to critic during training",
+      "overrides": {
+        "privileged_critic": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/privileged_critic",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 337,
+          "episodes": 500,
+          "success_rate": 0.674,
+          "peak_force_mean": 84.27640533447266,
+          "result_path": "results/takehome/goal7/screening/privileged_critic/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 324,
+          "episodes": 500,
+          "success_rate": 0.648,
+          "peak_force_mean": 83.77246856689453,
+          "result_path": "results/takehome/goal7/screening/privileged_critic/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 324,
+          "episodes": 500,
+          "success_rate": 0.648,
+          "peak_force_mean": 80.5868911743164,
+          "result_path": "results/takehome/goal7/screening/privileged_critic/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6566666666666667,
+      "std": 0.015011106998930284,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.018000000000000016,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "one_critic",
+      "label": "One critic",
+      "overrides": {
+        "ensemble": 1
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/one_critic",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 351,
+          "episodes": 500,
+          "success_rate": 0.702,
+          "peak_force_mean": 89.32308959960938,
+          "result_path": "results/takehome/goal7/screening/one_critic/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 332,
+          "episodes": 500,
+          "success_rate": 0.664,
+          "peak_force_mean": 88.3603286743164,
+          "result_path": "results/takehome/goal7/screening/one_critic/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 323,
+          "episodes": 500,
+          "success_rate": 0.646,
+          "peak_force_mean": 80.940185546875,
+          "result_path": "results/takehome/goal7/screening/one_critic/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6706666666666666,
+      "std": 0.028589042189855387,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.03199999999999992,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "one_update",
+      "label": "One update per new step",
+      "overrides": {
+        "updates_per_step": 1
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/one_update",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 348,
+          "episodes": 500,
+          "success_rate": 0.696,
+          "peak_force_mean": 87.29850006103516,
+          "result_path": "results/takehome/goal7/screening/one_update/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 292,
+          "episodes": 500,
+          "success_rate": 0.584,
+          "peak_force_mean": 81.83177947998047,
+          "result_path": "results/takehome/goal7/screening/one_update/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 63,
+          "episodes": 500,
+          "success_rate": 0.126,
+          "peak_force_mean": 67.6061782836914,
+          "result_path": "results/takehome/goal7/screening/one_update/seed_2/result.json"
+        }
+      ],
+      "mean": 0.4686666666666666,
+      "std": 0.30199558495668993,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": -0.1700000000000001,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "aim_cap_50um",
+      "label": "Aim cap 0.05 mm",
+      "overrides": {
+        "step_cap": 5e-05
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_cap_50um",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 317,
+          "episodes": 500,
+          "success_rate": 0.634,
+          "peak_force_mean": 82.25733184814453,
+          "result_path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 2,
+          "episodes": 500,
+          "success_rate": 0.004,
+          "peak_force_mean": 68.48751831054688,
+          "result_path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 345,
+          "episodes": 500,
+          "success_rate": 0.69,
+          "peak_force_mean": 88.3902359008789,
+          "result_path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/result.json"
+        }
+      ],
+      "mean": 0.44266666666666665,
+      "std": 0.3809269396266603,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": -0.19600000000000006,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "aim_cap_200um",
+      "label": "Aim cap 0.2 mm",
+      "overrides": {
+        "step_cap": 0.0002
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_cap_200um",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 383,
+          "episodes": 500,
+          "success_rate": 0.766,
+          "peak_force_mean": 91.89327239990234,
+          "result_path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 322,
+          "episodes": 500,
+          "success_rate": 0.644,
+          "peak_force_mean": 84.19207000732422,
+          "result_path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 315,
+          "episodes": 500,
+          "success_rate": 0.63,
+          "peak_force_mean": 85.32937622070312,
+          "result_path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/result.json"
+        }
+      ],
+      "mean": 0.68,
+      "std": 0.07480641683706017,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.04133333333333333,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "movement_cap_400um",
+      "label": "Movement cap 0.4 mm",
+      "overrides": {
+        "outputs": 5,
+        "movement_cap": 0.0004
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/movement_cap_400um",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 461,
+          "episodes": 500,
+          "success_rate": 0.922,
+          "peak_force_mean": 100.42596435546875,
+          "result_path": "results/takehome/goal7/screening/movement_cap_400um/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 276,
+          "episodes": 500,
+          "success_rate": 0.552,
+          "peak_force_mean": 86.86400604248047,
+          "result_path": "results/takehome/goal7/screening/movement_cap_400um/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 427,
+          "episodes": 500,
+          "success_rate": 0.854,
+          "peak_force_mean": 97.52544403076172,
+          "result_path": "results/takehome/goal7/screening/movement_cap_400um/seed_2/result.json"
+        }
+      ],
+      "mean": 0.776,
+      "std": 0.1969466932954194,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": 0.0013333333333334085,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "final_decider",
+      "label": "Final critic decider",
+      "overrides": {
+        "outputs": 5,
+        "final_decider": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/final_decider",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 255,
+          "episodes": 500,
+          "success_rate": 0.51,
+          "peak_force_mean": 82.40046691894531,
+          "result_path": "results/takehome/goal7/screening/final_decider/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 392,
+          "episodes": 500,
+          "success_rate": 0.784,
+          "peak_force_mean": 91.02869415283203,
+          "result_path": "results/takehome/goal7/screening/final_decider/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 326,
+          "episodes": 500,
+          "success_rate": 0.652,
+          "peak_force_mean": 87.69337463378906,
+          "result_path": "results/takehome/goal7/screening/final_decider/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6486666666666667,
+      "std": 0.13703041025018256,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": -0.1259999999999999,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "near_hole",
+      "label": "Hand over near hole",
+      "overrides": {
+        "near_hole": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/near_hole",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 318,
+          "episodes": 500,
+          "success_rate": 0.636,
+          "peak_force_mean": 83.2093276977539,
+          "result_path": "results/takehome/goal7/screening/near_hole/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 327,
+          "episodes": 500,
+          "success_rate": 0.654,
+          "peak_force_mean": 84.58580017089844,
+          "result_path": "results/takehome/goal7/screening/near_hole/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 321,
+          "episodes": 500,
+          "success_rate": 0.642,
+          "peak_force_mean": 87.78460693359375,
+          "result_path": "results/takehome/goal7/screening/near_hole/seed_2/result.json"
+        }
+      ],
+      "mean": 0.644,
+      "std": 0.009165151389911688,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.005333333333333301,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "contact_cap",
+      "label": "Contact-dependent movement cap",
+      "overrides": {
+        "outputs": 5,
+        "contact_cap": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/contact_cap",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 360,
+          "episodes": 500,
+          "success_rate": 0.72,
+          "peak_force_mean": 87.59403228759766,
+          "result_path": "results/takehome/goal7/screening/contact_cap/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 395,
+          "episodes": 500,
+          "success_rate": 0.79,
+          "peak_force_mean": 90.88700103759766,
+          "result_path": "results/takehome/goal7/screening/contact_cap/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 234,
+          "episodes": 500,
+          "success_rate": 0.468,
+          "peak_force_mean": 73.01506042480469,
+          "result_path": "results/takehome/goal7/screening/contact_cap/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6593333333333333,
+      "std": 0.16935564157515784,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": -0.11533333333333329,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "uncertainty_cap",
+      "label": "Old-policy uncertainty cap",
+      "overrides": {
+        "outputs": 5,
+        "uncertainty_cap": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/uncertainty_cap",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 408,
+          "episodes": 500,
+          "success_rate": 0.816,
+          "peak_force_mean": 87.63077545166016,
+          "result_path": "results/takehome/goal7/screening/uncertainty_cap/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 403,
+          "episodes": 500,
+          "success_rate": 0.806,
+          "peak_force_mean": 93.51740264892578,
+          "result_path": "results/takehome/goal7/screening/uncertainty_cap/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 359,
+          "episodes": 500,
+          "success_rate": 0.718,
+          "peak_force_mean": 90.45734405517578,
+          "result_path": "results/takehome/goal7/screening/uncertainty_cap/seed_2/result.json"
+        }
+      ],
+      "mean": 0.78,
+      "std": 0.053925875050851065,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": 0.005333333333333412,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": true,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "classification",
+      "label": "Classification critic loss",
+      "overrides": {
+        "classification": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/classification",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 351,
+          "episodes": 500,
+          "success_rate": 0.702,
+          "peak_force_mean": 87.8703384399414,
+          "result_path": "results/takehome/goal7/screening/classification/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 328,
+          "episodes": 500,
+          "success_rate": 0.656,
+          "peak_force_mean": 87.00259399414062,
+          "result_path": "results/takehome/goal7/screening/classification/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 280,
+          "episodes": 500,
+          "success_rate": 0.56,
+          "peak_force_mean": 82.4711685180664,
+          "result_path": "results/takehome/goal7/screening/classification/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6393333333333333,
+      "std": 0.07245228314782998,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.0006666666666665932,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "three_step",
+      "label": "Three-step credit",
+      "overrides": {
+        "n_step": 3
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/three_step",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 360,
+          "episodes": 500,
+          "success_rate": 0.72,
+          "peak_force_mean": 91.30596923828125,
+          "result_path": "results/takehome/goal7/screening/three_step/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 304,
+          "episodes": 500,
+          "success_rate": 0.608,
+          "peak_force_mean": 86.8011703491211,
+          "result_path": "results/takehome/goal7/screening/three_step/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 387,
+          "episodes": 500,
+          "success_rate": 0.774,
+          "peak_force_mean": 91.1994400024414,
+          "result_path": "results/takehome/goal7/screening/three_step/seed_2/result.json"
+        }
+      ],
+      "mean": 0.7006666666666667,
+      "std": 0.0846719158477788,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.061999999999999944,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "return_floor",
+      "label": "Observed return floor",
+      "overrides": {
+        "return_floor": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/return_floor",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 340,
+          "episodes": 500,
+          "success_rate": 0.68,
+          "peak_force_mean": 88.4075927734375,
+          "result_path": "results/takehome/goal7/screening/return_floor/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 331,
+          "episodes": 500,
+          "success_rate": 0.662,
+          "peak_force_mean": 87.84675598144531,
+          "result_path": "results/takehome/goal7/screening/return_floor/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 330,
+          "episodes": 500,
+          "success_rate": 0.66,
+          "peak_force_mean": 81.56888580322266,
+          "result_path": "results/takehome/goal7/screening/return_floor/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6673333333333333,
+      "std": 0.011015141094572214,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": 0.028666666666666618,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "force_penalty",
+      "label": "Force penalty (peak force reported)",
+      "overrides": {
+        "outputs": 5,
+        "force_penalty": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/force_penalty",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 359,
+          "episodes": 500,
+          "success_rate": 0.718,
+          "peak_force_mean": 93.01512145996094,
+          "result_path": "results/takehome/goal7/screening/force_penalty/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 399,
+          "episodes": 500,
+          "success_rate": 0.798,
+          "peak_force_mean": 95.38973236083984,
+          "result_path": "results/takehome/goal7/screening/force_penalty/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 254,
+          "episodes": 500,
+          "success_rate": 0.508,
+          "peak_force_mean": 76.07091522216797,
+          "result_path": "results/takehome/goal7/screening/force_penalty/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6746666666666666,
+      "std": 0.14977761292440647,
+      "matched_base_mean": 0.7746666666666666,
+      "matched_base_std": 0.0602107410129898,
+      "gain_over_base": -0.09999999999999998,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    },
+    {
+      "name": "sibling_fill",
+      "label": "Sibling-policy fill-up",
+      "overrides": {
+        "sibling_fill": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/sibling_fill",
+      "eligible": true,
+      "results": [
+        {
+          "seed": 0,
+          "successes": 314,
+          "episodes": 500,
+          "success_rate": 0.628,
+          "peak_force_mean": 82.96156311035156,
+          "result_path": "results/takehome/goal7/screening/sibling_fill/seed_0/result.json"
+        },
+        {
+          "seed": 1,
+          "successes": 318,
+          "episodes": 500,
+          "success_rate": 0.636,
+          "peak_force_mean": 84.91887664794922,
+          "result_path": "results/takehome/goal7/screening/sibling_fill/seed_1/result.json"
+        },
+        {
+          "seed": 2,
+          "successes": 290,
+          "episodes": 500,
+          "success_rate": 0.58,
+          "peak_force_mean": 84.0013656616211,
+          "result_path": "results/takehome/goal7/screening/sibling_fill/seed_2/result.json"
+        }
+      ],
+      "mean": 0.6146666666666667,
+      "std": 0.030287511177601485,
+      "matched_base_mean": 0.6386666666666667,
+      "matched_base_std": 0.08732315462312003,
+      "gain_over_base": -0.02400000000000002,
+      "clear_gain_over_base": false,
+      "clear_gain_over_main": false,
+      "difference_below_spread_is_unproven": true,
+      "difference_status": "difference below spread, unproven"
+    }
+  ],
+  "floor": 0.614,
+  "ceiling": 0.944,
+  "total_settings_tried": 28,
+  "test_seed": 123,
+  "generated_utc": "2026-11-16T02:12:09.714338+00:00"
+}

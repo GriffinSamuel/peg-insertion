@@ -52,8 +52,19 @@ class ExperimentRunner:
         self.learner = Learner(config, self.env)
         self.episodes = EpisodeRunner(self.env, self.learner)
 
+    def update(self, state, replay, new_steps, source, practice_end):
+        return self.learner.train_block(
+            state, replay.training_arrays(supervised_reference=self.config.supervised_reference),
+            replay.fill_count, replay.count, new_steps * self.config.updates_per_step)
+
     def run(self, seed, output):
         cfg = self.config
+        test_seed = getattr(cfg, 'test_seed', 123)
+        if seed in range(100, 105) or test_seed == 456:
+            if not (ROOT / 'results/takehome/goal7_choice.json').exists():
+                raise ValueError('Confirmation forbidden before written choice')
+            if seed not in range(100, 105) or test_seed != 456:
+                raise ValueError('Confirmation practice and test seeds must stay paired')
         output = Path(output).resolve()
         if not output.is_relative_to(ROOT / "results/takehome"):
             raise ValueError("Output must be within results/takehome/")
@@ -71,7 +82,10 @@ class ExperimentRunner:
         ledger = EpisodeBudget(output / "budget.json", limit=cfg.total_episodes)
         replay = Replay(ledger)
         checkpoint_path = output / "checkpoint.pkl"
-        baseline = json.loads((ROOT / "results/takehome/baseline.json").read_text())
+        baseline = json.loads((ROOT / getattr(cfg, 'baseline_path',
+                                              'results/takehome/baseline.json')).read_text())
+        if not str(baseline['policy']).endswith(cfg.policy) or baseline['test_seed'] != test_seed:
+            raise ValueError('Reference policy and final test seed must match this experiment')
         curve = [{"practice_episodes": 0, "label": "original_policy",
                   **baseline["conditions"]["normal"]}]
         timings, losses = [], []
@@ -109,17 +123,14 @@ class ExperimentRunner:
             n = replay.add(trajectory, ids, source, test_only=False)
             collect_seconds = time.perf_counter() - t0
             update_seconds = 0.0
-            if source == "online":
+            if source == "online" or (getattr(cfg, 'briefing', False) and end == cfg.fill_episodes):
                 t0 = time.perf_counter()
-                state, metrics = self.learner.train_block(
-                    state, replay.training_arrays(supervised_reference=cfg.supervised_reference),
-                    replay.fill_count, replay.count,
-                    n * cfg.updates_per_step)
+                state, metrics = self.update(state, replay, n, source, end)
                 metrics = jax.device_get(metrics)
                 validate_state(state)
                 if not bool(metrics["finite"]):
                     raise RuntimeError("Tripwire: invalid numbers during gradient updates")
-                losses.append({"practice_episodes": end,
+                losses.append({"practice_episodes": end, 'source': source,
                                **{k: float(v) for k, v in metrics.items()}})
                 update_seconds = time.perf_counter() - t0
             test_seconds = 0.0
@@ -130,7 +141,7 @@ class ExperimentRunner:
                 # Later analysis goals may explicitly request additional traces.
                 trace_path = output / f"test_{end:04d}_traces.npz" if episodes == 500 else None
                 summary, stats, test_trace = self.episodes.test(
-                    state, episodes=episodes, seed=123, output=trace_path)
+                    state, episodes=episodes, seed=test_seed if episodes == 500 else 123, output=trace_path)
                 summary['trace_shapes'] = {key: list(test_trace[key].shape)
                     for key in ('guess', 'true_bias', 'q', 'force')}
                 if not np.isfinite(summary["steps_mean"]):
@@ -162,6 +173,7 @@ class ExperimentRunner:
                                 {"config": cfg.to_dict(), "state": jax.device_get(state)})
                 test_seconds = time.perf_counter() - t0
             timings.append({"practice_episodes": end, "source": source,
+                            'source_policy': getattr(self.episodes, 'last_policy', cfg.policy),
                             "valid_steps": n, "collect_seconds": collect_seconds,
                             "update_seconds": update_seconds, "test_seconds": test_seconds})
             save_checkpoint(checkpoint_path, {"state": jax.device_get(state), "used": end,

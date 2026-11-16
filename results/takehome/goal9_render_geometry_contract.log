@@ -1,0 +1,11 @@
+{
+  "policy_stub": "force_0.5mm_s2",
+  "cpu_only": true,
+  "passed": true,
+  "model_nq": 9,
+  "env_nq": 9,
+  "render_ngeom": 87,
+  "env_ngeom": 86,
+  "geometry_added": 1,
+  "network_config": "results/policies/force_0.5mm_s2/network_config.json"
+}

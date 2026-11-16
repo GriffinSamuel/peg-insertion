@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "takehome/test_camera.py",
+    "-k",
+    "integration",
+    "-q",
+    "-o",
+    "cache_dir=results/takehome/pytest_cache",
+    "--basetemp=results/takehome/goal11_episode_test_tmp"
+  ],
+  "started_utc": "2026-11-16T02:09:09.828839+00:00",
+  "finished_utc": "2026-11-16T02:09:56.888468+00:00",
+  "seconds": 47.05965819299854,
+  "exit_code": 0
+}

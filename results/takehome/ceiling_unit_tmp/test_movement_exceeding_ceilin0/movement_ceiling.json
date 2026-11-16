@@ -1,0 +1,24 @@
+{
+  "episodes": 500,
+  "test_seed": 789,
+  "test_only": true,
+  "learned_from": false,
+  "successes": 2,
+  "success_rate": 0.8,
+  "steps_mean": 12.0,
+  "steps_median": 12.0,
+  "used_for_selection": false,
+  "inspected_episode_ids": [
+    0,
+    2
+  ],
+  "max_lateral_when_deep_examples_m": [
+    0.001,
+    0.003
+  ],
+  "max_abs_control_examples": [
+    0.2,
+    0.4
+  ],
+  "reason": "Movement-capable evaluation exceeded its fixed ceiling reference"
+}

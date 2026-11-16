@@ -1,0 +1,736 @@
+{
+  "command": "python -B takehome/run_tests.py (default pytest targets: tests/ and takehome/; includes -q)",
+  "status": "anticipated_not_executed",
+  "anticipated_test_invocations": 70,
+  "anticipated_full_test_episodes": 88,
+  "full_episode_definition": "Explicit test rollouts through a 200-step test episode; scripted_insert defaults to the environment 200-step episode length. Short 4-episode integration probes are counted as test episodes because each rollout runs the full 200-step horizon.",
+  "reset_only_probe_states": 9,
+  "reset_only_probe_breakdown": [
+    {
+      "test": "tests/test_env.py::test_peg_attached_below_hand",
+      "count": 1,
+      "evidence": "tests/test_env.py:51-55"
+    },
+    {
+      "test": "takehome/test_correction.py::test_reset_and_frozen_policy_after_test_rollout",
+      "count": 8,
+      "evidence": "takehome/test_correction.py:45-47,56"
+    }
+  ],
+  "partial_or_short_physics_probes": [
+    {
+      "test": "tests/test_env.py::test_reset_step_shapes",
+      "invocations": 1,
+      "env_states": 2,
+      "steps_per_state": 1,
+      "evidence": "tests/test_env.py:71-77"
+    },
+    {
+      "test": "tests/test_env.py::test_random_steps_stable",
+      "invocations": 1,
+      "env_states": 1,
+      "steps": 50,
+      "evidence": "tests/test_env.py:80-87"
+    },
+    {
+      "test": "tests/test_env.py::test_auto_reset_resamples_hole",
+      "invocations": 1,
+      "parallel_envs": 2,
+      "vector_steps": 7,
+      "env_steps": 14,
+      "completed_short_episodes": 4,
+      "completed_episode_length": 3,
+      "partial_tails": 2,
+      "tail_steps_each": 1,
+      "auto_reset_states": 4,
+      "evidence": "tests/test_env.py:90-108"
+    },
+    {
+      "test": "tests/test_env.py::test_force_sensor_free_and_pressed",
+      "invocations": 1,
+      "manual_segments": 3,
+      "mujoco_steps": [
+        200,
+        100,
+        200
+      ],
+      "total_mujoco_steps": 500,
+      "evidence": "tests/test_env.py:111-136"
+    }
+  ],
+  "full_episode_test_totals_by_test": [
+    {
+      "test": "tests/test_scripted.py::test_scripted_centred_insertion",
+      "invocations": 2,
+      "episodes_per_invocation": 20,
+      "episodes": 40,
+      "evidence": "tests/test_scripted.py:11-18"
+    },
+    {
+      "test": "tests/test_scripted.py::test_scripted_half_mm_recorded",
+      "invocations": 1,
+      "episodes_per_invocation": 20,
+      "episodes": 20,
+      "evidence": "tests/test_scripted.py:11,21-25"
+    },
+    {
+      "test": "takehome/test_correction.py::test_reset_and_frozen_policy_after_test_rollout",
+      "invocations": 1,
+      "episodes": 4,
+      "evidence": "takehome/test_correction.py:50-53"
+    },
+    {
+      "test": "takehome/test_camera.py::test_camera_integration_is_finite_frozen_and_test_only",
+      "invocations": 2,
+      "episodes_per_invocation": 4,
+      "episodes": 8,
+      "evidence": "takehome/test_camera.py:81-89"
+    },
+    {
+      "test": "takehome/test_variant_integration.py::test_feature_rollouts_are_finite_and_never_learned",
+      "invocations": 2,
+      "episodes_per_invocation": 4,
+      "episodes": 8,
+      "evidence": "takehome/test_variant_integration.py:12-24"
+    },
+    {
+      "test": "takehome/test_pose_episodes.py::test_pose_recording_retains_finite_zero_action_and_test_provenance",
+      "invocations": 1,
+      "episodes": 4,
+      "evidence": "takehome/test_pose_episodes.py:11-25"
+    },
+    {
+      "test": "takehome/test_position_policy.py::test_position_only_policy_rollout_is_finite_frozen_and_has_twelve_inputs",
+      "invocations": 1,
+      "episodes": 4,
+      "evidence": "takehome/test_position_policy.py:9-20"
+    }
+  ],
+  "inventory": [
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_hole_width_matches_clearance",
+      "invocations": 3,
+      "full_test_episodes": 0,
+      "classification": "static geometry only",
+      "evidence_lines": [
+        {
+          "start": 39,
+          "end": 40
+        }
+      ]
+    },
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_peg_attached_below_hand",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "one keyframe reset/forward pose probe; no integration",
+      "evidence_lines": [
+        {
+          "start": 51,
+          "end": 55
+        }
+      ]
+    },
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_fixed_orientation_is_down_and_axis_aligned",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "model-derived orientation assertion; no reset/step",
+      "evidence_lines": [
+        {
+          "start": 64,
+          "end": 68
+        }
+      ]
+    },
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_reset_step_shapes",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "two one-step partial probes (normal and force observation); not full episodes",
+      "evidence_lines": [
+        {
+          "start": 71,
+          "end": 77
+        }
+      ]
+    },
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_random_steps_stable",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "one reset plus 50 integration steps; partial episode",
+      "evidence_lines": [
+        {
+          "start": 80,
+          "end": 87
+        }
+      ]
+    },
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_auto_reset_resamples_hole",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "batch 2, seven steps each; four completed 3-step short episodes plus two 1-step tails; 4 auto-resets",
+      "evidence_lines": [
+        {
+          "start": 90,
+          "end": 108
+        }
+      ]
+    },
+    {
+      "file": "tests/test_env.py",
+      "test_function": "test_force_sensor_free_and_pressed",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "three direct MuJoCo settling segments of 200,100,200 steps; 500 physics steps total, not task rollouts",
+      "evidence_lines": [
+        {
+          "start": 111,
+          "end": 136
+        }
+      ]
+    },
+    {
+      "file": "tests/test_scripted.py",
+      "test_function": "test_scripted_centred_insertion",
+      "invocations": 2,
+      "full_test_episodes": 40,
+      "classification": "two parameter cases x N=20, default 200-step episodes",
+      "evidence_lines": [
+        {
+          "start": 11,
+          "end": 18
+        }
+      ]
+    },
+    {
+      "file": "tests/test_scripted.py",
+      "test_function": "test_scripted_half_mm_recorded",
+      "invocations": 1,
+      "full_test_episodes": 20,
+      "classification": "N=20, default 200-step episodes",
+      "evidence_lines": [
+        {
+          "start": 21,
+          "end": 25
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_budget.py",
+      "test_function": "test_refuses_201_and_persists_reservations",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic budget ledger; no simulator episodes",
+      "evidence_lines": [
+        {
+          "start": 6,
+          "end": 17
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_budget.py",
+      "test_function": "test_test_data_and_unreserved_data_are_rejected",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic budget ledger; no simulator episodes",
+      "evidence_lines": [
+        {
+          "start": 20,
+          "end": 38
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_calibration.py",
+      "test_function": "test_remaining_time_and_control_units_are_explicit",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic arrays only",
+      "evidence_lines": [
+        {
+          "start": 8,
+          "end": 14
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_calibration.py",
+      "test_function": "test_logistic_predictor_and_reliability_have_correct_direction",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic random data only",
+      "evidence_lines": [
+        {
+          "start": 16,
+          "end": 27
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_calibration.py",
+      "test_function": "test_confidence_evaluation_rejects_training_traces",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic invalid trace metadata only",
+      "evidence_lines": [
+        {
+          "start": 29,
+          "end": 32
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_camera.py",
+      "test_function": "test_camera_formula_changes_reading_and_recorded_error_only",
+      "invocations": 9,
+      "full_test_episodes": 0,
+      "classification": "normal plus eight PROBLEMS cases on fake state; no rollout",
+      "evidence_lines": [
+        {
+          "start": 27,
+          "end": 55
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_camera.py",
+      "test_function": "test_delay_uses_three_step_old_geometry_and_does_not_accumulate_bias",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "8-step synthetic geometry loop; no simulator",
+      "evidence_lines": [
+        {
+          "start": 58,
+          "end": 70
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_camera.py",
+      "test_function": "test_oracle_corrects_available_xy_error_with_cap_but_not_height",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic state only",
+      "evidence_lines": [
+        {
+          "start": 73,
+          "end": 78
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_camera.py",
+      "test_function": "test_camera_integration_is_finite_frozen_and_test_only",
+      "invocations": 2,
+      "full_test_episodes": 8,
+      "classification": "two parameters x four 200-step test-only episodes, seed 123",
+      "evidence_lines": [
+        {
+          "start": 81,
+          "end": 89
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_correction.py",
+      "test_function": "test_guess_caps_and_observation_correction",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "100 pure correction updates; no simulator",
+      "evidence_lines": [
+        {
+          "start": 17,
+          "end": 27
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_correction.py",
+      "test_function": "test_first_success_and_timeout_are_distinct",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic scalar flags only",
+      "evidence_lines": [
+        {
+          "start": 29,
+          "end": 38
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_correction.py",
+      "test_function": "test_reset_and_frozen_policy_after_test_rollout",
+      "invocations": 1,
+      "full_test_episodes": 4,
+      "classification": "four 200-step test-only episodes, seed 123; additionally 8 standalone reset states (batch 4 twice)",
+      "evidence_lines": [
+        {
+          "start": 41,
+          "end": 57
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_evaluation_checks.py",
+      "test_function": "test_aim_only_more_than_five_points_above_ceiling_raises",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "fake runner; no test call",
+      "evidence_lines": [
+        {
+          "start": 38,
+          "end": 41
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_evaluation_checks.py",
+      "test_function": "test_movement_exceeding_ceiling_runs_fixed_500_seed789_and_saves_flags",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "fake runner returns synthetic arrays; asserted request is 500/789 but no rollout executed",
+      "evidence_lines": [
+        {
+          "start": 44,
+          "end": 61
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_evaluation_checks.py",
+      "test_function": "test_existing_exact_model_verification_is_reused_without_new_test",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic existing JSON; no test call",
+      "evidence_lines": [
+        {
+          "start": 64,
+          "end": 80
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_evaluation_checks.py",
+      "test_function": "test_below_ceiling_does_not_run_a_test",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "fake runner; no test call",
+      "evidence_lines": [
+        {
+          "start": 82,
+          "end": 88
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_failure_rules.py",
+      "test_function": "test_failure_rules_partition_and_precedence",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic 200x6 trace arrays only",
+      "evidence_lines": [
+        {
+          "start": 6,
+          "end": 22
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_goal6.py",
+      "test_function": "test_movement_cap_and_zero_control",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "pure arithmetic only",
+      "evidence_lines": [
+        {
+          "start": 14,
+          "end": 24
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_goal6.py",
+      "test_function": "test_mixed_units_and_zero_init",
+      "invocations": 2,
+      "full_test_episodes": 0,
+      "classification": "two output dimensions; synthetic learner state, no episodes",
+      "evidence_lines": [
+        {
+          "start": 26,
+          "end": 41
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_goal6.py",
+      "test_function": "test_supervised_reference_uses_labels_only_when_explicit",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic 128-row training batch; no simulator episodes",
+      "evidence_lines": [
+        {
+          "start": 43,
+          "end": 59
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_learner.py",
+      "test_function": "test_all_output_dimensions_start_exactly_zero",
+      "invocations": 3,
+      "full_test_episodes": 0,
+      "classification": "three output dimensions; initializes model only",
+      "evidence_lines": [
+        {
+          "start": 24,
+          "end": 32
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_learner.py",
+      "test_function": "test_actual_compiled_sampler_has_exact_mix_and_empty_source_fallbacks",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic index sampler only",
+      "evidence_lines": [
+        {
+          "start": 34,
+          "end": 46
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_learner.py",
+      "test_function": "test_checkpoint_normalization_and_physical_action_rescaling",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic observations/actions only",
+      "evidence_lines": [
+        {
+          "start": 48,
+          "end": 64
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_learner.py",
+      "test_function": "test_replay_rejects_test_data_and_excludes_true_bias_from_training",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic replay arrays only",
+      "evidence_lines": [
+        {
+          "start": 66,
+          "end": 83
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_pose_episodes.py",
+      "test_function": "test_pose_recording_retains_finite_zero_action_and_test_provenance",
+      "invocations": 1,
+      "full_test_episodes": 4,
+      "classification": "four 200-step test-only episodes, seed 123",
+      "evidence_lines": [
+        {
+          "start": 11,
+          "end": 25
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_position_policy.py",
+      "test_function": "test_position_only_policy_rollout_is_finite_frozen_and_has_twelve_inputs",
+      "invocations": 1,
+      "full_test_episodes": 4,
+      "classification": "four 200-step test-only episodes, seed 123",
+      "evidence_lines": [
+        {
+          "start": 9,
+          "end": 20
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_selection.py",
+      "test_function": "test_choose_simplest_within_top_spread_and_break_tie_by_mean",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "invented rows only",
+      "evidence_lines": [
+        {
+          "start": 9,
+          "end": 15
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_selection.py",
+      "test_function": "test_skip_rule_confirms_main_and_main_wins_near_ties",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "invented rows only",
+      "evidence_lines": [
+        {
+          "start": 17,
+          "end": 21
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_selection.py",
+      "test_function": "test_combining_rejects_conflicting_values_and_information_leaks",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic override dictionaries only",
+      "evidence_lines": [
+        {
+          "start": 23,
+          "end": 27
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variant_integration.py",
+      "test_function": "test_feature_rollouts_are_finite_and_never_learned",
+      "invocations": 2,
+      "full_test_episodes": 8,
+      "classification": "two configs x four 200-step test-only episodes, seed 123",
+      "evidence_lines": [
+        {
+          "start": 12,
+          "end": 25
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variant_integration.py",
+      "test_function": "test_sibling_selection_is_fresh_own_fill_not_old_results",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "practice function monkeypatched; no simulator episodes",
+      "evidence_lines": [
+        {
+          "start": 28,
+          "end": 44
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_incompatible_combinations_rejected",
+      "invocations": 5,
+      "full_test_episodes": 0,
+      "classification": "five config-validation parameter cases only",
+      "evidence_lines": [
+        {
+          "start": 31,
+          "end": 39
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_main_equivalence_and_briefing_freezes_actor",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic learner batches only",
+      "evidence_lines": [
+        {
+          "start": 41,
+          "end": 55
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_privileged_critic_never_changes_actor_input",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic learner batch only",
+      "evidence_lines": [
+        {
+          "start": 57,
+          "end": 67
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_decider_candidates_are_bounded_and_zero_initially",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic observations/actions only",
+      "evidence_lines": [
+        {
+          "start": 69,
+          "end": 80
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_classification_loss_is_bounded_and_finite",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic learner batch only",
+      "evidence_lines": [
+        {
+          "start": 82,
+          "end": 87
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_nstep_return_floor_and_force_penalty_do_not_cross_episodes",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic six-row replay arrays only",
+      "evidence_lines": [
+        {
+          "start": 89,
+          "end": 108
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_coordination_has_separate_states_and_freezes_inactive_part",
+      "invocations": 3,
+      "full_test_episodes": 0,
+      "classification": "three coordination modes on synthetic learner batches",
+      "evidence_lines": [
+        {
+          "start": 110,
+          "end": 130
+        }
+      ]
+    },
+    {
+      "file": "takehome/test_variants.py",
+      "test_function": "test_handover_and_dynamic_caps_use_available_sensors",
+      "invocations": 1,
+      "full_test_episodes": 0,
+      "classification": "synthetic sensor vectors; no rollout",
+      "evidence_lines": [
+        {
+          "start": 132,
+          "end": 147
+        }
+      ]
+    }
+  ],
+  "accounting_note": "The 100-step loop in test_guess_caps_and_observation_correction is pure arithmetic and not simulation. Synthetic learner train_block calls and fake-runner tests do not collect episodes. Environment model construction and geometry assertions are not rollouts. Counts are anticipated from source, not execution; verify pytest collection/output and test logs before using as actual accounting."
+}

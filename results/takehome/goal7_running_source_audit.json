@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-11-16T01:58:07.604873+00:00",
+  "completed_runs": 51,
+  "core_files": {
+    "config.py": [
+      "37c01ed74882f625c5f17d337c934f8fbfffd8807dc9cbf23dc537cae35dc4f4"
+    ],
+    "correction.py": [
+      "0107a1a29a449723e7ec7c33ec7ead39143ae31e6eb56a3b1678e7605b714e2b"
+    ],
+    "episodes.py": [
+      "94c478ebfa921a0171f3b0f71224a00ff312d54b24f0c5d8e26caefb128dbc23"
+    ],
+    "learner.py": [
+      "c210e10be616ba8364a0a5bffa77d2e4bce1afeb32be792792ff04500ea18e54"
+    ],
+    "replay.py": [
+      "82088ab1a73ea27e9fe838a33eab14afe7b1636de605e788b2196b7049cbdc48"
+    ],
+    "train.py": [
+      "f51beb6c5f24e801a5746da16c9b4d493d80c9ac84aa186c09348ec85d9f7c8c"
+    ],
+    "variants.py": [
+      "aba73309fb9f2359361fc5fa5790de4cd75606cc54820f159bf89a99f811ac01"
+    ],
+    "coordination.py": [
+      "3178fd6425d3cd6685d6d5561f0c2ff4899c96d4e8ea0e732e03bee6d97077e4"
+    ],
+    "variant_runner.py": [
+      "846ce4f623ce9397f5ed9ba7826cbaec07fb035811ad5343e6206e00016a2b91"
+    ],
+    "train_variants.py": [
+      "6803456baa08830a59d853151afa19a3f64e7c016b797e274dcb752d0cd92774"
+    ]
+  },
+  "all_core_files_identical": true,
+  "note": "Analysis-only modules were prepared concurrently and are intentionally not training-core hashes."
+}

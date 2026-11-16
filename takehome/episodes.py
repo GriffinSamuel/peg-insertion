@@ -34,12 +34,17 @@ class EpisodeRunner:
             state, key, max_lat = carry
             key, ka = jax.random.split(key)
             obs = state.obs["state"]
-            mean_action = learner.act(actor, obs)
+            mean_action = (learner.choose(actor, critics, obs) if hasattr(learner, 'choose')
+                           else learner.act(actor, obs))
             # During fill-up the old policy gets only small random nudges.
             mean_action = jp.where(source == 0, jp.zeros_like(mean_action), mean_action)
             action = jp.clip(mean_action + noise_std * jax.random.normal(ka, mean_action.shape), -1, 1)
             physical_action = action * learner.action_scale
-            q = jp.mean(learner.q_values(critics, obs, physical_action), axis=0)
+            if getattr(learner.config, 'privileged_critic', False):
+                q = jp.mean(learner.q_values(critics, obs, physical_action,
+                                             state.info['bias'][:, :2]), axis=0)
+            else:
+                q = jp.mean(learner.q_values(critics, obs, physical_action), axis=0)
             nxt = wrapped.step(state, action)
             rel = nxt.data.site_xpos[:, env._tip_site] - nxt.data.site_xpos[:, env._entrance_site]
             lateral = jp.max(jp.abs(rel[:, :2]), axis=-1)
@@ -57,6 +62,7 @@ class EpisodeRunner:
                 "executed_action": nxt.info["executed_action"],
                 "movement": nxt.info['movement_correction'],
                 "true_bias": state.info["bias"][:,:2],
+                "next_true_bias": nxt.info['bias'][:, :2],
                 "guess": state.info["aim_guess"], "next_guess": nxt.info["aim_guess"],
                 "force": jp.linalg.norm(nxt.data.sensordata[:, env._force_slice], axis=-1),
                 "q": q, "valid": valid, "depth": nxt.info["depth"],

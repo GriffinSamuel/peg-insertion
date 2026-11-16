@@ -1,0 +1,21 @@
+{
+  "command": [
+    "env",
+    "JAX_PLATFORMS=cpu",
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "takehome/test_camera.py",
+    "-k",
+    "not integration",
+    "-q",
+    "-o",
+    "cache_dir=results/takehome/pytest_cache",
+    "--basetemp=results/takehome/goal11_formula_test_tmp"
+  ],
+  "started_utc": "2026-11-16T01:49:59.100373+00:00",
+  "finished_utc": "2026-11-16T01:50:23.996102+00:00",
+  "seconds": 24.895759634999195,
+  "exit_code": 0
+}

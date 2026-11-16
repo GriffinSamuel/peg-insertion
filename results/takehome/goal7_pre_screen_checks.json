@@ -1,0 +1,12 @@
+{
+  "integration_contract_tests": 32,
+  "passed": true,
+  "synthetic_feature_tests": 14,
+  "full_test_episodes_added": 12,
+  "full_test_episodes_total": 64842,
+  "reset_only_probes_total": 182,
+  "practice_episodes_before_screening": 4810,
+  "settings_before_screening": 4,
+  "predeclared_new_settings": 24,
+  "confirmation_unused": true
+}

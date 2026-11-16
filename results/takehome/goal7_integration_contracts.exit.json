@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "takehome/test_budget.py",
+    "takehome/test_correction.py",
+    "takehome/test_learner.py",
+    "takehome/test_goal6.py",
+    "takehome/test_variants.py",
+    "takehome/test_variant_integration.py",
+    "-q",
+    "--basetemp=results/takehome/goal7_integration_test_tmp",
+    "-o",
+    "cache_dir=results/takehome/pytest_cache"
+  ],
+  "started_utc": "2026-11-16T01:15:59.661531+00:00",
+  "finished_utc": "2026-11-16T01:17:03.453750+00:00",
+  "seconds": 63.79224938200059,
+  "exit_code": 0
+}

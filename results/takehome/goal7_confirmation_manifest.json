@@ -1,0 +1,101 @@
+{
+  "settings": [
+    {
+      "name": "aim",
+      "label": "Plain aim",
+      "round": "confirmation",
+      "overrides": {
+        "outputs": 2,
+        "test_seed": 456,
+        "baseline_path": "results/takehome/confirmation_baseline.json"
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "output": "results/takehome/goal7/confirmation/aim",
+      "final_method": false,
+      "settings_tried_for_selection": 1
+    },
+    {
+      "name": "movement",
+      "label": "Plain movement",
+      "round": "confirmation",
+      "overrides": {
+        "outputs": 3,
+        "test_seed": 456,
+        "baseline_path": "results/takehome/confirmation_baseline.json"
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "output": "results/takehome/goal7/confirmation/movement",
+      "final_method": true,
+      "settings_tried_for_selection": 28
+    },
+    {
+      "name": "combined",
+      "label": "Plain aim and movement",
+      "round": "confirmation",
+      "overrides": {
+        "outputs": 5,
+        "test_seed": 456,
+        "baseline_path": "results/takehome/confirmation_baseline.json"
+      },
+      "seeds": [
+        100,
+        101,
+        102,
+        103,
+        104
+      ],
+      "output": "results/takehome/goal7/confirmation/combined",
+      "final_method": false,
+      "settings_tried_for_selection": 1
+    }
+  ],
+  "jobs": [
+    {
+      "name": "aim",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_confirmation_manifest.json",
+        "--setting",
+        "aim"
+      ],
+      "log": "results/takehome/goal7/logs/confirmation_aim.log"
+    },
+    {
+      "name": "movement",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_confirmation_manifest.json",
+        "--setting",
+        "movement"
+      ],
+      "log": "results/takehome/goal7/logs/confirmation_movement.log"
+    },
+    {
+      "name": "combined",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_confirmation_manifest.json",
+        "--setting",
+        "combined"
+      ],
+      "log": "results/takehome/goal7/logs/confirmation_combined.log"
+    }
+  ],
+  "choice": "results/takehome/goal7_choice.json",
+  "suite_summary": "results/takehome/goal7/confirmation_suite.json"
+}

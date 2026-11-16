@@ -1,0 +1,175 @@
+{
+  "floor": 0.608,
+  "ceiling": 0.926,
+  "baseline_path": "results/takehome/confirmation_baseline.json",
+  "choice_path": "results/takehome/goal7_choice.json",
+  "selected_name": "movement",
+  "total_settings_tried": 28,
+  "methods": [
+    {
+      "name": "aim",
+      "label": "Plain aim",
+      "final_method": false,
+      "settings_tried_for_selection": 1,
+      "seed_results": [
+        {
+          "seed": 100,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 327,
+          "success_rate": 0.654,
+          "result_path": "results/takehome/goal7/confirmation/aim/seed_100/result.json"
+        },
+        {
+          "seed": 101,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 322,
+          "success_rate": 0.644,
+          "result_path": "results/takehome/goal7/confirmation/aim/seed_101/result.json"
+        },
+        {
+          "seed": 102,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 304,
+          "success_rate": 0.608,
+          "result_path": "results/takehome/goal7/confirmation/aim/seed_102/result.json"
+        },
+        {
+          "seed": 103,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 286,
+          "success_rate": 0.572,
+          "result_path": "results/takehome/goal7/confirmation/aim/seed_103/result.json"
+        },
+        {
+          "seed": 104,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 330,
+          "success_rate": 0.66,
+          "result_path": "results/takehome/goal7/confirmation/aim/seed_104/result.json"
+        }
+      ],
+      "mean": 0.6276,
+      "std": 0.03705131576611015
+    },
+    {
+      "name": "movement",
+      "label": "Plain movement",
+      "final_method": true,
+      "settings_tried_for_selection": 28,
+      "seed_results": [
+        {
+          "seed": 100,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 380,
+          "success_rate": 0.76,
+          "result_path": "results/takehome/goal7/confirmation/movement/seed_100/result.json"
+        },
+        {
+          "seed": 101,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 402,
+          "success_rate": 0.804,
+          "result_path": "results/takehome/goal7/confirmation/movement/seed_101/result.json"
+        },
+        {
+          "seed": 102,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 420,
+          "success_rate": 0.84,
+          "result_path": "results/takehome/goal7/confirmation/movement/seed_102/result.json"
+        },
+        {
+          "seed": 103,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 360,
+          "success_rate": 0.72,
+          "result_path": "results/takehome/goal7/confirmation/movement/seed_103/result.json"
+        },
+        {
+          "seed": 104,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 443,
+          "success_rate": 0.886,
+          "result_path": "results/takehome/goal7/confirmation/movement/seed_104/result.json"
+        }
+      ],
+      "mean": 0.802,
+      "std": 0.0651766829472013
+    },
+    {
+      "name": "combined",
+      "label": "Plain aim and movement",
+      "final_method": false,
+      "settings_tried_for_selection": 1,
+      "seed_results": [
+        {
+          "seed": 100,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 289,
+          "success_rate": 0.578,
+          "result_path": "results/takehome/goal7/confirmation/combined/seed_100/result.json"
+        },
+        {
+          "seed": 101,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 422,
+          "success_rate": 0.844,
+          "result_path": "results/takehome/goal7/confirmation/combined/seed_101/result.json"
+        },
+        {
+          "seed": 102,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 274,
+          "success_rate": 0.548,
+          "result_path": "results/takehome/goal7/confirmation/combined/seed_102/result.json"
+        },
+        {
+          "seed": 103,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 381,
+          "success_rate": 0.762,
+          "result_path": "results/takehome/goal7/confirmation/combined/seed_103/result.json"
+        },
+        {
+          "seed": 104,
+          "practice_episodes": 200,
+          "test_episodes": 500,
+          "test_seed": 456,
+          "successes": 326,
+          "success_rate": 0.652,
+          "result_path": "results/takehome/goal7/confirmation/combined/seed_104/result.json"
+        }
+      ],
+      "mean": 0.6768,
+      "std": 0.12468039140137473
+    }
+  ]
+}

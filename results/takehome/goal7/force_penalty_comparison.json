@@ -1,0 +1,58 @@
+{
+  "combined": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "final_episodes_each": 500,
+    "test_seed": 123,
+    "peak_force_means_N": [
+      96.19654846191406,
+      94.80397033691406,
+      84.370361328125
+    ],
+    "mean_episode_peak_force_N": 91.79029337565105,
+    "sample_spread_N": 6.463463634227791,
+    "success_rates": [
+      0.842,
+      0.756,
+      0.726
+    ],
+    "mean_success_rate": 0.7746666666666666,
+    "success_sample_spread": 0.0602107410129898,
+    "result_paths": [
+      "results/takehome/goal6/combined/seed_0/result.json",
+      "results/takehome/goal6/combined/seed_1/result.json",
+      "results/takehome/goal6/combined/seed_2/result.json"
+    ]
+  },
+  "force_penalty": {
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "final_episodes_each": 500,
+    "test_seed": 123,
+    "peak_force_means_N": [
+      93.01512145996094,
+      95.38973236083984,
+      76.07091522216797
+    ],
+    "mean_episode_peak_force_N": 88.15858968098958,
+    "sample_spread_N": 10.535349998907465,
+    "success_rates": [
+      0.718,
+      0.798,
+      0.508
+    ],
+    "mean_success_rate": 0.6746666666666666,
+    "success_sample_spread": 0.14977761292440647,
+    "result_paths": [
+      "results/takehome/goal7/screening/force_penalty/seed_0/result.json",
+      "results/takehome/goal7/screening/force_penalty/seed_1/result.json",
+      "results/takehome/goal7/screening/force_penalty/seed_2/result.json"
+    ]
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "settings": [
+    {
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "overrides": {
+        "fill_episodes": 0
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_0"
+    },
+    {
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "overrides": {
+        "fill_episodes": 10
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_10"
+    },
+    {
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "overrides": {
+        "fill_episodes": 20
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_20"
+    },
+    {
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "overrides": {
+        "fill_episodes": 80
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_80"
+    },
+    {
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "overrides": {
+        "fill_episodes": 120
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_120"
+    },
+    {
+      "name": "side_by_side",
+      "label": "side by side",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/side_by_side"
+    },
+    {
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_then_move"
+    },
+    {
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/move_then_aim"
+    },
+    {
+      "name": "briefing",
+      "label": "Critic briefing on own fill",
+      "overrides": {
+        "briefing": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/briefing"
+    },
+    {
+      "name": "privileged_critic",
+      "label": "True bias to critic during training",
+      "overrides": {
+        "privileged_critic": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/privileged_critic"
+    },
+    {
+      "name": "one_critic",
+      "label": "One critic",
+      "overrides": {
+        "ensemble": 1
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/one_critic"
+    },
+    {
+      "name": "one_update",
+      "label": "One update per new step",
+      "overrides": {
+        "updates_per_step": 1
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/one_update"
+    },
+    {
+      "name": "aim_cap_50um",
+      "label": "Aim cap 0.05 mm",
+      "overrides": {
+        "step_cap": 5e-05
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_cap_50um"
+    },
+    {
+      "name": "aim_cap_200um",
+      "label": "Aim cap 0.2 mm",
+      "overrides": {
+        "step_cap": 0.0002
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_cap_200um"
+    }
+  ],
+  "source_manifest": "results/takehome/goal7_screening_manifest.json",
+  "snapshot_rule": "Included only screening settings with result.json present for all three declared seeds at snapshot time.",
+  "snapshot_setting_count": 14,
+  "snapshot_run_count": 42
+}

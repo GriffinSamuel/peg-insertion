@@ -1,0 +1,93 @@
+name,label,category,round,base,seed,peak_force_mean,successes,episodes,success_rate,result_path
+aim,[MAIN] Aim only [base: aim],MAIN,plain comparison (reused),aim,0,88.25930786132812,365,500,0.73,results/takehome/benchmark/solo/seed_0/result.json
+aim,[MAIN] Aim only [base: aim],MAIN,plain comparison (reused),aim,1,81.70462799072266,278,500,0.556,results/takehome/benchmark/parallel2/seed_1/result.json
+aim,[MAIN] Aim only [base: aim],MAIN,plain comparison (reused),aim,2,86.6933822631836,315,500,0.63,results/takehome/benchmark/parallel2/seed_2/result.json
+aim,[MAIN] Aim only [base: aim],MAIN,plain comparison (reused),aim,3,84.07827758789062,305,500,0.61,results/takehome/benchmark/parallel4/seed_3/result.json
+aim,[MAIN] Aim only [base: aim],MAIN,plain comparison (reused),aim,4,87.39733123779297,366,500,0.732,results/takehome/benchmark/parallel4/seed_4/result.json
+movement,[REUSED / PLAIN COMPARISON] Movement only [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,0,98.42928314208984,425,500,0.85,results/takehome/goal6/movement/seed_0/result.json
+movement,[REUSED / PLAIN COMPARISON] Movement only [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,1,92.79454803466797,411,500,0.822,results/takehome/goal6/movement/seed_1/result.json
+movement,[REUSED / PLAIN COMPARISON] Movement only [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,2,94.97856140136719,427,500,0.854,results/takehome/goal6/movement/seed_2/result.json
+movement,[REUSED / PLAIN COMPARISON] Movement only [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,3,96.60432434082031,428,500,0.856,results/takehome/goal6/movement/seed_3/result.json
+movement,[REUSED / PLAIN COMPARISON] Movement only [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,4,91.65235900878906,393,500,0.786,results/takehome/goal6/movement/seed_4/result.json
+combined,[REUSED / PLAIN COMPARISON] Aim and movement [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,0,96.19654846191406,421,500,0.842,results/takehome/goal6/combined/seed_0/result.json
+combined,[REUSED / PLAIN COMPARISON] Aim and movement [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,1,94.80397033691406,378,500,0.756,results/takehome/goal6/combined/seed_1/result.json
+combined,[REUSED / PLAIN COMPARISON] Aim and movement [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,2,84.370361328125,363,500,0.726,results/takehome/goal6/combined/seed_2/result.json
+combined,[REUSED / PLAIN COMPARISON] Aim and movement [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,3,95.82219696044922,407,500,0.814,results/takehome/goal6/combined/seed_3/result.json
+combined,[REUSED / PLAIN COMPARISON] Aim and movement [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,4,95.1175308227539,396,500,0.792,results/takehome/goal6/combined/seed_4/result.json
+supervised_cheating_reference,[REUSED / PLAIN COMPARISON] Supervised reference (cheats: true labels) [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,0,83.8243637084961,325,500,0.65,results/takehome/goal6/supervised_cheating_reference/seed_0/result.json
+supervised_cheating_reference,[REUSED / PLAIN COMPARISON] Supervised reference (cheats: true labels) [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,1,88.7106704711914,349,500,0.698,results/takehome/goal6/supervised_cheating_reference/seed_1/result.json
+supervised_cheating_reference,[REUSED / PLAIN COMPARISON] Supervised reference (cheats: true labels) [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,2,84.1245346069336,328,500,0.656,results/takehome/goal6/supervised_cheating_reference/seed_2/result.json
+supervised_cheating_reference,[REUSED / PLAIN COMPARISON] Supervised reference (cheats: true labels) [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,3,85.71553039550781,327,500,0.654,results/takehome/goal6/supervised_cheating_reference/seed_3/result.json
+supervised_cheating_reference,[REUSED / PLAIN COMPARISON] Supervised reference (cheats: true labels) [base: aim],REUSED / PLAIN COMPARISON,plain comparison (reused),aim,4,84.53762817382812,325,500,0.65,results/takehome/goal6/supervised_cheating_reference/seed_4/result.json
+fill_0,[TUNED SCREENING] Fill 0 episodes [base: aim],TUNED SCREENING,screening,aim,0,83.33496856689453,306,500,0.612,results/takehome/goal7/screening/fill_0/seed_0/result.json
+fill_0,[TUNED SCREENING] Fill 0 episodes [base: aim],TUNED SCREENING,screening,aim,1,86.48140716552734,313,500,0.626,results/takehome/goal7/screening/fill_0/seed_1/result.json
+fill_0,[TUNED SCREENING] Fill 0 episodes [base: aim],TUNED SCREENING,screening,aim,2,83.2505111694336,316,500,0.632,results/takehome/goal7/screening/fill_0/seed_2/result.json
+fill_10,[TUNED SCREENING] Fill 10 episodes [base: aim],TUNED SCREENING,screening,aim,0,86.14926147460938,319,500,0.638,results/takehome/goal7/screening/fill_10/seed_0/result.json
+fill_10,[TUNED SCREENING] Fill 10 episodes [base: aim],TUNED SCREENING,screening,aim,1,83.3243408203125,303,500,0.606,results/takehome/goal7/screening/fill_10/seed_1/result.json
+fill_10,[TUNED SCREENING] Fill 10 episodes [base: aim],TUNED SCREENING,screening,aim,2,89.73037719726562,350,500,0.7,results/takehome/goal7/screening/fill_10/seed_2/result.json
+fill_20,[TUNED SCREENING] Fill 20 episodes [base: aim],TUNED SCREENING,screening,aim,0,87.91999816894531,362,500,0.724,results/takehome/goal7/screening/fill_20/seed_0/result.json
+fill_20,[TUNED SCREENING] Fill 20 episodes [base: aim],TUNED SCREENING,screening,aim,1,80.13288879394531,308,500,0.616,results/takehome/goal7/screening/fill_20/seed_1/result.json
+fill_20,[TUNED SCREENING] Fill 20 episodes [base: aim],TUNED SCREENING,screening,aim,2,81.71611022949219,307,500,0.614,results/takehome/goal7/screening/fill_20/seed_2/result.json
+fill_80,[TUNED SCREENING] Fill 80 episodes [base: aim],TUNED SCREENING,screening,aim,0,81.76373291015625,243,500,0.486,results/takehome/goal7/screening/fill_80/seed_0/result.json
+fill_80,[TUNED SCREENING] Fill 80 episodes [base: aim],TUNED SCREENING,screening,aim,1,86.52381896972656,332,500,0.664,results/takehome/goal7/screening/fill_80/seed_1/result.json
+fill_80,[TUNED SCREENING] Fill 80 episodes [base: aim],TUNED SCREENING,screening,aim,2,88.22747039794922,375,500,0.75,results/takehome/goal7/screening/fill_80/seed_2/result.json
+fill_120,[TUNED SCREENING] Fill 120 episodes [base: aim],TUNED SCREENING,screening,aim,0,84.35111236572266,306,500,0.612,results/takehome/goal7/screening/fill_120/seed_0/result.json
+fill_120,[TUNED SCREENING] Fill 120 episodes [base: aim],TUNED SCREENING,screening,aim,1,84.95053100585938,326,500,0.652,results/takehome/goal7/screening/fill_120/seed_1/result.json
+fill_120,[TUNED SCREENING] Fill 120 episodes [base: aim],TUNED SCREENING,screening,aim,2,70.28004455566406,82,500,0.164,results/takehome/goal7/screening/fill_120/seed_2/result.json
+side_by_side,[TUNED SCREENING] side by side [base: combined],TUNED SCREENING,screening,combined,0,72.51541900634766,222,500,0.444,results/takehome/goal7/screening/side_by_side/seed_0/result.json
+side_by_side,[TUNED SCREENING] side by side [base: combined],TUNED SCREENING,screening,combined,1,86.31725311279297,331,500,0.662,results/takehome/goal7/screening/side_by_side/seed_1/result.json
+side_by_side,[TUNED SCREENING] side by side [base: combined],TUNED SCREENING,screening,combined,2,96.60298919677734,390,500,0.78,results/takehome/goal7/screening/side_by_side/seed_2/result.json
+aim_then_move,[TUNED SCREENING] aim then move [base: combined],TUNED SCREENING,screening,combined,0,82.8004150390625,264,500,0.528,results/takehome/goal7/screening/aim_then_move/seed_0/result.json
+aim_then_move,[TUNED SCREENING] aim then move [base: combined],TUNED SCREENING,screening,combined,1,94.5152359008789,420,500,0.84,results/takehome/goal7/screening/aim_then_move/seed_1/result.json
+aim_then_move,[TUNED SCREENING] aim then move [base: combined],TUNED SCREENING,screening,combined,2,100.55020141601562,466,500,0.932,results/takehome/goal7/screening/aim_then_move/seed_2/result.json
+move_then_aim,[TUNED SCREENING] move then aim [base: combined],TUNED SCREENING,screening,combined,0,85.94393920898438,373,500,0.746,results/takehome/goal7/screening/move_then_aim/seed_0/result.json
+move_then_aim,[TUNED SCREENING] move then aim [base: combined],TUNED SCREENING,screening,combined,1,95.77947998046875,358,500,0.716,results/takehome/goal7/screening/move_then_aim/seed_1/result.json
+move_then_aim,[TUNED SCREENING] move then aim [base: combined],TUNED SCREENING,screening,combined,2,102.67559814453125,440,500,0.88,results/takehome/goal7/screening/move_then_aim/seed_2/result.json
+briefing,[TUNED SCREENING] Critic briefing on own fill [base: aim],TUNED SCREENING,screening,aim,0,83.65989685058594,293,500,0.586,results/takehome/goal7/screening/briefing/seed_0/result.json
+briefing,[TUNED SCREENING] Critic briefing on own fill [base: aim],TUNED SCREENING,screening,aim,1,84.47200012207031,344,500,0.688,results/takehome/goal7/screening/briefing/seed_1/result.json
+briefing,[TUNED SCREENING] Critic briefing on own fill [base: aim],TUNED SCREENING,screening,aim,2,87.75346374511719,356,500,0.712,results/takehome/goal7/screening/briefing/seed_2/result.json
+privileged_critic,[TUNED SCREENING] True bias to critic during training [base: aim],TUNED SCREENING,screening,aim,0,84.27640533447266,337,500,0.674,results/takehome/goal7/screening/privileged_critic/seed_0/result.json
+privileged_critic,[TUNED SCREENING] True bias to critic during training [base: aim],TUNED SCREENING,screening,aim,1,83.77246856689453,324,500,0.648,results/takehome/goal7/screening/privileged_critic/seed_1/result.json
+privileged_critic,[TUNED SCREENING] True bias to critic during training [base: aim],TUNED SCREENING,screening,aim,2,80.5868911743164,324,500,0.648,results/takehome/goal7/screening/privileged_critic/seed_2/result.json
+one_critic,[TUNED SCREENING] One critic [base: aim],TUNED SCREENING,screening,aim,0,89.32308959960938,351,500,0.702,results/takehome/goal7/screening/one_critic/seed_0/result.json
+one_critic,[TUNED SCREENING] One critic [base: aim],TUNED SCREENING,screening,aim,1,88.3603286743164,332,500,0.664,results/takehome/goal7/screening/one_critic/seed_1/result.json
+one_critic,[TUNED SCREENING] One critic [base: aim],TUNED SCREENING,screening,aim,2,80.940185546875,323,500,0.646,results/takehome/goal7/screening/one_critic/seed_2/result.json
+one_update,[TUNED SCREENING] One update per new step [base: aim],TUNED SCREENING,screening,aim,0,87.29850006103516,348,500,0.696,results/takehome/goal7/screening/one_update/seed_0/result.json
+one_update,[TUNED SCREENING] One update per new step [base: aim],TUNED SCREENING,screening,aim,1,81.83177947998047,292,500,0.584,results/takehome/goal7/screening/one_update/seed_1/result.json
+one_update,[TUNED SCREENING] One update per new step [base: aim],TUNED SCREENING,screening,aim,2,67.6061782836914,63,500,0.126,results/takehome/goal7/screening/one_update/seed_2/result.json
+aim_cap_50um,[TUNED SCREENING] Aim cap 0.05 mm [base: aim],TUNED SCREENING,screening,aim,0,82.25733184814453,317,500,0.634,results/takehome/goal7/screening/aim_cap_50um/seed_0/result.json
+aim_cap_50um,[TUNED SCREENING] Aim cap 0.05 mm [base: aim],TUNED SCREENING,screening,aim,1,68.48751831054688,2,500,0.004,results/takehome/goal7/screening/aim_cap_50um/seed_1/result.json
+aim_cap_50um,[TUNED SCREENING] Aim cap 0.05 mm [base: aim],TUNED SCREENING,screening,aim,2,88.3902359008789,345,500,0.69,results/takehome/goal7/screening/aim_cap_50um/seed_2/result.json
+aim_cap_200um,[TUNED SCREENING] Aim cap 0.2 mm [base: aim],TUNED SCREENING,screening,aim,0,91.89327239990234,383,500,0.766,results/takehome/goal7/screening/aim_cap_200um/seed_0/result.json
+aim_cap_200um,[TUNED SCREENING] Aim cap 0.2 mm [base: aim],TUNED SCREENING,screening,aim,1,84.19207000732422,322,500,0.644,results/takehome/goal7/screening/aim_cap_200um/seed_1/result.json
+aim_cap_200um,[TUNED SCREENING] Aim cap 0.2 mm [base: aim],TUNED SCREENING,screening,aim,2,85.32937622070312,315,500,0.63,results/takehome/goal7/screening/aim_cap_200um/seed_2/result.json
+movement_cap_400um,[TUNED SCREENING] Movement cap 0.4 mm [base: combined],TUNED SCREENING,screening,combined,0,100.42596435546875,461,500,0.922,results/takehome/goal7/screening/movement_cap_400um/seed_0/result.json
+movement_cap_400um,[TUNED SCREENING] Movement cap 0.4 mm [base: combined],TUNED SCREENING,screening,combined,1,86.86400604248047,276,500,0.552,results/takehome/goal7/screening/movement_cap_400um/seed_1/result.json
+movement_cap_400um,[TUNED SCREENING] Movement cap 0.4 mm [base: combined],TUNED SCREENING,screening,combined,2,97.52544403076172,427,500,0.854,results/takehome/goal7/screening/movement_cap_400um/seed_2/result.json
+final_decider,[TUNED SCREENING] Final critic decider [base: combined],TUNED SCREENING,screening,combined,0,82.40046691894531,255,500,0.51,results/takehome/goal7/screening/final_decider/seed_0/result.json
+final_decider,[TUNED SCREENING] Final critic decider [base: combined],TUNED SCREENING,screening,combined,1,91.02869415283203,392,500,0.784,results/takehome/goal7/screening/final_decider/seed_1/result.json
+final_decider,[TUNED SCREENING] Final critic decider [base: combined],TUNED SCREENING,screening,combined,2,87.69337463378906,326,500,0.652,results/takehome/goal7/screening/final_decider/seed_2/result.json
+near_hole,[TUNED SCREENING] Hand over near hole [base: aim],TUNED SCREENING,screening,aim,0,83.2093276977539,318,500,0.636,results/takehome/goal7/screening/near_hole/seed_0/result.json
+near_hole,[TUNED SCREENING] Hand over near hole [base: aim],TUNED SCREENING,screening,aim,1,84.58580017089844,327,500,0.654,results/takehome/goal7/screening/near_hole/seed_1/result.json
+near_hole,[TUNED SCREENING] Hand over near hole [base: aim],TUNED SCREENING,screening,aim,2,87.78460693359375,321,500,0.642,results/takehome/goal7/screening/near_hole/seed_2/result.json
+contact_cap,[TUNED SCREENING] Contact-dependent movement cap [base: combined],TUNED SCREENING,screening,combined,0,87.59403228759766,360,500,0.72,results/takehome/goal7/screening/contact_cap/seed_0/result.json
+contact_cap,[TUNED SCREENING] Contact-dependent movement cap [base: combined],TUNED SCREENING,screening,combined,1,90.88700103759766,395,500,0.79,results/takehome/goal7/screening/contact_cap/seed_1/result.json
+contact_cap,[TUNED SCREENING] Contact-dependent movement cap [base: combined],TUNED SCREENING,screening,combined,2,73.01506042480469,234,500,0.468,results/takehome/goal7/screening/contact_cap/seed_2/result.json
+uncertainty_cap,[TUNED SCREENING] Old-policy uncertainty cap [base: combined],TUNED SCREENING,screening,combined,0,87.63077545166016,408,500,0.816,results/takehome/goal7/screening/uncertainty_cap/seed_0/result.json
+uncertainty_cap,[TUNED SCREENING] Old-policy uncertainty cap [base: combined],TUNED SCREENING,screening,combined,1,93.51740264892578,403,500,0.806,results/takehome/goal7/screening/uncertainty_cap/seed_1/result.json
+uncertainty_cap,[TUNED SCREENING] Old-policy uncertainty cap [base: combined],TUNED SCREENING,screening,combined,2,90.45734405517578,359,500,0.718,results/takehome/goal7/screening/uncertainty_cap/seed_2/result.json
+classification,[TUNED SCREENING] Classification critic loss [base: aim],TUNED SCREENING,screening,aim,0,87.8703384399414,351,500,0.702,results/takehome/goal7/screening/classification/seed_0/result.json
+classification,[TUNED SCREENING] Classification critic loss [base: aim],TUNED SCREENING,screening,aim,1,87.00259399414062,328,500,0.656,results/takehome/goal7/screening/classification/seed_1/result.json
+classification,[TUNED SCREENING] Classification critic loss [base: aim],TUNED SCREENING,screening,aim,2,82.4711685180664,280,500,0.56,results/takehome/goal7/screening/classification/seed_2/result.json
+three_step,[TUNED SCREENING] Three-step credit [base: aim],TUNED SCREENING,screening,aim,0,91.30596923828125,360,500,0.72,results/takehome/goal7/screening/three_step/seed_0/result.json
+three_step,[TUNED SCREENING] Three-step credit [base: aim],TUNED SCREENING,screening,aim,1,86.8011703491211,304,500,0.608,results/takehome/goal7/screening/three_step/seed_1/result.json
+three_step,[TUNED SCREENING] Three-step credit [base: aim],TUNED SCREENING,screening,aim,2,91.1994400024414,387,500,0.774,results/takehome/goal7/screening/three_step/seed_2/result.json
+return_floor,[TUNED SCREENING] Observed return floor [base: aim],TUNED SCREENING,screening,aim,0,88.4075927734375,340,500,0.68,results/takehome/goal7/screening/return_floor/seed_0/result.json
+return_floor,[TUNED SCREENING] Observed return floor [base: aim],TUNED SCREENING,screening,aim,1,87.84675598144531,331,500,0.662,results/takehome/goal7/screening/return_floor/seed_1/result.json
+return_floor,[TUNED SCREENING] Observed return floor [base: aim],TUNED SCREENING,screening,aim,2,81.56888580322266,330,500,0.66,results/takehome/goal7/screening/return_floor/seed_2/result.json
+force_penalty,[TUNED SCREENING] Force penalty (peak force reported) [base: combined],TUNED SCREENING,screening,combined,0,93.01512145996094,359,500,0.718,results/takehome/goal7/screening/force_penalty/seed_0/result.json
+force_penalty,[TUNED SCREENING] Force penalty (peak force reported) [base: combined],TUNED SCREENING,screening,combined,1,95.38973236083984,399,500,0.798,results/takehome/goal7/screening/force_penalty/seed_1/result.json
+force_penalty,[TUNED SCREENING] Force penalty (peak force reported) [base: combined],TUNED SCREENING,screening,combined,2,76.07091522216797,254,500,0.508,results/takehome/goal7/screening/force_penalty/seed_2/result.json
+sibling_fill,[TUNED SCREENING] Sibling-policy fill-up [base: aim],TUNED SCREENING,screening,aim,0,82.96156311035156,314,500,0.628,results/takehome/goal7/screening/sibling_fill/seed_0/result.json
+sibling_fill,[TUNED SCREENING] Sibling-policy fill-up [base: aim],TUNED SCREENING,screening,aim,1,84.91887664794922,318,500,0.636,results/takehome/goal7/screening/sibling_fill/seed_1/result.json
+sibling_fill,[TUNED SCREENING] Sibling-policy fill-up [base: aim],TUNED SCREENING,screening,aim,2,84.0013656616211,290,500,0.58,results/takehome/goal7/screening/sibling_fill/seed_2/result.json

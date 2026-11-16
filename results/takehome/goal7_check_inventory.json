@@ -1,0 +1,193 @@
+{
+  "goal": 7,
+  "done_when_entry_count": 7,
+  "development_test_seed": 123,
+  "confirmation_practice_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "confirmation_test_seed": 456,
+  "settings_tried": 28,
+  "screening_audit": {
+    "passed": true,
+    "settings": 24,
+    "result_runs": 72,
+    "failure_count": 0
+  },
+  "source_audit": {
+    "result_runs": 72,
+    "all_core_files_identical": true
+  },
+  "round2": {
+    "settings": 0,
+    "total_settings_after_round2": 28
+  },
+  "selection": {
+    "name": "movement",
+    "written_utc": "2026-11-16T02:12:40.762418+00:00",
+    "confirmation_previously_unused": true
+  },
+  "confirmation_baseline": {
+    "test_seed": 456,
+    "episodes_per_condition": 500,
+    "practice_episodes": 0,
+    "normal_successes": 304,
+    "no_camera_bias_successes": 463
+  },
+  "done_when_checks": [
+    {
+      "id": 1,
+      "done_when": "all choosing used the development seeds under \"Definitions\" (test seed 123), and nothing touched the confirmation seeds before the choice was written down",
+      "evidence_paths": [
+        "CODEX_GOALS.md",
+        "results/takehome/goal7_screening_manifest.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_screening_audit.json",
+        "results/takehome/goal7_screening_source_audit.json",
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_confirmation_manifest.json"
+      ],
+      "numeric_contract_checks_to_run": [
+        "Each development measurement uses test_seed=123 and 500 final tests; intermediate curve measurements use 256 tests at seed123.",
+        "The choice timestamp precedes creation/use of confirmation results; choice records confirmation_previously_unused=true.",
+        "Confirmation jobs use only practice seeds 100\u2013104 and test_seed=456."
+      ]
+    },
+    {
+      "id": 2,
+      "done_when": "each experiment used its own 200 practice episodes",
+      "evidence_paths": [
+        "results/takehome/goal7_screening_audit.json",
+        "results/takehome/goal7_screening_manifest.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7/confirmation/aim/seed_100/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_100/result.json"
+      ],
+      "numeric_contract_checks_to_run": [
+        "Every planned/tried seed result has practice_episodes=200 and its budget ledger records exactly 200 reserved episodes.",
+        "For each result, fill_episodes + learner_episodes = 200 and the final curve point is practice_episodes=200.",
+        "Current screening audit reports 24 settings, 72 result runs, passed=true, failure_count=0; source audit reports 72 runs and identical core hashes."
+      ]
+    },
+    {
+      "id": 3,
+      "done_when": "the total number of settings tried is stated",
+      "evidence_paths": [
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7_screening_manifest.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "TAKEHOME_DECISIONS.md"
+      ],
+      "numeric_contract_checks_to_run": [
+        "Check total_settings_tried=28 in choice and summary; summary contains 28 settings.",
+        "Reconcile 4 prior settings + 24 screening settings + 0 round-2 settings = 28; round2 total_settings_after_round2=28."
+      ]
+    },
+    {
+      "id": 4,
+      "done_when": "differences smaller than the seed-to-seed spread are marked as not a real difference",
+      "evidence_paths": [
+        "results/takehome/goal7_summary.json",
+        "takehome/exploration.py",
+        "results/takehome/goal7/exploration.csv"
+      ],
+      "numeric_contract_checks_to_run": [
+        "For each summary setting, recompute gain_over_base=mean-matched_base_mean and margin=max(std,matched_base_std).",
+        "Check difference_below_spread_is_unproven equals abs(gain_over_base)<=margin and difference_status states the supplied category consistently.",
+        "Check table rows preserve each seed result and setting mean/std."
+      ]
+    },
+    {
+      "id": 5,
+      "done_when": "the best setting is chosen by the fixed rule in the autopilot rules, with the choice and reason written down first",
+      "evidence_paths": [
+        "CODEX_GOALS.md",
+        "takehome/exploration.py",
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_choice.json",
+        "TAKEHOME_DECISIONS.md"
+      ],
+      "numeric_contract_checks_to_run": [
+        "Reapply the written rule to eligible settings: maximum mean; retain candidates within one top-setting sample SD; choose fewest changes_from_main, then higher mean, then name.",
+        "Compare selected name, highest-mean metadata, within_one_spread, reason, and total_settings_tried against the recomputed values.",
+        "Confirm the dated decision records the choice before confirmation jobs/results."
+      ]
+    },
+    {
+      "id": 6,
+      "done_when": "the chosen setting is then run on the confirmation seeds (practice 100 to 104, test seed 456), and that result is reported as the headline even if it is lower than the exploration result",
+      "evidence_paths": [
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_confirmation_manifest.json",
+        "results/takehome/confirmation_baseline.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_101/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_102/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_103/result.json",
+        "TAKEHOME_REPORT.md"
+      ],
+      "state": "pending_completion_confirmation_runs_in_progress_not_failed",
+      "numeric_contract_checks_to_run": [
+        "For the selected method, require one result each for practice seeds 100\u2013104, each with practice_episodes=200 and final episodes=500/test_seed=456/test_only=true/learned_from=false.",
+        "Check headline uses all five final results and reports mean plus sample SD without substituting development results.",
+        "Check confirmation floor and ceiling each use 500 tests at seed456."
+      ],
+      "currently_missing_confirmation_results": [
+        "results/takehome/goal7/confirmation/aim/seed_103/result.json",
+        "results/takehome/goal7/confirmation/aim/seed_104/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_104/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_103/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_104/result.json"
+      ],
+      "other_pending_files": [
+        "results/takehome/goal7/confirmation/confirmation_summary.json",
+        "results/takehome/goal7/confirmation_suite.json",
+        "results/takehome/goal7_checks.json"
+      ]
+    },
+    {
+      "id": 7,
+      "done_when": "the three Goal 6 learners at their plain settings are also run on the confirmation seeds, with the floor and ceiling measured on test seed 456, and the report says plainly that the final method had the benefit of tuning and the others did not, with the number of settings tried shown next to each method",
+      "evidence_paths": [
+        "results/takehome/goal7_confirmation_manifest.json",
+        "results/takehome/confirmation_baseline.json",
+        "results/takehome/goal7/confirmation/aim/seed_100/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_100/result.json",
+        "results/takehome/goal7/confirmation/confirmation_summary.json",
+        "TAKEHOME_REPORT.md"
+      ],
+      "state": "pending_completion_confirmation_runs_in_progress_not_failed",
+      "numeric_contract_checks_to_run": [
+        "Require aim, movement, and combined rows on seeds100\u2013104 with final 500 tests at456; each plain comparison has settings_tried_for_selection=1, the selected method carries 28.",
+        "Baseline normal and no_camera_bias each have test_seed=456 and 500 episodes; verify their rates are used as floor and ceiling.",
+        "Check report labels and count beside each method and explicitly distinguishes the final selected method as tuned from the three Goal 6 plain comparisons."
+      ],
+      "currently_missing_confirmation_results": [
+        "results/takehome/goal7/confirmation/aim/seed_103/result.json",
+        "results/takehome/goal7/confirmation/aim/seed_104/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_104/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_103/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_104/result.json"
+      ]
+    }
+  ],
+  "known_missing_files": [
+    "results/takehome/goal7/confirmation/aim/seed_103/result.json",
+    "results/takehome/goal7/confirmation/aim/seed_104/result.json",
+    "results/takehome/goal7/confirmation/movement/seed_104/result.json",
+    "results/takehome/goal7/confirmation/combined/seed_103/result.json",
+    "results/takehome/goal7/confirmation/combined/seed_104/result.json",
+    "results/takehome/goal7/confirmation/confirmation_summary.json",
+    "results/takehome/goal7/confirmation_suite.json",
+    "results/takehome/goal7_checks.json"
+  ],
+  "missing_files_note": "Confirmation is still running; these absent outputs are pending and are not marked as failed."
+}

@@ -57,11 +57,26 @@ analyses. A fresh git clone contains the small summaries and figure inputs, but
 not these binary artifacts. Keep the workspace artifacts, or reproduce an
 experiment in a fresh output directory with its own budget ledger; do not erase
 an existing budget or overwrite an earlier result to regenerate missing data.
+After the final choice and confirmation references are available, reproduce the
+unchanged chosen method with a new 200-episode budget using:
 
-The 3- and 5-output networks are shape-tested for Goal 6; movement adapters and
-the later exploration tricks are deliberately deferred. The ten-episode code
-trial uses seed 999 and does not count as a setting. Reported main experiments
-use practice seeds 0–4 and the exact tests in `CODEX_GOALS.md`.
+```bash
+source scripts/env.sh
+python -B takehome/reproduce.py --seed 100 --output results/takehome/reproductions/local_check
+```
+
+The name `local_check` identifies this separate run. Reusing that name resumes
+it or skips a completed result; choose a different name for another fresh run.
+This requires the original policy files already in the repository, but no
+takehome model checkpoint from an earlier run.
+
+The 3-output movement learner adds bounded corrections to the old policy's
+actions. The 5-output learner controls aim and movement together. The supervised
+reference uses true bias labels and is explicitly marked as cheating on
+information. Goal 7 features live in `variants.py`, `coordination.py` and
+`variant_runner.py`; `goal7_design.md` records each predeclared switch. The
+ten-episode code trial uses seed 999 and does not count as a setting. Reported
+main experiments use practice seeds 0–4 and the exact tests in `CODEX_GOALS.md`.
 
 To start the predeclared real-run GPU benchmark detached:
 
@@ -78,4 +93,29 @@ After the benchmark, rebuild the plot and per-seed table with:
 ```bash
 source scripts/env.sh
 python -B takehome/plot_goal5.py
+```
+
+For Goal 7, `exploration.py` summarizes every completed development result,
+plans only the permitted combinations, and writes an immutable choice before
+confirmation begins. Its stages are `summarize`, `plan-round2`, `choose` and
+`confirmation-manifest`, in that order, with round 2 experiments completed
+before `choose`. Do not use confirmation outcomes to revise this choice.
+`run_suite.py --manifest <path>` runs up to four detached worker commands when
+launched through `detach.py`; each experiment skips an existing final result.
+
+Later analysis entry points are `analyze_calibration.py` (Goal 8),
+`analyze_failures.py` (Goal 9), `make_transfer_manifest.py` (Goal 10) and
+`make_camera_manifest.py` (Goal 11). Each checks the preceding goal's completion
+file. They reuse the written final method without tuning. The confidence
+predictor fits only the run's own counted practice and is distinct from raw Q.
+Videos replay recorded simulator poses through the original rendering code;
+their metadata identifies illustrative repeats, because contact trajectories
+are not exactly repeatable on this GPU.
+
+The prepared tests can be run from the repository root without writing pytest
+caches outside the allowed directory:
+
+```bash
+source scripts/env.sh
+python -B takehome/run_tests.py
 ```

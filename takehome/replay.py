@@ -45,7 +45,8 @@ class Replay:
         n = int(valid.sum())
         if self.count + n > self.capacity:
             raise RuntimeError("Replay capacity would be exceeded")
-        for key in REQUIRED_KEYS:
+        keys = REQUIRED_KEYS + (('next_true_bias',) if 'next_true_bias' in data else ())
+        for key in keys:
             values = data[key][valid]
             if not np.isfinite(values).all():
                 raise RuntimeError("Tripwire: invalid numbers in practice trajectory")

@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-11-16T01:56:32.851157+00:00",
+  "sources": [
+    {
+      "title": "Randomized Ensembled Double Q-Learning: Learning Fast Without a Model",
+      "url": "https://arxiv.org/abs/2101.05982",
+      "full_text": "https://arxiv.org/html/2101.05982v2",
+      "verified_idea": "Repeated critic updates, a critic ensemble and a minimum over a random subset of target critics.",
+      "implementation_difference": "This project uses a deterministic actor with Gaussian practice noise, four critics and four updates, not an exact REDQ implementation."
+    },
+    {
+      "title": "Efficient Online Reinforcement Learning with Offline Data",
+      "url": "https://proceedings.mlr.press/v202/ball23a.html",
+      "full_text": "https://proceedings.mlr.press/v202/ball23a/ball23a.pdf",
+      "verified_idea": "Symmetric replay sampling, layer normalization and critic ensembles are part of its design study.",
+      "implementation_difference": "Here fill-up data are newly collected and fully charged to each 200-episode budget; no historical offline dataset is free."
+    }
+  ]
+}

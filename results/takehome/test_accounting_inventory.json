@@ -1,0 +1,112 @@
+{
+  "inventory_status": "Bookkeeping schema only; not an authoritative post-Goal-7 total.",
+  "trusted_base": {
+    "source": "results/takehome/goal7_pre_screen_checks.json",
+    "full_test_episodes_total": 64842,
+    "full_test_episodes_added_in_prescreen": 12,
+    "reset_only_probes_total": 182,
+    "synthetic_feature_tests": 14,
+    "integration_contract_tests": 32,
+    "practice_episodes_before_screening": 4810,
+    "rule": "64842 already includes the 12 prescreen-added episodes; do not add 12 again. Reset-only and synthetic checks are separate from full test episodes."
+  },
+  "inventory": [
+    {
+      "phase": "Goal 7 screening and round 2",
+      "pattern": "results/takehome/goal7/{screening,round2}/<setting>/seed_*/test_[0-9][0-9][0-9][0-9].json",
+      "episode_field": "episodes",
+      "test_seed_field": "test_seed",
+      "dedup_rule": "Count each checkpoint summary JSON once. Exclude paired *_episodes.npz and *_traces.npz, result.json curve copies, suite summaries, plots, and historical reused results outside goal7.",
+      "extra_pattern": "results/takehome/goal7/{screening,round2}/<setting>/seed_*/extra_ceiling_[0-9][0-9][0-9][0-9].json",
+      "extra_episode_field": "episodes",
+      "extra_dedup_rule": "Count each as separate seed-789 500-test evaluation; exclude paired NPZ and other summary copies."
+    },
+    {
+      "phase": "Goal 7 confirmation",
+      "pattern": "results/takehome/goal7/confirmation/<method>/seed_10[0-4]/test_[0-9][0-9][0-9][0-9].json",
+      "episode_field": "episodes",
+      "test_seed_field": "test_seed",
+      "dedup_rule": "Count each checkpoint JSON once, including 256 intermediate tests and final 500 test; exclude result.json curve copies and paired NPZs.",
+      "reference_patterns": [
+        "results/takehome/confirmation_baseline_normal.json",
+        "results/takehome/confirmation_baseline_no_camera_bias.json"
+      ],
+      "reference_episode_field": "episodes",
+      "reference_dedup_rule": "Count the two partial condition JSONs once each (500, seed 456). Exclude confirmation_baseline.json wrapper, which duplicates them.",
+      "extra_tests_pattern": "results/takehome/goal7/confirmation/<method>/seed_10[0-4]/extra_ceiling_[0-9][0-9][0-9][0-9].json",
+      "extra_tests_episode_field": "episodes",
+      "extra_tests_count_rule": "Count each extra_ceiling JSON as an independent seed-789 500-test evaluation when present; exclude paired NPZs and result.json copies."
+    },
+    {
+      "phase": "Goal 8 calibration",
+      "pattern": "results/takehome/goal8/seed_10[0-4]/point_[0-9][0-9][0-9][0-9]/test_summary.json",
+      "episode_field": "episodes",
+      "test_seed_field": "test_seed",
+      "dedup_rule": "Count newly collected intermediate 256-test seed-123 traces once via test_summary.json. If the JSON sidecar is absent, use the paired test_traces.npz episode_success array length as the sole source. Exclude analysis.json, summary*.json, probability_model.json and final point-0200 reuse of Goal 7 trace."
+    },
+    {
+      "phase": "Goal 9 failure illustrations",
+      "patterns": [
+        "results/takehome/goal9/before_traces.npz",
+        "results/takehome/goal9/after_seed_*_poses.npz"
+      ],
+      "episode_field": "episode_success array episode-axis length; paired JSON has episodes",
+      "test_seed_field": "test_seed (expected 456)",
+      "dedup_rule": "Count each distinct trace once: before repeat and each generated after pose repeat are 500 tests. Prefer paired JSON episodes when present; otherwise count NPZ episode_success entries. Never count trace and sidecar twice. Exclude failures.json after_per_seed/after_pooled (reused confirmation tests) and video_manifest.json pose_repeat_summaries (references same repeats)."
+    },
+    {
+      "phase": "Goal 10 references and transfer training",
+      "reference_patterns": [
+        "results/takehome/goal10/<policy>/baseline_normal.json",
+        "results/takehome/goal10/<policy>/baseline_no_camera_bias.json"
+      ],
+      "reference_episode_field": "episodes",
+      "reference_dedup_rule": "Count each 500-test seed-123 partial condition JSON once per policy. Exclude baseline.json wrapper and NPZs.",
+      "training_pattern": "results/takehome/goal10/<policy>/trained/seed_*/test_[0-9][0-9][0-9][0-9].json",
+      "training_episode_field": "episodes",
+      "extra_pattern": "results/takehome/goal10/<policy>/trained/seed_*/extra_ceiling_[0-9][0-9][0-9][0-9].json",
+      "extra_episode_field": "episodes",
+      "training_dedup_rule": "Count each checkpoint JSON and any extra_ceiling JSON once. Exclude result.json curve copies, suite summaries and paired NPZs."
+    },
+    {
+      "phase": "Goal 11 references, transfers and fresh training",
+      "reference_patterns": [
+        "results/takehome/goal11/<problem>/floor.json",
+        "results/takehome/goal11/<problem>/oracle.json"
+      ],
+      "reference_episode_field": "episodes",
+      "reference_dedup_rule": "Count floor and oracle once per problem (500, seed 123). Exclude baseline.json/result.json wrappers; the ceiling is copied from Goal 1 and is not new.",
+      "transfer_pattern": "results/takehome/goal11/<problem>/transfer_seed_[0-2].json",
+      "transfer_episode_field": "episodes",
+      "training_pattern": "results/takehome/goal11/<problem>/trained/seed_*/test_[0-9][0-9][0-9][0-9].json",
+      "training_episode_field": "episodes",
+      "extra_pattern": "results/takehome/goal11/<problem>/trained/seed_*/extra_ceiling_[0-9][0-9][0-9][0-9].json",
+      "extra_episode_field": "episodes",
+      "dedup_rule": "Count each transfer JSON, checkpoint JSON and any extra_ceiling JSON once; exclude result wrappers, paired NPZs, suite summaries, and copied Goal 1 ceiling."
+    }
+  ],
+  "known_synthetic_only_checks": [
+    {
+      "source": "results/takehome/goal7_pre_screen_checks.json",
+      "count": 14,
+      "unit": "synthetic_feature_tests",
+      "full_test_episodes_to_add": 0,
+      "note": "Recorded separately from 32 integration contract tests and the 12 full-test episodes already included in the trusted total."
+    },
+    {
+      "source": "results/takehome/goal11_formula_contracts.exit.json",
+      "command_scope": "takehome/test_camera.py -k not integration; JAX_PLATFORMS=cpu",
+      "exit_code": 0,
+      "defined_case_count": 11,
+      "full_test_episodes_to_add": 0,
+      "count_basis": "normal plus eight PROBLEMS parameter cases, delay, and oracle cases in test_camera.py; exit record itself does not contain pytest case count. Two parametrized integration probes were excluded."
+    }
+  ],
+  "deduplication_principles": [
+    "Count the underlying measurement once using its designated summary JSON, or the unique trace array as fallback, never both.",
+    "Exclude wrappers/aggregates such as result.json, failures.json, baseline.json, suite summaries and plot summaries when they copy or aggregate measurements.",
+    "Later reuse of earlier tests is not a new measurement.",
+    "Keep full test episodes, reset-only probes and synthetic-only checks in separate counters."
+  ],
+  "not_yet_authoritative": true
+}

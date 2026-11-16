@@ -1,0 +1,103 @@
+{
+  "main_config": {
+    "policy": "force_0.5mm_s2",
+    "outputs": 2,
+    "fill_episodes": 40,
+    "total_episodes": 200,
+    "updates_per_step": 4,
+    "ensemble": 4,
+    "hidden": 64,
+    "batch_size": 128,
+    "learning_rate": 0.0003,
+    "discount": 0.99,
+    "target_rate": 0.005,
+    "step_cap": 0.0001,
+    "guess_cap": 0.003,
+    "movement_cap": 0.0002,
+    "supervised_reference": false,
+    "fill_noise": 0.5,
+    "learner_noise": 0.2,
+    "code_test": false
+  },
+  "episode_length_steps": 200,
+  "control_interval_seconds": 0.02,
+  "practice_batch_episodes": 10,
+  "full_test_episodes": 500,
+  "intermediate_test_episodes": 256,
+  "development_test_seed": 123,
+  "confirmation_test_seed": 456,
+  "development_practice_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "screening_and_transfer_practice_seeds": [
+    0,
+    1,
+    2
+  ],
+  "confirmation_practice_seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "final_rerun_practice_seed": 100,
+  "extra_ceiling_check_test_seed": 789,
+  "sampler": "64 fill plus64 online when both sources contain data; all128 from available source otherwise",
+  "gradient_clip_global_norm": 10.0,
+  "main_actor_update_every_critic_updates": 4,
+  "target_critic_subset_size": 2,
+  "actor_hidden_layers": 2,
+  "critic_hidden_layers": 2,
+  "calibration": {
+    "features": "observation, proposed action normalized by caps, remaining time",
+    "true_bias_used": false,
+    "raw_q_used": false,
+    "logistic_l2_coefficient": 0.0005,
+    "max_optimizer_iterations": 200,
+    "probability_bins": 10,
+    "about_right_absolute_mean_bias": 0.03,
+    "confident_failure_threshold": 0.8,
+    "drop_threshold": 0.25,
+    "drop_window_steps": 5,
+    "weighting": "valid steps, including eventual episode label repeated at every valid step"
+  },
+  "failure_rules": {
+    "order": [
+      "never_near_hole_contact",
+      "wrong_way_correction",
+      "stuck_on_rim",
+      "timeout",
+      "other"
+    ],
+    "rules": {
+      "never_near_hole_contact": "No valid step has XY error <=5mm, absolute tip height <=3mm and force >=5N.",
+      "wrong_way_correction": "At the last valid step, aim-guess error exceeds the zero-guess error by >0.25mm with a nonzero >0.25mm guess, OR the net commanded movement correction points radially outward by >1mm summed over valid near-hole steps.",
+      "stuck_on_rim": "At least20 of the last40 valid steps meet the near-hole contact rule and their insertion-depth range is <1mm.",
+      "timeout": "Final recorded learner-truncated flag is true and learner-terminated flag is false.",
+      "other": "Any remaining failed episode."
+    }
+  },
+  "sources": {
+    "takehome/config.py": "37c01ed74882f625c5f17d337c934f8fbfffd8807dc9cbf23dc537cae35dc4f4",
+    "takehome/learner.py": "c210e10be616ba8364a0a5bffa77d2e4bce1afeb32be792792ff04500ea18e54",
+    "takehome/calibration.py": "579eb502e0c64b54d049f8da8ff61a41a15bb3d544822be80ce042dd25aba7ed",
+    "takehome/failure_rules.py": "0c4acb9846293306f644710ccabd7fde2ea2787a4b2b6c37ad576f015d11c324",
+    "takehome/camera.py": "b0bb417e845bdf6a9df1ce5830cb03023f3b53bcd4bf425b3e153a24c32bf2d7"
+  },
+  "success_rule": {
+    "ever_reached_depth_m": 0.024,
+    "depth_fraction_of_hole": 0.8,
+    "hole_depth_m": 0.03,
+    "radial_in_hole_threshold_m": 0.0105,
+    "learner_reward": "one at first original-environment success only",
+    "source": "peg_insertion/env.py reached_depth and in_hole; frozen policy force_0.5mm_s2"
+  },
+  "camera_nominal_bias_std_m": 0.00075,
+  "camera_white_noise_std_m": 0.0002,
+  "old_policy_action_scale_m": 0.002
+}

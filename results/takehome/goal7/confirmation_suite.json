@@ -1,0 +1,22 @@
+{
+  "jobs": [
+    {
+      "name": "movement",
+      "exit_code": 0,
+      "seconds": 643.1191727300011
+    },
+    {
+      "name": "combined",
+      "exit_code": 0,
+      "seconds": 665.1185114400014
+    },
+    {
+      "name": "aim",
+      "exit_code": 0,
+      "seconds": 670.1337031669991
+    }
+  ],
+  "seconds": 670.1420768040007,
+  "finished_utc": "2026-11-16T02:24:59.081660+00:00",
+  "passed": true
+}

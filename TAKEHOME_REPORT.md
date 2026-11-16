@@ -145,3 +145,38 @@ Each learned result uses its own 200 practice episodes and 500 test-only episode
 Movement-only has the highest mean among the three learners. It is 21.96 percentage points above the old-policy floor. Adding movement to aim raises the mean 13.44 points; adding aim to movement lowers it 4.76 points. The supervised reference (cheats: true labels) is not competitive with movement and is not a theoretical upper bound. Every learned run gets 40 fill-up and 160 learner episodes; the final test is separate.
 
 Four settings have now been tried, with 4810 total practice episodes across separate experiments. These are development results; the final method and independent confirmation headline have not been chosen. Tables and source paths: [comparison](results/takehome/goal6/comparison.md), [all seeds](results/takehome/goal6/goal6_per_seed.csv), [aggregate](results/takehome/goal6/goal6_aggregate.json), [audit](results/takehome/goal6_audit.json), [counts](results/takehome/goal6_counts.json). Rebuild both figures with `source scripts/env.sh && python -B takehome/plot_goal6.py`.
+
+## Goal 7 development selection, confirmation running
+
+All 24 new screening settings completed: 72 independent experiments, each with 200 practice episodes and a final 500-episode test at seed 123. Including the four earlier configurations gives 28 settings, one of which is the ineligible supervised cheating reference. Every screening result is shown in [the exploration table](results/takehome/goal7/exploration.md), [the per-seed CSV](results/takehome/goal7/exploration.csv), and [the preserved screening summary](results/takehome/goal7_screening_summary.json). The screening suite took 3230.14 seconds, about 53.8 minutes, and [all 72 runs passed audit](results/takehome/goal7_screening_audit.json).
+
+![All development settings and seeds](results/takehome/goal7/exploration.png)
+
+No new trick improved on its relevant baseline beyond both matched sample spreads. This leaves no eligible single changes to extend or combine in round 2. The rule that would force confirmation of main aim does not apply, because movement-capable methods did beat main aim. Under the written final selection rule, plain movement has the highest mean, 83.36%, with a 2.99-point spread, and is the only eligible setting within one spread of that mean. The [written choice](results/takehome/goal7_choice.json) fixes the original 40-fill/160-learner movement recipe and 0.2 mm per-axis cap. It was written before any confirmation work.
+
+The search exposed substantial instability, including 2/500 successes for one smaller-aim-cap seed. Those runs remain in the table. Sequential variants froze the inactive networks while retaining exploration noise on both output parts; the first trained actor continued acting during the second half. This search does not establish that extra mechanisms are useless in general; it provides no measured reason to add them under this budget and the fixed comparison rule.
+
+The force-penalty setting averaged 88.16 N in episode peak force versus 91.79 N for matched plain combined seeds, with sample spreads of 10.54 N and 6.46 N. Its mean success was 67.47% versus 77.47%, with success spreads of 14.98 and 6.02 points. The lower force mean is smaller than the force spread and does not establish a reliable force reduction. [Source comparison](results/takehome/goal7/force_penalty_comparison.json).
+
+Confirmation is now running on practice seeds 100-104 and final test seed 456. Its fresh original-policy floor is 304/500 (60.8%), and its no-camera-bias ceiling is 463/500 (92.6%). The movement confirmation result will be the headline even if lower than development. Plain aim and combined methods are also being confirmed unchanged. Movement had the benefit of selection after 28 evaluated configurations; the two comparison recipes were not tuned. [Confirmation references](results/takehome/confirmation_baseline.json), [predeclared confirmation manifest](results/takehome/goal7_confirmation_manifest.json).
+
+Rebuild the development chart and CSVs with `source scripts/env.sh && python -B takehome/plot_exploration.py`.
+
+
+## Goal 7 confirmation: the headline result
+
+The final method is plain movement correction, selected before confirmation from 28 settings. Its fresh-seed result is **80.20% success, sample spread 6.52 percentage points**, against the original policy's 60.8% and the no-bias reference's 92.6%. Each count below is out of 500 tests at seed456, ordered by practice seeds100,101,102,103,104. Each run used exactly200 own practice episodes. The movement method had the benefit of selection across28 settings; the plain aim and combined comparisons each had one setting and no tuning for confirmation.
+
+| Method | Settings considered | Success counts by seed | Mean | Sample spread |
+|---|---:|---|---:|---:|
+| Plain aim | 1 | 327, 322, 304, 286, 330 | 62.76% | 3.71 pp |
+| Plain movement | 28 | 380, 402, 420, 360, 443 | 80.20% | 6.52 pp |
+| Plain aim and movement | 1 | 289, 422, 274, 381, 326 | 67.68% | 12.47 pp |
+
+Movement improved over the original policy by19.40 percentage points. Aim-only's1.96-point gain and combined's6.88-point gain are smaller than their respective seed spreads, so those gains are unproven under the predeclared rule. The movement headline is3.16 points below its development mean; confirmation did not change the choice. No result was replaced. The curves show an early collapse and recovery for aim and combined. The data establish that collapse, but do not identify its cause.
+
+![Confirmation](results/takehome/goal7/confirmation/confirmation.png)
+
+![Confirmation curves](results/takehome/goal7/confirmation/confirmation_learning_curves.png)
+
+Sources: [all confirmation seeds](results/takehome/goal7/confirmation/confirmation_summary.json), [confirmation references](results/takehome/confirmation_baseline.json), [checks](results/takehome/goal7_checks.json). Rebuild both figures with `source scripts/env.sh && python -B takehome/plot_confirmation.py`. Intermediate curve tests use256 episodes at seed123, while the final point and original-policy reference use500 at seed456, as logged under PLAN GAP.

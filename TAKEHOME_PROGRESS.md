@@ -1,10 +1,10 @@
 # Take-home progress
 
-## Current status: Goal 6 complete; Goal 7 integration next (2026-11-15)
+## Current status: Goals 1-7 complete; Goal 8 next (2026-11-15)
 
-Griffin approved Goals 6-13 with no cuts. Goals 1-6 are complete. Movement-only led Goal 6 at 83.36% versus aim-only 65.16%, joint 78.60%, and the supervised cheating reference 66.16%. All 15 new runs and the artifact audit passed. Cumulative practice is 4810 episodes across independent experiments; four settings tried; 64,830 full test-only episodes and 174 reset-only probes. Goal 7 design and isolated code were prepared while the GPU ran; 14 synthetic unit checks pass, but integration checks must pass before screening. No confirmation seed has been used. Repeatability remains a documented simulator limitation after the authorized 26m51s investigation; production settings are unchanged. Full traces/checkpoints remain local and ignored by git. Continue through Goal 13 without another check-in unless a written tripwire fires.
+Final method is unchanged plain movement correction. Confirmation headline80.20% ±6.52 percentage points across practice seeds100-104, final500 tests at456; original policy60.8%, no-bias92.6%. All Goal7 checks pass. Total28 settings and22,210 practice episodes. Continue Goals8-13 with no cuts, commit/push after each goal, and stop only for the written stopping rule. Full binary artifacts stay local and ignored. The authorized repeatability investigation found no safe full fix, so the limitation remains explicit.
 
-## Current status after revised instructions, 2026-11-15
+## Historical status after revised instructions, 2026-11-15
 
 Re-read AGENTS.md, CODEX_GOALS.md and TAKEHOME_PLAN.md in full. Griffin resolved the sampling question: exactly half fill-up and half learner data when both exist; otherwise use the nonempty source. The historical pause below is resolved. Goals 1–3 remain passed under the revised checks. Goal 4 now builds only the main learner, its configurable output dimension and the explicitly listed basic settings, replay metadata and test traces. Later tricks are deferred until their respective goals.
 
@@ -262,3 +262,50 @@ Small corrections to the robot's movement worked better than corrections to its 
 
 ### 8. Questions before the next phase
 No blocking issue or new question. Commit and push Goal 6, finish Goal 7 integration checks, and continue through Goal 13 under the approved no-cuts instruction.
+
+## 2026-11-15: Goal 7 started
+
+Goal 6 was committed and pushed as 2a0523d. All 32 integration/regression contracts passed in 59.49 seconds before screening. The predeclared 24-setting/72-run screening suite started detached; every experiment owns its budget, and every setting checks the identical-outcome tripwire as soon as all its seeds finish. No confirmation seed has been used. Intermediate curves retain seed123/256 tests; the later confirmation final500 will use seed456, as logged. Test-only counts before screening are 64,842 full episodes and 182 reset-only probes; practice remains 4810 before new screening reservations. The lead is preparing selection/reporting code while GPU jobs run, and helpers are preparing independent plots and audits.
+
+
+## 2026-11-15: Goal 7 complete
+
+### 1. What I did (short list)
+
+- Finished all24 new screening settings on72 independent runs; audited every run and all87 new screening/confirmation core-source hashes.
+- Applied the fixed selection rule before confirmation. No eligible single trick clearly improved its relevant base, so round2 had no combinations.
+- Confirmed plain aim, movement and combined on all five fresh practice seeds; visually reviewed both confirmation charts.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Final500-test counts at test seed456, practice seeds100-104: aim327,322,304,286,330 (62.76% ±3.71pp sample SD); movement380,402,420,360,443 (80.20% ±6.52pp); combined289,422,274,381,326 (67.68% ±12.47pp). The selected movement headline is lower than development83.36%, and remains the headline. References304/500=60.8% and463/500=92.6%. Screening took3230.14 seconds; confirmation670.14 seconds, plus41.74 seconds for confirmation references.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+- PASS: selection used development seeds0-4 (screening0-2), final500 at123; choice timestamp precedes all confirmation work.
+- PASS: every experiment had its own exact200-episode ledger, including fill-up.
+- PASS:28 settings stated, below45 cap; all settings and seeds shown.
+- PASS: differences smaller than the larger matched seed spread are labelled unproven, not real gains.
+- PASS: fixed selection rule independently reapplied and agrees with the immutable written movement choice.
+- PASS: chosen method confirmed at100-104/456 and80.20% reported as headline despite lower score.
+- PASS: all three plain comparisons confirmed, fresh references supplied, and28 versus1 versus1 selection advantage stated.
+
+### 4. Surprises or problems
+
+Aim and combined show severe early learning-curve drops, retained without filtering. Combined varied widely on fresh seeds. No tripwire fired; all final physical checks reported zero through-wall episodes. The28-setting selection advantage matters even though the winner has no added trick. Repeatability remains limited.
+
+### 5. Decisions I logged
+
+The immutable choice, absence of qualifying combinations, sequential-noise interpretation, and required ceiling checks for later diagnostic repeats are logged. Preparatory camera, position-input, calibration, failure-partition and ceiling-helper checks passed; later real phases remain gated. All PLAN GAP entries remain in the decision log.
+
+### 6. Practice episodes used, and settings tried so far
+
+Goal7 added17,400 practice episodes (87 runs×200). Cumulative22,210 practice episodes in112 complete ledgers,28 settings,285,226 full test-only episodes and182 reset-only probes. The global total includes the separate code trial and timing repeats; the budget is200 per experiment, never200 for the whole study. Small result files only are committed; binary traces/models/videos stay local.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+Correcting hand movements was the strongest approach. On the fresh test it succeeded about80 times out of100, versus61 for the old policy. Fixing the camera estimate alone did not show a clear improvement. Trying many settings helped choose the winner, and that advantage is disclosed. The next phases explain its confidence and remaining failures without changing it.
+
+### 8. Questions before the next phase
+
+None requiring a pause. Continue to Goal8 under the approved no-cuts instruction.

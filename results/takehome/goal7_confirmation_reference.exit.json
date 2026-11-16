@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/reference.py",
+    "--policy",
+    "force_0.5mm_s2",
+    "--test-seed",
+    "456",
+    "--output",
+    "results/takehome/confirmation_baseline.json"
+  ],
+  "started_utc": "2026-11-16T02:12:41.096414+00:00",
+  "finished_utc": "2026-11-16T02:13:22.839065+00:00",
+  "seconds": 41.742681775000165,
+  "exit_code": 0
+}

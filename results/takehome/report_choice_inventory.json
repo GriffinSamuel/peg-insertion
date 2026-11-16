@@ -1,0 +1,727 @@
+{
+  "source_file": "TAKEHOME_DECISIONS.md",
+  "inventory_rule": "Every nonblank line whose trimmed text begins with a bullet marker was copied verbatim, with its source line number.",
+  "nonblank_bullet_entry_count": 77,
+  "plan_gap_entry_count": 50,
+  "entries": [
+    {
+      "line_number": 3,
+      "plan_gap": false,
+      "topic": "execution_and_baseline_protocol",
+      "exact_text": "- 2026-11-15: Routine helpers use gpt-6-luna with low reasoning, explicitly selected on each spawn from takehome/routine_helper.toml; runtime session records verified the requested model and effort.",
+      "evidence_source_paths_in_entry": [
+        "takehome/routine_helper.toml"
+      ]
+    },
+    {
+      "line_number": 4,
+      "plan_gap": false,
+      "topic": "execution_and_baseline_protocol",
+      "exact_text": "- 2026-11-15: Preflight used eight test-only episodes at seed 123; none were learned from, so practice usage and experimental settings tried remain zero.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 5,
+      "plan_gap": false,
+      "topic": "execution_and_baseline_protocol",
+      "exact_text": "- 2026-11-15: Baseline evaluation retains the existing evaluator's batch size 256, contact capacity 20 * 256, domain randomization, and deterministic policy to reproduce the recorded numbers without changing the test.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 6,
+      "plan_gap": false,
+      "topic": "execution_and_baseline_protocol",
+      "exact_text": "- 2026-11-15: The no-camera-error comparison removes the constant sideways bias only and retains step-to-step noise, matching the existing 94.0% reference; reports will call this the no-camera-bias ceiling precisely.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 7,
+      "plan_gap": false,
+      "topic": "execution_and_baseline_protocol",
+      "exact_text": "- 2026-11-15: Python runs use -B and redirect generated caches under results/takehome/; reuse the preflight cache to avoid repeating compilation and preserve existing project files.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 11,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: Initial aim correction uses a maximum 0.1 mm nudge per axis per step and a 3 mm running-guess cap per axis; gradual corrections can cover four standard deviations of the specified bias.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 12,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: Implement the wrapper as a subclass in takehome/, because the existing domain-randomization wrapper calls the unwrapped environment directly and would bypass ordinary composition.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 13,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: Keep physics running for fixed-length evaluation while recording a sticky learner terminal flag and excluding subsequent transitions from learning; preserve the original test's full-episode measurement and end the learner at first success.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 14,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: Reserve and persist practice episodes before collection, counting unfinished reservations conservatively; process interruption must not free previously allocated practice budget.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 15,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: Do not resolve the conflicting universal 50/50 sampling requirement and empty-buffer experiments without Griffin's answer, as AGENTS.md rule 8 explicitly requires asking about an impossible plan requirement.",
+      "evidence_source_paths_in_entry": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "line_number": 16,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: The previous sampling pause is resolved by Griffin and the revised instructions: exactly 50/50 when both buffers contain data, otherwise sample the nonempty source; follow only the revised When to stop rule going forward.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 17,
+      "plan_gap": false,
+      "topic": "environment_and_data_handling",
+      "exact_text": "- 2026-11-15: Keep the old requirements extraction as historical evidence and write goal4_requirements_revised.json for the smaller current scope; no later-goal tricks will be built during Goal 4.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 18,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Use a deterministic off-policy actor-critic, with four layer-normalized critics and the minimum of two randomly selected target critics; the plan specifies the ingredients but not the algorithm details, and this is a small implementation of that recipe rather than an exact SAC/REDQ reproduction.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 19,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Use two 64-unit hidden layers, Adam at 0.0003, batch size 128, four critic updates per valid new learner transition, and one actor update per four critic updates; choose a modest main configuration before seeing any learning result.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 20,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Use discount 0.99 and target-network averaging rate 0.005; stop the backup on true termination but retain it at a time limit, matching the revised definition that raw Q is not a success probability.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 21,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Fill-up nudges use independent Gaussian noise with normalized standard deviation 0.5, learner exploration uses 0.2, and both are clipped to [-1,1]; with a 0.1 mm step cap this gives small exploration while preserving zero network output at initialization.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 22,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Store proposed corrections in metres and divide by their caps at the critic input; scale the running guess by its 3 mm cap, and normalize the original sensor vector with the frozen checkpoint's exact statistics.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 23,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Run the ten-episode code trial at practice seed 999 with zero fill-up and eight test-only episodes at seed 123; a single ten-episode batch can exercise the learner while unit tests separately verify mixed-source sampling, without touching confirmation seeds.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 24,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Include a 256-test-episode point at the end of fill-up (40), then at 60 through 180, and 500 at 200; point zero reuses the original-policy baseline, and all evaluations use test seed 123.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 25,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Output dimensions 2/3/5 are supported and zero-initialization-tested in the network; movement environment adapters and all other Goal 6/7 features are deferred as explicitly required by the reduced Goal 4 scope.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 26,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: The required 1/2/4-process and multi-seed-process speed tests need more than five runs; predeclare nine independent 200-episode runs of one setting, report every run, and use only the first designated run for each practice seed in the main result, with four repeats used solely for timing and reproducibility.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 27,
+      "plan_gap": true,
+      "topic": "goal4_algorithm_and_protocol",
+      "exact_text": "- PLAN GAP 2026-11-15: Benchmark schedule is one process/seed 0; two concurrent processes/seeds 1 and 2; four concurrent processes/seeds 3, 4, 0 and 1; then one process running seeds 0 and 1 sequentially. The first appearances of 0–4 are the headline runs; repeats never replace them based on success.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 28,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: Use four concurrent GPU processes for future batches because the measured throughput was fastest at 58.01 seconds per completed experiment, versus 66.02 for two, 78.01 for two seeds in one process, and 116.03 solo; treat the small benchmark as provisional for more complex methods.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 29,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: Keep all designated results despite same-seed timing repeats differing, because replacing a main run after seeing its score would bias the result; first-fill traces already differ before learning and the cause remains unresolved.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 30,
+      "plan_gap": true,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- PLAN GAP 2026-11-15: Forecast Goal 7 with 24 new screening settings, four combinations, extra seeds for three promising single changes, and up to four confirmation methods; these counts are explicit time-estimate assumptions, not a commitment to run combinations if the written skip rule applies.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 31,
+      "plan_gap": true,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- PLAN GAP 2026-11-15: Forecast future complex training at 1.25 times measured solo cost, extra 500-episode tests at 0.50 minutes, 20 videos at 1.5 CPU minutes each, and helper savings of 25% of implementation overhead; use twice solo cost without GPU concurrency and twice non-training work for a conservative worst-case allowance because those workloads have not been measured.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 32,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: Keep proposed cuts unapplied and stop after Goal 5 as requested; one setting has been tried, using 1810 total practice episodes across the ten-episode code trial and nine separate 200-episode experiments.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 33,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: Griffin approved continuation through Goal 13 with no cuts and up to 30 minutes of repeatability diagnosis first; preserve tests, seeds and per-experiment budgets, and carry unresolved repeatability forward as a limitation.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 34,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: At Griffin's request, keep NPZ traces/replay, binary model checkpoints and videos on disk only, untrack existing artifacts without deleting them, and ignore them inside results/takehome; keep committing code and small summaries, tables, charts and logs, with no history rewrite.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 35,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: At Griffin's request, save full test traces only for each run's final 500-episode evaluation; retain intermediate summaries and per-episode outcomes, and save additional traces only when a later analysis explicitly needs them. Practice replay needed for learning/resumption remains local and excluded from git.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 36,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: End repeatability diagnosis after 26m51s: original evaluator varies at fixed seed123, generic execution flags fail, and Warp deterministic modes make resets exact but not contact trajectories; keep production settings unchanged and carry this measured limitation through Goal13 under Griffin's explicit continuation instruction.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 37,
+      "plan_gap": false,
+      "topic": "compute_reproducibility_and_authorization",
+      "exact_text": "- 2026-11-15: Reject Warp RUN_TO_RUN with its default record bound because it emits 884 counter overflows; reject the overflow-free 64-record RUN_TO_RUN and GPU_TO_GPU candidates because full traces differ. Diagnostic episodes are test-only, never replay training, and do not replace earlier reported results.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 38,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Goal 6 movement corrections are capped at 0.2 mm per axis per step (one tenth of the old 2 mm action scale), added after the frozen policy and clipped to its original control range; combined control uses the unchanged 0.1 mm aim nudges and 3 mm guess cap.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 39,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: The supervised cheating reference predicts the two true bias labels from its own observations using squared error, then approaches that estimate through the same bounded aim nudges; it uses only its own counted 40 fill-up and 160 learner episodes and keeps the main optimizer/update recipe.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 40,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Goal 6 predeclares three new settings, each at practice seeds 0 to 4 and test seed 123, and reuses the five designated Goal 5 aim runs; run the six two/three-seed jobs with at most four GPU processes, using the measured fastest concurrency.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 41,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: If a movement-capable learner exceeds its ceiling at any curve point, use 500 additional test-only episodes at fixed seed 789, preserve the extra traces for the required physical inspection, and never use this extra result for selection.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 42,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Predeclare the full 24-setting Goal 7 screen in takehome/goal7_design.md before screening, using simple half/double numeric alternatives and one explicit implementation per named trick, with all three coordination alternatives and all required fill counts; count the four earlier settings against the 45 limit conservatively.",
+      "evidence_source_paths_in_entry": [
+        "takehome/goal7_design.md"
+      ]
+    },
+    {
+      "line_number": 43,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For Goal 7 screening, compare matched development practice seeds 0 to 2 and require gains larger than both sample standard deviations; include reused plain movement and combined methods as candidates, exclude the supervised cheating reference, and consider at most four compatible combinations of the best three clear improvements before the written final selection rule.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 44,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Use separate aim/movement trunks, critic ensembles, targets and optimizer states for coordination variants, sharing only the counted replay; freeze the inactive component during each 80-episode sequential half to make the comparison literal.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 45,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Brief critics for four updates per valid transition of their own fill-up data while freezing actors, matching the main critic study rate without collecting extra episodes.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 46,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For the privileged-critic switch, append true XY bias normalized by the 3 mm guess cap only to critic inputs; keep actor inputs unchanged and label privileged diagnostic ratings.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 47,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Screen one critic versus four and one critic update per new step versus four, retaining one actor update per new step so each is a small isolated change.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 48,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Screen aim nudge caps 0.05 and 0.2 mm against 0.1 mm while holding the 3 mm total guess cap, and movement cap 0.4 mm against 0.2 mm, as symmetric half/double alternatives rather than fitted values.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 49,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: The final decider rates zero, aim, movement, both, half both, clipped 1.5 times both, half aim plus movement, and aim plus half movement; multiplicative variations preserve exactly zero control at initialization.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 50,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Hand over only when observed absolute height is below 15 mm and observed XY distance below 10 mm; use available camera readings and set the guess to zero outside this gate so the original policy handles the approach.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 51,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For contact-dependent movement caps, use half the nominal cap below 5 N and twice the cap at or above 5 N, a bounded response to the measured force sensor without privileged geometry.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 52,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For uncertainty-sized movement caps, multiply each axis by clip(2 times the frozen policy pre-tanh standard deviation,0.5,2), using the saved distribution deterministically without extra random draws.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 53,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For classification-style critic learning, use sigmoid outputs and binary cross entropy on the same bounded discounted target; the raw rating still does not mean finite-episode success probability.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 54,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Use three-step credit cut at each episode boundary with true-termination stopping and timeout bootstrapping, a short predeclared horizon that cannot borrow data from another episode.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 55,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For the return-floor switch, floor Bellman targets at the discounted observed reward through the end of the same counted practice episode; never use test outcomes or another experiment.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 56,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For the force-penalty switch, subtract 0.001 times max(force minus 15 N,0) times the fixed 0.02-second control interval from training reward only; reuse the original force threshold, retain the success test, and report peak force.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 57,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: For sibling fill-up, collect four batches round-robin from force_0.5mm_s0,s3,s4,s0 for counts20/10/10, since each original recorded policy sometimes succeeds; all40 episodes are newly counted inside that experiment.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 58,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Skip combinations of independent component critics with the final decider, which requires joint action ratings, and sequential coordination with fill10, whose 95/95 learner halves cannot be represented by the required ten-episode batches; retain all explicitly required single changes.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 59,
+      "plan_gap": true,
+      "topic": "goal6_and_goal7_method_choices",
+      "exact_text": "- PLAN GAP 2026-11-15: Keep intermediate learning-curve tests at the explicitly fixed seed123/256 episodes, including during confirmation; only confirmation point0 references and the final500 evaluation use seed456. No curve point or final confirmation result will be used to retune the written choice.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 60,
+      "plan_gap": true,
+      "topic": "goal8_calibration_and_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: Goal 8 will fit a separate logistic episode-success predictor at each saved checkpoint using only that run's own counted replay up to that point, observations, proposed controls and remaining time; exclude true bias and raw Q from predictor inputs so it remains usable even when a training-only privileged critic wins.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 61,
+      "plan_gap": true,
+      "topic": "goal8_calibration_and_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: Fix the confidence predictor before analysis: standardize features using its own practice data, use mean binary log loss plus 0.0005 times squared non-intercept weights, and at most200 deterministic L-BFGS iterations; use ten equal-width probability bins and call mean errors within3 percentage points about right on average while also reporting bin error.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 62,
+      "plan_gap": true,
+      "topic": "goal8_calibration_and_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: For Goal 8 list each failed episode's highest predicted chance if at least80%, and the first fall of at least25 percentage points between adjacent five-step averages (null if none); compare raw-Q quantile bins separately without treating Q as probability.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 63,
+      "plan_gap": false,
+      "topic": "goal8_calibration_and_analysis",
+      "exact_text": "- 2026-11-15: Goal 8 needs additional intermediate256-test traces to measure confidence over training; save those analysis traces locally only at the unchanged seed123, reuse each final500 trace, and learn nothing from any test. This uses Griffin's explicit later-analysis exception to the final-trace-only storage rule.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 64,
+      "plan_gap": true,
+      "topic": "goal9_failure_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: Fix Goal 9 failure order and rules before classifying results: never near-hole contact (5 mm XY,3 mm height,5 N force), wrong-way correction (>0.25 mm excess aim error or >1 mm summed outward movement command near the hole), stuck rim (20 of last40 steps in contact and <1 mm depth range), timeout, then other; these are operational patterns, not proven causes.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 65,
+      "plan_gap": true,
+      "topic": "goal9_failure_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: Goal 9 outward-command direction uses recorded camera XY minus true bias and still contains white noise; disclose that approximation instead of claiming an exact counterfactual cause of failure.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 66,
+      "plan_gap": true,
+      "topic": "goal9_failure_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: Because old baseline summaries lack full traces and GPU repeats differ, Goal 9 will collect a labelled500-episode before trace at fixed confirmation test seed456 and illustrative pose-recorded repeats for videos; retain all measured outcomes and never substitute rerendered scores for the original headline tests.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 67,
+      "plan_gap": false,
+      "topic": "goal9_failure_analysis",
+      "exact_text": "- 2026-11-15: The synthetic Goal 9 partition test initially used too little recent depth change to represent a timeout rather than a stuck rim; corrected that invented fixture once, keeping all failure thresholds and experimental tests unchanged, and the ordering/exhaustiveness check passed.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 68,
+      "plan_gap": true,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- PLAN GAP 2026-11-15: Predeclare Goal 11 bigger offsets as constant XY bias standard deviations1.5 and3.0 mm, with the selected method's guess and nudge caps multiplied by2 and4 in transfer and retraining; preserve movement caps and all other algorithm settings.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 69,
+      "plan_gap": true,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- PLAN GAP 2026-11-15: Predeclare one-sided camera error as componentwise abs of the original sampled XY bias, and drift as b_xy+(step/200)*[1,-1] mm; these change direction and time dependence without tuning on outcomes.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 70,
+      "plan_gap": true,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- PLAN GAP 2026-11-15: Predeclare extra independent XY jitter with0.6 mm standard deviation using fold_in of the existing observation key, retaining baseline0.2 mm white noise; true-error oracle removes the added jitter and constant bias but retains baseline white noise.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 71,
+      "plan_gap": true,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- PLAN GAP 2026-11-15: Predeclare a10-degree rotation of true relative XY position before adding unchanged bias/white noise, a three-step60ms delay of relative XYZ geometry with present proprioception, and a+2 mm height error with derived observed depth updated consistently; use modest fixed distortions rather than search for failures.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 72,
+      "plan_gap": true,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- PLAN GAP 2026-11-15: For Goal 11 the oracle supplies instantaneous effective XY camera error inside the same wrapper; it cannot remove height error or the Z part of delayed geometry, and is reported as an information-cheating test-only reference.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 73,
+      "plan_gap": true,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- PLAN GAP 2026-11-15: The Goal 11 height-error rationale assumes sideways-only aim correction, but the Definitions require the chosen final method unchanged; if it includes3D movement, retain allthree outputs and report whether height is still a limit rather than disabling a capability to force the expected failure.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 74,
+      "plan_gap": false,
+      "topic": "goal11_camera_conditions",
+      "exact_text": "- 2026-11-15: Check prepared Goal 11 camera formulas on synthetic CPU arrays while four GPU experiments run; defer actual camera episode probes until a GPU slot is free, so unit checks do not change experiment throughput or use any practice episodes.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 75,
+      "plan_gap": true,
+      "topic": "goal8_calibration_and_analysis",
+      "exact_text": "- PLAN GAP 2026-11-15: Goal 8 calibration bins pool valid step predictions and their eventual episode labels, so longer episodes contribute more observations; report this step weighting explicitly and keep it distinct from the final per-episode success rate. The predictor is trained on historical practice behavior, so testing its calibration under the final policy also measures that distribution shift.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 76,
+      "plan_gap": false,
+      "topic": "testing_and_goal13_artifacts",
+      "exact_text": "- 2026-11-15: Run the final original/new test suite through takehome/run_tests.py so allowed cache paths are set before importing JAX or pytest; scripts/env.sh alone points caches outside the authorized takehome outputs. All original test files remain unchanged.",
+      "evidence_source_paths_in_entry": [
+        "takehome/run_tests.py"
+      ]
+    },
+    {
+      "line_number": 77,
+      "plan_gap": true,
+      "topic": "testing_and_goal13_artifacts",
+      "exact_text": "- PLAN GAP 2026-11-15: Fix the Goal 13 fresh rerun to confirmation practice seed100 and test seed456 before any confirmation scores exist; compare its final500 rate with the five-seed confirmation mean using that sample spread, keep a separate200-episode ledger, and use Griffin's explicit repeatability-limitation fallback if the difference exceeds one spread.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 78,
+      "plan_gap": true,
+      "topic": "testing_and_goal13_artifacts",
+      "exact_text": "- PLAN GAP 2026-11-15: Add small contact-sheet previews from the existing local failure videos so the committed report can show every illustrated type while full videos and traces remain local; frames are extracted near3.8 seconds with no new simulation or changed score.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 79,
+      "plan_gap": true,
+      "topic": "goal7_implementation_and_selection",
+      "exact_text": "- PLAN GAP 2026-11-15 (implementation review): Sequential coordination freezes the inactive actor, critic, targets and optimizer, while retaining the same Gaussian practice noise on both output parts as the joint baseline; this isolates update order and keeps exploration unchanged. The inactive actor starts at zero, and the first trained actor continues acting in the second half.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 80,
+      "plan_gap": false,
+      "topic": "goal7_implementation_and_selection",
+      "exact_text": "- 2026-11-15: All24 Goal7 screening settings completed on72 own200-episode runs; preserve the original three-seed screen in goal7_screening_summary.json. No new setting beat its matched relevant base beyond both sample spreads, so no single change qualifies for extension or combination. Plain movement and some movement-capable settings beat main aim, so the separate fallback that would force main aim does not apply; round2 has zero eligible jobs and the total remains28 settings.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 81,
+      "plan_gap": false,
+      "topic": "goal7_implementation_and_selection",
+      "exact_text": "- 2026-11-15: Final method chosen and written before any confirmation work: movement with unchanged40 fill-up/160 learner episodes and0.2 mm movement cap; development mean83.36% and sample spread2.99 percentage points. It is the highest-mean setting and the only eligible method within one spread of that top mean. Selection considered28 settings; confirmation will report seeds100-104/test456 even if lower, with plain aim and combined comparisons.",
+      "evidence_source_paths_in_entry": []
+    },
+    {
+      "line_number": 82,
+      "plan_gap": false,
+      "topic": "goal7_implementation_and_selection",
+      "exact_text": "- 2026-11-15: Apply the existing ceiling-exceedance rule to later calibration repeats, illustrative pose repeats and camera transfer tests as well as training curves; reuse a prior seed789 verification of the exact same saved model when available, otherwise add the predeclared500 test-only episodes and physical evidence. This closes a diagnostic coverage gap without changing any learner, test, seed or budget.",
+      "evidence_source_paths_in_entry": []
+    }
+  ],
+  "reviewed_evidence_jsons": [
+    {
+      "path": "results/takehome/method_sources.json",
+      "top_level_keys": [
+        "checked_utc",
+        "sources"
+      ],
+      "source_titles": [
+        "Randomized Ensembled Double Q-Learning: Learning Fast Without a Model",
+        "Efficient Online Reinforcement Learning with Offline Data"
+      ]
+    },
+    {
+      "path": "results/takehome/environment.json",
+      "top_level_keys": [
+        "recorded_utc",
+        "python",
+        "python_executable",
+        "platform",
+        "gpu_name_memory_driver",
+        "packages",
+        "execution",
+        "protected_source_base",
+        "reproducibility_limitation_source"
+      ],
+      "reproducibility_limitation_source": "results/takehome/repeatability_findings.md"
+    },
+    {
+      "path": "results/takehome/protocol.json",
+      "top_level_keys": [
+        "main_config",
+        "episode_length_steps",
+        "control_interval_seconds",
+        "practice_batch_episodes",
+        "full_test_episodes",
+        "intermediate_test_episodes",
+        "development_test_seed",
+        "confirmation_test_seed",
+        "development_practice_seeds",
+        "screening_and_transfer_practice_seeds",
+        "confirmation_practice_seeds",
+        "final_rerun_practice_seed",
+        "extra_ceiling_check_test_seed",
+        "sampler",
+        "gradient_clip_global_norm",
+        "main_actor_update_every_critic_updates",
+        "target_critic_subset_size",
+        "actor_hidden_layers",
+        "critic_hidden_layers",
+        "calibration",
+        "failure_rules",
+        "sources",
+        "success_rule",
+        "camera_nominal_bias_std_m",
+        "camera_white_noise_std_m",
+        "old_policy_action_scale_m"
+      ],
+      "protocol_seed_and_budget_keys": [
+        "main_config",
+        "episode_length_steps",
+        "practice_batch_episodes",
+        "full_test_episodes",
+        "intermediate_test_episodes",
+        "development_test_seed",
+        "confirmation_test_seed",
+        "development_practice_seeds",
+        "screening_and_transfer_practice_seeds",
+        "confirmation_practice_seeds",
+        "final_rerun_practice_seed",
+        "extra_ceiling_check_test_seed"
+      ]
+    }
+  ],
+  "topic_groups_line_numbers": {
+    "execution_and_baseline_protocol": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "environment_and_data_handling": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "goal4_algorithm_and_protocol": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "compute_reproducibility_and_authorization": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+    ],
+    "goal6_and_goal7_method_choices": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ],
+    "goal8_calibration_and_analysis": [
+      60,
+      61,
+      62,
+      63,
+      75
+    ],
+    "goal9_failure_analysis": [
+      64,
+      65,
+      66,
+      67
+    ],
+    "goal11_camera_conditions": [
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74
+    ],
+    "testing_and_goal13_artifacts": [
+      76,
+      77,
+      78
+    ],
+    "goal7_implementation_and_selection": [
+      79,
+      80,
+      81,
+      82
+    ]
+  }
+}

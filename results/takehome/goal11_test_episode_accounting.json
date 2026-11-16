@@ -1,0 +1,10 @@
+{
+  "executed": true,
+  "full_test_episodes": 8,
+  "reset_only_probes": 0,
+  "practice_episodes": 0,
+  "command_log": "results/takehome/goal11_episode_contracts.log",
+  "exit_record": "results/takehome/goal11_episode_contracts.exit.json",
+  "tests": 2,
+  "passed": true
+}

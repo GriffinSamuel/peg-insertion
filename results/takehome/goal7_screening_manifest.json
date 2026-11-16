@@ -1,0 +1,668 @@
+{
+  "settings": [
+    {
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "overrides": {
+        "fill_episodes": 0
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_0"
+    },
+    {
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "overrides": {
+        "fill_episodes": 10
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_10"
+    },
+    {
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "overrides": {
+        "fill_episodes": 20
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_20"
+    },
+    {
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "overrides": {
+        "fill_episodes": 80
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_80"
+    },
+    {
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "overrides": {
+        "fill_episodes": 120
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_120"
+    },
+    {
+      "name": "side_by_side",
+      "label": "side by side",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/side_by_side"
+    },
+    {
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_then_move"
+    },
+    {
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/move_then_aim"
+    },
+    {
+      "name": "briefing",
+      "label": "Critic briefing on own fill",
+      "overrides": {
+        "briefing": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/briefing"
+    },
+    {
+      "name": "privileged_critic",
+      "label": "True bias to critic during training",
+      "overrides": {
+        "privileged_critic": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/privileged_critic"
+    },
+    {
+      "name": "one_critic",
+      "label": "One critic",
+      "overrides": {
+        "ensemble": 1
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/one_critic"
+    },
+    {
+      "name": "one_update",
+      "label": "One update per new step",
+      "overrides": {
+        "updates_per_step": 1
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/one_update"
+    },
+    {
+      "name": "aim_cap_50um",
+      "label": "Aim cap 0.05 mm",
+      "overrides": {
+        "step_cap": 5e-05
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_cap_50um"
+    },
+    {
+      "name": "aim_cap_200um",
+      "label": "Aim cap 0.2 mm",
+      "overrides": {
+        "step_cap": 0.0002
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_cap_200um"
+    },
+    {
+      "name": "movement_cap_400um",
+      "label": "Movement cap 0.4 mm",
+      "overrides": {
+        "outputs": 5,
+        "movement_cap": 0.0004
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/movement_cap_400um"
+    },
+    {
+      "name": "final_decider",
+      "label": "Final critic decider",
+      "overrides": {
+        "outputs": 5,
+        "final_decider": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/final_decider"
+    },
+    {
+      "name": "near_hole",
+      "label": "Hand over near hole",
+      "overrides": {
+        "near_hole": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/near_hole"
+    },
+    {
+      "name": "contact_cap",
+      "label": "Contact-dependent movement cap",
+      "overrides": {
+        "outputs": 5,
+        "contact_cap": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/contact_cap"
+    },
+    {
+      "name": "uncertainty_cap",
+      "label": "Old-policy uncertainty cap",
+      "overrides": {
+        "outputs": 5,
+        "uncertainty_cap": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/uncertainty_cap"
+    },
+    {
+      "name": "classification",
+      "label": "Classification critic loss",
+      "overrides": {
+        "classification": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/classification"
+    },
+    {
+      "name": "three_step",
+      "label": "Three-step credit",
+      "overrides": {
+        "n_step": 3
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/three_step"
+    },
+    {
+      "name": "return_floor",
+      "label": "Observed return floor",
+      "overrides": {
+        "return_floor": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/return_floor"
+    },
+    {
+      "name": "force_penalty",
+      "label": "Force penalty (peak force reported)",
+      "overrides": {
+        "outputs": 5,
+        "force_penalty": true
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/force_penalty"
+    },
+    {
+      "name": "sibling_fill",
+      "label": "Sibling-policy fill-up",
+      "overrides": {
+        "sibling_fill": true
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/sibling_fill"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "fill_0",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "fill_0"
+      ],
+      "log": "results/takehome/goal7/logs/fill_0.log"
+    },
+    {
+      "name": "fill_10",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "fill_10"
+      ],
+      "log": "results/takehome/goal7/logs/fill_10.log"
+    },
+    {
+      "name": "fill_20",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "fill_20"
+      ],
+      "log": "results/takehome/goal7/logs/fill_20.log"
+    },
+    {
+      "name": "fill_80",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "fill_80"
+      ],
+      "log": "results/takehome/goal7/logs/fill_80.log"
+    },
+    {
+      "name": "fill_120",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "fill_120"
+      ],
+      "log": "results/takehome/goal7/logs/fill_120.log"
+    },
+    {
+      "name": "side_by_side",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "side_by_side"
+      ],
+      "log": "results/takehome/goal7/logs/side_by_side.log"
+    },
+    {
+      "name": "aim_then_move",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "aim_then_move"
+      ],
+      "log": "results/takehome/goal7/logs/aim_then_move.log"
+    },
+    {
+      "name": "move_then_aim",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "move_then_aim"
+      ],
+      "log": "results/takehome/goal7/logs/move_then_aim.log"
+    },
+    {
+      "name": "briefing",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "briefing"
+      ],
+      "log": "results/takehome/goal7/logs/briefing.log"
+    },
+    {
+      "name": "privileged_critic",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "privileged_critic"
+      ],
+      "log": "results/takehome/goal7/logs/privileged_critic.log"
+    },
+    {
+      "name": "one_critic",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "one_critic"
+      ],
+      "log": "results/takehome/goal7/logs/one_critic.log"
+    },
+    {
+      "name": "one_update",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "one_update"
+      ],
+      "log": "results/takehome/goal7/logs/one_update.log"
+    },
+    {
+      "name": "aim_cap_50um",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "aim_cap_50um"
+      ],
+      "log": "results/takehome/goal7/logs/aim_cap_50um.log"
+    },
+    {
+      "name": "aim_cap_200um",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "aim_cap_200um"
+      ],
+      "log": "results/takehome/goal7/logs/aim_cap_200um.log"
+    },
+    {
+      "name": "movement_cap_400um",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "movement_cap_400um"
+      ],
+      "log": "results/takehome/goal7/logs/movement_cap_400um.log"
+    },
+    {
+      "name": "final_decider",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "final_decider"
+      ],
+      "log": "results/takehome/goal7/logs/final_decider.log"
+    },
+    {
+      "name": "near_hole",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "near_hole"
+      ],
+      "log": "results/takehome/goal7/logs/near_hole.log"
+    },
+    {
+      "name": "contact_cap",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "contact_cap"
+      ],
+      "log": "results/takehome/goal7/logs/contact_cap.log"
+    },
+    {
+      "name": "uncertainty_cap",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "uncertainty_cap"
+      ],
+      "log": "results/takehome/goal7/logs/uncertainty_cap.log"
+    },
+    {
+      "name": "classification",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "classification"
+      ],
+      "log": "results/takehome/goal7/logs/classification.log"
+    },
+    {
+      "name": "three_step",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "three_step"
+      ],
+      "log": "results/takehome/goal7/logs/three_step.log"
+    },
+    {
+      "name": "return_floor",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "return_floor"
+      ],
+      "log": "results/takehome/goal7/logs/return_floor.log"
+    },
+    {
+      "name": "force_penalty",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "force_penalty"
+      ],
+      "log": "results/takehome/goal7/logs/force_penalty.log"
+    },
+    {
+      "name": "sibling_fill",
+      "args": [
+        "takehome/train_variants.py",
+        "--manifest",
+        "results/takehome/goal7_screening_manifest.json",
+        "--setting",
+        "sibling_fill"
+      ],
+      "log": "results/takehome/goal7/logs/sibling_fill.log"
+    }
+  ],
+  "test_seed": 123,
+  "final_test_episodes": 500,
+  "prior_settings": 4,
+  "new_settings": 24,
+  "total_settings_after_screening": 28,
+  "suite_summary": "results/takehome/goal7/screening_suite.json"
+}

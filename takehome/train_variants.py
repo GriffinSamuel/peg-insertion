@@ -7,6 +7,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from takehome.runtime import ROOT  # noqa: E402
 from takehome.variants import VariantConfig  # noqa: E402
 from takehome.variant_runner import VariantExperimentRunner  # noqa: E402
+import numpy as np  # noqa: E402
+
+
+def check_seed_outcomes(output, seeds, config):
+    baseline = json.loads((ROOT / config.baseline_path).read_text())
+    zero_policy = all(baseline['conditions'][k]['success_rate'] == 0
+                      for k in ('normal', 'no_camera_bias'))
+    outcomes = []
+    for seed in seeds:
+        with np.load(output / f'seed_{seed}/test_0200_episodes.npz') as archive:
+            outcomes.append(archive['succeeded'])
+    if len(outcomes) > 1 and not zero_policy and all(np.array_equal(outcomes[0], x) for x in outcomes[1:]):
+        raise RuntimeError('Tripwire: every learning seed has identical per-episode test outcomes')
 
 
 def main():
@@ -34,12 +47,14 @@ def main():
         raise ValueError('Output must be in results/takehome')
     todo = [s for s in seeds if not (output / f'seed_{s}/result.json').exists()]
     if not todo:
+        check_seed_outcomes(output, seeds, cfg)
         print('All named results exist; no practice collected.')
         return
     runner = VariantExperimentRunner(cfg)
     for seed in todo:
         result = runner.run(seed, output / f'seed_{seed}')
         print(json.dumps(dict(setting=a.setting, seed=seed, final=result['final'])), flush=True)
+    check_seed_outcomes(output, seeds, cfg)
 
 
 if __name__ == '__main__':

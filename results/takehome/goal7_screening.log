@@ -1,0 +1,48 @@
+START fill_0 33220
+START fill_10 33221
+START fill_20 33222
+START fill_80 33223
+FINISH {"name": "fill_80", "exit_code": 0, "seconds": 445.09258062700064}
+START fill_120 35923
+FINISH {"name": "fill_20", "exit_code": 0, "seconds": 593.1495795049996}
+START side_by_side 36370
+FINISH {"name": "fill_10", "exit_code": 0, "seconds": 618.1761419600007}
+START aim_then_move 36529
+FINISH {"name": "fill_0", "exit_code": 0, "seconds": 632.1932050159994}
+START move_then_aim 36956
+FINISH {"name": "fill_120", "exit_code": 0, "seconds": 266.1015580149997}
+START briefing 38537
+FINISH {"name": "move_then_aim", "exit_code": 0, "seconds": 514.1192383930011}
+START privileged_critic 39541
+FINISH {"name": "aim_then_move", "exit_code": 0, "seconds": 531.1598935269994}
+START one_critic 39553
+FINISH {"name": "briefing", "exit_code": 0, "seconds": 602.172176868}
+START one_update 41959
+FINISH {"name": "one_update", "exit_code": 0, "seconds": 175.04220465100116}
+START aim_cap_50um 43150
+FINISH {"name": "side_by_side", "exit_code": 0, "seconds": 950.3242510389991}
+START aim_cap_200um 43908
+FINISH {"name": "privileged_critic", "exit_code": 0, "seconds": 541.1911108910008}
+START movement_cap_400um 44664
+FINISH {"name": "one_critic", "exit_code": 0, "seconds": 554.1866227699993}
+START final_decider 44914
+FINISH {"name": "aim_cap_50um", "exit_code": 0, "seconds": 524.1454521679989}
+START near_hole 48100
+FINISH {"name": "aim_cap_200um", "exit_code": 0, "seconds": 518.1430896679994}
+START contact_cap 48903
+FINISH {"name": "movement_cap_400um", "exit_code": 0, "seconds": 534.1673829010015}
+START uncertainty_cap 49903
+FINISH {"name": "final_decider", "exit_code": 0, "seconds": 556.1842623699995}
+START classification 50567
+FINISH {"name": "near_hole", "exit_code": 0, "seconds": 519.1801568589999}
+START three_step 52379
+FINISH {"name": "contact_cap", "exit_code": 0, "seconds": 537.1898822359999}
+START return_floor 52928
+FINISH {"name": "uncertainty_cap", "exit_code": 0, "seconds": 526.1800854929988}
+START force_penalty 53443
+FINISH {"name": "classification", "exit_code": 0, "seconds": 543.1717541830003}
+START sibling_fill 54204
+FINISH {"name": "three_step", "exit_code": 0, "seconds": 507.162018504001}
+FINISH {"name": "return_floor", "exit_code": 0, "seconds": 508.1411952720009}
+FINISH {"name": "force_penalty", "exit_code": 0, "seconds": 448.11462075000054}
+FINISH {"name": "sibling_fill", "exit_code": 0, "seconds": 422.08864768999956}

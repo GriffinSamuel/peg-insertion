@@ -1,0 +1,2196 @@
+{
+  "manifest": "results/takehome/goal7_partial_audit2_manifest.json",
+  "setting_count": 14,
+  "settings": [
+    {
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "overrides": {
+        "fill_episodes": 0
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/fill_0",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/fill_0/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 0,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 306,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_0/seed_0/budget.json",
+            "entries": 200,
+            "fill": 0,
+            "online": 200
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_0/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_0/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_0/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_0/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 0,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 313,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_0/seed_1/budget.json",
+            "entries": 200,
+            "fill": 0,
+            "online": 200
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_0/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_0/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_0/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_0/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 0,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 316,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_0/seed_2/budget.json",
+            "entries": 200,
+            "fill": 0,
+            "online": 200
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_0/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_0/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_0/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "overrides": {
+        "fill_episodes": 10
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/fill_10",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/fill_10/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 10,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 319,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_10/seed_0/budget.json",
+            "entries": 200,
+            "fill": 10,
+            "online": 190
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_10/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_10/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_10/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_10/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 10,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 303,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_10/seed_1/budget.json",
+            "entries": 200,
+            "fill": 10,
+            "online": 190
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_10/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_10/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_10/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_10/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 10,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 350,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_10/seed_2/budget.json",
+            "entries": 200,
+            "fill": 10,
+            "online": 190
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_10/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_10/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_10/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "overrides": {
+        "fill_episodes": 20
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/fill_20",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/fill_20/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 20,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 362,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_20/seed_0/budget.json",
+            "entries": 200,
+            "fill": 20,
+            "online": 180
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_20/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_20/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_20/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_20/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 20,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 308,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_20/seed_1/budget.json",
+            "entries": 200,
+            "fill": 20,
+            "online": 180
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_20/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_20/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_20/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_20/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 20,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 307,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_20/seed_2/budget.json",
+            "entries": 200,
+            "fill": 20,
+            "online": 180
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_20/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_20/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_20/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "overrides": {
+        "fill_episodes": 80
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/fill_80",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/fill_80/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 80,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 243,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_80/seed_0/budget.json",
+            "entries": 200,
+            "fill": 80,
+            "online": 120
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_80/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_80/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_80/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_80/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 80,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 332,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_80/seed_1/budget.json",
+            "entries": 200,
+            "fill": 80,
+            "online": 120
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_80/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_80/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_80/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_80/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 80,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 375,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_80/seed_2/budget.json",
+            "entries": 200,
+            "fill": 80,
+            "online": 120
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_80/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_80/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_80/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "overrides": {
+        "fill_episodes": 120
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/fill_120",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/fill_120/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 120,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 306,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_120/seed_0/budget.json",
+            "entries": 200,
+            "fill": 120,
+            "online": 80
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_120/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_120/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_120/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_120/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 120,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 326,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_120/seed_1/budget.json",
+            "entries": 200,
+            "fill": 120,
+            "online": 80
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_120/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_120/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_120/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/fill_120/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 120,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 82,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/fill_120/seed_2/budget.json",
+            "entries": 200,
+            "fill": 120,
+            "online": 80
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/fill_120/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/fill_120/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/fill_120/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "side_by_side",
+      "label": "side by side",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/side_by_side",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/side_by_side/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 222,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/side_by_side/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/side_by_side/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/side_by_side/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/side_by_side/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/side_by_side/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 331,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/side_by_side/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/side_by_side/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/side_by_side/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/side_by_side/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/side_by_side/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 390,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/side_by_side/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/side_by_side/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/side_by_side/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/side_by_side/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/aim_then_move",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/aim_then_move/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 264,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_then_move/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_then_move/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_then_move/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_then_move/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/aim_then_move/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 420,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_then_move/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_then_move/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_then_move/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_then_move/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/aim_then_move/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 466,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_then_move/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_then_move/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_then_move/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_then_move/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/move_then_aim",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/move_then_aim/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 373,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/move_then_aim/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/move_then_aim/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/move_then_aim/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/move_then_aim/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/move_then_aim/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 358,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/move_then_aim/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/move_then_aim/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/move_then_aim/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/move_then_aim/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/move_then_aim/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 440,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/move_then_aim/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/move_then_aim/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/move_then_aim/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/move_then_aim/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "briefing",
+      "label": "Critic briefing on own fill",
+      "overrides": {
+        "briefing": true
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/briefing",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/briefing/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 293,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/briefing/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/briefing/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/briefing/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/briefing/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/briefing/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 344,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/briefing/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/briefing/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/briefing/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/briefing/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/briefing/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 356,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/briefing/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/briefing/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/briefing/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/briefing/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "privileged_critic",
+      "label": "True bias to critic during training",
+      "overrides": {
+        "privileged_critic": true
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/privileged_critic",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/privileged_critic/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 337,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/privileged_critic/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/privileged_critic/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/privileged_critic/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/privileged_critic/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/privileged_critic/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 324,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/privileged_critic/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/privileged_critic/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/privileged_critic/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/privileged_critic/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/privileged_critic/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 324,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/privileged_critic/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/privileged_critic/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/privileged_critic/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/privileged_critic/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "one_critic",
+      "label": "One critic",
+      "overrides": {
+        "ensemble": 1
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/one_critic",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/one_critic/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 351,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/one_critic/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/one_critic/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/one_critic/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/one_critic/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/one_critic/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 332,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/one_critic/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/one_critic/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/one_critic/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/one_critic/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/one_critic/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 323,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/one_critic/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/one_critic/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/one_critic/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/one_critic/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "one_update",
+      "label": "One update per new step",
+      "overrides": {
+        "updates_per_step": 1
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/one_update",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/one_update/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 348,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/one_update/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/one_update/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/one_update/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/one_update/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/one_update/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 292,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/one_update/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/one_update/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/one_update/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/one_update/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/one_update/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 63,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/one_update/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/one_update/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/one_update/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/one_update/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "aim_cap_50um",
+      "label": "Aim cap 0.05 mm",
+      "overrides": {
+        "step_cap": 5e-05
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/aim_cap_50um",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 317,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_cap_50um/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_cap_50um/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_cap_50um/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_cap_50um/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 2,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_cap_50um/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_cap_50um/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_cap_50um/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_cap_50um/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 345,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_cap_50um/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_cap_50um/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_cap_50um/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_cap_50um/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    },
+    {
+      "name": "aim_cap_200um",
+      "label": "Aim cap 0.2 mm",
+      "overrides": {
+        "step_cap": 0.0002
+      },
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "output": "results/takehome/goal7/screening/aim_cap_200um",
+      "runs": [
+        {
+          "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/result.json",
+          "seed": 0,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 383,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_cap_200um/seed_0/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_cap_200um/seed_0/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_cap_200um/seed_0/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_cap_200um/seed_0/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/result.json",
+          "seed": 1,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 322,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_cap_200um/seed_1/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_cap_200um/seed_1/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_cap_200um/seed_1/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_cap_200um/seed_1/test_0200_traces.npz"
+          }
+        },
+        {
+          "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/result.json",
+          "seed": 2,
+          "practice_episodes": 200,
+          "fill_episodes": 40,
+          "final_test_episodes": 500,
+          "final_test_seed": 123,
+          "successes": 315,
+          "checks": {
+            "seed_matches_path": true,
+            "config_matches_overrides": true,
+            "exactly_200_practice": true,
+            "fill_matches_config": true,
+            "online_is_budget_remainder": true,
+            "finite_result_and_losses": true,
+            "frozen_policy_unchanged": true,
+            "no_through_wall_episodes": true,
+            "test_data_not_learned_from": true,
+            "final_test_contract": true,
+            "budget_ledger_exact": true,
+            "final_model_exists": true,
+            "replay_exists": true,
+            "no_practice_outputs_above_budget": true,
+            "point0_baseline_contract": true,
+            "final_curve_point_200": true,
+            "intermediate_curve_tests": true,
+            "finite_curve": true,
+            "finite_final_trace": true,
+            "final_trace_episode_count": true,
+            "final_trace_flags": true,
+            "trace_successes_match_json": true,
+            "no_test_trace_outputs_above_budget": true,
+            "no_intermediate_test_traces": true
+          },
+          "budget": {
+            "path": "results/takehome/goal7/screening/aim_cap_200um/seed_2/budget.json",
+            "entries": 200,
+            "fill": 40,
+            "online": 160
+          },
+          "artifact_paths": {
+            "model": "results/takehome/goal7/screening/aim_cap_200um/seed_2/model_0200.pkl",
+            "replay": "results/takehome/goal7/screening/aim_cap_200um/seed_2/replay.npz",
+            "final_trace": "results/takehome/goal7/screening/aim_cap_200um/seed_2/test_0200_traces.npz"
+          }
+        }
+      ],
+      "final_success_arrays_present": true,
+      "final_success_arrays_all_identical": false,
+      "baseline_floor_ceiling_zero_exemption": false
+    }
+  ],
+  "failure_count": 0,
+  "failures": [],
+  "passed": true
+}

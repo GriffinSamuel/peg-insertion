@@ -1,0 +1,127 @@
+{
+  "jobs": [
+    {
+      "name": "fill_80",
+      "exit_code": 0,
+      "seconds": 445.09258062700064
+    },
+    {
+      "name": "fill_20",
+      "exit_code": 0,
+      "seconds": 593.1495795049996
+    },
+    {
+      "name": "fill_10",
+      "exit_code": 0,
+      "seconds": 618.1761419600007
+    },
+    {
+      "name": "fill_0",
+      "exit_code": 0,
+      "seconds": 632.1932050159994
+    },
+    {
+      "name": "fill_120",
+      "exit_code": 0,
+      "seconds": 266.1015580149997
+    },
+    {
+      "name": "move_then_aim",
+      "exit_code": 0,
+      "seconds": 514.1192383930011
+    },
+    {
+      "name": "aim_then_move",
+      "exit_code": 0,
+      "seconds": 531.1598935269994
+    },
+    {
+      "name": "briefing",
+      "exit_code": 0,
+      "seconds": 602.172176868
+    },
+    {
+      "name": "one_update",
+      "exit_code": 0,
+      "seconds": 175.04220465100116
+    },
+    {
+      "name": "side_by_side",
+      "exit_code": 0,
+      "seconds": 950.3242510389991
+    },
+    {
+      "name": "privileged_critic",
+      "exit_code": 0,
+      "seconds": 541.1911108910008
+    },
+    {
+      "name": "one_critic",
+      "exit_code": 0,
+      "seconds": 554.1866227699993
+    },
+    {
+      "name": "aim_cap_50um",
+      "exit_code": 0,
+      "seconds": 524.1454521679989
+    },
+    {
+      "name": "aim_cap_200um",
+      "exit_code": 0,
+      "seconds": 518.1430896679994
+    },
+    {
+      "name": "movement_cap_400um",
+      "exit_code": 0,
+      "seconds": 534.1673829010015
+    },
+    {
+      "name": "final_decider",
+      "exit_code": 0,
+      "seconds": 556.1842623699995
+    },
+    {
+      "name": "near_hole",
+      "exit_code": 0,
+      "seconds": 519.1801568589999
+    },
+    {
+      "name": "contact_cap",
+      "exit_code": 0,
+      "seconds": 537.1898822359999
+    },
+    {
+      "name": "uncertainty_cap",
+      "exit_code": 0,
+      "seconds": 526.1800854929988
+    },
+    {
+      "name": "classification",
+      "exit_code": 0,
+      "seconds": 543.1717541830003
+    },
+    {
+      "name": "three_step",
+      "exit_code": 0,
+      "seconds": 507.162018504001
+    },
+    {
+      "name": "return_floor",
+      "exit_code": 0,
+      "seconds": 508.1411952720009
+    },
+    {
+      "name": "force_penalty",
+      "exit_code": 0,
+      "seconds": 448.11462075000054
+    },
+    {
+      "name": "sibling_fill",
+      "exit_code": 0,
+      "seconds": 422.08864768999956
+    }
+  ],
+  "seconds": 3230.0568685,
+  "finished_utc": "2026-11-16T02:11:24.782098+00:00",
+  "passed": true
+}

@@ -1,0 +1,6 @@
+START aim 57483
+START movement 57484
+START combined 57485
+FINISH {"name": "movement", "exit_code": 0, "seconds": 643.1191727300011}
+FINISH {"name": "combined", "exit_code": 0, "seconds": 665.1185114400014}
+FINISH {"name": "aim", "exit_code": 0, "seconds": 670.1337031669991}

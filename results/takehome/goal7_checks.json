@@ -1,0 +1,109 @@
+{
+  "goal": 7,
+  "completed_utc": "2026-11-16T02:26:04.802549+00:00",
+  "checks": [
+    {
+      "check": "all choosing used the development seeds under \"Definitions\" (test seed 123), and nothing touched the confirmation seeds before the choice was written down",
+      "passed": true,
+      "evidence": [
+        "CODEX_GOALS.md",
+        "results/takehome/goal7_screening_manifest.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_screening_audit.json",
+        "results/takehome/goal7_screening_source_audit.json",
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_confirmation_manifest.json"
+      ]
+    },
+    {
+      "check": "each experiment used its own 200 practice episodes",
+      "passed": true,
+      "evidence": [
+        "results/takehome/goal7_screening_audit.json",
+        "results/takehome/goal7_screening_manifest.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7/confirmation/aim/seed_100/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_100/result.json"
+      ]
+    },
+    {
+      "check": "the total number of settings tried is stated",
+      "passed": true,
+      "evidence": [
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7_screening_manifest.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "TAKEHOME_DECISIONS.md"
+      ]
+    },
+    {
+      "check": "differences smaller than the seed-to-seed spread are marked as not a real difference",
+      "passed": true,
+      "evidence": [
+        "results/takehome/goal7_summary.json",
+        "takehome/exploration.py",
+        "results/takehome/goal7/exploration.csv"
+      ]
+    },
+    {
+      "check": "the best setting is chosen by the fixed rule in the autopilot rules, with the choice and reason written down first",
+      "passed": true,
+      "evidence": [
+        "CODEX_GOALS.md",
+        "takehome/exploration.py",
+        "results/takehome/goal7_summary.json",
+        "results/takehome/goal7_round2_manifest.json",
+        "results/takehome/goal7_choice.json",
+        "TAKEHOME_DECISIONS.md"
+      ]
+    },
+    {
+      "check": "the chosen setting is then run on the confirmation seeds (practice 100 to 104, test seed 456), and that result is reported as the headline even if it is lower than the exploration result",
+      "passed": true,
+      "evidence": [
+        "results/takehome/goal7_choice.json",
+        "results/takehome/goal7_confirmation_manifest.json",
+        "results/takehome/confirmation_baseline.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_101/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_102/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_103/result.json",
+        "TAKEHOME_REPORT.md",
+        "results/takehome/goal7/confirmation/confirmation_summary.json"
+      ]
+    },
+    {
+      "check": "the three Goal 6 learners at their plain settings are also run on the confirmation seeds, with the floor and ceiling measured on test seed 456, and the report says plainly that the final method had the benefit of tuning and the others did not, with the number of settings tried shown next to each method",
+      "passed": true,
+      "evidence": [
+        "results/takehome/goal7_confirmation_manifest.json",
+        "results/takehome/confirmation_baseline.json",
+        "results/takehome/goal7/confirmation/aim/seed_100/result.json",
+        "results/takehome/goal7/confirmation/movement/seed_100/result.json",
+        "results/takehome/goal7/confirmation/combined/seed_100/result.json",
+        "results/takehome/goal7/confirmation/confirmation_summary.json",
+        "TAKEHOME_REPORT.md"
+      ]
+    }
+  ],
+  "all_goal_checks_pass": true,
+  "total_settings_tried": 28,
+  "new_screening_runs": 72,
+  "confirmation_runs": 15,
+  "round2_runs": 0,
+  "selection_precedes_confirmation": true,
+  "source_audit": "results/takehome/goal7_source_audit.json",
+  "confirmation_audit": "results/takehome/goal7_confirmation_audit.json",
+  "headline_method": "movement",
+  "headline_mean": 0.802,
+  "headline_sample_spread": 0.0651766829472013,
+  "full_test_episodes_total": 285226,
+  "practice_episodes_total": 22210,
+  "reset_only_probes_total": 182,
+  "chart_visual_review_passed": true,
+  "all_final_through_wall_counts_zero": true,
+  "ceiling_extra_tests": 0
+}

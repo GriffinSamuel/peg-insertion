@@ -1,0 +1,118 @@
+{
+  "settings": [
+    {
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "overrides": {
+        "fill_episodes": 0
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_0"
+    },
+    {
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "overrides": {
+        "fill_episodes": 10
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_10"
+    },
+    {
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "overrides": {
+        "fill_episodes": 20
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_20"
+    },
+    {
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "overrides": {
+        "fill_episodes": 80
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_80"
+    },
+    {
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "overrides": {
+        "fill_episodes": 120
+      },
+      "base": "aim",
+      "changes_from_main": 1,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/fill_120"
+    },
+    {
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/aim_then_move"
+    },
+    {
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "base": "combined",
+      "changes_from_main": 2,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "round": "screening",
+      "output": "results/takehome/goal7/screening/move_then_aim"
+    }
+  ]
+}
