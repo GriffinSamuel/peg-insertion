@@ -1,0 +1,175 @@
+{
+  "measured_solo_minutes_per_run": 1.9337719078499958,
+  "fastest_measured_setup": "parallel4",
+  "fastest_measured_minutes_per_run": 0.9668486925041672,
+  "rows": [
+    {
+      "goal": 6,
+      "description": "15 new learners; reuse main/floor/ceiling",
+      "new_training_runs_likely": 15,
+      "new_training_runs_upper": 15,
+      "additional_tests_likely": 0,
+      "additional_tests_upper": 0,
+      "training_minutes_per_run_estimate": 1.9337719078499958,
+      "evaluation_minutes_estimate": null,
+      "cpu_minutes_serial": 5,
+      "implementation_minutes_serial": 25,
+      "serial_hours_likely": 0.9834429769624989,
+      "fastest_setup_hours_likely": 0.5958788397927085,
+      "worst_case_hours": 1.9668859539249979
+    },
+    {
+      "goal": 7,
+      "description": "72 screening + 26 follow-up + 20 confirmation; upper bound 235",
+      "new_training_runs_likely": 118,
+      "new_training_runs_upper": 235,
+      "additional_tests_likely": 2,
+      "additional_tests_upper": 2,
+      "training_minutes_per_run_estimate": 2.417214884812495,
+      "evaluation_minutes_estimate": 0.5,
+      "cpu_minutes_serial": 10,
+      "implementation_minutes_serial": 90,
+      "serial_hours_likely": 6.437189273464573,
+      "fastest_setup_hours_likely": 3.601836369072744,
+      "worst_case_hours": 18.514546611491635
+    },
+    {
+      "goal": 8,
+      "description": "5 saved-data analyses; no fresh practice",
+      "new_training_runs_likely": 0,
+      "new_training_runs_upper": 0,
+      "additional_tests_likely": 0,
+      "additional_tests_upper": 5,
+      "training_minutes_per_run_estimate": null,
+      "evaluation_minutes_estimate": null,
+      "cpu_minutes_serial": 10,
+      "implementation_minutes_serial": 20,
+      "serial_hours_likely": 0.5,
+      "fastest_setup_hours_likely": 0.3333333333333333,
+      "worst_case_hours": 1.0833333333333333
+    },
+    {
+      "goal": 9,
+      "description": "20 videos at 1.5 min each; one before-trace test",
+      "new_training_runs_likely": 0,
+      "new_training_runs_upper": 0,
+      "additional_tests_likely": 1,
+      "additional_tests_upper": 6,
+      "training_minutes_per_run_estimate": null,
+      "evaluation_minutes_estimate": 0.5,
+      "cpu_minutes_serial": 30,
+      "implementation_minutes_serial": 30,
+      "serial_hours_likely": 1.0083333333333333,
+      "fastest_setup_hours_likely": 0.55,
+      "worst_case_hours": 2.1
+    },
+    {
+      "goal": 10,
+      "description": "3 policies x 3 seeds; six floor/ceiling tests",
+      "new_training_runs_likely": 9,
+      "new_training_runs_upper": 9,
+      "additional_tests_likely": 6,
+      "additional_tests_upper": 6,
+      "training_minutes_per_run_estimate": 2.417214884812495,
+      "evaluation_minutes_estimate": 0.5,
+      "cpu_minutes_serial": 5,
+      "implementation_minutes_serial": 10,
+      "serial_hours_likely": 0.6625822327218742,
+      "fastest_setup_hours_likely": 0.397950796511198,
+      "worst_case_hours": 1.1801315723549985
+    },
+    {
+      "goal": 11,
+      "description": "8 problems x 3 retrains; 24 transfer + 8 floor + 8 oracle tests",
+      "new_training_runs_likely": 24,
+      "new_training_runs_upper": 24,
+      "additional_tests_likely": 40,
+      "additional_tests_upper": 40,
+      "training_minutes_per_run_estimate": 2.417214884812495,
+      "evaluation_minutes_estimate": 0.5,
+      "cpu_minutes_serial": 10,
+      "implementation_minutes_serial": 60,
+      "serial_hours_likely": 2.466885953924998,
+      "fastest_setup_hours_likely": 1.6500910129187503,
+      "worst_case_hours": 4.547017526279997
+    },
+    {
+      "goal": 12,
+      "description": "Report and figure reproduction; no new experiment",
+      "new_training_runs_likely": 0,
+      "new_training_runs_upper": 0,
+      "additional_tests_likely": 0,
+      "additional_tests_upper": 0,
+      "training_minutes_per_run_estimate": null,
+      "evaluation_minutes_estimate": null,
+      "cpu_minutes_serial": 10,
+      "implementation_minutes_serial": 45,
+      "serial_hours_likely": 0.9166666666666666,
+      "fastest_setup_hours_likely": 0.6458333333333334,
+      "worst_case_hours": 1.8333333333333333
+    },
+    {
+      "goal": 13,
+      "description": "1 confirmation-seed rerun plus old/new tests and audit",
+      "new_training_runs_likely": 1,
+      "new_training_runs_upper": 1,
+      "additional_tests_likely": 0,
+      "additional_tests_upper": 0,
+      "training_minutes_per_run_estimate": 2.417214884812495,
+      "evaluation_minutes_estimate": null,
+      "cpu_minutes_serial": 20,
+      "implementation_minutes_serial": 15,
+      "serial_hours_likely": 0.6236202480802082,
+      "fastest_setup_hours_likely": 0.3743093477605035,
+      "worst_case_hours": 1.2311257302616665
+    }
+  ],
+  "cut_list": [
+    {
+      "proposal": "Skip Goal 7 combination round",
+      "training_runs_saved": 26,
+      "tests_saved": 0,
+      "estimated_hours_saved": 0.8987097084397572
+    },
+    {
+      "proposal": "Screen 12 new settings instead of 24",
+      "training_runs_saved": 36,
+      "tests_saved": 0,
+      "estimated_hours_saved": 1.2876365193781254
+    },
+    {
+      "proposal": "Retrain on four camera problems instead of eight",
+      "training_runs_saved": 12,
+      "tests_saved": 20,
+      "estimated_hours_saved": 0.8111566175704863
+    },
+    {
+      "proposal": "Drop the position-only and hovering-policy extensions",
+      "training_runs_saved": 6,
+      "tests_saved": 4,
+      "estimated_hours_saved": 0.2333560865630209
+    },
+    {
+      "proposal": "Render one example per failure type per side instead of two",
+      "training_runs_saved": 0,
+      "tests_saved": 0,
+      "estimated_hours_saved": 0.14583333333333334
+    }
+  ],
+  "totals": {
+    "serial_hours_likely": 13.598720685154152,
+    "fastest_setup_hours_likely": 8.14923303272257,
+    "worst_case_hours": 32.45637406097996
+  },
+  "assumptions": [
+    "Estimates, not runtime guarantees; laptop must remain awake.",
+    "Likely Goal 7: 24 new single-change settings x 3 seeds, four combinations x 5 plus two extra seeds for three promising singles, then up to four methods x 5 confirmation seeds.",
+    "Goal 7 upper bound: up to 43 new configurations x 5 seeds plus 20 confirmation runs, treating two of the 45 configurations as already available references.",
+    "Future complex learners estimated at 1.25 times main-run cost; worst case allows twice solo cost and no GPU concurrency advantage.",
+    "Writing/review/plot overhead is a planning estimate; helpers assumed to shorten that portion by 25%. They do not multiply GPU capacity.",
+    "Saved-data analyses and rendering estimates are not benchmarked here; videos assume 20 x 1.5 min and three CPU workers.",
+    "GPU throughput comparisons use small groups and different seeds, so the fastest observed setup is provisional. All forecasts include implementation/review time and leave evaluation work serial.",
+    "Worst case is a planning allowance, not an upper bound on interruptions or debugging. No confirmation seeds have been used for this estimate.",
+    "Cuts are proposals for Griffin, not changes already made. Savings are approximate and not all independent."
+  ]
+}

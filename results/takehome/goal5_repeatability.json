@@ -1,0 +1,225 @@
+{
+  "comparisons": [
+    {
+      "left": "solo/seed_0",
+      "right": "parallel4/seed_0",
+      "first_fill_batch": {
+        "obs": {
+          "identical": false,
+          "max_abs_difference": 1.8462807536125183,
+          "first_difference_index": [
+            0,
+            0,
+            10
+          ]
+        },
+        "action": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "true_bias": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "guess": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "force": {
+          "identical": false,
+          "max_abs_difference": 162.79715630412102,
+          "first_difference_index": [
+            0,
+            0
+          ]
+        },
+        "success": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            164,
+            0
+          ]
+        },
+        "terminated": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            164,
+            0
+          ]
+        }
+      },
+      "final_test_success_bits_differ": 173
+    },
+    {
+      "left": "solo/seed_0",
+      "right": "one_process_two_seeds/seed_0",
+      "first_fill_batch": {
+        "obs": {
+          "identical": false,
+          "max_abs_difference": 1.4317830801010132,
+          "first_difference_index": [
+            0,
+            1,
+            10
+          ]
+        },
+        "action": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "true_bias": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "guess": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "force": {
+          "identical": false,
+          "max_abs_difference": 162.7037445306778,
+          "first_difference_index": [
+            0,
+            4
+          ]
+        },
+        "success": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            179,
+            5
+          ]
+        },
+        "terminated": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            179,
+            5
+          ]
+        }
+      },
+      "final_test_success_bits_differ": 129
+    },
+    {
+      "left": "parallel2/seed_1",
+      "right": "parallel4/seed_1",
+      "first_fill_batch": {
+        "obs": {
+          "identical": false,
+          "max_abs_difference": 1.3939643204212189,
+          "first_difference_index": [
+            0,
+            0,
+            10
+          ]
+        },
+        "action": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "true_bias": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "guess": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "force": {
+          "identical": false,
+          "max_abs_difference": 168.69353353977203,
+          "first_difference_index": [
+            0,
+            0
+          ]
+        },
+        "success": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            141,
+            4
+          ]
+        },
+        "terminated": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            141,
+            4
+          ]
+        }
+      },
+      "final_test_success_bits_differ": 226
+    },
+    {
+      "left": "parallel2/seed_1",
+      "right": "one_process_two_seeds/seed_1",
+      "first_fill_batch": {
+        "obs": {
+          "identical": false,
+          "max_abs_difference": 1.742696225643158,
+          "first_difference_index": [
+            0,
+            0,
+            10
+          ]
+        },
+        "action": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "true_bias": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "guess": {
+          "identical": true,
+          "max_abs_difference": 0.0,
+          "first_difference_index": null
+        },
+        "force": {
+          "identical": false,
+          "max_abs_difference": 168.6735855937004,
+          "first_difference_index": [
+            0,
+            2
+          ]
+        },
+        "success": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            141,
+            4
+          ]
+        },
+        "terminated": {
+          "identical": false,
+          "max_abs_difference": 1.0,
+          "first_difference_index": [
+            141,
+            4
+          ]
+        }
+      },
+      "final_test_success_bits_differ": 130
+    }
+  ],
+  "interpretation": "Repeated seed runs differ already in their first fill-up trajectories, before learner updates. Core source and random-number-derived bias/actions are audited separately. The cause is unresolved; no deterministic-repeatability claim is made."
+}

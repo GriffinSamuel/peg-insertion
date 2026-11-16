@@ -1,0 +1,6 @@
+seed,result_path,practice_episodes,fill_episodes,learner_episodes,final_test_episodes,final_test_seed,final_successes,final_success_rate,seconds_excluding_imports
+0,results/takehome/benchmark/solo/seed_0/result.json,200,40,160,500,123,365,0.73,91.12095377300011
+1,results/takehome/benchmark/parallel2/seed_1/result.json,200,40,160,500,123,278,0.556,110.86481868600004
+2,results/takehome/benchmark/parallel2/seed_2/result.json,200,40,160,500,123,315,0.63,110.3293479670001
+3,results/takehome/benchmark/parallel4/seed_3/result.json,200,40,160,500,123,305,0.61,201.1392039809998
+4,results/takehome/benchmark/parallel4/seed_4/result.json,200,40,160,500,123,366,0.732,198.0754592459998

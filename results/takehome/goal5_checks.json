@@ -1,0 +1,17 @@
+{
+  "five_designated_seeds_finished": true,
+  "all_seeds_shown": true,
+  "floor_and_ceiling_compared": true,
+  "plain_result_interpretation": "Small measured average improvement, smaller than seed-to-seed spread; reliable improvement not established.",
+  "all_runs_budget_and_test_audit_passed": true,
+  "core_source_unchanged": true,
+  "all_five_outcomes_identical": false,
+  "all_final_through_wall_counts_zero": true,
+  "all_benchmark_processes_exited_zero": true,
+  "goal5_practice_episodes": 1800,
+  "practice_episodes_total": 1810,
+  "settings_tried": 1,
+  "full_test_only_episodes_total": 24956,
+  "reset_only_probes_total": 16,
+  "confirmation_used": false
+}

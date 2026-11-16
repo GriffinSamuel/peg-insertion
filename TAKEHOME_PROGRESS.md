@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goal 4 passed, Goal 5 next (2026-11-15)
+## Current status: Goal 5 complete, planned check-in (2026-11-15)
 
-The revised instructions are active and the old sampling pause is resolved. Goals 1–4 pass. Full Goal 4 report follows the historical entries below. Goal 5 will use the fixed benchmark_manifest.json schedule, one main setting, designated practice seeds 0–4, and the prescribed 40/160 split and tests. Stop at the Goal 5 check-in. Practice used so far: 10 in a code trial; learning settings tried: 0.
+The revised instructions are active and the old sampling pause is resolved. Goals 1–5 pass. The five designated runs average 65.16% success with 7.74 percentage points of sample standard deviation, compared with the 61.4% floor and 94.4% ceiling. The small average gain does not establish reliable improvement. All nine benchmark runs finished and are retained. Practice used: 1810 episodes across separate bounded experiments, including the ten-episode code trial; learning settings tried: 1. Stop here under CODEX_GOALS.md's planned Goal 5 check-in. No Goal 6 work or confirmation run has started. Read TAKEHOME_REPORT.md for the complete check-in, including timing estimates and proposed cuts.
 
 ## Current status after revised instructions, 2026-11-15
 
@@ -184,3 +184,41 @@ The learner can now collect practice, reuse that experience, update its networks
 
 ### 8. Questions before the next phase
 No BLOCKING issue. Commit and push Goal 4, then run Goal 5 and stop at its check-in.
+
+## 2026-11-15: Goal 5 complete, planned check-in
+
+### 1. What I did (short list)
+- Completed the predeclared detached nine-run benchmark: five designated main seeds and four timing repeats, each with its own 200-episode ledger.
+- Ran the main aim-only setting with 40 fill-up and 160 learner episodes, saving every learning curve, final model, replay and test trace.
+- Reviewed helper plots, all-run tables and data/source audits; corrected overlapping plot headings without changing any result.
+- Wrote TAKEHOME_REPORT.md with the measured results, references, runtime comparison, per-goal time estimates, cut list and visible usage limits.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+Final main results for practice seeds 0, 1, 2, 3 and 4: 365/500 (73.0%), 278/500 (55.6%), 315/500 (63.0%), 305/500 (61.0%) and 366/500 (73.2%). All tests use seed 123. Mean 65.16%; sample standard deviation 7.74 percentage points. The mean is 3.76 points above the original-policy floor of 61.4%, but 29.24 points below the 94.4% no-camera-bias ceiling. The gain is smaller than the spread and does not establish reliable improvement. Goal 3 remains passed: zero correction 60.4%, supplied true bias 94.2%, each on 500 tests at seed 123.
+
+Each main curve has point 0 from the original 500-test baseline, eight intermediate 256-test points at 40 through 180, and the final 500-test point at 200. The four timing repeats scored 318/500 (seed 0, four processes), 282/500 (seed 1, four processes), 314/500 and 312/500 (seeds 0 and 1 sequentially in one process). All nine results are in results/takehome/goal5_all_runs.csv; none is discarded.
+
+Measured wall times including startup: one run alone 116.03 seconds; two processes, two runs 132.05 seconds; four processes, four runs 232.04 seconds; two seeds in one process 156.03 seconds. Effective time per run is respectively 116.03, 66.02, 58.01 and 78.01 seconds. Full detached benchmark: 637.02 seconds, exit 0. The fastest observed setup is four processes. Remaining-work estimate: 13.6 hours serial, 8.1 hours with that setup and helpers, conservative worst-case allowance 32.5 hours; full per-goal table and assumptions are in results/takehome/time_estimate.md and TAKEHOME_REPORT.md.
+
+### 3. Checks: each check from the goal, marked pass or fail
+- PASS: all five practice seeds finished, and each final result and complete curve is shown.
+- PASS: final result is compared with the measured Goal 1 floor and ceiling.
+- PASS: report plainly states a small measured average improvement with mixed runs, insufficient to establish reliable improvement; no target score was imposed.
+- PASS: real 200-episode runs compared one, two and four GPU processes and multiple seeds in one process; all repeats are retained and identified.
+- PASS: check-in includes Goal 3 evidence, curves, measured timing, per-goal run counts and runtime estimates, likely/worst totals, ordered cuts and allowance visibility.
+- Additional PASS: every budget is exactly 200 with 40 fill-up/160 learner entries, tests remain separate, model/loss/final trace values are finite, frozen policy and seven core source hashes are unchanged, and final through-wall counts are zero. The five learned per-episode outcome arrays are not identical. No confirmation seeds were used. No original source/policies/results outside results/takehome were changed.
+
+### 4. Surprises or problems
+Several curves deteriorate sharply after learning starts, then recover. Same-seed repeats differ: seed 0 ranges from 62.8% to 73.0%. In the saved first fill-up batches, biases, proposed random actions and running guesses match exactly, but sensor readings and contact forces already differ before learning. The cause is unresolved, so neither bitwise repeatability nor a robust benefit is claimed. Core source hashes match across all runs. No tripwire or experimental fallback was triggered. One report-assembly lookup used the wrong JSON field name for through-wall counts; the field was corrected to through_wall_episodes and the read-only check passed without rerunning or changing any experiment.
+
+### 5. Decisions I logged
+Use four concurrent GPU processes provisionally for future batches because measured throughput is highest. Keep the predesignated main results despite differing timing repeats. Record explicit PLAN GAP forecasting assumptions for unspecified future setting counts, video counts, code overhead and runtime multipliers. No proposed cut is applied. Settings, success rules, seeds and tests were not changed after observing scores.
+
+### 6. Practice episodes used, and settings tried so far
+1810 practice episodes total: 1000 across the five designated main experiments, 800 across four independent timing repeats, and 10 in the earlier code trial. Each full experiment remained at exactly 200; the trial remained at 10. One distinct learning setting tried. Cumulative complete test-only episodes: 24,956, plus 16 reset-only probes. Test episodes were never learned from. Settings for Goals 6 and 7 and confirmation seeds remain unused.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+Correcting the camera reading helped some runs and hurt others. The average rose from 61.4% to 65.16%, but the differences between runs were larger than that gain. Giving the system the true error still reaches about 94%, so the main learner has not recovered most of the available benefit. Four GPU processes finished the most experiments per minute in this benchmark. Repeated seeds also varied, and that remains a limitation rather than a reason to replace inconvenient results.
+
+### 8. Questions before the next phase
+BLOCKING: planned Goal 5 check-in under CODEX_GOALS.md's When to stop rule, not a failed goal. Read TAKEHOME_REPORT.md and decide whether to continue as written or apply cuts. The likely remaining laptop-awake estimate is 8.1 hours with the fastest measured setup and helpers; the conservative worst-case allowance is 32.5 hours. Account usage allowance is unavailable (rate_limits is null); no percentage used can be inferred from cumulative token counters. Commit and push this completed goal, then wait for Griffin; do not begin Goal 6.

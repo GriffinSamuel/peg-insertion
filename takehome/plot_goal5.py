@@ -191,7 +191,7 @@ def main():
         ax.set_xticks(x_values)
         ax.set_xlabel("Total practice episodes (fill-up included)")
         ax.set_ylabel("Test success (%)")
-        ax.set_title("Goal 5 learning curves")
+        ax.set_title("Goal 5 learning curves", pad=30)
         ax.text(0.5, 1.01,
                 "Checkpoint tests: 256 episodes, seed 123; final: 500; point 0 baseline: 500",
                 transform=ax.transAxes, ha="center", va="bottom", fontsize=9)
@@ -202,7 +202,7 @@ def main():
         plt.close(fig)
 
         with CSV_PATH.open("w", newline="", encoding="utf-8") as stream:
-            writer = csv.DictWriter(stream, fieldnames=[
+            writer = csv.DictWriter(stream, lineterminator="\n", fieldnames=[
                 "seed", "result_path", "practice_episodes", "fill_episodes",
                 "learner_episodes", "final_test_episodes", "final_test_seed",
                 "final_successes", "final_success_rate", "seconds_excluding_imports",

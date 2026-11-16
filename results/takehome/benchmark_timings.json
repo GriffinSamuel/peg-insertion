@@ -1,0 +1,113 @@
+{
+  "groups": [
+    {
+      "name": "solo",
+      "process_count": 1,
+      "experiments": 1,
+      "seconds": 116.02631447099975,
+      "seconds_per_experiment": 116.02631447099975,
+      "processes": [
+        {
+          "seeds": [
+            0
+          ],
+          "seconds_from_group_start": 116.02492822199929,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/solo_seeds_0.log"
+        }
+      ],
+      "started_utc": "2026-11-15T23:56:31.142429+00:00",
+      "finished_utc": "2026-11-15T23:58:27.168809+00:00"
+    },
+    {
+      "name": "parallel2",
+      "process_count": 2,
+      "experiments": 2,
+      "seconds": 132.04561502699926,
+      "seconds_per_experiment": 66.02280751349963,
+      "processes": [
+        {
+          "seeds": [
+            1
+          ],
+          "seconds_from_group_start": 132.0430932449999,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/parallel2_seeds_1.log"
+        },
+        {
+          "seeds": [
+            2
+          ],
+          "seconds_from_group_start": 132.04343092899944,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/parallel2_seeds_2.log"
+        }
+      ],
+      "started_utc": "2026-11-15T23:58:27.180400+00:00",
+      "finished_utc": "2026-11-16T00:00:39.226125+00:00"
+    },
+    {
+      "name": "parallel4",
+      "process_count": 4,
+      "experiments": 4,
+      "seconds": 232.04368620100013,
+      "seconds_per_experiment": 58.01092155025003,
+      "processes": [
+        {
+          "seeds": [
+            4
+          ],
+          "seconds_from_group_start": 224.04070028800015,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/parallel4_seeds_4.log"
+        },
+        {
+          "seeds": [
+            1
+          ],
+          "seconds_from_group_start": 228.04137334200004,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/parallel4_seeds_1.log"
+        },
+        {
+          "seeds": [
+            3
+          ],
+          "seconds_from_group_start": 230.0417077309994,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/parallel4_seeds_3.log"
+        },
+        {
+          "seeds": [
+            0
+          ],
+          "seconds_from_group_start": 232.04199642000003,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/parallel4_seeds_0.log"
+        }
+      ],
+      "started_utc": "2026-11-16T00:00:39.263477+00:00",
+      "finished_utc": "2026-11-16T00:04:31.307211+00:00"
+    },
+    {
+      "name": "one_process_two_seeds",
+      "process_count": 1,
+      "experiments": 2,
+      "seconds": 156.02812713599997,
+      "seconds_per_experiment": 78.01406356799998,
+      "processes": [
+        {
+          "seeds": [
+            0,
+            1
+          ],
+          "seconds_from_group_start": 156.02663242800008,
+          "exit_code": 0,
+          "log": "results/takehome/benchmark_logs/one_process_two_seeds_seeds_0_1.log"
+        }
+      ],
+      "started_utc": "2026-11-16T00:04:31.390002+00:00",
+      "finished_utc": "2026-11-16T00:07:07.418137+00:00"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "final_success_rate": {
+    "mean": 0.6516,
+    "sample_std_ddof_1": 0.07737441437581287,
+    "min": 0.556,
+    "max": 0.732,
+    "per_seed": {
+      "0": 0.73,
+      "1": 0.556,
+      "2": 0.63,
+      "3": 0.61,
+      "4": 0.732
+    }
+  },
+  "paths": {
+    "manifest": "results/takehome/benchmark_manifest.json",
+    "baseline": "results/takehome/baseline.json",
+    "headline_results": {
+      "0": "results/takehome/benchmark/solo/seed_0/result.json",
+      "1": "results/takehome/benchmark/parallel2/seed_1/result.json",
+      "2": "results/takehome/benchmark/parallel2/seed_2/result.json",
+      "3": "results/takehome/benchmark/parallel4/seed_3/result.json",
+      "4": "results/takehome/benchmark/parallel4/seed_4/result.json"
+    },
+    "plot": "results/takehome/goal5_learning_curves.png",
+    "per_seed_csv": "results/takehome/goal5_per_seed.csv",
+    "aggregate": "results/takehome/goal5_aggregate.json"
+  }
+}

@@ -6,7 +6,7 @@
 - 2026-11-15: The no-camera-error comparison removes the constant sideways bias only and retains step-to-step noise, matching the existing 94.0% reference; reports will call this the no-camera-bias ceiling precisely.
 - 2026-11-15: Python runs use -B and redirect generated caches under results/takehome/; reuse the preflight cache to avoid repeating compilation and preserve existing project files.
 
-Settings tried so far: 0 learning settings; evaluation and preflight checks are not learning experiments.
+Settings tried so far: 1 learning setting (main aim-only, 40 fill-up / 160 learner episodes); the ten-episode code trial, evaluations and timing repeats do not add settings.
 
 - 2026-11-15: Initial aim correction uses a maximum 0.1 mm nudge per axis per step and a 3 mm running-guess cap per axis; gradual corrections can cover four standard deviations of the specified bias.
 - 2026-11-15: Implement the wrapper as a subclass in takehome/, because the existing domain-randomization wrapper calls the unwrapped environment directly and would bypass ordinary composition.
@@ -25,3 +25,8 @@ Settings tried so far: 0 learning settings; evaluation and preflight checks are 
 - PLAN GAP 2026-11-15: Output dimensions 2/3/5 are supported and zero-initialization-tested in the network; movement environment adapters and all other Goal 6/7 features are deferred as explicitly required by the reduced Goal 4 scope.
 - PLAN GAP 2026-11-15: The required 1/2/4-process and multi-seed-process speed tests need more than five runs; predeclare nine independent 200-episode runs of one setting, report every run, and use only the first designated run for each practice seed in the main result, with four repeats used solely for timing and reproducibility.
 - PLAN GAP 2026-11-15: Benchmark schedule is one process/seed 0; two concurrent processes/seeds 1 and 2; four concurrent processes/seeds 3, 4, 0 and 1; then one process running seeds 0 and 1 sequentially. The first appearances of 0–4 are the headline runs; repeats never replace them based on success.
+- 2026-11-15: Use four concurrent GPU processes for future batches because the measured throughput was fastest at 58.01 seconds per completed experiment, versus 66.02 for two, 78.01 for two seeds in one process, and 116.03 solo; treat the small benchmark as provisional for more complex methods.
+- 2026-11-15: Keep all designated results despite same-seed timing repeats differing, because replacing a main run after seeing its score would bias the result; first-fill traces already differ before learning and the cause remains unresolved.
+- PLAN GAP 2026-11-15: Forecast Goal 7 with 24 new screening settings, four combinations, extra seeds for three promising single changes, and up to four confirmation methods; these counts are explicit time-estimate assumptions, not a commitment to run combinations if the written skip rule applies.
+- PLAN GAP 2026-11-15: Forecast future complex training at 1.25 times measured solo cost, extra 500-episode tests at 0.50 minutes, 20 videos at 1.5 CPU minutes each, and helper savings of 25% of implementation overhead; use twice solo cost without GPU concurrency and twice non-training work for a conservative worst-case allowance because those workloads have not been measured.
+- 2026-11-15: Keep proposed cuts unapplied and stop after Goal 5 as requested; one setting has been tried, using 1810 total practice episodes across the ten-episode code trial and nine separate 200-episode experiments.

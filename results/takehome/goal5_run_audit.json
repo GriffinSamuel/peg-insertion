@@ -1,0 +1,263 @@
+{
+  "task": "audit completed Goal 5 benchmark runs",
+  "benchmark_exit": {
+    "command": [
+      "python",
+      "-B",
+      "takehome/benchmark.py"
+    ],
+    "started_utc": "2026-11-15T23:56:30.441933+00:00",
+    "finished_utc": "2026-11-16T00:07:07.459893+00:00",
+    "seconds": 637.0180008310008,
+    "exit_code": 0
+  },
+  "run_count": 9,
+  "runs": [
+    {
+      "result_file": "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json",
+      "seed": 0,
+      "final_successes": 314,
+      "final_success_rate": 0.628,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 314,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json",
+      "seed": 1,
+      "final_successes": 312,
+      "final_success_rate": 0.624,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 312,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/parallel2/seed_1/result.json",
+      "seed": 1,
+      "final_successes": 278,
+      "final_success_rate": 0.556,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 278,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/parallel2/seed_2/result.json",
+      "seed": 2,
+      "final_successes": 315,
+      "final_success_rate": 0.63,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 315,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/parallel4/seed_0/result.json",
+      "seed": 0,
+      "final_successes": 318,
+      "final_success_rate": 0.636,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 318,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/parallel4/seed_1/result.json",
+      "seed": 1,
+      "final_successes": 282,
+      "final_success_rate": 0.564,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 282,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/parallel4/seed_3/result.json",
+      "seed": 3,
+      "final_successes": 305,
+      "final_success_rate": 0.61,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 305,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/parallel4/seed_4/result.json",
+      "seed": 4,
+      "final_successes": 366,
+      "final_success_rate": 0.732,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 366,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    },
+    {
+      "result_file": "results/takehome/benchmark/solo/seed_0/result.json",
+      "seed": 0,
+      "final_successes": 365,
+      "final_success_rate": 0.73,
+      "final_test_npz_episode_count": 500,
+      "final_test_npz_successes": 365,
+      "budget_source_counts": {
+        "fill": 40,
+        "online": 160
+      },
+      "intermediate_test_count": 8,
+      "stored_loss_count": 16,
+      "checks": {
+        "exactly_200_budget_entries": true,
+        "exactly_40_fill_and_160_online": true,
+        "practice_seed_in_0_to_4": true,
+        "final_500_tests_seed_123": true,
+        "all_intermediate_tests_256_seed_123": true,
+        "frozen_policy_unchanged": true,
+        "test_data_not_learned_from": true,
+        "stored_losses_finite": true,
+        "final_test_npz_all_arrays_finite": true,
+        "npz_success_count_matches_json": true
+      },
+      "passed": true
+    }
+  ],
+  "all_runs_passed": true,
+  "utc_started": "2026-11-16T00:07:33.227806Z",
+  "utc_finished": "2026-11-16T00:07:33.431332Z"
+}

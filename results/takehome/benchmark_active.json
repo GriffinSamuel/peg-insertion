@@ -1,0 +1,14 @@
+{
+  "group": "one_process_two_seeds",
+  "started_utc": "2026-11-16T00:04:31.390002+00:00",
+  "processes": [
+    {
+      "pid": 14402,
+      "seeds": [
+        0,
+        1
+      ],
+      "log": "results/takehome/benchmark_logs/one_process_two_seeds_seeds_0_1.log"
+    }
+  ]
+}

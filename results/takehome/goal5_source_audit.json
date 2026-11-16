@@ -1,0 +1,158 @@
+{
+  "core_files": [
+    "train.py",
+    "episodes.py",
+    "learner.py",
+    "replay.py",
+    "correction.py",
+    "config.py",
+    "budget.py"
+  ],
+  "run_count": 9,
+  "missing_required_core_hashes": [],
+  "files": {
+    "train.py": {
+      "current_file": "takehome/train.py",
+      "current_sha256": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832",
+        "results/takehome/benchmark/solo/seed_0/result.json": "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832"
+      },
+      "distinct_result_hashes": [
+        "ecc9ea8f222cd07f937e15bca1c8984e0e49db8e49dc5d404114cc4ad4924832"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    },
+    "episodes.py": {
+      "current_file": "takehome/episodes.py",
+      "current_sha256": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6",
+        "results/takehome/benchmark/solo/seed_0/result.json": "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6"
+      },
+      "distinct_result_hashes": [
+        "827c59040c867903f68487f064a48d7bd2c4db45844d6d7de6cd98b5305672d6"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    },
+    "learner.py": {
+      "current_file": "takehome/learner.py",
+      "current_sha256": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6",
+        "results/takehome/benchmark/solo/seed_0/result.json": "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6"
+      },
+      "distinct_result_hashes": [
+        "ce5f9d7fd9d3d72ab48dc671916d6c46d519f6a352e0ca23277469832274a5a6"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    },
+    "replay.py": {
+      "current_file": "takehome/replay.py",
+      "current_sha256": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e",
+        "results/takehome/benchmark/solo/seed_0/result.json": "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e"
+      },
+      "distinct_result_hashes": [
+        "aa483af935e255a75b2bea33ad14139ebffc19d286c074a77f862309fde60e2e"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    },
+    "correction.py": {
+      "current_file": "takehome/correction.py",
+      "current_sha256": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4",
+        "results/takehome/benchmark/solo/seed_0/result.json": "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4"
+      },
+      "distinct_result_hashes": [
+        "441ebb66a8cbbba7b4b7bbc4c7fe0fc971536fd7013034aaacd0f96e700c22b4"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    },
+    "config.py": {
+      "current_file": "takehome/config.py",
+      "current_sha256": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d",
+        "results/takehome/benchmark/solo/seed_0/result.json": "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d"
+      },
+      "distinct_result_hashes": [
+        "6bfdc83350d8ae83f17f5217cc38533cf9185e5f8b8e710f0343fde62409576d"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    },
+    "budget.py": {
+      "current_file": "takehome/budget.py",
+      "current_sha256": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+      "result_hashes": {
+        "results/takehome/benchmark/one_process_two_seeds/seed_0/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/one_process_two_seeds/seed_1/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/parallel2/seed_1/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/parallel2/seed_2/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/parallel4/seed_0/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/parallel4/seed_1/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/parallel4/seed_3/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/parallel4/seed_4/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33",
+        "results/takehome/benchmark/solo/seed_0/result.json": "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33"
+      },
+      "distinct_result_hashes": [
+        "c5c39eb2e98e32a29f4fee2b2b4b33679a18c4ce79c32c07b4640e8567b72f33"
+      ],
+      "mismatches_across_results": false,
+      "mismatches_against_current": []
+    }
+  },
+  "all_present": true,
+  "all_hashes_match_across_runs": true,
+  "all_hashes_match_current_files": true
+}

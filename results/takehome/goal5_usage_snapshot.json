@@ -1,0 +1,23 @@
+{
+  "observed_at_utc": "2026-11-16T00:09:28.798952+00:00",
+  "runtime_event_timestamp": "2026-11-16T00:09:06.316Z",
+  "rate_limits": null,
+  "allowance_used_fraction": null,
+  "model_context_window": 258400,
+  "runtime_cumulative_token_usage": {
+    "input_tokens": 14438592,
+    "cached_input_tokens": 13969677,
+    "cache_write_input_tokens": 452210,
+    "output_tokens": 102325,
+    "reasoning_output_tokens": 45322,
+    "total_tokens": 14540917
+  },
+  "explanation": "No account allowance percentage or remaining quota is visible. Cumulative input tokens include repeatedly supplied and cached context and cannot be converted into account allowance usage.",
+  "agent_concurrency_slots": 4,
+  "fixed_session_deadline_visible": false,
+  "unattended_limitations": [
+    "Laptop must stay awake; WSL shutdown stops detached processes.",
+    "Context compaction can interrupt continuity; progress and checkpoints are saved.",
+    "Unknown account quota and external service interruptions cannot be ruled out."
+  ]
+}
