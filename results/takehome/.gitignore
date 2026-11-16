@@ -4,6 +4,7 @@ preflight_cache/
 cache/
 mplconfig/
 *_test_tmp/
+*_tmp/
 pytest_tmp*/
 *.pid
 *.lock
