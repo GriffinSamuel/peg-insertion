@@ -1,6 +1,6 @@
 # Goal 5 check-in, 2026-11-15
 
-Goals 1 through 5 are complete. This is an interim report, not the Goal 12 final write-up. Work stops here at the check-in required by CODEX_GOALS.md.
+Goals 1 through 5 are complete. This preserves the interim Goal 5 check-in, not the Goal 12 final write-up. Griffin subsequently approved continuation through Goal 13 with no cuts. A 26m51s repeatability investigation identified variability in the original GPU simulator but no validated full-run fix; see [the findings](results/takehome/repeatability_findings.md). Execution stays unchanged and the limitation is carried forward. Binary traces and checkpoints now remain on disk only; new full test traces are saved only at final 500-episode tests unless later analysis needs them.
 
 The main learner's average success is 65.16%, compared with 61.4% for the original policy. The measured gain is 3.76 percentage points, smaller than the 7.74-point spread across practice seeds. This is a small average improvement with mixed runs, not evidence of reliable improvement. The no-camera-bias ceiling is 94.4%, so most of the available improvement remains unrealized.
 
@@ -123,4 +123,4 @@ The account usage allowance is not visible: the runtime reports `rate_limits: nu
 
 The lead designed and reviewed the learner, interpreted results, wrote this report and made every experimental choice. Two gpt-6-luna/low helpers handled narrow plotting and data-audit tasks in separate files; their outputs were reviewed. No fallback or success-driven tuning was used through Goal 5. PLAN GAP choices remain listed in TAKEHOME_DECISIONS.md.
 
-**Planned stop:** continue with Goal 6 only after Griffin says go, either with the written plan or with selected cuts. Repeatability is an open limitation to carry into the final checks; it has not been silently fixed by changing the test, seeds or results.
+**Check-in resolved:** Griffin approved continuation through Goal 13 with no cuts. Repeatability remains a documented limitation after the bounded investigation; tests, seeds and reported results are unchanged. See TAKEHOME_PROGRESS.md for the current phase.

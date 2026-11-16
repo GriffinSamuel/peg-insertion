@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: continuation approved, repeatability investigation before Goal 6 (2026-11-15)
+## Current status: repeatability investigation complete, Goal 6 next (2026-11-15)
 
-Griffin approved Goals 6–13 with no cuts and up to 30 minutes investigating repeatability first (started 2026-11-16 00:28 UTC; deadline 00:58 UTC). Tests, seeds and per-experiment budgets stay fixed. If no safe repeatability fix is established within that time, record the evidence and continue. The previous Goal 5 stop below is resolved. Goals 1–5 pass, with main mean 65.16%, spread 7.74 points, floor 61.4% and ceiling 94.4%. Practice used: 1810; settings tried: 1. Full traces and binary model artifacts now remain local only under Griffin's revised storage instruction; existing files are untracked without deletion, and new curve points retain summaries instead of full traces.
+Griffin approved Goals 6–13 with no cuts. The repeatability investigation ended at 2026-11-16 00:54:53 UTC after 26m51s: variation exists in the original GPU simulator; tested deterministic modes fix resets but not full contact trajectories. No safe full-run fix was established, so production execution stays unchanged and this limitation is carried forward as explicitly authorized. The Goal 5 stop is resolved. Goals 1–5 pass; practice used 1810, settings tried 1. Diagnostic testing added 1650 full test-only episodes and 150 reset-only probes, bringing cumulative counts to 26606 and 166 respectively. Full traces and binary artifacts remain local only; storage changes were pushed in bfe68cb. Proceed to Goal 6 without another check-in.
 
 ## Current status after revised instructions, 2026-11-15
 

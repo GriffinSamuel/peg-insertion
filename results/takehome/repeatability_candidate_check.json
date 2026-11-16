@@ -1,0 +1,696 @@
+{
+  "task": "numeric evidence for repeatability probe candidates",
+  "runs": [
+    {
+      "tag": "warp_records64",
+      "exit_code": 0,
+      "zero_overflow_messages": true,
+      "repeats": 3,
+      "practice_episodes": 0,
+      "reset_arrays_exact_vs_repeat0": true,
+      "trace_arrays_exact_vs_repeat0": false,
+      "reset_reference_files": [
+        "reset_0.npz",
+        "reset_1.npz",
+        "reset_2.npz"
+      ],
+      "trace_reference_files": [
+        "trace_0.npz",
+        "trace_1.npz",
+        "trace_2.npz"
+      ],
+      "repeat_comparisons": [
+        {
+          "repeat": 1,
+          "reset_exact": true,
+          "trace_exact": false,
+          "differences_vs_repeat0": {
+            "reset": {},
+            "trace": {
+              "depth": {
+                "different_values": 520,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "executed_action": {
+                "different_values": 1977,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "force": {
+                "different_values": 669,
+                "first_array_index": [
+                  117,
+                  6
+                ],
+                "first_step_index": 117
+              },
+              "next_obs": {
+                "different_values": 10400,
+                "first_array_index": [
+                  117,
+                  6,
+                  10
+                ],
+                "first_step_index": 117
+              },
+              "obs": {
+                "different_values": 10244,
+                "first_array_index": [
+                  118,
+                  6,
+                  10
+                ],
+                "first_step_index": 118
+              },
+              "old_action": {
+                "different_values": 1977,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "q": {
+                "different_values": 659,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "reward": {
+                "different_values": 15,
+                "first_array_index": [
+                  140,
+                  7
+                ],
+                "first_step_index": 140
+              },
+              "success": {
+                "different_values": 15,
+                "first_array_index": [
+                  140,
+                  7
+                ],
+                "first_step_index": 140
+              },
+              "terminated": {
+                "different_values": 75,
+                "first_array_index": [
+                  140,
+                  7
+                ],
+                "first_step_index": 140
+              },
+              "tip_height": {
+                "different_values": 666,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "truncated": {
+                "different_values": 3,
+                "first_array_index": [
+                  199,
+                  1
+                ],
+                "first_step_index": 199
+              },
+              "valid": {
+                "different_values": 72,
+                "first_array_index": [
+                  141,
+                  7
+                ],
+                "first_step_index": 141
+              },
+              "xy_err": {
+                "different_values": 666,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              }
+            }
+          }
+        },
+        {
+          "repeat": 2,
+          "reset_exact": true,
+          "trace_exact": false,
+          "differences_vs_repeat0": {
+            "reset": {},
+            "trace": {
+              "depth": {
+                "different_values": 533,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "executed_action": {
+                "different_values": 1917,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "force": {
+                "different_values": 649,
+                "first_array_index": [
+                  117,
+                  6
+                ],
+                "first_step_index": 117
+              },
+              "next_obs": {
+                "different_values": 10095,
+                "first_array_index": [
+                  117,
+                  6,
+                  10
+                ],
+                "first_step_index": 117
+              },
+              "obs": {
+                "different_values": 9939,
+                "first_array_index": [
+                  118,
+                  6,
+                  10
+                ],
+                "first_step_index": 118
+              },
+              "old_action": {
+                "different_values": 1917,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "q": {
+                "different_values": 639,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "reward": {
+                "different_values": 13,
+                "first_array_index": [
+                  140,
+                  7
+                ],
+                "first_step_index": 140
+              },
+              "success": {
+                "different_values": 13,
+                "first_array_index": [
+                  140,
+                  7
+                ],
+                "first_step_index": 140
+              },
+              "terminated": {
+                "different_values": 111,
+                "first_array_index": [
+                  140,
+                  7
+                ],
+                "first_step_index": 140
+              },
+              "tip_height": {
+                "different_values": 647,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "truncated": {
+                "different_values": 3,
+                "first_array_index": [
+                  199,
+                  0
+                ],
+                "first_step_index": 199
+              },
+              "valid": {
+                "different_values": 108,
+                "first_array_index": [
+                  141,
+                  7
+                ],
+                "first_step_index": 141
+              },
+              "xy_err": {
+                "different_values": 647,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              }
+            }
+          }
+        }
+      ],
+      "actor_actions_and_bias_unchanged": true,
+      "repeat_1_vs_repeat_2_trace_comparison": {
+        "exact": false,
+        "differences": {
+          "depth": {
+            "different_values": 481,
+            "first_array_index": [
+              135,
+              6
+            ],
+            "first_step_index": 135
+          },
+          "executed_action": {
+            "different_values": 1755,
+            "first_array_index": [
+              136,
+              1,
+              0
+            ],
+            "first_step_index": 136
+          },
+          "force": {
+            "different_values": 595,
+            "first_array_index": [
+              135,
+              1
+            ],
+            "first_step_index": 135
+          },
+          "next_obs": {
+            "different_values": 9253,
+            "first_array_index": [
+              135,
+              1,
+              10
+            ],
+            "first_step_index": 135
+          },
+          "obs": {
+            "different_values": 9099,
+            "first_array_index": [
+              136,
+              1,
+              10
+            ],
+            "first_step_index": 136
+          },
+          "old_action": {
+            "different_values": 1755,
+            "first_array_index": [
+              136,
+              1,
+              0
+            ],
+            "first_step_index": 136
+          },
+          "q": {
+            "different_values": 585,
+            "first_array_index": [
+              136,
+              1
+            ],
+            "first_step_index": 136
+          },
+          "reward": {
+            "different_values": 12,
+            "first_array_index": [
+              162,
+              3
+            ],
+            "first_step_index": 162
+          },
+          "success": {
+            "different_values": 12,
+            "first_array_index": [
+              162,
+              3
+            ],
+            "first_step_index": 162
+          },
+          "terminated": {
+            "different_values": 92,
+            "first_array_index": [
+              162,
+              3
+            ],
+            "first_step_index": 162
+          },
+          "tip_height": {
+            "different_values": 591,
+            "first_array_index": [
+              135,
+              4
+            ],
+            "first_step_index": 135
+          },
+          "truncated": {
+            "different_values": 2,
+            "first_array_index": [
+              199,
+              0
+            ],
+            "first_step_index": 199
+          },
+          "valid": {
+            "different_values": 90,
+            "first_array_index": [
+              163,
+              3
+            ],
+            "first_step_index": 163
+          },
+          "xy_err": {
+            "different_values": 591,
+            "first_array_index": [
+              135,
+              4
+            ],
+            "first_step_index": 135
+          }
+        }
+      }
+    },
+    {
+      "tag": "warp_strict",
+      "mode": "GPU_TO_GPU",
+      "max_records": 64,
+      "exit_code": 0,
+      "zero_overflow_messages": true,
+      "repeat_count": 3,
+      "practice_episodes": 0,
+      "test_only_episodes": 30,
+      "seed": 0,
+      "repeat_successes": [
+        7,
+        6,
+        8
+      ],
+      "repeat_seconds": [
+        383.03134604300067,
+        4.222241583000141,
+        4.073380104000535
+      ],
+      "reset_comparison": {
+        "exact_vs_repeat0": [
+          true,
+          true
+        ],
+        "comparisons": [
+          {
+            "repeat": 1,
+            "exact": true,
+            "differences": {}
+          },
+          {
+            "repeat": 2,
+            "exact": true,
+            "differences": {}
+          }
+        ],
+        "all_exact_vs_repeat0": true
+      },
+      "trace_comparison": {
+        "exact_vs_repeat0": [
+          false,
+          false
+        ],
+        "comparisons": [
+          {
+            "repeat": 1,
+            "exact": false,
+            "differences": {
+              "depth": {
+                "different_values": 467,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "executed_action": {
+                "different_values": 1901,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "force": {
+                "different_values": 638,
+                "first_array_index": [
+                  117,
+                  6
+                ],
+                "first_step_index": 117
+              },
+              "next_obs": {
+                "different_values": 9954,
+                "first_array_index": [
+                  117,
+                  6,
+                  10
+                ],
+                "first_step_index": 117
+              },
+              "obs": {
+                "different_values": 9802,
+                "first_array_index": [
+                  118,
+                  6,
+                  10
+                ],
+                "first_step_index": 118
+              },
+              "old_action": {
+                "different_values": 1904,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "q": {
+                "different_values": 635,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "reward": {
+                "different_values": 11,
+                "first_array_index": [
+                  162,
+                  3
+                ],
+                "first_step_index": 162
+              },
+              "success": {
+                "different_values": 11,
+                "first_array_index": [
+                  162,
+                  3
+                ],
+                "first_step_index": 162
+              },
+              "terminated": {
+                "different_values": 66,
+                "first_array_index": [
+                  162,
+                  3
+                ],
+                "first_step_index": 162
+              },
+              "tip_height": {
+                "different_values": 633,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "truncated": {
+                "different_values": 1,
+                "first_array_index": [
+                  199,
+                  4
+                ],
+                "first_step_index": 199
+              },
+              "valid": {
+                "different_values": 65,
+                "first_array_index": [
+                  163,
+                  3
+                ],
+                "first_step_index": 163
+              },
+              "xy_err": {
+                "different_values": 638,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              }
+            }
+          },
+          {
+            "repeat": 2,
+            "exact": false,
+            "differences": {
+              "depth": {
+                "different_values": 521,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "executed_action": {
+                "different_values": 1982,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "force": {
+                "different_values": 665,
+                "first_array_index": [
+                  117,
+                  6
+                ],
+                "first_step_index": 117
+              },
+              "next_obs": {
+                "different_values": 10391,
+                "first_array_index": [
+                  117,
+                  6,
+                  10
+                ],
+                "first_step_index": 117
+              },
+              "obs": {
+                "different_values": 10235,
+                "first_array_index": [
+                  118,
+                  6,
+                  10
+                ],
+                "first_step_index": 118
+              },
+              "old_action": {
+                "different_values": 1985,
+                "first_array_index": [
+                  118,
+                  6,
+                  0
+                ],
+                "first_step_index": 118
+              },
+              "q": {
+                "different_values": 662,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "reward": {
+                "different_values": 11,
+                "first_array_index": [
+                  165,
+                  3
+                ],
+                "first_step_index": 165
+              },
+              "success": {
+                "different_values": 11,
+                "first_array_index": [
+                  165,
+                  3
+                ],
+                "first_step_index": 165
+              },
+              "terminated": {
+                "different_values": 73,
+                "first_array_index": [
+                  165,
+                  3
+                ],
+                "first_step_index": 165
+              },
+              "tip_height": {
+                "different_values": 658,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              },
+              "truncated": {
+                "different_values": 1,
+                "first_array_index": [
+                  199,
+                  1
+                ],
+                "first_step_index": 199
+              },
+              "valid": {
+                "different_values": 72,
+                "first_array_index": [
+                  166,
+                  3
+                ],
+                "first_step_index": 166
+              },
+              "xy_err": {
+                "different_values": 663,
+                "first_array_index": [
+                  118,
+                  6
+                ],
+                "first_step_index": 118
+              }
+            }
+          }
+        ],
+        "all_exact_vs_repeat0": false
+      },
+      "gate_passed": false
+    }
+  ],
+  "next_probe_launched": false,
+  "next_probe_reason": "Strict probe trace arrays failed exact-match gate before launch cutoff."
+}

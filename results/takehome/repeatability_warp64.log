@@ -1,0 +1,61 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 5070 Laptop GPU" (8 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/preflight_cache/warp/1.18.0
+Module mujoco.mjx.warp.ffi af79a68 load on device 'cuda:0' took 615.35 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.smooth f6793fc load on device 'cuda:0' took 21662.70 ms  (compiled)
+Module _nxn_broadphase__locals__kernel_414cf3d2 414cf3d load on device 'cuda:0' took 460.08 ms  (compiled)
+Module ccd_kernel_builder__locals__ccd_kernel_491a5627 491a562 load on device 'cuda:0' took 323766.69 ms  (compiled)
+Module _primitive_narrowphase__locals__primitive_narrowphase_788b9542 788b954 load on device 'cuda:0' took 229.31 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.constraint fd9dbee load on device 'cuda:0' took 111.35 ms  (compiled)
+Module _equality_joint__locals__kernel_9c427ccc 9c427cc load on device 'cuda:0' took 1149.70 ms  (compiled)
+Module _friction_dof__locals__kernel_6ce0684e 6ce0684 load on device 'cuda:0' took 946.12 ms  (compiled)
+Module _limit_slide_hinge__locals__kernel_45682e85 45682e8 load on device 'cuda:0' took 1010.59 ms  (compiled)
+Module _efc_contact_init__locals__kernel_6a043f27 6a043f2 load on device 'cuda:0' took 315.92 ms  (compiled)
+Module _efc_contact_jac_dense__locals__kernel_d0b5b2b9 39d2f41 load on device 'cuda:0' took 661.26 ms  (compiled)
+Module _efc_contact_update__locals__kernel_2df582d0 2df582d load on device 'cuda:0' took 240.10 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.sensor df02556 load on device 'cuda:0' took 2625.13 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.forward 257a9ee load on device 'cuda:0' took 2404.16 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.passive 9cf05c8 load on device 'cuda:0' took 1637.10 ms  (compiled)
+Module _qfrc_passive_kernel__locals__kernel_a5fea21d a5fea21 load on device 'cuda:0' took 127.17 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.forward de96d0e load on device 'cuda:0' took 2399.28 ms  (compiled)
+Module _qfrc_smooth__locals__kernel_5a13f0a2 5a13f0a load on device 'cuda:0' took 122.19 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.support 6089dc2 load on device 'cuda:0' took 236.12 ms  (compiled)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_c76a3003 01d8cb6 load on device 'cuda:0' took 1753.19 ms  (compiled)
+Module _solve_init_dof__locals__kernel_4ced7ac3 4ced7ac load on device 'cuda:0' took 119.17 ms  (compiled)
+Module mujoco.mjx.third_party.mujoco_warp._src.solver 643444b load on device 'cuda:0' took 657.98 ms  (compiled)
+Module _solve_init_jaref_kernel__locals__kernel_e85e9890 e85e989 load on device 'cuda:0' took 149.83 ms  (compiled)
+Module mul_m_kernel__locals___mul_m_ca55973c ca55973 load on device 'cuda:0' took 184.11 ms  (compiled)
+Module _update_constraint_efc__locals__kernel_b128b4e4 b128b4e load on device 'cuda:0' took 179.62 ms  (compiled)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_d21a71ec d21a71e load on device 'cuda:0' took 129.49 ms  (compiled)
+Module _update_gradient_zero_grad_dot__locals__kernel_6aaa4fcd 6aaa4fc load on device 'cuda:0' took 134.18 ms  (compiled)
+Module _update_gradient_grad__locals__kernel_60557d94 60557d9 load on device 'cuda:0' took 144.81 ms  (compiled)
+Module _update_gradient_JTDAJ_dense_tiled__locals__kernel_e5ebbdfe e74be4f load on device 'cuda:0' took 658.12 ms  (compiled)
+Module _update_gradient_cholesky__locals__kernel_e59c2c68 b389265 load on device 'cuda:0' took 1599.65 ms  (compiled)
+Module _linesearch_iterative_kernel__locals__kernel_a6aec698 1f888c1 load on device 'cuda:0' took 539.15 ms  (compiled)
+Module _update_constraint_efc__locals__kernel_d4e84604 d4e8460 load on device 'cuda:0' took 375.94 ms  (compiled)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_b91e99ce b91e99c load on device 'cuda:0' took 142.01 ms  (compiled)
+Module _update_gradient_zero_grad_dot__locals__kernel_5ab7a314 5ab7a31 load on device 'cuda:0' took 136.77 ms  (compiled)
+Module _update_gradient_grad__locals__kernel_d2ab25e1 d2ab25e load on device 'cuda:0' took 123.15 ms  (compiled)
+Module _update_gradient_cholesky__locals__kernel_e64cf43a 63e2717 load on device 'cuda:0' took 1274.45 ms  (compiled)
+Module _solve_done__locals__kernel_a5f657ee a5f657e load on device 'cuda:0' took 185.46 ms  (compiled)
+/mnt/c/Users/Griff/Projects/peg-insertion/takehome/probe_repeatability.py:49: DeprecationWarning: Accessing `cfrc_int` directly from `Data` is deprecated. Access it via `data._impl.cfrc_int` instead.
+  result = {'purpose': 'repeatability diagnosis only', 'test_only': True,
+/mnt/c/Users/Griff/Projects/peg-insertion/takehome/probe_repeatability.py:50: DeprecationWarning: Accessing `cfrc_int` directly from `Data` is deprecated. Access it via `data._impl.cfrc_int` instead.
+  'learned_from': False, 'practice_episodes': 0,
+/mnt/c/Users/Griff/Projects/peg-insertion/takehome/probe_repeatability.py:49: DeprecationWarning: Accessing `cfrc_ext` directly from `Data` is deprecated. Access it via `data._impl.cfrc_ext` instead.
+  result = {'purpose': 'repeatability diagnosis only', 'test_only': True,
+/mnt/c/Users/Griff/Projects/peg-insertion/takehome/probe_repeatability.py:50: DeprecationWarning: Accessing `cfrc_ext` directly from `Data` is deprecated. Access it via `data._impl.cfrc_ext` instead.
+  'learned_from': False, 'practice_episodes': 0,
+/mnt/c/Users/Griff/Projects/peg-insertion/takehome/probe_repeatability.py:49: DeprecationWarning: Accessing `cacc` directly from `Data` is deprecated. Access it via `data._impl.cacc` instead.
+  result = {'purpose': 'repeatability diagnosis only', 'test_only': True,
+/mnt/c/Users/Griff/Projects/peg-insertion/takehome/probe_repeatability.py:50: DeprecationWarning: Accessing `cacc` directly from `Data` is deprecated. Access it via `data._impl.cacc` instead.
+  'learned_from': False, 'practice_episodes': 0,
+Module mujoco.mjx.third_party.mujoco_warp._src.derivative 94f9b7c load on device 'cuda:0' took 1047.43 ms  (compiled)
+Module _next_time_builder__locals___next_time_689b3f31 689b3f3 load on device 'cuda:0' took 151.64 ms  (compiled)
+{"repeat": 0, "seconds": 383.8258009480014, "successes": 8, "reset_hashes": {"obs": "453c0c12d290ff8152111309b739c95ab6b06216ab38d1f8defaf3ac0720115d", "qpos": "230f090ccd2898d115ed6bc78d0bc0dc06f5b87acf02b1ffe27269cf2cc5e78c", "qvel": "d3df611a0ed2e328b050d285287637c60643ba96ec09e4aaefaad7f2cd114b77", "qacc": "6bfd706f84c707bf606144bb72a6b32e5ec8d625262052d081b684df33308a15", "sensordata": "adfd39e03e38883fe35dfdddaf0eefc50593e0be87e41b440250d3c795bd3da1", "site_xpos": "b856622870ddf8d6f63044e796b97e2698e8e29fdc9964568582d8d12ea51b1a", "qfrc_bias": "4916d500d394f5a4ca89d8c946825a09d1de9bead5693ae74afa54d3224d3b78", "qfrc_constraint": "ed15bf049091ee967025e87ea405507a33bb3c2aeaf2cb0014824ff3078c771e", "cfrc_int": "84f27a2d987d969f4ee4010c5050eacb95a7a21ea9dd10cc6bc5bd9c7231088a", "cfrc_ext": "9b00b8930d66b11eb3cc96e31d08b2889160b0e617f1f6c229fa37c92578c23c", "cacc": "c6f4ad6e253182d6a450b4eff73536895a0d21cf03420275da92e25eefcb681e"}}
+{"repeat": 1, "seconds": 8.363766833999762, "successes": 7, "reset_hashes": {"obs": "453c0c12d290ff8152111309b739c95ab6b06216ab38d1f8defaf3ac0720115d", "qpos": "230f090ccd2898d115ed6bc78d0bc0dc06f5b87acf02b1ffe27269cf2cc5e78c", "qvel": "d3df611a0ed2e328b050d285287637c60643ba96ec09e4aaefaad7f2cd114b77", "qacc": "6bfd706f84c707bf606144bb72a6b32e5ec8d625262052d081b684df33308a15", "sensordata": "adfd39e03e38883fe35dfdddaf0eefc50593e0be87e41b440250d3c795bd3da1", "site_xpos": "b856622870ddf8d6f63044e796b97e2698e8e29fdc9964568582d8d12ea51b1a", "qfrc_bias": "4916d500d394f5a4ca89d8c946825a09d1de9bead5693ae74afa54d3224d3b78", "qfrc_constraint": "ed15bf049091ee967025e87ea405507a33bb3c2aeaf2cb0014824ff3078c771e", "cfrc_int": "84f27a2d987d969f4ee4010c5050eacb95a7a21ea9dd10cc6bc5bd9c7231088a", "cfrc_ext": "9b00b8930d66b11eb3cc96e31d08b2889160b0e617f1f6c229fa37c92578c23c", "cacc": "c6f4ad6e253182d6a450b4eff73536895a0d21cf03420275da92e25eefcb681e"}}
+{"repeat": 2, "seconds": 8.351983611999458, "successes": 7, "reset_hashes": {"obs": "453c0c12d290ff8152111309b739c95ab6b06216ab38d1f8defaf3ac0720115d", "qpos": "230f090ccd2898d115ed6bc78d0bc0dc06f5b87acf02b1ffe27269cf2cc5e78c", "qvel": "d3df611a0ed2e328b050d285287637c60643ba96ec09e4aaefaad7f2cd114b77", "qacc": "6bfd706f84c707bf606144bb72a6b32e5ec8d625262052d081b684df33308a15", "sensordata": "adfd39e03e38883fe35dfdddaf0eefc50593e0be87e41b440250d3c795bd3da1", "site_xpos": "b856622870ddf8d6f63044e796b97e2698e8e29fdc9964568582d8d12ea51b1a", "qfrc_bias": "4916d500d394f5a4ca89d8c946825a09d1de9bead5693ae74afa54d3224d3b78", "qfrc_constraint": "ed15bf049091ee967025e87ea405507a33bb3c2aeaf2cb0014824ff3078c771e", "cfrc_int": "84f27a2d987d969f4ee4010c5050eacb95a7a21ea9dd10cc6bc5bd9c7231088a", "cfrc_ext": "9b00b8930d66b11eb3cc96e31d08b2889160b0e617f1f6c229fa37c92578c23c", "cacc": "c6f4ad6e253182d6a450b4eff73536895a0d21cf03420275da92e25eefcb681e"}}

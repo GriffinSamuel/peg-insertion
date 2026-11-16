@@ -1,0 +1,85 @@
+{
+  "started_utc": "2026-11-16T00:28:02Z",
+  "finished_utc": "2026-11-16T00:54:53Z",
+  "elapsed_seconds": 1611,
+  "within_30_minutes": true,
+  "production_execution_changed": false,
+  "test_seed_or_budget_changed": false,
+  "repeatability_fixed": false,
+  "finding": "Original GPU simulator varies before learning; deterministic atomic modes fix captured resets but full contact trajectories still differ. No safe full-run fix established within the time box.",
+  "runs": [
+    {
+      "tag": "a",
+      "test_only_episodes": 30,
+      "reset_only_probes": 30,
+      "practice_episodes": 0,
+      "success_counts": [
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "tag": "execution_flags",
+      "test_only_episodes": 30,
+      "reset_only_probes": 30,
+      "practice_episodes": 0,
+      "success_counts": [
+        7,
+        6,
+        7
+      ]
+    },
+    {
+      "tag": "original_evaluator",
+      "test_only_episodes": 1500,
+      "reset_only_probes": 0,
+      "practice_episodes": 0,
+      "success_counts": [
+        303,
+        309,
+        307
+      ]
+    },
+    {
+      "tag": "warp_deterministic",
+      "test_only_episodes": 30,
+      "reset_only_probes": 30,
+      "practice_episodes": 0,
+      "success_counts": [
+        7,
+        8,
+        8
+      ]
+    },
+    {
+      "tag": "warp_records64",
+      "test_only_episodes": 30,
+      "reset_only_probes": 30,
+      "practice_episodes": 0,
+      "success_counts": [
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "tag": "warp_strict",
+      "test_only_episodes": 30,
+      "reset_only_probes": 30,
+      "practice_episodes": 0,
+      "success_counts": [
+        7,
+        6,
+        8
+      ]
+    }
+  ],
+  "diagnostic_test_only_episodes": 1650,
+  "diagnostic_reset_only_probes": 150,
+  "practice_episodes_total": 1810,
+  "settings_tried": 1,
+  "full_test_only_episodes_total": 26606,
+  "reset_only_probes_total": 166,
+  "continuation": "Goals6-13 authorized with no cuts; carry repeatability as limitation."
+}

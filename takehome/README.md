@@ -52,6 +52,12 @@ the actor and critics. `checkpoint.pkl` also supports resuming after a completed
 practice batch. If an interruption leaves an episode reservation without saved
 data, the runner refuses to recollect it and silently exceed the budget.
 
+The local arrays and model files are needed for resuming training and later
+analyses. A fresh git clone contains the small summaries and figure inputs, but
+not these binary artifacts. Keep the workspace artifacts, or reproduce an
+experiment in a fresh output directory with its own budget ledger; do not erase
+an existing budget or overwrite an earlier result to regenerate missing data.
+
 The 3- and 5-output networks are shape-tested for Goal 6; movement adapters and
 the later exploration tricks are deliberately deferred. The ten-episode code
 trial uses seed 999 and does not count as a setting. Reported main experiments

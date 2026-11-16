@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/probe_repeatability.py",
+    "--tag",
+    "warp_records64"
+  ],
+  "started_utc": "2026-11-16T00:39:18.270657+00:00",
+  "finished_utc": "2026-11-16T00:46:18.801321+00:00",
+  "seconds": 420.5307193689987,
+  "exit_code": 0
+}

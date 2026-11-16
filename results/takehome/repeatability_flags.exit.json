@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/probe_repeatability.py",
+    "--tag",
+    "execution_flags"
+  ],
+  "started_utc": "2026-11-16T00:30:32.699597+00:00",
+  "finished_utc": "2026-11-16T00:31:37.902985+00:00",
+  "seconds": 65.20342694699866,
+  "exit_code": 0
+}

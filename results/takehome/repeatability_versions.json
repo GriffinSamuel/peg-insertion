@@ -1,0 +1,15 @@
+{
+  "mujoco": "3.15.0",
+  "mujoco-mjx": "3.15.0",
+  "warp-lang": "1.18.0",
+  "jax": "0.11.2",
+  "jaxlib": "0.11.2",
+  "brax": "0.14.2",
+  "flax": "0.12.10",
+  "optax": "0.2.8",
+  "active_warp_backend": "mujoco.mjx.third_party.mujoco_warp",
+  "sources": [
+    "https://mujoco.readthedocs.io/en/stable/mjwarp/index.html#features",
+    "https://nvidia.github.io/warp/v1.19/user_guide/execution_and_performance/deterministic_execution.html"
+  ]
+}

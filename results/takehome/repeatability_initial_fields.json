@@ -1,0 +1,386 @@
+{
+  "reference": {
+    "name": "solo_seed_0",
+    "path": "results/takehome/benchmark/solo/seed_0/practice_0010.npz",
+    "obs_array_shape": [
+      200,
+      10,
+      18
+    ]
+  },
+  "observation_feature_definitions": [
+    {
+      "feature_indices": [
+        0,
+        1,
+        2
+      ],
+      "definition": "rel = tip - entrance + info[bias] + noise",
+      "sources": [
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 351,
+          "exact_quote": "    rel = tip - entrance + info['bias'] + noise"
+        }
+      ]
+    },
+    {
+      "feature_indices": [
+        3,
+        4,
+        5
+      ],
+      "definition": "tip_vel sensor values",
+      "sources": [
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 352,
+          "exact_quote": "    tip_vel = data.sensordata[self._tip_vel_slice]"
+        },
+        {
+          "source": "peg_insertion/xml_builder.py",
+          "line_number": 156,
+          "exact_quote": "    <framelinvel name=\"tip_vel\" objtype=\"site\" objname=\"peg_tip\"/>"
+        }
+      ]
+    },
+    {
+      "feature_indices": [
+        6,
+        7,
+        8
+      ],
+      "definition": "action values",
+      "sources": [
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 354,
+          "exact_quote": "    parts = [rel, tip_vel, action, depth]"
+        }
+      ]
+    },
+    {
+      "feature_indices": [
+        9
+      ],
+      "definition": "depth = maximum of zero and negative relative z",
+      "sources": [
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 353,
+          "exact_quote": "    depth = jp.maximum(0.0, -rel[2:3])"
+        }
+      ]
+    },
+    {
+      "feature_indices": [
+        10,
+        11,
+        12
+      ],
+      "definition": "clipped normalized force sensor values",
+      "sources": [
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 356,
+          "exact_quote": "      force = data.sensordata[self._force_slice] / cfg.force_clip"
+        },
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 358,
+          "exact_quote": "      parts += [jp.clip(force, -1.0, 1.0), jp.clip(torque, -1.0, 1.0)]"
+        },
+        {
+          "source": "peg_insertion/xml_builder.py",
+          "line_number": 153,
+          "exact_quote": "    <force name=\"peg_force\" site=\"ft_site\"/>"
+        }
+      ]
+    },
+    {
+      "feature_indices": [
+        13,
+        14,
+        15
+      ],
+      "definition": "clipped normalized torque sensor values",
+      "sources": [
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 357,
+          "exact_quote": "      torque = data.sensordata[self._torque_slice] / cfg.torque_clip"
+        },
+        {
+          "source": "peg_insertion/env.py",
+          "line_number": 358,
+          "exact_quote": "      parts += [jp.clip(force, -1.0, 1.0), jp.clip(torque, -1.0, 1.0)]"
+        },
+        {
+          "source": "peg_insertion/xml_builder.py",
+          "line_number": 154,
+          "exact_quote": "    <torque name=\"peg_torque\" site=\"ft_site\"/>"
+        }
+      ]
+    },
+    {
+      "feature_indices": [
+        16,
+        17
+      ],
+      "definition": "running aim guess appended to the environment observation by the wrapper",
+      "sources": [
+        {
+          "source": "takehome/correction.py",
+          "line_number": 91,
+          "exact_quote": "            obs={\"state\": jp.concatenate([state.obs[\"state\"], guess])}, info=info)"
+        }
+      ]
+    }
+  ],
+  "comparisons": {
+    "parallel4_seed_0": {
+      "comparison_path": "results/takehome/benchmark/parallel4/seed_0/practice_0010.npz",
+      "difference_convention": "other obs minus solo obs, elementwise at time index 0",
+      "time_index": 0,
+      "obs_array_shape": [
+        200,
+        10,
+        18
+      ],
+      "obs_at_time_index_shape": [
+        10,
+        18
+      ],
+      "differing_episode_count": 8,
+      "differing_episode_indices_zero_based": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        9
+      ],
+      "differing_feature_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "unchanged_feature_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        16,
+        17
+      ],
+      "nonzero_difference_min": -1.862645149230957e-09,
+      "nonzero_difference_max": 7.450580596923828e-09,
+      "nonzero_difference_max_absolute": 7.450580596923828e-09,
+      "per_feature_differences": [
+        {
+          "feature_index": 10,
+          "differing_episode_count": 8,
+          "min_nonzero_difference": -7.332801033044234e-12,
+          "max_nonzero_difference": 1.646185410209e-10,
+          "max_absolute_difference": 1.646185410209e-10
+        },
+        {
+          "feature_index": 11,
+          "differing_episode_count": 8,
+          "min_nonzero_difference": -1.5133991837501526e-09,
+          "max_nonzero_difference": 1.2514647096395493e-09,
+          "max_absolute_difference": 1.5133991837501526e-09
+        },
+        {
+          "feature_index": 12,
+          "differing_episode_count": 3,
+          "min_nonzero_difference": -1.862645149230957e-09,
+          "max_nonzero_difference": 1.862645149230957e-09,
+          "max_absolute_difference": 1.862645149230957e-09
+        },
+        {
+          "feature_index": 13,
+          "differing_episode_count": 4,
+          "min_nonzero_difference": 7.450580596923828e-09,
+          "max_nonzero_difference": 7.450580596923828e-09,
+          "max_absolute_difference": 7.450580596923828e-09
+        },
+        {
+          "feature_index": 14,
+          "differing_episode_count": 4,
+          "min_nonzero_difference": -1.1641532182693481e-10,
+          "max_nonzero_difference": 2.3283064365386963e-10,
+          "max_absolute_difference": 2.3283064365386963e-10
+        },
+        {
+          "feature_index": 15,
+          "differing_episode_count": 8,
+          "min_nonzero_difference": -2.646771690706373e-12,
+          "max_nonzero_difference": 5.4569682106375694e-12,
+          "max_absolute_difference": 5.4569682106375694e-12
+        }
+      ],
+      "other_saved_fields_at_time_index_0_match": {
+        "action": true,
+        "depth": true,
+        "episode_id": true,
+        "executed_action": false,
+        "force": false,
+        "guess": true,
+        "next_guess": true,
+        "next_obs": false,
+        "old_action": false,
+        "q": false,
+        "reward": true,
+        "source": true,
+        "step": true,
+        "success": true,
+        "terminated": true,
+        "tip_height": true,
+        "true_bias": true,
+        "truncated": true,
+        "valid": true,
+        "xy_err": true
+      },
+      "other_saved_fields_mismatching": [
+        "executed_action",
+        "force",
+        "next_obs",
+        "old_action",
+        "q"
+      ]
+    },
+    "one_process_two_seeds_seed_0": {
+      "comparison_path": "results/takehome/benchmark/one_process_two_seeds/seed_0/practice_0010.npz",
+      "difference_convention": "other obs minus solo obs, elementwise at time index 0",
+      "time_index": 0,
+      "obs_array_shape": [
+        200,
+        10,
+        18
+      ],
+      "obs_at_time_index_shape": [
+        10,
+        18
+      ],
+      "differing_episode_count": 6,
+      "differing_episode_indices_zero_based": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "differing_feature_indices": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "unchanged_feature_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        16,
+        17
+      ],
+      "nonzero_difference_min": -7.450580596923828e-09,
+      "nonzero_difference_max": 7.450580596923828e-09,
+      "nonzero_difference_max_absolute": 7.450580596923828e-09,
+      "per_feature_differences": [
+        {
+          "feature_index": 10,
+          "differing_episode_count": 6,
+          "min_nonzero_difference": -2.7853275241795927e-11,
+          "max_nonzero_difference": 3.8198777474462986e-11,
+          "max_absolute_difference": 3.8198777474462986e-11
+        },
+        {
+          "feature_index": 11,
+          "differing_episode_count": 4,
+          "min_nonzero_difference": -1.8917489796876907e-09,
+          "max_nonzero_difference": 7.8580342233181e-10,
+          "max_absolute_difference": 1.8917489796876907e-09
+        },
+        {
+          "feature_index": 12,
+          "differing_episode_count": 2,
+          "min_nonzero_difference": -3.725290298461914e-09,
+          "max_nonzero_difference": -1.862645149230957e-09,
+          "max_absolute_difference": 3.725290298461914e-09
+        },
+        {
+          "feature_index": 13,
+          "differing_episode_count": 3,
+          "min_nonzero_difference": -7.450580596923828e-09,
+          "max_nonzero_difference": 7.450580596923828e-09,
+          "max_absolute_difference": 7.450580596923828e-09
+        },
+        {
+          "feature_index": 14,
+          "differing_episode_count": 4,
+          "min_nonzero_difference": -1.1641532182693481e-10,
+          "max_nonzero_difference": 2.3283064365386963e-10,
+          "max_absolute_difference": 2.3283064365386963e-10
+        },
+        {
+          "feature_index": 15,
+          "differing_episode_count": 6,
+          "min_nonzero_difference": -2.7284841053187847e-12,
+          "max_nonzero_difference": 5.4569682106375694e-12,
+          "max_absolute_difference": 5.4569682106375694e-12
+        }
+      ],
+      "other_saved_fields_at_time_index_0_match": {
+        "action": true,
+        "depth": true,
+        "episode_id": true,
+        "executed_action": false,
+        "force": false,
+        "guess": true,
+        "next_guess": true,
+        "next_obs": false,
+        "old_action": false,
+        "q": false,
+        "reward": true,
+        "source": true,
+        "step": true,
+        "success": true,
+        "terminated": true,
+        "tip_height": true,
+        "true_bias": true,
+        "truncated": true,
+        "valid": true,
+        "xy_err": true
+      },
+      "other_saved_fields_mismatching": [
+        "executed_action",
+        "force",
+        "next_obs",
+        "old_action",
+        "q"
+      ]
+    }
+  }
+}

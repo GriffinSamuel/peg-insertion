@@ -1,0 +1,68 @@
+{
+  "purpose": "repeatability diagnosis only",
+  "test_only": true,
+  "learned_from": false,
+  "practice_episodes": 0,
+  "test_only_episodes": 30,
+  "reset_only_probes": 30,
+  "seed": 0,
+  "repeats": [
+    {
+      "repeat": 0,
+      "seconds": 12.343412411000827,
+      "successes": 8,
+      "reset_hashes": {
+        "obs": "7a3918f37f8cb94590adf303ce0f039183899bf66eea2777a75bfef404850d9a",
+        "qpos": "230f090ccd2898d115ed6bc78d0bc0dc06f5b87acf02b1ffe27269cf2cc5e78c",
+        "qvel": "d3df611a0ed2e328b050d285287637c60643ba96ec09e4aaefaad7f2cd114b77",
+        "qacc": "1922ecbe15fb70887e7df20f0df5b3e46c91ae09a857454c42ddab789613d02e",
+        "sensordata": "957b29e0c1f6f2074cc3d51995d4020c32343e2c1389e7f857a55c6a27a1036c",
+        "site_xpos": "b856622870ddf8d6f63044e796b97e2698e8e29fdc9964568582d8d12ea51b1a",
+        "qfrc_bias": "a0530b571697460c71581b9b145dd04b9190f2c945feda279195011f06946171",
+        "qfrc_constraint": "5a0d5ddc1d61bb7e922fbf6019d3e688271fed963fd385a0fea3baf38a84c59b",
+        "cfrc_int": "c817c91e4626856e22b9b7e9eb95bfa4460b27fa014280a241cf7765b5b6b1b9",
+        "cfrc_ext": "9b00b8930d66b11eb3cc96e31d08b2889160b0e617f1f6c229fa37c92578c23c",
+        "cacc": "8c171690b508edcb38145c4764d5c58bb573d95a716aa1ea658b4fb4b128659a"
+      }
+    },
+    {
+      "repeat": 1,
+      "seconds": 0.6587631490001513,
+      "successes": 7,
+      "reset_hashes": {
+        "obs": "2adb594b24f51e1b82cc58c4a0962f165c9c36f2d159a57e88a21b947570ecc2",
+        "qpos": "230f090ccd2898d115ed6bc78d0bc0dc06f5b87acf02b1ffe27269cf2cc5e78c",
+        "qvel": "d3df611a0ed2e328b050d285287637c60643ba96ec09e4aaefaad7f2cd114b77",
+        "qacc": "957861dc3b545697272bad3eb8eb0ddfd1695b93b984146caaccf07dd7b8bd5f",
+        "sensordata": "653d640b5b8daea70a07c3e8bf173878db986df4417ab3215f9d160c9aa1c31b",
+        "site_xpos": "b856622870ddf8d6f63044e796b97e2698e8e29fdc9964568582d8d12ea51b1a",
+        "qfrc_bias": "a0530b571697460c71581b9b145dd04b9190f2c945feda279195011f06946171",
+        "qfrc_constraint": "86a3892e217fd30e43cf3d845016b2f79e685d6c1b6a3b5aa8cd5288b599b26b",
+        "cfrc_int": "3453169a1e55fe53c43db7bb53958f4002bd934deb25a77e7ac5df3ae4bb5dab",
+        "cfrc_ext": "9b00b8930d66b11eb3cc96e31d08b2889160b0e617f1f6c229fa37c92578c23c",
+        "cacc": "cb8b055af82b28c921e1bcfc0e639a77664b31fe458071ac4dbfd76bc700af6d"
+      }
+    },
+    {
+      "repeat": 2,
+      "seconds": 0.6241511859989259,
+      "successes": 7,
+      "reset_hashes": {
+        "obs": "e9c8e1c4727ec4b237af9d57336b11673603791f3550e084ecbc762af64eb6f2",
+        "qpos": "230f090ccd2898d115ed6bc78d0bc0dc06f5b87acf02b1ffe27269cf2cc5e78c",
+        "qvel": "d3df611a0ed2e328b050d285287637c60643ba96ec09e4aaefaad7f2cd114b77",
+        "qacc": "0c4fb5b2eca5a186a53ef58b8f790fecf6fc7efb7d3b76dcce216177c4e46b1e",
+        "sensordata": "4fc4f2c3a47d1f19b389105c394cf72511305a9347bbd0f13298e94aa14adbeb",
+        "site_xpos": "b856622870ddf8d6f63044e796b97e2698e8e29fdc9964568582d8d12ea51b1a",
+        "qfrc_bias": "a0530b571697460c71581b9b145dd04b9190f2c945feda279195011f06946171",
+        "qfrc_constraint": "d1f2d55d08302b9a495d4d1c916a8c4015d4f6fd432baa5be967cb7b34f000a9",
+        "cfrc_int": "20f770ef30322189420c90475c1ecd89845ec4f4c3e5286ae62099f6fee252b8",
+        "cfrc_ext": "9b00b8930d66b11eb3cc96e31d08b2889160b0e617f1f6c229fa37c92578c23c",
+        "cacc": "9babb1112d25a52d1c033fa006c58d4f9ea924ad7f6120cd605640b62829a910"
+      }
+    }
+  ],
+  "devices": [
+    "cuda:0"
+  ]
+}
