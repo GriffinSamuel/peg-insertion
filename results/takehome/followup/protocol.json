@@ -1,0 +1,80 @@
+{
+  "created_utc": "2026-11-16T07:19:13.285649+00:00",
+  "plan_commit": "c756efd",
+  "original_finished_commit": "e9f399c",
+  "original_headline_percent": 80.2,
+  "original_settings": 28,
+  "old_practice_episodes": 29010,
+  "old_full_test_episodes": 409690,
+  "old_reset_only_probes": 191,
+  "practice_cap_per_experiment": 200,
+  "screen_practice_seeds": [
+    0,
+    1,
+    2
+  ],
+  "extended_practice_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "development_test_seed": 123,
+  "final_practice_seeds": [
+    200,
+    201,
+    202,
+    203,
+    204
+  ],
+  "final_test_seed": 1001,
+  "final_test_episodes": 500,
+  "curve_episodes": 256,
+  "curve_seed": 123,
+  "physical_verification_seed": 789,
+  "physical_verification_used_for_selection": false,
+  "max_aim_variants": 14,
+  "max_new_settings": 90,
+  "gpu_workers": 4,
+  "verdicts": [
+    "HELPED",
+    "PROMISING",
+    "NO REAL DIFFERENCE",
+    "HURT",
+    "UNSTABLE",
+    "DID NOT RUN"
+  ],
+  "spread": "sample standard deviation ddof1; compare matched practice seeds using larger method/base spread",
+  "verdict_precedence": [
+    "DID NOT RUN",
+    "UNSTABLE",
+    "HELPED or PROMISING",
+    "HURT",
+    "NO REAL DIFFERENCE"
+  ],
+  "collapse": "any seed below half the base success on the same seed",
+  "eligibility": "Normal camera only, learning methods with neither handwritten search nor hidden information, excluding all PhaseF methods; reused plain movement remains fallback/reference.",
+  "aim_working": "Five development seeds; mean success exceeds61.4percent by more than own sample spread AND paired successful-episode mean guess error decreases from initial guess to first success.",
+  "aim_metric": "L2 error in millimetres. Report overall start and success; compare success to start on the same successful episodes. No success yields null, never a substituted endpoint.",
+  "phase_a": {
+    "new_episodes": 0,
+    "contact_force_n": 5,
+    "step_numbering": "one-based control steps",
+    "prediction_windows": [
+      1,
+      20,
+      40
+    ],
+    "predictor": "linear ridge",
+    "ridge_penalty": 0.01,
+    "fit_data": "own saved counted practice only, every tenth valid step, raw16 readings with first-reading padding",
+    "evaluations": [
+      "first_contact_reading",
+      "control_step125_before_action"
+    ],
+    "purpose": "diagnosis only; old confirmation seeds never choose followup settings"
+  },
+  "report_rule": "Preserve every existing report byte; only append one pointer paragraph atPhaseG as explicitly requested.",
+  "cache_rule": "All new output/cache files under results/takehome/followup; never run old report/accounting/status writers."
+}

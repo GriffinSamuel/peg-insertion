@@ -1,0 +1,13 @@
+# Follow-up outputs are separate from every completed-study result.
+cache/
+*_tmp/
+*.pid
+*.lock
+*.tmp
+__pycache__/
+*.py[cod]
+*.npz
+*.npy
+*.pkl
+*.mp4
+!*.log

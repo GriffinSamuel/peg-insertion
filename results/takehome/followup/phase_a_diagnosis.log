@@ -1,0 +1,16 @@
+{"seed": 100, "window": 1, "fit_samples": 3780}
+{"seed": 100, "window": 20, "fit_samples": 3780}
+{"seed": 100, "window": 40, "fit_samples": 3780}
+{"seed": 101, "window": 1, "fit_samples": 3709}
+{"seed": 101, "window": 20, "fit_samples": 3709}
+{"seed": 101, "window": 40, "fit_samples": 3709}
+{"seed": 102, "window": 1, "fit_samples": 3774}
+{"seed": 102, "window": 20, "fit_samples": 3774}
+{"seed": 102, "window": 40, "fit_samples": 3774}
+{"seed": 103, "window": 1, "fit_samples": 3798}
+{"seed": 103, "window": 20, "fit_samples": 3798}
+{"seed": 103, "window": 40, "fit_samples": 3798}
+{"seed": 104, "window": 1, "fit_samples": 3680}
+{"seed": 104, "window": 20, "fit_samples": 3680}
+{"seed": 104, "window": 40, "fit_samples": 3680}
+{"output": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/A/diagnosis.json", "new_episodes": 0, "seconds": 3.3973121300005005}

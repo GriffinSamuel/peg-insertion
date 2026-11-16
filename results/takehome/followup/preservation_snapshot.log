@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "manifest": "results/takehome/followup/preservation_manifest.json",
+  "file_count": 9071,
+  "exclusions": {
+    "excluded_subtrees": [
+      "results/takehome/followup"
+    ],
+    "excluded_cache_temp_directory_names": [
+      ".cache",
+      ".pytest_cache",
+      "__pycache__",
+      "cache",
+      "caches",
+      "mplconfig",
+      "preflight_cache",
+      "pytest_cache",
+      "temp",
+      "tmp"
+    ],
+    "excluded_cache_temp_directory_suffixes": [
+      "_tmp",
+      ".tmp"
+    ],
+    "excluded_extensions": [],
+    "protected_result_name_patterns_not_excluded": [
+      "*.npz",
+      "*.pkl",
+      "*.mp4",
+      "result.json"
+    ]
+  }
+}

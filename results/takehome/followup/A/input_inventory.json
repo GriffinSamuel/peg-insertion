@@ -1,0 +1,5813 @@
+{
+  "task": "Follow-up Phase A input inventory; no episodes generated and no fit performed",
+  "status": "inputs_ready",
+  "branch": "takehome",
+  "required_final_test_contract": {
+    "seeds": [
+      100,
+      101,
+      102,
+      103,
+      104
+    ],
+    "episodes_per_seed": 500,
+    "test_seed": 456
+  },
+  "aim_confirmation_runs": [
+    {
+      "seed": 100,
+      "directory": "results/takehome/goal7/confirmation/aim/seed_100",
+      "result_json": "results/takehome/goal7/confirmation/aim/seed_100/result.json",
+      "recorded_result_seed": 100,
+      "recorded_practice_episodes": 200,
+      "final_test_summary_json": "results/takehome/goal7/confirmation/aim/seed_100/test_0200.json",
+      "final_test_summary": {
+        "episodes": 500,
+        "successes": 327,
+        "success_rate": 0.654,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456
+      },
+      "final_trace_npz": "results/takehome/goal7/confirmation/aim/seed_100/test_0200_traces.npz",
+      "final_trace_bytes": 12480941,
+      "final_trace_schema": {
+        "keys": [
+          "obs",
+          "guess",
+          "next_guess",
+          "true_bias",
+          "q",
+          "force",
+          "success",
+          "terminated",
+          "truncated",
+          "valid",
+          "step",
+          "old_action",
+          "executed_action",
+          "depth",
+          "xy_err",
+          "tip_height",
+          "action",
+          "movement",
+          "test_only",
+          "learned_from",
+          "test_seed",
+          "episode_success"
+        ],
+        "schema": [
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              500,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "action",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "test_only",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "learned_from",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "test_seed",
+            "shape": [],
+            "dtype": "int64"
+          },
+          {
+            "key": "episode_success",
+            "shape": [
+              500
+            ],
+            "dtype": "float32"
+          }
+        ]
+      },
+      "final_trace_scalar_provenance": {
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456,
+        "episode_success_count": 327,
+        "episode_success_count_matches_test_json": true
+      },
+      "required_trace_fields_present": true,
+      "practice_budget_ledger": {
+        "path": "results/takehome/goal7/confirmation/aim/seed_100/budget.json",
+        "limit": 200,
+        "ledger_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160
+        },
+        "sequential_ids_0_to_199": true
+      },
+      "practice_archives": {
+        "paths": [
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0010.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0020.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0030.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0040.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0050.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0060.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0070.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0080.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0090.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0100.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0110.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0120.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0130.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0140.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0150.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0160.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0170.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0180.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0190.npz",
+          "results/takehome/goal7/confirmation/aim/seed_100/practice_0200.npz"
+        ],
+        "archive_count_present": 20,
+        "archive_count_expected": 20,
+        "archives": [
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0010.npz",
+            "exists": true,
+            "bytes": 390698,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0020.npz",
+            "exists": true,
+            "bytes": 390131,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0030.npz",
+            "exists": true,
+            "bytes": 390772,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0040.npz",
+            "exists": true,
+            "bytes": 390653,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0050.npz",
+            "exists": true,
+            "bytes": 390692,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0060.npz",
+            "exists": true,
+            "bytes": 360134,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0070.npz",
+            "exists": true,
+            "bytes": 360483,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0080.npz",
+            "exists": true,
+            "bytes": 363123,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0090.npz",
+            "exists": true,
+            "bytes": 376410,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0100.npz",
+            "exists": true,
+            "bytes": 383111,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0110.npz",
+            "exists": true,
+            "bytes": 382604,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0120.npz",
+            "exists": true,
+            "bytes": 383231,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0130.npz",
+            "exists": true,
+            "bytes": 382150,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0140.npz",
+            "exists": true,
+            "bytes": 386117,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0150.npz",
+            "exists": true,
+            "bytes": 386816,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0160.npz",
+            "exists": true,
+            "bytes": 388454,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0170.npz",
+            "exists": true,
+            "bytes": 388307,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0180.npz",
+            "exists": true,
+            "bytes": 388835,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0190.npz",
+            "exists": true,
+            "bytes": 388772,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_100/practice_0200.npz",
+            "exists": true,
+            "bytes": 388613,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          }
+        ],
+        "schema_keys": [
+          "action",
+          "depth",
+          "episode_id",
+          "executed_action",
+          "force",
+          "guess",
+          "movement",
+          "next_guess",
+          "next_obs",
+          "next_true_bias",
+          "obs",
+          "old_action",
+          "q",
+          "reward",
+          "source",
+          "step",
+          "success",
+          "terminated",
+          "tip_height",
+          "true_bias",
+          "truncated",
+          "valid",
+          "xy_err"
+        ],
+        "schema_shapes_dtypes": [
+          {
+            "key": "action",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "episode_id",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "reward",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "source",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "schema_consistent_across_archives": true,
+        "unique_archived_episode_ids_count": 200,
+        "unique_archived_episode_ids_min": 0,
+        "unique_archived_episode_ids_max": 199,
+        "source_codes_present": [
+          0,
+          1
+        ],
+        "archive_id_source_code_counts": {
+          "0_fill": 40,
+          "1_online": 160
+        },
+        "all_budget_ids_in_archives": true
+      },
+      "progress_json": "results/takehome/goal7/confirmation/aim/seed_100/progress.json"
+    },
+    {
+      "seed": 101,
+      "directory": "results/takehome/goal7/confirmation/aim/seed_101",
+      "result_json": "results/takehome/goal7/confirmation/aim/seed_101/result.json",
+      "recorded_result_seed": 101,
+      "recorded_practice_episodes": 200,
+      "final_test_summary_json": "results/takehome/goal7/confirmation/aim/seed_101/test_0200.json",
+      "final_test_summary": {
+        "episodes": 500,
+        "successes": 322,
+        "success_rate": 0.644,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456
+      },
+      "final_trace_npz": "results/takehome/goal7/confirmation/aim/seed_101/test_0200_traces.npz",
+      "final_trace_bytes": 11959087,
+      "final_trace_schema": {
+        "keys": [
+          "obs",
+          "guess",
+          "next_guess",
+          "true_bias",
+          "q",
+          "force",
+          "success",
+          "terminated",
+          "truncated",
+          "valid",
+          "step",
+          "old_action",
+          "executed_action",
+          "depth",
+          "xy_err",
+          "tip_height",
+          "action",
+          "movement",
+          "test_only",
+          "learned_from",
+          "test_seed",
+          "episode_success"
+        ],
+        "schema": [
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              500,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "action",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "test_only",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "learned_from",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "test_seed",
+            "shape": [],
+            "dtype": "int64"
+          },
+          {
+            "key": "episode_success",
+            "shape": [
+              500
+            ],
+            "dtype": "float32"
+          }
+        ]
+      },
+      "final_trace_scalar_provenance": {
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456,
+        "episode_success_count": 322,
+        "episode_success_count_matches_test_json": true
+      },
+      "required_trace_fields_present": true,
+      "practice_budget_ledger": {
+        "path": "results/takehome/goal7/confirmation/aim/seed_101/budget.json",
+        "limit": 200,
+        "ledger_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160
+        },
+        "sequential_ids_0_to_199": true
+      },
+      "practice_archives": {
+        "paths": [
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0010.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0020.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0030.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0040.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0050.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0060.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0070.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0080.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0090.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0100.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0110.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0120.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0130.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0140.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0150.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0160.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0170.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0180.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0190.npz",
+          "results/takehome/goal7/confirmation/aim/seed_101/practice_0200.npz"
+        ],
+        "archive_count_present": 20,
+        "archive_count_expected": 20,
+        "archives": [
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0010.npz",
+            "exists": true,
+            "bytes": 390355,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0020.npz",
+            "exists": true,
+            "bytes": 390319,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0030.npz",
+            "exists": true,
+            "bytes": 391099,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0040.npz",
+            "exists": true,
+            "bytes": 390787,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0050.npz",
+            "exists": true,
+            "bytes": 391240,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0060.npz",
+            "exists": true,
+            "bytes": 374313,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0070.npz",
+            "exists": true,
+            "bytes": 350949,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0080.npz",
+            "exists": true,
+            "bytes": 376019,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0090.npz",
+            "exists": true,
+            "bytes": 376828,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0100.npz",
+            "exists": true,
+            "bytes": 385655,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0110.npz",
+            "exists": true,
+            "bytes": 386602,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0120.npz",
+            "exists": true,
+            "bytes": 384763,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0130.npz",
+            "exists": true,
+            "bytes": 385675,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0140.npz",
+            "exists": true,
+            "bytes": 384352,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0150.npz",
+            "exists": true,
+            "bytes": 384218,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0160.npz",
+            "exists": true,
+            "bytes": 382130,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0170.npz",
+            "exists": true,
+            "bytes": 383855,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0180.npz",
+            "exists": true,
+            "bytes": 384908,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0190.npz",
+            "exists": true,
+            "bytes": 383274,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_101/practice_0200.npz",
+            "exists": true,
+            "bytes": 382313,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          }
+        ],
+        "schema_keys": [
+          "action",
+          "depth",
+          "episode_id",
+          "executed_action",
+          "force",
+          "guess",
+          "movement",
+          "next_guess",
+          "next_obs",
+          "next_true_bias",
+          "obs",
+          "old_action",
+          "q",
+          "reward",
+          "source",
+          "step",
+          "success",
+          "terminated",
+          "tip_height",
+          "true_bias",
+          "truncated",
+          "valid",
+          "xy_err"
+        ],
+        "schema_shapes_dtypes": [
+          {
+            "key": "action",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "episode_id",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "reward",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "source",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "schema_consistent_across_archives": true,
+        "unique_archived_episode_ids_count": 200,
+        "unique_archived_episode_ids_min": 0,
+        "unique_archived_episode_ids_max": 199,
+        "source_codes_present": [
+          0,
+          1
+        ],
+        "archive_id_source_code_counts": {
+          "0_fill": 40,
+          "1_online": 160
+        },
+        "all_budget_ids_in_archives": true
+      },
+      "progress_json": "results/takehome/goal7/confirmation/aim/seed_101/progress.json"
+    },
+    {
+      "seed": 102,
+      "directory": "results/takehome/goal7/confirmation/aim/seed_102",
+      "result_json": "results/takehome/goal7/confirmation/aim/seed_102/result.json",
+      "recorded_result_seed": 102,
+      "recorded_practice_episodes": 200,
+      "final_test_summary_json": "results/takehome/goal7/confirmation/aim/seed_102/test_0200.json",
+      "final_test_summary": {
+        "episodes": 500,
+        "successes": 304,
+        "success_rate": 0.608,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456
+      },
+      "final_trace_npz": "results/takehome/goal7/confirmation/aim/seed_102/test_0200_traces.npz",
+      "final_trace_bytes": 12421022,
+      "final_trace_schema": {
+        "keys": [
+          "obs",
+          "guess",
+          "next_guess",
+          "true_bias",
+          "q",
+          "force",
+          "success",
+          "terminated",
+          "truncated",
+          "valid",
+          "step",
+          "old_action",
+          "executed_action",
+          "depth",
+          "xy_err",
+          "tip_height",
+          "action",
+          "movement",
+          "test_only",
+          "learned_from",
+          "test_seed",
+          "episode_success"
+        ],
+        "schema": [
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              500,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "action",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "test_only",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "learned_from",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "test_seed",
+            "shape": [],
+            "dtype": "int64"
+          },
+          {
+            "key": "episode_success",
+            "shape": [
+              500
+            ],
+            "dtype": "float32"
+          }
+        ]
+      },
+      "final_trace_scalar_provenance": {
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456,
+        "episode_success_count": 304,
+        "episode_success_count_matches_test_json": true
+      },
+      "required_trace_fields_present": true,
+      "practice_budget_ledger": {
+        "path": "results/takehome/goal7/confirmation/aim/seed_102/budget.json",
+        "limit": 200,
+        "ledger_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160
+        },
+        "sequential_ids_0_to_199": true
+      },
+      "practice_archives": {
+        "paths": [
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0010.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0020.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0030.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0040.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0050.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0060.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0070.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0080.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0090.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0100.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0110.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0120.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0130.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0140.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0150.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0160.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0170.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0180.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0190.npz",
+          "results/takehome/goal7/confirmation/aim/seed_102/practice_0200.npz"
+        ],
+        "archive_count_present": 20,
+        "archive_count_expected": 20,
+        "archives": [
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0010.npz",
+            "exists": true,
+            "bytes": 390000,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0020.npz",
+            "exists": true,
+            "bytes": 389496,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0030.npz",
+            "exists": true,
+            "bytes": 391030,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0040.npz",
+            "exists": true,
+            "bytes": 391261,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0050.npz",
+            "exists": true,
+            "bytes": 390968,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0060.npz",
+            "exists": true,
+            "bytes": 358456,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0070.npz",
+            "exists": true,
+            "bytes": 368298,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0080.npz",
+            "exists": true,
+            "bytes": 366488,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0090.npz",
+            "exists": true,
+            "bytes": 366432,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0100.npz",
+            "exists": true,
+            "bytes": 362925,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0110.npz",
+            "exists": true,
+            "bytes": 381361,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0120.npz",
+            "exists": true,
+            "bytes": 378962,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0130.npz",
+            "exists": true,
+            "bytes": 385169,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0140.npz",
+            "exists": true,
+            "bytes": 385971,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0150.npz",
+            "exists": true,
+            "bytes": 387208,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0160.npz",
+            "exists": true,
+            "bytes": 389004,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0170.npz",
+            "exists": true,
+            "bytes": 387793,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0180.npz",
+            "exists": true,
+            "bytes": 388687,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0190.npz",
+            "exists": true,
+            "bytes": 388167,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_102/practice_0200.npz",
+            "exists": true,
+            "bytes": 388093,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          }
+        ],
+        "schema_keys": [
+          "action",
+          "depth",
+          "episode_id",
+          "executed_action",
+          "force",
+          "guess",
+          "movement",
+          "next_guess",
+          "next_obs",
+          "next_true_bias",
+          "obs",
+          "old_action",
+          "q",
+          "reward",
+          "source",
+          "step",
+          "success",
+          "terminated",
+          "tip_height",
+          "true_bias",
+          "truncated",
+          "valid",
+          "xy_err"
+        ],
+        "schema_shapes_dtypes": [
+          {
+            "key": "action",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "episode_id",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "reward",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "source",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "schema_consistent_across_archives": true,
+        "unique_archived_episode_ids_count": 200,
+        "unique_archived_episode_ids_min": 0,
+        "unique_archived_episode_ids_max": 199,
+        "source_codes_present": [
+          0,
+          1
+        ],
+        "archive_id_source_code_counts": {
+          "0_fill": 40,
+          "1_online": 160
+        },
+        "all_budget_ids_in_archives": true
+      },
+      "progress_json": "results/takehome/goal7/confirmation/aim/seed_102/progress.json"
+    },
+    {
+      "seed": 103,
+      "directory": "results/takehome/goal7/confirmation/aim/seed_103",
+      "result_json": "results/takehome/goal7/confirmation/aim/seed_103/result.json",
+      "recorded_result_seed": 103,
+      "recorded_practice_episodes": 200,
+      "final_test_summary_json": "results/takehome/goal7/confirmation/aim/seed_103/test_0200.json",
+      "final_test_summary": {
+        "episodes": 500,
+        "successes": 286,
+        "success_rate": 0.572,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456
+      },
+      "final_trace_npz": "results/takehome/goal7/confirmation/aim/seed_103/test_0200_traces.npz",
+      "final_trace_bytes": 12355759,
+      "final_trace_schema": {
+        "keys": [
+          "obs",
+          "guess",
+          "next_guess",
+          "true_bias",
+          "q",
+          "force",
+          "success",
+          "terminated",
+          "truncated",
+          "valid",
+          "step",
+          "old_action",
+          "executed_action",
+          "depth",
+          "xy_err",
+          "tip_height",
+          "action",
+          "movement",
+          "test_only",
+          "learned_from",
+          "test_seed",
+          "episode_success"
+        ],
+        "schema": [
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              500,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "action",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "test_only",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "learned_from",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "test_seed",
+            "shape": [],
+            "dtype": "int64"
+          },
+          {
+            "key": "episode_success",
+            "shape": [
+              500
+            ],
+            "dtype": "float32"
+          }
+        ]
+      },
+      "final_trace_scalar_provenance": {
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456,
+        "episode_success_count": 286,
+        "episode_success_count_matches_test_json": true
+      },
+      "required_trace_fields_present": true,
+      "practice_budget_ledger": {
+        "path": "results/takehome/goal7/confirmation/aim/seed_103/budget.json",
+        "limit": 200,
+        "ledger_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160
+        },
+        "sequential_ids_0_to_199": true
+      },
+      "practice_archives": {
+        "paths": [
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0010.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0020.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0030.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0040.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0050.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0060.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0070.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0080.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0090.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0100.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0110.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0120.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0130.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0140.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0150.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0160.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0170.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0180.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0190.npz",
+          "results/takehome/goal7/confirmation/aim/seed_103/practice_0200.npz"
+        ],
+        "archive_count_present": 20,
+        "archive_count_expected": 20,
+        "archives": [
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0010.npz",
+            "exists": true,
+            "bytes": 391356,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0020.npz",
+            "exists": true,
+            "bytes": 390595,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0030.npz",
+            "exists": true,
+            "bytes": 390087,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0040.npz",
+            "exists": true,
+            "bytes": 390454,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0050.npz",
+            "exists": true,
+            "bytes": 390602,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0060.npz",
+            "exists": true,
+            "bytes": 338322,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0070.npz",
+            "exists": true,
+            "bytes": 379691,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0080.npz",
+            "exists": true,
+            "bytes": 376836,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0090.npz",
+            "exists": true,
+            "bytes": 364503,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0100.npz",
+            "exists": true,
+            "bytes": 364056,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0110.npz",
+            "exists": true,
+            "bytes": 384339,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0120.npz",
+            "exists": true,
+            "bytes": 386281,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0130.npz",
+            "exists": true,
+            "bytes": 387061,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0140.npz",
+            "exists": true,
+            "bytes": 383678,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0150.npz",
+            "exists": true,
+            "bytes": 385617,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0160.npz",
+            "exists": true,
+            "bytes": 386055,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0170.npz",
+            "exists": true,
+            "bytes": 383162,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0180.npz",
+            "exists": true,
+            "bytes": 384864,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0190.npz",
+            "exists": true,
+            "bytes": 388064,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_103/practice_0200.npz",
+            "exists": true,
+            "bytes": 387091,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          }
+        ],
+        "schema_keys": [
+          "action",
+          "depth",
+          "episode_id",
+          "executed_action",
+          "force",
+          "guess",
+          "movement",
+          "next_guess",
+          "next_obs",
+          "next_true_bias",
+          "obs",
+          "old_action",
+          "q",
+          "reward",
+          "source",
+          "step",
+          "success",
+          "terminated",
+          "tip_height",
+          "true_bias",
+          "truncated",
+          "valid",
+          "xy_err"
+        ],
+        "schema_shapes_dtypes": [
+          {
+            "key": "action",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "episode_id",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "reward",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "source",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "schema_consistent_across_archives": true,
+        "unique_archived_episode_ids_count": 200,
+        "unique_archived_episode_ids_min": 0,
+        "unique_archived_episode_ids_max": 199,
+        "source_codes_present": [
+          0,
+          1
+        ],
+        "archive_id_source_code_counts": {
+          "0_fill": 40,
+          "1_online": 160
+        },
+        "all_budget_ids_in_archives": true
+      },
+      "progress_json": "results/takehome/goal7/confirmation/aim/seed_103/progress.json"
+    },
+    {
+      "seed": 104,
+      "directory": "results/takehome/goal7/confirmation/aim/seed_104",
+      "result_json": "results/takehome/goal7/confirmation/aim/seed_104/result.json",
+      "recorded_result_seed": 104,
+      "recorded_practice_episodes": 200,
+      "final_test_summary_json": "results/takehome/goal7/confirmation/aim/seed_104/test_0200.json",
+      "final_test_summary": {
+        "episodes": 500,
+        "successes": 330,
+        "success_rate": 0.66,
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456
+      },
+      "final_trace_npz": "results/takehome/goal7/confirmation/aim/seed_104/test_0200_traces.npz",
+      "final_trace_bytes": 12173249,
+      "final_trace_schema": {
+        "keys": [
+          "obs",
+          "guess",
+          "next_guess",
+          "true_bias",
+          "q",
+          "force",
+          "success",
+          "terminated",
+          "truncated",
+          "valid",
+          "step",
+          "old_action",
+          "executed_action",
+          "depth",
+          "xy_err",
+          "tip_height",
+          "action",
+          "movement",
+          "test_only",
+          "learned_from",
+          "test_seed",
+          "episode_success"
+        ],
+        "schema": [
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              500,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              500
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "action",
+            "shape": [
+              200,
+              500,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              500,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "test_only",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "learned_from",
+            "shape": [],
+            "dtype": "bool"
+          },
+          {
+            "key": "test_seed",
+            "shape": [],
+            "dtype": "int64"
+          },
+          {
+            "key": "episode_success",
+            "shape": [
+              500
+            ],
+            "dtype": "float32"
+          }
+        ]
+      },
+      "final_trace_scalar_provenance": {
+        "test_only": true,
+        "learned_from": false,
+        "test_seed": 456,
+        "episode_success_count": 330,
+        "episode_success_count_matches_test_json": true
+      },
+      "required_trace_fields_present": true,
+      "practice_budget_ledger": {
+        "path": "results/takehome/goal7/confirmation/aim/seed_104/budget.json",
+        "limit": 200,
+        "ledger_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160
+        },
+        "sequential_ids_0_to_199": true
+      },
+      "practice_archives": {
+        "paths": [
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0010.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0020.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0030.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0040.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0050.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0060.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0070.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0080.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0090.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0100.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0110.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0120.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0130.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0140.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0150.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0160.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0170.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0180.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0190.npz",
+          "results/takehome/goal7/confirmation/aim/seed_104/practice_0200.npz"
+        ],
+        "archive_count_present": 20,
+        "archive_count_expected": 20,
+        "archives": [
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0010.npz",
+            "exists": true,
+            "bytes": 390813,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0020.npz",
+            "exists": true,
+            "bytes": 390141,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0030.npz",
+            "exists": true,
+            "bytes": 390249,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0040.npz",
+            "exists": true,
+            "bytes": 390981,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0050.npz",
+            "exists": true,
+            "bytes": 391091,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0060.npz",
+            "exists": true,
+            "bytes": 336095,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0070.npz",
+            "exists": true,
+            "bytes": 355641,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0080.npz",
+            "exists": true,
+            "bytes": 372417,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0090.npz",
+            "exists": true,
+            "bytes": 378794,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0100.npz",
+            "exists": true,
+            "bytes": 384871,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0110.npz",
+            "exists": true,
+            "bytes": 385238,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0120.npz",
+            "exists": true,
+            "bytes": 384338,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0130.npz",
+            "exists": true,
+            "bytes": 383779,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0140.npz",
+            "exists": true,
+            "bytes": 384158,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0150.npz",
+            "exists": true,
+            "bytes": 380279,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0160.npz",
+            "exists": true,
+            "bytes": 380368,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0170.npz",
+            "exists": true,
+            "bytes": 380801,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0180.npz",
+            "exists": true,
+            "bytes": 381182,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0190.npz",
+            "exists": true,
+            "bytes": 382775,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          },
+          {
+            "path": "results/takehome/goal7/confirmation/aim/seed_104/practice_0200.npz",
+            "exists": true,
+            "bytes": 384962,
+            "keys": [
+              "action",
+              "depth",
+              "episode_id",
+              "executed_action",
+              "force",
+              "guess",
+              "movement",
+              "next_guess",
+              "next_obs",
+              "next_true_bias",
+              "obs",
+              "old_action",
+              "q",
+              "reward",
+              "source",
+              "step",
+              "success",
+              "terminated",
+              "tip_height",
+              "true_bias",
+              "truncated",
+              "valid",
+              "xy_err"
+            ]
+          }
+        ],
+        "schema_keys": [
+          "action",
+          "depth",
+          "episode_id",
+          "executed_action",
+          "force",
+          "guess",
+          "movement",
+          "next_guess",
+          "next_obs",
+          "next_true_bias",
+          "obs",
+          "old_action",
+          "q",
+          "reward",
+          "source",
+          "step",
+          "success",
+          "terminated",
+          "tip_height",
+          "true_bias",
+          "truncated",
+          "valid",
+          "xy_err"
+        ],
+        "schema_shapes_dtypes": [
+          {
+            "key": "action",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "depth",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "episode_id",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "executed_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "force",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "movement",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_guess",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "next_true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "obs",
+            "shape": [
+              200,
+              10,
+              18
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "old_action",
+            "shape": [
+              200,
+              10,
+              3
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "q",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "reward",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "source",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "step",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "int32"
+          },
+          {
+            "key": "success",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "terminated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "tip_height",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "true_bias",
+            "shape": [
+              200,
+              10,
+              2
+            ],
+            "dtype": "float32"
+          },
+          {
+            "key": "truncated",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "valid",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "bool"
+          },
+          {
+            "key": "xy_err",
+            "shape": [
+              200,
+              10
+            ],
+            "dtype": "float32"
+          }
+        ],
+        "schema_consistent_across_archives": true,
+        "unique_archived_episode_ids_count": 200,
+        "unique_archived_episode_ids_min": 0,
+        "unique_archived_episode_ids_max": 199,
+        "source_codes_present": [
+          0,
+          1
+        ],
+        "archive_id_source_code_counts": {
+          "0_fill": 40,
+          "1_online": 160
+        },
+        "all_budget_ids_in_archives": true
+      },
+      "progress_json": "results/takehome/goal7/confirmation/aim/seed_104/progress.json"
+    }
+  ],
+  "practice_archive_schema_consistent_across_all_runs": true,
+  "goal9_unlearned_before_trace": {
+    "trace_npz": "results/takehome/goal9/before_traces.npz",
+    "summary_json": "results/takehome/goal9/before_traces.json",
+    "trace_bytes": 13823827,
+    "summary": {
+      "episodes": 500,
+      "successes": 303,
+      "success_rate": 0.606,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 456,
+      "illustrative_repeat": true,
+      "not_used_to_replace_headline": true
+    },
+    "npz_schema": {
+      "keys": [
+        "obs",
+        "guess",
+        "next_guess",
+        "true_bias",
+        "q",
+        "force",
+        "success",
+        "terminated",
+        "truncated",
+        "valid",
+        "step",
+        "old_action",
+        "executed_action",
+        "depth",
+        "xy_err",
+        "tip_height",
+        "action",
+        "movement",
+        "qpos",
+        "mocap_pos",
+        "pose_succeeded",
+        "true_rel",
+        "test_only",
+        "learned_from",
+        "test_seed",
+        "episode_success"
+      ],
+      "schema": [
+        {
+          "key": "obs",
+          "shape": [
+            200,
+            500,
+            18
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "guess",
+          "shape": [
+            200,
+            500,
+            2
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "next_guess",
+          "shape": [
+            200,
+            500,
+            2
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "true_bias",
+          "shape": [
+            200,
+            500,
+            2
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "q",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "force",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "success",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "bool"
+        },
+        {
+          "key": "terminated",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "bool"
+        },
+        {
+          "key": "truncated",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "bool"
+        },
+        {
+          "key": "valid",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "bool"
+        },
+        {
+          "key": "step",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "int32"
+        },
+        {
+          "key": "old_action",
+          "shape": [
+            200,
+            500,
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "executed_action",
+          "shape": [
+            200,
+            500,
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "depth",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "xy_err",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "tip_height",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "action",
+          "shape": [
+            200,
+            500,
+            2
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "movement",
+          "shape": [
+            200,
+            500,
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "qpos",
+          "shape": [
+            200,
+            500,
+            9
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "mocap_pos",
+          "shape": [
+            200,
+            500,
+            1,
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "pose_succeeded",
+          "shape": [
+            200,
+            500
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "true_rel",
+          "shape": [
+            200,
+            500,
+            3
+          ],
+          "dtype": "float32"
+        },
+        {
+          "key": "test_only",
+          "shape": [],
+          "dtype": "bool"
+        },
+        {
+          "key": "learned_from",
+          "shape": [],
+          "dtype": "bool"
+        },
+        {
+          "key": "test_seed",
+          "shape": [],
+          "dtype": "int64"
+        },
+        {
+          "key": "episode_success",
+          "shape": [
+            500
+          ],
+          "dtype": "float32"
+        }
+      ]
+    },
+    "scalar_provenance": {
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 456,
+      "episode_success_count": 303,
+      "episode_success_count_matches_summary": true
+    },
+    "required_fields_present": true
+  },
+  "normal_observation_layout": {
+    "environment_source": {
+      "path": "peg_insertion/env.py",
+      "lines": "345-359"
+    },
+    "wrapper_append_source": {
+      "path": "takehome/correction.py",
+      "lines": "98-107, 118-145"
+    },
+    "trace_capture_source": {
+      "path": "takehome/episodes.py",
+      "lines": "39-43, 58-74, 114-118"
+    },
+    "field_order": "Base state concatenates rel = tip - entrance + bias + noise (3), tip-velocity sensor, previous action (3), depth (1), and, when enabled, clipped normalized force and torque readings. The aim wrapper appends the 2-D guess; trace obs records this state.",
+    "observed_trace_obs_shape": "[200, 500, 18] for these aim confirmation traces."
+  },
+  "missing_files": [],
+  "contract_checks": {
+    "five_final_test_traces_at_456_and_500": true,
+    "per_seed_200_practice_from_own_ledger_and_archives": true,
+    "success_valid_bias_guess_raw_observation_available": true,
+    "goal9_before_trace_is_test_only_unlearned": true,
+    "no_simulations_or_fitting_performed": true
+  }
+}

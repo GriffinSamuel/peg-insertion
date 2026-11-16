@@ -1,0 +1,496 @@
+{
+  "task": "Read-only inventory of test output paths and cache isolation",
+  "branch": "takehome",
+  "scope": {
+    "test_files": [
+      "takehome/test_budget.py",
+      "takehome/test_calibration.py",
+      "takehome/test_camera.py",
+      "takehome/test_correction.py",
+      "takehome/test_evaluation_checks.py",
+      "takehome/test_failure_rules.py",
+      "takehome/test_goal6.py",
+      "takehome/test_learner.py",
+      "takehome/test_pose_episodes.py",
+      "takehome/test_position_policy.py",
+      "takehome/test_selection.py",
+      "takehome/test_variant_integration.py",
+      "takehome/test_variants.py",
+      "tests/test_env.py",
+      "tests/test_scripted.py"
+    ],
+    "test_function_count": 48
+  },
+  "tests": [
+    {
+      "test": "takehome/test_budget.py::test_refuses_201_and_persists_reservations",
+      "source_line": 6,
+      "decorators": [],
+      "writes": [
+        "<tmp_path>/ledger.json (EpisodeBudget creates JSON and lock file)"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_budget.py::test_test_data_and_unreserved_data_are_rejected",
+      "source_line": 20,
+      "decorators": [],
+      "writes": [
+        "<tmp_path>/ledger.json (EpisodeBudget creates JSON and lock file)"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_calibration.py::test_remaining_time_and_control_units_are_explicit",
+      "source_line": 8,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_calibration.py::test_logistic_predictor_and_reliability_have_correct_direction",
+      "source_line": 16,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_calibration.py::test_confidence_evaluation_rejects_training_traces",
+      "source_line": 29,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_camera.py::test_camera_formula_changes_reading_and_recorded_error_only",
+      "source_line": 28,
+      "decorators": [
+        "pytest.mark.parametrize('problem', ('normal', *PROBLEMS))"
+      ],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_camera.py::test_delay_uses_three_step_old_geometry_and_does_not_accumulate_bias",
+      "source_line": 58,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_camera.py::test_oracle_corrects_available_xy_error_with_cap_but_not_height",
+      "source_line": 73,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_camera.py::test_camera_integration_is_finite_frozen_and_test_only",
+      "source_line": 82,
+      "decorators": [
+        "pytest.mark.parametrize('problem', ('delay', 'height'))"
+      ],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_correction.py::test_guess_caps_and_observation_correction",
+      "source_line": 17,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_correction.py::test_first_success_and_timeout_are_distinct",
+      "source_line": 29,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_correction.py::test_reset_and_frozen_policy_after_test_rollout",
+      "source_line": 41,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2",
+        "reads params.pkl bytes before/after and uses peg_insertion.rollout in memory; no output path is supplied"
+      ]
+    },
+    {
+      "test": "takehome/test_evaluation_checks.py::test_aim_only_more_than_five_points_above_ceiling_raises",
+      "source_line": 38,
+      "decorators": [],
+      "writes": [
+        "<tmp_path>/existing.json (synthetic fixture); helper output path is under tmp_path"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_evaluation_checks.py::test_movement_exceeding_ceiling_runs_fixed_500_seed789_and_saves_flags",
+      "source_line": 44,
+      "decorators": [],
+      "writes": [
+        "<tmp_path>/movement_ceiling.json (and fake-runner NPZ path passed to runner; fake runner does not write it)"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_evaluation_checks.py::test_existing_exact_model_verification_is_reused_without_new_test",
+      "source_line": 64,
+      "decorators": [],
+      "writes": [
+        "<tmp_path>/existing.json (synthetic fixture); helper output path is under tmp_path"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_evaluation_checks.py::test_below_ceiling_does_not_run_a_test",
+      "source_line": 82,
+      "decorators": [],
+      "writes": [
+        "<tmp_path>/existing.json (synthetic fixture); helper output path is under tmp_path"
+      ],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_failure_rules.py::test_failure_rules_partition_and_precedence",
+      "source_line": 6,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_goal6.py::test_movement_cap_and_zero_control",
+      "source_line": 14,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_goal6.py::test_mixed_units_and_zero_init",
+      "source_line": 27,
+      "decorators": [
+        "pytest.mark.parametrize('outputs', [3, 5])"
+      ],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_goal6.py::test_supervised_reference_uses_labels_only_when_explicit",
+      "source_line": 43,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_learner.py::test_all_output_dimensions_start_exactly_zero",
+      "source_line": 25,
+      "decorators": [
+        "pytest.mark.parametrize(\"outputs\", [2, 3, 5])"
+      ],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_learner.py::test_actual_compiled_sampler_has_exact_mix_and_empty_source_fallbacks",
+      "source_line": 34,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_learner.py::test_checkpoint_normalization_and_physical_action_rescaling",
+      "source_line": 48,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_learner.py::test_replay_rejects_test_data_and_excludes_true_bias_from_training",
+      "source_line": 66,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_pose_episodes.py::test_pose_recording_retains_finite_zero_action_and_test_provenance",
+      "source_line": 11,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_position_policy.py::test_position_only_policy_rollout_is_finite_frozen_and_has_twelve_inputs",
+      "source_line": 9,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_selection.py::test_choose_simplest_within_top_spread_and_break_tie_by_mean",
+      "source_line": 9,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_selection.py::test_skip_rule_confirms_main_and_main_wins_near_ties",
+      "source_line": 17,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_selection.py::test_combining_rejects_conflicting_values_and_information_leaks",
+      "source_line": 23,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_variant_integration.py::test_feature_rollouts_are_finite_and_never_learned",
+      "source_line": 14,
+      "decorators": [
+        "pytest.mark.parametrize('cfg', [VariantConfig(privileged_critic=True),\n    VariantConfig(outputs=5, final_decider=True, near_hole=True, contact_cap=True, uncertainty_cap=True)])"
+      ],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_variant_integration.py::test_sibling_selection_is_fresh_own_fill_not_old_results",
+      "source_line": 28,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "takehome/test_variants.py::test_incompatible_combinations_rejected",
+      "source_line": 36,
+      "decorators": [
+        "pytest.mark.parametrize('changes', [dict(fill_episodes=0, briefing=True),\n    dict(outputs=5, privileged_critic=True, final_decider=True),\n    dict(outputs=5, force_penalty=True, classification=True),\n    dict(outputs=5, coordination='aim_then_move', fill_episodes=10),\n    dict(outputs=5, coordination='side_by_side', final_decider=True)])"
+      ],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_main_equivalence_and_briefing_freezes_actor",
+      "source_line": 41,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_privileged_critic_never_changes_actor_input",
+      "source_line": 57,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_decider_candidates_are_bounded_and_zero_initially",
+      "source_line": 69,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_classification_loss_is_bounded_and_finite",
+      "source_line": 82,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_nstep_return_floor_and_force_penalty_do_not_cross_episodes",
+      "source_line": 89,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_coordination_has_separate_states_and_freezes_inactive_part",
+      "source_line": 111,
+      "decorators": [
+        "pytest.mark.parametrize('mode', ['side_by_side', 'aim_then_move', 'move_then_aim'])"
+      ],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "takehome/test_variants.py::test_handover_and_dynamic_caps_use_available_sensors",
+      "source_line": 132,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "read-only input: results/policies/force_0.5mm_s2"
+      ]
+    },
+    {
+      "test": "tests/test_env.py::test_hole_width_matches_clearance",
+      "source_line": 40,
+      "decorators": [
+        "pytest.mark.parametrize('clearance_mm', CLEARANCES_MM)"
+      ],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_env.py::test_peg_attached_below_hand",
+      "source_line": 51,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_env.py::test_fixed_orientation_is_down_and_axis_aligned",
+      "source_line": 64,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_env.py::test_reset_step_shapes",
+      "source_line": 71,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_env.py::test_random_steps_stable",
+      "source_line": 80,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_env.py::test_auto_reset_resamples_hole",
+      "source_line": 90,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_env.py::test_force_sensor_free_and_pressed",
+      "source_line": 111,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": []
+    },
+    {
+      "test": "tests/test_scripted.py::test_scripted_centred_insertion",
+      "source_line": 15,
+      "decorators": [
+        "pytest.mark.parametrize('clearance_mm,min_rate', [(2.0, 0.95), (1.0, 0.90)])"
+      ],
+      "writes": [],
+      "path_dependencies": [
+        "imports scripts/scripted_insert and calls run_scripted without --out; no report file is requested"
+      ]
+    },
+    {
+      "test": "tests/test_scripted.py::test_scripted_half_mm_recorded",
+      "source_line": 21,
+      "decorators": [],
+      "writes": [],
+      "path_dependencies": [
+        "imports scripts/scripted_insert and calls run_scripted without --out; no report file is requested"
+      ]
+    }
+  ],
+  "write_path_findings": {
+    "hardcoded_results_takehome_writes": [],
+    "tmp_path_writes": [
+      {
+        "test": "takehome/test_budget.py::test_refuses_201_and_persists_reservations",
+        "paths": [
+          "<tmp_path>/ledger.json",
+          "<tmp_path>/ledger.json.lock"
+        ]
+      },
+      {
+        "test": "takehome/test_budget.py::test_test_data_and_unreserved_data_are_rejected",
+        "paths": [
+          "<tmp_path>/ledger.json",
+          "<tmp_path>/ledger.json.lock"
+        ]
+      },
+      {
+        "test": "takehome/test_evaluation_checks.py::test_movement_exceeding_ceiling_runs_fixed_500_seed789_and_saves_flags",
+        "paths": [
+          "<tmp_path>/movement_ceiling.json"
+        ]
+      },
+      {
+        "test": "takehome/test_evaluation_checks.py::test_existing_exact_model_verification_is_reused_without_new_test",
+        "paths": [
+          "<tmp_path>/existing.json"
+        ]
+      }
+    ],
+    "test_output_path_supplied_to_episode_runner": null,
+    "hardcoded_results_inputs_are_read_only": [
+      "takehome/test_correction.py uses results/policies/force_0.5mm_s2; takehome/test_goal6.py and takehome/test_variants.py use that policy path; tests assert the existing policy is unchanged."
+    ]
+  },
+  "cache_bootstrap": {
+    "file": "takehome/followup_runtime.py",
+    "evidence": [
+      {
+        "line": 7,
+        "fact": "raises if jax is already present in sys.modules"
+      },
+      {
+        "line": 10,
+        "fact": "imports takehome.runtime before experiment/test modules"
+      },
+      {
+        "lines": [
+          13,
+          17
+        ],
+        "fact": "sets XDG_CACHE_HOME, JAX_COMPILATION_CACHE_DIR, WARP_CACHE_PATH, and MPLCONFIGDIR to results/takehome/followup/cache/{xdg,jax,warp,mpl}"
+      }
+    ],
+    "order_check": "takehome/runtime.py only assigns the four cache environment variables under results/takehome/preflight_cache; it does not import JAX or create directories. followup_runtime overrides these values immediately afterward, before tests/JAX imports. Thus cache configuration is in place before JAX when the bootstrap is imported first.",
+    "limitation": "The bootstrap cannot protect against JAX being imported before it; its explicit sys.modules guard fails fast in that case."
+  },
+  "minimal_isolated_execution": {
+    "command": "source scripts/env.sh && python -B -c 'import takehome.followup_runtime; import pytest; raise SystemExit(pytest.main([\"tests\", \"takehome\", \"-p\", \"no:cacheprovider\", \"--basetemp=results/takehome/followup/cache/pytest\"]))'",
+    "effects": "Runs unchanged tests with pytest temporary files rooted under results/takehome/followup/cache/pytest; disables root .pytest_cache; -B prevents bytecode files. Bootstrap is imported before pytest collection can import JAX. Do not pass --out to scripted_insert, and do not invoke standalone scripts that write reports.",
+    "known_path_collisions": "No test directly writes to results/takehome. Tests read existing results/policies fixtures. Existing tests that use tmp_path are redirected by --basetemp."
+  },
+  "evidence_method": "Static AST and source-text inspection only; no tests, simulations, or physics were run."
+}

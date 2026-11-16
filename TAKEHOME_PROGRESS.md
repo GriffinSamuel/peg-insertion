@@ -1,6 +1,10 @@
 # Take-home progress
 
-## Current status: Goals 1-13 complete (2026-11-15)
+## Current status: follow-up Phase A complete; Phase B next (2026-11-16)
+
+Original Goals 1-13 remain complete and frozen. Follow-up is separate work under FOLLOWUP_PLAN.md, with no planned check-in. Phase A spent no new episodes. Read TAKEHOME_FOLLOWUP_REPORT.md and results/takehome/followup/scoreboard.md for current findings. Preserve every original result and original report text.
+
+## Original-study completion (2026-11-15)
 
 All70 original/new tests passed. Fresh final-method practice seed100/test456 scored378/500 (75.6%), within the6.52-point sample spread around the80.20% confirmation mean; its own200-episode budget and frozen-reference audit passed. Original code, tests, policies and results are unchanged outside results/takehome. Validation artifacts were committed/pushed and local/remote commit equality verified; final handoff is saved on takehome. Final totals:29010 practice episodes in146 ledgers,409690 full test-only episodes,191 reset-only probes,28 searched settings. Full traces, replay, checkpoints and videos remain local and ignored. No experiments remain running. Exact trajectory repeatability remains the measured limitation described below.
 
@@ -583,3 +587,36 @@ Read TAKEHOME_REPORT.md for the headline, method, all seeds, plots, limits, repr
 - Can a probability predictor trained on changing practice behavior provide useful early failure warnings?
 
 These questions remain unanswered; the current work does not claim real-robot safety or performance. Every measured result and all chosen defaults are retained for review.
+
+
+## 2026-11-15: Follow-up Phases A-G started
+
+The finished Goals1–13 remain complete. FOLLOWUP_PLAN.md and the AGENTS.md report-path change were committed/pushed as c756efd before new work. Read the follow-up plan and standing rules; no planned check-in applies. New outputs/caches stay under results/takehome/followup. Initial interpretations and runtime estimates are recorded there and in the decision log. PhaseA reads saved data only; new episodes so far:0. Whole-project searched settings remain28.
+
+## 2026-11-16: Follow-up Phase A complete
+
+### 1. What I did (short list)
+- Analysed all five saved aim confirmation final traces, their own 200-episode practice archives, and the saved original-policy repeat.
+- Measured start, contact, first success and end errors separately; fitted fixed linear prediction probes from 1, 20 and 40 readings using practice only.
+- Saved a preservation hash manifest, diagnostic data, tables, chart and new follow-up report.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+Five saved 500-episode tests at seed456: contact error1.00–1.56mm, success error1.07–2.21mm, end error1.65–2.41mm, start0.953mm. Every seed's success error exceeded its paired starting error. End closer11.2–24.2%; contact step127–136. Longer linear history did not improve bias prediction. Old-policy saved repeat:86/99 successes below0.5mm bias,8/67 above1.5mm.
+
+### 3. Checks: each check from the goal, marked pass or fail
+PASS: all outside observations verified or corrected, including nonconstant directional dependence. PASS: first-success error paired to the same episodes. PASS: 1/20/40-reading prediction probes trained on saved practice only. PASS: one table and plain explanation plus chart. PASS: no new episodes; no original file edited; original report unchanged. PASS: all five seed records and30 probe records validated, chart visually reviewed after label fix.
+
+### 4. Surprises or problems
+The evaluator continues to step after first insertion, so final-step error exaggerates drift; success-time error still shows the problem. True bias remains imperfectly inferable from these fixed linear probes. The old-policy saved diagnostic repeat is303/500, not a replacement for the304/500 original floor. Exact physical repeatability remains limited as previously measured.
+
+### 5. Decisions I logged
+Eleven PLAN GAP FOLLOWUP entries fix preservation, exact report-prefix protection, approximate success labels, practice-only diagnostic fitting, contact and paired-success metrics, verdict priority, eligible selection, required integrated ideas versus optional stacks, setting caps, diagnostic seed789 and numerical defaults.
+
+### 6. Practice episodes used, and settings tried so far
+Follow-up0 practice,0 new full tests,0 new settings. Original totals remain29010 practice,409690 full tests,191 reset-only probes,28 searched settings. Saved diagnostic tests are reused, not counted again.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+The old aim learner often inserts without correctly identifying the camera error. Its guess drifts away even before success. A longer history did not help the simple fixed prediction test. We will still test a learner with memory, because it can use the readings differently. Each change will get its own result, including failures.
+
+### 8. Questions before the next phase
+None. Continue to Phase B under the existing stopping rule.

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_integrity.py",
+    "snapshot"
+  ],
+  "started_utc": "2026-11-16T07:19:13.478186+00:00",
+  "finished_utc": "2026-11-16T07:21:23.111268+00:00",
+  "seconds": 129.63318145000085,
+  "exit_code": 0
+}

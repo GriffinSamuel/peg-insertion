@@ -1,0 +1,54 @@
+{
+  "measured_seconds_per_run_four_workers": [
+    44.86,
+    58.01
+  ],
+  "isolated_final_run_seconds": 85.34308377,
+  "phases": [
+    {
+      "phase": "A",
+      "likely_training_runs": "0",
+      "likely_hours": 0.5,
+      "worst_hours": 1
+    },
+    {
+      "phase": "B",
+      "likely_training_runs": "45\u201365",
+      "likely_hours": 2.25,
+      "worst_hours": 5
+    },
+    {
+      "phase": "C",
+      "likely_training_runs": "55\u201375",
+      "likely_hours": 1.5,
+      "worst_hours": 3
+    },
+    {
+      "phase": "D",
+      "likely_training_runs": "0\u201360",
+      "likely_hours": 1,
+      "worst_hours": 2.5
+    },
+    {
+      "phase": "E",
+      "likely_training_runs": "0\u201345",
+      "likely_hours": 0.75,
+      "worst_hours": 2
+    },
+    {
+      "phase": "F",
+      "likely_training_runs": "0\u201320 plus test-only runs",
+      "likely_hours": 1,
+      "worst_hours": 3
+    },
+    {
+      "phase": "G",
+      "likely_training_runs": "5\u201310",
+      "likely_hours": 0.75,
+      "worst_hours": 1.5
+    }
+  ],
+  "likely_total_hours": 7.75,
+  "worst_total_hours": 18.0,
+  "basis": "Four-worker benchmark and completed suites; phase estimates include implementation, review and reporting, with extra allowance for new memory/control costs. Conditional phases may be skipped by their written rules. Not a guaranteed upper bound."
+}
