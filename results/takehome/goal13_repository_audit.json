@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-11-16T03:17:39.673763+00:00",
+  "branch": "takehome",
+  "protected_diff_paths": [],
+  "protected_files_unchanged": true,
+  "tracked_local_only_binary_paths": [],
+  "local_only_binaries_untracked": true,
+  "files_over50MB_eligible_for_git": [],
+  "largest_new_artifact_bytes": 1231152,
+  "largest_new_artifact": "results/takehome/goal8/summary.json",
+  "pre_final_commit": "81fc8d84fb8a51295a04da4e3da150baaa752538",
+  "passed": true,
+  "scope": "Original peg_insertion/, scripts/, tests/, policies and all original results compared with main; only results/takehome differences allowed. Final commit/push equality is verified separately after publication."
+}

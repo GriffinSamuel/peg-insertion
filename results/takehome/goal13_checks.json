@@ -1,0 +1,20 @@
+{
+  "goal": 13,
+  "all_goal_checks_pass": false,
+  "pending_checks": [
+    "Commit and push final validation artifacts, then verify remote commit."
+  ],
+  "all_original_and_new_tests_pass": true,
+  "pytest_tests_passed": 70,
+  "pytest_seconds": 327.06,
+  "pytest_warnings": 1,
+  "protected_files_unchanged": true,
+  "fresh_run_within_one_spread": true,
+  "original_confirmation_files_unchanged": true,
+  "tracked_binary_artifacts": 0,
+  "no_further_tuning": true,
+  "repository_audit": "results/takehome/goal13_repository_audit.json",
+  "test_accounting": "results/takehome/goal13_test_episode_accounting.json",
+  "fresh_audit": "results/takehome/goal13/fresh_audit.json",
+  "report_paragraph": "All 70 original and new tests passed in 327.06 seconds, with one dependency deprecation warning. The original code, tests, policies and results are unchanged relative to main outside results/takehome. The fresh run used its own 200 practice episodes and passed its budget, provenance and finite-number audit. Its final success rate is within the reported seed spread; exact trajectory repeatability remains a limitation. Final publication verification is pending. [Test log](results/takehome/goal13_tests.log); [test episode accounting](results/takehome/goal13_test_episode_accounting.json); [repository audit](results/takehome/goal13_repository_audit.json); [fresh-run audit](results/takehome/goal13/fresh_audit.json)."
+}

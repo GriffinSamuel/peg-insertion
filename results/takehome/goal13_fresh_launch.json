@@ -1,0 +1,13 @@
+{
+  "task": "goal13_fresh_final_method_rerun",
+  "gate_path": "results/takehome/goal12_checks.json",
+  "goal12_all_goal_checks_pass": true,
+  "fresh_destination": "results/takehome/goal13/fresh/seed_100",
+  "destination_absent_before_launch": true,
+  "result_json_absent_before_launch": true,
+  "budget_json_absent_before_launch": true,
+  "practice_seed": 100,
+  "test_seed": 456,
+  "practice_budget": 200,
+  "recorded_before_launch": true
+}

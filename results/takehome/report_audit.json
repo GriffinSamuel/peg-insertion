@@ -6,7 +6,7 @@
     "report_exists": true,
     "no_em_dash": true,
     "local_markdown_targets": {
-      "count": 56,
+      "count": 61,
       "missing": []
     },
     "report_table_rows": {
@@ -74,10 +74,10 @@
     },
     "provenance": {
       "checked": true,
-      "sources_listed": 35,
-      "sources_checked": 35,
-      "report_sha256": "3ffb7f10339607b3d2fdebb59f35540307c53753de38241d93843cff70fdb96a",
-      "expected_report_sha256": "3ffb7f10339607b3d2fdebb59f35540307c53753de38241d93843cff70fdb96a"
+      "sources_listed": 37,
+      "sources_checked": 37,
+      "report_sha256": "dbc1d54132ca376578a1c73626ca4614e8e02baada149d452dc6616bbce8d2ee",
+      "expected_report_sha256": "dbc1d54132ca376578a1c73626ca4614e8e02baada149d452dc6616bbce8d2ee"
     },
     "embedded_png_rebuilds": {
       "count": 14,

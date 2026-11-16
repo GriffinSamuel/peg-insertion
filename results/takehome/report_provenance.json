@@ -12,7 +12,7 @@
     "results/takehome/mechanism_check.json": "b7b97ea881ee48f8943f728676fcadf3c1fdf25c547aa59321ca3f4d59777554",
     "results/takehome/goal7_choice.json": "2a9872fa4d3aceed284aba0effb68a4e550e4233f68e66577b3692468eec9b25",
     "results/takehome/protocol.json": "fccfddae23f7cbc115facc82c647bbc7e22c1a7079e0b876c2b02d8239df9545",
-    "results/takehome/episode_accounting.json": "daba9811425106a107e175deb2d3312b0350943c8a206ecd6d6ec7d04ca8ccb1",
+    "results/takehome/episode_accounting.json": "591459989d4f42a23560805315c8cb733c7baa62ff7e175b1707301e8979a8b0",
     "results/takehome/repeatability_conclusion.json": "78f0092c932be901894bf1b69530c1df74b249ef755630153aa60fae98317756",
     "results/takehome/benchmark_timings.json": "3db44520527074915181ba8ef43df3c981f245ff35e93bdb98b62476d8b8b3f4",
     "results/takehome/goal7/force_penalty_comparison.json": "cb130edc7efc130c14fd5266ce13cfb4e90d641f901bd914c653d1264e0f46ef",
@@ -34,12 +34,14 @@
     "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0140.json": "800fbeb200a71d0ca7c7f7603227f8c33ec0189456dc88d3b6dc0644474d5919",
     "results/takehome/goal11/one_sided/trained/seed_1/extra_ceiling_0160.json": "fe11d6ca35ba662651664788345b7e742fb819438ab8d755dc939c9dc898c506",
     "results/takehome/goal11/one_sided/trained/seed_2/extra_ceiling_0160.json": "63142b98b6079a84a7ab7ca2e741244f803c931e82ae6ce76eeaa8a84e1b5c46",
-    "results/takehome/figure_rebuild_commands.json": "8b177072426e82854cd581fbe567693534017d4742adf9dfb2ca721e5f7e9e21"
+    "results/takehome/figure_rebuild_commands.json": "8b177072426e82854cd581fbe567693534017d4742adf9dfb2ca721e5f7e9e21",
+    "results/takehome/goal13_checks.json": "7b4df7f9a725e2ef804a2769d2a6c50d6074025e0a64acc25934c525b8df24e9",
+    "results/takehome/goal13/rerun_comparison.json": "37e47a3dd828bf8093e72f7fc92800c1766c62e62f62d39d907f24a7c0a9632d"
   },
   "decision_bullets": 82,
   "plan_gap_entries": 51,
   "has_em_dash": false,
-  "report_sha256": "3ffb7f10339607b3d2fdebb59f35540307c53753de38241d93843cff70fdb96a",
+  "report_sha256": "dbc1d54132ca376578a1c73626ca4614e8e02baada149d452dc6616bbce8d2ee",
   "generated_from": "takehome/write_report.py",
   "number_policy": "Tables derive from raw summaries; prose measurements link to result files; all parameter choices are recorded in protocol and the complete decision inventory."
 }

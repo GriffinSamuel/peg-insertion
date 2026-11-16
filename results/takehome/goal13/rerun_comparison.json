@@ -1,0 +1,22 @@
+{
+  "method": "movement",
+  "practice_seed": 100,
+  "test_seed": 456,
+  "practice_episodes": 200,
+  "final_test_episodes": 500,
+  "successes": 378,
+  "success_rate": 0.756,
+  "confirmation_mean": 0.802,
+  "confirmation_sample_spread": 0.0651766829472013,
+  "absolute_difference": 0.04600000000000004,
+  "within_one_spread": true,
+  "result_path": "results/takehome/goal13/fresh/seed_100/result.json",
+  "budget_path": "results/takehome/goal13/fresh/seed_100/budget.json",
+  "original_confirmation_unchanged": true,
+  "original_confirmation_hashes": {
+    "result.json": "4b5a12da1d91dad64005849413f4528ddb6c6bdd292443be7fd4348c322f76a2",
+    "budget.json": "a88feba4a77c3bd6dc307dcd4bae1b4bd416ec7ec6b92913b26fe3c786f40815",
+    "model_0200.pkl": "70fa6edbd5c5dbd6e0300e79035c437f0487f5963c79c9d70efeefaab2c57d84"
+  },
+  "repeatability_instruction": "If outside the spread, log the limitation and continue under Griffin's explicit instruction; never replace a result or retune."
+}

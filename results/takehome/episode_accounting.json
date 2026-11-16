@@ -1,9 +1,9 @@
 {
-  "timestamp_utc": "2026-11-16T03:09:27.071470+00:00",
-  "full_test_episodes_total": 407054,
+  "timestamp_utc": "2026-11-16T03:18:41.330904+00:00",
+  "full_test_episodes_total": 409690,
   "full_tests_before_goal7": 64842,
-  "new_full_test_episodes": 342212,
-  "reset_only_probes_total": 182,
+  "new_full_test_episodes": 344848,
+  "reset_only_probes_total": 191,
   "base_source": "results/takehome/goal7_pre_screen_checks.json",
   "measurements": [
     {
@@ -1750,6 +1750,51 @@
       "path": "results/takehome/goal11/rotation/transfer_seed_2.json",
       "episodes": 500,
       "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0040.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0060.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0080.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0100.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0120.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0140.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0160.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0180.json",
+      "episodes": 256,
+      "seed": 123
+    },
+    {
+      "path": "results/takehome/goal13/fresh/seed_100/test_0200.json",
+      "episodes": 500,
+      "seed": 456
     },
     {
       "path": "results/takehome/goal7/confirmation/aim/seed_100/test_0040.json",
@@ -5871,6 +5916,60 @@
       "passed": true
     },
     {
+      "path": "results/takehome/goal13_test_episode_accounting.json",
+      "executed": true,
+      "pytest_tests_passed": 70,
+      "pytest_exit_code": 0,
+      "full_test_episodes": 88,
+      "reset_only_probes": 9,
+      "practice_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "reference_inventory": "results/takehome/final_test_episode_inventory.json",
+      "log": "results/takehome/goal13_tests.log",
+      "exit_record": "results/takehome/goal13_tests.exit.json",
+      "partial_probes": [
+        {
+          "test": "tests/test_env.py::test_reset_step_shapes",
+          "invocations": 1,
+          "env_states": 2,
+          "steps_per_state": 1,
+          "full_test_episodes": 0
+        },
+        {
+          "test": "tests/test_env.py::test_random_steps_stable",
+          "invocations": 1,
+          "env_states": 1,
+          "steps": 50,
+          "full_test_episodes": 0
+        },
+        {
+          "test": "tests/test_env.py::test_auto_reset_resamples_hole",
+          "invocations": 1,
+          "parallel_envs": 2,
+          "vector_steps": 7,
+          "env_steps": 14,
+          "completed_short_episodes": 4,
+          "steps_per_short_episode": 3,
+          "partial_tails": 2,
+          "tail_steps_each": 1,
+          "full_test_episodes": 0
+        },
+        {
+          "test": "tests/test_env.py::test_force_sensor_free_and_pressed",
+          "invocations": 1,
+          "manual_mujoco_segments": 3,
+          "mujoco_steps": [
+            200,
+            100,
+            200
+          ],
+          "total_mujoco_steps": 500,
+          "full_test_episodes": 0
+        }
+      ]
+    },
+    {
       "path": "results/takehome/goal9_test_episode_accounting.json",
       "executed": true,
       "full_test_episodes": 4,
@@ -5883,10 +5982,10 @@
     }
   ],
   "practice": {
-    "timestamp_utc": "2026-11-16T03:09:29.083925+00:00",
-    "practice_episodes_reserved": 28810,
-    "experiment_ledgers": 145,
-    "completed_experiments": 145,
+    "timestamp_utc": "2026-11-16T03:18:43.647892+00:00",
+    "practice_episodes_reserved": 29010,
+    "experiment_ledgers": 146,
+    "completed_experiments": 146,
     "settings_tried": 28,
     "setting_names": [
       "aim",

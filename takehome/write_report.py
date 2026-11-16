@@ -227,6 +227,7 @@ Reusing that output directory resumes or skips the same run; choose a new direct
     add('The environment and installed versions are recorded in '+source('environment.json')+'. Detached jobs survive a closed terminal but not a WSL shutdown. Account rate limits were unavailable and no fixed session deadline was visible; uninterrupted execution cannot be guaranteed. Preflight evidence is in '+source('preflight_verification.json')+'.')
 
     add('## Final validation and remaining questions')
+    add('Read the headline and fresh-confirmation table first, then the method and the repeatability limits. The policy and camera sections show where the gain does and does not carry over. The full decision appendix and dated progress log preserve the implementation choices and every fallback for review.')
     final_checks_path=OUT/'goal13_checks.json'
     if final_checks_path.exists():
         check=read('goal13_checks.json')

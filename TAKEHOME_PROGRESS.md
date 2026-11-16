@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: Goals 1-12 complete; Goal 13 validation next (2026-11-15)
+## Current status: Goal 13 running; fresh rerun passed, full tests pending (2026-11-15)
 
-The complete report passed its mechanical audit and lead review:59 result rows,82 decision entries,51 plan gaps,14 figures and35 source hashes. Goal13 will run the unchanged original/new tests and one fresh seed100/test456 final-method run in its own200-episode ledger, then check protected files, accounting, report and git push. No tuning or result replacement. The headline remains80.20%;28 settings; full traces and binaries remain local. Repeatability remains an explicit limitation.
+The complete report passed its mechanical audit and lead review:59 result rows,82 decision entries,51 plan gaps,14 figures and35 source hashes. The fresh seed100/test456 run finished in85.34seconds with378/500 successes, its own200-episode ledger and a clean audit; its4.60-point difference from the80.20% confirmation mean is within the6.52-point spread. Original confirmation hashes are unchanged. The original/new test suite is running detached under goal13_tests; wait for its actual exit before counting tests or claiming completion, then check protected files, accounting, report and git push. No tuning or result replacement. The headline remains80.20%;28 settings; full traces and binaries remain local. Repeatability remains an explicit limitation.
 
 ## Historical status after revised instructions, 2026-11-15
 
