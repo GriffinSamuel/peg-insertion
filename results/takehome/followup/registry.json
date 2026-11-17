@@ -169,7 +169,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "finished",
       "condition": "one-sided",
@@ -195,14 +197,42 @@
         3,
         4
       ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "Seed4 is an authorized fresh restart; the original halted attempt remains a separate row.",
+      "counted": true,
+      "seed_paths": {
+        "4": "B/B_aim_fixed/seed_4_restart_1"
+      }
+    },
+    {
+      "name": "B_aim_fixed_seed4_halted",
+      "phase": "B",
+      "description": "Preserved original seed4 attempt stopped under the earlier ceiling rule.",
+      "overrides": {
+        "camera_condition": "fixed"
+      },
+      "base": "floor",
+      "seeds": [
+        4
+      ],
       "status": "failed",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 1,
-      "reason": "Seed4 halted after160 charged practice episodes: curve test256/256 (100%) exceeded own470/500 (94%) ceiling by6 points. Seeds0\u20133 completed; mean/spread shown are partial, not a five-seed result.",
-      "counted": true
+      "reason": "Seed4: 160 charged practice episodes; curve256/256 at160, no final500 test. Success-time aim error unavailable because curve traces were not saved. Preserved unchanged; not an additional setting.",
+      "counted": false,
+      "seed_paths": {
+        "4": "B/B_aim_fixed/seed_4"
+      },
+      "partial_attempt": true,
+      "partial_start_error_mm": 0.2901596691454809
     },
     {
       "name": "B_heat_one_sided",
@@ -219,14 +249,14 @@
         1,
         2
       ],
-      "status": "skipped",
+      "status": "finished",
       "condition": "one-sided",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 1,
-      "reason": "Not launched because the mandatory ceiling tripwire halted PhaseB; pending user direction.",
-      "counted": false
+      "reason": "",
+      "counted": true
     },
     {
       "name": "B_heat_fixed",
@@ -329,7 +359,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "finished",
       "condition": "fixed",
@@ -341,6 +373,11 @@
       "counted": true
     }
   ],
-  "status": "halted_tripwire",
-  "halted_at": "B_aim_fixed/seed_4/160"
+  "status": "active",
+  "previous_halt": {
+    "status": "halted_tripwire",
+    "halted_at": "B_aim_fixed/seed_4/160",
+    "resolution": "User revised consistent-camera rule; authorized fresh seed4 restart, 2026-11-16",
+    "plan_commit": "b46779e"
+  }
 }

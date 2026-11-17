@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "source": "synthetic fixtures only",
+  "checks": [
+    "12 setting aggregates",
+    "unequal three/five-seed methods",
+    "exact paired references",
+    "negative and over100percent recovery retained"
+  ],
+  "practice_episodes": 0,
+  "new_test_episodes": 0
+}

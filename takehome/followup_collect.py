@@ -7,6 +7,7 @@ import json,statistics
 import numpy as np
 from takehome.followup_metrics import summarize_seed
 from takehome.followup_scoreboard import render,_atomic_write
+from takehome.followup_paths import run_path,entry_condition_key
 
 
 def read(path):return json.loads(Path(path).read_text())
@@ -34,7 +35,7 @@ def old_references():
 def metrics_for(entry):
     rows=[]
     for seed in entry['seeds']:
-        directory=OUT/entry['phase']/entry['name']/f'seed_{seed}'
+        directory=run_path(entry,seed)
         if not (directory/'result.json').exists():continue
         path=directory/'metrics.json'
         row=read(path) if path.exists() else summarize_seed(directory)
@@ -53,8 +54,8 @@ def base_for(entry,seeds,entries,refs):
         rows=[]
         for seed in seeds:
             cond=entry['condition']
-            fixed=f'_seed_{seed}' if cond=='fixed' else ''
-            path=OUT/'references'/f'{cond}{fixed}_test_123.json'
+            fixed=f'_seed_{seed}' if cond in ('fixed','mixed') else ''
+            path=OUT/'references'/f'{entry_condition_key(entry)}{fixed}_test_123.json'
             if cond=='normal':path=ROOT/'results/takehome/baseline.json'
             if not path.exists():continue
             summary=read(path)['conditions']['normal']
@@ -109,23 +110,25 @@ def collect():
         values=[r['success_percent'] for r in rows]; bases=[r['success_percent'] for r in base]
         v=verdict(rows,base,len(entry['seeds']),failed)
         base_text='; '.join(f"s{r['seed']} {r['successes']}/500 ({r['success_percent']:.1f}%)" for r in base)
-        if entry['base']=='floor' and entry['condition']!='fixed' and base:
+        if entry['base']=='floor' and entry['condition'] not in ('fixed','mixed') and base:
             r=base[0]
             base_text=f"One shared test123 floor: {r['successes']}/500 ({r['success_percent']:.1f}%); reused, not rerun per practice seed"
         if bases:base_text+=f'; mean {mean(bases):.2f}% ± {spread(bases):.2f}pp'
         used=0
-        for p in (OUT/entry['phase']/entry['name']).glob('seed_*/budget.json'):
+        for p in [run_path(entry,seed)/'budget.json' for seed in entry['seeds']]:
+            if not p.exists():continue
             budget=read(p);used+=len(budget['episodes'])
             if len(budget['episodes'])>200:raise RuntimeError('Tripwire: budget exceeded')
         record=dict(phase=entry['phase'],name=entry['name'],description=entry['description'],base=entry['base'],
             base_result=base_text or None,seeds=[dict(seed=r['seed'],successes=r['successes'],episodes=500) for r in rows],
             mean_percent=mean(values),spread_pp=spread(values) if values else None,
             delta_pp=mean(values)-mean(bases) if values and bases else None,verdict=v,
-            aim_start_mm=optional_mean(rows,'initial_guess_error_mean_mm'),
+            aim_start_mm=optional_mean(rows,'initial_guess_error_mean_mm') if rows else entry.get('partial_start_error_mm'),
             aim_success_mm=optional_mean(rows,'guess_error_at_first_valid_success_mean_mm'),
             steps_to_insert=optional_mean(rows,'steps_mean'),peak_force_n=optional_mean(rows,'peak_force_mean'),
             practice_episodes=used,hand_search=entry['hand_search'],hidden_information=entry['hidden_information'],
-            camera_condition='fixed for the whole run' if entry['condition']=='fixed' else entry['condition'],reason=entry.get('reason') or None,
+            camera_condition=('fixed for the whole run' if entry['condition']=='fixed' else
+                entry.get('condition_label',entry['condition'])),reason=entry.get('reason') or None,
             base_mean_percent=mean(bases),base_spread_pp=spread(bases) if bases else None)
         records.append(record)
         gain=optional_mean(rows,'paired_guess_error_reduction_mean_mm')

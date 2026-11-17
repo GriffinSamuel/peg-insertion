@@ -23,6 +23,7 @@ from takehome.replay import Replay  # noqa: E402
 from takehome.followup_env import FollowupEnv, offset_grid
 from takehome.followup_learner import FollowupLearner, success_targets
 from takehome.followup_episodes import FollowupEpisodes
+from takehome.followup_coordination import FollowupCoordinatedLearner
 from takehome.variants import prepare_training_data
 
 # Capture code at process import, rather than after a long run has finished.
@@ -54,11 +55,10 @@ class FollowupRunner:
     def __init__(self, config):
         if not any(d.platform == "gpu" for d in jax.devices()):
             raise RuntimeError("Tripwire: GPU not visible")
-        if config.coordination != "joint":
-            raise ValueError("Sequential coordination adapter must be reviewed before use")
         self.config=config
         self.env=self.make_env(config.policy)
-        self.learner=FollowupLearner(config,self.env)
+        self.learner=(FollowupLearner(config,self.env) if config.coordination=='joint'
+                      else FollowupCoordinatedLearner(config,self.env))
         self.episodes=FollowupCollection(self)
 
     def make_env(self,policy):
@@ -89,8 +89,9 @@ class FollowupRunner:
             labels,valid=success_targets(replay)
             data={**data,'success_label':labels,'label_valid':valid}
         steps=replay.fill_count if source=='fill' else new_steps
+        kwargs={'practice_end':practice_end} if self.config.coordination!='joint' else {}
         return self.learner.train_block(state,data,replay.fill_count,replay.count,
-            steps*self.config.updates_per_step,actor_enabled=source!='fill')
+            steps*self.config.updates_per_step,actor_enabled=source!='fill',**kwargs)
 
     def run(self, seed, output):
         cfg = self.config
@@ -123,6 +124,13 @@ class FollowupRunner:
                                               'results/takehome/baseline.json')).read_text())
         if not str(baseline['policy']).endswith(cfg.policy) or baseline['test_seed'] != test_seed:
             raise ValueError('Reference policy and final test seed must match this experiment')
+        if cfg.camera_condition in ('fixed','mixed'):
+            if (baseline.get('camera_condition')!=cfg.camera_condition or
+                    baseline.get('fixed_bias_seed')!=cfg.fixed_bias_seed):
+                raise ValueError('Reference must match this calibration draw')
+        if cfg.camera_condition=='mixed' and any(baseline.get(k)!=getattr(cfg,k)
+                for k in ('mixed_fixed_std','mixed_episode_std')):
+            raise ValueError('Reference must match both mixed components')
         curve = [{"practice_episodes": 0, "label": "original_policy",
                   **baseline["conditions"]["normal"]}]
         timings, losses = [], []
@@ -191,9 +199,9 @@ class FollowupRunner:
                 np.savez_compressed(output / f"test_{end:04d}_episodes.npz", **stats)
                 curve.append(point)
                 ceiling = baseline["conditions"]["no_camera_bias"]["success_rate"]
-                if cfg.outputs == 2 and ceiling > 0.5 and summary["success_rate"] > ceiling + 0.05:
+                if cfg.outputs == 2 and not cfg.final_decider and cfg.camera_condition=='normal' and ceiling > 0.5 and summary["success_rate"] > ceiling + 0.05:
                     raise RuntimeError("Tripwire: aim-only learner exceeds ceiling by more than five points")
-                if cfg.outputs != 2 and summary['success_rate'] > ceiling:
+                if (cfg.outputs != 2 or cfg.final_decider or cfg.camera_condition in ('fixed','one-sided','mixed')) and summary['success_rate'] > ceiling:
                     extra, extra_stats, extra_trace = self.episodes.test(
                         state, episodes=500, seed=789,
                         output=output / f'extra_ceiling_{end:04d}_traces.npz')
@@ -206,6 +214,8 @@ class FollowupRunner:
                     extra['max_abs_control_examples'] = [float(np.max(np.abs(
                         extra_trace['executed_action'][:, i]))) for i in examples]
                     extra['used_for_selection'] = False
+                    extra['camera_condition'] = cfg.camera_condition
+                    extra['reason'] = 'Required physical check above the zero-error reference; revised consistent-camera exception applies to aim-only'
                     write_json(output / f'extra_ceiling_{end:04d}.json', extra)
                 save_checkpoint(output / f"model_{end:04d}.pkl",
                                 {"config": cfg.to_dict(), "state": jax.device_get(state)})
@@ -224,6 +234,7 @@ class FollowupRunner:
                               "seconds": round(time.perf_counter() - started, 2)}), flush=True)
         replay.save(output / "replay.npz")
         unchanged = policy_digest(self.env.frozen_policy) == before
+        sibling_audit=self.episodes.verify_frozen_siblings()
         if not unchanged:
             raise RuntimeError("Frozen policy parameters changed")
         method = 'supervised_cheating_reference' if cfg.supervised_reference else {2:'aim',3:'movement',5:'combined'}[cfg.outputs]
@@ -236,6 +247,7 @@ class FollowupRunner:
                   "fill_steps": replay.fill_count, "losses": losses, "timings": timings,
                   "seconds_excluding_imports": previous_seconds + time.perf_counter() - started,
                   "frozen_policy_unchanged": unchanged, "test_data_learned_from": False,
+                  "frozen_sibling_policies": sibling_audit,
                   "code_test": cfg.code_test, "setting_counted": not cfg.code_test,
                   "finished_utc": datetime.now(timezone.utc).isoformat(),
                   "source_hashes": SOURCE_HASHES}
@@ -249,6 +261,7 @@ class FollowupCollection:
         self.parent=parent
         self.main=FollowupEpisodes(parent.env,parent.learner)
         self.siblings={}
+        self.sibling_digests={}
         self.last_policy=parent.config.policy
 
     def practice(self,state,seed,batch_index,episode_ids,source):
@@ -259,8 +272,16 @@ class FollowupCollection:
             if self.last_policy not in self.siblings:
                 env=self.parent.make_env(self.last_policy)
                 self.siblings[self.last_policy]=FollowupEpisodes(env,self.parent.learner)
+                self.sibling_digests[self.last_policy]=policy_digest(env.frozen_policy)
             runner=self.siblings[self.last_policy]
         return runner.practice(state,seed,batch_index,episode_ids,source)
 
     def test(self,*args,**kwargs):
         return self.main.test(*args,**kwargs)
+
+    def verify_frozen_siblings(self):
+        audit={name:policy_digest(runner.env.frozen_policy)==self.sibling_digests[name]
+               for name,runner in self.siblings.items()}
+        if not all(audit.values()):
+            raise RuntimeError('Tripwire: frozen sibling policy changed')
+        return audit

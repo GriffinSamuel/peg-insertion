@@ -1,0 +1,12 @@
+START B_aim_fixed 135201 SEEDS [0, 1, 2, 3, 4]
+START B_aim_one_sided 135202 SEEDS [0, 1, 2, 3, 4]
+START B_movement_fixed 135203 SEEDS [0, 1, 2, 3, 4]
+START B_heat_one_sided 135204 SEEDS [0, 1, 2]
+FINISH {"name": "B_aim_fixed", "exit_code": 0, "seconds": 216.06622151499323}
+{"completed_rows": 15, "new_settings_attempted": 13, "promotions": []}
+FINISH {"name": "B_movement_fixed", "exit_code": 0, "seconds": 337.3371625659929}
+{"completed_rows": 15, "new_settings_attempted": 13, "promotions": []}
+FINISH {"name": "B_aim_one_sided", "exit_code": 0, "seconds": 340.68166570599715}
+{"completed_rows": 15, "new_settings_attempted": 13, "promotions": []}
+FINISH {"name": "B_heat_one_sided", "exit_code": 0, "seconds": 399.57565083498775}
+{"completed_rows": 16, "new_settings_attempted": 13, "promotions": []}

@@ -95,6 +95,24 @@
         "validation_errors": []
       },
       {
+        "path": "B/B_aim_fixed/seed_4_restart_1/budget.json",
+        "run_directory": "B/B_aim_fixed/seed_4_restart_1",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
         "path": "B/B_aim_one_sided/seed_0/budget.json",
         "run_directory": "B/B_aim_one_sided/seed_0",
         "run_type": "normal",
@@ -133,6 +151,42 @@
       {
         "path": "B/B_aim_one_sided/seed_2/budget.json",
         "run_directory": "B/B_aim_one_sided/seed_2",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/budget.json",
+        "run_directory": "B/B_aim_one_sided/seed_3",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/budget.json",
+        "run_directory": "B/B_aim_one_sided/seed_4",
         "run_type": "normal",
         "configured_code_test": false,
         "limit": 200,
@@ -419,6 +473,60 @@
         "validation_errors": []
       },
       {
+        "path": "B/B_heat_one_sided/seed_0/budget.json",
+        "run_directory": "B/B_heat_one_sided/seed_0",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/budget.json",
+        "run_directory": "B/B_heat_one_sided/seed_1",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/budget.json",
+        "run_directory": "B/B_heat_one_sided/seed_2",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
         "path": "B/B_labels/seed_0/budget.json",
         "run_directory": "B/B_labels/seed_0",
         "run_type": "normal",
@@ -581,6 +689,42 @@
         "validation_errors": []
       },
       {
+        "path": "B/B_movement_fixed/seed_3/budget.json",
+        "run_directory": "B/B_movement_fixed/seed_3",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/budget.json",
+        "run_directory": "B/B_movement_fixed/seed_4",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
         "path": "B/B_pullback/seed_0/budget.json",
         "run_directory": "B/B_pullback/seed_0",
         "run_type": "normal",
@@ -725,14 +869,14 @@
         "validation_errors": []
       }
     ],
-    "ledger_count": 40,
-    "reserved_practice_episodes": 7580,
+    "ledger_count": 48,
+    "reserved_practice_episodes": 9180,
     "source_episode_counts": {
-      "fill": 1520,
-      "online": 6060,
+      "fill": 1840,
+      "online": 7340,
       "unknown": 0
     },
-    "valid_ledger_count": 40
+    "valid_ledger_count": 48
   },
   "full_tests": {
     "files": [
@@ -1210,6 +1354,171 @@
         "validation_errors": []
       },
       {
+        "path": "B/B_aim_fixed/seed_4_restart_1/extra_ceiling_0040.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 471,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/extra_ceiling_0120.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 478,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/extra_ceiling_0140.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 484,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/extra_ceiling_0160.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 494,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/extra_ceiling_0180.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 493,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/extra_ceiling_0200.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 489,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 242,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 234,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 244,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 250,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 252,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 253,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_fixed/seed_4_restart_1/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 492,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
         "path": "B/B_aim_one_sided/seed_0/test_0040.json",
         "source": "test_NNNN",
         "valid": true,
@@ -1501,6 +1810,204 @@
         "valid": true,
         "episodes": 500,
         "successes": 368,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 169,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 19,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 155,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 194,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 183,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 193,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 208,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 205,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_3/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 410,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 176,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 4,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 205,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 180,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 215,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 194,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 126,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 216,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_aim_one_sided/seed_4/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 392,
         "test_seed": 123,
         "practice_episodes": 200,
         "counted_full_test_episodes": 500,
@@ -2992,6 +3499,303 @@
         "validation_errors": []
       },
       {
+        "path": "B/B_heat_one_sided/seed_0/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 185,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 75,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 1,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 25,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 210,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 224,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_0/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 392,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 174,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 23,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 66,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 208,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 174,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 169,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_1/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 403,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 158,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 0,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 137,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 189,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 205,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 1,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 176,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_heat_one_sided/seed_2/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 386,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
         "path": "B/B_labels/seed_0/test_0040.json",
         "source": "test_NNNN",
         "valid": true,
@@ -4059,6 +4863,358 @@
         "validation_errors": []
       },
       {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0060.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 487,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0080.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 495,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0100.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 495,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0120.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 494,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0140.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 497,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0160.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 492,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0180.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 486,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/extra_ceiling_0200.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 496,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 199,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 248,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 253,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 254,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 255,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 256,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 253,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 254,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_3/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 495,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/extra_ceiling_0040.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 469,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/extra_ceiling_0120.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 498,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/extra_ceiling_0140.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 496,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/extra_ceiling_0160.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 497,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/extra_ceiling_0180.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 500,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/extra_ceiling_0200.json",
+        "source": "extra_ceiling_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 499,
+        "test_seed": 789,
+        "practice_episodes": null,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 243,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 2,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 64,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 213,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 255,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 256,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 255,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 256,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/B_movement_fixed/seed_4/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 499,
+        "test_seed": 123,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
         "path": "B/B_pullback/seed_0/test_0040.json",
         "source": "test_NNNN",
         "valid": true,
@@ -4686,6 +5842,545 @@
         "validation_errors": []
       },
       {
+        "path": "B/offset_sweep/cell_00/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 173,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_01/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 151,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_02/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 140,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_03/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 102,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_04/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 76,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_05/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 55,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_06/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 22,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_07/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 215,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_08/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 189,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_09/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 183,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_10/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 153,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_11/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 130,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_12/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 82,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_13/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 36,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_14/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 230,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_15/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 230,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_16/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 223,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_17/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 212,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_18/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 191,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_19/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 138,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_20/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 60,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_21/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 231,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_22/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 240,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_23/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 241,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_24/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 242,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_25/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 237,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_26/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 198,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_27/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 89,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_28/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 231,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_29/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 236,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_30/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 240,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_31/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 242,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_32/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 240,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_33/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 202,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_34/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 99,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_35/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 223,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_36/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 234,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_37/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 239,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_38/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 238,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_39/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 233,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_40/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 189,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_41/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 106,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_42/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 182,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_43/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 203,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_44/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 217,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_45/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 225,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_46/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 216,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_47/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 176,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "B/offset_sweep/cell_48/test_0000.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 80,
+        "test_seed": 123,
+        "practice_episodes": 0,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
         "path": "references/fixed_seed_0_test_123.json",
         "source": "references",
         "valid": true,
@@ -4772,14 +6467,14 @@
     ],
     "source_counts": {
       "test_NNNN": {
-        "file_count": 342,
-        "valid_file_count": 342,
-        "full_test_episodes": 96084
+        "file_count": 463,
+        "valid_file_count": 463,
+        "full_test_episodes": 129012
       },
       "extra_ceiling_NNNN": {
-        "file_count": 16,
-        "valid_file_count": 16,
-        "full_test_episodes": 8000
+        "file_count": 36,
+        "valid_file_count": 36,
+        "full_test_episodes": 18000
       },
       "B/checks/zero.json": {
         "file_count": 1,
@@ -4792,9 +6487,9 @@
         "full_test_episodes": 6000
       }
     },
-    "candidate_file_count": 365,
-    "valid_file_count": 365,
-    "full_test_episodes": 110584,
+    "candidate_file_count": 506,
+    "valid_file_count": 506,
+    "full_test_episodes": 153512,
     "excluded_reference_files": [
       {
         "path": "references/old_learning.json",
@@ -4803,23 +6498,36 @@
     ]
   },
   "reset_only_probe_audits": {
-    "files": [],
-    "audit_file_count": 0,
-    "valid_audit_file_count": 0,
+    "files": [
+      {
+        "path": "validation/20261117T061159314640/audit.json",
+        "valid": true,
+        "reset_only_probes": 0,
+        "validation_errors": []
+      },
+      {
+        "path": "validation/20261117T061701588379/audit.json",
+        "valid": true,
+        "reset_only_probes": 0,
+        "validation_errors": []
+      }
+    ],
+    "audit_file_count": 2,
+    "valid_audit_file_count": 2,
     "followup_reset_only_probes": 0
   },
   "settings": {
-    "new_counted_settings_from_registry": 12,
+    "new_counted_settings_from_registry": 13,
     "old_study_settings_from_protocol": 28,
-    "whole_project_settings": 40
+    "whole_project_settings": 41
   },
   "whole_project_episode_totals": {
     "old_study_practice_episodes_from_protocol": 29010,
-    "followup_reserved_practice_episodes": 7580,
-    "whole_project_practice_episodes": 36590,
+    "followup_reserved_practice_episodes": 9180,
+    "whole_project_practice_episodes": 38190,
     "old_study_full_test_episodes_from_protocol": 409690,
-    "followup_full_test_episodes": 110584,
-    "whole_project_full_test_episodes": 520274,
+    "followup_full_test_episodes": 153512,
+    "whole_project_full_test_episodes": 563202,
     "old_study_reset_only_probes_from_protocol": 191,
     "followup_reset_only_probes": 0,
     "whole_project_reset_only_probes": 191

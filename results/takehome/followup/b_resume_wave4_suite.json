@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "name": "B_aim_fixed",
+      "exit_code": 0,
+      "seconds": 216.06622151499323
+    },
+    {
+      "name": "B_movement_fixed",
+      "exit_code": 0,
+      "seconds": 337.3371625659929
+    },
+    {
+      "name": "B_aim_one_sided",
+      "exit_code": 0,
+      "seconds": 340.68166570599715
+    },
+    {
+      "name": "B_heat_one_sided",
+      "exit_code": 0,
+      "seconds": 399.57565083498775
+    }
+  ],
+  "tripwire": false,
+  "seconds": 401.12792707799235
+}

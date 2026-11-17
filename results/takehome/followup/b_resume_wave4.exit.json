@@ -1,0 +1,18 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "b_resume_wave4",
+    "--settings",
+    "B_aim_fixed",
+    "B_aim_one_sided",
+    "B_movement_fixed",
+    "B_heat_one_sided"
+  ],
+  "started_utc": "2026-11-17T06:12:58.631182+00:00",
+  "finished_utc": "2026-11-17T06:19:40.352319+00:00",
+  "seconds": 401.72123185399687,
+  "exit_code": 0
+}

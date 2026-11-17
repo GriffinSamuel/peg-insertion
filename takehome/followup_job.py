@@ -8,6 +8,7 @@ from dataclasses import replace
 from takehome.followup_config import FollowupConfig
 from takehome.followup_runner import FollowupRunner
 from takehome.followup_reference import measure_reference
+from takehome.followup_paths import run_path
 
 
 def main():
@@ -24,10 +25,10 @@ def main():
     cfg=FollowupConfig(**entry['overrides'])
     runner=None; last_cfg=None
     for seed in a.seeds:
-        output=OUT/entry['phase']/entry['name']/f'seed_{seed}'
+        output=run_path(entry,seed)
         if (output/'result.json').exists():
             print('SKIP completed',output,flush=True);continue
-        current=replace(cfg,fixed_bias_seed=seed) if cfg.camera_condition=='fixed' else cfg
+        current=replace(cfg,fixed_bias_seed=seed) if cfg.camera_condition in ('fixed','mixed') else cfg
         path=measure_reference(current)
         current=replace(current,baseline_path=str(path.relative_to(ROOT)))
         if current!=last_cfg:

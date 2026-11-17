@@ -5,6 +5,7 @@ from takehome.followup_env import FollowupEnv
 from takehome.followup_learner import FollowupLearner
 from takehome.followup_episodes import FollowupEpisodes
 from takehome.train import write_json
+from takehome.followup_paths import condition_key
 from dataclasses import replace
 import json
 import numpy as np
@@ -13,8 +14,8 @@ import numpy as np
 def reference_path(cfg):
     if cfg.camera_condition=='normal' and cfg.test_seed==123:
         return ROOT/'results/takehome/baseline.json'
-    fixed=f'_seed_{cfg.fixed_bias_seed}' if cfg.camera_condition=='fixed' else ''
-    return OUT/'references'/f'{cfg.camera_condition}{fixed}_test_{cfg.test_seed}.json'
+    fixed=f'_seed_{cfg.fixed_bias_seed}' if cfg.camera_condition in ('fixed','mixed') else ''
+    return OUT/'references'/f'{condition_key(cfg)}{fixed}_test_{cfg.test_seed}.json'
 
 
 def measure_reference(cfg):
@@ -30,9 +31,12 @@ def measure_reference(cfg):
                   privileged_critic=False,coordination='joint',classification=False)
     conditions={}
     for name,oracle in [('normal',False),('no_camera_bias',True)]:
-        kwargs={'obs_hole_bias_std':0.} if cfg.camera_condition=='normal' and oracle else {}
-        env=FollowupEnv(ROOT/'results/policies'/cfg.policy,AimConfig(),config=plain,
-                        oracle=oracle and cfg.camera_condition!='normal',**kwargs)
+        zero_error=oracle and cfg.camera_condition in ('normal','mixed')
+        kwargs={'obs_hole_bias_std':0.} if zero_error else {}
+        reference_cfg=(replace(plain,camera_condition='normal',mixed_fixed_std=0.,mixed_episode_std=0.)
+                       if zero_error else plain)
+        env=FollowupEnv(ROOT/'results/policies'/cfg.policy,AimConfig(),config=reference_cfg,
+                        oracle=oracle and not zero_error,**kwargs)
         learner=FollowupLearner(plain,env)
         runner=FollowupEpisodes(env,learner)
         summary,stats,_=runner.test(learner.initialize(0),episodes=500,seed=cfg.test_seed)
@@ -43,6 +47,8 @@ def measure_reference(cfg):
         conditions[name]=summary
     write_json(path,dict(policy=cfg.policy,test_seed=cfg.test_seed,episodes_per_condition=500,
         camera_condition=cfg.camera_condition,fixed_bias_seed=cfg.fixed_bias_seed,
+        mixed_fixed_std=cfg.mixed_fixed_std,mixed_episode_std=cfg.mixed_episode_std,
         practice_episodes=0,conditions=conditions,test_only=True,learned_from=False,
-        ceiling_definition='Oracle cancels this condition\'s camera bias; no learned controller'))
+        ceiling_definition=('Zero camera error, both components removed; no learned controller'
+            if cfg.camera_condition=='mixed' else 'Oracle cancels this condition\'s camera bias; no learned controller')))
     return path

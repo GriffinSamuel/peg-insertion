@@ -1,0 +1,37 @@
+{
+  "episodes": 256,
+  "successes": 80,
+  "success_rate": 0.3125,
+  "ci_lo": 0.258844965156111,
+  "ci_hi": 0.3716991817395363,
+  "steps_mean": 180.47500610351562,
+  "steps_median": 181.5,
+  "peak_force_mean": 75.5357666015625,
+  "final_xy_err_mean_mm": 0.8891997337341309,
+  "final_depth_mean_mm": 11.136895179748535,
+  "still_inserted_at_end": 0.3125,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.7055997848510742,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 123,
+  "cell": 48,
+  "grid_xy": [
+    6,
+    6
+  ],
+  "constant_guess_mm": [
+    0.8999999761581421,
+    0.8999999761581421
+  ],
+  "input_shift_mm": [
+    -0.8999999761581421,
+    -0.8999999761581421
+  ],
+  "practice_episodes": 0,
+  "seconds": 0.43603130600240547,
+  "frozen_policy_unchanged": true,
+  "used_for_learner_selection": false,
+  "full_trace_saved": false
+}

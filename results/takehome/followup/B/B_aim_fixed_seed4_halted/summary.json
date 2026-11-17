@@ -1,0 +1,29 @@
+{
+  "record": {
+    "phase": "B",
+    "name": "B_aim_fixed_seed4_halted",
+    "description": "Preserved original seed4 attempt stopped under the earlier ceiling rule.",
+    "base": "floor",
+    "base_result": "s4 470/500 (94.0%); mean 94.00% \u00b1 0.00pp",
+    "seeds": [],
+    "mean_percent": null,
+    "spread_pp": null,
+    "delta_pp": null,
+    "verdict": "DID NOT RUN",
+    "aim_start_mm": 0.2901596691454809,
+    "aim_success_mm": null,
+    "steps_to_insert": null,
+    "peak_force_n": null,
+    "practice_episodes": 160,
+    "hand_search": false,
+    "hidden_information": false,
+    "camera_condition": "fixed for the whole run",
+    "reason": "Seed4: 160 charged practice episodes; curve256/256 at160, no final500 test. Success-time aim error unavailable because curve traces were not saved. Preserved unchanged; not an additional setting.",
+    "base_mean_percent": 94.0,
+    "base_spread_pp": 0.0
+  },
+  "per_seed": [],
+  "paired_error_reduction_mm": null,
+  "working_aim": false,
+  "extend": false
+}

@@ -4,7 +4,7 @@
     "name": "B_aim_fixed",
     "description": "Run plain aim with one fixed camera bias per run.",
     "base": "floor",
-    "base_result": "s0 206/500 (41.2%); s1 274/500 (54.8%); s2 462/500 (92.4%); s3 401/500 (80.2%); mean 67.15% \u00b1 23.34pp",
+    "base_result": "s0 206/500 (41.2%); s1 274/500 (54.8%); s2 462/500 (92.4%); s3 401/500 (80.2%); s4 470/500 (94.0%); mean 72.52% \u00b1 23.51pp",
     "seeds": [
       {
         "seed": 0,
@@ -25,23 +25,28 @@
         "seed": 3,
         "successes": 425,
         "episodes": 500
+      },
+      {
+        "seed": 4,
+        "successes": 492,
+        "episodes": 500
       }
     ],
-    "mean_percent": 88.35,
-    "spread_pp": 4.250098038084923,
-    "delta_pp": 21.19999999999999,
-    "verdict": "DID NOT RUN",
-    "aim_start_mm": 1.0097128372377935,
-    "aim_success_mm": 2.082195539666865,
-    "steps_to_insert": 167.98308563232422,
-    "peak_force_n": 94.19695091247559,
-    "practice_episodes": 960,
+    "mean_percent": 90.36,
+    "spread_pp": 5.8093028841677725,
+    "delta_pp": 17.840000000000003,
+    "verdict": "NO REAL DIFFERENCE",
+    "aim_start_mm": 0.8658022036193309,
+    "aim_success_mm": 1.7972600857112195,
+    "steps_to_insert": 165.28118286132812,
+    "peak_force_n": 95.5938949584961,
+    "practice_episodes": 1000,
     "hand_search": false,
     "hidden_information": false,
     "camera_condition": "fixed for the whole run",
-    "reason": "Seed4 halted after160 charged practice episodes: curve test256/256 (100%) exceeded own470/500 (94%) ceiling by6 points. Seeds0\u20133 completed; mean/spread shown are partial, not a five-seed result.",
-    "base_mean_percent": 67.15,
-    "base_spread_pp": 23.336595010126622
+    "reason": "Seed4 is an authorized fresh restart; the original halted attempt remains a separate row.",
+    "base_mean_percent": 72.52,
+    "base_spread_pp": 23.508126254552916
   },
   "per_seed": [
     {
@@ -171,9 +176,41 @@
       "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/B/B_aim_fixed/seed_3/result.json",
       "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/B/B_aim_fixed/seed_3/test_0200_traces.npz",
       "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/B/B_aim_fixed/seed_3/budget.json"
+    },
+    {
+      "test_episodes": 500,
+      "successes": 492,
+      "success_percent": 98.4,
+      "steps_mean": 154.47357177734375,
+      "peak_force_mean": 101.18167114257812,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false,
+      "outputs": 2,
+      "aim_metrics_applicable": true,
+      "hidden_true_bias_used_for_analysis_only": true,
+      "valid_success_event_count": 492,
+      "valid_success_episode_count": 492,
+      "valid_success_event_sum_matches_final": true,
+      "valid_success_episode_count_matches_final": true,
+      "success_count_matches_final": true,
+      "episode_success_vector_count": 492,
+      "episode_success_vector_matches_final": true,
+      "initial_guess_error_mean_mm": 0.29015966914548097,
+      "guess_error_at_first_valid_success_mean_mm": 0.6575182698886385,
+      "paired_initial_guess_error_mean_mm": 0.29015966914548097,
+      "paired_guess_error_reduction_mean_mm": -0.36735860074315757,
+      "end200_guess_error_mean_mm": 1.7947252853089615,
+      "success_episode_count_for_paired_metrics": 492,
+      "seed": 4,
+      "practice_episodes": 200,
+      "practice_budget_limit": 200,
+      "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/B/B_aim_fixed/seed_4_restart_1/result.json",
+      "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/B/B_aim_fixed/seed_4_restart_1/test_0200_traces.npz",
+      "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/B/B_aim_fixed/seed_4_restart_1/budget.json"
     }
   ],
-  "paired_error_reduction_mm": -1.0724827024290715,
+  "paired_error_reduction_mm": -0.9314578820918887,
   "working_aim": false,
   "extend": false
 }

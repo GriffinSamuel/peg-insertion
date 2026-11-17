@@ -1,8 +1,8 @@
 # Take-home progress
 
-## Current status: follow-up Phase B HALTED on a mandatory tripwire (2026-11-16)
+## Current status: follow-up Phase B complete; mixed comparisons next (2026-11-16)
 
-Original Goals 1-13 remain complete and frozen. Follow-up Phase A is complete. Phase B stopped when fixed-camera plain aim, practice seed 4, reached 256/256 (100%) after 160 charged practice episodes against its measured 470/500 (94%) ceiling. The six-point gap fires the aim-only tripwire in CODEX_GOALS.md. All experiment workers stopped; no retry or Phase C-G experiment is authorized while this halt is pending. Fresh seeds remain unused. The latest interrupted-phase report below supersedes all historical continuation instructions. Read TAKEHOME_FOLLOWUP_REPORT.md and results/takehome/followup/scoreboard.md. Preserve the original 80.2% result and all original files.
+The revised consistent-camera rule is committed as b46779e. The offset sweep finished first and tied the centre at94.53%. All interrupted B items and PROMISING extensions are complete; no promotions remain. Plain one-sided aim HELPED at80.20%±4.24 points; no normal-camera aim fix met the working definition. The original160-episode seed4 halt is a preserved row; its fresh200-episode restart scored492/500. Commit/push B, then run mixed comparisons before C to G. Fresh seeds remain unused; the original80.2% result is unchanged.
 
 ## Original-study completion (2026-11-15)
 
@@ -676,3 +676,29 @@ The old aim learner often succeeds without finding the camera error, and none of
 ### 8. Questions before the next phase
 
 BLOCKING: Griffin's direction is required because the aim-only ceiling tripwire in CODEX_GOALS.md fired. Do not launch or retry experiments, clear the halt, use fresh seeds, or continue to Phase C automatically. This is the plan's explicit stopping case, not a planned check-in. Read TAKEHOME_FOLLOWUP_REPORT.md and results/takehome/followup/B/tripwire.json first.
+
+## 2026-11-16: Follow-up Phase B complete after authorized rule change
+
+### 1. What I did (short list)
+Committed revised plans and reason before continuing. Ran the49-cell offset sweep first with four detached workers. Preserved the seed4 halt, restarted it from scratch, finished the one-sided heat map and all PROMISING extensions. Prepared but did not run mixed/C/D/E experiments.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+Sweep242/256 tied at zero and(+0.3,0)mm. One-sided aim416,419,368,410,392/500,80.20%±4.24,HELPED versus69.40% floor; paired guess error worsened0.465mm. One-sided heat392,403,386/500,78.73%±1.72,NO REAL DIFFERENCE. Fixed aim457,422,463,425,492/500,90.36%±5.81; fixed movement433,432,487,495,499/500,93.84%±6.76; both NO REAL DIFFERENCE under the large matched-floor spread. No normal-condition aim fix worked.
+
+### 3. Checks: each check from the goal, marked pass or fail
+PASS: all49 sweep cells first,256 tests each,no learning. PASS: all16 B scoreboard rows retained,including halted/conditional skips. PASS: all PROMISING extensions completed. PASS: completed runs200practice/500test123,no test learning,frozenpolicies. PASS:41 resumption tests plus5 synthetic trick tests. PASS:36 extra physical checks have no wall/nan flags and do not enter selection. PASS:all41 old halted-seed files hash-identical, original-report/code/results unchanged, large artifacts ignored. PASS:fresh seeds unused,later experiments unrun, normal aim failure reported plainly.
+
+### 4. Surprises or problems
+The sweep did not show a constant offset better than zero; no higher ceiling is claimed. The restart reached98.4% and was checked under the revised rule. Large fixed-floor variation keeps the five-seed verdict conservative despite large mean gains. Better insertion on one-sided error still does not mean the aim guess found the true error.
+
+### 5. Decisions I logged
+Logged the authorized ceiling-rule change,mixed exception,exact splits,restart ownership,recovery definition,finite-grid caveat,D applicability and adapter contracts. Normal tripwire,seeds,success rule,test sizes and per-experiment budget remain fixed.
+
+### 6. Practice episodes used, and settings tried so far
+Follow-up9,180practice,153,512fulltests,0reset-onlyprobes,13settings. Wholeproject38,190practice,563,202fulltests,191reset-onlyprobes,41settings. Includes preserved160practice,two10-episode code trials,12,544sweep tests and18,000physical-check tests. PhaseA and synthetic checks spend no episodes.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+No constant offset beat zero in the sweep. Learning aim helped insertion when error always pointed one way, but did not accurately find that error. The normal error case remains unresolved. The fixed-error runs are complete, including the authorized restart. Mixed tests will now measure calibration and per-attempt error together.
+
+### 8. Questions before the next phase
+None. Commit/push this phase and continue with mixed references and four methods per split, then C to G without a planned check-in.

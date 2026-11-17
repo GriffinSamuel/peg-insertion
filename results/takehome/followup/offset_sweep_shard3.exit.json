@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_offset_sweep.py",
+    "--shard",
+    "3"
+  ],
+  "started_utc": "2026-11-17T06:09:16.029228+00:00",
+  "finished_utc": "2026-11-17T06:10:20.857373+00:00",
+  "seconds": 64.82820653500676,
+  "exit_code": 0
+}

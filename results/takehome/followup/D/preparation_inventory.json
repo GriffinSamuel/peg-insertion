@@ -1,0 +1,839 @@
+{
+  "purpose": "Read-only Phase D applicability inventory for tricks from Goal 7; no training, testing, or result interpretation performed.",
+  "phase_d_scope": {
+    "base": "The working aim corrector from Phase B, compared against plain aim on the fixed camera condition. The chosen Phase B checkpoint/config is not named in this inventory and must be supplied from the lead selection record.",
+    "condition": "camera error fixed for the whole run; follow-up adapter value camera_condition=\"fixed\".",
+    "one_change_rule": "Each eligible setting applies one Goal 7 switch/value from its aim-only base; no combinations are selected here.",
+    "practice_seed_set": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "test_seed": 123,
+    "test_episodes": 500,
+    "practice_budget_per_setting": 200,
+    "fixed_bias_seed_handling": "followup_job.py replaces fixed_bias_seed with the practice seed when camera_condition is fixed; FollowupEnv then uses one seeded XY bias for that run.",
+    "source_refs": [
+      {
+        "path": "FOLLOWUP_PLAN.md",
+        "lines": "84-86"
+      },
+      {
+        "path": "FOLLOWUP_PLAN.md",
+        "line": 75
+      },
+      {
+        "path": "CODEX_GOALS.md",
+        "lines": "42-48"
+      },
+      {
+        "path": "takehome/followup_job.py",
+        "lines": "28-31"
+      },
+      {
+        "path": "takehome/followup_env.py",
+        "lines": "23-40"
+      },
+      {
+        "path": "takehome/followup_runner.py",
+        "lines": "95-104"
+      }
+    ]
+  },
+  "applicability_summary": {
+    "goal7_original_settings": 24,
+    "phase_d_applicable_or_adapter_gap_or_scope_note": 18,
+    "phase_d_inapplicable": 6,
+    "phase_c_planned_original_settings": 19,
+    "phase_c_skipped_original_settings": 5,
+    "counts_note": "These are applicability classifications for lead review, not a choice of experiments or a scientific interpretation."
+  },
+  "settings": [
+    {
+      "index": 1,
+      "name": "fill_0",
+      "label": "Fill 0 episodes",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "fill_episodes": 0
+      },
+      "design_values": "Fill share: 0, 10, 20, 80, 120; reuse 40.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Fill allocation is a source/budget setting and uses the aim base.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 4
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 2,
+      "name": "fill_10",
+      "label": "Fill 10 episodes",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "fill_episodes": 10
+      },
+      "design_values": "Fill share: 0, 10, 20, 80, 120; reuse 40.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Fill allocation is a source/budget setting and uses the aim base.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 20
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 3,
+      "name": "fill_20",
+      "label": "Fill 20 episodes",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "fill_episodes": 20
+      },
+      "design_values": "Fill share: 0, 10, 20, 80, 120; reuse 40.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Fill allocation is a source/budget setting and uses the aim base.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 36
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 4,
+      "name": "fill_80",
+      "label": "Fill 80 episodes",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "fill_episodes": 80
+      },
+      "design_values": "Fill share: 0, 10, 20, 80, 120; reuse 40.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Fill allocation is a source/budget setting and uses the aim base.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 52
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 5,
+      "name": "fill_120",
+      "label": "Fill 120 episodes",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "fill_episodes": 120
+      },
+      "design_values": "Fill share: 0, 10, 20, 80, 120; reuse 40.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Fill allocation is a source/budget setting and uses the aim base.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 68
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 6,
+      "name": "side_by_side",
+      "label": "side by side",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "design_values": "Independent aim/movement actors and critic ensembles; simultaneous; reuse joint.",
+      "phase_d_applicability": "inapplicable",
+      "applicability_reason": "Requires parallel aim and movement learners; Phase D base is aim-only.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "skipped",
+      "phase_c_skip_reason": "Needs separate aim and movement learners; movement-only has no aim part.",
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 84
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 7,
+      "name": "aim_then_move",
+      "label": "aim then move",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "design_values": "Independent aim/movement actors and critic ensembles; aim then movement; reuse joint.",
+      "phase_d_applicability": "inapplicable",
+      "applicability_reason": "Requires both aim and movement components and sequential component training.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "skipped",
+      "phase_c_skip_reason": "Needs an aim component to train first.",
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 101
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 8,
+      "name": "move_then_aim",
+      "label": "move then aim",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "design_values": "Independent aim/movement actors and critic ensembles; movement then aim; reuse joint.",
+      "phase_d_applicability": "inapplicable",
+      "applicability_reason": "Requires both aim and movement components and sequential component training.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "skipped",
+      "phase_c_skip_reason": "Needs an aim component to train second.",
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 118
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 9,
+      "name": "briefing",
+      "label": "Critic briefing on own fill",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "briefing": true
+      },
+      "design_values": "Four critic updates per valid own fill transition; actor stays frozen.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Critic-only fill briefing can be applied to an aim learner.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 135
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 11
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 10,
+      "name": "privileged_critic",
+      "label": "True bias to critic during training",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "privileged_critic": true
+      },
+      "design_values": "Append true XY bias divided by guess cap to critic input during training and labelled diagnostic recording only; never actor input.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Critic information switch; actor remains the aim controller.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 151
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 12
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 11,
+      "name": "one_critic",
+      "label": "One critic",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "ensemble": 1
+      },
+      "design_values": "One critic copy; reuse four.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Critic ensemble size is independent of action dimension.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 167
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 13
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 12,
+      "name": "one_update",
+      "label": "One update per new step",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "updates_per_step": 1
+      },
+      "design_values": "One critic update per valid new step, actor every update; reuse four.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Update ratio is independent of action dimension.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 183
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 14
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 13,
+      "name": "aim_cap_50um",
+      "label": "Aim cap 0.05 mm",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "step_cap": 5e-05
+      },
+      "design_values": "0.05 mm aim nudge cap; reuse 0.1 mm; guess cap stays 3 mm.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Directly changes the aim nudge cap.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "skipped",
+      "phase_c_skip_reason": "An aim nudge cap cannot change a movement-only learner.",
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 199
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 14,
+      "name": "aim_cap_200um",
+      "label": "Aim cap 0.2 mm",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "step_cap": 0.0002
+      },
+      "design_values": "0.2 mm aim nudge cap; reuse 0.1 mm; guess cap stays 3 mm.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Directly changes the aim nudge cap.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "skipped",
+      "phase_c_skip_reason": "An aim nudge cap cannot change a movement-only learner.",
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 215
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 15,
+      "name": "movement_cap_400um",
+      "label": "Movement cap 0.4 mm",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "movement_cap": 0.0004
+      },
+      "design_values": "0.4 mm movement cap; reuse 0.2 mm.",
+      "phase_d_applicability": "inapplicable",
+      "applicability_reason": "Changes movement-output scaling; the aim-only controller has two aim outputs.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 231
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 16
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 16,
+      "name": "final_decider",
+      "label": "Final critic decider",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "final_decider": true
+      },
+      "design_values": "Rate zero, aim only, movement only, both, half both, 1.5 times both clipped, half aim plus movement, aim plus half movement.",
+      "phase_d_applicability": "applicable_with_aim_adapter",
+      "applicability_reason": "The original decider includes zero and aim-only choices; FollowupLearner has a two-output branch scoring zero/full/half/clipped-1.5 aim actions.",
+      "adapter_gap_or_scope_note": "The current two-output adapter uses four aim candidates; the five-output original lists eight candidates. The movement-containing candidates have no aim-only counterpart; exact mapping is documented for lead review.",
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 248
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 17
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 17,
+      "name": "near_hole",
+      "label": "Hand over near hole",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "near_hole": true
+      },
+      "design_values": "Active when observed absolute height <15 mm and observed XY distance <10 mm; otherwise zero correction.",
+      "phase_d_applicability": "applicable_adapter_gap",
+      "applicability_reason": "The Goal 7 definition gates the aim correction by observed height and XY distance.",
+      "adapter_gap_or_scope_note": "FollowupEnv.next_guess overrides the parent implementation and does not apply near_hole_gate; the config flag exists but is currently ignored by this override.",
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 265
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 18
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 18,
+      "name": "contact_cap",
+      "label": "Contact-dependent movement cap",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "contact_cap": true
+      },
+      "design_values": "Nominal cap times 0.5 below 5 N sensor force, times 2 at or above 5 N.",
+      "phase_d_applicability": "inapplicable",
+      "applicability_reason": "Scales the movement cap from force; it does not alter the aim nudge.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 281
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 19
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 19,
+      "name": "uncertainty_cap",
+      "label": "Old-policy uncertainty cap",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "uncertainty_cap": true
+      },
+      "design_values": "Each axis nominal cap times clip(2 times frozen-policy pre-tanh action standard deviation, 0.5, 2); no sampling.",
+      "phase_d_applicability": "inapplicable",
+      "applicability_reason": "Scales movement output caps from policy uncertainty; it does not alter the aim nudge.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 298
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 20
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 20,
+      "name": "classification",
+      "label": "Classification critic loss",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "classification": true
+      },
+      "design_values": "Sigmoid critic output with binary cross entropy and same discounted target; raw Q is not a finite-episode probability.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Changes critic loss/score shape without requiring movement outputs.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 315
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 21
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 21,
+      "name": "three_step",
+      "label": "Three-step credit",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "n_step": 3
+      },
+      "design_values": "Three-step discounted return plus bootstrap; cut at success or time limit; retain bootstrap at time limit.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Changes critic target horizon, independent of action dimension.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 331
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 22
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 22,
+      "name": "return_floor",
+      "label": "Observed return floor",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "return_floor": true
+      },
+      "design_values": "Bellman target at least the discounted observed return to the end of its own practice episode.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Changes critic target floor, independent of action dimension.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 347
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 23
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 23,
+      "name": "force_penalty",
+      "label": "Force penalty (peak force reported)",
+      "original_base": "combined",
+      "exact_original_goal7_overrides": {
+        "outputs": 5,
+        "force_penalty": true
+      },
+      "design_values": "Subtract 0.001 times max(force minus 15 N, 0) times 0.02 seconds per valid step; unchanged success test; report peak force.",
+      "phase_d_applicability": "applicable_with_scope_note",
+      "applicability_reason": "The specified change is a force-based reward subtraction and existing FollowupRunner/prepare_training_data path supports it for the aim learner.",
+      "adapter_gap_or_scope_note": "Goal 7 labels this trick Combined; Phase D asks for tricks that make sense for aim. This is a scope ambiguity for lead review even though the code path accepts an aim configuration.",
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 363
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 24
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    },
+    {
+      "index": 24,
+      "name": "sibling_fill",
+      "label": "Sibling-policy fill-up",
+      "original_base": "aim",
+      "exact_original_goal7_overrides": {
+        "sibling_fill": true
+      },
+      "design_values": "40 own counted fill episodes round-robin over force_0.5mm_s0, s3, s4, allocated 20, 10, 10; recorded original successes nonzero.",
+      "phase_d_applicability": "applicable",
+      "applicability_reason": "Fill-source policy routing is independent of whether the learner controls aim or movement; the follow-up collection has sibling-fill routing.",
+      "adapter_gap_or_scope_note": null,
+      "phase_c_applicability": "planned",
+      "phase_c_skip_reason": null,
+      "goal7_manifest_source": {
+        "path": "results/takehome/goal7_screening_manifest.json",
+        "line": 380
+      },
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 25
+      },
+      "phase_c_manifest_source": {
+        "path": "takehome/followup_c_manifest.py",
+        "lines": "7-11,34-45"
+      }
+    }
+  ],
+  "adapter_review": [
+    {
+      "topic": "Aim nudge outputs",
+      "fact": "FollowupConfig inherits step_cap and outputs; outputs=2 uses the aim controller; base config permits outputs 2,3,5.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_config.py",
+          "lines": "7-31"
+        },
+        {
+          "path": "takehome/config.py",
+          "lines": "27-29,53-60"
+        }
+      ]
+    },
+    {
+      "topic": "Near-hole handover",
+      "fact": "FollowupEnv overrides next_guess but does not test cfg.near_hole or call near_hole_gate; the inherited flag is not implemented by the override.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_env.py",
+          "lines": "61-84"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "54-62,75-79"
+        },
+        {
+          "path": "takehome/followup_config.py",
+          "lines": "7-18"
+        }
+      ]
+    },
+    {
+      "topic": "Final decider",
+      "fact": "FollowupLearner has a two-output candidate selection branch with zero, full action, half action, and clipped 1.5-times action; the source Goal 7 design lists eight candidates for combined output.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_learner.py",
+          "lines": "73-80"
+        },
+        {
+          "path": "takehome/goal7_design.md",
+          "lines": "17,27,29"
+        }
+      ]
+    },
+    {
+      "topic": "Force penalty",
+      "fact": "FollowupRunner calls prepare_training_data; it subtracts the specified force penalty from practice rewards when enabled. The Goal 7 manifest marks the original configuration as combined, so Phase D scope remains a lead-review item.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "86-93"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "96-111"
+        },
+        {
+          "path": "takehome/goal7_manifest.py",
+          "lines": "33-34"
+        }
+      ]
+    },
+    {
+      "topic": "Sibling fill",
+      "fact": "FollowupCollection routes fill batches modulo three across the three named siblings; the run loop passes start//10 as batch_index. For 40 fill episodes this gives 20,10,10 episodes.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "145-159,247-263"
+        },
+        {
+          "path": "takehome/goal7_design.md",
+          "line": 25
+        }
+      ]
+    },
+    {
+      "topic": "Other aim-side learning switches",
+      "fact": "FollowupConfig exposes critic/update/target switches; FollowupLearner uses the inherited variant target/loss machinery, and FollowupRunner routes preparation/training data.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_config.py",
+          "lines": "7-19,46-55"
+        },
+        {
+          "path": "takehome/followup_learner.py",
+          "lines": "82-109"
+        },
+        {
+          "path": "takehome/followup_runner.py",
+          "lines": "86-93"
+        },
+        {
+          "path": "takehome/variants.py",
+          "lines": "96-143"
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "original_goal7_settings_covered_once": true,
+    "exact_overrides_copied_from_manifest": true,
+    "all_settings_have_goal7_design_and_manifest_refs": true,
+    "all_settings_compared_to_phase_c_applicability": true,
+    "no_experimental_runs": true,
+    "experimental_runs_performed": 0,
+    "result_values_read_or_interpreted": false
+  },
+  "source_files_read": [
+    "AGENTS.md",
+    "TAKEHOME_PLAN.md",
+    "CODEX_GOALS.md",
+    "FOLLOWUP_PLAN.md",
+    "takehome/goal7_design.md",
+    "takehome/goal7_manifest.py",
+    "results/takehome/goal7_screening_manifest.json",
+    "takehome/followup_c_manifest.py",
+    "takehome/followup_config.py",
+    "takehome/followup_env.py",
+    "takehome/followup_learner.py",
+    "takehome/followup_runner.py",
+    "takehome/followup_job.py",
+    "takehome/variants.py",
+    "takehome/config.py"
+  ]
+}

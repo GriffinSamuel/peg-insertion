@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "passed_nodes": [
+    "takehome/test_followup_tricks.py::test_final_decider_is_zero_initialized_bounded_and_scales_candidates[2]",
+    "takehome/test_followup_tricks.py::test_final_decider_is_zero_initialized_bounded_and_scales_candidates[3]",
+    "takehome/test_followup_tricks.py::test_followup_sequential_pair_freezes_inactive_full_state_and_updates_both[aim_then_move]",
+    "takehome/test_followup_tricks.py::test_followup_sequential_pair_freezes_inactive_full_state_and_updates_both[move_then_aim]",
+    "takehome/test_followup_tricks.py::test_all_planned_phase_c_and_d_manifest_configs_construct_and_are_single_switches"
+  ],
+  "failed_nodes": [],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

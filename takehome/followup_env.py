@@ -2,7 +2,7 @@
 from takehome import followup_runtime  # noqa: F401
 import jax
 import jax.numpy as jp
-from takehome.variants import VariantEnv
+from takehome.variants import VariantEnv, near_hole_gate
 
 
 def offset_grid():
@@ -24,7 +24,8 @@ class FollowupEnv(VariantEnv):
     def __init__(self, policy_dir, aim, *, config, oracle=False, **kwargs):
         self.followup_config=config
         self.oracle=oracle
-        self.fixed_bias=.00075*jax.random.normal(
+        fixed_std=config.mixed_fixed_std if config.camera_condition=='mixed' else .00075
+        self.fixed_bias=fixed_std*jax.random.normal(
             jax.random.fold_in(jax.random.PRNGKey(config.fixed_bias_seed),8713),(2,))
         self.grid=offset_grid()
         super().__init__(policy_dir,aim,config=config,**kwargs)
@@ -37,6 +38,13 @@ class FollowupEnv(VariantEnv):
             info['bias']=info['bias'].at[:2].set(jp.abs(info['bias'][:2]))
         elif cond=='fixed':
             info['bias']=info['bias'].at[:2].set(self.fixed_bias)
+        elif cond=='mixed':
+            # Original reset draws this value once per episode. Preserve that
+            # draw separately so later observations do not repeatedly rescale it.
+            if 'mixed_episode_bias' not in info:
+                info['mixed_episode_bias']=info['bias'][:2]*(
+                    self.followup_config.mixed_episode_std/.00075)
+            info['bias']=info['bias'].at[:2].set(self.fixed_bias+info['mixed_episode_bias'])
         return super()._get_obs(data,info,action,rng)
 
     def augment(self,raw,guess,history):
@@ -74,6 +82,8 @@ class FollowupEnv(VariantEnv):
             proposal=jp.where(contact,proposal,jp.zeros_like(proposal))
         if cfg.pullback:
             proposal=proposal-.01*current
+        if cfg.near_hole:
+            proposal=jp.where(near_hole_gate(state.obs['state']),proposal,jp.zeros_like(proposal))
         if cfg.within_grid:
             # Search trigger and cell elimination use camera height only.
             active=(raw[2]<.001) & stalled(state.info['reading_history']) & (state.info['step_count']>=10)
