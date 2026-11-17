@@ -4,6 +4,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from takehome.followup_runtime import ROOT, OUT
 import argparse
+import os
 import json
 import time
 import jax
@@ -20,7 +21,8 @@ def main():
     parser.add_argument('--method', choices=['blind_spiral'], required=True)
     args=parser.parse_args()
     registry=json.loads((OUT/'registry.json').read_text())
-    if 'E' not in registry['completed_phases'] or registry.get('status')=='halted_tripwire':
+    early=os.environ.get('FOLLOWUP_F_DIAGNOSIS_EARLY')=='1'  # takeover order: test-only hand run may start during E
+    if registry.get('status')=='halted_tripwire' or ('E' not in registry['completed_phases'] and not early):
         raise ValueError('Touch comparisons wait until Phase E is complete')
     if not (OUT/'F/signal_diagnosis.json').exists():
         raise ValueError('Review the saved-trace signal diagnosis first')
@@ -57,7 +59,7 @@ def main():
     if policy_digest(env.frozen_policy)!=before:
         raise RuntimeError('Tripwire: frozen policy changed')
     result=dict(method=args.method, final=summary, metrics=metrics, practice_episodes=0,
-        no_learning=True, test_data_learned_from=False, frozen_policy_unchanged=True,
+        early_gate_bypass=early, no_learning=True, test_data_learned_from=False, frozen_policy_unchanged=True,
         hand_search=True, hidden_information=False, uses_q_ratings=False,
         aim_final_error_mm=float(np.linalg.norm(trace['next_guess'][-1]-trace['true_bias'][-1],axis=-1).mean()*1000),
         timeout_episodes=int(np.any(trace['truncated'],axis=0).sum()),

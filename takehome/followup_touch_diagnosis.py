@@ -98,7 +98,9 @@ def describe(trace, rotation):
 
 def main():
     registry=json.loads((OUT/'registry.json').read_text())
-    if 'E' not in registry['completed_phases'] or registry.get('status')=='halted_tripwire':
+    import os
+    early=os.environ.get('FOLLOWUP_F_DIAGNOSIS_EARLY')=='1'  # saved-data only; Griffin's takeover order lets this run during E
+    if ('E' not in registry['completed_phases'] and not early) or registry.get('status')=='halted_tripwire':
         raise ValueError('Touch analysis waits until Phase E is complete without an active tripwire')
     from takehome.correction import AimConfig
     from takehome.followup_config import FollowupConfig

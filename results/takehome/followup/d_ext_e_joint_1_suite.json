@@ -1,0 +1,66 @@
+{
+  "jobs": [
+    {
+      "name": "D_fill_80",
+      "exit_code": 0,
+      "seconds": 328.087943260005
+    },
+    {
+      "name": "D_fill_0",
+      "exit_code": 0,
+      "seconds": 431.0107722279936
+    },
+    {
+      "name": "E_normal_joint",
+      "exit_code": 0,
+      "seconds": 526.3999279139971
+    },
+    {
+      "name": "E_fixed_joint",
+      "exit_code": 0,
+      "seconds": 555.2472296719934
+    },
+    {
+      "name": "D_fill_120",
+      "exit_code": 0,
+      "seconds": 225.51069141100743
+    },
+    {
+      "name": "D_near_hole",
+      "exit_code": 0,
+      "seconds": 346.60734753200086
+    },
+    {
+      "name": "D_classification",
+      "exit_code": 0,
+      "seconds": 337.2223717059969
+    },
+    {
+      "name": "D_return_floor",
+      "exit_code": 0,
+      "seconds": 335.1220024610084
+    },
+    {
+      "name": "E_normal_aim_then_move",
+      "exit_code": 0,
+      "seconds": 503.748117487994
+    },
+    {
+      "name": "E_normal_move_then_aim",
+      "exit_code": 0,
+      "seconds": 434.71603736699035
+    },
+    {
+      "name": "E_fixed_aim_then_move",
+      "exit_code": 0,
+      "seconds": 458.2820729880041
+    },
+    {
+      "name": "E_fixed_move_then_aim",
+      "exit_code": 0,
+      "seconds": 427.1507861029968
+    }
+  ],
+  "tripwire": false,
+  "seconds": 1366.6850256870093
+}

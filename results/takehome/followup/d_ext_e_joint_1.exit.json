@@ -1,0 +1,27 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "takehome.followup_suite",
+    "--name",
+    "d_ext_e_joint_1",
+    "--settings",
+    "E_normal_joint",
+    "E_fixed_joint",
+    "D_fill_0",
+    "D_fill_80",
+    "D_fill_120",
+    "D_near_hole",
+    "D_classification",
+    "D_return_floor",
+    "E_normal_aim_then_move",
+    "E_normal_move_then_aim",
+    "E_fixed_aim_then_move",
+    "E_fixed_move_then_aim"
+  ],
+  "started_utc": "2026-11-17T09:17:20.734057+00:00",
+  "finished_utc": "2026-11-17T09:40:08.659598+00:00",
+  "seconds": 1367.9255902629957,
+  "exit_code": 0
+}

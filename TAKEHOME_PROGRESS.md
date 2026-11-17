@@ -1,11 +1,14 @@
 # Take-home progress
 
 ## CURRENT STATE (Claude Sonnet took over from Codex 2026-11-17)
-- RUNNING: suite log results/takehome/followup/d_ext_e_joint_1.log (12 jobs, 4 at once): E_normal_joint, E_fixed_joint, five-seed extensions of 6 PROMISING D settings, then 4 sequential E settings.
-- QUEUED NEXT: E stacks (after D verdicts), touch tests (after F go/no-go), touch-as-teacher.
+- RUNNING: suite q2 (log results/takehome/followup/q2.log): D_aim_cap_200um resume, E_normal_joint/E_normal_move_then_aim/E_fixed_joint to 5 seeds.
+- DONE: D 5-seed (none HELPED, stacks skipped); F blind spiral 62.2% (no gain; teacher skipped; torque/four-sided parked).
+- NEXT: collect, Phase E report, advisor review of final choice, Phase G.
 - PARKED: D_aim_cap_200um (stalled, killed at 90 episodes; resume path untested), B_aim_fixed_seed4_halted (intentional).
 - OPEN: mechanism question (guess path vs best constant offset); Phase F go/no-go advisor consult; final choice review before Phase G.
-- Advisor consultations used: 0 (briefs go in results/takehome/followup/advisor/).
+- Mechanism: advisor consult 1 says time-varying 0.1 mm/step guess wiggle, not better constant aim; replay confirmation optional (not run).
+- Phase F saved-data check done: wrist wrench gives right half-plane 87% (median dir error 42 deg, force clipping 41%); only blind spiral is implemented (torque/four-sided not).
+- Advisor consultations used: 2 (touch: GO spiral only; torque/four-sided parked) (briefs go in results/takehome/followup/advisor/).
 
 ## Current status: follow-up Phase B complete; mixed comparisons next (2026-11-16)
 

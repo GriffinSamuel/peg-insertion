@@ -2,3 +2,35 @@ START E_normal_joint 954 SEEDS [0, 1, 2]
 START E_fixed_joint 955 SEEDS [0, 1, 2]
 START D_fill_0 956 SEEDS [0, 1, 2, 3, 4]
 START D_fill_80 957 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "D_fill_80", "exit_code": 0, "seconds": 328.087943260005}
+{"completed_rows": 77, "new_settings_attempted": 65, "promotions": []}
+START D_fill_120 6524 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "D_fill_0", "exit_code": 0, "seconds": 431.0107722279936}
+{"completed_rows": 77, "new_settings_attempted": 65, "promotions": []}
+START D_near_hole 8110 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "E_normal_joint", "exit_code": 0, "seconds": 526.3999279139971}
+{"completed_rows": 78, "new_settings_attempted": 65, "promotions": []}
+START D_classification 9243 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "E_fixed_joint", "exit_code": 0, "seconds": 555.2472296719934}
+{"completed_rows": 79, "new_settings_attempted": 65, "promotions": ["E_fixed_joint"]}
+FINISH {"name": "D_fill_120", "exit_code": 0, "seconds": 225.51069141100743}
+{"completed_rows": 79, "new_settings_attempted": 65, "promotions": ["E_fixed_joint"]}
+START D_return_floor 9982 SEEDS [0, 1, 2, 3, 4]
+START E_normal_aim_then_move 9995 SEEDS [0, 1, 2]
+FINISH {"name": "D_near_hole", "exit_code": 0, "seconds": 346.60734753200086}
+{"completed_rows": 79, "new_settings_attempted": 66, "promotions": ["E_fixed_joint"]}
+START E_normal_move_then_aim 14855 SEEDS [0, 1, 2]
+FINISH {"name": "D_classification", "exit_code": 0, "seconds": 337.2223717059969}
+{"completed_rows": 79, "new_settings_attempted": 67, "promotions": ["E_fixed_joint"]}
+START E_fixed_aim_then_move 15305 SEEDS [0, 1, 2]
+FINISH {"name": "D_return_floor", "exit_code": 0, "seconds": 335.1220024610084}
+{"completed_rows": 79, "new_settings_attempted": 68, "promotions": ["E_fixed_joint"]}
+START E_fixed_move_then_aim 15775 SEEDS [0, 1, 2]
+FINISH {"name": "E_normal_aim_then_move", "exit_code": 0, "seconds": 503.748117487994}
+{"completed_rows": 80, "new_settings_attempted": 69, "promotions": ["E_fixed_joint"]}
+FINISH {"name": "E_normal_move_then_aim", "exit_code": 0, "seconds": 434.71603736699035}
+{"completed_rows": 81, "new_settings_attempted": 69, "promotions": ["E_normal_move_then_aim", "E_fixed_joint"]}
+FINISH {"name": "E_fixed_aim_then_move", "exit_code": 0, "seconds": 458.2820729880041}
+{"completed_rows": 83, "new_settings_attempted": 69, "promotions": ["E_normal_move_then_aim", "E_fixed_joint"]}
+FINISH {"name": "E_fixed_move_then_aim", "exit_code": 0, "seconds": 427.1507861029968}
+{"completed_rows": 83, "new_settings_attempted": 69, "promotions": ["E_normal_move_then_aim", "E_fixed_joint"]}

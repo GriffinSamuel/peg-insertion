@@ -1,0 +1,1 @@
+# Advisor answer 2: GO for blind spiral after an 8-episode smoke test (seed 999, no output path). Park torque-direction and four-sided (implement only if spiral gets within ~10 points of the 94.5 percent ceiling). Add env-var gate bypass (done). Note: spiral resumes after the peg is in the hole if depth is constant for 10 readings, as predeclared; mention in report.

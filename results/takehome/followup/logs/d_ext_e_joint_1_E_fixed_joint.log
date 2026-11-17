@@ -1,0 +1,109 @@
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, Driver 13.2
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 5070 Laptop GPU" (8 GiB, sm_120, mempool enabled)
+   Kernel cache:
+     /mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/cache/warp/1.18.0
+Module mujoco.mjx.warp.ffi 4443472 load on device 'cuda:0' took 13.77 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.smooth 7937da7 load on device 'cuda:0' took 48.31 ms  (cached)
+Module _nxn_broadphase__locals__kernel_5424cb63 5424cb6 load on device 'cuda:0' took 22.38 ms  (cached)
+Module ccd_kernel_builder__locals__ccd_kernel_1a0e5f50 1a0e5f5 load on device 'cuda:0' took 32.13 ms  (cached)
+Module _primitive_narrowphase__locals__primitive_narrowphase_c55bc0f0 c55bc0f load on device 'cuda:0' took 20.79 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.constraint 8d4d513 load on device 'cuda:0' took 22.65 ms  (cached)
+Module _equality_joint__locals__kernel_3e8fee42 3e8fee4 load on device 'cuda:0' took 20.01 ms  (cached)
+Module _friction_dof__locals__kernel_f5f6cb7e f5f6cb7 load on device 'cuda:0' took 18.06 ms  (cached)
+Module _limit_slide_hinge__locals__kernel_3fb01e2e 3fb01e2 load on device 'cuda:0' took 21.64 ms  (cached)
+Module _efc_contact_init__locals__kernel_3a7c064e 3a7c064 load on device 'cuda:0' took 20.51 ms  (cached)
+Module _efc_contact_jac_dense__locals__kernel_b0c1fdf8 5fcbd59 load on device 'cuda:0' took 22.03 ms  (cached)
+Module _efc_contact_update__locals__kernel_12dd33e9 12dd33e load on device 'cuda:0' took 16.92 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.sensor 087b897 load on device 'cuda:0' took 21.95 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.forward 0b590b4 load on device 'cuda:0' took 26.66 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.passive 03341d7 load on device 'cuda:0' took 25.32 ms  (cached)
+Module _qfrc_passive_kernel__locals__kernel_976399dd 976399d load on device 'cuda:0' took 18.40 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.forward 10b70aa load on device 'cuda:0' took 21.21 ms  (cached)
+Module _qfrc_smooth__locals__kernel_8b823980 8b82398 load on device 'cuda:0' took 19.83 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.support 770ef7d load on device 'cuda:0' took 17.73 ms  (cached)
+Module _tile_cholesky_factorize_solve_block__locals__kernel_5c841c33 59ea685 load on device 'cuda:0' took 243.11 ms  (cached)
+Module _solve_init_dof__locals__kernel_021c7a0e 021c7a0 load on device 'cuda:0' took 5.57 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.solver d3b14d2 load on device 'cuda:0' took 6.87 ms  (cached)
+Module _solve_init_jaref_kernel__locals__kernel_70ea9525 70ea952 load on device 'cuda:0' took 5.84 ms  (cached)
+Module mul_m_kernel__locals___mul_m_f3de1cc7 f3de1cc load on device 'cuda:0' took 6.92 ms  (cached)
+Module _update_constraint_efc__locals__kernel_0539aa50 0539aa5 load on device 'cuda:0' took 12.88 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_bd7ca2ec bd7ca2e load on device 'cuda:0' took 24.50 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_b20934d7 b20934d load on device 'cuda:0' took 21.25 ms  (cached)
+Module _update_gradient_grad__locals__kernel_c876081d c876081 load on device 'cuda:0' took 21.75 ms  (cached)
+Module _update_gradient_JTDAJ_dense_tiled__locals__kernel_dd848d52 89686a5 load on device 'cuda:0' took 35.33 ms  (cached)
+Module _update_gradient_cholesky__locals__kernel_e4b47356 613d3bb load on device 'cuda:0' took 272.24 ms  (cached)
+Module _linesearch_iterative_kernel__locals__kernel_770be55f 00ab14c load on device 'cuda:0' took 19.39 ms  (cached)
+Module _update_constraint_efc__locals__kernel_e953547e e953547 load on device 'cuda:0' took 20.35 ms  (cached)
+Module _update_constraint_init_qfrc_constraint_dense__locals__kernel_d92a3413 d92a341 load on device 'cuda:0' took 19.13 ms  (cached)
+Module _update_gradient_zero_grad_dot__locals__kernel_e9f8c963 e9f8c96 load on device 'cuda:0' took 17.92 ms  (cached)
+Module _update_gradient_grad__locals__kernel_87959044 8795904 load on device 'cuda:0' took 15.62 ms  (cached)
+Module _update_gradient_cholesky__locals__kernel_472e9ed5 a4e6cbe load on device 'cuda:0' took 262.82 ms  (cached)
+Module _solve_done__locals__kernel_ee21dcc3 ee21dcc load on device 'cuda:0' took 23.32 ms  (cached)
+Module mujoco.mjx.third_party.mujoco_warp._src.derivative 02a5c73 load on device 'cuda:0' took 24.39 ms  (cached)
+Module _next_time_builder__locals___next_time_bc454e15 bc454e1 load on device 'cuda:0' took 22.09 ms  (cached)
+{"seed": 0, "practice_episodes": 10, "gradient_updates": 0, "seconds": 15.01}
+{"seed": 0, "practice_episodes": 20, "gradient_updates": 0, "seconds": 16.45}
+{"seed": 0, "practice_episodes": 30, "gradient_updates": 0, "seconds": 17.83}
+{"seed": 0, "practice_episodes": 40, "gradient_updates": 0, "seconds": 28.18}
+{"seed": 0, "practice_episodes": 50, "gradient_updates": 7896, "seconds": 37.58}
+{"seed": 0, "practice_episodes": 60, "gradient_updates": 15896, "seconds": 48.42}
+{"seed": 0, "practice_episodes": 70, "gradient_updates": 22112, "seconds": 57.41}
+{"seed": 0, "practice_episodes": 80, "gradient_updates": 29412, "seconds": 67.29}
+{"seed": 0, "practice_episodes": 90, "gradient_updates": 37412, "seconds": 78.52}
+{"seed": 0, "practice_episodes": 100, "gradient_updates": 42832, "seconds": 86.19}
+{"seed": 0, "practice_episodes": 110, "gradient_updates": 49628, "seconds": 95.71}
+{"seed": 0, "practice_episodes": 120, "gradient_updates": 55896, "seconds": 115.49}
+{"seed": 0, "practice_episodes": 130, "gradient_updates": 61960, "seconds": 123.18}
+{"seed": 0, "practice_episodes": 140, "gradient_updates": 68508, "seconds": 134.43}
+{"seed": 0, "practice_episodes": 150, "gradient_updates": 73892, "seconds": 141.62}
+{"seed": 0, "practice_episodes": 160, "gradient_updates": 79092, "seconds": 150.8}
+{"seed": 0, "practice_episodes": 170, "gradient_updates": 84120, "seconds": 157.69}
+{"seed": 0, "practice_episodes": 180, "gradient_updates": 89612, "seconds": 165.82}
+{"seed": 0, "practice_episodes": 190, "gradient_updates": 95180, "seconds": 172.29}
+{"seed": 0, "practice_episodes": 200, "gradient_updates": 100116, "seconds": 183.59}
+{"setting": "E_fixed_joint", "seed": 0, "successes": 500, "seconds": 183.8828636029939}
+{"seed": 1, "practice_episodes": 10, "gradient_updates": 0, "seconds": 9.11}
+{"seed": 1, "practice_episodes": 20, "gradient_updates": 0, "seconds": 9.76}
+{"seed": 1, "practice_episodes": 30, "gradient_updates": 0, "seconds": 10.61}
+{"seed": 1, "practice_episodes": 40, "gradient_updates": 0, "seconds": 18.16}
+{"seed": 1, "practice_episodes": 50, "gradient_updates": 7320, "seconds": 27.31}
+{"seed": 1, "practice_episodes": 60, "gradient_updates": 15320, "seconds": 38.19}
+{"seed": 1, "practice_episodes": 70, "gradient_updates": 22196, "seconds": 46.99}
+{"seed": 1, "practice_episodes": 80, "gradient_updates": 30196, "seconds": 57.83}
+{"seed": 1, "practice_episodes": 90, "gradient_updates": 37368, "seconds": 67.43}
+{"seed": 1, "practice_episodes": 100, "gradient_updates": 44588, "seconds": 77.84}
+{"seed": 1, "practice_episodes": 110, "gradient_updates": 52588, "seconds": 88.3}
+{"seed": 1, "practice_episodes": 120, "gradient_updates": 60588, "seconds": 100.39}
+{"seed": 1, "practice_episodes": 130, "gradient_updates": 67348, "seconds": 109.85}
+{"seed": 1, "practice_episodes": 140, "gradient_updates": 74472, "seconds": 118.48}
+{"seed": 1, "practice_episodes": 150, "gradient_updates": 81908, "seconds": 125.88}
+{"seed": 1, "practice_episodes": 160, "gradient_updates": 88492, "seconds": 141.36}
+{"seed": 1, "practice_episodes": 170, "gradient_updates": 95340, "seconds": 149.06}
+{"seed": 1, "practice_episodes": 180, "gradient_updates": 102252, "seconds": 157.83}
+{"seed": 1, "practice_episodes": 190, "gradient_updates": 108244, "seconds": 164.76}
+{"seed": 1, "practice_episodes": 200, "gradient_updates": 113840, "seconds": 174.97}
+{"setting": "E_fixed_joint", "seed": 1, "successes": 492, "seconds": 175.38480086099298}
+{"seed": 2, "practice_episodes": 10, "gradient_updates": 0, "seconds": 8.74}
+{"seed": 2, "practice_episodes": 20, "gradient_updates": 0, "seconds": 9.94}
+{"seed": 2, "practice_episodes": 30, "gradient_updates": 0, "seconds": 11.33}
+{"seed": 2, "practice_episodes": 40, "gradient_updates": 0, "seconds": 19.92}
+{"seed": 2, "practice_episodes": 50, "gradient_updates": 6756, "seconds": 29.17}
+{"seed": 2, "practice_episodes": 60, "gradient_updates": 14756, "seconds": 39.75}
+{"seed": 2, "practice_episodes": 70, "gradient_updates": 22756, "seconds": 47.56}
+{"seed": 2, "practice_episodes": 80, "gradient_updates": 30756, "seconds": 55.86}
+{"seed": 2, "practice_episodes": 90, "gradient_updates": 38756, "seconds": 63.7}
+{"seed": 2, "practice_episodes": 100, "gradient_updates": 46756, "seconds": 72.29}
+{"seed": 2, "practice_episodes": 110, "gradient_updates": 54236, "seconds": 79.78}
+{"seed": 2, "practice_episodes": 120, "gradient_updates": 60184, "seconds": 94.88}
+{"seed": 2, "practice_episodes": 130, "gradient_updates": 66160, "seconds": 101.56}
+{"seed": 2, "practice_episodes": 140, "gradient_updates": 72032, "seconds": 109.77}
+{"seed": 2, "practice_episodes": 150, "gradient_updates": 78032, "seconds": 117.9}
+{"seed": 2, "practice_episodes": 160, "gradient_updates": 84592, "seconds": 127.32}
+{"seed": 2, "practice_episodes": 170, "gradient_updates": 90936, "seconds": 135.09}
+{"seed": 2, "practice_episodes": 180, "gradient_updates": 98028, "seconds": 144.88}
+{"seed": 2, "practice_episodes": 190, "gradient_updates": 104776, "seconds": 151.56}
+{"seed": 2, "practice_episodes": 200, "gradient_updates": 110884, "seconds": 161.32}
+{"setting": "E_fixed_joint", "seed": 2, "successes": 499, "seconds": 161.568015863013}

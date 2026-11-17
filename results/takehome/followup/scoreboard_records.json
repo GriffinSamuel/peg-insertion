@@ -2035,7 +2035,7 @@
       "name": "D_fill_0",
       "description": "Use 0 of 200 practice episodes for fill-up.",
       "base": "B_aim_fixed",
-      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); mean 89.47% \u00b1 4.43pp",
+      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); s3 425/500 (85.0%); s4 492/500 (98.4%); mean 90.36% \u00b1 5.81pp",
       "seeds": [
         {
           "seed": 0,
@@ -2051,23 +2051,33 @@
           "seed": 2,
           "successes": 459,
           "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 401,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 461,
+          "episodes": 500
         }
       ],
-      "mean_percent": 95.66666666666666,
-      "spread_pp": 3.9004273270160184,
-      "delta_pp": 6.199999999999989,
-      "verdict": "PROMISING",
-      "aim_start_mm": 0.9091615778289321,
-      "aim_success_mm": 1.3682125621101513,
-      "steps_to_insert": 158.99703979492188,
-      "peak_force_n": 99.18959299723308,
-      "practice_episodes": 600,
+      "mean_percent": 91.88,
+      "spread_pp": 7.24513629961507,
+      "delta_pp": 1.519999999999996,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8658022036193309,
+      "aim_success_mm": 1.4774964616555724,
+      "steps_to_insert": 163.8653564453125,
+      "peak_force_n": 97.48368988037109,
+      "practice_episodes": 1000,
       "hand_search": false,
       "hidden_information": false,
       "camera_condition": "fixed for the whole run",
       "reason": null,
-      "base_mean_percent": 89.46666666666667,
-      "base_spread_pp": 4.428694314731295
+      "base_mean_percent": 90.36,
+      "base_spread_pp": 5.8093028841677725
     },
     {
       "phase": "D",
@@ -2152,7 +2162,7 @@
       "name": "D_fill_80",
       "description": "Use 80 of 200 practice episodes for fill-up.",
       "base": "B_aim_fixed",
-      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); mean 89.47% \u00b1 4.43pp",
+      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); s3 425/500 (85.0%); s4 492/500 (98.4%); mean 90.36% \u00b1 5.81pp",
       "seeds": [
         {
           "seed": 0,
@@ -2168,30 +2178,40 @@
           "seed": 2,
           "successes": 471,
           "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 438,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 496,
+          "episodes": 500
         }
       ],
-      "mean_percent": 95.73333333333333,
-      "spread_pp": 1.6041612554021305,
-      "delta_pp": 6.266666666666666,
-      "verdict": "PROMISING",
-      "aim_start_mm": 0.9091615778289321,
-      "aim_success_mm": 1.9891827649390095,
-      "steps_to_insert": 162.19037373860678,
-      "peak_force_n": 98.68670399983723,
-      "practice_episodes": 600,
+      "mean_percent": 94.8,
+      "spread_pp": 4.442971978304616,
+      "delta_pp": 4.439999999999998,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8658022036193309,
+      "aim_success_mm": 1.843017989272773,
+      "steps_to_insert": 160.97080688476564,
+      "peak_force_n": 97.79090270996093,
+      "practice_episodes": 1000,
       "hand_search": false,
       "hidden_information": false,
       "camera_condition": "fixed for the whole run",
       "reason": null,
-      "base_mean_percent": 89.46666666666667,
-      "base_spread_pp": 4.428694314731295
+      "base_mean_percent": 90.36,
+      "base_spread_pp": 5.8093028841677725
     },
     {
       "phase": "D",
       "name": "D_fill_120",
       "description": "Use 120 of 200 practice episodes for fill-up.",
       "base": "B_aim_fixed",
-      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); mean 89.47% \u00b1 4.43pp",
+      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); s3 425/500 (85.0%); s4 492/500 (98.4%); mean 90.36% \u00b1 5.81pp",
       "seeds": [
         {
           "seed": 0,
@@ -2207,23 +2227,33 @@
           "seed": 2,
           "successes": 494,
           "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 458,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 459,
+          "episodes": 500
         }
       ],
-      "mean_percent": 96.33333333333333,
-      "spread_pp": 3.288363321370274,
-      "delta_pp": 6.86666666666666,
-      "verdict": "PROMISING",
-      "aim_start_mm": 0.9091615778289321,
-      "aim_success_mm": 1.7334727457097745,
-      "steps_to_insert": 163.5368194580078,
-      "peak_force_n": 96.64881134033203,
-      "practice_episodes": 600,
+      "mean_percent": 94.47999999999999,
+      "spread_pp": 3.4426733798023887,
+      "delta_pp": 4.11999999999999,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8658022036193309,
+      "aim_success_mm": 1.8858413210972955,
+      "steps_to_insert": 162.69873962402343,
+      "peak_force_n": 94.97981872558594,
+      "practice_episodes": 1000,
       "hand_search": false,
       "hidden_information": false,
       "camera_condition": "fixed for the whole run",
       "reason": null,
-      "base_mean_percent": 89.46666666666667,
-      "base_spread_pp": 4.428694314731295
+      "base_mean_percent": 90.36,
+      "base_spread_pp": 5.8093028841677725
     },
     {
       "phase": "D",
@@ -2585,7 +2615,7 @@
       "name": "D_near_hole",
       "description": "Allow correction only within 15 mm height and 10 mm sideways camera distance.",
       "base": "B_aim_fixed",
-      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); mean 89.47% \u00b1 4.43pp",
+      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); s3 425/500 (85.0%); s4 492/500 (98.4%); mean 90.36% \u00b1 5.81pp",
       "seeds": [
         {
           "seed": 0,
@@ -2601,23 +2631,33 @@
           "seed": 2,
           "successes": 486,
           "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 419,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 465,
+          "episodes": 500
         }
       ],
-      "mean_percent": 97.13333333333334,
-      "spread_pp": 0.1154700538379268,
-      "delta_pp": 7.666666666666671,
-      "verdict": "PROMISING",
-      "aim_start_mm": 0.9091615778289321,
-      "aim_success_mm": 0.9091615778289321,
-      "steps_to_insert": 158.17324829101562,
-      "peak_force_n": 97.1615702311198,
-      "practice_episodes": 600,
+      "mean_percent": 93.64,
+      "spread_pp": 5.7851534119675705,
+      "delta_pp": 3.280000000000001,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8658022036193309,
+      "aim_success_mm": 0.865802203619331,
+      "steps_to_insert": 159.33568725585937,
+      "peak_force_n": 96.33556060791015,
+      "practice_episodes": 1000,
       "hand_search": false,
       "hidden_information": false,
       "camera_condition": "fixed for the whole run",
       "reason": null,
-      "base_mean_percent": 89.46666666666667,
-      "base_spread_pp": 4.428694314731295
+      "base_mean_percent": 90.36,
+      "base_spread_pp": 5.8093028841677725
     },
     {
       "phase": "D",
@@ -2670,7 +2710,7 @@
       "name": "D_classification",
       "description": "Use a bounded 0-to-1 scorekeeper with a different error formula.",
       "base": "B_aim_fixed",
-      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); mean 89.47% \u00b1 4.43pp",
+      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); s3 425/500 (85.0%); s4 492/500 (98.4%); mean 90.36% \u00b1 5.81pp",
       "seeds": [
         {
           "seed": 0,
@@ -2686,23 +2726,33 @@
           "seed": 2,
           "successes": 476,
           "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 467,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 487,
+          "episodes": 500
         }
       ],
-      "mean_percent": 95.2,
-      "spread_pp": 1.7999999999999972,
-      "delta_pp": 5.733333333333334,
-      "verdict": "PROMISING",
-      "aim_start_mm": 0.9091615778289321,
-      "aim_success_mm": 0.9701367274799015,
-      "steps_to_insert": 162.0159657796224,
-      "peak_force_n": 97.96264394124348,
-      "practice_episodes": 600,
+      "mean_percent": 95.28,
+      "spread_pp": 1.905780679931454,
+      "delta_pp": 4.920000000000002,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8658022036193309,
+      "aim_success_mm": 1.0409908039102584,
+      "steps_to_insert": 161.71231079101562,
+      "peak_force_n": 98.09779510498046,
+      "practice_episodes": 1000,
       "hand_search": false,
       "hidden_information": false,
       "camera_condition": "fixed for the whole run",
       "reason": null,
-      "base_mean_percent": 89.46666666666667,
-      "base_spread_pp": 4.428694314731295
+      "base_mean_percent": 90.36,
+      "base_spread_pp": 5.8093028841677725
     },
     {
       "phase": "D",
@@ -2748,7 +2798,7 @@
       "name": "D_return_floor",
       "description": "Keep a learning target at least as large as the return actually observed.",
       "base": "B_aim_fixed",
-      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); mean 89.47% \u00b1 4.43pp",
+      "base_result": "s0 457/500 (91.4%); s1 422/500 (84.4%); s2 463/500 (92.6%); s3 425/500 (85.0%); s4 492/500 (98.4%); mean 90.36% \u00b1 5.81pp",
       "seeds": [
         {
           "seed": 0,
@@ -2764,23 +2814,33 @@
           "seed": 2,
           "successes": 489,
           "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 393,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 499,
+          "episodes": 500
         }
       ],
-      "mean_percent": 97.66666666666667,
-      "spread_pp": 0.23094010767584539,
-      "delta_pp": 8.200000000000003,
-      "verdict": "PROMISING",
-      "aim_start_mm": 0.9091615778289321,
-      "aim_success_mm": 0.8506595457068766,
-      "steps_to_insert": 157.6106414794922,
-      "peak_force_n": 98.97322336832683,
-      "practice_episodes": 600,
+      "mean_percent": 94.28,
+      "spread_pp": 8.815440998611473,
+      "delta_pp": 3.9200000000000017,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8658022036193309,
+      "aim_success_mm": 1.0784287663879877,
+      "steps_to_insert": 158.58653869628907,
+      "peak_force_n": 97.79157409667968,
+      "practice_episodes": 1000,
       "hand_search": false,
       "hidden_information": false,
       "camera_condition": "fixed for the whole run",
       "reason": null,
-      "base_mean_percent": 89.46666666666667,
-      "base_spread_pp": 4.428694314731295
+      "base_mean_percent": 90.36,
+      "base_spread_pp": 5.8093028841677725
     },
     {
       "phase": "D",
@@ -2859,8 +2919,242 @@
       "reason": null,
       "base_mean_percent": 89.46666666666667,
       "base_spread_pp": 4.428694314731295
+    },
+    {
+      "phase": "E",
+      "name": "E_normal_joint",
+      "description": "Learn aim and movement together with one scorekeeper.",
+      "base": "movement",
+      "base_result": "s0 425/500 (85.0%); s1 411/500 (82.2%); s2 427/500 (85.4%); mean 84.20% \u00b1 1.74pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 428,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 327,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 335,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 72.66666666666667,
+      "spread_pp": 11.229128787814895,
+      "delta_pp": -11.533333333333331,
+      "verdict": "HURT",
+      "aim_start_mm": 0.9393499878864155,
+      "aim_success_mm": 1.361311069770132,
+      "steps_to_insert": 156.52137756347656,
+      "peak_force_n": 87.10151672363281,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "normal",
+      "reason": null,
+      "base_mean_percent": 84.2,
+      "base_spread_pp": 1.7435595774162698
+    },
+    {
+      "phase": "E",
+      "name": "E_normal_aim_then_move",
+      "description": "Learn aim for80 episodes, then movement for80 while aim stays frozen.",
+      "base": "E_normal_joint",
+      "base_result": "s0 428/500 (85.6%); s1 327/500 (65.4%); s2 335/500 (67.0%); mean 72.67% \u00b1 11.23pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 304,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 401,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 441,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 76.4,
+      "spread_pp": 14.089712559168838,
+      "delta_pp": 3.7333333333333343,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.9393499878864155,
+      "aim_success_mm": 1.88156604365879,
+      "steps_to_insert": 145.128662109375,
+      "peak_force_n": 93.30492146809895,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "normal",
+      "reason": null,
+      "base_mean_percent": 72.66666666666667,
+      "base_spread_pp": 11.229128787814895
+    },
+    {
+      "phase": "E",
+      "name": "E_normal_move_then_aim",
+      "description": "Learn movement for80 episodes, then aim for80 while movement stays frozen.",
+      "base": "E_normal_joint",
+      "base_result": "s0 428/500 (85.6%); s1 327/500 (65.4%); s2 335/500 (67.0%); mean 72.67% \u00b1 11.23pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 458,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 424,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 436,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 87.86666666666666,
+      "spread_pp": 3.4486712417006813,
+      "delta_pp": 15.199999999999989,
+      "verdict": "PROMISING",
+      "aim_start_mm": 0.9393499878864155,
+      "aim_success_mm": 1.6947648676790863,
+      "steps_to_insert": 141.45138549804688,
+      "peak_force_n": 97.88433837890625,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "normal",
+      "reason": null,
+      "base_mean_percent": 72.66666666666667,
+      "base_spread_pp": 11.229128787814895
+    },
+    {
+      "phase": "E",
+      "name": "E_fixed_joint",
+      "description": "Learn aim and movement together with one scorekeeper.",
+      "base": "B_movement_fixed",
+      "base_result": "s0 433/500 (86.6%); s1 432/500 (86.4%); s2 487/500 (97.4%); mean 90.13% \u00b1 6.29pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 500,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 492,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 499,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 99.4,
+      "spread_pp": 0.8717797887081308,
+      "delta_pp": 9.266666666666666,
+      "verdict": "PROMISING",
+      "aim_start_mm": 0.9091615778289321,
+      "aim_success_mm": 1.6777337977320839,
+      "steps_to_insert": 139.8487981160482,
+      "peak_force_n": 99.09156036376953,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "fixed for the whole run",
+      "reason": null,
+      "base_mean_percent": 90.13333333333334,
+      "base_spread_pp": 6.2939124027375355
+    },
+    {
+      "phase": "E",
+      "name": "E_fixed_aim_then_move",
+      "description": "Learn aim for80 episodes, then movement for80 while aim stays frozen.",
+      "base": "E_fixed_joint",
+      "base_result": "s0 500/500 (100.0%); s1 492/500 (98.4%); s2 499/500 (99.8%); mean 99.40% \u00b1 0.87pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 465,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 494,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 499,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 97.2,
+      "spread_pp": 3.671511950137162,
+      "delta_pp": -2.200000000000003,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.9091615778289321,
+      "aim_success_mm": 0.6955151364873813,
+      "steps_to_insert": 135.14839935302734,
+      "peak_force_n": 99.07041931152344,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "fixed for the whole run",
+      "reason": null,
+      "base_mean_percent": 99.4,
+      "base_spread_pp": 0.8717797887081308
+    },
+    {
+      "phase": "E",
+      "name": "E_fixed_move_then_aim",
+      "description": "Learn movement for80 episodes, then aim for80 while movement stays frozen.",
+      "base": "E_fixed_joint",
+      "base_result": "s0 500/500 (100.0%); s1 492/500 (98.4%); s2 499/500 (99.8%); mean 99.40% \u00b1 0.87pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 498,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 500,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 496,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 99.6,
+      "spread_pp": 0.3999999999999986,
+      "delta_pp": 0.19999999999998863,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.9091615778289321,
+      "aim_success_mm": 1.7080938687312563,
+      "steps_to_insert": 135.03931172688803,
+      "peak_force_n": 101.37653350830078,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "fixed for the whole run",
+      "reason": null,
+      "base_mean_percent": 99.4,
+      "base_spread_pp": 0.8717797887081308
     }
   ],
-  "new_settings_attempted": 63,
-  "whole_project_settings_attempted": 91
+  "new_settings_attempted": 69,
+  "whole_project_settings_attempted": 97
 }

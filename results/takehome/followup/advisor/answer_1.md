@@ -1,0 +1,6 @@
+# Advisor answer 1 (fable-debugger), summarised
+Offset sweep (94.53%, zero camera error) is the old policy's ceiling for any constant aim. Fixed-camera D learners score 95.7-97.7% under a nonzero fixed error, so something beyond a constant shift helps.
+Traces: guess moves ~0.1 mm per step (the update cap) on 40-72% of steps, x sign flips 14-28%; ~25 mm path per episode, tortuosity 3-7. Pre-contact guess is near-constant per seed. Guess speed barely tracks depth stall (-0.03 / +0.28). So the aim output behaves like a sideways dither at the cap, not an estimate of the error. B_movement_fixed also beats 94.5%.
+Decisive test-only replays (seed 123, 500 eps, no learning): (1) constant = mean pre-contact guess; (2) learned until first contact, then frozen; (3) constant plus synthetic +-0.1 mm random dither; (4) full learner. Dither if (1)/(2) drop and (3) recovers; replay recorded guess sequence open loop if (3) fails.
+Caveat: sweep used 256 episodes (about +-2.5 pp), gap to D is 1-3 pp.
+Report wording: learners beat the best constant offset because the guess moves sideways during contact (a search-like wiggle), not because it estimates the camera error better. Status: supported by trace data, not yet confirmed by replay.

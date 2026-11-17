@@ -1294,7 +1294,7 @@
         3,
         4
       ],
-      "status": "running",
+      "status": "finished",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
@@ -1368,7 +1368,7 @@
         3,
         4
       ],
-      "status": "running",
+      "status": "finished",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
@@ -1610,13 +1610,13 @@
         1,
         2
       ],
-      "status": "failed",
+      "status": "running",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 2,
-      "reason": "Job exit-15; see logs/d_singles_D_aim_cap_200um.log",
+      "reason": "Resumed by takeover after stall; seed1 checkpoint 90, ledger 100.",
       "counted": true
     },
     {
@@ -1878,7 +1878,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "running",
       "condition": "normal",
@@ -1905,14 +1907,14 @@
         1,
         2
       ],
-      "status": "planned",
+      "status": "finished",
       "condition": "normal",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 2,
       "reason": "",
-      "counted": false,
+      "counted": true,
       "repeats_original": "goal7/aim_then_move"
     },
     {
@@ -1928,16 +1930,18 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
-      "status": "planned",
+      "status": "running",
       "condition": "normal",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 2,
       "reason": "",
-      "counted": false,
+      "counted": true,
       "repeats_original": "goal7/move_then_aim"
     },
     {
@@ -1953,7 +1957,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "running",
       "condition": "fixed",
@@ -1980,14 +1986,14 @@
         1,
         2
       ],
-      "status": "planned",
+      "status": "finished",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 3,
       "reason": "",
-      "counted": false,
+      "counted": true,
       "repeats_original": null
     },
     {
@@ -2005,14 +2011,14 @@
         1,
         2
       ],
-      "status": "planned",
+      "status": "finished",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,
       "changes": 3,
       "reason": "",
-      "counted": false,
+      "counted": true,
       "repeats_original": null
     }
   ],
