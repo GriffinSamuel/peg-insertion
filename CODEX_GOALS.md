@@ -26,6 +26,8 @@ Tripwires:
 - every seed of a learning run gives exactly the same outcome on every single test episode (this check does not apply to runs with no learning, such as the floor, the ceiling, the zero test and the cheat test, or to policies that score 0 percent both with and without the camera error)
 - any change would be needed outside the allowed places in `AGENTS.md` rule 2
 
+Also not a tripwire (added 2026-11-16 after the follow-up halt): an aim-only learner scoring above the ceiling in a camera condition where the error is consistent from episode to episode ("fixed for the whole run" or one-sided). The ceiling is the old policy with zero camera error, and saved data shows the old policy has its own sideways lean (it succeeds more often when the camera error points one way than the other), so a learned constant offset can honestly beat it there. Treat it like the movement case below: check it, log it, and continue. In the normal condition, where the error is redrawn every episode, the aim-only ceiling tripwire still applies.
+
 Not a tripwire: a movement, combined, or final-decider learner scoring above the ceiling. Those change the robot's own movements, so they can honestly beat it. When it happens, check it instead of stopping: test again on one extra test seed, look at a few episodes for anything unphysical (the peg passing through a wall), log what you found, and continue.
 
 ## Definitions used in every goal

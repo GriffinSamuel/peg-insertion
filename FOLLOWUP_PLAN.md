@@ -68,6 +68,14 @@ What "working" means, fixed now: on practice seeds 0 to 4 and test seed 123, aim
 
 Stopping rule for this phase: at most 14 aim variants. If none meets the definition, stop trying, write down plainly that the aim corrector could not be made to work within the budget and what the evidence says about why, skip Phase D, and continue.
 
+### Added 2026-11-16 after the Phase B halt
+
+1. Offset sweep, no learning. With zero camera error, run the old policy with a constant aim offset at each point of a 7 by 7 grid from -0.9 mm to +0.9 mm, 256 test episodes each at test seed 123. This measures directly where the old policy's sweet spot is. Draw it as a heat map. If the best cell is not the centre, the zero-error ceiling is not a true upper limit for a constant offset, and the report should say so and give the best cell's success rate as the real upper limit.
+2. Finish the interrupted items: rerun fixed-camera plain aim seed 4 from scratch (keep the halted partial run on the scoreboard as its own row), run the heat map on the one-sided condition, and extend every PROMISING row to five seeds.
+3. In the normal condition none of the aim fixes met the definition of working. Record that plainly. Because the aim corrector does work when the camera error is consistent, Phase D runs on the "fixed for the whole run" condition instead of being skipped, compared against plain aim on that condition. Phase E's aim-and-movement combinations run on both the normal and the fixed condition.
+
+4. Mixed camera error (added 2026-11-16, evening). Real setups usually have both kinds of error at once: a part that stays the same for one robot (a crooked camera) and a part that changes on every attempt (where this particular piece landed, noise in this particular picture). Add a "mixed" condition in `takehome/` only: a fixed part drawn once per practice seed plus a fresh part drawn every episode. Run three splits with the same overall size as the normal error: mostly fixed (fixed 0.65 mm, per-episode 0.375 mm), even (0.53 mm each), and mostly per-episode (fixed 0.375 mm, per-episode 0.65 mm). For each, measure the floor and the zero-error ceiling, and run plain aim, the across-episode heat map, plain movement, and aim with movement together, on practice seeds 0 to 2 at test seed 123, extending anything PROMISING to five seeds. Report how much of the lost success each method recovers as the fixed share grows.
+
 ## Phase C: the 24 tricks on the movement corrector
 
 Rerun every Goal 7 trick that makes sense for a movement-only learner as one change from the plain movement corrector (development result 83.4 percent, spread 3.0 points). For tricks that only make sense with an aim part, list them and say why they are skipped. Use the same values that were fixed in `takehome/goal7_design.md`, so nothing is tuned after the fact. Add one value the first round did not cover: a smaller movement cap of 0.1 mm.
