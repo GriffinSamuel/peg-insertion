@@ -17,7 +17,9 @@ def required_settings():
                 overrides=dict(outputs=5,camera_condition=condition,coordination=mode),
                 base=base,seeds=[0,1,2],status='planned',condition=condition,
                 hand_search=False,hidden_information=False,conditional=False,
-                changes=1 if mode=='joint' else 2,reason='',counted=False))
+                changes=(1 if mode=='joint' else 2)+int(condition=='fixed'),reason='',counted=False,
+                repeats_original=(('goal6/combined' if mode=='joint' else 'goal7/'+mode)
+                                  if condition=='normal' else None)))
     return rows
 
 
@@ -57,6 +59,8 @@ def trick_stacks(registry, summaries):
                             reason=f'Incompatible values for {key}: {seen[key]} and {value}.'
                         seen[key]=value
                         overrides[key]=value
+                if overrides.get('fill_episodes',40)==0 and overrides.get('sibling_fill'):
+                    reason='Sibling fill requires fill-up episodes; zero fill removes its entire effect.'
                 if not reason:
                     try:FollowupConfig(**overrides)
                     except ValueError as exc:reason=str(exc)

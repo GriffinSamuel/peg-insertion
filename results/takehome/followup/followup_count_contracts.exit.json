@@ -1,0 +1,14 @@
+{
+  "command": [
+    "env",
+    "JAX_PLATFORMS=cpu",
+    "python",
+    "-B",
+    "takehome/followup_tests.py",
+    "takehome/test_followup_counts.py"
+  ],
+  "started_utc": "2026-11-17T07:30:06.173896+00:00",
+  "finished_utc": "2026-11-17T07:30:27.414760+00:00",
+  "seconds": 21.24090785399312,
+  "exit_code": 0
+}

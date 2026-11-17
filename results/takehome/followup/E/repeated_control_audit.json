@@ -1,0 +1,434 @@
+{
+  "audit_scope": "Configuration/mechanical comparison only; no scores or outcomes read.",
+  "normal_phase_e_planned_count": 3,
+  "normal_phase_e_rows": [
+    {
+      "phase_e_name": "E_normal_joint",
+      "phase_e_base": "movement",
+      "phase_e_config": {
+        "policy": "force_0.5mm_s2",
+        "outputs": 5,
+        "fill_episodes": 40,
+        "total_episodes": 200,
+        "updates_per_step": 4,
+        "ensemble": 4,
+        "hidden": 64,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "discount": 0.99,
+        "target_rate": 0.005,
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "movement_cap": 0.0002,
+        "supervised_reference": false,
+        "fill_noise": 0.5,
+        "learner_noise": 0.2,
+        "code_test": false,
+        "coordination": "joint",
+        "briefing": false,
+        "privileged_critic": false,
+        "final_decider": false,
+        "near_hole": false,
+        "contact_cap": false,
+        "uncertainty_cap": false,
+        "classification": false,
+        "n_step": 1,
+        "return_floor": false,
+        "force_penalty": false,
+        "sibling_fill": false,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/baseline.json",
+        "camera_condition": "normal",
+        "fixed_bias_seed": 0,
+        "mixed_fixed_std": 0.0,
+        "mixed_episode_std": 0.0,
+        "drift_gate": false,
+        "pullback": false,
+        "memory": false,
+        "success_labels": false,
+        "fast_contact": false,
+        "constant_fill": false,
+        "heatmap": false,
+        "within_grid": false
+      },
+      "comparison_source": "goal6_combined",
+      "source_config_paths": [
+        "results/takehome/goal6/combined/seed_0/config.json",
+        "results/takehome/goal6/combined/seed_1/config.json",
+        "results/takehome/goal6/combined/seed_2/config.json",
+        "results/takehome/goal6/combined/seed_3/config.json",
+        "results/takehome/goal6/combined/seed_4/config.json"
+      ],
+      "source_configs_identical_across_seeds": true,
+      "practice_seeds": {
+        "source_saved_runs": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "phase_e_manifest": [
+          0,
+          1,
+          2
+        ],
+        "same_declared_seed_set": false,
+        "shared_seed_subset": [
+          0,
+          1,
+          2
+        ]
+      },
+      "test_seed": {
+        "source_saved_config_field": null,
+        "source_value": "123 under the fixed Goal 6 test-seed rule in CODEX_GOALS.md",
+        "phase_e_config": 123,
+        "matches": true
+      },
+      "core_setting_differences": {},
+      "coordination_comparison": {
+        "source_saved_config_field": null,
+        "source_structural_mode": "outputs=5 in the Goal 6 combined runner is the one joint combined actor; no coordination field is serialized.",
+        "phase_e_coordination": "joint",
+        "matches": true,
+        "source_refs": [
+          {
+            "path": "takehome/train.py",
+            "lines": "43-53,191"
+          },
+          {
+            "path": "takehome/followup_e_manifest.py",
+            "lines": "7-19"
+          }
+        ]
+      },
+      "trick_flags": {
+        "source_values": {
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false
+        },
+        "phase_e_values": {
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false
+        },
+        "all_disabled_or_default": true,
+        "disabled_mismatches": {}
+      },
+      "base_note": "The Phase E base field is comparison metadata; it does not alter the saved training config.",
+      "phase_e_config_source": {
+        "kind": "constructed from required_settings() overrides and FollowupConfig defaults",
+        "saved_phase_e_config_exists_at_audit_time": false,
+        "note": "No Phase E run config.json existed yet; no experiment was launched."
+      }
+    },
+    {
+      "phase_e_name": "E_normal_aim_then_move",
+      "phase_e_base": "E_normal_joint",
+      "phase_e_config": {
+        "policy": "force_0.5mm_s2",
+        "outputs": 5,
+        "fill_episodes": 40,
+        "total_episodes": 200,
+        "updates_per_step": 4,
+        "ensemble": 4,
+        "hidden": 64,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "discount": 0.99,
+        "target_rate": 0.005,
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "movement_cap": 0.0002,
+        "supervised_reference": false,
+        "fill_noise": 0.5,
+        "learner_noise": 0.2,
+        "code_test": false,
+        "coordination": "aim_then_move",
+        "briefing": false,
+        "privileged_critic": false,
+        "final_decider": false,
+        "near_hole": false,
+        "contact_cap": false,
+        "uncertainty_cap": false,
+        "classification": false,
+        "n_step": 1,
+        "return_floor": false,
+        "force_penalty": false,
+        "sibling_fill": false,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/baseline.json",
+        "camera_condition": "normal",
+        "fixed_bias_seed": 0,
+        "mixed_fixed_std": 0.0,
+        "mixed_episode_std": 0.0,
+        "drift_gate": false,
+        "pullback": false,
+        "memory": false,
+        "success_labels": false,
+        "fast_contact": false,
+        "constant_fill": false,
+        "heatmap": false,
+        "within_grid": false
+      },
+      "comparison_source": "goal7_aim_then_move",
+      "source_config_paths": [
+        "results/takehome/goal7/screening/aim_then_move/seed_0/config.json",
+        "results/takehome/goal7/screening/aim_then_move/seed_1/config.json",
+        "results/takehome/goal7/screening/aim_then_move/seed_2/config.json"
+      ],
+      "source_configs_identical_across_seeds": true,
+      "practice_seeds": {
+        "source_saved_runs": [
+          0,
+          1,
+          2
+        ],
+        "phase_e_manifest": [
+          0,
+          1,
+          2
+        ],
+        "same_declared_seed_set": true,
+        "shared_seed_subset": [
+          0,
+          1,
+          2
+        ]
+      },
+      "test_seed": {
+        "source_config_or_fixed_plan": 123,
+        "phase_e_config": 123,
+        "matches": true
+      },
+      "core_setting_differences": {},
+      "coordination_comparison": {
+        "source_saved_config_field": "aim_then_move",
+        "phase_e_coordination": "aim_then_move",
+        "matches": true
+      },
+      "trick_flags": {
+        "source_values": {
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false
+        },
+        "phase_e_values": {
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false
+        },
+        "all_disabled_or_default": true,
+        "disabled_mismatches": {}
+      },
+      "base_note": "The Phase E base field is comparison metadata; it does not alter the saved training config.",
+      "phase_e_config_source": {
+        "kind": "constructed from required_settings() overrides and FollowupConfig defaults",
+        "saved_phase_e_config_exists_at_audit_time": false,
+        "note": "No Phase E run config.json existed yet; no experiment was launched."
+      }
+    },
+    {
+      "phase_e_name": "E_normal_move_then_aim",
+      "phase_e_base": "E_normal_joint",
+      "phase_e_config": {
+        "policy": "force_0.5mm_s2",
+        "outputs": 5,
+        "fill_episodes": 40,
+        "total_episodes": 200,
+        "updates_per_step": 4,
+        "ensemble": 4,
+        "hidden": 64,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "discount": 0.99,
+        "target_rate": 0.005,
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "movement_cap": 0.0002,
+        "supervised_reference": false,
+        "fill_noise": 0.5,
+        "learner_noise": 0.2,
+        "code_test": false,
+        "coordination": "move_then_aim",
+        "briefing": false,
+        "privileged_critic": false,
+        "final_decider": false,
+        "near_hole": false,
+        "contact_cap": false,
+        "uncertainty_cap": false,
+        "classification": false,
+        "n_step": 1,
+        "return_floor": false,
+        "force_penalty": false,
+        "sibling_fill": false,
+        "test_seed": 123,
+        "baseline_path": "results/takehome/baseline.json",
+        "camera_condition": "normal",
+        "fixed_bias_seed": 0,
+        "mixed_fixed_std": 0.0,
+        "mixed_episode_std": 0.0,
+        "drift_gate": false,
+        "pullback": false,
+        "memory": false,
+        "success_labels": false,
+        "fast_contact": false,
+        "constant_fill": false,
+        "heatmap": false,
+        "within_grid": false
+      },
+      "comparison_source": "goal7_move_then_aim",
+      "source_config_paths": [
+        "results/takehome/goal7/screening/move_then_aim/seed_0/config.json",
+        "results/takehome/goal7/screening/move_then_aim/seed_1/config.json",
+        "results/takehome/goal7/screening/move_then_aim/seed_2/config.json"
+      ],
+      "source_configs_identical_across_seeds": true,
+      "practice_seeds": {
+        "source_saved_runs": [
+          0,
+          1,
+          2
+        ],
+        "phase_e_manifest": [
+          0,
+          1,
+          2
+        ],
+        "same_declared_seed_set": true,
+        "shared_seed_subset": [
+          0,
+          1,
+          2
+        ]
+      },
+      "test_seed": {
+        "source_config_or_fixed_plan": 123,
+        "phase_e_config": 123,
+        "matches": true
+      },
+      "core_setting_differences": {},
+      "coordination_comparison": {
+        "source_saved_config_field": "move_then_aim",
+        "phase_e_coordination": "move_then_aim",
+        "matches": true
+      },
+      "trick_flags": {
+        "source_values": {
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false
+        },
+        "phase_e_values": {
+          "briefing": false,
+          "privileged_critic": false,
+          "final_decider": false,
+          "near_hole": false,
+          "contact_cap": false,
+          "uncertainty_cap": false,
+          "classification": false,
+          "n_step": 1,
+          "return_floor": false,
+          "force_penalty": false,
+          "sibling_fill": false
+        },
+        "all_disabled_or_default": true,
+        "disabled_mismatches": {}
+      },
+      "base_note": "The Phase E base field is comparison metadata; it does not alter the saved training config.",
+      "phase_e_config_source": {
+        "kind": "constructed from required_settings() overrides and FollowupConfig defaults",
+        "saved_phase_e_config_exists_at_audit_time": false,
+        "note": "No Phase E run config.json existed yet; no experiment was launched."
+      }
+    }
+  ],
+  "repeated_settings_summary": {
+    "E_normal_joint_matches": "Goal 6 combined: policy, 5 outputs, joint combined control, fill 40, total 200, optimizer/network settings and disabled trick flags match. The Goal 6 config omits coordination and test_seed; joint mode follows from its 5-output combined runner, and test seed 123 is fixed by the plan.",
+    "E_normal_aim_then_move_matches": "Goal 7 aim_then_move: same saved policy, outputs, coordination, fill 40, 200 budget, optimizer/network settings, false trick flags, practice seeds 0-2, and test seed 123.",
+    "E_normal_move_then_aim_matches": "Goal 7 move_then_aim: same saved policy, outputs, coordination, fill 40, 200 budget, optimizer/network settings, false trick flags, practice seeds 0-2, and test seed 123.",
+    "meaningful_saved_config_differences": [],
+    "implementation_identity_scope_note": "This establishes settings/config equivalence only. Phase E is implemented through follow-up adapters, while the completed comparisons were produced by the original Goal 6/7 runners; it does not assert byte-for-byte code identity.",
+    "practice_seed_overlap_note": "Goal 6 combined saved configs exist for seeds 0-4; Phase E normal joint declares seeds 0-2, so those are repeated practice seeds rather than fresh replications. Goal 7 sequential screening and Phase E sequential rows both use seeds 0-2."
+  },
+  "additional_disabled_followup_fields_ignored_explicitly": {
+    "camera_condition": "normal",
+    "fixed_bias_seed": 0,
+    "mixed_fixed_std": 0.0,
+    "mixed_episode_std": 0.0,
+    "baseline_path": "results/takehome/baseline.json",
+    "drift_gate": false,
+    "pullback": false,
+    "memory": false,
+    "success_labels": false,
+    "fast_contact": false,
+    "constant_fill": false,
+    "heatmap": false,
+    "within_grid": false
+  },
+  "source_paths": [
+    "takehome/followup_e_manifest.py",
+    "takehome/followup_config.py",
+    "takehome/config.py",
+    "takehome/train.py",
+    "takehome/goal7_manifest.py",
+    "results/takehome/goal6/combined/seed_0/config.json",
+    "results/takehome/goal7/screening/aim_then_move/seed_0/config.json",
+    "results/takehome/goal7/screening/move_then_aim/seed_0/config.json",
+    "CODEX_GOALS.md"
+  ],
+  "checks": {
+    "all_three_normal_phase_e_rows_checked": true,
+    "all_saved_source_configs_match_phase_e_core_settings": true,
+    "coordination_matches_or_is_joint_combined": true,
+    "fill_40_and_budget_200_all_rows": true,
+    "optimizer_network_fields_match": true,
+    "test_seed_123_all_rows": true,
+    "all_practice_seed_directories_checked_for_source_config_consistency": true,
+    "outcome_values_read": false,
+    "experiments_run": 0
+  },
+  "phase_e_saved_configs_present_at_audit_time": false
+}

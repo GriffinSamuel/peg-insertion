@@ -26,7 +26,10 @@ def generate():
            f"Whole project: {counts['whole_project_practice_episodes']:,} practice episodes, "
            f"{counts['whole_project_full_test_episodes']:,} full test-only episodes, "
            f"{counts['whole_project_reset_only_probes']:,} reset-only probes, and "
-           f"{settings['whole_project_settings']} settings. The 49 non-learning sweep cells and "
+           f"{settings.get('whole_project_distinct_settings',settings['whole_project_settings'])} distinct settings. "
+           f"There are {settings.get('repeated_original_setting_count',0)} deliberately repeated original settings "
+           "in the follow-up attempt count; repeats occupy scheduling slots but are not new distinct configurations. "
+           "The 49 non-learning sweep cells and "
            "the preserved partial attempt are accounted for separately from new learning configurations. "
            "[The accounting file](results/takehome/followup/accounting.json) has no validation errors.\n\n")
     scoreboard=(OUT/'scoreboard.md').read_text()

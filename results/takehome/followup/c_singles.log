@@ -1,0 +1,60 @@
+START C_fill_0 187901 SEEDS [0, 1, 2]
+START C_fill_10 187902 SEEDS [0, 1, 2]
+START C_fill_20 187903 SEEDS [0, 1, 2]
+START C_fill_80 187904 SEEDS [0, 1, 2]
+FINISH {"name": "C_fill_80", "exit_code": 0, "seconds": 386.0805511470098}
+{"completed_rows": 34, "new_settings_attempted": 29, "promotions": []}
+START C_fill_120 190691 SEEDS [0, 1, 2]
+FINISH {"name": "C_fill_20", "exit_code": 0, "seconds": 543.1722294570063}
+{"completed_rows": 35, "new_settings_attempted": 30, "promotions": []}
+START C_briefing 191161 SEEDS [0, 1, 2]
+FINISH {"name": "C_fill_0", "exit_code": 0, "seconds": 577.3067588049889}
+{"completed_rows": 37, "new_settings_attempted": 31, "promotions": []}
+FINISH {"name": "C_fill_10", "exit_code": 0, "seconds": 583.8092315889953}
+{"completed_rows": 37, "new_settings_attempted": 31, "promotions": []}
+START C_privileged_critic 191583 SEEDS [0, 1, 2]
+START C_one_critic 191584 SEEDS [0, 1, 2]
+FINISH {"name": "C_fill_120", "exit_code": 0, "seconds": 240.82268169199233}
+{"completed_rows": 38, "new_settings_attempted": 33, "promotions": []}
+START C_one_update 193173 SEEDS [0, 1, 2]
+FINISH {"name": "C_one_update", "exit_code": 0, "seconds": 225.05050518400094}
+{"completed_rows": 39, "new_settings_attempted": 34, "promotions": []}
+START C_movement_cap_400um 195083 SEEDS [0, 1, 2]
+FINISH {"name": "C_privileged_critic", "exit_code": 0, "seconds": 468.0178057680023}
+{"completed_rows": 40, "new_settings_attempted": 35, "promotions": ["C_privileged_critic"]}
+START C_final_decider 196005 SEEDS [0, 1, 2]
+FINISH {"name": "C_briefing", "exit_code": 0, "seconds": 530.0273347419861}
+{"completed_rows": 41, "new_settings_attempted": 36, "promotions": ["C_privileged_critic"]}
+START C_near_hole 196314 SEEDS [0, 1, 2]
+FINISH {"name": "C_one_critic", "exit_code": 0, "seconds": 505.28211038999143}
+{"completed_rows": 42, "new_settings_attempted": 37, "promotions": ["C_privileged_critic"]}
+START C_contact_cap 196783 SEEDS [0, 1, 2]
+FINISH {"name": "C_movement_cap_400um", "exit_code": 0, "seconds": 430.92632291400514}
+{"completed_rows": 43, "new_settings_attempted": 38, "promotions": ["C_privileged_critic"]}
+START C_uncertainty_cap 199412 SEEDS [0, 1, 2]
+FINISH {"name": "C_near_hole", "exit_code": 0, "seconds": 498.71422287099995}
+{"completed_rows": 44, "new_settings_attempted": 39, "promotions": ["C_privileged_critic"]}
+START C_classification 200628 SEEDS [0, 1, 2]
+FINISH {"name": "C_final_decider", "exit_code": 0, "seconds": 527.7705184710067}
+{"completed_rows": 45, "new_settings_attempted": 40, "promotions": ["C_privileged_critic"]}
+START C_three_step 200641 SEEDS [0, 1, 2]
+FINISH {"name": "C_contact_cap", "exit_code": 0, "seconds": 515.3800581910036}
+{"completed_rows": 46, "new_settings_attempted": 41, "promotions": ["C_privileged_critic"]}
+START C_return_floor 201160 SEEDS [0, 1, 2]
+FINISH {"name": "C_uncertainty_cap", "exit_code": 0, "seconds": 456.80406517800293}
+{"completed_rows": 47, "new_settings_attempted": 42, "promotions": ["C_privileged_critic"]}
+START C_force_penalty 202457 SEEDS [0, 1, 2]
+FINISH {"name": "C_three_step", "exit_code": 0, "seconds": 481.6629298350017}
+{"completed_rows": 49, "new_settings_attempted": 43, "promotions": ["C_privileged_critic"]}
+START C_sibling_fill 203256 SEEDS [0, 1, 2]
+FINISH {"name": "C_return_floor", "exit_code": 0, "seconds": 463.4719428160024}
+{"completed_rows": 50, "new_settings_attempted": 44, "promotions": ["C_privileged_critic"]}
+START C_movement_cap_100um 203268 SEEDS [0, 1, 2]
+FINISH {"name": "C_classification", "exit_code": 0, "seconds": 508.2545395999914}
+{"completed_rows": 50, "new_settings_attempted": 45, "promotions": ["C_privileged_critic"]}
+FINISH {"name": "C_force_penalty", "exit_code": 0, "seconds": 391.3347408660047}
+{"completed_rows": 51, "new_settings_attempted": 45, "promotions": ["C_privileged_critic"]}
+FINISH {"name": "C_sibling_fill", "exit_code": 0, "seconds": 320.2686658640014}
+{"completed_rows": 53, "new_settings_attempted": 45, "promotions": ["C_privileged_critic"]}
+FINISH {"name": "C_movement_cap_100um", "exit_code": 0, "seconds": 316.2734032379958}
+{"completed_rows": 53, "new_settings_attempted": 45, "promotions": ["C_privileged_critic"]}

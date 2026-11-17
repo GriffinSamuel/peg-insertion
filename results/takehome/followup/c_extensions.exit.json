@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/mnt/c/Users/Griff/Projects/peg-insertion/.venv/bin/python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "c_extensions",
+    "--settings",
+    "C_privileged_critic"
+  ],
+  "started_utc": "2026-11-17T07:50:13.273218+00:00",
+  "finished_utc": "2026-11-17T07:52:22.760189+00:00",
+  "seconds": 129.48699655100063,
+  "exit_code": 0
+}

@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "passed_nodes": [
+    "takehome/test_followup_counts.py::test_required_e_has_six_attempts_but_three_new_distinct_settings",
+    "takehome/test_followup_counts.py::test_changed_config_cannot_be_deducted_as_an_original_repeat"
+  ],
+  "failed_nodes": [],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

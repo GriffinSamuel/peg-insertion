@@ -1,0 +1,11 @@
+{
+  "jobs": [
+    {
+      "name": "C_privileged_critic",
+      "exit_code": 0,
+      "seconds": 125.02400895400206
+    }
+  ],
+  "tripwire": false,
+  "seconds": 128.91047778900247
+}

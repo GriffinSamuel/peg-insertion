@@ -1,0 +1,29 @@
+{
+  "record": {
+    "phase": "C",
+    "name": "C_aim_then_move",
+    "description": "Train the aim part first and the movement part second.",
+    "base": "movement",
+    "base_result": "s0 425/500 (85.0%); s1 411/500 (82.2%); s2 427/500 (85.4%); mean 84.20% \u00b1 1.74pp",
+    "seeds": [],
+    "mean_percent": null,
+    "spread_pp": null,
+    "delta_pp": null,
+    "verdict": "DID NOT RUN",
+    "aim_start_mm": null,
+    "aim_success_mm": null,
+    "steps_to_insert": null,
+    "peak_force_n": null,
+    "practice_episodes": 0,
+    "hand_search": false,
+    "hidden_information": false,
+    "camera_condition": "normal",
+    "reason": "Needs an aim component to train first.",
+    "base_mean_percent": 84.2,
+    "base_spread_pp": 1.7435595774162698
+  },
+  "per_seed": [],
+  "paired_error_reduction_mm": null,
+  "working_aim": false,
+  "extend": false
+}

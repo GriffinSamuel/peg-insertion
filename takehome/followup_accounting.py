@@ -21,6 +21,30 @@ EXTRA_CEILING_RE = re.compile(r"^extra_ceiling_\d{4}\.json$")
 REFERENCE_CONDITIONS = ("normal", "no_camera_bias")
 
 
+def setting_counts(settings, old_settings):
+    """Keep conservative attempted slots separate from distinct configurations."""
+    counted=[e for e in settings if isinstance(e,dict) and e.get('counted') is True]
+    repeats=[]
+    for entry in counted:
+        original=entry.get('repeats_original')
+        if not original:continue
+        mode=entry['name'].removeprefix('E_normal_')
+        expected=('goal6/combined' if mode=='joint' else 'goal7/'+mode)
+        if (mode not in ('joint','aim_then_move','move_then_aim')
+                or entry['name']!='E_normal_'+mode or entry['phase']!='E'
+                or entry['condition']!='normal' or original!=expected
+                or entry['overrides']!=dict(outputs=5,camera_condition='normal',coordination=mode)):
+            raise ValueError('Only audited unchanged normal Phase E controls can be counted as repeats')
+        repeats.append(entry['name'])
+    return dict(new_counted_settings_from_registry=len(counted),
+        old_study_settings_from_protocol=old_settings,
+        whole_project_settings=old_settings+len(counted),
+        repeated_original_setting_count=len(repeats),repeated_original_settings=repeats,
+        new_distinct_settings=len(counted)-len(repeats),
+        whole_project_distinct_settings=old_settings+len(counted)-len(repeats),
+        scheduling_cap_includes_repeated_controls=True)
+
+
 def _read_json(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
@@ -345,9 +369,9 @@ def build_accounting(out=OUT):
     if not isinstance(settings, list):
         settings = []
         errors.append("registry settings must be a list")
-    new_settings = sum(1 for entry in settings if isinstance(entry, dict) and entry.get("counted") is True)
     new_practice = sum(row["reserved_episode_count"] for row in budgets)
     old_settings = int(protocol.get("original_settings", 0))
+    settings_summary=setting_counts(settings,old_settings)
     old_practice = int(protocol.get("old_practice_episodes", 0))
     old_tests = int(protocol.get("old_full_test_episodes", 0))
     old_reset_probes = int(protocol.get("old_reset_only_probes", 0))
@@ -374,11 +398,7 @@ def build_accounting(out=OUT):
             "valid_audit_file_count": sum(bool(row["valid"]) for row in reset_audits),
             "followup_reset_only_probes": new_reset_probes,
         },
-        "settings": {
-            "new_counted_settings_from_registry": new_settings,
-            "old_study_settings_from_protocol": old_settings,
-            "whole_project_settings": old_settings + new_settings,
-        },
+        "settings": settings_summary,
         "whole_project_episode_totals": {
             "old_study_practice_episodes_from_protocol": old_practice,
             "followup_reserved_practice_episodes": new_practice,

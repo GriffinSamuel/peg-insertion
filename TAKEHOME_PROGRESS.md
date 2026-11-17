@@ -752,3 +752,49 @@ A repeatable calibration error gives aim learning something reusable, but higher
 ### 8. Questions before the next phase
 
 None. Commit/push this phase, then begin the20 applicable movement singles in Phase C, with five explained skips. No planned check-in.
+
+## Phase C running checkpoint 2026-11-16T23:22:59-08:00
+
+The five fill-up singles are complete and audited. The detached c_singles suite remains the single registry/scoreboard writer, with four GPU jobs in progress.
+
+- C_fill_0: 373, 455, 349 /500; 78.47% ± 11.12 points; NO REAL DIFFERENCE.
+- C_fill_10: 306, 295, 373 /500; 64.93% ± 8.44 points; HURT.
+- C_fill_20: 378, 456, 375 /500; 80.60% ± 9.18 points; NO REAL DIFFERENCE.
+- C_fill_80: 381, 435, 444 /500; 84.00% ± 6.81 points; NO REAL DIFFERENCE.
+- C_fill_120: 383, 433, 439 /500; 83.67% ± 6.15 points; NO REAL DIFFERENCE.
+
+The mixed phase is pushed as93cb72a. A separate cheaper-helper audit matched all mixed report numbers, all46 ledgers and all34 diagnostic checks. Reproduction instructions were reviewed; the report-assembler top-level output exception is now explicit. No fresh confirmation or touch runs have started.
+
+## Follow-up Phase C complete, 2026-11-17 UTC
+
+### 1. What I did (short list)
+
+Ran all20 applicable movement singles and listed five inapplicable aim-dependent settings. Extended the only PROMISING screen, privileged critic, to five seeds. Preserved the screening snapshot, generated the full chart, and audited budgets, test provenance, frozen policies and success vectors.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+No HELPED movement change. Privileged critic438,432,451,388,447/500:86.24%±5.05, NO REAL DIFFERENCE against matched five-seed movement83.36%±2.99. Three-seed screens compare the matched baseline84.20%±1.74. Smaller0.1mm cap298,318,355/500:64.73%, HURT. Every final test has500 episodes/test123.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+PASS all20 applicable values and five skips; PASS one change per base; PASS every seed shown; PASS only PROMISING extension finished; PASS all62 experiments200 practice, no test learning, frozen policies and finite final traces; PASS no above-reference diagnostics required; PASS complete scoreboard/chart/report; PASS fresh seeds and touch unstarted.
+
+### 4. Surprises or problems
+
+The initial hidden-information gain did not survive five seeds. One critic and0.4mm cap had collapsed seeds. The force penalty did not reduce mean peak force. No Phase C single qualifies for stacking.
+
+### 5. Decisions I logged
+
+Before E runs, audited that all three normal joint/order controls repeat original configurations: keep conservative attempt slots but deduct audited repeats from distinct setting totals. Require missing matched joint seeds before judging any promising order on five. Skip zero-fill/sibling-fill combinations because the latter has no episodes on which to act.
+
+### 6. Practice episodes used, and settings tried so far
+
+Phase C12,400 practice across62 experiments,155,672 full test episodes,20 settings. Follow-up30,780 practice,458,392 full tests,45 attempted distinct settings. Whole project59,790 practice,868,082 full tests,191 reset probes,73 distinct settings.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+None of these movement changes reliably improved the plain method under the fixed rule. The apparent gain from extra simulator information faded when two more seeds were included. Several changes made results worse or caused one seed to collapse. The original result and all unsuccessful runs remain intact.
+
+### 8. Questions before the next phase
+
+None. Commit and push C, then run the18 applicable fixed-camera aim singles in Phase D with four detached GPU jobs and six explained skips.

@@ -2,7 +2,7 @@
 
 These conditions model a calibration component that stays fixed for one run plus an independent component drawn for each attempt. The stated standard deviations are used exactly: fixed/per-attempt values of 0.65/0.375 mm, 0.53/0.53 mm, and 0.375/0.65 mm. The fixed-only condition isolates calibration error; none of these is designated the realistic condition. Each calibration seed has its own 500-test floor and zero-error reference. The unchanged within-episode camera jitter remains present.
 
-All 12 requested settings finished. Five three-seed gains qualified for extension, and all five retained HELPED: plain aim in the mostly-fixed and even splits, and plain movement in all three splits. No heat-map or joint addition qualified for extension. The heat map collapsed on one seed in both the even and mostly-per-attempt splits; even-split joint learning also collapsed below half its matched movement base. These are UNSTABLE results, not missing runs.
+All 12 requested settings finished. Five three-seed gains qualified for extension, and all five retained HELPED: plain aim in the mostly-fixed and even splits, and plain movement in all three splits. No heat-map or joint addition qualified for extension. The mostly-fixed aim result clears its spread threshold by only 0.02 percentage points, so its HELPED label is especially sensitive to small result variation. The heat map collapsed on one seed in both the even and mostly-per-attempt splits; even-split joint learning also collapsed below half its matched movement base. These are UNSTABLE results, not missing runs.
 
 | Split | Method | Seeds | Final mean ± spread | Verdict | Aim error at start / success (mm) | Paired change toward truth (mm) |
 | --- | --- | --- | --- | --- | --- | --- |

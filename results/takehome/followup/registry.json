@@ -1,7 +1,7 @@
 {
   "max_new_settings": 90,
   "original_settings": 28,
-  "phase": "B_mixed",
+  "phase": "C",
   "settings": [
     {
       "name": "B_gate",
@@ -699,6 +699,583 @@
       "changes": 1,
       "reason": "",
       "counted": true
+    },
+    {
+      "name": "C_fill_0",
+      "phase": "C",
+      "description": "Use 0 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 0,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_fill_10",
+      "phase": "C",
+      "description": "Use 10 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 10,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_fill_20",
+      "phase": "C",
+      "description": "Use 20 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 20,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_fill_80",
+      "phase": "C",
+      "description": "Use 80 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 80,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_fill_120",
+      "phase": "C",
+      "description": "Use 120 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 120,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_side_by_side",
+      "phase": "C",
+      "description": "Train separate aim and movement parts in parallel.",
+      "overrides": {
+        "outputs": 3,
+        "coordination": "side_by_side"
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Needs separate aim and movement learners; movement-only has no aim part.",
+      "counted": false
+    },
+    {
+      "name": "C_aim_then_move",
+      "phase": "C",
+      "description": "Train the aim part first and the movement part second.",
+      "overrides": {
+        "outputs": 3,
+        "coordination": "aim_then_move"
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Needs an aim component to train first.",
+      "counted": false
+    },
+    {
+      "name": "C_move_then_aim",
+      "phase": "C",
+      "description": "Train the movement part first and the aim part second.",
+      "overrides": {
+        "outputs": 3,
+        "coordination": "move_then_aim"
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Needs an aim component to train second.",
+      "counted": false
+    },
+    {
+      "name": "C_briefing",
+      "phase": "C",
+      "description": "Let the scorekeeper study its own fill-up data before the corrector learns.",
+      "overrides": {
+        "briefing": true,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_privileged_critic",
+      "phase": "C",
+      "description": "Give the scorekeeper the hidden camera error during practice only.",
+      "overrides": {
+        "privileged_critic": true,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": true,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_one_critic",
+      "phase": "C",
+      "description": "Use one scorekeeper instead of four.",
+      "overrides": {
+        "ensemble": 1,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_one_update",
+      "phase": "C",
+      "description": "Study each new step once instead of four times.",
+      "overrides": {
+        "updates_per_step": 1,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_aim_cap_50um",
+      "phase": "C",
+      "description": "Limit an aim nudge to 0.05 mm per axis.",
+      "overrides": {
+        "step_cap": 5e-05,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "An aim nudge cap cannot change a movement-only learner.",
+      "counted": false
+    },
+    {
+      "name": "C_aim_cap_200um",
+      "phase": "C",
+      "description": "Allow an aim nudge up to 0.2 mm per axis.",
+      "overrides": {
+        "step_cap": 0.0002,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "An aim nudge cap cannot change a movement-only learner.",
+      "counted": false
+    },
+    {
+      "name": "C_movement_cap_400um",
+      "phase": "C",
+      "description": "Allow movement corrections up to 0.4 mm per axis.",
+      "overrides": {
+        "outputs": 3,
+        "movement_cap": 0.0004
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_final_decider",
+      "phase": "C",
+      "description": "Let the learned scorekeeper choose among zero and scaled corrections.",
+      "overrides": {
+        "outputs": 3,
+        "final_decider": true
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_near_hole",
+      "phase": "C",
+      "description": "Allow correction only within 15 mm height and 10 mm sideways camera distance.",
+      "overrides": {
+        "near_hole": true,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_contact_cap",
+      "phase": "C",
+      "description": "Halve the movement cap below 5 N contact and double it above 5 N.",
+      "overrides": {
+        "outputs": 3,
+        "contact_cap": true
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_uncertainty_cap",
+      "phase": "C",
+      "description": "Scale the movement cap by the original policy action spread.",
+      "overrides": {
+        "outputs": 3,
+        "uncertainty_cap": true
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_classification",
+      "phase": "C",
+      "description": "Use a bounded 0-to-1 scorekeeper with a different error formula.",
+      "overrides": {
+        "classification": true,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_three_step",
+      "phase": "C",
+      "description": "Combine three consecutive rewards before updating a rating.",
+      "overrides": {
+        "n_step": 3,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_return_floor",
+      "phase": "C",
+      "description": "Keep a learning target at least as large as the return actually observed.",
+      "overrides": {
+        "return_floor": true,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_force_penalty",
+      "phase": "C",
+      "description": "Penalize force above 15 N during practice using the fixed original cost.",
+      "overrides": {
+        "outputs": 3,
+        "force_penalty": true
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_sibling_fill",
+      "phase": "C",
+      "description": "Collect fill-up data with the three specified sibling policies.",
+      "overrides": {
+        "sibling_fill": true,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "C_movement_cap_100um",
+      "phase": "C",
+      "description": "Limit movement corrections to 0.1 mm per axis.",
+      "overrides": {
+        "movement_cap": 0.0001,
+        "outputs": 3
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
     }
   ],
   "status": "active",
@@ -711,6 +1288,7 @@
   "completed_phases": [
     "A",
     "B",
-    "B_mixed"
+    "B_mixed",
+    "C"
   ]
 }

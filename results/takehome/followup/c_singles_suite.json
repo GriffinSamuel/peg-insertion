@@ -1,0 +1,106 @@
+{
+  "jobs": [
+    {
+      "name": "C_fill_80",
+      "exit_code": 0,
+      "seconds": 386.0805511470098
+    },
+    {
+      "name": "C_fill_20",
+      "exit_code": 0,
+      "seconds": 543.1722294570063
+    },
+    {
+      "name": "C_fill_0",
+      "exit_code": 0,
+      "seconds": 577.3067588049889
+    },
+    {
+      "name": "C_fill_10",
+      "exit_code": 0,
+      "seconds": 583.8092315889953
+    },
+    {
+      "name": "C_fill_120",
+      "exit_code": 0,
+      "seconds": 240.82268169199233
+    },
+    {
+      "name": "C_one_update",
+      "exit_code": 0,
+      "seconds": 225.05050518400094
+    },
+    {
+      "name": "C_privileged_critic",
+      "exit_code": 0,
+      "seconds": 468.0178057680023
+    },
+    {
+      "name": "C_briefing",
+      "exit_code": 0,
+      "seconds": 530.0273347419861
+    },
+    {
+      "name": "C_one_critic",
+      "exit_code": 0,
+      "seconds": 505.28211038999143
+    },
+    {
+      "name": "C_movement_cap_400um",
+      "exit_code": 0,
+      "seconds": 430.92632291400514
+    },
+    {
+      "name": "C_near_hole",
+      "exit_code": 0,
+      "seconds": 498.71422287099995
+    },
+    {
+      "name": "C_final_decider",
+      "exit_code": 0,
+      "seconds": 527.7705184710067
+    },
+    {
+      "name": "C_contact_cap",
+      "exit_code": 0,
+      "seconds": 515.3800581910036
+    },
+    {
+      "name": "C_uncertainty_cap",
+      "exit_code": 0,
+      "seconds": 456.80406517800293
+    },
+    {
+      "name": "C_three_step",
+      "exit_code": 0,
+      "seconds": 481.6629298350017
+    },
+    {
+      "name": "C_return_floor",
+      "exit_code": 0,
+      "seconds": 463.4719428160024
+    },
+    {
+      "name": "C_classification",
+      "exit_code": 0,
+      "seconds": 508.2545395999914
+    },
+    {
+      "name": "C_force_penalty",
+      "exit_code": 0,
+      "seconds": 391.3347408660047
+    },
+    {
+      "name": "C_sibling_fill",
+      "exit_code": 0,
+      "seconds": 320.2686658640014
+    },
+    {
+      "name": "C_movement_cap_100um",
+      "exit_code": 0,
+      "seconds": 316.2734032379958
+    }
+  ],
+  "tripwire": false,
+  "seconds": 2420.9822913239914
+}

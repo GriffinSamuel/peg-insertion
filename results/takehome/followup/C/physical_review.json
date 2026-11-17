@@ -1,0 +1,11 @@
+{
+  "phase": "C",
+  "source": "Read-only review of required diagnostic tests; no new episodes.",
+  "checks": 0,
+  "test_episodes": 0,
+  "inspected_examples": 0,
+  "through_wall_episodes": 0,
+  "nan_episodes": 0,
+  "used_for_selection": false,
+  "rows": []
+}

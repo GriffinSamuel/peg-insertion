@@ -1,0 +1,3 @@
+START C_privileged_critic 205587 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "C_privileged_critic", "exit_code": 0, "seconds": 125.02400895400206}
+{"completed_rows": 53, "new_settings_attempted": 45, "promotions": []}

@@ -51,3 +51,11 @@ def test_misregistered_context_cannot_be_silently_transferred():
     entry['condition']='fixed'
     with pytest.raises(ValueError,match='original base and camera'):
         trick_stacks(dict(settings=[entry]),{entry['name']:summary})
+
+
+def test_zero_fill_cannot_be_stacked_with_sibling_fill():
+    pairs=[_entry('fill_0',{'fill_episodes':0},value=94),
+           _entry('sibling_fill',{'sibling_fill':True},value=93)]
+    rows,_=trick_stacks(dict(settings=[e for e,_ in pairs]),{e['name']:s for e,s in pairs})
+    assert len(rows)==1 and rows[0]['status']=='skipped'
+    assert 'removes its entire effect' in rows[0]['reason']
