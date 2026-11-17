@@ -2,3 +2,11 @@ START D_aim_cap_200um 18987 SEEDS [0, 1, 2]
 START E_normal_joint 18988 SEEDS [0, 1, 2, 3, 4]
 START E_normal_move_then_aim 18989 SEEDS [0, 1, 2, 3, 4]
 START E_fixed_joint 18990 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "D_aim_cap_200um", "exit_code": 0, "seconds": 339.13928014099656}
+{"completed_rows": 83, "new_settings_attempted": 69, "promotions": ["D_aim_cap_200um"]}
+FINISH {"name": "E_normal_move_then_aim", "exit_code": 0, "seconds": 351.82475217300816}
+{"completed_rows": 83, "new_settings_attempted": 69, "promotions": ["D_aim_cap_200um"]}
+FINISH {"name": "E_normal_joint", "exit_code": 0, "seconds": 364.1523430820089}
+{"completed_rows": 83, "new_settings_attempted": 69, "promotions": ["D_aim_cap_200um"]}
+FINISH {"name": "E_fixed_joint", "exit_code": 0, "seconds": 373.83523634899757}
+{"completed_rows": 83, "new_settings_attempted": 69, "promotions": ["D_aim_cap_200um"]}

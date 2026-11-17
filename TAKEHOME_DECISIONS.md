@@ -157,3 +157,4 @@ Running settings count: [live_status.json](results/takehome/live_status.json) is
 2026-11-17 Advisor consult 2 (touch go/no-go): GO for blind spiral after smoke test; torque and four-sided parked. See advisor/answer_2.md.
 2026-11-17 Phase F blind spiral (500 eps, seed 123, test only): 311/500 = 62.2% vs normal floor 61.4%, 189 timeouts, mean search steps 17: no gain; touch-as-teacher condition (within 10 pts of ceiling) NOT met, so skipped. Torque/four-sided parked per advisor.
 2026-11-17 D five-seed verdicts: none HELPED (all NO REAL DIFFERENCE/UNSTABLE), so Phase E trick stacks are skipped (no single beat its base on five seeds; C had none either). E joint/sequential: normal joint HURT (72.7 vs movement 84.2); fixed joint and normal move_then_aim PROMISING on 3 seeds, extended to 5 with D_aim_cap_200um resume in suite q2.
+2026-11-17 Advisor consult 3 (final choice review): agrees with plain movement; report corrections applied. See advisor/answer_3.md.

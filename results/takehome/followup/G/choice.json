@@ -1,0 +1,523 @@
+{
+ "name": "original_movement",
+ "mean_percent": 83.36,
+ "spread_pp": 2.994661917479169,
+ "changes": 1,
+ "overrides": {
+  "outputs": 3
+ },
+ "camera_condition": "normal",
+ "hand_search": false,
+ "hidden_information": false,
+ "seed_successes": [
+  {
+   "seed": 0,
+   "successes": 425
+  },
+  {
+   "seed": 1,
+   "successes": 411
+  },
+  {
+   "seed": 2,
+   "successes": 427
+  },
+  {
+   "seed": 3,
+   "successes": 428
+  },
+  {
+   "seed": 4,
+   "successes": 393
+  }
+ ],
+ "source": "Preserved original five-seed development baseline.",
+ "rule": "Highest development mean; within one spread of that top mean, fewest changes; then highest mean; stable name only for an exact tie.",
+ "development_test_seed": 123,
+ "development_episodes_per_seed": 500,
+ "fresh_practice_seeds": [
+  200,
+  201,
+  202,
+  203,
+  204
+ ],
+ "fresh_test_seed": 1001,
+ "top_average_setting": "original_movement",
+ "top_average_percent": 83.36,
+ "top_spread_pp": 2.994661917479169,
+ "eligibility_threshold_percent": 80.36533808252084,
+ "candidates": [
+  {
+   "name": "original_aim",
+   "mean_percent": 65.16,
+   "spread_pp": 7.737441437581289,
+   "changes": 0,
+   "overrides": {
+    "outputs": 2
+   },
+   "camera_condition": "normal",
+   "hand_search": false,
+   "hidden_information": false,
+   "seed_successes": [
+    {
+     "seed": 0,
+     "successes": 365
+    },
+    {
+     "seed": 1,
+     "successes": 278
+    },
+    {
+     "seed": 2,
+     "successes": 315
+    },
+    {
+     "seed": 3,
+     "successes": 305
+    },
+    {
+     "seed": 4,
+     "successes": 366
+    }
+   ],
+   "source": "Preserved original five-seed development baseline."
+  },
+  {
+   "name": "original_movement",
+   "mean_percent": 83.36,
+   "spread_pp": 2.994661917479169,
+   "changes": 1,
+   "overrides": {
+    "outputs": 3
+   },
+   "camera_condition": "normal",
+   "hand_search": false,
+   "hidden_information": false,
+   "seed_successes": [
+    {
+     "seed": 0,
+     "successes": 425
+    },
+    {
+     "seed": 1,
+     "successes": 411
+    },
+    {
+     "seed": 2,
+     "successes": 427
+    },
+    {
+     "seed": 3,
+     "successes": 428
+    },
+    {
+     "seed": 4,
+     "successes": 393
+    }
+   ],
+   "source": "Preserved original five-seed development baseline."
+  },
+  {
+   "name": "E_normal_joint",
+   "mean_percent": 74.48,
+   "spread_pp": 8.320576903075889,
+   "changes": 1,
+   "overrides": {
+    "outputs": 5,
+    "camera_condition": "normal",
+    "coordination": "joint"
+   },
+   "camera_condition": "normal",
+   "hand_search": false,
+   "hidden_information": false,
+   "seed_successes": [
+    {
+     "seed": 0,
+     "successes": 428
+    },
+    {
+     "seed": 1,
+     "successes": 327
+    },
+    {
+     "seed": 2,
+     "successes": 335
+    },
+    {
+     "seed": 3,
+     "successes": 385
+    },
+    {
+     "seed": 4,
+     "successes": 387
+    }
+   ],
+   "source": "Completed follow-up development setting."
+  },
+  {
+   "name": "E_normal_move_then_aim",
+   "mean_percent": 81.0,
+   "spread_pp": 15.84297951775486,
+   "changes": 2,
+   "overrides": {
+    "outputs": 5,
+    "camera_condition": "normal",
+    "coordination": "move_then_aim"
+   },
+   "camera_condition": "normal",
+   "hand_search": false,
+   "hidden_information": false,
+   "seed_successes": [
+    {
+     "seed": 0,
+     "successes": 458
+    },
+    {
+     "seed": 1,
+     "successes": 424
+    },
+    {
+     "seed": 2,
+     "successes": 436
+    },
+    {
+     "seed": 3,
+     "successes": 265
+    },
+    {
+     "seed": 4,
+     "successes": 442
+    }
+   ],
+   "source": "Completed follow-up development setting."
+  }
+ ],
+ "excluded": [
+  {
+   "name": "B_gate",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_pullback",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_memory",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_labels",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_fast",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_constant",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_heat_normal",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "B_aim_one_sided",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "B_aim_fixed",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "B_aim_fixed_seed4_halted",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "B_heat_one_sided",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "B_heat_fixed",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "B_within_grid",
+   "reason": "Hand-written search is ineligible."
+  },
+  {
+   "name": "B_qmap",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "B_stack",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "B_movement_fixed",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_fixed_aim",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_fixed_heat",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_fixed_movement",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_fixed_combined",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_even_aim",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_even_heat",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_even_movement",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_even_combined",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_episode_aim",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_episode_heat",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_episode_movement",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "M_mostly_episode_combined",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "C_fill_0",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_fill_10",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_fill_20",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_fill_80",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_fill_120",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_side_by_side",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "C_aim_then_move",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "C_move_then_aim",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "C_briefing",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_privileged_critic",
+   "reason": "Hidden simulator information is ineligible."
+  },
+  {
+   "name": "C_one_critic",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_one_update",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_aim_cap_50um",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "C_aim_cap_200um",
+   "reason": "No completed setting."
+  },
+  {
+   "name": "C_movement_cap_400um",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_final_decider",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_near_hole",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_contact_cap",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_uncertainty_cap",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_classification",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_three_step",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_return_floor",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_force_penalty",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_sibling_fill",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "C_movement_cap_100um",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "D_fill_0",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_fill_10",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_fill_20",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_fill_80",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_fill_120",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_side_by_side",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_aim_then_move",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_move_then_aim",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_briefing",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_privileged_critic",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_one_critic",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_one_update",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_aim_cap_50um",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_aim_cap_200um",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_movement_cap_400um",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_final_decider",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_near_hole",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_contact_cap",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_uncertainty_cap",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_classification",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_three_step",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_return_floor",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_force_penalty",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "D_sibling_fill",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "E_normal_aim_then_move",
+   "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+  },
+  {
+   "name": "E_fixed_joint",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "E_fixed_aim_then_move",
+   "reason": "The fresh comparison uses the normal camera condition."
+  },
+  {
+   "name": "E_fixed_move_then_aim",
+   "reason": "The fresh comparison uses the normal camera condition."
+  }
+ ],
+ "no_fresh_confirmation_run_before_choice": true
+}

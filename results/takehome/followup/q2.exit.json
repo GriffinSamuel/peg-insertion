@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "takehome.followup_suite",
+    "--name",
+    "q2",
+    "--settings",
+    "D_aim_cap_200um",
+    "E_normal_joint",
+    "E_normal_move_then_aim",
+    "E_fixed_joint"
+  ],
+  "started_utc": "2026-11-17T09:40:42.210193+00:00",
+  "finished_utc": "2026-11-17T09:47:05.251882+00:00",
+  "seconds": 383.04173298500245,
+  "exit_code": 0
+}

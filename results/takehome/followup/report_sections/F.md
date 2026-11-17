@@ -1,0 +1,5 @@
+## Phase F: finding the hole by touch (comparison only)
+
+Saved-data check (no new episodes): from saved poses, the wrist force and twist readings point to the correct side of the hole in about 87% of usable resting samples, but the direction is rough (median error 33 to 42 degrees) and the force readings are clipped (saturated) in about 41% of samples. So the cue is real but noisy.
+
+Hand-written blind spiral (no learning, 500 test episodes, test seed 123): 311 of 500 succeeded (62.2%), against the 61.4% floor and the 94.5% zero-error ceiling. 189 episodes ran out of time. It moved the guess in a widening spiral of 0.5 mm spacing with 0.2 mm steps once the peg had stalled after contact; this is not a learning method and never a headline. It did not come within 10 points of the ceiling, so the touch-as-teacher experiments were not run. The torque-direction and four-sided probe methods were not implemented (advisor consultation 2 judged the extra effort not worth it until the spiral showed promise). Spiral behaviour to note: it restarts if the peg sits still inside the hole for ten readings.

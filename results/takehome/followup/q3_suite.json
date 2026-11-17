@@ -1,0 +1,11 @@
+{
+  "jobs": [
+    {
+      "name": "D_aim_cap_200um",
+      "exit_code": 0,
+      "seconds": 167.03918795500067
+    }
+  ],
+  "tripwire": false,
+  "seconds": 174.69257033900067
+}

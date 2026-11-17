@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "name": "D_aim_cap_200um",
+      "exit_code": 0,
+      "seconds": 339.13928014099656
+    },
+    {
+      "name": "E_normal_move_then_aim",
+      "exit_code": 0,
+      "seconds": 351.82475217300816
+    },
+    {
+      "name": "E_normal_joint",
+      "exit_code": 0,
+      "seconds": 364.1523430820089
+    },
+    {
+      "name": "E_fixed_joint",
+      "exit_code": 0,
+      "seconds": 373.83523634899757
+    }
+  ],
+  "tripwire": false,
+  "seconds": 381.7222545639961
+}

@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "takehome.followup_suite",
+    "--name",
+    "q3",
+    "--settings",
+    "D_aim_cap_200um"
+  ],
+  "started_utc": "2026-11-17T09:47:15.698800+00:00",
+  "finished_utc": "2026-11-17T09:50:10.960512+00:00",
+  "seconds": 175.2617372359964,
+  "exit_code": 0
+}

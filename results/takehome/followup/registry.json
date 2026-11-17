@@ -1,7 +1,7 @@
 {
   "max_new_settings": 90,
   "original_settings": 28,
-  "phase": "E",
+  "phase": "G",
   "settings": [
     {
       "name": "B_gate",
@@ -1608,9 +1608,11 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
-      "status": "running",
+      "status": "finished",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
@@ -1882,7 +1884,7 @@
         3,
         4
       ],
-      "status": "running",
+      "status": "finished",
       "condition": "normal",
       "hand_search": false,
       "hidden_information": false,
@@ -1934,7 +1936,7 @@
         3,
         4
       ],
-      "status": "running",
+      "status": "finished",
       "condition": "normal",
       "hand_search": false,
       "hidden_information": false,
@@ -1961,7 +1963,7 @@
         3,
         4
       ],
-      "status": "running",
+      "status": "finished",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
@@ -2033,6 +2035,9 @@
     "A",
     "B",
     "B_mixed",
-    "C"
+    "C",
+    "D",
+    "E",
+    "F"
   ]
 }
