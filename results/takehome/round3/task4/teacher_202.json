@@ -1,0 +1,100 @@
+{
+  "seed": 202,
+  "recorded_successes": 426,
+  "reproduced_successes": 425,
+  "rows": 32462,
+  "students": {
+    "full_h256_fp32": {
+      "hidden": 256,
+      "precision": "fp32",
+      "weights": 70915,
+      "bytes": 283660,
+      "successes": 416,
+      "rate": 0.832,
+      "val_mse": 0.0004320537846069783,
+      "time_us_cpu_batch1": 53.76398621592671
+    },
+    "full_h256_fp16": {
+      "hidden": 256,
+      "precision": "fp16",
+      "weights": 70915,
+      "bytes": 142860,
+      "successes": 417,
+      "rate": 0.834,
+      "val_mse": 0.0004320537846069783,
+      "time_us_cpu_batch1": 70.29999687802047
+    },
+    "full_h256_int8": {
+      "hidden": 256,
+      "precision": "int8",
+      "weights": 70915,
+      "bytes": 72460,
+      "successes": 236,
+      "rate": 0.472,
+      "val_mse": 0.0004320537846069783,
+      "time_us_cpu_batch1": 58.813486248254776
+    },
+    "half_h180_fp32": {
+      "hidden": 180,
+      "precision": "fp32",
+      "weights": 36183,
+      "bytes": 144732,
+      "successes": 426,
+      "rate": 0.852,
+      "val_mse": 0.0005481957923620939,
+      "time_us_cpu_batch1": 50.42299744673073
+    },
+    "half_h180_fp16": {
+      "hidden": 180,
+      "precision": "fp16",
+      "weights": 36183,
+      "bytes": 73092,
+      "successes": 426,
+      "rate": 0.852,
+      "val_mse": 0.0005481957923620939,
+      "time_us_cpu_batch1": 50.12200563214719
+    },
+    "half_h180_int8": {
+      "hidden": 180,
+      "precision": "int8",
+      "weights": 36183,
+      "bytes": 37272,
+      "successes": 161,
+      "rate": 0.322,
+      "val_mse": 0.0005481957923620939,
+      "time_us_cpu_batch1": 49.31750299874693
+    },
+    "quarter_h125_fp32": {
+      "hidden": 125,
+      "precision": "fp32",
+      "weights": 18253,
+      "bytes": 73012,
+      "successes": 419,
+      "rate": 0.838,
+      "val_mse": 0.0006142932688817382,
+      "time_us_cpu_batch1": 45.03950185608119
+    },
+    "quarter_h125_fp16": {
+      "hidden": 125,
+      "precision": "fp16",
+      "weights": 18253,
+      "bytes": 37012,
+      "successes": 417,
+      "rate": 0.834,
+      "val_mse": 0.0006142932688817382,
+      "time_us_cpu_batch1": 43.00399450585246
+    },
+    "quarter_h125_int8": {
+      "hidden": 125,
+      "precision": "int8",
+      "weights": 18253,
+      "bytes": 19012,
+      "successes": 281,
+      "rate": 0.562,
+      "val_mse": 0.0006142932688817382,
+      "time_us_cpu_batch1": 45.94500933308154
+    }
+  },
+  "teacher_time_us": 27.45899837464094,
+  "teacher_weights": 77257
+}

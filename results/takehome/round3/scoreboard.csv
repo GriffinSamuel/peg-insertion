@@ -1,0 +1,15 @@
+Task,Name,What it is,Base,Base result (same seeds),Seed results,Mean (%),Spread (pp),Delta vs base (pp),Verdict,Steps to insert,Peak force (N),Practice episodes,Hand-written routine,Hidden information
+1,R1a_pick_end,"Train as usual, then use the saved version whose own practice episodes did best.",movement,84.2 +- 1.7,s0 335/500; s1 454/500; s2 428/500,81.1,12.5,-3.1,NO REAL DIFFERENCE,146,94,200,no,no
+1,R1b_rollback,"If the recent practice success drops 20 points below its best, go back to the best version.",movement,83.4 +- 3.0,s0 386/500; s1 453/500; s2 449/500; s3 395/500; s4 420/500,84.1,6.1,+0.8,NO REAL DIFFERENCE,141,95,200,no,no
+1,R1c_both,Rollback during training and pick the best version at the end.,movement,83.4 +- 3.0,s0 411/500; s1 455/500; s2 438/500; s3 390/500; s4 409/500,84.1,5.1,+0.8,NO REAL DIFFERENCE,144,94,200,no,no
+2,R2a_depth,Add a getting-warmer reward from the insertion depth reading.,movement,84.2 +- 1.7,s0 342/500; s1 423/500; s2 393/500,77.2,8.2,-7.0,NO REAL DIFFERENCE,149,92,200,no,no
+2,R2b_torque,Add a getting-warmer reward for less wrist twisting.,movement,84.2 +- 1.7,s0 413/500; s1 434/500; s2 408/500,83.7,2.8,-0.5,NO REAL DIFFERENCE,149,93,200,no,no
+2,R2c_both,Add getting-warmer rewards from both depth and low torque.,movement,84.2 +- 1.7,s0 380/500; s1 418/500; s2 427/500,81.7,5.0,-2.5,NO REAL DIFFERENCE,146,96,200,no,no
+2,R2d_aim_torque,Torque getting-warmer reward on the aim-only corrector (normal camera error).,aim,63.9 +- 8.7,s0 298/500; s1 316/500; s2 348/500,64.1,8.7,+0.3,NO REAL DIFFERENCE,168,85,200,no,no
+3,R3a_search_every,"Learner picks wiggle width, sideways lean and extra push every step after contact.",movement,84.2 +- 1.7,s0 353/500; s1 362/500; s2 372/500,72.5,1.9,-11.7,HURT,168,87,200,yes,no
+3,R3b_search_hold10,Learner picks the same search settings once every 10 steps and they are held.,movement,84.2 +- 1.7,s0 335/500; s1 348/500; s2 361/500,69.6,2.6,-14.6,HURT,168,87,200,yes,no
+3,R3c_search_plus_move,Search settings every step plus the plain movement correction on top.,movement,84.2 +- 1.7,s0 356/500; s1 413/500; s2 294/500,70.9,11.9,-13.3,HURT,155,88,200,yes,no
+3,H31_no_wiggle_check,"Old policy plus a fixed circular wiggle once touching and stalled (no learning), size 0 mm.","floor (old policy alone, 307/500)",61.4,test seed 123: 307/500,61.4,n/a,+0.0,NO REAL DIFFERENCE (single run),168,84,0,yes,no
+3,H31_hand_wiggle_0.05mm,"Old policy plus a fixed circular wiggle once touching and stalled (no learning), size 0.05 mm.","floor (old policy alone, 307/500)",61.4,test seed 123: 304/500,60.8,n/a,-0.6,NO REAL DIFFERENCE (single run),168,84,0,yes,no
+3,H31_hand_wiggle_0.1mm,"Old policy plus a fixed circular wiggle once touching and stalled (no learning), size 0.1 mm.","floor (old policy alone, 307/500)",61.4,test seed 123: 311/500,62.2,n/a,+0.8,NO REAL DIFFERENCE (single run),168,84,0,yes,no
+3,H31_hand_wiggle_0.2mm,"Old policy plus a fixed circular wiggle once touching and stalled (no learning), size 0.2 mm.","floor (old policy alone, 307/500)",61.4,test seed 123: 307/500,61.4,n/a,+0.0,NO REAL DIFFERENCE (single run),168,84,0,yes,no

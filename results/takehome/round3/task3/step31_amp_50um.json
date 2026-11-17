@@ -1,0 +1,10 @@
+{
+  "amp_m": 5e-05,
+  "successes": 304,
+  "rate": 0.608,
+  "peak_force_mean": 84.87398529052734,
+  "steps_mean": 168.22039794921875,
+  "test_seed": 123,
+  "learning": false,
+  "uses_hand_routine": true
+}

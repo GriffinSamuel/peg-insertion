@@ -1,5 +1,11 @@
 # Take-home progress
 
+## CURRENT STATE (ROUND 3)
+- ROUND 3 DONE 2026-11-17. Report: TAKEHOME_ROUND3_REPORT.md. Nothing HELPED; final = plain movement, fresh seeds 300-304 / test 2002: 83.3% +- 4.9 (floor 60.2, zero-error 93.4). Tests: 143 passed (each file run separately), original files unchanged.
+- Task 4: one network a quarter size matches teacher at 32/16 bit (about 84%); simulated 8-bit about 57%.
+- PARKED: Task 5 skipped (nothing HELPED); R1a seeds 3-4 not run (did not beat base on three seeds).
+- Advisor consultations used: 2 (Tasks 2/3 design; final choice). Settings this round: 13 (107 total).
+
 ## CURRENT STATE (2026-11-17, takeover finished)
 - ALL PHASES DONE. Report: TAKEHOME_FOLLOWUP_REPORT.md. Fresh seeds 200-204, test 1001: plain movement 84.2% +- 5.9 (floor 61.4, zero-error 95.0). Tests 143 passed, original files verified.
 - PARKED: torque-direction and four-sided touch probes (not implemented), mechanism replays (not run), fresh row for E_normal_move_then_aim (locked procedure runs chosen method only). B_aim_fixed_seed4_halted kept as its own row.
@@ -826,3 +832,6 @@ Root inspected the first40 D above-reference checks and the saved trajectory plo
 ## Phase D stalled-worker recovery, 2026-11-17 UTC
 
 D_aim_cap_200um seed1 made no progress after08:20:19UTC at checkpoint90. Its ledger has100 reserved episodes and practice_0100.npz is complete. GPU is visible,10GiB RAM is available, otherjobs advance, and no invalid-number/tripwire message exists. Root preserved checkpoint90, ledger100, progress90 and SHA256 hashes of all10 saved practice batches under D/stalled_cap_recovery/, then sent SIGINT only to worker218939. Let d_singles finish its other work; it may report an ordinary failed worker. After it exits, resume this setting under a new suite name with the same directory/config/seeds, preserving all existing results and using saved batch100. Do not create a fresh seed or recollect any charged batch. The status is an operational recovery, not a scientific tripwire halt.
+- 2026-11-17 Task 1 first look (seeds 0-2): R1c PROMISING vs goal6 base, R1b/R1a within noise; seeds 3-4 run for R1c and R1b (rule: anything beating base by >1 spread). Task 2 seeds 0-2 launched.
+- 2026-11-17 Task 2 (seeds 0-2): R2a 77.2, R2b 83.7, R2c 81.7 vs base 84.2: none helped, 2d runs with torque (best). Task 1 five seeds: R1b 84.1, R1c 84.1 vs base 83.4: no real difference. 3.1 hand wiggle (0.05/0.1/0.2mm): 304/311/307 of 500 vs floor 307: no effect (wiggle active in 98% of episodes, 17% of steps).
+- 2026-11-17 Round 3 complete. Task 4 done (no extra-practice variant needed). Final check run once on plain movement: 83.3% +- 4.9 on seeds 300-304, test 2002. Test suite 143 passed run per file (a single combined pytest call fails at collection because of the import-order rule, as before).

@@ -1,0 +1,26 @@
+{
+  "name": "R1a_pick_end",
+  "finals": {
+    "0": {
+      "practice_episodes": 200,
+      "picked_version": 130,
+      "episodes": 500,
+      "successes": 335,
+      "success_rate": 0.67,
+      "ci_lo": 0.627624826873818,
+      "ci_hi": 0.709782802825675,
+      "steps_mean": 161.58506774902344,
+      "steps_median": 161.0,
+      "peak_force_mean": 86.21926879882812,
+      "final_xy_err_mean_mm": 0.8516851663589478,
+      "final_depth_mean_mm": 20.755287170410156,
+      "still_inserted_at_end": 0.67,
+      "through_wall_episodes": 0,
+      "max_lateral_when_deep_mm": 0.6783008575439453,
+      "nan_episodes": 0,
+      "test_only": true,
+      "learned_from": false,
+      "test_seed": 123
+    }
+  }
+}

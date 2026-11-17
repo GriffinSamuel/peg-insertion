@@ -1,0 +1,20 @@
+{
+  "practice_episodes": 140,
+  "episodes": 256,
+  "successes": 226,
+  "success_rate": 0.8828125,
+  "ci_lo": 0.8376364633255448,
+  "ci_hi": 0.916669236762509,
+  "steps_mean": 144.7433624267578,
+  "steps_median": 142.0,
+  "peak_force_mean": 99.14126586914062,
+  "final_xy_err_mean_mm": 0.6745262145996094,
+  "final_depth_mean_mm": 26.58070182800293,
+  "still_inserted_at_end": 0.8828125,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6687641143798828,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 123
+}

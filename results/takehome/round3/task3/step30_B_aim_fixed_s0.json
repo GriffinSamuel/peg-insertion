@@ -1,0 +1,40 @@
+{
+  "setting": "B_aim_fixed",
+  "seed": 0,
+  "test_seed": 123,
+  "constants_precontact": [
+    -0.0003437478153500706,
+    -0.0003556871379259974
+  ],
+  "constants_endofepisode": [
+    0.0015736866043880582,
+    -0.0002385237457929179
+  ],
+  "arms": {
+    "1_full": {
+      "successes": 455,
+      "rate": 0.91,
+      "peak_force_mean": 96.02935028076172
+    },
+    "2_const_precontact_mean": {
+      "successes": 155,
+      "rate": 0.31,
+      "peak_force_mean": 69.36553192138672
+    },
+    "2b_const_endofepisode_mean": {
+      "successes": 453,
+      "rate": 0.906,
+      "peak_force_mean": 95.63813781738281
+    },
+    "3_freeze_at_contact": {
+      "successes": 451,
+      "rate": 0.902,
+      "peak_force_mean": 94.52085876464844
+    },
+    "4_const_plus_jitter_0.1mm": {
+      "successes": 160,
+      "rate": 0.32,
+      "peak_force_mean": 70.63919067382812
+    }
+  }
+}

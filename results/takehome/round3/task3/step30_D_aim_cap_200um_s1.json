@@ -1,0 +1,40 @@
+{
+  "setting": "D_aim_cap_200um",
+  "seed": 1,
+  "test_seed": 123,
+  "constants_precontact": [
+    0.0011058020172640681,
+    0.0011550862109288573
+  ],
+  "constants_endofepisode": [
+    0.0010825202334672213,
+    0.0004692286893259734
+  ],
+  "arms": {
+    "1_full": {
+      "successes": 500,
+      "rate": 1.0,
+      "peak_force_mean": 101.60537719726562
+    },
+    "2_const_precontact_mean": {
+      "successes": 0,
+      "rate": 0.0,
+      "peak_force_mean": 67.81940460205078
+    },
+    "2b_const_endofepisode_mean": {
+      "successes": 16,
+      "rate": 0.032,
+      "peak_force_mean": 67.72136688232422
+    },
+    "3_freeze_at_contact": {
+      "successes": 493,
+      "rate": 0.986,
+      "peak_force_mean": 100.99112701416016
+    },
+    "4_const_plus_jitter_0.1mm": {
+      "successes": 0,
+      "rate": 0.0,
+      "peak_force_mean": 68.1636734008789
+    }
+  }
+}

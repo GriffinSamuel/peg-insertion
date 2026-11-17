@@ -1,0 +1,10 @@
+{
+ "written": "2026-11-17",
+ "method": "plain movement corrector (frozen old policy + capped 0.2 mm learned movement correction, 40 fill-up + 160 learner episodes, last version)",
+ "rule": "highest average on test seed 123 with practice seeds 0-4; among those within one spread of the top, fewest changes from plain movement",
+ "evidence": "R1b_rollback 84.1, R1c_both 84.1, plain movement 83.4 (goal6) / 80.1 (R0 rerun) on seeds 0-4; spread 3.0-6.1, so all are within one spread; plain movement has the fewest changes. Nothing earned HELPED, so Task 5 is skipped.",
+ "fresh_check": "practice seeds 300-304, test seed 2002; floor and no-camera-error reference also measured at test seed 2002 (takehome/round3_reference.py)",
+ "spread_used": "larger sample SD of method and base on five seeds: 5.1 to 6.1 points for R1b/R1c; choice also holds against the same-runner base R0 (80.1): plain movement is the base and has the fewest changes; R1b/R1c are +0.8 vs goal6 and +4.0 vs R0, neither a HELPED (needs more than one spread) under the plan rule",
+ "code_path": "Round 3 runner (takehome/round3_runner.py, setting RF_plain_movement), same recipe as goal6/movement",
+ "task4_note": "Task 4 cannot change the choice; fresh run started while the last Task 4 teachers finish (GPU had free slots)."
+}
