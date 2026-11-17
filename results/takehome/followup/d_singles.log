@@ -1,0 +1,54 @@
+START D_fill_0 206411 SEEDS [0, 1, 2]
+START D_fill_10 206412 SEEDS [0, 1, 2]
+START D_fill_20 206413 SEEDS [0, 1, 2]
+START D_fill_80 206414 SEEDS [0, 1, 2]
+FINISH {"name": "D_fill_80", "exit_code": 0, "seconds": 472.09588447998976}
+{"completed_rows": 60, "new_settings_attempted": 49, "promotions": ["D_fill_80"]}
+START D_fill_120 210681 SEEDS [0, 1, 2]
+FINISH {"name": "D_fill_20", "exit_code": 0, "seconds": 587.546594022002}
+{"completed_rows": 61, "new_settings_attempted": 50, "promotions": ["D_fill_80"]}
+START D_briefing 211210 SEEDS [0, 1, 2]
+FINISH {"name": "D_fill_10", "exit_code": 0, "seconds": 604.5821326760051}
+{"completed_rows": 62, "new_settings_attempted": 51, "promotions": ["D_fill_80"]}
+START D_privileged_critic 211339 SEEDS [0, 1, 2]
+FINISH {"name": "D_fill_0", "exit_code": 0, "seconds": 626.0499779450038}
+{"completed_rows": 63, "new_settings_attempted": 52, "promotions": ["D_fill_0", "D_fill_80"]}
+START D_one_critic 211844 SEEDS [0, 1, 2]
+FINISH {"name": "D_fill_120", "exit_code": 0, "seconds": 280.0005011359899}
+{"completed_rows": 64, "new_settings_attempted": 53, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120"]}
+START D_one_update 214229 SEEDS [0, 1, 2]
+FINISH {"name": "D_one_update", "exit_code": 0, "seconds": 249.0517461970012}
+{"completed_rows": 65, "new_settings_attempted": 54, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120"]}
+START D_aim_cap_50um 216938 SEEDS [0, 1, 2]
+FINISH {"name": "D_briefing", "exit_code": 0, "seconds": 574.3246347550012}
+{"completed_rows": 66, "new_settings_attempted": 55, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120"]}
+START D_aim_cap_200um 218939 SEEDS [0, 1, 2]
+FINISH {"name": "D_privileged_critic", "exit_code": 0, "seconds": 572.5699391420058}
+{"completed_rows": 67, "new_settings_attempted": 56, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120"]}
+START D_final_decider 219000 SEEDS [0, 1, 2]
+FINISH {"name": "D_one_critic", "exit_code": 0, "seconds": 566.0869648250082}
+{"completed_rows": 68, "new_settings_attempted": 57, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120"]}
+START D_near_hole 219234 SEEDS [0, 1, 2]
+FINISH {"name": "D_aim_cap_50um", "exit_code": 0, "seconds": 522.4415466800128}
+{"completed_rows": 69, "new_settings_attempted": 58, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120"]}
+START D_classification 226079 SEEDS [0, 1, 2]
+FINISH {"name": "D_final_decider", "exit_code": 0, "seconds": 508.61485520099814}
+{"completed_rows": 71, "new_settings_attempted": 59, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole"]}
+FINISH {"name": "D_near_hole", "exit_code": 0, "seconds": 501.3019541520043}
+{"completed_rows": 71, "new_settings_attempted": 59, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole"]}
+START D_three_step 228308 SEEDS [0, 1, 2]
+START D_return_floor 228309 SEEDS [0, 1, 2]
+FINISH {"name": "D_classification", "exit_code": 0, "seconds": 449.4930650120077}
+{"completed_rows": 72, "new_settings_attempted": 61, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole", "D_classification"]}
+START D_force_penalty 230986 SEEDS [0, 1, 2]
+FINISH {"name": "D_aim_cap_200um", "exit_code": -15, "seconds": 925.5274040850054}
+{"completed_rows": 73, "new_settings_attempted": 62, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole", "D_classification"]}
+START D_sibling_fill 231431 SEEDS [0, 1, 2]
+FINISH {"name": "D_return_floor", "exit_code": 0, "seconds": 403.6989749899949}
+{"completed_rows": 75, "new_settings_attempted": 63, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole", "D_classification", "D_return_floor"]}
+FINISH {"name": "D_three_step", "exit_code": 0, "seconds": 416.3633488189953}
+{"completed_rows": 75, "new_settings_attempted": 63, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole", "D_classification", "D_return_floor"]}
+FINISH {"name": "D_force_penalty", "exit_code": 0, "seconds": 290.8438066999952}
+{"completed_rows": 76, "new_settings_attempted": 63, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole", "D_classification", "D_return_floor"]}
+FINISH {"name": "D_sibling_fill", "exit_code": 0, "seconds": 330.4214629890048}
+{"completed_rows": 77, "new_settings_attempted": 63, "promotions": ["D_fill_0", "D_fill_80", "D_fill_120", "D_near_hole", "D_classification", "D_return_floor"]}

@@ -1,0 +1,43 @@
+{
+  "episodes": 500,
+  "successes": 463,
+  "success_rate": 0.926,
+  "ci_lo": 0.8996646988891734,
+  "ci_hi": 0.945839126122497,
+  "steps_mean": 168.20733642578125,
+  "steps_median": 167.0,
+  "peak_force_mean": 94.5414047241211,
+  "final_xy_err_mean_mm": 0.5229238271713257,
+  "final_depth_mean_mm": 28.569862365722656,
+  "still_inserted_at_end": 0.926,
+  "through_wall_episodes": 0,
+  "max_lateral_when_deep_mm": 0.6698369979858398,
+  "nan_episodes": 0,
+  "test_only": true,
+  "learned_from": false,
+  "test_seed": 789,
+  "inspected_episode_ids": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "max_lateral_when_deep_examples_m": [
+    0.0006347894668579102,
+    0.0006122589111328125,
+    0.0005142027512192726,
+    0.0005306899547576904,
+    0.00050324946641922
+  ],
+  "max_abs_control_examples": [
+    0.97957843542099,
+    0.9747359156608582,
+    0.9746160507202148,
+    0.9806613922119141,
+    0.9818220734596252
+  ],
+  "used_for_selection": false,
+  "camera_condition": "fixed",
+  "reason": "Required physical check above the zero-error reference; revised consistent-camera exception applies to aim-only"
+}

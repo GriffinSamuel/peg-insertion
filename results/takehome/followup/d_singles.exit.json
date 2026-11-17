@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/mnt/c/Users/Griff/Projects/peg-insertion/.venv/bin/python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "d_singles",
+    "--settings",
+    "D_fill_0",
+    "D_fill_10",
+    "D_fill_20",
+    "D_fill_80",
+    "D_fill_120",
+    "D_briefing",
+    "D_privileged_critic",
+    "D_one_critic",
+    "D_one_update",
+    "D_aim_cap_50um",
+    "D_aim_cap_200um",
+    "D_final_decider",
+    "D_near_hole",
+    "D_classification",
+    "D_three_step",
+    "D_return_floor",
+    "D_force_penalty",
+    "D_sibling_fill"
+  ],
+  "started_utc": "2026-11-17T07:56:07.099791+00:00",
+  "finished_utc": "2026-11-17T08:37:06.606502+00:00",
+  "seconds": 2459.506739603996,
+  "exit_code": 1
+}

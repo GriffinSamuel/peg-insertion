@@ -349,6 +349,23 @@ def _count_reset_audits(out, errors):
     return rows
 
 
+def _count_interrupted_tests(out, errors):
+    rows=[]
+    for path in sorted((out/'interruptions').glob('*.json')):
+        row=_read_json(path)
+        count=row.get('requested_episodes')
+        valid=(_int_value(count) and count>0 and row.get('test_only') is True
+            and row.get('learned_from') is False and row.get('completed_count_known') is False
+            and row.get('completed_episodes') is None)
+        if not valid:
+            errors.append(f'{path.relative_to(out)}: invalid interrupted-test provenance')
+        rows.append(dict(path=path.relative_to(out).as_posix(),valid=valid,**row))
+    return dict(files=rows,request_count=len(rows),
+        requested_episodes=sum(r['requested_episodes'] for r in rows if r['valid']),
+        included_in_completed_full_test_total=False,
+        note='These requests returned no completed count. Requested episodes are shown separately, not invented as completed tests or successes.')
+
+
 def build_accounting(out=OUT):
     """Build counters from a follow-up root directory without writing files."""
     out = Path(out)
@@ -365,6 +382,7 @@ def build_accounting(out=OUT):
     budgets = _count_budget_ledgers(out, errors)
     tests = _count_full_tests(out, errors)
     reset_audits = _count_reset_audits(out, errors)
+    interruptions = _count_interrupted_tests(out, errors)
     settings = registry.get("settings", [])
     if not isinstance(settings, list):
         settings = []
@@ -392,6 +410,7 @@ def build_accounting(out=OUT):
             "valid_ledger_count": sum(bool(row["valid"]) for row in budgets),
         },
         "full_tests": tests,
+        "interrupted_test_requests": interruptions,
         "reset_only_probe_audits": {
             "files": reset_audits,
             "audit_file_count": len(reset_audits),

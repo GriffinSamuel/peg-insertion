@@ -1,0 +1,68 @@
+{
+  "record": {
+    "phase": "D",
+    "name": "D_aim_cap_200um",
+    "description": "Allow each aim nudge up to 0.2 mm.",
+    "base": "B_aim_fixed",
+    "base_result": "s0 457/500 (91.4%); mean 91.40% \u00b1 0.00pp",
+    "seeds": [
+      {
+        "seed": 0,
+        "successes": 495,
+        "episodes": 500
+      }
+    ],
+    "mean_percent": 99.0,
+    "spread_pp": 0.0,
+    "delta_pp": 7.599999999999994,
+    "verdict": "DID NOT RUN",
+    "aim_start_mm": 1.345032419043949,
+    "aim_success_mm": 4.1474152973107286,
+    "steps_to_insert": 152.8808135986328,
+    "peak_force_n": 95.60552215576172,
+    "practice_episodes": 300,
+    "hand_search": false,
+    "hidden_information": false,
+    "camera_condition": "fixed for the whole run",
+    "reason": "Job exit-15; see logs/d_singles_D_aim_cap_200um.log",
+    "base_mean_percent": 91.4,
+    "base_spread_pp": 0.0
+  },
+  "per_seed": [
+    {
+      "test_episodes": 500,
+      "successes": 495,
+      "success_percent": 99.0,
+      "steps_mean": 152.8808135986328,
+      "peak_force_mean": 95.60552215576172,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false,
+      "outputs": 2,
+      "aim_metrics_applicable": true,
+      "hidden_true_bias_used_for_analysis_only": true,
+      "valid_success_event_count": 495,
+      "valid_success_episode_count": 495,
+      "valid_success_event_sum_matches_final": true,
+      "valid_success_episode_count_matches_final": true,
+      "success_count_matches_final": true,
+      "episode_success_vector_count": 495,
+      "episode_success_vector_matches_final": true,
+      "initial_guess_error_mean_mm": 1.345032419043949,
+      "guess_error_at_first_valid_success_mean_mm": 4.1474152973107286,
+      "paired_initial_guess_error_mean_mm": 1.345032419043949,
+      "paired_guess_error_reduction_mean_mm": -2.80238287826678,
+      "end200_guess_error_mean_mm": 3.5565099497028934,
+      "success_episode_count_for_paired_metrics": 495,
+      "seed": 0,
+      "practice_episodes": 200,
+      "practice_budget_limit": 200,
+      "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/D/D_aim_cap_200um/seed_0/result.json",
+      "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/D/D_aim_cap_200um/seed_0/test_0200_traces.npz",
+      "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/D/D_aim_cap_200um/seed_0/budget.json"
+    }
+  ],
+  "paired_error_reduction_mm": -2.80238287826678,
+  "working_aim": false,
+  "extend": false
+}

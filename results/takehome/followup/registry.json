@@ -1,7 +1,7 @@
 {
   "max_new_settings": 90,
   "original_settings": 28,
-  "phase": "C",
+  "phase": "D",
   "settings": [
     {
       "name": "B_gate",
@@ -1270,6 +1270,582 @@
       ],
       "status": "finished",
       "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_fill_0",
+      "phase": "D",
+      "description": "Use 0 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 0,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_fill_10",
+      "phase": "D",
+      "description": "Use 10 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 10,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_fill_20",
+      "phase": "D",
+      "description": "Use 20 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 20,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_fill_80",
+      "phase": "D",
+      "description": "Use 80 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 80,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_fill_120",
+      "phase": "D",
+      "description": "Use 120 of 200 practice episodes for fill-up.",
+      "overrides": {
+        "fill_episodes": 120,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_side_by_side",
+      "phase": "D",
+      "description": "Train separate aim and movement parts in parallel.",
+      "overrides": {
+        "outputs": 2,
+        "coordination": "side_by_side",
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Needs a movement component; this base is aim-only.",
+      "counted": false
+    },
+    {
+      "name": "D_aim_then_move",
+      "phase": "D",
+      "description": "Train the aim part first and the movement part second.",
+      "overrides": {
+        "outputs": 2,
+        "coordination": "aim_then_move",
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Needs a movement component to train second.",
+      "counted": false
+    },
+    {
+      "name": "D_move_then_aim",
+      "phase": "D",
+      "description": "Train the movement part first and the aim part second.",
+      "overrides": {
+        "outputs": 2,
+        "coordination": "move_then_aim",
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Needs a movement component to train first.",
+      "counted": false
+    },
+    {
+      "name": "D_briefing",
+      "phase": "D",
+      "description": "Let the scorekeeper study its own fill-up data before the corrector learns.",
+      "overrides": {
+        "briefing": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_privileged_critic",
+      "phase": "D",
+      "description": "Give the scorekeeper the hidden camera error during practice only.",
+      "overrides": {
+        "privileged_critic": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": true,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_one_critic",
+      "phase": "D",
+      "description": "Use one scorekeeper instead of four.",
+      "overrides": {
+        "ensemble": 1,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_one_update",
+      "phase": "D",
+      "description": "Study each new step once instead of four times.",
+      "overrides": {
+        "updates_per_step": 1,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_aim_cap_50um",
+      "phase": "D",
+      "description": "Limit each aim nudge to 0.05 mm.",
+      "overrides": {
+        "step_cap": 5e-05,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_aim_cap_200um",
+      "phase": "D",
+      "description": "Allow each aim nudge up to 0.2 mm.",
+      "overrides": {
+        "step_cap": 0.0002,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "failed",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Job exit-15; see logs/d_singles_D_aim_cap_200um.log",
+      "counted": true
+    },
+    {
+      "name": "D_movement_cap_400um",
+      "phase": "D",
+      "description": "Allow movement corrections up to 0.4 mm per axis.",
+      "overrides": {
+        "outputs": 2,
+        "movement_cap": 0.0004,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "A movement cap cannot alter an aim-only learner.",
+      "counted": false
+    },
+    {
+      "name": "D_final_decider",
+      "phase": "D",
+      "description": "Let the learned scorekeeper choose among zero and scaled corrections.",
+      "overrides": {
+        "outputs": 2,
+        "final_decider": true,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_near_hole",
+      "phase": "D",
+      "description": "Allow correction only within 15 mm height and 10 mm sideways camera distance.",
+      "overrides": {
+        "near_hole": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_contact_cap",
+      "phase": "D",
+      "description": "Halve the movement cap below 5 N contact and double it above 5 N.",
+      "overrides": {
+        "outputs": 2,
+        "contact_cap": true,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Scales the absent movement correction, not the aim nudge.",
+      "counted": false
+    },
+    {
+      "name": "D_uncertainty_cap",
+      "phase": "D",
+      "description": "Scale the movement cap by the original policy action spread.",
+      "overrides": {
+        "outputs": 2,
+        "uncertainty_cap": true,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "Scales the absent movement correction, not the aim nudge.",
+      "counted": false
+    },
+    {
+      "name": "D_classification",
+      "phase": "D",
+      "description": "Use a bounded 0-to-1 scorekeeper with a different error formula.",
+      "overrides": {
+        "classification": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_three_step",
+      "phase": "D",
+      "description": "Combine three consecutive rewards before updating a rating.",
+      "overrides": {
+        "n_step": 3,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_return_floor",
+      "phase": "D",
+      "description": "Keep a learning target at least as large as the return actually observed.",
+      "overrides": {
+        "return_floor": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_force_penalty",
+      "phase": "D",
+      "description": "Penalize force above 15 N during practice using the fixed original cost.",
+      "overrides": {
+        "outputs": 2,
+        "force_penalty": true,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "D_sibling_fill",
+      "phase": "D",
+      "description": "Collect fill-up data with the three specified sibling policies.",
+      "overrides": {
+        "sibling_fill": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
       "conditional": false,

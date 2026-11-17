@@ -1,0 +1,1213 @@
+{
+  "phase": "D",
+  "source": "Read-only review of required diagnostic tests; no new episodes.",
+  "checks": 40,
+  "test_episodes": 20000,
+  "inspected_examples": 200,
+  "through_wall_episodes": 0,
+  "nan_episodes": 0,
+  "used_for_selection": false,
+  "rows": [
+    {
+      "path": "D/D_fill_0/seed_0/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 484,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005855858325958252,
+        0.0005058776587247849,
+        0.0005129063501954079,
+        0.0005896091461181641,
+        0.0005374336615204811
+      ],
+      "max_abs_control_examples": [
+        0.9794913530349731,
+        0.9771958589553833,
+        0.982932448387146,
+        0.9776339530944824,
+        0.9739975333213806
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_0/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 493,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005698502063751221,
+        0.0005369172431528568,
+        0.00047522783279418945,
+        0.0005937814712524414,
+        0.0006004571914672852
+      ],
+      "max_abs_control_examples": [
+        0.9758506417274475,
+        0.9886783957481384,
+        0.975544273853302,
+        0.9766442775726318,
+        0.9829035401344299
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_0/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 477,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005384739488363266,
+        0.000506967306137085,
+        0.0005328059196472168,
+        0.0005686581134796143,
+        0.0005165338516235352
+      ],
+      "max_abs_control_examples": [
+        0.9796850085258484,
+        0.9837917685508728,
+        0.9841821789741516,
+        0.974483847618103,
+        0.9774081110954285
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_0/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 485,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006255209445953369,
+        0.0005172649398446083,
+        0.000639498233795166,
+        0.0005266070365905762,
+        0.0005919039249420166
+      ],
+      "max_abs_control_examples": [
+        0.9753122329711914,
+        0.9755117297172546,
+        0.9732473492622375,
+        0.9661751389503479,
+        0.9685395359992981
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_0/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 478,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005176044069230556,
+        0.0005201101303100586,
+        0.0005110502243041992,
+        0.0005800426006317139,
+        0.0006393790245056152
+      ],
+      "max_abs_control_examples": [
+        0.9709081649780273,
+        0.9753456711769104,
+        0.9813404679298401,
+        0.9771773815155029,
+        0.9807062745094299
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_1/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 465,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006323158740997314,
+        0.0005727708339691162,
+        0.0005207657814025879,
+        0.0005327761173248291,
+        0.0005856454372406006
+      ],
+      "max_abs_control_examples": [
+        0.9828459620475769,
+        0.9804874062538147,
+        0.9842357635498047,
+        0.9785090088844299,
+        0.9801993370056152
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_1/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 497,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.000565946102142334,
+        0.0006476640701293945,
+        0.0005263686180114746,
+        0.000620424747467041,
+        0.0005878806114196777
+      ],
+      "max_abs_control_examples": [
+        0.9825475215911865,
+        0.9791828989982605,
+        0.9827088713645935,
+        0.9783025979995728,
+        0.9778730273246765
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_2/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 470,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005883574485778809,
+        0.0005283057689666748,
+        0.0005944371223449707,
+        0.0005943775177001953,
+        0.0005320906639099121
+      ],
+      "max_abs_control_examples": [
+        0.9782963395118713,
+        0.9795939326286316,
+        0.9893600344657898,
+        0.9797016382217407,
+        0.9639173150062561
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 485,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006243288516998291,
+        0.00067177414894104,
+        0.0005655288696289062,
+        0.0005306852981448174,
+        0.0005401372909545898
+      ],
+      "max_abs_control_examples": [
+        0.9783186316490173,
+        0.9824599623680115,
+        0.9970490336418152,
+        0.9807234406471252,
+        0.9431149959564209
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_0/seed_2/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 461,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005261162295937538,
+        0.0005324510857462883,
+        0.0006080865859985352,
+        0.000554502010345459,
+        0.0005413407925516367
+      ],
+      "max_abs_control_examples": [
+        0.9730695486068726,
+        0.9811547994613647,
+        0.9772723913192749,
+        0.9814293384552002,
+        0.978143036365509
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_10/seed_2/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 472,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006228089332580566,
+        0.0006206631660461426,
+        0.0005336403846740723,
+        0.0005836784839630127,
+        0.0005537569522857666
+      ],
+      "max_abs_control_examples": [
+        0.9798497557640076,
+        0.980118453502655,
+        0.9842435717582703,
+        0.9831491112709045,
+        0.9795394539833069
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_10/seed_2/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 474,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005243811756372452,
+        0.0005832314491271973,
+        0.0005431175231933594,
+        0.0004937779158353806,
+        0.0005907416343688965
+      ],
+      "max_abs_control_examples": [
+        0.9752168655395508,
+        0.9827091693878174,
+        0.9783951640129089,
+        0.9800249934196472,
+        0.9842401146888733
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_10/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 471,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005887150764465332,
+        0.0005550682544708252,
+        0.0005596280097961426,
+        0.0005778670310974121,
+        0.0006017982959747314
+      ],
+      "max_abs_control_examples": [
+        0.9784573912620544,
+        0.9816180467605591,
+        0.9800422787666321,
+        0.9821373820304871,
+        0.9791107773780823
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_10/seed_2/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 474,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005336999893188477,
+        0.0005325078964233398,
+        0.0005015549249947071,
+        0.0006211996078491211,
+        0.0005407035350799561
+      ],
+      "max_abs_control_examples": [
+        0.975340723991394,
+        0.9819551706314087,
+        0.9765769243240356,
+        0.9800291657447815,
+        0.9678725004196167
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_120/seed_1/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 491,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005327807739377022,
+        0.0005589127540588379,
+        0.0005378187634050846,
+        0.0004982221871614456,
+        0.0005173627287149429
+      ],
+      "max_abs_control_examples": [
+        0.9760867357254028,
+        0.9771971106529236,
+        0.973950207233429,
+        0.980539858341217,
+        0.9802666306495667
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_120/seed_2/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 493,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005784332752227783,
+        0.0006483793258666992,
+        0.0005744099617004395,
+        0.00048022670671343803,
+        0.0005145668983459473
+      ],
+      "max_abs_control_examples": [
+        0.9836928844451904,
+        0.9823994040489197,
+        0.9813797473907471,
+        0.9764474630355835,
+        0.9784358739852905
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_0/extra_ceiling_0060.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 479,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005837380886077881,
+        0.0005075037479400635,
+        0.0005397200584411621,
+        0.0005443096160888672,
+        0.0006249845027923584
+      ],
+      "max_abs_control_examples": [
+        0.9702833890914917,
+        0.9776473641395569,
+        0.9770326018333435,
+        0.9773312211036682,
+        0.9822121262550354
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_0/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 484,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005458593368530273,
+        0.0005140248686075211,
+        0.0006156563758850098,
+        0.0005034515634179115,
+        0.0005583763122558594
+      ],
+      "max_abs_control_examples": [
+        0.9722068905830383,
+        0.9789066314697266,
+        0.9769653081893921,
+        0.9773886203765869,
+        0.9518078565597534
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_0/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 477,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005303933285176754,
+        0.0005728006362915039,
+        0.0005200505256652832,
+        0.000602424144744873,
+        0.0004906998947262764
+      ],
+      "max_abs_control_examples": [
+        0.9824004173278809,
+        0.9768691062927246,
+        0.9758760929107666,
+        0.9798721075057983,
+        0.9837645292282104
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_0/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 483,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006004869937896729,
+        0.0006217360496520996,
+        0.0005742907524108887,
+        0.000589907169342041,
+        0.0005127950571477413
+      ],
+      "max_abs_control_examples": [
+        0.9682717323303223,
+        0.978119432926178,
+        0.9752345085144043,
+        0.9745633006095886,
+        0.9779477119445801
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_0/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 486,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006132721900939941,
+        0.0006077885627746582,
+        0.0005646347999572754,
+        0.0005387067794799805,
+        0.0005114972591400146
+      ],
+      "max_abs_control_examples": [
+        0.9729021787643433,
+        0.9765939712524414,
+        0.9748255014419556,
+        0.9755931496620178,
+        0.9790966510772705
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_2/extra_ceiling_0060.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 479,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006851851940155029,
+        0.0005335807800292969,
+        0.0005102753639221191,
+        0.0005844235420227051,
+        0.0005067435558885336
+      ],
+      "max_abs_control_examples": [
+        0.9720728397369385,
+        0.9894853830337524,
+        0.9771010875701904,
+        0.9807454943656921,
+        0.9785913228988647
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_2/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 471,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005682110786437988,
+        0.0005853474140167236,
+        0.0005171750672161579,
+        0.000523177906870842,
+        0.0005251467227935791
+      ],
+      "max_abs_control_examples": [
+        0.9861918687820435,
+        0.9783514738082886,
+        0.9872807264328003,
+        0.9749239683151245,
+        0.9824971556663513
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_2/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 479,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.000586390495300293,
+        0.0005543828010559082,
+        0.000522315502166748,
+        0.0005367398262023926,
+        0.000583350658416748
+      ],
+      "max_abs_control_examples": [
+        0.9827931523323059,
+        0.9789510369300842,
+        0.9757184386253357,
+        0.9812701344490051,
+        0.9775094389915466
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_2/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 470,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005672276020050049,
+        0.0005213995464146137,
+        0.0005087456665933132,
+        0.0005156099796295166,
+        0.0005223427433520555
+      ],
+      "max_abs_control_examples": [
+        0.9848511219024658,
+        0.9790367484092712,
+        0.9766720533370972,
+        0.9828209280967712,
+        0.9808276295661926
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_2/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 465,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005646347999572754,
+        0.0005448656156659126,
+        0.0005165892653167248,
+        0.0006431937217712402,
+        0.0005162509623914957
+      ],
+      "max_abs_control_examples": [
+        0.9780832529067993,
+        0.9746254682540894,
+        0.9791824817657471,
+        0.9798000454902649,
+        0.9837842583656311
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_20/seed_2/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 474,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006575584411621094,
+        0.0006115734577178955,
+        0.0005460977554321289,
+        0.0006443262100219727,
+        0.0005240647587925196
+      ],
+      "max_abs_control_examples": [
+        0.972109854221344,
+        0.9837238192558289,
+        0.9884396195411682,
+        0.977622389793396,
+        0.982994019985199
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_0/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 476,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005372762680053711,
+        0.0005792379379272461,
+        0.0005849599838256836,
+        0.0005576610565185547,
+        0.0005623400211334229
+      ],
+      "max_abs_control_examples": [
+        0.9778180718421936,
+        0.995660126209259,
+        0.9841839075088501,
+        0.9792178869247437,
+        0.9758457541465759
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_0/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 472,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006078481674194336,
+        0.000494152307510376,
+        0.0005207657814025879,
+        0.0006223917007446289,
+        0.0005091428756713867
+      ],
+      "max_abs_control_examples": [
+        0.978701651096344,
+        0.981051504611969,
+        0.996405303478241,
+        0.9772037863731384,
+        0.9798787236213684
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_1/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 456,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006130039691925049,
+        0.0005607865750789642,
+        0.0005554556846618652,
+        0.0005861222743988037,
+        0.0005958676338195801
+      ],
+      "max_abs_control_examples": [
+        0.9809326529502869,
+        0.9757850170135498,
+        0.9740673899650574,
+        0.9766728281974792,
+        0.9765030145645142
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_1/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 485,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.000581204891204834,
+        0.0004995465278625488,
+        0.0005929470062255859,
+        0.0005780458450317383,
+        0.00061073899269104
+      ],
+      "max_abs_control_examples": [
+        0.9772276282310486,
+        0.972903847694397,
+        0.982037365436554,
+        0.9765798449516296,
+        0.9819326400756836
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_1/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 485,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006360411643981934,
+        0.0005142390727996826,
+        0.0005245860666036606,
+        0.00053444504737854,
+        0.0005427300930023193
+      ],
+      "max_abs_control_examples": [
+        0.9650352001190186,
+        0.9732463955879211,
+        0.9796556830406189,
+        0.9764711260795593,
+        0.9740357398986816
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_1/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 489,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005978047847747803,
+        0.0005248594097793102,
+        0.0005049705505371094,
+        0.0005684792995452881,
+        0.0005530714988708496
+      ],
+      "max_abs_control_examples": [
+        0.9701747894287109,
+        0.9790880680084229,
+        0.9810732007026672,
+        0.9775941967964172,
+        0.9532195925712585
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_fill_80/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 478,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0004993081092834473,
+        0.0005972385406494141,
+        0.000587761402130127,
+        0.0005714893341064453,
+        0.0005644857883453369
+      ],
+      "max_abs_control_examples": [
+        0.9775435328483582,
+        0.980342447757721,
+        0.9847953915596008,
+        0.9833561778068542,
+        0.9897928237915039
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_one_critic/seed_0/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 495,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005383798852562904,
+        0.0006226599216461182,
+        0.0005054092034697533,
+        0.0005766153335571289,
+        0.000522400951012969
+      ],
+      "max_abs_control_examples": [
+        0.9783697724342346,
+        0.9811498522758484,
+        0.9849779605865479,
+        0.9805806279182434,
+        0.9812660813331604
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_one_critic/seed_0/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 480,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005708634853363037,
+        0.00048545002937316895,
+        0.0005110502243041992,
+        0.0006156861782073975,
+        0.000591963529586792
+      ],
+      "max_abs_control_examples": [
+        0.9847371578216553,
+        0.978437602519989,
+        0.9767915606498718,
+        0.9746816158294678,
+        0.9778288006782532
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_privileged_critic/seed_0/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 479,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.000600665807723999,
+        0.0005509508773684502,
+        0.0005346410907804966,
+        0.0005730092525482178,
+        0.000594019889831543
+      ],
+      "max_abs_control_examples": [
+        0.9716545939445496,
+        0.9796357750892639,
+        0.9836667776107788,
+        0.9783763885498047,
+        0.9820775389671326
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_privileged_critic/seed_0/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 474,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005796849727630615,
+        0.0005432320758700371,
+        0.0005547404289245605,
+        0.0005363821983337402,
+        0.0006070733070373535
+      ],
+      "max_abs_control_examples": [
+        0.9853408932685852,
+        0.978159487247467,
+        0.9844823479652405,
+        0.9871910214424133,
+        0.9794193506240845
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_privileged_critic/seed_0/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 471,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005191625095903873,
+        0.0005476474761962891,
+        0.0005545616149902344,
+        0.0005860328674316406,
+        0.0005418658256530762
+      ],
+      "max_abs_control_examples": [
+        0.9697405099868774,
+        0.981188952922821,
+        0.9739462733268738,
+        0.977558434009552,
+        0.9577548503875732
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "D/D_privileged_critic/seed_0/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 481,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005667209625244141,
+        0.000606149435043335,
+        0.0005698800086975098,
+        0.0005570650100708008,
+        0.0005828142166137695
+      ],
+      "max_abs_control_examples": [
+        0.9721677303314209,
+        0.9763526916503906,
+        0.9795916676521301,
+        0.9755363464355469,
+        0.979399561882019
+      ],
+      "used_for_selection": false
+    }
+  ],
+  "example_plot_source": "D/D_fill_0/seed_0/extra_ceiling_0080.json"
+}

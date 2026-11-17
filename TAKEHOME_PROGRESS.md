@@ -798,3 +798,26 @@ None of these movement changes reliably improved the plain method under the fixe
 ### 8. Questions before the next phase
 
 None. Commit and push C, then run the18 applicable fixed-camera aim singles in Phase D with four detached GPU jobs and six explained skips.
+
+## Phase D running checkpoint 2026-11-17T08:08:33.274903+00:00
+
+C is pushed as41b7975. The detached d_singles suite is the only registry/scoreboard writer and runs up to four jobs. Completed fill-up screens:
+
+- D_fill_0: 478, 498, 459/500; 95.67% ± 3.90 points; PROMISING.
+- D_fill_10: 411, 29, 467/500; 60.47% ± 47.67 points; UNSTABLE.
+- D_fill_20: 468, 436, 473/500; 91.80% ± 4.01 points; NO REAL DIFFERENCE.
+- D_fill_80: 478, 487, 471/500; 95.73% ± 1.60 points; PROMISING.
+
+Promising settings will be extended after singles finish. Final-confirmation safeguards passed10 synthetic tests after fixing a missing fake-process PID; no experiments were involved. Touch preparation passed5 synthetic tests, with no Phase F data inspection or simulation yet. Both touch entrypoints are gated on Phase E completion. Fresh choice remains absent.
+
+## Resumption checkpoint 2026-11-17T08:22:30.542132+00:00
+
+Active phase D; detached d_singles PID206395, suite parent is the sole registry/scoreboard writer. 10 of18 runnable settings finished; 59 follow-up setting slots attempted so far. Do not launch another suite or edit the registry until its parent exits. Then preserve the three-seed screening snapshot, extend every PROMISING row to0–4, close/report/commit/push D, and continue E.
+
+Prepared while D runs: root reviewed final supervisor and reference CLI, cross-seed identical-outcome check, touch saved-pose diagnosis, blind-search controller/reference runner and hand-reference renderer. The10 final-safety contracts and5 touch contracts pass; these used no real episodes or fresh keys. F diagnosis and hand entrypoints refuse execution before E completion. No F data have been analyzed and no touch method has been tested. Torque/probe implementations and teacher training remain conditional work for F, not completed work. Source-backed contact notes are in takehome/followup_contact_model.md; F design is in takehome/followup_f_design.md.
+
+Root inspected the first40 D above-reference checks and the saved trajectory plot:20,000 test-only episodes,200 bounded-control examples, no wall or NaN flags. More diagnostics are arriving and must be reviewed at D closeout. D/fill_failure_comparison.json describes the collapsed10-fill seed without claiming a causal training explanation. All original results and the80.2% headline remain unchanged; G/choice.json is absent.
+
+## Phase D stalled-worker recovery, 2026-11-17 UTC
+
+D_aim_cap_200um seed1 made no progress after08:20:19UTC at checkpoint90. Its ledger has100 reserved episodes and practice_0100.npz is complete. GPU is visible,10GiB RAM is available, otherjobs advance, and no invalid-number/tripwire message exists. Root preserved checkpoint90, ledger100, progress90 and SHA256 hashes of all10 saved practice batches under D/stalled_cap_recovery/, then sent SIGINT only to worker218939. Let d_singles finish its other work; it may report an ordinary failed worker. After it exits, resume this setting under a new suite name with the same directory/config/seeds, preserving all existing results and using saved batch100. Do not create a fresh seed or recollect any charged batch. The status is an operational recovery, not a scientific tripwire halt.

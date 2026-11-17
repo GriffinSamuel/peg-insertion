@@ -1,0 +1,14 @@
+{
+  "seed": 2,
+  "practice_episodes": 200,
+  "gradient_updates": 85424,
+  "latest": {
+    "practice_episodes": 200,
+    "source": "online",
+    "source_policy": "force_0.5mm_s2",
+    "valid_steps": 1750,
+    "collect_seconds": 0.7231073540024227,
+    "update_seconds": 8.332929475000128,
+    "test_seconds": 1.3843387329980033
+  }
+}

@@ -1,0 +1,104 @@
+FF........                                                               [100%]
+=================================== FAILURES ===================================
+_____ test_supervisor_persists_tripwire_halt_and_terminates_other_workers ______
+
+tmp_path = PosixPath('/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/cache/pytest/test_supervisor_persists_tripw0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x79cc3d672b40>
+
+    def test_supervisor_persists_tripwire_halt_and_terminates_other_workers(tmp_path, monkeypatch):
+>       out, processes, registry, suite = _run_with_fake_workers(tmp_path, monkeypatch, failure_code=1)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+takehome/test_followup_final_safety.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+takehome/test_followup_final_safety.py:63: in _run_with_fake_workers
+    followup_final_suite.run("synthetic_g")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'synthetic_g'
+
+    def run(name):
+        registry = read(OUT/'registry.json')
+        if registry.get('status') == 'halted_tripwire':
+            raise RuntimeError('Tripwire halt is active')
+        if not {'A', 'B', 'B_mixed', 'C', 'D', 'E', 'F'}.issubset(registry['completed_phases']):
+            raise ValueError('Finish all preceding phases before fresh confirmation')
+        configs = configurations(read(OUT/'G/choice.json'))
+        active = []
+        done = []
+        checked = set()
+        started = time.perf_counter()
+        failure = None
+        try:
+            for shard in range(4):
+                path = OUT/'logs'/f'{name}_shard_{shard}.log'
+                path.parent.mkdir(parents=True, exist_ok=True)
+                log = path.open('x')
+                try:
+                    process = subprocess.Popen(
+                        [sys.executable, '-B', 'takehome/followup_final_worker.py', '--shard', str(shard)],
+                        cwd=ROOT, stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT)
+                except BaseException:
+                    log.close()
+                    raise
+                active.append((shard, process, log, path))
+>               print('START', shard, process.pid, flush=True)
+                                      ^^^^^^^^^^^
+E               AttributeError: '_FakeProcess' object has no attribute 'pid'
+
+takehome/followup_final_suite.py:50: AttributeError
+----------------------------- Captured stdout call -----------------------------
+FAILURE AttributeError("'_FakeProcess' object has no attribute 'pid'")
+_______ test_supervisor_does_not_label_ordinary_worker_error_as_tripwire _______
+
+tmp_path = PosixPath('/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/cache/pytest/test_supervisor_does_not_label0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x79cc3d31f0b0>
+
+    def test_supervisor_does_not_label_ordinary_worker_error_as_tripwire(tmp_path, monkeypatch):
+>       _, processes, registry, suite = _run_with_fake_workers(tmp_path, monkeypatch, failure_code=2)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+takehome/test_followup_final_safety.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+takehome/test_followup_final_safety.py:63: in _run_with_fake_workers
+    followup_final_suite.run("synthetic_g")
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+name = 'synthetic_g'
+
+    def run(name):
+        registry = read(OUT/'registry.json')
+        if registry.get('status') == 'halted_tripwire':
+            raise RuntimeError('Tripwire halt is active')
+        if not {'A', 'B', 'B_mixed', 'C', 'D', 'E', 'F'}.issubset(registry['completed_phases']):
+            raise ValueError('Finish all preceding phases before fresh confirmation')
+        configs = configurations(read(OUT/'G/choice.json'))
+        active = []
+        done = []
+        checked = set()
+        started = time.perf_counter()
+        failure = None
+        try:
+            for shard in range(4):
+                path = OUT/'logs'/f'{name}_shard_{shard}.log'
+                path.parent.mkdir(parents=True, exist_ok=True)
+                log = path.open('x')
+                try:
+                    process = subprocess.Popen(
+                        [sys.executable, '-B', 'takehome/followup_final_worker.py', '--shard', str(shard)],
+                        cwd=ROOT, stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT)
+                except BaseException:
+                    log.close()
+                    raise
+                active.append((shard, process, log, path))
+>               print('START', shard, process.pid, flush=True)
+                                      ^^^^^^^^^^^
+E               AttributeError: '_FakeProcess' object has no attribute 'pid'
+
+takehome/followup_final_suite.py:50: AttributeError
+----------------------------- Captured stdout call -----------------------------
+FAILURE AttributeError("'_FakeProcess' object has no attribute 'pid'")
+=========================== short test summary info ============================
+FAILED takehome/test_followup_final_safety.py::test_supervisor_persists_tripwire_halt_and_terminates_other_workers
+FAILED takehome/test_followup_final_safety.py::test_supervisor_does_not_label_ordinary_worker_error_as_tripwire
+2 failed, 8 passed in 15.10s

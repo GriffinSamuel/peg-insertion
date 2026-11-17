@@ -1,0 +1,96 @@
+{
+  "jobs": [
+    {
+      "name": "D_fill_80",
+      "exit_code": 0,
+      "seconds": 472.09588447998976
+    },
+    {
+      "name": "D_fill_20",
+      "exit_code": 0,
+      "seconds": 587.546594022002
+    },
+    {
+      "name": "D_fill_10",
+      "exit_code": 0,
+      "seconds": 604.5821326760051
+    },
+    {
+      "name": "D_fill_0",
+      "exit_code": 0,
+      "seconds": 626.0499779450038
+    },
+    {
+      "name": "D_fill_120",
+      "exit_code": 0,
+      "seconds": 280.0005011359899
+    },
+    {
+      "name": "D_one_update",
+      "exit_code": 0,
+      "seconds": 249.0517461970012
+    },
+    {
+      "name": "D_briefing",
+      "exit_code": 0,
+      "seconds": 574.3246347550012
+    },
+    {
+      "name": "D_privileged_critic",
+      "exit_code": 0,
+      "seconds": 572.5699391420058
+    },
+    {
+      "name": "D_one_critic",
+      "exit_code": 0,
+      "seconds": 566.0869648250082
+    },
+    {
+      "name": "D_aim_cap_50um",
+      "exit_code": 0,
+      "seconds": 522.4415466800128
+    },
+    {
+      "name": "D_final_decider",
+      "exit_code": 0,
+      "seconds": 508.61485520099814
+    },
+    {
+      "name": "D_near_hole",
+      "exit_code": 0,
+      "seconds": 501.3019541520043
+    },
+    {
+      "name": "D_classification",
+      "exit_code": 0,
+      "seconds": 449.4930650120077
+    },
+    {
+      "name": "D_aim_cap_200um",
+      "exit_code": -15,
+      "seconds": 925.5274040850054
+    },
+    {
+      "name": "D_return_floor",
+      "exit_code": 0,
+      "seconds": 403.6989749899949
+    },
+    {
+      "name": "D_three_step",
+      "exit_code": 0,
+      "seconds": 416.3633488189953
+    },
+    {
+      "name": "D_force_penalty",
+      "exit_code": 0,
+      "seconds": 290.8438066999952
+    },
+    {
+      "name": "D_sibling_fill",
+      "exit_code": 0,
+      "seconds": 330.4214629890048
+    }
+  ],
+  "tripwire": false,
+  "seconds": 2458.6303279590065
+}

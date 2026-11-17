@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "passed_nodes": [
+    "takehome/test_followup_touch.py::test_spiral_stays_bounded_and_pauses_without_activity",
+    "takehome/test_followup_touch.py::test_touch_gate_activates_on_observable_conditions_without_hidden_bias",
+    "takehome/test_followup_touch.py::test_touch_gate_requires_contact_stall_surface_and_unended_state",
+    "takehome/test_followup_touch.py::test_pressure_point_recovers_known_contact_and_is_sign_and_rotation_invariant",
+    "takehome/test_followup_touch.py::test_saved_diagnosis_pairs_sensor_obs_t_with_geometry_true_rel_t_minus_1"
+  ],
+  "failed_nodes": [],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

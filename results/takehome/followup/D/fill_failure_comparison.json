@@ -1,0 +1,74 @@
+{
+  "rows": [
+    {
+      "setting": "D_fill_0",
+      "practice_seed": 1,
+      "test_seed": 123,
+      "episodes": 500,
+      "successes": 498,
+      "source": "results/takehome/followup/D/D_fill_0/seed_1",
+      "true_fixed_bias_xy_mm": [
+        -0.12314663082361221,
+        -0.7673732042312622
+      ],
+      "mean_end_guess_xy_mm": [
+        -1.114964485168457,
+        -2.1547157764434814
+      ],
+      "at_component_cap_count": 59,
+      "guess_start_error_mm": 0.7771915488195282,
+      "guess_success_error_mm": 1.7629536053507355,
+      "guess_end_error_mm": 1.805218885440983,
+      "final_xy_error_mm": 0.5098409652709961,
+      "final_depth_mm": 29.933956146240234
+    },
+    {
+      "setting": "D_fill_10",
+      "practice_seed": 1,
+      "test_seed": 123,
+      "episodes": 500,
+      "successes": 29,
+      "source": "results/takehome/followup/D/D_fill_10/seed_1",
+      "true_fixed_bias_xy_mm": [
+        -0.12314663082361221,
+        -0.7673732042312622
+      ],
+      "mean_end_guess_xy_mm": [
+        2.773386240005493,
+        0.17648066580295563
+      ],
+      "at_component_cap_count": 372,
+      "guess_start_error_mm": 0.7771915488195282,
+      "guess_success_error_mm": 1.992913795118155,
+      "guess_end_error_mm": 3.1659902648646274,
+      "final_xy_error_mm": 2.81300687789917,
+      "final_depth_mm": 1.9551739692687988
+    },
+    {
+      "setting": "D_fill_80",
+      "practice_seed": 1,
+      "test_seed": 123,
+      "episodes": 500,
+      "successes": 487,
+      "source": "results/takehome/followup/D/D_fill_80/seed_1",
+      "true_fixed_bias_xy_mm": [
+        -0.12314663082361221,
+        -0.7673732042312622
+      ],
+      "mean_end_guess_xy_mm": [
+        -0.7667944431304932,
+        2.90073823928833
+      ],
+      "at_component_cap_count": 333,
+      "guess_start_error_mm": 0.7771915488195282,
+      "guess_success_error_mm": 2.478227728935523,
+      "guess_end_error_mm": 3.747693640060914,
+      "final_xy_error_mm": 0.5157785415649414,
+      "final_depth_mm": 29.458463668823242
+    }
+  ],
+  "new_episodes": 0,
+  "scope": "Descriptive comparison of completed final traces, not a new selection criterion.",
+  "warning": "End200 includes post-success control. High cap occupancy alone does not establish failure: the80-fill comparison also often reaches a cap.",
+  "cap_rule": "At least one final guess component within1e-9 metres of the3mm limit."
+}

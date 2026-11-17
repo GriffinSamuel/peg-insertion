@@ -1,0 +1,21 @@
+{
+  "exit_code": 1,
+  "passed_nodes": [
+    "takehome/test_followup_final_safety.py::test_g_completed_method_rejects_identical_five_seed_vectors",
+    "takehome/test_followup_final_safety.py::test_g_completed_method_allows_distinct_vectors_with_equal_success_counts",
+    "takehome/test_followup_final_safety.py::test_g_completed_method_preserves_zero_floor_and_zero_ceiling_exemption",
+    "takehome/test_followup_final.py::test_plain_chosen_method_reuses_one_configuration",
+    "takehome/test_followup_final.py::test_ineligible_confirmation_is_rejected[change0]",
+    "takehome/test_followup_final.py::test_ineligible_confirmation_is_rejected[change1]",
+    "takehome/test_followup_final.py::test_ineligible_confirmation_is_rejected[change2]",
+    "takehome/test_followup_final.py::test_paired_differences_and_identical_method_reuse_are_not_fake_replicates"
+  ],
+  "failed_nodes": [
+    "takehome/test_followup_final_safety.py::test_supervisor_persists_tripwire_halt_and_terminates_other_workers",
+    "takehome/test_followup_final_safety.py::test_supervisor_does_not_label_ordinary_worker_error_as_tripwire"
+  ],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

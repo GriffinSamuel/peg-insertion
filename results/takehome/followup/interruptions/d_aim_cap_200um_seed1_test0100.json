@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-17T08:31:16.418026+00:00",
+  "setting": "D_aim_cap_200um",
+  "practice_seed": 1,
+  "practice_episodes_at_request": 100,
+  "requested_episodes": 256,
+  "test_seed": 123,
+  "test_only": true,
+  "learned_from": false,
+  "completed_episodes": null,
+  "completed_count_known": false,
+  "reason": "Stopped stalled device_get; test invocation produced no returned summary or trace.",
+  "source_log": "logs/d_singles_D_aim_cap_200um.log",
+  "recovery_audit": "D/stalled_cap_recovery/audit.json"
+}

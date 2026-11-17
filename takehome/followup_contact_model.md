@@ -1,0 +1,9 @@
+# Contact model notes for the later touch comparison
+
+The project builds a 20 mm square peg and four flat box walls around a 21 mm square opening at this policy's 0.5 mm clearance. There is no beveled entrance to guide the peg inward. The wrist sensor sits at the peg base, 60 mm above its tip. These dimensions and shapes come from the unchanged [XML builder](../peg_insertion/xml_builder.py); the policy's saved configuration supplies the clearance.
+
+The simulator's force sensor measures the load between the peg and its parent body in the sensor's own axes. The torque sensor measures the corresponding twisting load. These readings include contact and other loads; they do not directly report the hole position. [MuJoCo sensor definitions](https://mujoco.readthedocs.io/en/stable/XMLreference.html#sensor-force).
+
+The project's `condim=3` contacts provide normal pushing force and friction opposing sliding. They do not add an independent twisting-friction term at each contact point. Forces applied away from the wrist can still produce wrist torque, so this does **not** mean the torque sensor must read zero. [MuJoCo contact types](https://mujoco.readthedocs.io/en/stable/computation/index.html#condim).
+
+The unchanged observation code clips each force component at 20 N and each torque component at 2 Nm before the controller sees it. The saved trace's scalar force magnitude is unclipped, but it lacks the full unclipped vector needed for a directional rule. The diagnostic therefore uses exactly the clipped wrist information available to the controller. The actual pose is used only afterwards to judge what that information says. Sensor-row timing, friction, several contacts at once, clipping and slight pose deflection can all affect a simple estimate of where the support force acts. None of these facts alone establishes whether the readings are useful; that is what the saved-trace diagnosis and any prescribed hand comparisons must test.

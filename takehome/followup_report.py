@@ -21,7 +21,7 @@ def generate():
     counts=accounting['whole_project_episode_totals'];settings=accounting['settings']
     text+='## Episode and setting totals\n\n'
     text+=(f"Follow-up: {counts['followup_reserved_practice_episodes']:,} charged practice episodes, "
-           f"{counts['followup_full_test_episodes']:,} full test-only episodes, and "
+           f"{counts['followup_full_test_episodes']:,} completed full test-only episodes, and "
            f"{settings['new_counted_settings_from_registry']} attempted settings. "
            f"Whole project: {counts['whole_project_practice_episodes']:,} practice episodes, "
            f"{counts['whole_project_full_test_episodes']:,} full test-only episodes, "
@@ -32,6 +32,12 @@ def generate():
            "The 49 non-learning sweep cells and "
            "the preserved partial attempt are accounted for separately from new learning configurations. "
            "[The accounting file](results/takehome/followup/accounting.json) has no validation errors.\n\n")
+    interrupted=accounting.get('interrupted_test_requests',{})
+    if interrupted.get('request_count'):
+        text+=(f"Separately, {interrupted['request_count']} interrupted test request(s) covered "
+               f"{interrupted['requested_episodes']:,} requested episodes but returned no completed count. "
+               "They are retained in the accounting record and are not silently counted as completed tests. "
+               "None was learned from.\n\n")
     scoreboard=(OUT/'scoreboard.md').read_text()
     table=scoreboard[scoreboard.index('| Phase |'):]
     text+='## Full follow-up scoreboard\n\n'+table

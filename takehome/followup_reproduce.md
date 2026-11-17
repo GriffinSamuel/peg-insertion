@@ -68,3 +68,23 @@ python -B -m takehome.followup_integrity verify --allow-report-append
 ```
 
 Before that paragraph is added, omit `--allow-report-append`. Use the retained `preservation_manifest.json` from before the follow-up; do not refresh it against changed files. The manifest checks hashes and timestamps for the original source, policies and results, including large files on disk.
+
+## Locked final confirmation
+
+After F is complete and the lead has written G/choice.json, measure the fresh reference once, then use the supervised four-worker command. The supervisor checks completed methods for identical per-episode outcomes and stops siblings if a tripwire fires. It refuses to start before the preceding phases finish.
+
+```bash
+source scripts/env.sh
+python -B -m takehome.followup_detach --name g_references -- \
+  python -B -m takehome.followup_final_reference
+```
+
+After the reference command's exit file reports success:
+
+```bash
+source scripts/env.sh
+python -B -m takehome.followup_detach --name g_confirmation -- \
+  python -B -m takehome.followup_final_suite --name g_confirmation
+```
+
+Use a new log name for an authorized resume. The written choice and existing final results must stay unchanged.

@@ -18,6 +18,7 @@ from takehome import followup_runtime  # noqa: E402
 from takehome.followup_final_worker import configurations  # noqa: E402
 from takehome.followup_metrics import summarize_seed  # noqa: E402
 from takehome.followup_reference import reference_path  # noqa: E402
+from takehome.followup_collect import identical_check  # noqa: E402
 
 OUT = followup_runtime.OUT
 FRESH_SEEDS = tuple(range(200, 205))
@@ -91,6 +92,7 @@ def _aggregate_methods(configs):
     method_summaries = {}
     for method, config in configs:
         rows = [_load_method_seed(method, config, seed) for seed in FRESH_SEEDS]
+        identical_check({'name': 'G_' + method}, rows)
         rates = [float(row["success_percent"]) for row in rows]
         if len(rows) != 5:
             raise ValueError(f"{method}: expected exactly five fresh confirmation seeds")

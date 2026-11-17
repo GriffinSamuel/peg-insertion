@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "seed": 0,
+      "successes": 485,
+      "success_nonzero_guess": 0,
+      "episodes_any_nonzero_guess": 500,
+      "mean_largest_valid_guess_mm": 1.810234546661377,
+      "success_incoming_z_mean_mm": -23.426477432250977,
+      "frozen_policy": true
+    },
+    {
+      "seed": 1,
+      "successes": 486,
+      "success_nonzero_guess": 0,
+      "episodes_any_nonzero_guess": 500,
+      "mean_largest_valid_guess_mm": 1.795305848121643,
+      "success_incoming_z_mean_mm": -23.44891357421875,
+      "frozen_policy": true
+    },
+    {
+      "seed": 2,
+      "successes": 486,
+      "success_nonzero_guess": 0,
+      "episodes_any_nonzero_guess": 500,
+      "mean_largest_valid_guess_mm": 0.7950631380081177,
+      "success_incoming_z_mean_mm": -23.423789978027344,
+      "frozen_policy": true
+    }
+  ],
+  "new_episodes": 0,
+  "note": "Read-only diagnosis of why the near-hole guess is zero at success, not an additional selection criterion."
+}

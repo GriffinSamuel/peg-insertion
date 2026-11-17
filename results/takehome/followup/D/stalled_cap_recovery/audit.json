@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-11-17T08:30:14.498737+00:00",
+  "pid": 218939,
+  "setting": "D_aim_cap_200um",
+  "seed": 1,
+  "reserved_episodes": 100,
+  "last_checkpoint_episodes": 90,
+  "reason": "No progress for more than10 minutes; sleeping process; GPUvisible, RAMavailable and otherworkers progress normally.",
+  "practice_hashes": {
+    "practice_0010.npz": "8cc4e011e825ae475e2f6012eb063c3c1a634ba3920aa430ddbbd15b65fff88e",
+    "practice_0020.npz": "1ce76e77eac839e2ac1d5bd0a426c0c4cb7e3294e4f44afc5513bbbefba2eca9",
+    "practice_0030.npz": "887defa5da6ed9ddc2fa8577cca5a10512422a5987241cda7fa4c38c3a4a7099",
+    "practice_0040.npz": "153182797da545fc221b0b2f786ceaf442578ca4e46a233a25db238c3b9ff3d9",
+    "practice_0050.npz": "e09d6280e1fa40be742b32b5f6dd2d712fa247f0919b74221d0dfff0169ea3b1",
+    "practice_0060.npz": "279d41e10a275af0b510aa5fb64c4142a77aead27020649259528d72f932335e",
+    "practice_0070.npz": "fa8886eadcc3e1ebaeee51635deacad7febaed9a7e05bd80ed54cbab81927d38",
+    "practice_0080.npz": "9983df9743457e59581017fa8aec6da1f30b4afcdcd417a1aa8a1c89ff5a6291",
+    "practice_0090.npz": "13967cf66d7d7102701b4831c58a24c71ae334ca57ae954ec10699b275a197e8",
+    "practice_0100.npz": "7a7430c3eca101d3a71e76cfcbedc523188b94b4433e219839bad74656ad45fd"
+  },
+  "checkpoint_sha256": "4f66517ed5176d2f95419433f0f39a370af8ef5aa0a0194b0aa610c50f7f80b0",
+  "status": "stopping_stalled_worker_before_same_checkpoint_resume",
+  "new_episodes_collected_by_recovery": 0,
+  "interrupt_trace": "KeyboardInterrupt in FollowupEpisodes.test at jax.device_get while retrieving the practice100 learning-curve test.",
+  "signal_history": [
+    "SIGINT produced a stack trace but process remained in shutdown",
+    "SIGTERM sent to finish stopping the same worker"
+  ]
+}
