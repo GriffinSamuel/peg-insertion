@@ -1,7 +1,7 @@
 {
   "max_new_settings": 90,
   "original_settings": 28,
-  "phase": "D",
+  "phase": "E",
   "settings": [
     {
       "name": "B_gate",
@@ -1290,9 +1290,11 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
-      "status": "finished",
+      "status": "running",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
@@ -1362,9 +1364,11 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
-      "status": "finished",
+      "status": "running",
       "condition": "fixed",
       "hand_search": false,
       "hidden_information": false,
@@ -1386,7 +1390,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "finished",
       "condition": "fixed",
@@ -1674,7 +1680,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "finished",
       "condition": "fixed",
@@ -1746,7 +1754,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "finished",
       "condition": "fixed",
@@ -1794,7 +1804,9 @@
       "seeds": [
         0,
         1,
-        2
+        2,
+        3,
+        4
       ],
       "status": "finished",
       "condition": "fixed",
@@ -1852,6 +1864,156 @@
       "changes": 2,
       "reason": "",
       "counted": true
+    },
+    {
+      "name": "E_normal_joint",
+      "phase": "E",
+      "description": "Learn aim and movement together with one scorekeeper.",
+      "overrides": {
+        "outputs": 5,
+        "camera_condition": "normal",
+        "coordination": "joint"
+      },
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "running",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true,
+      "repeats_original": "goal6/combined"
+    },
+    {
+      "name": "E_normal_aim_then_move",
+      "phase": "E",
+      "description": "Learn aim for80 episodes, then movement for80 while aim stays frozen.",
+      "overrides": {
+        "outputs": 5,
+        "camera_condition": "normal",
+        "coordination": "aim_then_move"
+      },
+      "base": "E_normal_joint",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": false,
+      "repeats_original": "goal7/aim_then_move"
+    },
+    {
+      "name": "E_normal_move_then_aim",
+      "phase": "E",
+      "description": "Learn movement for80 episodes, then aim for80 while movement stays frozen.",
+      "overrides": {
+        "outputs": 5,
+        "camera_condition": "normal",
+        "coordination": "move_then_aim"
+      },
+      "base": "E_normal_joint",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "condition": "normal",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": false,
+      "repeats_original": "goal7/move_then_aim"
+    },
+    {
+      "name": "E_fixed_joint",
+      "phase": "E",
+      "description": "Learn aim and movement together with one scorekeeper.",
+      "overrides": {
+        "outputs": 5,
+        "camera_condition": "fixed",
+        "coordination": "joint"
+      },
+      "base": "B_movement_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "running",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 2,
+      "reason": "",
+      "counted": true,
+      "repeats_original": null
+    },
+    {
+      "name": "E_fixed_aim_then_move",
+      "phase": "E",
+      "description": "Learn aim for80 episodes, then movement for80 while aim stays frozen.",
+      "overrides": {
+        "outputs": 5,
+        "camera_condition": "fixed",
+        "coordination": "aim_then_move"
+      },
+      "base": "E_fixed_joint",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 3,
+      "reason": "",
+      "counted": false,
+      "repeats_original": null
+    },
+    {
+      "name": "E_fixed_move_then_aim",
+      "phase": "E",
+      "description": "Learn movement for80 episodes, then aim for80 while movement stays frozen.",
+      "overrides": {
+        "outputs": 5,
+        "camera_condition": "fixed",
+        "coordination": "move_then_aim"
+      },
+      "base": "E_fixed_joint",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "condition": "fixed",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 3,
+      "reason": "",
+      "counted": false,
+      "repeats_original": null
     }
   ],
   "status": "active",

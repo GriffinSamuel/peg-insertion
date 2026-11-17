@@ -1,5 +1,12 @@
 # Take-home progress
 
+## CURRENT STATE (Claude Sonnet took over from Codex 2026-11-17)
+- RUNNING: suite log results/takehome/followup/d_ext_e_joint_1.log (12 jobs, 4 at once): E_normal_joint, E_fixed_joint, five-seed extensions of 6 PROMISING D settings, then 4 sequential E settings.
+- QUEUED NEXT: E stacks (after D verdicts), touch tests (after F go/no-go), touch-as-teacher.
+- PARKED: D_aim_cap_200um (stalled, killed at 90 episodes; resume path untested), B_aim_fixed_seed4_halted (intentional).
+- OPEN: mechanism question (guess path vs best constant offset); Phase F go/no-go advisor consult; final choice review before Phase G.
+- Advisor consultations used: 0 (briefs go in results/takehome/followup/advisor/).
+
 ## Current status: follow-up Phase B complete; mixed comparisons next (2026-11-16)
 
 The revised consistent-camera rule is committed as b46779e. The offset sweep finished first and tied the centre at94.53%. All interrupted B items and PROMISING extensions are complete; no promotions remain. Plain one-sided aim HELPED at80.20%±4.24 points; no normal-camera aim fix met the working definition. The original160-episode seed4 halt is a preserved row; its fresh200-episode restart scored492/500. Commit/push B, then run mixed comparisons before C to G. Fresh seeds remain unused; the original80.2% result is unchanged.
