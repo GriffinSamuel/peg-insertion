@@ -443,6 +443,5 @@ The dated entries below include historical choices and their reasons, including 
 - 2026-11-15: For the required ceiling-exceedance inspection, plot depth, true radial error and executed-command bounds for the firstthree recorded successful verification episodes; keep this diagnostic out of selection and preserve the independent seed789 score.
 - 2026-11-15: Goal11 audit initially rejected all24 point-zero records solely because their camera-specific display label differed from the generic label; compare the label with the declared baseline label (default original_policy), keep every numerical/provenance check unchanged, preserve the first audit, and rerun once. The corrected audit passes with zero failures; no experiment, seed, budget or success rule changed.
 
-## Follow-up
 
-A follow-up study (extra tests of the aim and movement correctors, combinations, a touch comparison, and a fresh-seed check) is written up in `TAKEHOME_FOLLOWUP_REPORT.md`. It did not change any result above; plain movement scored 84.2% on fresh seeds.
+A follow-up study (extra tests of the aim and movement correctors, combinations, a touch comparison, and a fresh-seed check) is written up in [TAKEHOME_FOLLOWUP_REPORT.md](TAKEHOME_FOLLOWUP_REPORT.md). It did not change any result above; plain movement scored 84.2% on fresh seeds.
