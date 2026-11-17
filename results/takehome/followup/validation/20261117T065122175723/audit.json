@@ -1,0 +1,14 @@
+{
+  "exit_code": 0,
+  "passed_nodes": [
+    "takehome/test_followup_stacks.py::test_only_top_three_helped_singles_are_stacked",
+    "takehome/test_followup_stacks.py::test_incompatible_fill_and_briefing_are_listed_without_running",
+    "takehome/test_followup_stacks.py::test_hidden_information_and_fixed_context_remain_labelled",
+    "takehome/test_followup_stacks.py::test_misregistered_context_cannot_be_silently_transferred"
+  ],
+  "failed_nodes": [],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

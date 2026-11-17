@@ -702,3 +702,53 @@ No constant offset beat zero in the sweep. Learning aim helped insertion when er
 
 ### 8. Questions before the next phase
 None. Commit/push this phase and continue with mixed references and four methods per split, then C to G without a planned check-in.
+
+## 2026-11-16: Mixed-condition checkpoint
+
+B completion was pushed as b89fc5c. All9 mixed reference pairs finished with500floor+500zero-error tests, no practice, no invalid-number or wall flags. The detached mixed_plain_wave1 suite runs the six plain aim/movement settings first, four GPU processes maximum, then the six heat-map/joint settings must follow after their bases finish. Extend PROMISING settings and any required matched bases, premeasure missing references once per split before parallel jobs. Do not edit registry while its suite parent runs. C/D and E/G code preparation has not launched later experiments; fresh choice file remains absent.
+
+## Mixed-condition progress checkpoint 2026-11-16T22:55:53-08:00
+
+All five required plain-method extensions completed on choosing seeds0–4, test123,200 practice episodes each. Heat-map and joint comparisons remain in progress under mixed_more_wave2; the suite is the only registry/scoreboard writer.
+
+- M_mostly_fixed_aim: 87.08% ± 4.73 points; HELPED; counts 426, 453, 436, 401, 461 out of500 per seed.
+- M_even_aim: 79.88% ± 6.78 points; HELPED; counts 410, 346, 435, 416, 390 out of500 per seed.
+- M_mostly_fixed_movement: 90.32% ± 5.04 points; HELPED; counts 443, 469, 486, 435, 425 out of500 per seed.
+- M_even_movement: 87.64% ± 7.46 points; HELPED; counts 413, 464, 479, 447, 388 out of500 per seed.
+- M_mostly_episode_movement: 88.16% ± 6.66 points; HELPED; counts 395, 479, 467, 435, 428 out of500 per seed.
+
+Routine C/D inventories matched their declared original values. Root-reviewed combination and final-choice contracts passed on CPU (four stack guard checks, two choice checks), with no simulated episodes or fresh-seed use. C/D/E code and final reporting are prepared; touch methods remain unstarted.
+
+## Follow-up mixed comparison complete, 2026-11-16T23:07:08-08:00
+
+### 1. What I did (short list)
+
+Completed all three prescribed calibration/per-attempt splits, each with plain aim, heat map, movement and joint learning. Measured all 15 matched floor/reference pairs. Extended all five PROMISING settings to five seeds. Generated recovery data, every-seed scoreboards and charts.
+
+### 2. What I found (the numbers, with how many test episodes and seeds)
+
+Five-seed plain movement: mostly fixed90.32%, even87.64%, mostly per-attempt88.16%, all HELPED. Plain aim:87.08% and79.88% HELPED in the first two splits,69.93% on three seeds in the third (NO REAL DIFFERENCE). No heat-map or joint addition helped; even and mostly-per-attempt heat maps and even joint were UNSTABLE. Every final result uses500 tests at123; the full report gives every seed and aim error.
+
+### 3. Checks: each check from the goal, marked pass or fail
+
+PASS all12 requested settings; PASS exact prescribed spreads and matched references; PASS all PROMISING rows extended; PASS200 practice per experiment and no test learning; PASS frozen policies and finite states; PASS required34 extra diagnostic checks and170 inspected examples; PASS complete28-row scoreboard, charts and recovery table; PASS fresh seeds remain locked.
+
+### 4. Surprises or problems
+
+Aim learning improved insertion in two mixed splits while its guess became farther from the truth at success. Heat-map even seed1 scored0/500, so success-time metrics are undefined rather than zero. Joint even seed1 fell below half its matched base. A chart CLI invocation lacked the package path; running the same reviewed module with python -m fixed it without any simulation or result change.
+
+### 5. Decisions I logged
+
+Previously locked mixed fractions, matched bases, shared initial-seed chart and unclipped recovery formula were retained. Report assembly now includes the complete generated table automatically. C/D inventory audits and combination/final-selection contracts are ready.
+
+### 6. Practice episodes used, and settings tried so far
+
+Mixed:9,200 practice episodes across46 experiments and12 settings. Follow-up totals:18,380 practice,302,720 full tests,25 settings. Whole project:47,390 practice,712,410 full tests,191 reset probes,53 settings.
+
+### 7. Plain-language explanation for Griffin (five sentences at most)
+
+A repeatable calibration error gives aim learning something reusable, but higher insertion success does not mean the guess found the true error. Movement learning helped in every mixed split. The heat map and joint additions did not improve their matched plain methods, and some seeds failed badly. Fixed and mixed tests are different models of calibration plus per-attempt error, not claims about which one represents every real setup.
+
+### 8. Questions before the next phase
+
+None. Commit/push this phase, then begin the20 applicable movement singles in Phase C, with five explained skips. No planned check-in.

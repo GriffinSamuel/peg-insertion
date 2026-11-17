@@ -22,11 +22,10 @@ def main():
         requested[name]=a.seeds if a.seeds is not None else entry['seeds']
         if entry['status'] not in ('planned','running','finished'):
             raise ValueError('A skipped/failed setting needs explicit lead review before launch')
-        if entry['status']=='planned':
-            entry['status']='running';entry['counted']=True
         if not set(requested[name]).issubset(set(entry['seeds'])):raise ValueError('Seeds not registered')
-    if sum(bool(e.get('counted')) for e in lookup.values())>90:raise ValueError('90-setting cap')
-    if sum(bool(e.get('counted')) and e['phase']=='B' and e['overrides'].get('outputs',2)!=3 for e in lookup.values())>14:
+    will_run=lambda e: bool(e.get('counted')) or e['name'] in a.settings
+    if sum(will_run(e) for e in lookup.values())>90:raise ValueError('90-setting cap')
+    if sum(will_run(e) and e['phase']=='B' and e['overrides'].get('outputs',2)!=3 for e in lookup.values())>14:
         raise ValueError('14-aim-variant cap')
     save(OUT/'registry.json',registry)
     todo=list(a.settings);active=[];done=[];tripwire=False;started=time.perf_counter()
@@ -34,6 +33,8 @@ def main():
         while todo and len(active)<4 and not tripwire:
             name=todo.pop(0);log_path=OUT/'logs'/f'{a.name}_{name}.log';log_path.parent.mkdir(exist_ok=True)
             log=log_path.open('x')
+            lookup[name]['status']='running';lookup[name]['counted']=True
+            save(OUT/'registry.json',registry)
             process=subprocess.Popen([sys.executable,'-B','takehome/followup_job.py','--setting',name,'--seeds',
                 *map(str,requested[name])],cwd=ROOT,stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT)
             active.append((name,process,log,log_path,time.perf_counter()))
@@ -45,13 +46,18 @@ def main():
             row=dict(name=name,exit_code=code,seconds=time.perf_counter()-t0);done.append(row)
             print('FINISH',json.dumps(row),flush=True)
             if code:
-                text=path.read_text();tripwire='Tripwire:' in text
+                text=path.read_text();tripwire=tripwire or 'Tripwire:' in text
+                if 'Tripwire:' in text:
+                    registry['status']='halted_tripwire';registry['halted_at']=name
                 lookup[name]['status']='failed';lookup[name]['reason']=f'Job exit{code}; see {path.relative_to(OUT)}'
             else:lookup[name]['status']='finished'
             save(OUT/'registry.json',registry)
             try:collect()
             except Exception as exc:
                 tripwire=True
+                if 'Tripwire:' in str(exc):
+                    registry['status']='halted_tripwire';registry['halted_at']=name
+                    save(OUT/'registry.json',registry)
                 print('COLLECTION FAILURE',repr(exc),flush=True)
                 save(OUT/f'{a.name}_collection_failure.json',dict(error=repr(exc),setting=name))
             if tripwire:

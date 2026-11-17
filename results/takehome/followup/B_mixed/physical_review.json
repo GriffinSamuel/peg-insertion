@@ -1,0 +1,1033 @@
+{
+  "phase": "B_mixed",
+  "source": "Read-only review of required diagnostic tests; no new episodes.",
+  "checks": 34,
+  "test_episodes": 17000,
+  "inspected_examples": 170,
+  "through_wall_episodes": 0,
+  "nan_episodes": 0,
+  "used_for_selection": false,
+  "rows": [
+    {
+      "path": "B_mixed/M_even_combined/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 481,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005986988544464111,
+        0.0004774630069732666,
+        0.0005274740979075432,
+        0.0005154311656951904,
+        0.0005065202713012695
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_1/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 473,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005337889306247234,
+        0.0005871057510375977,
+        0.0005898475646972656,
+        0.0006074607372283936,
+        0.0005615651607513428
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0060.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 490,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005449652671813965,
+        0.0006087422370910645,
+        0.0005025863647460938,
+        0.0005814135074615479,
+        0.0005190074443817139
+      ],
+      "max_abs_control_examples": [
+        0.99699467420578,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 495,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006102323532104492,
+        0.0005205976776778698,
+        0.0004984140396118164,
+        0.0005048660095781088,
+        0.0006580352783203125
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 496,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005815327167510986,
+        0.0005216356366872787,
+        0.0005825161933898926,
+        0.0006198585033416748,
+        0.0005045235157012939
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 489,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.000626683235168457,
+        0.0005543828010559082,
+        0.0005225078202784061,
+        0.0005138218402862549,
+        0.0005210638046264648
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 494,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0004954994656145573,
+        0.0004981756210327148,
+        0.0005061328411102295,
+        0.0005207320209592581,
+        0.0005519883707165718
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 490,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006130337715148926,
+        0.0004961886443197727,
+        0.0006055831909179688,
+        0.0006040632724761963,
+        0.0005143801681697369
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 475,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005373954772949219,
+        0.0006180107593536377,
+        0.000632941722869873,
+        0.0005464851856231689,
+        0.000596851110458374
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_even_movement/seed_2/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 480,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005921721458435059,
+        0.0005301833152770996,
+        0.0005574226379394531,
+        0.0005143466405570507,
+        0.0005704760551452637
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_episode_movement/seed_1/extra_ceiling_0060.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 476,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005724728107452393,
+        0.0005502644926309586,
+        0.0005548596382141113,
+        0.0005362927913665771,
+        0.0005492866039276123
+      ],
+      "max_abs_control_examples": [
+        0.9372944831848145,
+        0.954688549041748,
+        0.96551913022995,
+        0.9545100331306458,
+        0.9533935785293579
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_episode_movement/seed_1/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 474,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005579888820648193,
+        0.0006524026393890381,
+        0.0005478262901306152,
+        0.00047431234270334244,
+        0.0006085336208343506
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        0.9953806400299072,
+        1.0,
+        1.0,
+        0.9920224547386169
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_episode_movement/seed_1/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 475,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005300058983266354,
+        0.0006022155284881592,
+        0.0005300282500684261,
+        0.0005469620227813721,
+        0.0004923809319734573
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_episode_movement/seed_1/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 482,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006074607372283936,
+        0.0005024075508117676,
+        0.0005181478336453438,
+        0.00047904253005981445,
+        0.000612407922744751
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_episode_movement/seed_1/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 479,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005145012401044369,
+        0.0005681812763214111,
+        0.0005233287811279297,
+        0.0005664825439453125,
+        0.0005661547183990479
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9862064719200134
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_episode_movement/seed_1/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 474,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.00048679113388061523,
+        0.0006281733512878418,
+        0.0005767941474914551,
+        0.0005697011947631836,
+        0.0005332231521606445
+      ],
+      "max_abs_control_examples": [
+        0.9904011487960815,
+        1.0,
+        1.0,
+        0.9700426459312439,
+        0.9561211466789246
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_combined/seed_0/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 483,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.000584721565246582,
+        0.0006189048290252686,
+        0.0005251169204711914,
+        0.000534355640411377,
+        0.0005777478218078613
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_combined/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 476,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006328821182250977,
+        0.0006228089332580566,
+        0.0006099343299865723,
+        0.0004961192607879639,
+        0.0006138980388641357
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_combined/seed_2/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 486,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005624294281005859,
+        0.0005800724029541016,
+        0.0005475878715515137,
+        0.0005827248096466064,
+        0.0006094276905059814
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        0.9888495802879333,
+        1.0,
+        0.9683318734169006,
+        0.9765889048576355
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_0/extra_ceiling_0060.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 478,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0004900693893432617,
+        0.0006312727928161621,
+        0.0005393624305725098,
+        0.0006037354469299316,
+        0.0005946457386016846
+      ],
+      "max_abs_control_examples": [
+        0.9674506187438965,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_1/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 478,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005043745040893555,
+        0.0005092727951705456,
+        0.0005215490236878395,
+        0.000517427921295166,
+        0.0005363225936889648
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_1/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 468,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005133305676281452,
+        0.0005533695220947266,
+        0.0005689263343811035,
+        0.0006096959114074707,
+        0.0006152093410491943
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_1/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 463,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005415380001068115,
+        0.0005316734313964844,
+        0.000545501708984375,
+        0.0006683766841888428,
+        0.0005135834217071533
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_1/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 467,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005132555961608887,
+        0.0004939520731568336,
+        0.0005019903182983398,
+        0.0005307197570800781,
+        0.0005266368389129639
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0060.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 482,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005759894847869873,
+        0.0005765855312347412,
+        0.0006290078163146973,
+        0.0005352199077606201,
+        0.000561833381652832
+      ],
+      "max_abs_control_examples": [
+        0.998893141746521,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0080.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 485,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.00046745920553803444,
+        0.0005296426825225353,
+        0.0005460679531097412,
+        0.0005386769771575928,
+        0.0005487203598022461
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 480,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005410914309322834,
+        0.000555872917175293,
+        0.0005482849664986134,
+        0.0005206763744354248,
+        0.0006037056446075439
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 495,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005317032337188721,
+        0.000551372766494751,
+        0.0005148053169250488,
+        0.0005729794502258301,
+        0.0006158351898193359
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0140.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 489,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0006299018859863281,
+        0.0006354451179504395,
+        0.0005012154579162598,
+        0.0005786716938018799,
+        0.0005882680416107178
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        0.9919636845588684,
+        0.9984520673751831,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0160.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 498,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005411505699157715,
+        0.0005086050368845463,
+        0.0005098581314086914,
+        0.0006530880928039551,
+        0.0005114078521728516
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0180.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 494,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005406518466770649,
+        0.0005488395690917969,
+        0.0005639195442199707,
+        0.0006016790866851807,
+        0.0005699694156646729
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_2/extra_ceiling_0200.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 495,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005330275744199753,
+        0.0005934238433837891,
+        0.0005147834308445454,
+        0.0005450546741485596,
+        0.0005383964162319899
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_3/extra_ceiling_0100.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 473,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0004920065402984619,
+        0.0005697011947631836,
+        0.0006691217422485352,
+        0.0005345344543457031,
+        0.0006293058395385742
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "used_for_selection": false
+    },
+    {
+      "path": "B_mixed/M_mostly_fixed_movement/seed_4/extra_ceiling_0120.json",
+      "episodes": 500,
+      "test_seed": 789,
+      "successes": 476,
+      "through_wall_episodes": 0,
+      "nan_episodes": 0,
+      "inspected": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "max_lateral_when_deep_examples_m": [
+        0.0005740523338317871,
+        0.0005416572093963623,
+        0.000491797924041748,
+        0.0005559027194976807,
+        0.0005346923135221004
+      ],
+      "max_abs_control_examples": [
+        1.0,
+        0.9741495251655579,
+        1.0,
+        1.0,
+        0.9281060099601746
+      ],
+      "used_for_selection": false
+    }
+  ],
+  "example_plot_source": "B_mixed/M_even_combined/seed_2/extra_ceiling_0140.json"
+}

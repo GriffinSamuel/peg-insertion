@@ -1,0 +1,926 @@
+{
+  "audit_type": "mechanical Phase C manifest comparison; no experiments run",
+  "sources": {
+    "manifest": "takehome/followup_c_manifest.py",
+    "original_design": "takehome/goal7_design.md",
+    "phase_plan": "FOLLOWUP_PLAN.md",
+    "original_values_source": "takehome/goal7_manifest.py",
+    "base_config_defaults": "takehome/config.py",
+    "test_seed_default": "takehome/followup_config.py",
+    "manifest_to_config_path": "takehome/followup_job.py:20-31"
+  },
+  "counts": {
+    "original_goal7_rows": 24,
+    "original_rows_accounted_for": 24,
+    "phase_c_total_rows": 25,
+    "planned_rows": 20,
+    "skipped_rows": 5,
+    "added_movement_cap_rows": 1,
+    "applicable_original_rows": 19
+  },
+  "checks": [
+    {
+      "name": "all 24 original Goal 7 values mapped",
+      "status": "pass",
+      "evidence": "Every original name has one Phase C row; Phase C retains each source switch value and sets outputs=3."
+    },
+    {
+      "name": "one added 0.1 mm movement cap",
+      "status": "pass",
+      "evidence": "movement_cap=0.0001 m (0.1 mm per axis), outputs=3; plan requires adding 0.1 mm."
+    },
+    {
+      "name": "exactly one trick switch from plain movement base",
+      "status": "pass",
+      "evidence": "Each planned row has base=movement, outputs=3, and exactly one non-output override. The changes=2 metadata counts output-mode plus trick relative to original main."
+    },
+    {
+      "name": "all skipped aim-dependent items explained",
+      "status": "pass",
+      "evidence": "Three coordination modes require aim and movement components; both aim-cap values cannot affect a movement-only learner."
+    },
+    {
+      "name": "planned/skipped totals",
+      "status": "pass",
+      "evidence": "24 original rows minus 5 skips, plus the added movement-cap value: 20 planned and 5 skipped."
+    },
+    {
+      "name": "base, practice seeds, test seed, and budget",
+      "status": "pass",
+      "evidence": "All rows declare base movement and seeds [0,1,2]. They omit test_seed and total_episodes overrides; FollowupConfig defaults test_seed=123 and TrainConfig defaults total_episodes=200."
+    },
+    {
+      "name": "fill-share values and reuse",
+      "status": "pass",
+      "evidence": "Screening rows are 0,10,20,80,120; 40 is the reused movement/base value and has no new Phase C row."
+    }
+  ],
+  "default_contract": {
+    "test_seed": 123,
+    "test_seed_source": "takehome/followup_config.py:20",
+    "total_practice_episodes": 200,
+    "budget_source": "takehome/config.py:10-11,30-32",
+    "test_seed_override_present": false,
+    "total_episodes_override_present": false
+  },
+  "rows": [
+    {
+      "source_name": "fill_0",
+      "phase_c_name": "C_fill_0",
+      "goal7_source": "takehome/goal7_manifest.py:15",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "fill_episodes": 0
+      },
+      "phase_c_values": {
+        "fill_episodes": 0,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "fill_episodes": 0,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "fill_episodes"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "fill_10",
+      "phase_c_name": "C_fill_10",
+      "goal7_source": "takehome/goal7_manifest.py:15",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "fill_episodes": 10
+      },
+      "phase_c_values": {
+        "fill_episodes": 10,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "fill_episodes": 10,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "fill_episodes"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "fill_20",
+      "phase_c_name": "C_fill_20",
+      "goal7_source": "takehome/goal7_manifest.py:15",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "fill_episodes": 20
+      },
+      "phase_c_values": {
+        "fill_episodes": 20,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "fill_episodes": 20,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "fill_episodes"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "fill_80",
+      "phase_c_name": "C_fill_80",
+      "goal7_source": "takehome/goal7_manifest.py:15",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "fill_episodes": 80
+      },
+      "phase_c_values": {
+        "fill_episodes": 80,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "fill_episodes": 80,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "fill_episodes"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "fill_120",
+      "phase_c_name": "C_fill_120",
+      "goal7_source": "takehome/goal7_manifest.py:15",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "fill_episodes": 120
+      },
+      "phase_c_values": {
+        "fill_episodes": 120,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "fill_episodes": 120,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "fill_episodes"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "side_by_side",
+      "phase_c_name": "C_side_by_side",
+      "goal7_source": "takehome/goal7_manifest.py:17",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "coordination": "side_by_side"
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "coordination": "side_by_side"
+      },
+      "expected_phase_c_values": {
+        "coordination": "side_by_side",
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "coordination"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "reason": "Needs separate aim and movement learners; movement-only has no aim part.",
+      "skip_reason_expected": "Needs separate aim and movement learners; movement-only has no aim part.",
+      "skip_reason_matches": true,
+      "applicable": false,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "aim_then_move",
+      "phase_c_name": "C_aim_then_move",
+      "goal7_source": "takehome/goal7_manifest.py:17",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "coordination": "aim_then_move"
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "coordination": "aim_then_move"
+      },
+      "expected_phase_c_values": {
+        "coordination": "aim_then_move",
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "coordination"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "reason": "Needs an aim component to train first.",
+      "skip_reason_expected": "Needs an aim component to train first.",
+      "skip_reason_matches": true,
+      "applicable": false,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "move_then_aim",
+      "phase_c_name": "C_move_then_aim",
+      "goal7_source": "takehome/goal7_manifest.py:17",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "coordination": "move_then_aim"
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "coordination": "move_then_aim"
+      },
+      "expected_phase_c_values": {
+        "coordination": "move_then_aim",
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "coordination"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "reason": "Needs an aim component to train second.",
+      "skip_reason_expected": "Needs an aim component to train second.",
+      "skip_reason_matches": true,
+      "applicable": false,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "briefing",
+      "phase_c_name": "C_briefing",
+      "goal7_source": "takehome/goal7_manifest.py:19",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "briefing": true
+      },
+      "phase_c_values": {
+        "briefing": true,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "briefing": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "briefing"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "privileged_critic",
+      "phase_c_name": "C_privileged_critic",
+      "goal7_source": "takehome/goal7_manifest.py:20",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "privileged_critic": true
+      },
+      "phase_c_values": {
+        "privileged_critic": true,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "privileged_critic": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "privileged_critic"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "one_critic",
+      "phase_c_name": "C_one_critic",
+      "goal7_source": "takehome/goal7_manifest.py:21",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "ensemble": 1
+      },
+      "phase_c_values": {
+        "ensemble": 1,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "ensemble": 1,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "ensemble"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "one_update",
+      "phase_c_name": "C_one_update",
+      "goal7_source": "takehome/goal7_manifest.py:22",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "updates_per_step": 1
+      },
+      "phase_c_values": {
+        "updates_per_step": 1,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "updates_per_step": 1,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "updates_per_step"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "aim_cap_50um",
+      "phase_c_name": "C_aim_cap_50um",
+      "goal7_source": "takehome/goal7_manifest.py:23",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "step_cap": 5e-05
+      },
+      "phase_c_values": {
+        "step_cap": 5e-05,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "step_cap": 5e-05,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "step_cap"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "reason": "An aim nudge cap cannot change a movement-only learner.",
+      "skip_reason_expected": "An aim nudge cap cannot change a movement-only learner.",
+      "skip_reason_matches": true,
+      "applicable": false,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "aim_cap_200um",
+      "phase_c_name": "C_aim_cap_200um",
+      "goal7_source": "takehome/goal7_manifest.py:23",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "step_cap": 0.0002
+      },
+      "phase_c_values": {
+        "step_cap": 0.0002,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "step_cap": 0.0002,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "step_cap"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "skipped",
+      "reason": "An aim nudge cap cannot change a movement-only learner.",
+      "skip_reason_expected": "An aim nudge cap cannot change a movement-only learner.",
+      "skip_reason_matches": true,
+      "applicable": false,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "movement_cap_400um",
+      "phase_c_name": "C_movement_cap_400um",
+      "goal7_source": "takehome/goal7_manifest.py:25",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "movement_cap": 0.0004
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "movement_cap": 0.0004
+      },
+      "expected_phase_c_values": {
+        "movement_cap": 0.0004,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "movement_cap"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "final_decider",
+      "phase_c_name": "C_final_decider",
+      "goal7_source": "takehome/goal7_manifest.py:26",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "final_decider": true
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "final_decider": true
+      },
+      "expected_phase_c_values": {
+        "final_decider": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "final_decider"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "near_hole",
+      "phase_c_name": "C_near_hole",
+      "goal7_source": "takehome/goal7_manifest.py:27",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "near_hole": true
+      },
+      "phase_c_values": {
+        "near_hole": true,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "near_hole": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "near_hole"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "contact_cap",
+      "phase_c_name": "C_contact_cap",
+      "goal7_source": "takehome/goal7_manifest.py:28",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "contact_cap": true
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "contact_cap": true
+      },
+      "expected_phase_c_values": {
+        "contact_cap": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "contact_cap"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "uncertainty_cap",
+      "phase_c_name": "C_uncertainty_cap",
+      "goal7_source": "takehome/goal7_manifest.py:29",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "uncertainty_cap": true
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "uncertainty_cap": true
+      },
+      "expected_phase_c_values": {
+        "uncertainty_cap": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "uncertainty_cap"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "classification",
+      "phase_c_name": "C_classification",
+      "goal7_source": "takehome/goal7_manifest.py:30",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "classification": true
+      },
+      "phase_c_values": {
+        "classification": true,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "classification": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "classification"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "three_step",
+      "phase_c_name": "C_three_step",
+      "goal7_source": "takehome/goal7_manifest.py:31",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "n_step": 3
+      },
+      "phase_c_values": {
+        "n_step": 3,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "n_step": 3,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "n_step"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "return_floor",
+      "phase_c_name": "C_return_floor",
+      "goal7_source": "takehome/goal7_manifest.py:32",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "return_floor": true
+      },
+      "phase_c_values": {
+        "return_floor": true,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "return_floor": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "return_floor"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "force_penalty",
+      "phase_c_name": "C_force_penalty",
+      "goal7_source": "takehome/goal7_manifest.py:33",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "outputs": 5,
+        "force_penalty": true
+      },
+      "phase_c_values": {
+        "outputs": 3,
+        "force_penalty": true
+      },
+      "expected_phase_c_values": {
+        "force_penalty": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "force_penalty"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "sibling_fill",
+      "phase_c_name": "C_sibling_fill",
+      "goal7_source": "takehome/goal7_manifest.py:34",
+      "phase_c_source": "takehome/followup_c_manifest.py:34-44",
+      "goal7_values": {
+        "sibling_fill": true
+      },
+      "phase_c_values": {
+        "sibling_fill": true,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "sibling_fill": true,
+        "outputs": 3
+      },
+      "values_match": true,
+      "changed_non_output_fields_vs_outputs3_base": [
+        "sibling_fill"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "skip_reason_expected": null,
+      "skip_reason_matches": null,
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    },
+    {
+      "source_name": "movement_cap_100um",
+      "phase_c_name": "C_movement_cap_100um",
+      "goal7_values": null,
+      "phase_c_values": {
+        "movement_cap": 0.0001,
+        "outputs": 3
+      },
+      "expected_phase_c_values": {
+        "movement_cap": 0.0001,
+        "outputs": 3
+      },
+      "values_match": true,
+      "phase_c_source": "takehome/followup_c_manifest.py:35-44",
+      "plan_source": "FOLLOWUP_PLAN.md:81",
+      "goal7_design_source": "takehome/goal7_design.md:16",
+      "changed_non_output_fields_vs_outputs3_base": [
+        "movement_cap"
+      ],
+      "base": "movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "planned",
+      "reason": "",
+      "applicable": true,
+      "one_trick_switch_from_movement_base": true
+    }
+  ],
+  "skipped_rows": [
+    {
+      "name": "C_side_by_side",
+      "reason": "Needs separate aim and movement learners; movement-only has no aim part.",
+      "source": "takehome/followup_c_manifest.py:7-11"
+    },
+    {
+      "name": "C_aim_then_move",
+      "reason": "Needs an aim component to train first.",
+      "source": "takehome/followup_c_manifest.py:7-11"
+    },
+    {
+      "name": "C_move_then_aim",
+      "reason": "Needs an aim component to train second.",
+      "source": "takehome/followup_c_manifest.py:7-11"
+    },
+    {
+      "name": "C_aim_cap_50um",
+      "reason": "An aim nudge cap cannot change a movement-only learner.",
+      "source": "takehome/followup_c_manifest.py:7-11"
+    },
+    {
+      "name": "C_aim_cap_200um",
+      "reason": "An aim nudge cap cannot change a movement-only learner.",
+      "source": "takehome/followup_c_manifest.py:7-11"
+    }
+  ],
+  "mismatches": []
+}

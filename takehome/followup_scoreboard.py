@@ -227,7 +227,13 @@ def plot_phase(phase: str, records: list[dict[str, Any]], output_root: Path) -> 
                         fmt="|", color="tab:orange", capsize=3)
     ax.set_xlabel("Success rate (%)")
     ax.set_title(f"Phase {phase}: final results from completed seeds")
-    ax.set_xlim(0, 100)
+    bounds=[(record.get(mean_key),record.get(spread_key) or 0)
+            for record in selected
+            for mean_key,spread_key in (('mean_percent','spread_pp'),
+                                       ('base_mean_percent','base_spread_pp'))
+            if record.get(mean_key) is not None]
+    ax.set_xlim(min([0]+[m-s for m,s in bounds])-1,
+                max([100]+[m+s for m,s in bounds])+1)
     ax.margins(y=0.08)
     ax.grid(axis="x", alpha=0.25)
     handles = [

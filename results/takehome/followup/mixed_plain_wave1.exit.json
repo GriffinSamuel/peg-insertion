@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "mixed_plain_wave1",
+    "--settings",
+    "M_mostly_fixed_aim",
+    "M_mostly_fixed_movement",
+    "M_even_aim",
+    "M_even_movement",
+    "M_mostly_episode_aim",
+    "M_mostly_episode_movement"
+  ],
+  "started_utc": "2026-11-17T06:25:16.822653+00:00",
+  "finished_utc": "2026-11-17T06:39:34.367969+00:00",
+  "seconds": 857.5453450760106,
+  "exit_code": 0
+}

@@ -1,0 +1,33 @@
+START M_mostly_fixed_aim 163959 SEEDS [0, 1, 2, 3, 4]
+START M_mostly_fixed_movement 163960 SEEDS [0, 1, 2, 3, 4]
+START M_even_aim 163961 SEEDS [0, 1, 2, 3, 4]
+START M_even_movement 163962 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "M_even_movement", "exit_code": 0, "seconds": 355.0879145700019}
+{"completed_rows": 22, "new_settings_attempted": 19, "promotions": []}
+START M_mostly_episode_movement 170344 SEEDS [0, 1, 2, 3, 4]
+FINISH {"name": "M_mostly_fixed_movement", "exit_code": 0, "seconds": 359.4891068739962}
+{"completed_rows": 22, "new_settings_attempted": 19, "promotions": []}
+START M_mostly_fixed_heat 170361 SEEDS [0, 1, 2]
+FINISH {"name": "M_even_aim", "exit_code": 0, "seconds": 373.39033594500506}
+{"completed_rows": 22, "new_settings_attempted": 20, "promotions": []}
+START M_mostly_fixed_combined 170880 SEEDS [0, 1, 2]
+FINISH {"name": "M_mostly_fixed_aim", "exit_code": 0, "seconds": 377.52860392301227}
+{"completed_rows": 22, "new_settings_attempted": 21, "promotions": []}
+START M_even_heat 171009 SEEDS [0, 1, 2]
+FINISH {"name": "M_mostly_episode_movement", "exit_code": 0, "seconds": 315.21669817400107}
+{"completed_rows": 22, "new_settings_attempted": 22, "promotions": []}
+START M_even_combined 177543 SEEDS [0, 1, 2]
+FINISH {"name": "M_mostly_fixed_heat", "exit_code": 0, "seconds": 532.9984933459928}
+{"completed_rows": 23, "new_settings_attempted": 23, "promotions": []}
+START M_mostly_episode_heat 181624 SEEDS [0, 1, 2]
+FINISH {"name": "M_mostly_fixed_combined", "exit_code": 0, "seconds": 563.5496898499987}
+{"completed_rows": 24, "new_settings_attempted": 24, "promotions": []}
+START M_mostly_episode_combined 182370 SEEDS [0, 1, 2]
+FINISH {"name": "M_even_heat", "exit_code": 0, "seconds": 568.2635888020013}
+{"completed_rows": 25, "new_settings_attempted": 25, "promotions": []}
+FINISH {"name": "M_even_combined", "exit_code": 0, "seconds": 460.6657992949913}
+{"completed_rows": 26, "new_settings_attempted": 25, "promotions": []}
+FINISH {"name": "M_mostly_episode_heat", "exit_code": 0, "seconds": 390.4201734399976}
+{"completed_rows": 27, "new_settings_attempted": 25, "promotions": []}
+FINISH {"name": "M_mostly_episode_combined", "exit_code": 0, "seconds": 362.39870896299544}
+{"completed_rows": 28, "new_settings_attempted": 25, "promotions": []}

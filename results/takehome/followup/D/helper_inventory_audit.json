@@ -1,0 +1,1426 @@
+{
+  "purpose": "Mechanical, read-only comparison of the Phase D manifest generator with fixed Goal 7 trick values and the revised Phase D scope. No experiment/result scores were read or interpreted.",
+  "totals": {
+    "original_goal7_settings": 24,
+    "phase_d_rows": 24,
+    "planned": 18,
+    "skipped": 6
+  },
+  "scope_checks": {
+    "base_is_B_aim_fixed_all_rows": true,
+    "condition_fixed_all_rows": true,
+    "one_original_trick_override_all_rows": true,
+    "all_trick_values_match_original_manifest": true,
+    "planned_seeds_are_0_to_2_all_rows": true,
+    "test_seed_123_inherited_from_followup_config_default": true,
+    "practice_budget_200_inherited_from_train_config_default": true,
+    "phase_d_fixed_condition_and_aim_base_match_revised_plan": true,
+    "phase_d_plan_source": {
+      "path": "FOLLOWUP_PLAN.md",
+      "lines": "84-86"
+    },
+    "seed_and_budget_defaults_source": [
+      {
+        "path": "takehome/followup_config.py",
+        "lines": "7-32"
+      },
+      {
+        "path": "takehome/config.py",
+        "lines": "7-33"
+      }
+    ]
+  },
+  "base_seed_path_audit": {
+    "registry_entry_available": true,
+    "base_seed_list": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "base_seed_paths": {
+      "4": "B/B_aim_fixed/seed_4_restart_1"
+    },
+    "seed4_restart_1_present": true,
+    "seed4_path_requirement": "Seed 4 is not in current Phase D seeds [0,1,2]; when the B_aim_fixed base is extended to seed 4, the registered custom path points to seed_4_restart_1."
+  },
+  "skip_audit": {
+    "all_skips_have_reasons": true,
+    "skipped_items": [
+      {
+        "name": "D_side_by_side",
+        "reason": "Needs a movement component; this base is aim-only."
+      },
+      {
+        "name": "D_aim_then_move",
+        "reason": "Needs a movement component to train second."
+      },
+      {
+        "name": "D_move_then_aim",
+        "reason": "Needs a movement component to train first."
+      },
+      {
+        "name": "D_movement_cap_400um",
+        "reason": "A movement cap cannot alter an aim-only learner."
+      },
+      {
+        "name": "D_contact_cap",
+        "reason": "Scales the absent movement correction, not the aim nudge."
+      },
+      {
+        "name": "D_uncertainty_cap",
+        "reason": "Scales the absent movement correction, not the aim nudge."
+      }
+    ],
+    "skip_reasons_match_scope": "The three coordination modes require a movement component; movement_cap_400um, contact_cap, and uncertainty_cap alter movement outputs/caps absent from the aim-only base.",
+    "source": {
+      "path": "takehome/followup_d_manifest.py",
+      "lines": "9-16"
+    }
+  },
+  "exact_rows": [
+    {
+      "name": "D_fill_0",
+      "original_setting": "fill_0",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 0
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_10",
+      "original_setting": "fill_10",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 10
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_20",
+      "original_setting": "fill_20",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 20
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_80",
+      "original_setting": "fill_80",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 80
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_120",
+      "original_setting": "fill_120",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 120
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_side_by_side",
+      "original_setting": "side_by_side",
+      "status": "skipped",
+      "reason": "Needs a movement component; this base is aim-only.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "coordination": "side_by_side"
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "17-18"
+      }
+    },
+    {
+      "name": "D_aim_then_move",
+      "original_setting": "aim_then_move",
+      "status": "skipped",
+      "reason": "Needs a movement component to train second.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "coordination": "aim_then_move"
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "17-18"
+      }
+    },
+    {
+      "name": "D_move_then_aim",
+      "original_setting": "move_then_aim",
+      "status": "skipped",
+      "reason": "Needs a movement component to train first.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "coordination": "move_then_aim"
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "17-18"
+      }
+    },
+    {
+      "name": "D_briefing",
+      "original_setting": "briefing",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "briefing": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 11
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "19"
+      }
+    },
+    {
+      "name": "D_privileged_critic",
+      "original_setting": "privileged_critic",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "privileged_critic": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 12
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "20"
+      }
+    },
+    {
+      "name": "D_one_critic",
+      "original_setting": "one_critic",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "ensemble": 1
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 13
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "21"
+      }
+    },
+    {
+      "name": "D_one_update",
+      "original_setting": "one_update",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "updates_per_step": 1
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 14
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "22"
+      }
+    },
+    {
+      "name": "D_aim_cap_50um",
+      "original_setting": "aim_cap_50um",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "step_cap": 5e-05
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "23-24"
+      }
+    },
+    {
+      "name": "D_aim_cap_200um",
+      "original_setting": "aim_cap_200um",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "step_cap": 0.0002
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "23-24"
+      }
+    },
+    {
+      "name": "D_movement_cap_400um",
+      "original_setting": "movement_cap_400um",
+      "status": "skipped",
+      "reason": "A movement cap cannot alter an aim-only learner.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "movement_cap": 0.0004
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 16
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "25"
+      }
+    },
+    {
+      "name": "D_final_decider",
+      "original_setting": "final_decider",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "final_decider": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 17
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "26"
+      }
+    },
+    {
+      "name": "D_near_hole",
+      "original_setting": "near_hole",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "near_hole": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 18
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "27"
+      }
+    },
+    {
+      "name": "D_contact_cap",
+      "original_setting": "contact_cap",
+      "status": "skipped",
+      "reason": "Scales the absent movement correction, not the aim nudge.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "contact_cap": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 19
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "28"
+      }
+    },
+    {
+      "name": "D_uncertainty_cap",
+      "original_setting": "uncertainty_cap",
+      "status": "skipped",
+      "reason": "Scales the absent movement correction, not the aim nudge.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "uncertainty_cap": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 20
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "29"
+      }
+    },
+    {
+      "name": "D_classification",
+      "original_setting": "classification",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "classification": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 21
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "30"
+      }
+    },
+    {
+      "name": "D_three_step",
+      "original_setting": "three_step",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "n_step": 3
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 22
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "31"
+      }
+    },
+    {
+      "name": "D_return_floor",
+      "original_setting": "return_floor",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "return_floor": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 23
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "32"
+      }
+    },
+    {
+      "name": "D_force_penalty",
+      "original_setting": "force_penalty",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "force_penalty": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 24
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "33"
+      }
+    },
+    {
+      "name": "D_sibling_fill",
+      "original_setting": "sibling_fill",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "sibling_fill": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 25
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "34"
+      }
+    }
+  ],
+  "discrepancies": [
+    {
+      "kind": "Goal7 base-label differs from Phase D inclusion",
+      "settings": [
+        "D_final_decider",
+        "D_force_penalty"
+      ],
+      "detail": "Goal 7 design table labels final_decider and force_penalty as Combined; the Phase D generator includes both as planned aim-only rows. Their switch values match the original manifest exactly, but their original base label is not Aim.",
+      "source_refs": [
+        {
+          "path": "takehome/goal7_design.md",
+          "lines": "17,24"
+        },
+        {
+          "path": "takehome/followup_d_manifest.py",
+          "lines": "18-25"
+        }
+      ]
+    },
+    {
+      "kind": "changes metadata is 2 while trick override count is one",
+      "settings": "all 24 Phase D rows",
+      "detail": "Each generated row sets changes=2 even though after excluding outputs and fixed-camera context its overrides contain exactly one Goal 7 trick. The Phase D plan says one change from the working fixed aim corrector; the source does not define whether the common condition/base change is included in this metadata count.",
+      "source_refs": [
+        {
+          "path": "takehome/followup_d_manifest.py",
+          "lines": "20-28"
+        },
+        {
+          "path": "FOLLOWUP_PLAN.md",
+          "lines": "84-86"
+        }
+      ]
+    }
+  ],
+  "all_rows": [
+    {
+      "name": "D_fill_0",
+      "original_setting": "fill_0",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 0
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_10",
+      "original_setting": "fill_10",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 10
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_20",
+      "original_setting": "fill_20",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 20
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_80",
+      "original_setting": "fill_80",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 80
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_fill_120",
+      "original_setting": "fill_120",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "fill_episodes": 120
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 9
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "15-16"
+      }
+    },
+    {
+      "name": "D_side_by_side",
+      "original_setting": "side_by_side",
+      "status": "skipped",
+      "reason": "Needs a movement component; this base is aim-only.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "coordination": "side_by_side"
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "17-18"
+      }
+    },
+    {
+      "name": "D_aim_then_move",
+      "original_setting": "aim_then_move",
+      "status": "skipped",
+      "reason": "Needs a movement component to train second.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "coordination": "aim_then_move"
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "17-18"
+      }
+    },
+    {
+      "name": "D_move_then_aim",
+      "original_setting": "move_then_aim",
+      "status": "skipped",
+      "reason": "Needs a movement component to train first.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "coordination": "move_then_aim"
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 10
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "17-18"
+      }
+    },
+    {
+      "name": "D_briefing",
+      "original_setting": "briefing",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "briefing": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 11
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "19"
+      }
+    },
+    {
+      "name": "D_privileged_critic",
+      "original_setting": "privileged_critic",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "privileged_critic": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 12
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "20"
+      }
+    },
+    {
+      "name": "D_one_critic",
+      "original_setting": "one_critic",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "ensemble": 1
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 13
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "21"
+      }
+    },
+    {
+      "name": "D_one_update",
+      "original_setting": "one_update",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "updates_per_step": 1
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 14
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "22"
+      }
+    },
+    {
+      "name": "D_aim_cap_50um",
+      "original_setting": "aim_cap_50um",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "step_cap": 5e-05
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "23-24"
+      }
+    },
+    {
+      "name": "D_aim_cap_200um",
+      "original_setting": "aim_cap_200um",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "step_cap": 0.0002
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 15
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "23-24"
+      }
+    },
+    {
+      "name": "D_movement_cap_400um",
+      "original_setting": "movement_cap_400um",
+      "status": "skipped",
+      "reason": "A movement cap cannot alter an aim-only learner.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "movement_cap": 0.0004
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 16
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "25"
+      }
+    },
+    {
+      "name": "D_final_decider",
+      "original_setting": "final_decider",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "final_decider": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 17
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "26"
+      }
+    },
+    {
+      "name": "D_near_hole",
+      "original_setting": "near_hole",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "near_hole": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 18
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "27"
+      }
+    },
+    {
+      "name": "D_contact_cap",
+      "original_setting": "contact_cap",
+      "status": "skipped",
+      "reason": "Scales the absent movement correction, not the aim nudge.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "contact_cap": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 19
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "28"
+      }
+    },
+    {
+      "name": "D_uncertainty_cap",
+      "original_setting": "uncertainty_cap",
+      "status": "skipped",
+      "reason": "Scales the absent movement correction, not the aim nudge.",
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "uncertainty_cap": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": true,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 20
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "29"
+      }
+    },
+    {
+      "name": "D_classification",
+      "original_setting": "classification",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "classification": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 21
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "30"
+      }
+    },
+    {
+      "name": "D_three_step",
+      "original_setting": "three_step",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "n_step": 3
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 22
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "31"
+      }
+    },
+    {
+      "name": "D_return_floor",
+      "original_setting": "return_floor",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "return_floor": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 23
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "32"
+      }
+    },
+    {
+      "name": "D_force_penalty",
+      "original_setting": "force_penalty",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "force_penalty": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 24
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "33"
+      }
+    },
+    {
+      "name": "D_sibling_fill",
+      "original_setting": "sibling_fill",
+      "status": "planned",
+      "reason": null,
+      "base": "B_aim_fixed",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "condition": "fixed",
+      "outputs": 2,
+      "exact_single_trick_override": {
+        "sibling_fill": true
+      },
+      "matches_original_goal7_trick_value": true,
+      "skipped_reason_present": null,
+      "goal7_design_source": {
+        "path": "takehome/goal7_design.md",
+        "line": 25
+      },
+      "original_manifest_source": {
+        "path": "takehome/goal7_manifest.py",
+        "lines": "34"
+      }
+    }
+  ],
+  "checks": {
+    "every_original_setting_covered_once": true,
+    "all_applicable_values_exact": true,
+    "all_skipped_coordination_or_movement_items_explained": true,
+    "seed_test_budget_scope_checked": true,
+    "no_gpu_work_or_experiment_runs": true,
+    "simulation_runs": 0,
+    "result_scores_read": false
+  }
+}

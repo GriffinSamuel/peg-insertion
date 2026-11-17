@@ -345,7 +345,7 @@ def build_report(root: Path = DEFAULT_FOLLOWUP_ROOT) -> dict[str, Any]:
         "fraction_definition": "(method mean rate - floor mean rate) / (zero-error ceiling mean rate - floor mean rate)",
         "individual_fraction_definition": "(method seed rate - floor seed rate) / (zero-error ceiling seed rate - floor seed rate); undefined when denominator <= 0",
         "chart_axis_labels": {
-            "bottom": "Calibration component (fixed-across-seed variance fraction)",
+            "bottom": "Calibration component (share of total error variance)",
             "top": "Per-attempt component (variance fraction)",
         },
         "settings": [per_setting[(split, method)]
@@ -414,6 +414,7 @@ def plot_report(report: dict[str, Any], output_path: Path) -> None:
     colors = dict(zip(METHODS, ("tab:blue", "tab:orange", "tab:green", "tab:red")))
 
     fig, ax = plt.subplots(figsize=(11, 6.4))
+    bounds=[0.,100.]
     for method in METHODS:
         xs, ys, errors = [], [], []
         for x, split in zip(x_values, split_names):
@@ -439,6 +440,8 @@ def plot_report(report: dict[str, Any], output_path: Path) -> None:
         ax.errorbar(xs, ys, yerr=errors, color=colors[method], marker="o",
                     linewidth=1.8, capsize=4, label=f"{METHODS_LABEL(method)} mean ± sample SD",
                     zorder=4)
+        bounds.extend(y-e for y,e in zip(ys,errors))
+        bounds.extend(y+e for y,e in zip(ys,errors))
 
     floor_means = []
     ceiling_means = []
@@ -452,7 +455,7 @@ def plot_report(report: dict[str, Any], output_path: Path) -> None:
     ax.plot(x_values, floor_means, color="black", linestyle="--", marker="s",
             label="Mixed-condition floor mean", zorder=2)
     ax.plot(x_values, ceiling_means, color="dimgray", linestyle=":", marker="^",
-            label="Zero-error ceiling mean", zorder=2)
+            label="Zero-error reference mean", zorder=2)
     for x, split in zip(x_values, split_names):
         seed_rows = [item for item in setting_index[(split, "aim")]["seeds"]
                      if item["seed"] in (0, 1, 2)]
@@ -464,16 +467,16 @@ def plot_report(report: dict[str, Any], output_path: Path) -> None:
     ax.set_xticks(x_values, [f"{name.replace('_', ' ')}\n{100*x:.0f}% fixed variance"
                               for name, x in zip(split_names, x_values)])
     ax.set_xlim(0.15, 0.85)
-    ax.set_ylim(0, 100)
+    ax.set_ylim(min(bounds)-1,max(bounds)+1)
     ax.set_ylabel("Success rate (%)")
-    ax.set_xlabel("Calibration component (fixed-across-seed variance fraction)", labelpad=12)
+    ax.set_xlabel("Calibration component (share of total error variance)", labelpad=12)
     ax.set_title("Mixed-condition results by fixed/per-attempt variance split\n"
                  "Shared screening seeds 0–2; test seed 123, 500 episodes per seed")
     ax.grid(axis="y", alpha=0.25)
     top = ax.secondary_xaxis("top", functions=(lambda x: 1.0 - x,
                                                 lambda x: 1.0 - x))
     top.set_xlabel("Per-attempt component (variance fraction)", labelpad=9)
-    top.set_xticks(x_values, [f"{100*(1-x):.0f}%" for x in x_values])
+    top.set_xticks([1-x for x in x_values], [f"{100*(1-x):.0f}%" for x in x_values])
     ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1.0), borderaxespad=0.0,
               frameon=False, fontsize=8)
     fig.subplots_adjust(left=0.11, right=0.73, bottom=0.19, top=0.82)

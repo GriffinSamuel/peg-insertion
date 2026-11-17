@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "passed_nodes": [
+    "takehome/test_followup_final.py::test_plain_chosen_method_reuses_one_configuration",
+    "takehome/test_followup_final.py::test_ineligible_confirmation_is_rejected[change0]",
+    "takehome/test_followup_final.py::test_ineligible_confirmation_is_rejected[change1]",
+    "takehome/test_followup_final.py::test_ineligible_confirmation_is_rejected[change2]",
+    "takehome/test_followup_final.py::test_paired_differences_and_identical_method_reuse_are_not_fake_replicates"
+  ],
+  "failed_nodes": [],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

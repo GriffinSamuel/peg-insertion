@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "passed_nodes": [
+    "takehome/test_followup_choice.py::test_simpler_baseline_wins_within_top_spread",
+    "takehome/test_followup_choice.py::test_clear_gain_wins_and_ineligible_results_do_not_compete"
+  ],
+  "failed_nodes": [],
+  "events": [],
+  "reset_only_probes": 0,
+  "reset_probe_sources": {},
+  "reset_count_scope": "completed passing probe tests; failed probe counts unknown"
+}

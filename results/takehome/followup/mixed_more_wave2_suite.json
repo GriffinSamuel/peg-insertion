@@ -1,0 +1,61 @@
+{
+  "jobs": [
+    {
+      "name": "M_even_movement",
+      "exit_code": 0,
+      "seconds": 355.0879145700019
+    },
+    {
+      "name": "M_mostly_fixed_movement",
+      "exit_code": 0,
+      "seconds": 359.4891068739962
+    },
+    {
+      "name": "M_even_aim",
+      "exit_code": 0,
+      "seconds": 373.39033594500506
+    },
+    {
+      "name": "M_mostly_fixed_aim",
+      "exit_code": 0,
+      "seconds": 377.52860392301227
+    },
+    {
+      "name": "M_mostly_episode_movement",
+      "exit_code": 0,
+      "seconds": 315.21669817400107
+    },
+    {
+      "name": "M_mostly_fixed_heat",
+      "exit_code": 0,
+      "seconds": 532.9984933459928
+    },
+    {
+      "name": "M_mostly_fixed_combined",
+      "exit_code": 0,
+      "seconds": 563.5496898499987
+    },
+    {
+      "name": "M_even_heat",
+      "exit_code": 0,
+      "seconds": 568.2635888020013
+    },
+    {
+      "name": "M_even_combined",
+      "exit_code": 0,
+      "seconds": 460.6657992949913
+    },
+    {
+      "name": "M_mostly_episode_heat",
+      "exit_code": 0,
+      "seconds": 390.4201734399976
+    },
+    {
+      "name": "M_mostly_episode_combined",
+      "exit_code": 0,
+      "seconds": 362.39870896299544
+    }
+  ],
+  "tripwire": false,
+  "seconds": 1311.8594645830017
+}

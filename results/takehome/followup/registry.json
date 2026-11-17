@@ -1,7 +1,7 @@
 {
   "max_new_settings": 90,
   "original_settings": 28,
-  "phase": "B",
+  "phase": "B_mixed",
   "settings": [
     {
       "name": "B_gate",
@@ -371,6 +371,334 @@
       "changes": 1,
       "reason": "",
       "counted": true
+    },
+    {
+      "name": "M_mostly_fixed_aim",
+      "phase": "B_mixed",
+      "description": "Plain aim corrector.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00065,
+        "mixed_episode_std": 0.000375,
+        "outputs": 2
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_fixed_heat",
+      "phase": "B_mixed",
+      "description": "Own-practice across-episode aim heat map.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00065,
+        "mixed_episode_std": 0.000375,
+        "outputs": 2,
+        "constant_fill": true,
+        "heatmap": true
+      },
+      "base": "M_mostly_fixed_aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_fixed_movement",
+      "phase": "B_mixed",
+      "description": "Plain movement corrector.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00065,
+        "mixed_episode_std": 0.000375,
+        "outputs": 3
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_fixed_combined",
+      "phase": "B_mixed",
+      "description": "Aim and movement learned together.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00065,
+        "mixed_episode_std": 0.000375,
+        "outputs": 5
+      },
+      "base": "M_mostly_fixed_movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_even_aim",
+      "phase": "B_mixed",
+      "description": "Plain aim corrector.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00053,
+        "mixed_episode_std": 0.00053,
+        "outputs": 2
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_even_heat",
+      "phase": "B_mixed",
+      "description": "Own-practice across-episode aim heat map.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00053,
+        "mixed_episode_std": 0.00053,
+        "outputs": 2,
+        "constant_fill": true,
+        "heatmap": true
+      },
+      "base": "M_even_aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "Seed1 had no successes; its success-time aim error and insertion time are undefined.",
+      "counted": true
+    },
+    {
+      "name": "M_even_movement",
+      "phase": "B_mixed",
+      "description": "Plain movement corrector.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00053,
+        "mixed_episode_std": 0.00053,
+        "outputs": 3
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_even_combined",
+      "phase": "B_mixed",
+      "description": "Aim and movement learned together.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.00053,
+        "mixed_episode_std": 0.00053,
+        "outputs": 5
+      },
+      "base": "M_even_movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_episode_aim",
+      "phase": "B_mixed",
+      "description": "Plain aim corrector.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.000375,
+        "mixed_episode_std": 0.00065,
+        "outputs": 2
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_episode_heat",
+      "phase": "B_mixed",
+      "description": "Own-practice across-episode aim heat map.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.000375,
+        "mixed_episode_std": 0.00065,
+        "outputs": 2,
+        "constant_fill": true,
+        "heatmap": true
+      },
+      "base": "M_mostly_episode_aim",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_episode_movement",
+      "phase": "B_mixed",
+      "description": "Plain movement corrector.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.000375,
+        "mixed_episode_std": 0.00065,
+        "outputs": 3
+      },
+      "base": "floor",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
+    },
+    {
+      "name": "M_mostly_episode_combined",
+      "phase": "B_mixed",
+      "description": "Aim and movement learned together.",
+      "overrides": {
+        "camera_condition": "mixed",
+        "mixed_fixed_std": 0.000375,
+        "mixed_episode_std": 0.00065,
+        "outputs": 5
+      },
+      "base": "M_mostly_episode_movement",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "status": "finished",
+      "condition": "mixed",
+      "condition_label": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "hand_search": false,
+      "hidden_information": false,
+      "conditional": false,
+      "changes": 1,
+      "reason": "",
+      "counted": true
     }
   ],
   "status": "active",
@@ -379,5 +707,10 @@
     "halted_at": "B_aim_fixed/seed_4/160",
     "resolution": "User revised consistent-camera rule; authorized fresh seed4 restart, 2026-11-16",
     "plan_commit": "b46779e"
-  }
+  },
+  "completed_phases": [
+    "A",
+    "B",
+    "B_mixed"
+  ]
 }

@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "planned_count": 18,
+  "settings": [
+    {
+      "name": "D_fill_0",
+      "overrides": {
+        "fill_episodes": 0,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_fill_10",
+      "overrides": {
+        "fill_episodes": 10,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_fill_20",
+      "overrides": {
+        "fill_episodes": 20,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_fill_80",
+      "overrides": {
+        "fill_episodes": 80,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_fill_120",
+      "overrides": {
+        "fill_episodes": 120,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_briefing",
+      "overrides": {
+        "briefing": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_privileged_critic",
+      "overrides": {
+        "privileged_critic": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_one_critic",
+      "overrides": {
+        "ensemble": 1,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_one_update",
+      "overrides": {
+        "updates_per_step": 1,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_aim_cap_50um",
+      "overrides": {
+        "step_cap": 5e-05,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_aim_cap_200um",
+      "overrides": {
+        "step_cap": 0.0002,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_final_decider",
+      "overrides": {
+        "outputs": 2,
+        "final_decider": true,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_near_hole",
+      "overrides": {
+        "near_hole": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_classification",
+      "overrides": {
+        "classification": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_three_step",
+      "overrides": {
+        "n_step": 3,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_return_floor",
+      "overrides": {
+        "return_floor": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_force_penalty",
+      "overrides": {
+        "outputs": 2,
+        "force_penalty": true,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    },
+    {
+      "name": "D_sibling_fill",
+      "overrides": {
+        "sibling_fill": true,
+        "outputs": 2,
+        "camera_condition": "fixed"
+      },
+      "budget": 200
+    }
+  ],
+  "simulation_runs": 0
+}

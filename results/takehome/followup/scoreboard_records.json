@@ -1,5 +1,5 @@
 {
-  "summary": "Phase B is complete under the revised consistent-camera rule. Plain aim on one-sided error HELPED:80.20% \u00b14.24 points versus its69.40% floor, but its success-time guess was farther from the true error. The one-sided heat map was NO REAL DIFFERENCE at78.73%. No normal-condition aim fix met the working definition; labels HURT and constant-offset fill was UNSTABLE. Fixed-camera aim reached90.36% and movement93.84%, both NO REAL DIFFERENCE under the declared conservative spread rule. The normal-camera best remains existing plain movement,83.36% \u00b12.99 development points; the original80.2% headline is unchanged. Thirteen follow-up settings,41 whole-project settings; the preserved160-episode halt is a separate uncounted attempt. The offset sweep tied the centre at94.53%; mixed comparisons are next and fresh seeds remain unused.",
+  "summary": "Mixed comparisons are complete. Plain movement HELPED against the matched floor in all three splits: mostly fixed 90.32%, even 87.64%, mostly per-attempt 88.16%, each on five seeds. Plain aim HELPED in the first two splits (87.08% and 79.88%) but did not bring its guess closer to the true error at success. No heat-map or joint addition helped; two heat maps and even-split joint learning were UNSTABLE. No normal-condition aim repair met the working definition. The best confirmed normal-condition learning baseline remains plain movement at 83.36% \u00b1 2.99 points on development seeds; fresh confirmation is still locked. The original 80.2% headline is unchanged.",
   "records": [
     {
       "phase": "B",
@@ -606,8 +606,526 @@
       "reason": null,
       "base_mean_percent": 72.52,
       "base_spread_pp": 23.508126254552916
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_fixed_aim",
+      "description": "Plain aim corrector.",
+      "base": "floor",
+      "base_result": "s0 227/500 (45.4%); s1 266/500 (53.2%); s2 440/500 (88.0%); s3 363/500 (72.6%); s4 416/500 (83.2%); mean 68.48% \u00b1 18.58pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 426,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 453,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 436,
+          "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 401,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 461,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 87.08,
+      "spread_pp": 4.729904861622481,
+      "delta_pp": 18.599999999999994,
+      "verdict": "HELPED",
+      "aim_start_mm": 0.8796588337816165,
+      "aim_success_mm": 1.262815556616942,
+      "steps_to_insert": 164.42330322265624,
+      "peak_force_n": 93.98981170654297,
+      "practice_episodes": 1000,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "reason": null,
+      "base_mean_percent": 68.48,
+      "base_spread_pp": 18.579881592733578
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_fixed_heat",
+      "description": "Own-practice across-episode aim heat map.",
+      "base": "M_mostly_fixed_aim",
+      "base_result": "s0 426/500 (85.2%); s1 453/500 (90.6%); s2 436/500 (87.2%); mean 87.67% \u00b1 2.73pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 400,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 435,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 426,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 84.06666666666666,
+      "spread_pp": 3.6350149013908233,
+      "delta_pp": -3.6000000000000085,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 1.5526750549320902,
+      "aim_success_mm": 0.7450726897814336,
+      "steps_to_insert": 165.22903951009116,
+      "peak_force_n": 92.30548350016277,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "reason": null,
+      "base_mean_percent": 87.66666666666667,
+      "base_spread_pp": 2.7300793639257646
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_fixed_movement",
+      "description": "Plain movement corrector.",
+      "base": "floor",
+      "base_result": "s0 227/500 (45.4%); s1 266/500 (53.2%); s2 440/500 (88.0%); s3 363/500 (72.6%); s4 416/500 (83.2%); mean 68.48% \u00b1 18.58pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 443,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 469,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 486,
+          "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 435,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 425,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 90.32,
+      "spread_pp": 5.043014971225052,
+      "delta_pp": 21.83999999999999,
+      "verdict": "HELPED",
+      "aim_start_mm": null,
+      "aim_success_mm": null,
+      "steps_to_insert": 145.0310852050781,
+      "peak_force_n": 95.0012222290039,
+      "practice_episodes": 1000,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "reason": null,
+      "base_mean_percent": 68.48,
+      "base_spread_pp": 18.579881592733578
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_fixed_combined",
+      "description": "Aim and movement learned together.",
+      "base": "M_mostly_fixed_movement",
+      "base_result": "s0 443/500 (88.6%); s1 469/500 (93.8%); s2 486/500 (97.2%); mean 93.20% \u00b1 4.33pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 478,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 289,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 486,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 83.53333333333333,
+      "spread_pp": 22.300074738290306,
+      "delta_pp": -9.666666666666671,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.8974142368963242,
+      "aim_success_mm": 1.1885970110164674,
+      "steps_to_insert": 143.23149617513022,
+      "peak_force_n": 88.960205078125,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.65 mm, per-attempt 0.375 mm",
+      "reason": null,
+      "base_mean_percent": 93.2,
+      "base_spread_pp": 4.3312815655415475
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_even_aim",
+      "description": "Plain aim corrector.",
+      "base": "floor",
+      "base_result": "s0 256/500 (51.2%); s1 278/500 (55.6%); s2 394/500 (78.8%); s3 363/500 (72.6%); s4 373/500 (74.6%); mean 66.56% \u00b1 12.32pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 410,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 346,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 435,
+          "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 416,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 390,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 79.88,
+      "spread_pp": 6.778790452580754,
+      "delta_pp": 13.319999999999993,
+      "verdict": "HELPED",
+      "aim_start_mm": 0.895326835279929,
+      "aim_success_mm": 1.1595968787436408,
+      "steps_to_insert": 165.36529235839845,
+      "peak_force_n": 91.13614959716797,
+      "practice_episodes": 1000,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "reason": null,
+      "base_mean_percent": 66.56,
+      "base_spread_pp": 12.318603816991594
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_even_heat",
+      "description": "Own-practice across-episode aim heat map.",
+      "base": "M_even_aim",
+      "base_result": "s0 410/500 (82.0%); s1 346/500 (69.2%); s2 435/500 (87.0%); mean 79.40% \u00b1 9.18pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 367,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 0,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 284,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 43.4,
+      "spread_pp": 38.49103791793617,
+      "delta_pp": -36.00000000000001,
+      "verdict": "UNSTABLE",
+      "aim_start_mm": 1.387915398701928,
+      "aim_success_mm": 1.797366548719137,
+      "steps_to_insert": 168.58177185058594,
+      "peak_force_n": 78.1402104695638,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "reason": "Seed1 had no successes; its success-time aim error and insertion time are undefined.",
+      "base_mean_percent": 79.4,
+      "base_spread_pp": 9.1804139340228
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_even_movement",
+      "description": "Plain movement corrector.",
+      "base": "floor",
+      "base_result": "s0 256/500 (51.2%); s1 278/500 (55.6%); s2 394/500 (78.8%); s3 363/500 (72.6%); s4 373/500 (74.6%); mean 66.56% \u00b1 12.32pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 413,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 464,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 479,
+          "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 447,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 388,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 87.64,
+      "spread_pp": 7.458418062833434,
+      "delta_pp": 21.08,
+      "verdict": "HELPED",
+      "aim_start_mm": null,
+      "aim_success_mm": null,
+      "steps_to_insert": 144.53773498535156,
+      "peak_force_n": 95.34697723388672,
+      "practice_episodes": 1000,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "reason": null,
+      "base_mean_percent": 66.56,
+      "base_spread_pp": 12.318603816991594
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_even_combined",
+      "description": "Aim and movement learned together.",
+      "base": "M_even_movement",
+      "base_result": "s0 413/500 (82.6%); s1 464/500 (92.8%); s2 479/500 (95.8%); mean 90.40% \u00b1 6.92pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 408,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 222,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 465,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 73.0,
+      "spread_pp": 25.415743152620976,
+      "delta_pp": -17.39999999999999,
+      "verdict": "UNSTABLE",
+      "aim_start_mm": 0.9040394317703803,
+      "aim_success_mm": 1.1772071055857347,
+      "steps_to_insert": 166.93277994791666,
+      "peak_force_n": 87.35525767008464,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.53 mm, per-attempt 0.53 mm",
+      "reason": null,
+      "base_mean_percent": 90.39999999999999,
+      "base_spread_pp": 6.919537556802479
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_episode_aim",
+      "description": "Plain aim corrector.",
+      "base": "floor",
+      "base_result": "s0 295/500 (59.0%); s1 280/500 (56.0%); s2 360/500 (72.0%); mean 62.33% \u00b1 8.50pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 369,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 312,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 368,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 69.93333333333334,
+      "spread_pp": 6.52482439099577,
+      "delta_pp": 7.600000000000001,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.9223334428030862,
+      "aim_success_mm": 1.2906376148095269,
+      "steps_to_insert": 167.52820332845053,
+      "peak_force_n": 87.62522379557292,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "reason": null,
+      "base_mean_percent": 62.333333333333336,
+      "base_spread_pp": 8.50490054811538
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_episode_heat",
+      "description": "Own-practice across-episode aim heat map.",
+      "base": "M_mostly_episode_aim",
+      "base_result": "s0 369/500 (73.8%); s1 312/500 (62.4%); s2 368/500 (73.6%); mean 69.93% \u00b1 6.52pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 301,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 256,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 8,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 37.66666666666667,
+      "spread_pp": 31.55714393498457,
+      "delta_pp": -32.266666666666666,
+      "verdict": "UNSTABLE",
+      "aim_start_mm": 1.2772476940522317,
+      "aim_success_mm": 1.9815871374410776,
+      "steps_to_insert": 168.27413431803384,
+      "peak_force_n": 76.98981475830078,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "reason": null,
+      "base_mean_percent": 69.93333333333334,
+      "base_spread_pp": 6.52482439099577
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_episode_movement",
+      "description": "Plain movement corrector.",
+      "base": "floor",
+      "base_result": "s0 295/500 (59.0%); s1 280/500 (56.0%); s2 360/500 (72.0%); s3 344/500 (68.8%); s4 333/500 (66.6%); mean 64.48% \u00b1 6.74pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 395,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 479,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 467,
+          "episodes": 500
+        },
+        {
+          "seed": 3,
+          "successes": 435,
+          "episodes": 500
+        },
+        {
+          "seed": 4,
+          "successes": 428,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 88.16,
+      "spread_pp": 6.6639327727701465,
+      "delta_pp": 23.679999999999993,
+      "verdict": "HELPED",
+      "aim_start_mm": null,
+      "aim_success_mm": null,
+      "steps_to_insert": 136.90267028808594,
+      "peak_force_n": 96.90492706298828,
+      "practice_episodes": 1000,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "reason": null,
+      "base_mean_percent": 64.48,
+      "base_spread_pp": 6.738842630600597
+    },
+    {
+      "phase": "B_mixed",
+      "name": "M_mostly_episode_combined",
+      "description": "Aim and movement learned together.",
+      "base": "M_mostly_episode_movement",
+      "base_result": "s0 395/500 (79.0%); s1 479/500 (95.8%); s2 467/500 (93.4%); mean 89.40% \u00b1 9.09pp",
+      "seeds": [
+        {
+          "seed": 0,
+          "successes": 450,
+          "episodes": 500
+        },
+        {
+          "seed": 1,
+          "successes": 396,
+          "episodes": 500
+        },
+        {
+          "seed": 2,
+          "successes": 373,
+          "episodes": 500
+        }
+      ],
+      "mean_percent": 81.26666666666667,
+      "spread_pp": 7.905272502155341,
+      "delta_pp": -8.13333333333334,
+      "verdict": "NO REAL DIFFERENCE",
+      "aim_start_mm": 0.9223334428030862,
+      "aim_success_mm": 1.2761174531852537,
+      "steps_to_insert": 149.40424092610678,
+      "peak_force_n": 91.79980723063152,
+      "practice_episodes": 600,
+      "hand_search": false,
+      "hidden_information": false,
+      "camera_condition": "mixed: fixed 0.375 mm, per-attempt 0.65 mm",
+      "reason": null,
+      "base_mean_percent": 89.4,
+      "base_spread_pp": 9.086253353280439
     }
   ],
-  "new_settings_attempted": 13,
-  "whole_project_settings_attempted": 41
+  "new_settings_attempted": 25,
+  "whole_project_settings_attempted": 53
 }

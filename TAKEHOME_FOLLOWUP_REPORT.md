@@ -1,8 +1,8 @@
 # Follow-up report
 
-Phase B is complete. Mixed-camera comparisons come next, followed by Phases C to G. The original study, its report and its **80.2 percent confirmation headline remain unchanged**. No normal-condition aim fix met the working definition. The best existing normal-condition learning method remains plain movement:83.36 percent with2.99 points of spread on development seeds. Spread means the sample standard deviation across practice seeds. Fresh practice seeds200 to204 and test seed1001 remain unused, so no fresh follow-up comparison is available yet.
+Mixed comparisons are complete. Plain movement HELPED against the matched floor in all three splits: mostly fixed 90.32%, even 87.64%, mostly per-attempt 88.16%, each on five seeds. Plain aim HELPED in the first two splits (87.08% and 79.88%) but did not bring its guess closer to the true error at success. No heat-map or joint addition helped; two heat maps and even-split joint learning were UNSTABLE. No normal-condition aim repair met the working definition. The best confirmed normal-condition learning baseline remains plain movement at 83.36% ± 2.99 points on development seeds; fresh confirmation is still locked. The original 80.2% headline is unchanged.
 
-The task is to repair aim learning, retest the old tricks on movement and fixed-camera aim, combine independently useful changes, then compare touch methods and confirm a learning method on fresh seeds. Fixed and mixed conditions model calibration error plus per-attempt error: fixed error isolates a calibration component, while mixed error adds a component that changes each attempt. None is designated the realistic condition. The more careful Phase A test found **no prediction benefit from20 or40 readings over one**.
+The task is to repair aim learning, retest the old tricks on movement and fixed-camera aim, combine independently useful changes, compare touch methods, and confirm a learning method on fresh seeds. Phases A, B and the added mixed comparison are complete; C through G remain. Spread means the sample standard deviation across practice seeds. Fixed and mixed conditions model calibration error plus per-attempt error; none is designated the realistic condition. The more careful Phase A test found **no benefit from 20 or 40 readings over one**. The original report and its 80.2 percent confirmation headline remain unchanged.
 
 ## Phase A: why the aim guess failed
 
@@ -46,11 +46,59 @@ The original fixed-camera seed4 attempt correctly stopped under the former rule 
 
 The authorized restart began from scratch in a separate directory with its own200-episode ledger and finished at492/500. The five-seed result includes that completed restart, not the partial curve score. The [original halt record](results/takehome/followup/B/tripwire.json) and [fresh result](results/takehome/followup/B/B_aim_fixed/seed_4_restart_1/result.json) preserve both outcomes.
 
+## Mixed camera error: calibration plus per-attempt variation
+
+These conditions model a calibration component that stays fixed for one run plus an independent component drawn for each attempt. The stated standard deviations are used exactly: fixed/per-attempt values of 0.65/0.375 mm, 0.53/0.53 mm, and 0.375/0.65 mm. The fixed-only condition isolates calibration error; none of these is designated the realistic condition. Each calibration seed has its own 500-test floor and zero-error reference. The unchanged within-episode camera jitter remains present.
+
+All 12 requested settings finished. Five three-seed gains qualified for extension, and all five retained HELPED: plain aim in the mostly-fixed and even splits, and plain movement in all three splits. No heat-map or joint addition qualified for extension. The heat map collapsed on one seed in both the even and mostly-per-attempt splits; even-split joint learning also collapsed below half its matched movement base. These are UNSTABLE results, not missing runs.
+
+| Split | Method | Seeds | Final mean ± spread | Verdict | Aim error at start / success (mm) | Paired change toward truth (mm) |
+| --- | --- | --- | --- | --- | --- | --- |
+| Mostly fixed | Plain aim | 5 | 87.08% ± 4.73 points | HELPED | 0.880 / 1.263 | -0.416 |
+| Mostly fixed | Heat map | 3 | 84.07% ± 3.64 points | NO REAL DIFFERENCE | 1.553 / 0.745 | +0.787 |
+| Mostly fixed | Plain movement | 5 | 90.32% ± 5.04 points | HELPED | n/a | n/a |
+| Mostly fixed | Aim + movement | 3 | 83.53% ± 22.30 points | NO REAL DIFFERENCE | 0.897 / 1.189 | -0.334 |
+| Even | Plain aim | 5 | 79.88% ± 6.78 points | HELPED | 0.895 / 1.160 | -0.346 |
+| Even | Heat map | 3 | 43.40% ± 38.49 points | UNSTABLE | 1.388 / 1.797 | -0.179 |
+| Even | Plain movement | 5 | 87.64% ± 7.46 points | HELPED | n/a | n/a |
+| Even | Aim + movement | 3 | 73.00% ± 25.42 points | UNSTABLE | 0.904 / 1.177 | -0.374 |
+| Mostly per-attempt | Plain aim | 3 | 69.93% ± 6.52 points | NO REAL DIFFERENCE | 0.922 / 1.291 | -0.516 |
+| Mostly per-attempt | Heat map | 3 | 37.67% ± 31.56 points | UNSTABLE | 1.277 / 1.982 | -0.797 |
+| Mostly per-attempt | Plain movement | 5 | 88.16% ± 6.66 points | HELPED | n/a | n/a |
+| Mostly per-attempt | Aim + movement | 3 | 81.27% ± 7.91 points | NO REAL DIFFERENCE | 0.922 / 1.276 | -0.440 |
+
+Plain aim's better insertion results do not establish that it found the camera error. Its paired success-time guess error became worse in all three mixed splits. The mostly-fixed heat map did bring the guess closer to the truth, but did not improve success over matched plain aim. Success-time errors exclude unsuccessful episodes; in even-split heat-map seed 1 there was no success, so that seed has no defined success-time error or insertion time. The paired column compares each successful episode with its own initial guess, and a positive value means closer.
+
+Recovered lost success means (method success minus floor)/(zero-error reference minus floor). It can be negative or exceed 100%; it is not clipped. The following comparison uses the same initial three seeds for every method and split, so extending only promising methods does not change the group being compared. The accompanying CSV also gives every seed and the full three- or five-seed aggregates.
+
+| Calibration share | Plain aim | Heat map | Plain movement | Aim + movement |
+| --- | --- | --- | --- | --- |
+| Mostly per-attempt | 24.1% | -78.1% | 85.7% | 59.9% |
+| Even | 54.5% | -57.3% | 88.6% | 34.6% |
+| Mostly fixed | 80.1% | 68.8% | 97.5% | 67.1% |
+
+On these shared three seeds, aim learning recovers more of the lost success as the calibration component grows. Movement stays strong across all three splits. This is a small calibration sample: the full five-seed movement averages are 90.32%, 87.64% and 88.16% from mostly fixed to mostly per-attempt, so the full averages are not a strictly ordered trend. Heat-map and joint additions did not beat their matched plain bases.
+
+![Mixed-condition comparison on shared screening seeds](results/takehome/followup/B_mixed/recovery.png)
+
+[Recovery data, including every seed](results/takehome/followup/B_mixed/recovery.csv). Thirty-four additional 500-test checks on diagnostic seed 789 found no wall-passing or invalid-number flags; the 170 inspected examples had bounded controls. A saved five-episode trajectory plot shows descent into the opening without a flagged sideways passage. These checks do not prove physical realism and were never used to choose a method. The mixed comparison consumed 9,200 practice episodes across 46 independent experiments, with exactly 200 each.
+
+## Checks and limits
+
+The zero-correction check passed at 303/500 against the preserved 307/500 floor. Two separately counted 10-episode code trials passed, followed by the follow-up control, reporting, resumption, sequencing, combination and selection contracts. Every completed mixed learner passed its 200-episode budget, 500-test provenance, frozen-policy and no-test-learning checks. The final Phase G full test suite has not run yet.
+
+Across B and the mixed comparison, 70 required extra 500-episode physical checks at diagnostic seed 789 recorded no wall-passing or invalid-number flags. These 35,000 episodes never selected a method or replaced a result. The previous full preservation audit passed all 9,071 original files; all 41 files from the halted seed remain preserved. Original code, policies, results and original-report text remain unchanged. Full traces, models and videos remain local and ignored; test traces are kept only for final evaluations and required physical checks.
+
+Verdicts use the larger sample standard deviation of the method and its matched base, with the predeclared collapse rule taking precedence. This is a descriptive rule, not a statistical significance test. The scoreboard's insertion-time column averages successes only, and its peak-force column is the average of each episode's maximum force. Success-time aim error is undefined without a success; paired changes in the phase text compare the same successful episodes at start and success.
+
+The simulator retains its measured same-seed repeatability limitation. This follow-up has received substantially more tuning than the original study. Fresh practice seeds 200 to 204 and test seed 1001 remain unused, and no fresh-seed gain can yet be claimed. All touch methods remain unstarted and will be done after C through E.
+
+## Episode and setting totals
+
+Follow-up: 18,380 charged practice episodes, 302,720 full test-only episodes, and 25 attempted settings. Whole project: 47,390 practice episodes, 712,410 full test-only episodes, 191 reset-only probes, and 53 settings. The 49 non-learning sweep cells and the preserved partial attempt are accounted for separately from new learning configurations. [The accounting file](results/takehome/followup/accounting.json) has no validation errors.
+
 ## Full follow-up scoreboard
 
-Every completed seed below is a500-episode test at seed123 after200 practice episodes. Start error covers all episodes; success error covers successful episodes only. [Per-seed summaries](results/takehome/followup/setting_summaries.json) retain paired starting errors from those same successful episodes. Peak force is the mean of each episode's peak, and insertion steps average over successes. Three-seed positive results require extension to five before HELPED; collapse below half the matched base takes priority as UNSTABLE. Comparisons use the larger method/base sample spread. Every failed or skipped row is included.
-
-<!-- FOLLOWUP_SCOREBOARD_START -->
 | Phase | Name | Description | Base | Base result | Seed results | Mean (%) | Spread (pp) | Delta (pp) | Verdict | Aim start (mm) | Aim at success (mm) | Steps to insert | Peak force (N) | Practice episodes | Hand search | Hidden information | Camera condition | Reason | Base mean (%) | Base spread (pp) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | B | B_gate | Keep the guess zero until contact, then change it only while depth stalls. | aim | s0 365/500 (73.0%); s1 278/500 (55.6%); s2 315/500 (63.0%); mean 63.87% ± 8.73pp | 0: 297/500 (59.4%); 1: 309/500 (61.8%); 2: 294/500 (58.8%) | 60.00 | 1.59 | -3.87 | NO REAL DIFFERENCE | 0.939 | 0.740 | 167.9 | 84.5 | 600 | no | no | normal | n/a | 63.87 | 8.73 |
@@ -69,16 +117,19 @@ Every completed seed below is a500-episode test at seed123 after200 practice epi
 | B | B_qmap | Combine memory and constant-offset fill, then visualize the critic map. | aim | s0 365/500 (73.0%); s1 278/500 (55.6%); s2 315/500 (63.0%); mean 63.87% ± 8.73pp | n/a | n/a | n/a | n/a | DID NOT RUN | n/a | n/a | n/a | n/a | 0 | no | no | normal | Prerequisites did not HELP: memory was NO REAL DIFFERENCE and constant fill was UNSTABLE, so the optional combination is not permitted. | 63.87 | 8.73 |
 | B | B_stack | Combine compatible changes that helped independently. | aim | s0 365/500 (73.0%); s1 278/500 (55.6%); s2 315/500 (63.0%); mean 63.87% ± 8.73pp | n/a | n/a | n/a | n/a | DID NOT RUN | n/a | n/a | n/a | n/a | 0 | no | no | normal | No compatible normal-camera changes qualified as HELPED on five seeds, so there is no permitted stack. | 63.87 | 8.73 |
 | B | B_movement_fixed | Run plain movement with one fixed camera bias per run. | floor | s0 206/500 (41.2%); s1 274/500 (54.8%); s2 462/500 (92.4%); s3 401/500 (80.2%); s4 470/500 (94.0%); mean 72.52% ± 23.51pp | 0: 433/500 (86.6%); 1: 432/500 (86.4%); 2: 487/500 (97.4%); 3: 495/500 (99.0%); 4: 499/500 (99.8%) | 93.84 | 6.76 | 21.32 | NO REAL DIFFERENCE | n/a | n/a | 142.1 | 95.4 | 1000 | no | no | fixed for the whole run | n/a | 72.52 | 23.51 |
-<!-- FOLLOWUP_SCOREBOARD_END -->
+| B_mixed | M_mostly_fixed_aim | Plain aim corrector. | floor | s0 227/500 (45.4%); s1 266/500 (53.2%); s2 440/500 (88.0%); s3 363/500 (72.6%); s4 416/500 (83.2%); mean 68.48% ± 18.58pp | 0: 426/500 (85.2%); 1: 453/500 (90.6%); 2: 436/500 (87.2%); 3: 401/500 (80.2%); 4: 461/500 (92.2%) | 87.08 | 4.73 | 18.60 | HELPED | 0.880 | 1.263 | 164.4 | 94.0 | 1000 | no | no | mixed: fixed 0.65 mm, per-attempt 0.375 mm | n/a | 68.48 | 18.58 |
+| B_mixed | M_mostly_fixed_heat | Own-practice across-episode aim heat map. | M_mostly_fixed_aim | s0 426/500 (85.2%); s1 453/500 (90.6%); s2 436/500 (87.2%); mean 87.67% ± 2.73pp | 0: 400/500 (80.0%); 1: 435/500 (87.0%); 2: 426/500 (85.2%) | 84.07 | 3.64 | -3.60 | NO REAL DIFFERENCE | 1.553 | 0.745 | 165.2 | 92.3 | 600 | no | no | mixed: fixed 0.65 mm, per-attempt 0.375 mm | n/a | 87.67 | 2.73 |
+| B_mixed | M_mostly_fixed_movement | Plain movement corrector. | floor | s0 227/500 (45.4%); s1 266/500 (53.2%); s2 440/500 (88.0%); s3 363/500 (72.6%); s4 416/500 (83.2%); mean 68.48% ± 18.58pp | 0: 443/500 (88.6%); 1: 469/500 (93.8%); 2: 486/500 (97.2%); 3: 435/500 (87.0%); 4: 425/500 (85.0%) | 90.32 | 5.04 | 21.84 | HELPED | n/a | n/a | 145.0 | 95.0 | 1000 | no | no | mixed: fixed 0.65 mm, per-attempt 0.375 mm | n/a | 68.48 | 18.58 |
+| B_mixed | M_mostly_fixed_combined | Aim and movement learned together. | M_mostly_fixed_movement | s0 443/500 (88.6%); s1 469/500 (93.8%); s2 486/500 (97.2%); mean 93.20% ± 4.33pp | 0: 478/500 (95.6%); 1: 289/500 (57.8%); 2: 486/500 (97.2%) | 83.53 | 22.30 | -9.67 | NO REAL DIFFERENCE | 0.897 | 1.189 | 143.2 | 89.0 | 600 | no | no | mixed: fixed 0.65 mm, per-attempt 0.375 mm | n/a | 93.20 | 4.33 |
+| B_mixed | M_even_aim | Plain aim corrector. | floor | s0 256/500 (51.2%); s1 278/500 (55.6%); s2 394/500 (78.8%); s3 363/500 (72.6%); s4 373/500 (74.6%); mean 66.56% ± 12.32pp | 0: 410/500 (82.0%); 1: 346/500 (69.2%); 2: 435/500 (87.0%); 3: 416/500 (83.2%); 4: 390/500 (78.0%) | 79.88 | 6.78 | 13.32 | HELPED | 0.895 | 1.160 | 165.4 | 91.1 | 1000 | no | no | mixed: fixed 0.53 mm, per-attempt 0.53 mm | n/a | 66.56 | 12.32 |
+| B_mixed | M_even_heat | Own-practice across-episode aim heat map. | M_even_aim | s0 410/500 (82.0%); s1 346/500 (69.2%); s2 435/500 (87.0%); mean 79.40% ± 9.18pp | 0: 367/500 (73.4%); 1: 0/500 (0.0%); 2: 284/500 (56.8%) | 43.40 | 38.49 | -36.00 | UNSTABLE | 1.388 | 1.797 | 168.6 | 78.1 | 600 | no | no | mixed: fixed 0.53 mm, per-attempt 0.53 mm | Seed1 had no successes; its success-time aim error and insertion time are undefined. | 79.40 | 9.18 |
+| B_mixed | M_even_movement | Plain movement corrector. | floor | s0 256/500 (51.2%); s1 278/500 (55.6%); s2 394/500 (78.8%); s3 363/500 (72.6%); s4 373/500 (74.6%); mean 66.56% ± 12.32pp | 0: 413/500 (82.6%); 1: 464/500 (92.8%); 2: 479/500 (95.8%); 3: 447/500 (89.4%); 4: 388/500 (77.6%) | 87.64 | 7.46 | 21.08 | HELPED | n/a | n/a | 144.5 | 95.3 | 1000 | no | no | mixed: fixed 0.53 mm, per-attempt 0.53 mm | n/a | 66.56 | 12.32 |
+| B_mixed | M_even_combined | Aim and movement learned together. | M_even_movement | s0 413/500 (82.6%); s1 464/500 (92.8%); s2 479/500 (95.8%); mean 90.40% ± 6.92pp | 0: 408/500 (81.6%); 1: 222/500 (44.4%); 2: 465/500 (93.0%) | 73.00 | 25.42 | -17.40 | UNSTABLE | 0.904 | 1.177 | 166.9 | 87.4 | 600 | no | no | mixed: fixed 0.53 mm, per-attempt 0.53 mm | n/a | 90.40 | 6.92 |
+| B_mixed | M_mostly_episode_aim | Plain aim corrector. | floor | s0 295/500 (59.0%); s1 280/500 (56.0%); s2 360/500 (72.0%); mean 62.33% ± 8.50pp | 0: 369/500 (73.8%); 1: 312/500 (62.4%); 2: 368/500 (73.6%) | 69.93 | 6.52 | 7.60 | NO REAL DIFFERENCE | 0.922 | 1.291 | 167.5 | 87.6 | 600 | no | no | mixed: fixed 0.375 mm, per-attempt 0.65 mm | n/a | 62.33 | 8.50 |
+| B_mixed | M_mostly_episode_heat | Own-practice across-episode aim heat map. | M_mostly_episode_aim | s0 369/500 (73.8%); s1 312/500 (62.4%); s2 368/500 (73.6%); mean 69.93% ± 6.52pp | 0: 301/500 (60.2%); 1: 256/500 (51.2%); 2: 8/500 (1.6%) | 37.67 | 31.56 | -32.27 | UNSTABLE | 1.277 | 1.982 | 168.3 | 77.0 | 600 | no | no | mixed: fixed 0.375 mm, per-attempt 0.65 mm | n/a | 69.93 | 6.52 |
+| B_mixed | M_mostly_episode_movement | Plain movement corrector. | floor | s0 295/500 (59.0%); s1 280/500 (56.0%); s2 360/500 (72.0%); s3 344/500 (68.8%); s4 333/500 (66.6%); mean 64.48% ± 6.74pp | 0: 395/500 (79.0%); 1: 479/500 (95.8%); 2: 467/500 (93.4%); 3: 435/500 (87.0%); 4: 428/500 (85.6%) | 88.16 | 6.66 | 23.68 | HELPED | n/a | n/a | 136.9 | 96.9 | 1000 | no | no | mixed: fixed 0.375 mm, per-attempt 0.65 mm | n/a | 64.48 | 6.74 |
+| B_mixed | M_mostly_episode_combined | Aim and movement learned together. | M_mostly_episode_movement | s0 395/500 (79.0%); s1 479/500 (95.8%); s2 467/500 (93.4%); mean 89.40% ± 9.09pp | 0: 450/500 (90.0%); 1: 396/500 (79.2%); 2: 373/500 (74.6%) | 81.27 | 7.91 | -8.13 | NO REAL DIFFERENCE | 0.922 | 1.276 | 149.4 | 91.8 | 600 | no | no | mixed: fixed 0.375 mm, per-attempt 0.65 mm | n/a | 89.40 | 9.09 |
 
 ![Phase B scoreboard](results/takehome/followup/phase_b/scoreboard.png)
 
-## Checks, counts and limits
-
-The original zero-correction check passed at303/500 versus the preserved307/500 floor. Two separately counted10-episode code trials finished. The41 follow-up control/reporting/resumption checks and five additional synthetic trick/sequencing checks passed. Practice counters, test-data separation and frozen-policy checks passed. The final Phase G full test suite has not run yet.
-
-Thirty-six required extra500-episode physical checks at diagnostic seed789 recorded no wall-passing or invalid-number flags; inspected control magnitudes were at most1.0. These18,000 episodes never selected a method or replaced a result. The previous full preservation audit passed all9,071 original files, and the restart preserved all41 original halted-seed files. Original code, policies, results and original-report text remain unchanged. Full traces, models and videos remain local and ignored. Full test traces are kept only for final tests and required physical checks.
-
-Follow-up totals:9,180 charged practice episodes,153,512 full test-only episodes,13 attempted settings. Whole-project totals:38,190 practice episodes,563,202 full test-only episodes,191 reset-only probes,41 settings. The49 non-learning sweep cells and preserved partial attempt are accounted for separately from new learning configurations. [Accounting](results/takehome/followup/accounting.json) has no validation errors.
-
-The simulator retains its measured same-seed repeatability limitation. This follow-up has already received more tuning than the original study, and no fresh-seed gain can be claimed yet. Next are mixed comparisons, movement tricks in C, fixed-camera aim tricks in D, combinations in E, touch comparisons in F and the locked final check in G. No planned check-in applies.
+![Phase B_MIXED scoreboard](results/takehome/followup/phase_b_mixed/scoreboard.png)

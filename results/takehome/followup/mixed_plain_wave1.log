@@ -1,0 +1,18 @@
+START M_mostly_fixed_aim 146182 SEEDS [0, 1, 2]
+START M_mostly_fixed_movement 146183 SEEDS [0, 1, 2]
+START M_even_aim 146184 SEEDS [0, 1, 2]
+START M_even_movement 146185 SEEDS [0, 1, 2]
+FINISH {"name": "M_even_movement", "exit_code": 0, "seconds": 491.11879454199516}
+{"completed_rows": 17, "new_settings_attempted": 19, "promotions": ["M_even_movement"]}
+START M_mostly_episode_aim 155134 SEEDS [0, 1, 2]
+FINISH {"name": "M_mostly_fixed_movement", "exit_code": 0, "seconds": 539.1952559790079}
+{"completed_rows": 18, "new_settings_attempted": 19, "promotions": ["M_mostly_fixed_movement", "M_even_movement"]}
+START M_mostly_episode_movement 155554 SEEDS [0, 1, 2]
+FINISH {"name": "M_mostly_fixed_aim", "exit_code": 0, "seconds": 564.114298756991}
+{"completed_rows": 20, "new_settings_attempted": 19, "promotions": ["M_mostly_fixed_aim", "M_mostly_fixed_movement", "M_even_aim", "M_even_movement"]}
+FINISH {"name": "M_even_aim", "exit_code": 0, "seconds": 566.9776075239934}
+{"completed_rows": 20, "new_settings_attempted": 19, "promotions": ["M_mostly_fixed_aim", "M_mostly_fixed_movement", "M_even_aim", "M_even_movement"]}
+FINISH {"name": "M_mostly_episode_aim", "exit_code": 0, "seconds": 341.61746086399944}
+{"completed_rows": 21, "new_settings_attempted": 19, "promotions": ["M_mostly_fixed_aim", "M_mostly_fixed_movement", "M_even_aim", "M_even_movement"]}
+FINISH {"name": "M_mostly_episode_movement", "exit_code": 0, "seconds": 311.52779376100807}
+{"completed_rows": 22, "new_settings_attempted": 19, "promotions": ["M_mostly_fixed_aim", "M_mostly_fixed_movement", "M_even_aim", "M_even_movement", "M_mostly_episode_movement"]}

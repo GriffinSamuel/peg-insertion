@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_reference_job.py",
+    "--setting",
+    "M_mostly_fixed_movement",
+    "--seeds",
+    "3",
+    "4",
+    "--extension"
+  ],
+  "started_utc": "2026-11-17T06:35:22.329812+00:00",
+  "finished_utc": "2026-11-17T06:36:24.134741+00:00",
+  "seconds": 61.8049800870067,
+  "exit_code": 0
+}

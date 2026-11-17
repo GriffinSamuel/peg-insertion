@@ -1,0 +1,36 @@
+{
+  "jobs": [
+    {
+      "name": "M_even_movement",
+      "exit_code": 0,
+      "seconds": 491.11879454199516
+    },
+    {
+      "name": "M_mostly_fixed_movement",
+      "exit_code": 0,
+      "seconds": 539.1952559790079
+    },
+    {
+      "name": "M_mostly_fixed_aim",
+      "exit_code": 0,
+      "seconds": 564.114298756991
+    },
+    {
+      "name": "M_even_aim",
+      "exit_code": 0,
+      "seconds": 566.9776075239934
+    },
+    {
+      "name": "M_mostly_episode_aim",
+      "exit_code": 0,
+      "seconds": 341.61746086399944
+    },
+    {
+      "name": "M_mostly_episode_movement",
+      "exit_code": 0,
+      "seconds": 311.52779376100807
+    }
+  ],
+  "tripwire": false,
+  "seconds": 856.3352876709978
+}

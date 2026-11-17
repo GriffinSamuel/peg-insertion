@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_reference_job.py",
+    "--setting",
+    "M_even_aim",
+    "--seeds",
+    "0",
+    "1",
+    "2"
+  ],
+  "started_utc": "2026-11-17T06:23:03.790991+00:00",
+  "finished_utc": "2026-11-17T06:24:32.583618+00:00",
+  "seconds": 88.79266463199747,
+  "exit_code": 0
+}

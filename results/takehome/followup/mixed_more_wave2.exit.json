@@ -1,0 +1,25 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "takehome/followup_suite.py",
+    "--name",
+    "mixed_more_wave2",
+    "--settings",
+    "M_mostly_fixed_aim",
+    "M_mostly_fixed_movement",
+    "M_even_aim",
+    "M_even_movement",
+    "M_mostly_episode_movement",
+    "M_mostly_fixed_heat",
+    "M_mostly_fixed_combined",
+    "M_even_heat",
+    "M_even_combined",
+    "M_mostly_episode_heat",
+    "M_mostly_episode_combined"
+  ],
+  "started_utc": "2026-11-17T06:42:16.348211+00:00",
+  "finished_utc": "2026-11-17T07:04:08.874737+00:00",
+  "seconds": 1312.5265714349953,
+  "exit_code": 0
+}
