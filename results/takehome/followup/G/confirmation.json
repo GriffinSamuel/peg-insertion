@@ -1,0 +1,851 @@
+{
+  "choice_path": "results/takehome/followup/G/choice.json",
+  "choice": {
+    "name": "original_movement",
+    "mean_percent": 83.36,
+    "spread_pp": 2.994661917479169,
+    "changes": 1,
+    "overrides": {
+      "outputs": 3
+    },
+    "camera_condition": "normal",
+    "hand_search": false,
+    "hidden_information": false,
+    "seed_successes": [
+      {
+        "seed": 0,
+        "successes": 425
+      },
+      {
+        "seed": 1,
+        "successes": 411
+      },
+      {
+        "seed": 2,
+        "successes": 427
+      },
+      {
+        "seed": 3,
+        "successes": 428
+      },
+      {
+        "seed": 4,
+        "successes": 393
+      }
+    ],
+    "source": "Preserved original five-seed development baseline.",
+    "rule": "Highest development mean; within one spread of that top mean, fewest changes; then highest mean; stable name only for an exact tie.",
+    "development_test_seed": 123,
+    "development_episodes_per_seed": 500,
+    "fresh_practice_seeds": [
+      200,
+      201,
+      202,
+      203,
+      204
+    ],
+    "fresh_test_seed": 1001,
+    "top_average_setting": "original_movement",
+    "top_average_percent": 83.36,
+    "top_spread_pp": 2.994661917479169,
+    "eligibility_threshold_percent": 80.36533808252084,
+    "candidates": [
+      {
+        "name": "original_aim",
+        "mean_percent": 65.16,
+        "spread_pp": 7.737441437581289,
+        "changes": 0,
+        "overrides": {
+          "outputs": 2
+        },
+        "camera_condition": "normal",
+        "hand_search": false,
+        "hidden_information": false,
+        "seed_successes": [
+          {
+            "seed": 0,
+            "successes": 365
+          },
+          {
+            "seed": 1,
+            "successes": 278
+          },
+          {
+            "seed": 2,
+            "successes": 315
+          },
+          {
+            "seed": 3,
+            "successes": 305
+          },
+          {
+            "seed": 4,
+            "successes": 366
+          }
+        ],
+        "source": "Preserved original five-seed development baseline."
+      },
+      {
+        "name": "original_movement",
+        "mean_percent": 83.36,
+        "spread_pp": 2.994661917479169,
+        "changes": 1,
+        "overrides": {
+          "outputs": 3
+        },
+        "camera_condition": "normal",
+        "hand_search": false,
+        "hidden_information": false,
+        "seed_successes": [
+          {
+            "seed": 0,
+            "successes": 425
+          },
+          {
+            "seed": 1,
+            "successes": 411
+          },
+          {
+            "seed": 2,
+            "successes": 427
+          },
+          {
+            "seed": 3,
+            "successes": 428
+          },
+          {
+            "seed": 4,
+            "successes": 393
+          }
+        ],
+        "source": "Preserved original five-seed development baseline."
+      },
+      {
+        "name": "E_normal_joint",
+        "mean_percent": 74.48,
+        "spread_pp": 8.320576903075889,
+        "changes": 1,
+        "overrides": {
+          "outputs": 5,
+          "camera_condition": "normal",
+          "coordination": "joint"
+        },
+        "camera_condition": "normal",
+        "hand_search": false,
+        "hidden_information": false,
+        "seed_successes": [
+          {
+            "seed": 0,
+            "successes": 428
+          },
+          {
+            "seed": 1,
+            "successes": 327
+          },
+          {
+            "seed": 2,
+            "successes": 335
+          },
+          {
+            "seed": 3,
+            "successes": 385
+          },
+          {
+            "seed": 4,
+            "successes": 387
+          }
+        ],
+        "source": "Completed follow-up development setting."
+      },
+      {
+        "name": "E_normal_move_then_aim",
+        "mean_percent": 81.0,
+        "spread_pp": 15.84297951775486,
+        "changes": 2,
+        "overrides": {
+          "outputs": 5,
+          "camera_condition": "normal",
+          "coordination": "move_then_aim"
+        },
+        "camera_condition": "normal",
+        "hand_search": false,
+        "hidden_information": false,
+        "seed_successes": [
+          {
+            "seed": 0,
+            "successes": 458
+          },
+          {
+            "seed": 1,
+            "successes": 424
+          },
+          {
+            "seed": 2,
+            "successes": 436
+          },
+          {
+            "seed": 3,
+            "successes": 265
+          },
+          {
+            "seed": 4,
+            "successes": 442
+          }
+        ],
+        "source": "Completed follow-up development setting."
+      }
+    ],
+    "excluded": [
+      {
+        "name": "B_gate",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_pullback",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_memory",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_labels",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_fast",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_constant",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_heat_normal",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "B_aim_one_sided",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "B_aim_fixed",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "B_aim_fixed_seed4_halted",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "B_heat_one_sided",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "B_heat_fixed",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "B_within_grid",
+        "reason": "Hand-written search is ineligible."
+      },
+      {
+        "name": "B_qmap",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "B_stack",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "B_movement_fixed",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_fixed_aim",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_fixed_heat",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_fixed_movement",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_fixed_combined",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_even_aim",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_even_heat",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_even_movement",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_even_combined",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_episode_aim",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_episode_heat",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_episode_movement",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "M_mostly_episode_combined",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "C_fill_0",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_fill_10",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_fill_20",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_fill_80",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_fill_120",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_side_by_side",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "C_aim_then_move",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "C_move_then_aim",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "C_briefing",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_privileged_critic",
+        "reason": "Hidden simulator information is ineligible."
+      },
+      {
+        "name": "C_one_critic",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_one_update",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_aim_cap_50um",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "C_aim_cap_200um",
+        "reason": "No completed setting."
+      },
+      {
+        "name": "C_movement_cap_400um",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_final_decider",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_near_hole",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_contact_cap",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_uncertainty_cap",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_classification",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_three_step",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_return_floor",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_force_penalty",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_sibling_fill",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "C_movement_cap_100um",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "D_fill_0",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_fill_10",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_fill_20",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_fill_80",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_fill_120",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_side_by_side",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_aim_then_move",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_move_then_aim",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_briefing",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_privileged_critic",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_one_critic",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_one_update",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_aim_cap_50um",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_aim_cap_200um",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_movement_cap_400um",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_final_decider",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_near_hole",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_contact_cap",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_uncertainty_cap",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_classification",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_three_step",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_return_floor",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_force_penalty",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "D_sibling_fill",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "E_normal_aim_then_move",
+        "reason": "Only five-seed development evidence is eligible under the prelogged reading."
+      },
+      {
+        "name": "E_fixed_joint",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "E_fixed_aim_then_move",
+        "reason": "The fresh comparison uses the normal camera condition."
+      },
+      {
+        "name": "E_fixed_move_then_aim",
+        "reason": "The fresh comparison uses the normal camera condition."
+      }
+    ],
+    "no_fresh_confirmation_run_before_choice": true
+  },
+  "method_count": 1,
+  "same_config_reused": true,
+  "fresh_practice_seeds": [
+    200,
+    201,
+    202,
+    203,
+    204
+  ],
+  "test_seed": 1001,
+  "test_episodes_per_seed": 500,
+  "methods": {
+    "plain_movement": {
+      "method": "plain_movement",
+      "config": {
+        "policy": "force_0.5mm_s2",
+        "outputs": 3,
+        "fill_episodes": 40,
+        "total_episodes": 200,
+        "updates_per_step": 4,
+        "ensemble": 4,
+        "hidden": 64,
+        "batch_size": 128,
+        "learning_rate": 0.0003,
+        "discount": 0.99,
+        "target_rate": 0.005,
+        "step_cap": 0.0001,
+        "guess_cap": 0.003,
+        "movement_cap": 0.0002,
+        "supervised_reference": false,
+        "fill_noise": 0.5,
+        "learner_noise": 0.2,
+        "code_test": false,
+        "coordination": "joint",
+        "briefing": false,
+        "privileged_critic": false,
+        "final_decider": false,
+        "near_hole": false,
+        "contact_cap": false,
+        "uncertainty_cap": false,
+        "classification": false,
+        "n_step": 1,
+        "return_floor": false,
+        "force_penalty": false,
+        "sibling_fill": false,
+        "test_seed": 1001,
+        "baseline_path": "results/takehome/baseline.json",
+        "camera_condition": "normal",
+        "fixed_bias_seed": 0,
+        "mixed_fixed_std": 0.0,
+        "mixed_episode_std": 0.0,
+        "drift_gate": false,
+        "pullback": false,
+        "memory": false,
+        "success_labels": false,
+        "fast_contact": false,
+        "constant_fill": false,
+        "heatmap": false,
+        "within_grid": false
+      },
+      "seeds": [
+        {
+          "test_episodes": 500,
+          "successes": 371,
+          "success_percent": 74.2,
+          "steps_mean": 151.80323791503906,
+          "peak_force_mean": 91.96196746826172,
+          "test_seed": 1001,
+          "test_only": true,
+          "learned_from": false,
+          "outputs": 3,
+          "aim_metrics_applicable": false,
+          "hidden_true_bias_used_for_analysis_only": true,
+          "valid_success_event_count": 371,
+          "valid_success_episode_count": 371,
+          "valid_success_event_sum_matches_final": true,
+          "valid_success_episode_count_matches_final": true,
+          "success_count_matches_final": true,
+          "episode_success_vector_count": 371,
+          "episode_success_vector_matches_final": true,
+          "initial_guess_error_mean_mm": null,
+          "guess_error_at_first_valid_success_mean_mm": null,
+          "paired_initial_guess_error_mean_mm": null,
+          "paired_guess_error_reduction_mean_mm": null,
+          "end200_guess_error_mean_mm": null,
+          "success_episode_count_for_paired_metrics": 0,
+          "seed": 200,
+          "practice_episodes": 200,
+          "practice_budget_limit": 200,
+          "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_200/result.json",
+          "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_200/test_0200_traces.npz",
+          "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_200/budget.json"
+        },
+        {
+          "test_episodes": 500,
+          "successes": 445,
+          "success_percent": 89.0,
+          "steps_mean": 143.4359588623047,
+          "peak_force_mean": 99.65052795410156,
+          "test_seed": 1001,
+          "test_only": true,
+          "learned_from": false,
+          "outputs": 3,
+          "aim_metrics_applicable": false,
+          "hidden_true_bias_used_for_analysis_only": true,
+          "valid_success_event_count": 445,
+          "valid_success_episode_count": 445,
+          "valid_success_event_sum_matches_final": true,
+          "valid_success_episode_count_matches_final": true,
+          "success_count_matches_final": true,
+          "episode_success_vector_count": 445,
+          "episode_success_vector_matches_final": true,
+          "initial_guess_error_mean_mm": null,
+          "guess_error_at_first_valid_success_mean_mm": null,
+          "paired_initial_guess_error_mean_mm": null,
+          "paired_guess_error_reduction_mean_mm": null,
+          "end200_guess_error_mean_mm": null,
+          "success_episode_count_for_paired_metrics": 0,
+          "seed": 201,
+          "practice_episodes": 200,
+          "practice_budget_limit": 200,
+          "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_201/result.json",
+          "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_201/test_0200_traces.npz",
+          "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_201/budget.json"
+        },
+        {
+          "test_episodes": 500,
+          "successes": 426,
+          "success_percent": 85.2,
+          "steps_mean": 142.0,
+          "peak_force_mean": 97.760986328125,
+          "test_seed": 1001,
+          "test_only": true,
+          "learned_from": false,
+          "outputs": 3,
+          "aim_metrics_applicable": false,
+          "hidden_true_bias_used_for_analysis_only": true,
+          "valid_success_event_count": 426,
+          "valid_success_episode_count": 426,
+          "valid_success_event_sum_matches_final": true,
+          "valid_success_episode_count_matches_final": true,
+          "success_count_matches_final": true,
+          "episode_success_vector_count": 426,
+          "episode_success_vector_matches_final": true,
+          "initial_guess_error_mean_mm": null,
+          "guess_error_at_first_valid_success_mean_mm": null,
+          "paired_initial_guess_error_mean_mm": null,
+          "paired_guess_error_reduction_mean_mm": null,
+          "end200_guess_error_mean_mm": null,
+          "success_episode_count_for_paired_metrics": 0,
+          "seed": 202,
+          "practice_episodes": 200,
+          "practice_budget_limit": 200,
+          "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_202/result.json",
+          "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_202/test_0200_traces.npz",
+          "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_202/budget.json"
+        },
+        {
+          "test_episodes": 500,
+          "successes": 422,
+          "success_percent": 84.4,
+          "steps_mean": 146.68246459960938,
+          "peak_force_mean": 92.5383529663086,
+          "test_seed": 1001,
+          "test_only": true,
+          "learned_from": false,
+          "outputs": 3,
+          "aim_metrics_applicable": false,
+          "hidden_true_bias_used_for_analysis_only": true,
+          "valid_success_event_count": 422,
+          "valid_success_episode_count": 422,
+          "valid_success_event_sum_matches_final": true,
+          "valid_success_episode_count_matches_final": true,
+          "success_count_matches_final": true,
+          "episode_success_vector_count": 422,
+          "episode_success_vector_matches_final": true,
+          "initial_guess_error_mean_mm": null,
+          "guess_error_at_first_valid_success_mean_mm": null,
+          "paired_initial_guess_error_mean_mm": null,
+          "paired_guess_error_reduction_mean_mm": null,
+          "end200_guess_error_mean_mm": null,
+          "success_episode_count_for_paired_metrics": 0,
+          "seed": 203,
+          "practice_episodes": 200,
+          "practice_budget_limit": 200,
+          "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_203/result.json",
+          "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_203/test_0200_traces.npz",
+          "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_203/budget.json"
+        },
+        {
+          "test_episodes": 500,
+          "successes": 440,
+          "success_percent": 88.0,
+          "steps_mean": 147.92955017089844,
+          "peak_force_mean": 93.87934875488281,
+          "test_seed": 1001,
+          "test_only": true,
+          "learned_from": false,
+          "outputs": 3,
+          "aim_metrics_applicable": false,
+          "hidden_true_bias_used_for_analysis_only": true,
+          "valid_success_event_count": 440,
+          "valid_success_episode_count": 440,
+          "valid_success_event_sum_matches_final": true,
+          "valid_success_episode_count_matches_final": true,
+          "success_count_matches_final": true,
+          "episode_success_vector_count": 440,
+          "episode_success_vector_matches_final": true,
+          "initial_guess_error_mean_mm": null,
+          "guess_error_at_first_valid_success_mean_mm": null,
+          "paired_initial_guess_error_mean_mm": null,
+          "paired_guess_error_reduction_mean_mm": null,
+          "end200_guess_error_mean_mm": null,
+          "success_episode_count_for_paired_metrics": 0,
+          "seed": 204,
+          "practice_episodes": 200,
+          "practice_budget_limit": 200,
+          "result_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_204/result.json",
+          "trace_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_204/test_0200_traces.npz",
+          "budget_path": "/mnt/c/Users/Griff/Projects/peg-insertion/results/takehome/followup/G/plain_movement/seed_204/budget.json"
+        }
+      ],
+      "successes_total": 2104,
+      "episodes_total": 2500,
+      "mean_success_rate": 0.8416,
+      "sample_sd_success_rate": 0.05884556058021708,
+      "mean_success_percent": 84.16,
+      "sample_sd_percentage_points": 5.884556058021708
+    }
+  },
+  "paired_chosen_minus_plain_movement": {
+    "chosen_method": "plain_movement",
+    "plain_movement_method": "plain_movement",
+    "same_config_reused": true,
+    "independent_method_comparison": false,
+    "note": "The chosen configuration equals plain movement; these are the same five runs, not independent replicates.",
+    "per_seed_differences": [
+      {
+        "seed": 200,
+        "chosen_successes": 371,
+        "plain_movement_successes": 371,
+        "chosen_minus_plain_success_count": 0,
+        "chosen_minus_plain_success_rate": 0.0,
+        "chosen_minus_plain_percentage_points": 0.0,
+        "same_seed_data_reused": true
+      },
+      {
+        "seed": 201,
+        "chosen_successes": 445,
+        "plain_movement_successes": 445,
+        "chosen_minus_plain_success_count": 0,
+        "chosen_minus_plain_success_rate": 0.0,
+        "chosen_minus_plain_percentage_points": 0.0,
+        "same_seed_data_reused": true
+      },
+      {
+        "seed": 202,
+        "chosen_successes": 426,
+        "plain_movement_successes": 426,
+        "chosen_minus_plain_success_count": 0,
+        "chosen_minus_plain_success_rate": 0.0,
+        "chosen_minus_plain_percentage_points": 0.0,
+        "same_seed_data_reused": true
+      },
+      {
+        "seed": 203,
+        "chosen_successes": 422,
+        "plain_movement_successes": 422,
+        "chosen_minus_plain_success_count": 0,
+        "chosen_minus_plain_success_rate": 0.0,
+        "chosen_minus_plain_percentage_points": 0.0,
+        "same_seed_data_reused": true
+      },
+      {
+        "seed": 204,
+        "chosen_successes": 440,
+        "plain_movement_successes": 440,
+        "chosen_minus_plain_success_count": 0,
+        "chosen_minus_plain_success_rate": 0.0,
+        "chosen_minus_plain_percentage_points": 0.0,
+        "same_seed_data_reused": true
+      }
+    ],
+    "mean_chosen_minus_plain_rate": 0.0,
+    "sample_sd_chosen_minus_plain_rate": 0.0,
+    "mean_chosen_minus_plain_percentage_points": 0.0,
+    "sample_sd_chosen_minus_plain_percentage_points": 0.0
+  },
+  "references": {
+    "path": "results/takehome/followup/references/normal_test_1001.json",
+    "references": {
+      "normal": {
+        "label": "Floor: original policy, normal camera error",
+        "successes": 307,
+        "episodes": 500,
+        "success_rate": 0.614,
+        "success_percent": 61.4,
+        "test_seed": 1001,
+        "test_only": true,
+        "learned_from": false,
+        "reference_only": true,
+        "oracle_correction": false
+      },
+      "no_camera_bias": {
+        "label": "Zero-error reference",
+        "successes": 475,
+        "episodes": 500,
+        "success_rate": 0.95,
+        "success_percent": 95.0,
+        "test_seed": 1001,
+        "test_only": true,
+        "learned_from": false,
+        "reference_only": true,
+        "oracle_correction": true
+      }
+    }
+  },
+  "validation": {
+    "all_method_runs_200_practice_episodes": true,
+    "all_method_runs_500_final_test_episodes_seed_1001": true,
+    "all_method_test_data_not_learned_from": true,
+    "all_method_frozen_policies_unchanged": true,
+    "both_references_500_test_episodes_seed_1001_test_only": true,
+    "no_experiments_run_by_report_generator": true
+  }
+}

@@ -1,0 +1,14 @@
+record_type,method,seed,successes,episodes,success_rate,success_percent,mean_success_rate,sample_sd_success_rate,mean_success_percent,sample_sd_percentage_points,chosen_minus_plain_success_count,chosen_minus_plain_success_rate,chosen_minus_plain_percentage_points,same_config_reused,reference_key,reference_label,test_seed,test_only,learned_from
+seed,plain_movement,200,371,500,0.742,74.2,,,,,,,,True,,,1001,True,False
+seed,plain_movement,201,445,500,0.89,89.0,,,,,,,,True,,,1001,True,False
+seed,plain_movement,202,426,500,0.852,85.2,,,,,,,,True,,,1001,True,False
+seed,plain_movement,203,422,500,0.8440000000000001,84.4,,,,,,,,True,,,1001,True,False
+seed,plain_movement,204,440,500,0.88,88.0,,,,,,,,True,,,1001,True,False
+method_summary,plain_movement,,,,,,0.8416,0.05884556058021708,84.16,5.884556058021708,,,,True,,,,,
+paired_difference,plain_movement,200,,,,,,,,,0,0.0,0.0,True,,,,,
+paired_difference,plain_movement,201,,,,,,,,,0,0.0,0.0,True,,,,,
+paired_difference,plain_movement,202,,,,,,,,,0,0.0,0.0,True,,,,,
+paired_difference,plain_movement,203,,,,,,,,,0,0.0,0.0,True,,,,,
+paired_difference,plain_movement,204,,,,,,,,,0,0.0,0.0,True,,,,,
+reference,,,307,500,0.614,61.4,,,,,,,,True,normal,"Floor: original policy, normal camera error",1001,True,False
+reference,,,475,500,0.95,95.0,,,,,,,,True,no_camera_bias,Zero-error reference,1001,True,False

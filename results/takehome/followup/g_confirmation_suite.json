@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "shard": 1,
+      "exit_code": 0
+    },
+    {
+      "shard": 2,
+      "exit_code": 0
+    },
+    {
+      "shard": 3,
+      "exit_code": 0
+    },
+    {
+      "shard": 0,
+      "exit_code": 0
+    }
+  ],
+  "failure": null,
+  "tripwire": false,
+  "checked_methods": [
+    "plain_movement"
+  ],
+  "seconds": 234.19562453500112
+}

@@ -1,0 +1,66 @@
+{
+  "episodes": 28,
+  "successes": 11,
+  "test_seed": 123,
+  "test_only": true,
+  "learned_from": false,
+  "software_validation": true,
+  "events": [
+    {
+      "kind": "EpisodeRunner",
+      "episodes": 4,
+      "successes": 2,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    },
+    {
+      "kind": "EpisodeRunner",
+      "episodes": 4,
+      "successes": 1,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    },
+    {
+      "kind": "original_rollout_stats",
+      "episodes": 4,
+      "successes": 1,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    },
+    {
+      "kind": "EpisodeRunner",
+      "episodes": 4,
+      "successes": 1,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    },
+    {
+      "kind": "EpisodeRunner",
+      "episodes": 4,
+      "successes": 3,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    },
+    {
+      "kind": "EpisodeRunner",
+      "episodes": 4,
+      "successes": 2,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    },
+    {
+      "kind": "EpisodeRunner",
+      "episodes": 4,
+      "successes": 1,
+      "test_seed": 123,
+      "test_only": true,
+      "learned_from": false
+    }
+  ]
+}

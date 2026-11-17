@@ -4467,16 +4467,106 @@
         "progress_json_present": true,
         "valid": true,
         "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/budget.json",
+        "run_directory": "G/plain_movement/seed_200",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/budget.json",
+        "run_directory": "G/plain_movement/seed_201",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/budget.json",
+        "run_directory": "G/plain_movement/seed_202",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/budget.json",
+        "run_directory": "G/plain_movement/seed_203",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/budget.json",
+        "run_directory": "G/plain_movement/seed_204",
+        "run_type": "normal",
+        "configured_code_test": false,
+        "limit": 200,
+        "reserved_episode_count": 200,
+        "source_counts": {
+          "fill": 40,
+          "online": 160,
+          "unknown": 0
+        },
+        "ids_unique_contiguous_from_zero": true,
+        "result_json_present": true,
+        "progress_json_present": true,
+        "valid": true,
+        "validation_errors": []
       }
     ],
-    "ledger_count": 248,
-    "reserved_practice_episodes": 49180,
+    "ledger_count": 253,
+    "reserved_practice_episodes": 50180,
     "source_episode_counts": {
-      "fill": 10180,
-      "online": 39000,
+      "fill": 10380,
+      "online": 39800,
       "unknown": 0
     },
-    "valid_ledger_count": 248
+    "valid_ledger_count": 253
   },
   "full_tests": {
     "files": [
@@ -32179,6 +32269,501 @@
         "validation_errors": []
       },
       {
+        "path": "G/plain_movement/seed_200/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 160,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 190,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 208,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 154,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 146,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 186,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 190,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 183,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_200/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 371,
+        "test_seed": 1001,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 158,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 235,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 230,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 212,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 226,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 228,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 215,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 227,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_201/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 445,
+        "test_seed": 1001,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 157,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 227,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 214,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 224,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 80,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 240,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 224,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 223,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_202/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 426,
+        "test_seed": 1001,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 158,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 153,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 215,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 208,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 158,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 147,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 206,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 221,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_203/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 422,
+        "test_seed": 1001,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0040.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 156,
+        "test_seed": 123,
+        "practice_episodes": 40,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0060.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 44,
+        "test_seed": 123,
+        "practice_episodes": 60,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0080.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 166,
+        "test_seed": 123,
+        "practice_episodes": 80,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0100.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 206,
+        "test_seed": 123,
+        "practice_episodes": 100,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0120.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 174,
+        "test_seed": 123,
+        "practice_episodes": 120,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0140.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 226,
+        "test_seed": 123,
+        "practice_episodes": 140,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0160.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 206,
+        "test_seed": 123,
+        "practice_episodes": 160,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0180.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 256,
+        "successes": 214,
+        "test_seed": 123,
+        "practice_episodes": 180,
+        "counted_full_test_episodes": 256,
+        "validation_errors": []
+      },
+      {
+        "path": "G/plain_movement/seed_204/test_0200.json",
+        "source": "test_NNNN",
+        "valid": true,
+        "episodes": 500,
+        "successes": 440,
+        "test_seed": 1001,
+        "practice_episodes": 200,
+        "counted_full_test_episodes": 500,
+        "validation_errors": []
+      },
+      {
         "path": "references/fixed_seed_0_test_123.json",
         "source": "references",
         "valid": true,
@@ -32459,6 +33044,20 @@
         "validation_errors": []
       },
       {
+        "path": "references/normal_test_1001.json",
+        "source": "references",
+        "valid": true,
+        "practice_episodes": 0,
+        "test_seed": 1001,
+        "condition_episode_counts": {
+          "normal": 500,
+          "no_camera_bias": 500
+        },
+        "episodes": 1000,
+        "counted_full_test_episodes": 1000,
+        "validation_errors": []
+      },
+      {
         "path": "references/one-sided_test_123.json",
         "source": "references",
         "valid": true,
@@ -32475,9 +33074,9 @@
     ],
     "source_counts": {
       "test_NNNN": {
-        "file_count": 2236,
-        "valid_file_count": 2236,
-        "full_test_episodes": 631944
+        "file_count": 2281,
+        "valid_file_count": 2281,
+        "full_test_episodes": 644684
       },
       "extra_ceiling_NNNN": {
         "file_count": 281,
@@ -32490,14 +33089,14 @@
         "full_test_episodes": 500
       },
       "references": {
-        "file_count": 21,
-        "valid_file_count": 21,
-        "full_test_episodes": 21000
+        "file_count": 22,
+        "valid_file_count": 22,
+        "full_test_episodes": 22000
       }
     },
-    "candidate_file_count": 2539,
-    "valid_file_count": 2539,
-    "full_test_episodes": 793944,
+    "candidate_file_count": 2585,
+    "valid_file_count": 2585,
+    "full_test_episodes": 807684,
     "excluded_reference_files": [
       {
         "path": "references/old_learning.json",
@@ -32625,11 +33224,11 @@
   },
   "whole_project_episode_totals": {
     "old_study_practice_episodes_from_protocol": 29010,
-    "followup_reserved_practice_episodes": 49180,
-    "whole_project_practice_episodes": 78190,
+    "followup_reserved_practice_episodes": 50180,
+    "whole_project_practice_episodes": 79190,
     "old_study_full_test_episodes_from_protocol": 409690,
-    "followup_full_test_episodes": 793944,
-    "whole_project_full_test_episodes": 1203634,
+    "followup_full_test_episodes": 807684,
+    "whole_project_full_test_episodes": 1217374,
     "old_study_reset_only_probes_from_protocol": 191,
     "followup_reset_only_probes": 0,
     "whole_project_reset_only_probes": 191

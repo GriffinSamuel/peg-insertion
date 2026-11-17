@@ -1,14 +1,9 @@
 # Take-home progress
 
-## CURRENT STATE (Claude Sonnet took over from Codex 2026-11-17)
-- RUNNING: suite q2 (log results/takehome/followup/q2.log): D_aim_cap_200um resume, E_normal_joint/E_normal_move_then_aim/E_fixed_joint to 5 seeds.
-- DONE: D 5-seed (none HELPED, stacks skipped); F blind spiral 62.2% (no gain; teacher skipped; torque/four-sided parked).
-- NEXT: collect, Phase E report, advisor review of final choice, Phase G.
-- PARKED: D_aim_cap_200um (stalled, killed at 90 episodes; resume path untested), B_aim_fixed_seed4_halted (intentional).
-- OPEN: mechanism question (guess path vs best constant offset); Phase F go/no-go advisor consult; final choice review before Phase G.
-- Mechanism: advisor consult 1 says time-varying 0.1 mm/step guess wiggle, not better constant aim; replay confirmation optional (not run).
-- Phase F saved-data check done: wrist wrench gives right half-plane 87% (median dir error 42 deg, force clipping 41%); only blind spiral is implemented (torque/four-sided not).
-- Advisor consultations used: 2 (touch: GO spiral only; torque/four-sided parked) (briefs go in results/takehome/followup/advisor/).
+## CURRENT STATE (2026-11-17, takeover finished)
+- ALL PHASES DONE. Report: TAKEHOME_FOLLOWUP_REPORT.md. Fresh seeds 200-204, test 1001: plain movement 84.2% +- 5.9 (floor 61.4, zero-error 95.0). Tests 143 passed, original files verified.
+- PARKED: torque-direction and four-sided touch probes (not implemented), mechanism replays (not run), fresh row for E_normal_move_then_aim (locked procedure runs chosen method only). B_aim_fixed_seed4_halted kept as its own row.
+- Advisor consultations used: 3 (aim mechanism, touch go/no-go, final choice review), all in results/takehome/followup/advisor/.
 
 ## Current status: follow-up Phase B complete; mixed comparisons next (2026-11-16)
 

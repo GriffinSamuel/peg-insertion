@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-m",
+    "takehome.followup_final_reference"
+  ],
+  "started_utc": "2026-11-17T09:55:53.238329+00:00",
+  "finished_utc": "2026-11-17T09:56:28.623357+00:00",
+  "seconds": 35.38505998501205,
+  "exit_code": 0
+}
